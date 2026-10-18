@@ -1,0 +1,28 @@
+# Original and downloaded datasets; the authored demo in examples/ is tracked.
+/datasets/
+/datasets.zip
+
+# Generated reports may contain source data and machine-local paths.
+/results/
+*.sqlite
+*.sqlite3
+*.sqlite-*
+*.sqlite3-*
+*.db
+
+# Local configuration, secrets, environments, and caches.
+.env
+.env.*
+*.pem
+*.key
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.idea/
+.vscode/
+Thumbs.db
+.DS_Store

@@ -1,0 +1,8 @@
+{
+  "description": "Explicit experimental group membership, not inferred from the corpus and not a vendor ACL snapshot.",
+  "groups": {
+    "p_alpha": ["u_alice", "u_bob"],
+    "p_beta": ["u_alice", "u_carol"],
+    "p_gamma": ["u_bob", "u_carol"]
+  }
+}

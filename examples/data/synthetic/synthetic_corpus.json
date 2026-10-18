@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "name": "Original offline demonstration fixtures",
+    "version": "1.0",
+    "description": "Twelve entirely fictional records written for this repository. They are not copied from an upstream dataset and contain no real personal information.",
+    "subjects": ["u_alice", "u_bob", "u_carol"],
+    "policy_note": "R lists users or groups explicitly configured in configs/pilot_groups.json. Listing all three users grants access to those registered users only; it does not permit anonymous or outsider access."
+  },
+  "entries": [
+    {
+      "entry_id": "demo-001",
+      "text": "Alice's fictional personal note: water the imaginary desk plant on Thursday.",
+      "R": ["u_alice"],
+      "state": "active"
+    },
+    {
+      "entry_id": "demo-002",
+      "text": "Alice's fictional reminder: use the blue notebook for the practice workshop.",
+      "R": ["u_alice"],
+      "state": "updated"
+    },
+    {
+      "entry_id": "demo-003",
+      "text": "Bob's fictional personal note: reserve an imaginary telescope for the weekend.",
+      "R": ["u_bob"],
+      "state": "active"
+    },
+    {
+      "entry_id": "demo-004",
+      "text": "Bob's fictional reminder: label the practice storage boxes with green cards.",
+      "R": ["u_bob"],
+      "state": "active"
+    },
+    {
+      "entry_id": "demo-005",
+      "text": "Carol's fictional personal note: prepare a paper model of a bridge.",
+      "R": ["u_carol"],
+      "state": "active"
+    },
+    {
+      "entry_id": "demo-006",
+      "text": "Carol's fictional reminder: bring a yellow marker to the rehearsal.",
+      "R": ["u_carol"],
+      "state": "updated"
+    },
+    {
+      "entry_id": "demo-007",
+      "text": "Project Alpha practice note: Alice and Bob will test the cardboard rover.",
+      "R": ["p_alpha"],
+      "state": "active"
+    },
+    {
+      "entry_id": "demo-008",
+      "text": "Project Beta practice note: Alice and Carol will review the toy weather chart.",
+      "R": ["p_beta"],
+      "state": "active"
+    },
+    {
+      "entry_id": "demo-009",
+      "text": "Project Gamma practice note: Bob and Carol will arrange the sample color tiles.",
+      "R": ["p_gamma"],
+      "state": "active"
+    },
+    {
+      "entry_id": "demo-010",
+      "text": "Shared fictional notice: the practice room opens at nine in the morning.",
+      "R": ["u_alice", "u_bob", "u_carol"],
+      "state": "active"
+    },
+    {
+      "entry_id": "demo-011",
+      "text": "Shared fictional checklist: put the paper models back on the shelf.",
+      "R": ["u_alice", "u_bob", "u_carol"],
+      "state": "active"
+    },
+    {
+      "entry_id": "demo-012",
+      "text": "Shared fictional notice: the next demonstration uses sample data only.",
+      "R": ["u_alice", "u_bob", "u_carol"],
+      "state": "updated"
+    }
+  ]
+}
