@@ -1,5 +1,51 @@
 # Agent 记忆迁移权限保持本地测试程序
 
+最新计划见[真实大模型接入与论文评测方案（2026-10-22）](docs/真实大模型接入与论文评测方案_2026-10-22.md)：拟通过独立模型进程，对授权参照、原生迁移后、无记忆三组进行配对评测，首轮为7题、21次调用。该方案尚未实施，当前公开任务与原生入口仍使用固定提取器，不能将现有成绩称为真实LLM效果。
+
+仓库包含代码、测试、自编示例和研究说明；原始数据、完整交接包、虚拟环境及`results/`实验输出不随仓库分发。文档中指向这些本机资产的链接用于定位本地证据，克隆后不会自动具备；无需这些资产的运行方式见下方`demo`及自编样例命令。
+
+## 2026-10-22：公开任务与原生目标已接通
+
+新增`public-pilot`公开文本受控实验与`native-webui-public`原生目标入口。本机已实际启动Open WebUI 0.12.3，使用独立JWT账号、本地MiniLM和原生记忆接口，完成1个公开episode、3条记忆、7个任务的闭环。原生结果为W+=0、W−=0、unknown=0；固定提取器的4道合法题和3道拒绝题符合预定答案。真实大模型指标仍为null。
+
+```powershell
+# 使用本机已恢复的独立原生环境；输出目录必须是新的
+.\.venv-native-webui\Scripts\python.exe -B -X utf8 -m memory_migration_study native-webui-public --legacy-project memory_migration_permission_149tests_20261021/memory_migration_permission_pilot --output results/native_webui_new
+```
+
+环境在`.venv-native-webui`，安装与版本清单保存在`results/native_preflight_20261022`。该环境和原始交接包均是本机资产。复现条件、结果及研究判断见[原生接入与阶段裁决](docs/原生目标接入与阶段裁决_2026-10-22.md)。
+
+## 2026-10-21：统一授权与三组任务研究模块
+
+新增独立模块 `memory_migration_study`，旧程序与历史结果继续保留。先阅读[具体研究方案](docs/研究方案_具体实验与论文判断_2026-10-21.md)和[实验实现契约](docs/具体实验方案与实现契约_2026-10-21.md)。
+
+```powershell
+# 无需第三方依赖、原始数据或模型凭证；output必须是新目录
+python -B -m memory_migration_study demo --output results/study_demo
+
+# 增加明确标记的人工故障诊断
+python -B -m memory_migration_study demo --output results/study_diagnostics --diagnostics
+
+# 本机补充工程中的真实公开文本：1个故事、3条记忆、7个受控任务
+python -B -m memory_migration_study public-pilot --legacy-project memory_migration_permission_149tests_20261021/memory_migration_permission_pilot --output results/public_study
+
+# 只准备少量公开材料候选，不自动变成合格研究任务
+python -B -m memory_migration_study prepare-gatemem --data-root datasets/datasets --output results/study_candidates --episodes-per-domain 1 --limit 20
+
+# 工程测试
+python -B -m unittest discover -s tests -v
+```
+
+新模块区分源读取规则、接收范围、目标本地限制、迁出与复制资格。通过绑定用户和Agent的独立凭证检查`read`与`list`，保留错误响应正文、多副本映射和未知状态。正确分组、按读者复制、整包拒迁使用相同参照。三组任务采用授权参照、实际迁移、无记忆条件，使用相同检索管线和新上下文。
+
+默认回答器是固定程序，只验证实验流程；结果放在`instrumentation_metrics`，真实模型结果保持`null`。参考服务不等于产品原生后端。付费连接器默认关闭，本轮不自动调用任何收费模型。
+
+`public-pilot`使用已在旧源网关执行的受控读取策略和GateMem原文，验证来源、哈希、事实位置及历史源响应，然后运行相同参考后端与三组任务。它不会把7道题算成7个独立场景，也不声称人工审核、原始自然业务ACL或真实模型效果。进展与解释见[公开任务记录](docs/公开数据受控任务进展_2026-10-22.md)。
+
+本机另有用户补充的149项测试工程，位于`memory_migration_permission_149tests_20261021/memory_migration_permission_pilot`，该大型原始交接包不随本仓库分发。其静态策略检查可通过`demo --legacy-project 路径`接入；完整性校验、原生历史证据复核与当前运行分开记录。具体操作见[新模块运行说明](docs/研究模块运行说明_2026-10-21.md)。
+
+以下内容介绍2026-10-18旧原型，功能边界与新模块分别记录。
+
 这是根据 2026-10-18 v2 方案制作的简单、离线、可复查的程序。它读取现有数据，在两个自建 SQLite 参考执行器中实际配置权限，通过本地 HTTP 接口验证迁移前后的 `read` 和 `list`。
 
 **它不调用大模型或收费 API，不需要 GPU，也没有安装或测试 Mem0、Letta、Cognee、Zep。结果属于受控参考后端测试，不能用于声称厂商漏洞、原始 GateMem 成绩或新算法优势。**

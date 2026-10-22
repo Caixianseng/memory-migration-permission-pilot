@@ -2,6 +2,10 @@
 /datasets/
 /datasets.zip
 
+# User-supplied full handover, including original data and historical artifacts.
+/memory_migration_permission_149tests_20261021.zip
+/memory_migration_permission_149tests_20261021/
+
 # Generated reports may contain source data and machine-local paths.
 /results/
 *.sqlite
@@ -16,6 +20,7 @@
 *.pem
 *.key
 .venv/
+/.venv-native-webui/
 venv/
 __pycache__/
 *.py[cod]

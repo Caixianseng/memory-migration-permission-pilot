@@ -1,0 +1,16 @@
+{
+  "model": "REPLACE_WITH_EXPLICIT_PROVIDER_API_MODEL",
+  "endpoint": "https://example.invalid/v1/chat/completions",
+  "api_key_env": "STUDY_MODEL_API_KEY",
+  "currency": "CNY",
+  "price_source_url": "REPLACE_WITH_VERIFIED_PROVIDER_PRICE_SOURCE",
+  "verified_prices_date": "REPLACE_WITH_ISO_DATE",
+  "input_price_per_million": null,
+  "output_price_per_million": null,
+  "existing_cumulative_spend": null,
+  "existing_spend_confirmed": false,
+  "total_limit": 500,
+  "run_limit": 10,
+  "max_input_tokens": 8192,
+  "max_output_tokens": 64
+}

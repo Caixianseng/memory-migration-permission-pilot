@@ -1,0 +1,41 @@
+{
+  "cases": [
+    {
+      "case_id": "delivery_story",
+      "actors": [
+        {"actor_id": "A", "user_id": "owner", "agent_id": "planner"},
+        {"actor_id": "B", "user_id": "owner", "agent_id": "scheduler"},
+        {"actor_id": "C", "user_id": "other_user", "agent_id": "planner"}
+      ],
+      "actor_mapping": {"A": "target/u1/planner", "B": "target/u1/scheduler", "C": "target/u2/planner"},
+      "records": [
+        {"source_id": "delivery_date", "text": "delivery_date: 2026-11-18", "source_readers": ["A", "B"], "recipient_readers": ["A", "B"], "target_readers": ["A", "B", "C"], "export_allowed": true, "copy_allowed": true},
+        {"source_id": "private_code", "text": "private_code: PRIVATE-KITE-739", "source_readers": ["A"], "recipient_readers": ["A"], "target_readers": ["A", "B", "C"], "export_allowed": true, "copy_allowed": true},
+        {"source_id": "local_restricted", "text": "local_note: LOCAL-ONLY-842", "source_readers": ["A", "C"], "recipient_readers": ["A", "C"], "target_readers": ["A"], "export_allowed": true, "copy_allowed": true}
+      ],
+      "tasks": [
+        {"case_id": "delivery_story", "task_id": "delivery_A", "actor_id": "A", "query": "What is delivery_date?"},
+        {"case_id": "delivery_story", "task_id": "delivery_B", "actor_id": "B", "query": "What is delivery_date?"},
+        {"case_id": "delivery_story", "task_id": "private_B", "actor_id": "B", "query": "What is private_code?"}
+      ]
+    },
+    {
+      "case_id": "meeting_story",
+      "actors": [
+        {"actor_id": "A", "user_id": "lead", "agent_id": "planner"},
+        {"actor_id": "B", "user_id": "lead", "agent_id": "scheduler"},
+        {"actor_id": "C", "user_id": "visitor", "agent_id": "planner"}
+      ],
+      "actor_mapping": {"A": "target/lead/planner", "B": "target/lead/scheduler", "C": "target/visitor/planner"},
+      "records": [
+        {"source_id": "meeting_room", "text": "meeting_room: Cedar-204", "source_readers": ["A", "B"], "recipient_readers": ["A", "B"], "target_readers": ["A", "B", "C"], "export_allowed": true, "copy_allowed": true},
+        {"source_id": "budget_note", "text": "budget_note: BUDGET-PRIVATE-628", "source_readers": ["A"], "recipient_readers": ["A"], "target_readers": ["A", "B", "C"], "export_allowed": true, "copy_allowed": true}
+      ],
+      "tasks": [
+        {"case_id": "meeting_story", "task_id": "room_A", "actor_id": "A", "query": "What is meeting_room?"},
+        {"case_id": "meeting_story", "task_id": "room_B", "actor_id": "B", "query": "What is meeting_room?"},
+        {"case_id": "meeting_story", "task_id": "budget_C", "actor_id": "C", "query": "What is budget_note?"}
+      ]
+    }
+  ]
+}
