@@ -1,0 +1,2651 @@
+{
+  "schema_version": 1,
+  "kind": "synthetic_privacy_detection_runtime",
+  "authorship": "programmatically rendered, AI-authored synthetic templates; no human review",
+  "identity_note": "Fictional examples; .test emails, fictional ID region 990000. No real records collected.",
+  "split_unit": "template_family; paired policies stay in the same story and split",
+  "cases": [
+    {
+      "case_id": "contact_card-zh-00",
+      "language": "zh",
+      "story_id": "contact_card-zh-story-0",
+      "template_family": "contact_card",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-contact_card-zh-00",
+            "text": "姓名：沈星禾；邮箱：fixture100@example.test；电话：+86-13900000100。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-0",
+        "protected_categories": [
+          "EMAIL",
+          "PERSON",
+          "PHONE"
+        ]
+      }
+    },
+    {
+      "case_id": "contact_card-zh-01",
+      "language": "zh",
+      "story_id": "contact_card-zh-story-1",
+      "template_family": "contact_card",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-contact_card-zh-01",
+            "text": "姓名：林沐川；邮箱：fixture101@example.test；电话：+86-13900000101。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-1",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "contact_card-zh-02",
+      "language": "zh",
+      "story_id": "contact_card-zh-story-2",
+      "template_family": "contact_card",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-contact_card-zh-02",
+            "text": "姓名：陈映澜；邮箱：fixture102@example.test；电话：+86-13900000102。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-2",
+        "protected_categories": [
+          "EMAIL"
+        ]
+      }
+    },
+    {
+      "case_id": "contact_card-zh-03",
+      "language": "zh",
+      "story_id": "contact_card-zh-story-3",
+      "template_family": "contact_card",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-contact_card-zh-03",
+            "text": "姓名：周若岚；邮箱：fixture103@example.test；电话：+86-13900000103。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-3",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "contact_card-zh-04",
+      "language": "zh",
+      "story_id": "contact_card-zh-story-4",
+      "template_family": "contact_card",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-contact_card-zh-04",
+            "text": "姓名：许知遥；邮箱：fixture104@example.test；电话：+86-13900000104。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-4",
+        "protected_categories": [
+          "EMAIL",
+          "PERSON",
+          "PHONE"
+        ]
+      }
+    },
+    {
+      "case_id": "contact_card-en-00",
+      "language": "en",
+      "story_id": "contact_card-en-story-0",
+      "template_family": "contact_card",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-contact_card-en-00",
+            "text": "Name: Mara Linden; Email: fixture100@example.test; Phone: +1-202-555-0100."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-0",
+        "protected_categories": [
+          "EMAIL",
+          "PERSON",
+          "PHONE"
+        ]
+      }
+    },
+    {
+      "case_id": "contact_card-en-01",
+      "language": "en",
+      "story_id": "contact_card-en-story-1",
+      "template_family": "contact_card",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-contact_card-en-01",
+            "text": "Name: Evan Brook; Email: fixture101@example.test; Phone: +1-202-555-0101."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-1",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "contact_card-en-02",
+      "language": "en",
+      "story_id": "contact_card-en-story-2",
+      "template_family": "contact_card",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-contact_card-en-02",
+            "text": "Name: Nora Vale; Email: fixture102@example.test; Phone: +1-202-555-0102."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-2",
+        "protected_categories": [
+          "EMAIL"
+        ]
+      }
+    },
+    {
+      "case_id": "contact_card-en-03",
+      "language": "en",
+      "story_id": "contact_card-en-story-3",
+      "template_family": "contact_card",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-contact_card-en-03",
+            "text": "Name: Iris Reed; Email: fixture103@example.test; Phone: +1-202-555-0103."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-3",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "contact_card-en-04",
+      "language": "en",
+      "story_id": "contact_card-en-story-4",
+      "template_family": "contact_card",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-contact_card-en-04",
+            "text": "Name: Theo Ash; Email: fixture104@example.test; Phone: +1-202-555-0104."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-4",
+        "protected_categories": [
+          "EMAIL",
+          "PERSON",
+          "PHONE"
+        ]
+      }
+    },
+    {
+      "case_id": "identity_registry-zh-00",
+      "language": "zh",
+      "story_id": "identity_registry-zh-story-0",
+      "template_family": "identity_registry",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-identity_registry-zh-00",
+            "text": "登记人：沈星禾；身份证号：990000199001011108。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-0",
+        "protected_categories": [
+          "ID",
+          "PERSON"
+        ]
+      }
+    },
+    {
+      "case_id": "identity_registry-zh-01",
+      "language": "zh",
+      "story_id": "identity_registry-zh-story-1",
+      "template_family": "identity_registry",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-identity_registry-zh-01",
+            "text": "登记人：林沐川；身份证号：990000199001011116。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-1",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "identity_registry-zh-02",
+      "language": "zh",
+      "story_id": "identity_registry-zh-story-2",
+      "template_family": "identity_registry",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-identity_registry-zh-02",
+            "text": "登记人：陈映澜；身份证号：990000199001011124。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-2",
+        "protected_categories": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "case_id": "identity_registry-zh-03",
+      "language": "zh",
+      "story_id": "identity_registry-zh-story-3",
+      "template_family": "identity_registry",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-identity_registry-zh-03",
+            "text": "登记人：周若岚；身份证号：990000199001011132。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-3",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "identity_registry-zh-04",
+      "language": "zh",
+      "story_id": "identity_registry-zh-story-4",
+      "template_family": "identity_registry",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-identity_registry-zh-04",
+            "text": "登记人：许知遥；身份证号：990000199001011140。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-4",
+        "protected_categories": [
+          "ID",
+          "PERSON"
+        ]
+      }
+    },
+    {
+      "case_id": "identity_registry-en-00",
+      "language": "en",
+      "story_id": "identity_registry-en-story-0",
+      "template_family": "identity_registry",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-identity_registry-en-00",
+            "text": "Registered person: Mara Linden; Identity number: 990000199001011108."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-0",
+        "protected_categories": [
+          "ID",
+          "PERSON"
+        ]
+      }
+    },
+    {
+      "case_id": "identity_registry-en-01",
+      "language": "en",
+      "story_id": "identity_registry-en-story-1",
+      "template_family": "identity_registry",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-identity_registry-en-01",
+            "text": "Registered person: Evan Brook; Identity number: 990000199001011116."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-1",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "identity_registry-en-02",
+      "language": "en",
+      "story_id": "identity_registry-en-story-2",
+      "template_family": "identity_registry",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-identity_registry-en-02",
+            "text": "Registered person: Nora Vale; Identity number: 990000199001011124."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-2",
+        "protected_categories": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "case_id": "identity_registry-en-03",
+      "language": "en",
+      "story_id": "identity_registry-en-story-3",
+      "template_family": "identity_registry",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-identity_registry-en-03",
+            "text": "Registered person: Iris Reed; Identity number: 990000199001011132."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-3",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "identity_registry-en-04",
+      "language": "en",
+      "story_id": "identity_registry-en-story-4",
+      "template_family": "identity_registry",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-identity_registry-en-04",
+            "text": "Registered person: Theo Ash; Identity number: 990000199001011140."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-4",
+        "protected_categories": [
+          "ID",
+          "PERSON"
+        ]
+      }
+    },
+    {
+      "case_id": "delivery_label-zh-00",
+      "language": "zh",
+      "story_id": "delivery_label-zh-story-0",
+      "template_family": "delivery_label",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-delivery_label-zh-00",
+            "text": "收件人：沈星禾；地址：虚构市青杉路120号；电话：+86-13900000120。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-0",
+        "protected_categories": [
+          "ADDRESS",
+          "PERSON",
+          "PHONE"
+        ]
+      }
+    },
+    {
+      "case_id": "delivery_label-zh-01",
+      "language": "zh",
+      "story_id": "delivery_label-zh-story-1",
+      "template_family": "delivery_label",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-delivery_label-zh-01",
+            "text": "收件人：林沐川；地址：虚构市青杉路121号；电话：+86-13900000121。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-1",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "delivery_label-zh-02",
+      "language": "zh",
+      "story_id": "delivery_label-zh-story-2",
+      "template_family": "delivery_label",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-delivery_label-zh-02",
+            "text": "收件人：陈映澜；地址：虚构市青杉路122号；电话：+86-13900000122。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-2",
+        "protected_categories": [
+          "ADDRESS"
+        ]
+      }
+    },
+    {
+      "case_id": "delivery_label-zh-03",
+      "language": "zh",
+      "story_id": "delivery_label-zh-story-3",
+      "template_family": "delivery_label",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-delivery_label-zh-03",
+            "text": "收件人：周若岚；地址：虚构市青杉路123号；电话：+86-13900000123。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-3",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "delivery_label-zh-04",
+      "language": "zh",
+      "story_id": "delivery_label-zh-story-4",
+      "template_family": "delivery_label",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-delivery_label-zh-04",
+            "text": "收件人：许知遥；地址：虚构市青杉路124号；电话：+86-13900000124。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-4",
+        "protected_categories": [
+          "ADDRESS",
+          "PERSON",
+          "PHONE"
+        ]
+      }
+    },
+    {
+      "case_id": "delivery_label-en-00",
+      "language": "en",
+      "story_id": "delivery_label-en-story-0",
+      "template_family": "delivery_label",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-delivery_label-en-00",
+            "text": "Recipient: Mara Linden; Address: 120 Fictional Cedar Lane; Phone: +1-202-555-0120."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-0",
+        "protected_categories": [
+          "ADDRESS",
+          "PERSON",
+          "PHONE"
+        ]
+      }
+    },
+    {
+      "case_id": "delivery_label-en-01",
+      "language": "en",
+      "story_id": "delivery_label-en-story-1",
+      "template_family": "delivery_label",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-delivery_label-en-01",
+            "text": "Recipient: Evan Brook; Address: 121 Fictional Cedar Lane; Phone: +1-202-555-0121."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-1",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "delivery_label-en-02",
+      "language": "en",
+      "story_id": "delivery_label-en-story-2",
+      "template_family": "delivery_label",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-delivery_label-en-02",
+            "text": "Recipient: Nora Vale; Address: 122 Fictional Cedar Lane; Phone: +1-202-555-0122."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-2",
+        "protected_categories": [
+          "ADDRESS"
+        ]
+      }
+    },
+    {
+      "case_id": "delivery_label-en-03",
+      "language": "en",
+      "story_id": "delivery_label-en-story-3",
+      "template_family": "delivery_label",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-delivery_label-en-03",
+            "text": "Recipient: Iris Reed; Address: 123 Fictional Cedar Lane; Phone: +1-202-555-0123."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-3",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "delivery_label-en-04",
+      "language": "en",
+      "story_id": "delivery_label-en-story-4",
+      "template_family": "delivery_label",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-delivery_label-en-04",
+            "text": "Recipient: Theo Ash; Address: 124 Fictional Cedar Lane; Phone: +1-202-555-0124."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-4",
+        "protected_categories": [
+          "ADDRESS",
+          "PERSON",
+          "PHONE"
+        ]
+      }
+    },
+    {
+      "case_id": "customer_handover-zh-00",
+      "language": "zh",
+      "story_id": "customer_handover-zh-story-0",
+      "template_family": "customer_handover",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-customer_handover-zh-00",
+            "text": "客户：青杉实验社130；项目：枫叶-130。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-0",
+        "protected_categories": [
+          "CUSTOMER",
+          "PROJECT"
+        ]
+      }
+    },
+    {
+      "case_id": "customer_handover-zh-01",
+      "language": "zh",
+      "story_id": "customer_handover-zh-story-1",
+      "template_family": "customer_handover",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-customer_handover-zh-01",
+            "text": "客户：青杉实验社131；项目：枫叶-131。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-1",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "customer_handover-zh-02",
+      "language": "zh",
+      "story_id": "customer_handover-zh-story-2",
+      "template_family": "customer_handover",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-customer_handover-zh-02",
+            "text": "客户：青杉实验社132；项目：枫叶-132。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-2",
+        "protected_categories": [
+          "CUSTOMER"
+        ]
+      }
+    },
+    {
+      "case_id": "customer_handover-zh-03",
+      "language": "zh",
+      "story_id": "customer_handover-zh-story-3",
+      "template_family": "customer_handover",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-customer_handover-zh-03",
+            "text": "客户：青杉实验社133；项目：枫叶-133。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-3",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "customer_handover-zh-04",
+      "language": "zh",
+      "story_id": "customer_handover-zh-story-4",
+      "template_family": "customer_handover",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-customer_handover-zh-04",
+            "text": "客户：青杉实验社134；项目：枫叶-134。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-4",
+        "protected_categories": [
+          "CUSTOMER",
+          "PROJECT"
+        ]
+      }
+    },
+    {
+      "case_id": "customer_handover-en-00",
+      "language": "en",
+      "story_id": "customer_handover-en-story-0",
+      "template_family": "customer_handover",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-customer_handover-en-00",
+            "text": "Customer: Granite Fern Cooperative 130; Project: Maple-130."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-0",
+        "protected_categories": [
+          "CUSTOMER",
+          "PROJECT"
+        ]
+      }
+    },
+    {
+      "case_id": "customer_handover-en-01",
+      "language": "en",
+      "story_id": "customer_handover-en-story-1",
+      "template_family": "customer_handover",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-customer_handover-en-01",
+            "text": "Customer: Granite Fern Cooperative 131; Project: Maple-131."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-1",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "customer_handover-en-02",
+      "language": "en",
+      "story_id": "customer_handover-en-story-2",
+      "template_family": "customer_handover",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-customer_handover-en-02",
+            "text": "Customer: Granite Fern Cooperative 132; Project: Maple-132."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-2",
+        "protected_categories": [
+          "CUSTOMER"
+        ]
+      }
+    },
+    {
+      "case_id": "customer_handover-en-03",
+      "language": "en",
+      "story_id": "customer_handover-en-story-3",
+      "template_family": "customer_handover",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-customer_handover-en-03",
+            "text": "Customer: Granite Fern Cooperative 133; Project: Maple-133."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-3",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "customer_handover-en-04",
+      "language": "en",
+      "story_id": "customer_handover-en-story-4",
+      "template_family": "customer_handover",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-customer_handover-en-04",
+            "text": "Customer: Granite Fern Cooperative 134; Project: Maple-134."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-4",
+        "protected_categories": [
+          "CUSTOMER",
+          "PROJECT"
+        ]
+      }
+    },
+    {
+      "case_id": "funding_memo-zh-00",
+      "language": "zh",
+      "story_id": "funding_memo-zh-story-0",
+      "template_family": "funding_memo",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-funding_memo-zh-00",
+            "text": "客户：青杉实验社140；预算：340,000 USD。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-0",
+        "protected_categories": [
+          "AMOUNT",
+          "CUSTOMER"
+        ]
+      }
+    },
+    {
+      "case_id": "funding_memo-zh-01",
+      "language": "zh",
+      "story_id": "funding_memo-zh-story-1",
+      "template_family": "funding_memo",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-funding_memo-zh-01",
+            "text": "客户：青杉实验社141；预算：341,000 USD。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-1",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "funding_memo-zh-02",
+      "language": "zh",
+      "story_id": "funding_memo-zh-story-2",
+      "template_family": "funding_memo",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-funding_memo-zh-02",
+            "text": "客户：青杉实验社142；预算：342,000 USD。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-2",
+        "protected_categories": [
+          "AMOUNT"
+        ]
+      }
+    },
+    {
+      "case_id": "funding_memo-zh-03",
+      "language": "zh",
+      "story_id": "funding_memo-zh-story-3",
+      "template_family": "funding_memo",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-funding_memo-zh-03",
+            "text": "客户：青杉实验社143；预算：343,000 USD。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-3",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "funding_memo-zh-04",
+      "language": "zh",
+      "story_id": "funding_memo-zh-story-4",
+      "template_family": "funding_memo",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-funding_memo-zh-04",
+            "text": "客户：青杉实验社144；预算：344,000 USD。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-4",
+        "protected_categories": [
+          "AMOUNT",
+          "CUSTOMER"
+        ]
+      }
+    },
+    {
+      "case_id": "funding_memo-en-00",
+      "language": "en",
+      "story_id": "funding_memo-en-story-0",
+      "template_family": "funding_memo",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-funding_memo-en-00",
+            "text": "Customer: Granite Fern Cooperative 140; Budget: 340,000 USD."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-0",
+        "protected_categories": [
+          "AMOUNT",
+          "CUSTOMER"
+        ]
+      }
+    },
+    {
+      "case_id": "funding_memo-en-01",
+      "language": "en",
+      "story_id": "funding_memo-en-story-1",
+      "template_family": "funding_memo",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-funding_memo-en-01",
+            "text": "Customer: Granite Fern Cooperative 141; Budget: 341,000 USD."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-1",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "funding_memo-en-02",
+      "language": "en",
+      "story_id": "funding_memo-en-story-2",
+      "template_family": "funding_memo",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-funding_memo-en-02",
+            "text": "Customer: Granite Fern Cooperative 142; Budget: 342,000 USD."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-2",
+        "protected_categories": [
+          "AMOUNT"
+        ]
+      }
+    },
+    {
+      "case_id": "funding_memo-en-03",
+      "language": "en",
+      "story_id": "funding_memo-en-story-3",
+      "template_family": "funding_memo",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-funding_memo-en-03",
+            "text": "Customer: Granite Fern Cooperative 143; Budget: 343,000 USD."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-3",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "funding_memo-en-04",
+      "language": "en",
+      "story_id": "funding_memo-en-story-4",
+      "template_family": "funding_memo",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-funding_memo-en-04",
+            "text": "Customer: Granite Fern Cooperative 144; Budget: 344,000 USD."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-4",
+        "protected_categories": [
+          "AMOUNT",
+          "CUSTOMER"
+        ]
+      }
+    },
+    {
+      "case_id": "schedule_brief-zh-00",
+      "language": "zh",
+      "story_id": "schedule_brief-zh-story-0",
+      "template_family": "schedule_brief",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-schedule_brief-zh-00",
+            "text": "项目：枫叶-150；会议日期：2027年6月16日。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-0",
+        "protected_categories": [
+          "DATE",
+          "PROJECT"
+        ]
+      }
+    },
+    {
+      "case_id": "schedule_brief-zh-01",
+      "language": "zh",
+      "story_id": "schedule_brief-zh-story-1",
+      "template_family": "schedule_brief",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-schedule_brief-zh-01",
+            "text": "项目：枫叶-151；会议日期：2027年6月17日。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-1",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "schedule_brief-zh-02",
+      "language": "zh",
+      "story_id": "schedule_brief-zh-story-2",
+      "template_family": "schedule_brief",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-schedule_brief-zh-02",
+            "text": "项目：枫叶-152；会议日期：2027年6月18日。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-2",
+        "protected_categories": [
+          "DATE"
+        ]
+      }
+    },
+    {
+      "case_id": "schedule_brief-zh-03",
+      "language": "zh",
+      "story_id": "schedule_brief-zh-story-3",
+      "template_family": "schedule_brief",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-schedule_brief-zh-03",
+            "text": "项目：枫叶-153；会议日期：2027年6月19日。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-3",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "schedule_brief-zh-04",
+      "language": "zh",
+      "story_id": "schedule_brief-zh-story-4",
+      "template_family": "schedule_brief",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-schedule_brief-zh-04",
+            "text": "项目：枫叶-154；会议日期：2027年6月20日。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-4",
+        "protected_categories": [
+          "DATE",
+          "PROJECT"
+        ]
+      }
+    },
+    {
+      "case_id": "schedule_brief-en-00",
+      "language": "en",
+      "story_id": "schedule_brief-en-story-0",
+      "template_family": "schedule_brief",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-schedule_brief-en-00",
+            "text": "Project: Maple-150; Meeting date: June 16, 2027."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-0",
+        "protected_categories": [
+          "DATE",
+          "PROJECT"
+        ]
+      }
+    },
+    {
+      "case_id": "schedule_brief-en-01",
+      "language": "en",
+      "story_id": "schedule_brief-en-story-1",
+      "template_family": "schedule_brief",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-schedule_brief-en-01",
+            "text": "Project: Maple-151; Meeting date: June 17, 2027."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-1",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "schedule_brief-en-02",
+      "language": "en",
+      "story_id": "schedule_brief-en-story-2",
+      "template_family": "schedule_brief",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-schedule_brief-en-02",
+            "text": "Project: Maple-152; Meeting date: June 18, 2027."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-2",
+        "protected_categories": [
+          "DATE"
+        ]
+      }
+    },
+    {
+      "case_id": "schedule_brief-en-03",
+      "language": "en",
+      "story_id": "schedule_brief-en-story-3",
+      "template_family": "schedule_brief",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-schedule_brief-en-03",
+            "text": "Project: Maple-153; Meeting date: June 19, 2027."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-3",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "schedule_brief-en-04",
+      "language": "en",
+      "story_id": "schedule_brief-en-story-4",
+      "template_family": "schedule_brief",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-schedule_brief-en-04",
+            "text": "Project: Maple-154; Meeting date: June 20, 2027."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-4",
+        "protected_categories": [
+          "DATE",
+          "PROJECT"
+        ]
+      }
+    },
+    {
+      "case_id": "directory_entry-zh-00",
+      "language": "zh",
+      "story_id": "directory_entry-zh-story-0",
+      "template_family": "directory_entry",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-directory_entry-zh-00",
+            "text": "目录条目——姓名：沈星禾，邮箱：fixture160@example.test，地址：虚构市青杉路160号。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-0",
+        "protected_categories": [
+          "ADDRESS",
+          "EMAIL",
+          "PERSON"
+        ]
+      }
+    },
+    {
+      "case_id": "directory_entry-zh-01",
+      "language": "zh",
+      "story_id": "directory_entry-zh-story-1",
+      "template_family": "directory_entry",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-directory_entry-zh-01",
+            "text": "目录条目——姓名：林沐川，邮箱：fixture161@example.test，地址：虚构市青杉路161号。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-1",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "directory_entry-zh-02",
+      "language": "zh",
+      "story_id": "directory_entry-zh-story-2",
+      "template_family": "directory_entry",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-directory_entry-zh-02",
+            "text": "目录条目——姓名：陈映澜，邮箱：fixture162@example.test，地址：虚构市青杉路162号。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-2",
+        "protected_categories": [
+          "ADDRESS"
+        ]
+      }
+    },
+    {
+      "case_id": "directory_entry-zh-03",
+      "language": "zh",
+      "story_id": "directory_entry-zh-story-3",
+      "template_family": "directory_entry",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-directory_entry-zh-03",
+            "text": "目录条目——姓名：周若岚，邮箱：fixture163@example.test，地址：虚构市青杉路163号。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-3",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "directory_entry-zh-04",
+      "language": "zh",
+      "story_id": "directory_entry-zh-story-4",
+      "template_family": "directory_entry",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-directory_entry-zh-04",
+            "text": "目录条目——姓名：许知遥，邮箱：fixture164@example.test，地址：虚构市青杉路164号。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-4",
+        "protected_categories": [
+          "ADDRESS",
+          "EMAIL",
+          "PERSON"
+        ]
+      }
+    },
+    {
+      "case_id": "directory_entry-en-00",
+      "language": "en",
+      "story_id": "directory_entry-en-story-0",
+      "template_family": "directory_entry",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-directory_entry-en-00",
+            "text": "Directory entry — Name: Mara Linden; Email: fixture160@example.test; Address: 160 Fictional Cedar Lane."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-0",
+        "protected_categories": [
+          "ADDRESS",
+          "EMAIL",
+          "PERSON"
+        ]
+      }
+    },
+    {
+      "case_id": "directory_entry-en-01",
+      "language": "en",
+      "story_id": "directory_entry-en-story-1",
+      "template_family": "directory_entry",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-directory_entry-en-01",
+            "text": "Directory entry — Name: Evan Brook; Email: fixture161@example.test; Address: 161 Fictional Cedar Lane."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-1",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "directory_entry-en-02",
+      "language": "en",
+      "story_id": "directory_entry-en-story-2",
+      "template_family": "directory_entry",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-directory_entry-en-02",
+            "text": "Directory entry — Name: Nora Vale; Email: fixture162@example.test; Address: 162 Fictional Cedar Lane."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-2",
+        "protected_categories": [
+          "ADDRESS"
+        ]
+      }
+    },
+    {
+      "case_id": "directory_entry-en-03",
+      "language": "en",
+      "story_id": "directory_entry-en-story-3",
+      "template_family": "directory_entry",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-directory_entry-en-03",
+            "text": "Directory entry — Name: Iris Reed; Email: fixture163@example.test; Address: 163 Fictional Cedar Lane."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-3",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "directory_entry-en-04",
+      "language": "en",
+      "story_id": "directory_entry-en-story-4",
+      "template_family": "directory_entry",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-directory_entry-en-04",
+            "text": "Directory entry — Name: Theo Ash; Email: fixture164@example.test; Address: 164 Fictional Cedar Lane."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-4",
+        "protected_categories": [
+          "ADDRESS",
+          "EMAIL",
+          "PERSON"
+        ]
+      }
+    },
+    {
+      "case_id": "policy_pair-zh-00",
+      "language": "zh",
+      "story_id": "policy_pair-zh-story-0",
+      "template_family": "policy_pair",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-policy_pair-zh-00",
+            "text": "客户：青杉实验社170；项目：枫叶-170；预算：370,000 USD；日期：2027年6月9日。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-0",
+        "protected_categories": [
+          "AMOUNT",
+          "CUSTOMER",
+          "DATE",
+          "PROJECT"
+        ]
+      }
+    },
+    {
+      "case_id": "policy_pair-zh-01",
+      "language": "zh",
+      "story_id": "policy_pair-zh-story-0",
+      "template_family": "policy_pair",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-policy_pair-zh-01",
+            "text": "客户：青杉实验社170；项目：枫叶-170；预算：370,000 USD；日期：2027年6月9日。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-1",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "policy_pair-zh-02",
+      "language": "zh",
+      "story_id": "policy_pair-zh-story-2",
+      "template_family": "policy_pair",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-policy_pair-zh-02",
+            "text": "客户：青杉实验社172；项目：枫叶-172；预算：372,000 USD；日期：2027年6月11日。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-2",
+        "protected_categories": [
+          "AMOUNT",
+          "CUSTOMER"
+        ]
+      }
+    },
+    {
+      "case_id": "policy_pair-zh-03",
+      "language": "zh",
+      "story_id": "policy_pair-zh-story-3",
+      "template_family": "policy_pair",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-policy_pair-zh-03",
+            "text": "客户：青杉实验社173；项目：枫叶-173；预算：373,000 USD；日期：2027年6月12日。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-3",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "policy_pair-zh-04",
+      "language": "zh",
+      "story_id": "policy_pair-zh-story-4",
+      "template_family": "policy_pair",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-policy_pair-zh-04",
+            "text": "客户：青杉实验社174；项目：枫叶-174；预算：374,000 USD；日期：2027年6月13日。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-4",
+        "protected_categories": [
+          "AMOUNT",
+          "CUSTOMER",
+          "DATE",
+          "PROJECT"
+        ]
+      }
+    },
+    {
+      "case_id": "policy_pair-en-00",
+      "language": "en",
+      "story_id": "policy_pair-en-story-0",
+      "template_family": "policy_pair",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-policy_pair-en-00",
+            "text": "Customer: Granite Fern Cooperative 170; Project: Maple-170; Budget: 370,000 USD; Date: June 9, 2027."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-0",
+        "protected_categories": [
+          "AMOUNT",
+          "CUSTOMER",
+          "DATE",
+          "PROJECT"
+        ]
+      }
+    },
+    {
+      "case_id": "policy_pair-en-01",
+      "language": "en",
+      "story_id": "policy_pair-en-story-0",
+      "template_family": "policy_pair",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-policy_pair-en-01",
+            "text": "Customer: Granite Fern Cooperative 170; Project: Maple-170; Budget: 370,000 USD; Date: June 9, 2027."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-1",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "policy_pair-en-02",
+      "language": "en",
+      "story_id": "policy_pair-en-story-2",
+      "template_family": "policy_pair",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-policy_pair-en-02",
+            "text": "Customer: Granite Fern Cooperative 172; Project: Maple-172; Budget: 372,000 USD; Date: June 11, 2027."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-2",
+        "protected_categories": [
+          "AMOUNT",
+          "CUSTOMER"
+        ]
+      }
+    },
+    {
+      "case_id": "policy_pair-en-03",
+      "language": "en",
+      "story_id": "policy_pair-en-story-3",
+      "template_family": "policy_pair",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-policy_pair-en-03",
+            "text": "Customer: Granite Fern Cooperative 173; Project: Maple-173; Budget: 373,000 USD; Date: June 12, 2027."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-3",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "policy_pair-en-04",
+      "language": "en",
+      "story_id": "policy_pair-en-story-4",
+      "template_family": "policy_pair",
+      "split": "dev",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-policy_pair-en-04",
+            "text": "Customer: Granite Fern Cooperative 174; Project: Maple-174; Budget: 374,000 USD; Date: June 13, 2027."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-4",
+        "protected_categories": [
+          "AMOUNT",
+          "CUSTOMER",
+          "DATE",
+          "PROJECT"
+        ]
+      }
+    },
+    {
+      "case_id": "contract_narrative-zh-00",
+      "language": "zh",
+      "story_id": "contract_narrative-zh-story-0",
+      "template_family": "contract_narrative",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-contract_narrative-zh-00",
+            "text": "合同写明枫叶-180的客户是青杉实验社180，可使用380,000 USD完成交付。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-0",
+        "protected_categories": [
+          "AMOUNT",
+          "CUSTOMER",
+          "PROJECT"
+        ]
+      }
+    },
+    {
+      "case_id": "contract_narrative-zh-01",
+      "language": "zh",
+      "story_id": "contract_narrative-zh-story-1",
+      "template_family": "contract_narrative",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-contract_narrative-zh-01",
+            "text": "合同写明枫叶-181的客户是青杉实验社181，可使用381,000 USD完成交付。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-1",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "contract_narrative-zh-02",
+      "language": "zh",
+      "story_id": "contract_narrative-zh-story-2",
+      "template_family": "contract_narrative",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-contract_narrative-zh-02",
+            "text": "合同写明枫叶-182的客户是青杉实验社182，可使用382,000 USD完成交付。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-2",
+        "protected_categories": [
+          "AMOUNT"
+        ]
+      }
+    },
+    {
+      "case_id": "contract_narrative-zh-03",
+      "language": "zh",
+      "story_id": "contract_narrative-zh-story-3",
+      "template_family": "contract_narrative",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-contract_narrative-zh-03",
+            "text": "合同写明枫叶-183的客户是青杉实验社183，可使用383,000 USD完成交付。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-3",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "contract_narrative-zh-04",
+      "language": "zh",
+      "story_id": "contract_narrative-zh-story-4",
+      "template_family": "contract_narrative",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-contract_narrative-zh-04",
+            "text": "合同写明枫叶-184的客户是青杉实验社184，可使用384,000 USD完成交付。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-4",
+        "protected_categories": [
+          "AMOUNT",
+          "CUSTOMER",
+          "PROJECT"
+        ]
+      }
+    },
+    {
+      "case_id": "contract_narrative-en-00",
+      "language": "en",
+      "story_id": "contract_narrative-en-story-0",
+      "template_family": "contract_narrative",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-contract_narrative-en-00",
+            "text": "For project Maple-180, the contract names Granite Fern Cooperative 180 as customer and allocates 380,000 USD for delivery."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-0",
+        "protected_categories": [
+          "AMOUNT",
+          "CUSTOMER",
+          "PROJECT"
+        ]
+      }
+    },
+    {
+      "case_id": "contract_narrative-en-01",
+      "language": "en",
+      "story_id": "contract_narrative-en-story-1",
+      "template_family": "contract_narrative",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-contract_narrative-en-01",
+            "text": "For project Maple-181, the contract names Granite Fern Cooperative 181 as customer and allocates 381,000 USD for delivery."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-1",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "contract_narrative-en-02",
+      "language": "en",
+      "story_id": "contract_narrative-en-story-2",
+      "template_family": "contract_narrative",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-contract_narrative-en-02",
+            "text": "For project Maple-182, the contract names Granite Fern Cooperative 182 as customer and allocates 382,000 USD for delivery."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-2",
+        "protected_categories": [
+          "AMOUNT"
+        ]
+      }
+    },
+    {
+      "case_id": "contract_narrative-en-03",
+      "language": "en",
+      "story_id": "contract_narrative-en-story-3",
+      "template_family": "contract_narrative",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-contract_narrative-en-03",
+            "text": "For project Maple-183, the contract names Granite Fern Cooperative 183 as customer and allocates 383,000 USD for delivery."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-3",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "contract_narrative-en-04",
+      "language": "en",
+      "story_id": "contract_narrative-en-story-4",
+      "template_family": "contract_narrative",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-contract_narrative-en-04",
+            "text": "For project Maple-184, the contract names Granite Fern Cooperative 184 as customer and allocates 384,000 USD for delivery."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-4",
+        "protected_categories": [
+          "AMOUNT",
+          "CUSTOMER",
+          "PROJECT"
+        ]
+      }
+    },
+    {
+      "case_id": "visit_narrative-zh-00",
+      "language": "zh",
+      "story_id": "visit_narrative-zh-story-0",
+      "template_family": "visit_narrative",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-visit_narrative-zh-00",
+            "text": "沈星禾将于2027年6月2日到访虚构市青杉路190号；需要联系时拨打+86-13900000190。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-0",
+        "protected_categories": [
+          "ADDRESS",
+          "DATE",
+          "PERSON",
+          "PHONE"
+        ]
+      }
+    },
+    {
+      "case_id": "visit_narrative-zh-01",
+      "language": "zh",
+      "story_id": "visit_narrative-zh-story-1",
+      "template_family": "visit_narrative",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-visit_narrative-zh-01",
+            "text": "林沐川将于2027年6月3日到访虚构市青杉路191号；需要联系时拨打+86-13900000191。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-1",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "visit_narrative-zh-02",
+      "language": "zh",
+      "story_id": "visit_narrative-zh-story-2",
+      "template_family": "visit_narrative",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-visit_narrative-zh-02",
+            "text": "陈映澜将于2027年6月4日到访虚构市青杉路192号；需要联系时拨打+86-13900000192。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-2",
+        "protected_categories": [
+          "ADDRESS",
+          "DATE"
+        ]
+      }
+    },
+    {
+      "case_id": "visit_narrative-zh-03",
+      "language": "zh",
+      "story_id": "visit_narrative-zh-story-3",
+      "template_family": "visit_narrative",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-visit_narrative-zh-03",
+            "text": "周若岚将于2027年6月5日到访虚构市青杉路193号；需要联系时拨打+86-13900000193。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-3",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "visit_narrative-zh-04",
+      "language": "zh",
+      "story_id": "visit_narrative-zh-story-4",
+      "template_family": "visit_narrative",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-visit_narrative-zh-04",
+            "text": "许知遥将于2027年6月6日到访虚构市青杉路194号；需要联系时拨打+86-13900000194。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-4",
+        "protected_categories": [
+          "ADDRESS",
+          "DATE",
+          "PERSON",
+          "PHONE"
+        ]
+      }
+    },
+    {
+      "case_id": "visit_narrative-en-00",
+      "language": "en",
+      "story_id": "visit_narrative-en-story-0",
+      "template_family": "visit_narrative",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-visit_narrative-en-00",
+            "text": "Mara Linden will visit 190 Fictional Cedar Lane on June 2, 2027; call +1-202-555-0190 to coordinate."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-0",
+        "protected_categories": [
+          "ADDRESS",
+          "DATE",
+          "PERSON",
+          "PHONE"
+        ]
+      }
+    },
+    {
+      "case_id": "visit_narrative-en-01",
+      "language": "en",
+      "story_id": "visit_narrative-en-story-1",
+      "template_family": "visit_narrative",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-visit_narrative-en-01",
+            "text": "Evan Brook will visit 191 Fictional Cedar Lane on June 3, 2027; call +1-202-555-0191 to coordinate."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-1",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "visit_narrative-en-02",
+      "language": "en",
+      "story_id": "visit_narrative-en-story-2",
+      "template_family": "visit_narrative",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-visit_narrative-en-02",
+            "text": "Nora Vale will visit 192 Fictional Cedar Lane on June 4, 2027; call +1-202-555-0192 to coordinate."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-2",
+        "protected_categories": [
+          "ADDRESS",
+          "DATE"
+        ]
+      }
+    },
+    {
+      "case_id": "visit_narrative-en-03",
+      "language": "en",
+      "story_id": "visit_narrative-en-story-3",
+      "template_family": "visit_narrative",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-visit_narrative-en-03",
+            "text": "Iris Reed will visit 193 Fictional Cedar Lane on June 5, 2027; call +1-202-555-0193 to coordinate."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-3",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "visit_narrative-en-04",
+      "language": "en",
+      "story_id": "visit_narrative-en-story-4",
+      "template_family": "visit_narrative",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-visit_narrative-en-04",
+            "text": "Theo Ash will visit 194 Fictional Cedar Lane on June 6, 2027; call +1-202-555-0194 to coordinate."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-4",
+        "protected_categories": [
+          "ADDRESS",
+          "DATE",
+          "PERSON",
+          "PHONE"
+        ]
+      }
+    },
+    {
+      "case_id": "identity_correction-zh-00",
+      "language": "zh",
+      "story_id": "identity_correction-zh-story-0",
+      "template_family": "identity_correction",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-identity_correction-zh-00",
+            "text": "请把编号990000199001012004对应的登记姓名核对为沈星禾，回执应发送至fixture200@example.test。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-0",
+        "protected_categories": [
+          "EMAIL",
+          "ID",
+          "PERSON"
+        ]
+      }
+    },
+    {
+      "case_id": "identity_correction-zh-01",
+      "language": "zh",
+      "story_id": "identity_correction-zh-story-1",
+      "template_family": "identity_correction",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-identity_correction-zh-01",
+            "text": "请把编号990000199001012012对应的登记姓名核对为林沐川，回执应发送至fixture201@example.test。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-1",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "identity_correction-zh-02",
+      "language": "zh",
+      "story_id": "identity_correction-zh-story-2",
+      "template_family": "identity_correction",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-identity_correction-zh-02",
+            "text": "请把编号990000199001012020对应的登记姓名核对为陈映澜，回执应发送至fixture202@example.test。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-2",
+        "protected_categories": [
+          "EMAIL"
+        ]
+      }
+    },
+    {
+      "case_id": "identity_correction-zh-03",
+      "language": "zh",
+      "story_id": "identity_correction-zh-story-3",
+      "template_family": "identity_correction",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-identity_correction-zh-03",
+            "text": "请把编号990000199001012039对应的登记姓名核对为周若岚，回执应发送至fixture203@example.test。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-3",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "identity_correction-zh-04",
+      "language": "zh",
+      "story_id": "identity_correction-zh-story-4",
+      "template_family": "identity_correction",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-identity_correction-zh-04",
+            "text": "请把编号990000199001012047对应的登记姓名核对为许知遥，回执应发送至fixture204@example.test。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-4",
+        "protected_categories": [
+          "EMAIL",
+          "ID",
+          "PERSON"
+        ]
+      }
+    },
+    {
+      "case_id": "identity_correction-en-00",
+      "language": "en",
+      "story_id": "identity_correction-en-story-0",
+      "template_family": "identity_correction",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-identity_correction-en-00",
+            "text": "The record identified by 990000199001012004 should name Mara Linden; direct the receipt to fixture200@example.test."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-0",
+        "protected_categories": [
+          "EMAIL",
+          "ID",
+          "PERSON"
+        ]
+      }
+    },
+    {
+      "case_id": "identity_correction-en-01",
+      "language": "en",
+      "story_id": "identity_correction-en-story-1",
+      "template_family": "identity_correction",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-identity_correction-en-01",
+            "text": "The record identified by 990000199001012012 should name Evan Brook; direct the receipt to fixture201@example.test."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-1",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "identity_correction-en-02",
+      "language": "en",
+      "story_id": "identity_correction-en-story-2",
+      "template_family": "identity_correction",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-identity_correction-en-02",
+            "text": "The record identified by 990000199001012020 should name Nora Vale; direct the receipt to fixture202@example.test."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-2",
+        "protected_categories": [
+          "EMAIL"
+        ]
+      }
+    },
+    {
+      "case_id": "identity_correction-en-03",
+      "language": "en",
+      "story_id": "identity_correction-en-story-3",
+      "template_family": "identity_correction",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-identity_correction-en-03",
+            "text": "The record identified by 990000199001012039 should name Iris Reed; direct the receipt to fixture203@example.test."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-3",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "identity_correction-en-04",
+      "language": "en",
+      "story_id": "identity_correction-en-story-4",
+      "template_family": "identity_correction",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-identity_correction-en-04",
+            "text": "The record identified by 990000199001012047 should name Theo Ash; direct the receipt to fixture204@example.test."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-4",
+        "protected_categories": [
+          "EMAIL",
+          "ID",
+          "PERSON"
+        ]
+      }
+    },
+    {
+      "case_id": "publication_notice-zh-00",
+      "language": "zh",
+      "story_id": "publication_notice-zh-story-0",
+      "template_family": "publication_notice",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-publication_notice-zh-00",
+            "text": "通告提到青杉实验社210在2027年6月22日启动枫叶-210，计划金额为410,000 USD。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-0",
+        "protected_categories": [
+          "AMOUNT",
+          "CUSTOMER",
+          "DATE",
+          "PROJECT"
+        ]
+      }
+    },
+    {
+      "case_id": "publication_notice-zh-01",
+      "language": "zh",
+      "story_id": "publication_notice-zh-story-0",
+      "template_family": "publication_notice",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-publication_notice-zh-01",
+            "text": "通告提到青杉实验社210在2027年6月22日启动枫叶-210，计划金额为410,000 USD。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-1",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "publication_notice-zh-02",
+      "language": "zh",
+      "story_id": "publication_notice-zh-story-2",
+      "template_family": "publication_notice",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-publication_notice-zh-02",
+            "text": "通告提到青杉实验社212在2027年6月24日启动枫叶-212，计划金额为412,000 USD。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-2",
+        "protected_categories": [
+          "AMOUNT",
+          "CUSTOMER"
+        ]
+      }
+    },
+    {
+      "case_id": "publication_notice-zh-03",
+      "language": "zh",
+      "story_id": "publication_notice-zh-story-3",
+      "template_family": "publication_notice",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-publication_notice-zh-03",
+            "text": "通告提到青杉实验社213在2027年6月25日启动枫叶-213，计划金额为413,000 USD。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-3",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "publication_notice-zh-04",
+      "language": "zh",
+      "story_id": "publication_notice-zh-story-4",
+      "template_family": "publication_notice",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-publication_notice-zh-04",
+            "text": "通告提到青杉实验社214在2027年6月26日启动枫叶-214，计划金额为414,000 USD。"
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-4",
+        "protected_categories": [
+          "AMOUNT",
+          "CUSTOMER",
+          "DATE",
+          "PROJECT"
+        ]
+      }
+    },
+    {
+      "case_id": "publication_notice-en-00",
+      "language": "en",
+      "story_id": "publication_notice-en-story-0",
+      "template_family": "publication_notice",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-publication_notice-en-00",
+            "text": "The notice says Granite Fern Cooperative 210 starts Maple-210 on June 22, 2027 with 410,000 USD allocated."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-0",
+        "protected_categories": [
+          "AMOUNT",
+          "CUSTOMER",
+          "DATE",
+          "PROJECT"
+        ]
+      }
+    },
+    {
+      "case_id": "publication_notice-en-01",
+      "language": "en",
+      "story_id": "publication_notice-en-story-0",
+      "template_family": "publication_notice",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-publication_notice-en-01",
+            "text": "The notice says Granite Fern Cooperative 210 starts Maple-210 on June 22, 2027 with 410,000 USD allocated."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-1",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "publication_notice-en-02",
+      "language": "en",
+      "story_id": "publication_notice-en-story-2",
+      "template_family": "publication_notice",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-publication_notice-en-02",
+            "text": "The notice says Granite Fern Cooperative 212 starts Maple-212 on June 24, 2027 with 412,000 USD allocated."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-2",
+        "protected_categories": [
+          "AMOUNT",
+          "CUSTOMER"
+        ]
+      }
+    },
+    {
+      "case_id": "publication_notice-en-03",
+      "language": "en",
+      "story_id": "publication_notice-en-story-3",
+      "template_family": "publication_notice",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-publication_notice-en-03",
+            "text": "The notice says Granite Fern Cooperative 213 starts Maple-213 on June 25, 2027 with 413,000 USD allocated."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-3",
+        "protected_categories": []
+      }
+    },
+    {
+      "case_id": "publication_notice-en-04",
+      "language": "en",
+      "story_id": "publication_notice-en-story-4",
+      "template_family": "publication_notice",
+      "split": "heldout",
+      "payload": {
+        "query": "",
+        "memories": [
+          {
+            "source_id": "memory-publication_notice-en-04",
+            "text": "The notice says Granite Fern Cooperative 214 starts Maple-214 on June 26, 2027 with 414,000 USD allocated."
+          }
+        ]
+      },
+      "sensitivity_policy": {
+        "version": "synthetic-policy-v1-4",
+        "protected_categories": [
+          "AMOUNT",
+          "CUSTOMER",
+          "DATE",
+          "PROJECT"
+        ]
+      }
+    }
+  ]
+}

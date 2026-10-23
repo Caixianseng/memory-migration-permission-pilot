@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "corpus_version": "independent_v3_final_holdout_20261024",
+  "frozen_at_utc": "2026-10-23T16:15:18.174839+00:00",
+  "frozen_before_detection": true,
+  "detector_run_at_freeze": false,
+  "case_count": 40,
+  "expected_heldout_cases": 40,
+  "development_cases": 0,
+  "language_counts": {
+    "zh": 20,
+    "en": 20
+  },
+  "split_counts": {
+    "dev": 0,
+    "heldout": 40
+  },
+  "story_count": 40,
+  "template_family_count": 10,
+  "entity_registration": "unregistered_only",
+  "real_private_records": 0,
+  "synthetic": true,
+  "human_review": null,
+  "not_for_retuning": true,
+  "annotation_method": "complete authored value segments with code-point offsets, filtered by trusted categories",
+  "runtime_sha256": "19ae1d4a892c11cd347bc2c9ec867edbdfc9dae912ae60b56286f69728b5ac7e",
+  "evaluation_sha256": "faf9ef1463368582e2e34b0864305311cce6c0d64dbddcbfa60d8a622e42519d",
+  "files": {
+    "runtime": {
+      "path": "runtime.json",
+      "sha256": "7a235a22146f5bb632844abd7139b38116bfad0de69496bca0d387ca851f7ca9"
+    },
+    "evaluation": {
+      "path": "evaluation.json",
+      "sha256": "cfeee25e80cb0ffedb841187678e23c8309034515cfeb8ffb27bdfef41eaaba0"
+    }
+  },
+  "generator_sha256": "0f33c77867c07d0bd3280433c95e0f49b35977deada3efe1069359ce92f4b6e9",
+  "limitations": [
+    "Authored synthetic short narratives, not external samples; no independent human annotation.",
+    "Final holdout must not be reused as tuning feedback.",
+    "Public-policy examples and policy-protected true negatives are both present.",
+    "Known category scope does not establish exhaustive semantic privacy detection."
+  ]
+}

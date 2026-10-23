@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "corpus_version": "independent_challenge_v3_20261023",
+  "frozen_at_utc": "2026-10-23T16:00:01.627064+00:00",
+  "frozen_before_detection": true,
+  "detector_run_at_freeze": false,
+  "expected_heldout_cases": 40,
+  "case_count": 80,
+  "language_counts": {
+    "zh": 40,
+    "en": 40
+  },
+  "split_counts": {
+    "dev": 40,
+    "heldout": 40
+  },
+  "story_count": 78,
+  "template_family_count": 20,
+  "family_split_disjoint": true,
+  "story_split_disjoint": true,
+  "named_surface_values_split_disjoint": true,
+  "entity_registration": "unregistered_only",
+  "real_private_records": 0,
+  "synthetic": true,
+  "human_review": null,
+  "annotation_method": "complete authored segment values with code-point offsets; filtered by trusted category scope",
+  "runtime_sha256": "9a05a3dbd17584928a3c0f4ad1be04438c77929405f2b84f5977d8b8456a7c31",
+  "evaluation_sha256": "2f200367a1bd88d7fc8177eeb4b2ab58e816ca1558904fb8de62c36b100cffc6",
+  "files": {
+    "runtime": {
+      "path": "runtime.json",
+      "sha256": "e3e30baf9a58ccfaf53fee95798ea792b8a372f98a692ea865a5b51d7fe71f66"
+    },
+    "evaluation": {
+      "path": "evaluation.json",
+      "sha256": "a83b88db4cdf6feb3de426fcae2418469b4262bcd8511e32789d7954b6fdfe04"
+    }
+  },
+  "generator_sha256": "4c2eb5cb89d2811afb95c42acc61ae3ab47a22c516e3159dd33c1d91490d0e5c",
+  "limitations": [
+    "Synthetic authored narratives, not sampled records; no independent human annotation.",
+    "Supplied categories define sensitivity; this evaluates finding complete spans within that scope.",
+    "No registered business lexicon; named values must generalize without answer-bearing policy inputs.",
+    "Two policy twins share a story within the held-out split; case count is not independent story count.",
+    "Held-out artifacts are inspectable files; keep their contents and scores out of development feedback."
+  ]
+}

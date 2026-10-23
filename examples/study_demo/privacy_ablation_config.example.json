@@ -1,0 +1,19 @@
+{
+  "provider": "deepseek",
+  "model": "deepseek-flash",
+  "endpoint": "https://api.deepseek.com/chat/completions",
+  "api_key_env": "STUDY_MODEL_API_KEY",
+  "currency": "CNY",
+  "price_source_url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+  "verified_prices_date": "2026-10-23",
+  "input_price_per_million": 2,
+  "cache_hit_input_price_per_million": 0.04,
+  "output_price_per_million": 8,
+  "existing_cumulative_spend": null,
+  "existing_spend_confirmed": false,
+  "total_limit": 10,
+  "run_limit": 0.5,
+  "max_calls_per_run": 64,
+  "max_input_tokens": 3072,
+  "max_output_tokens": 64
+}

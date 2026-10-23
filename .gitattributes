@@ -2,4 +2,9 @@
 *.py text eol=lf
 *.md text eol=lf
 *.json text eol=lf
+# Frozen corpus manifests include raw-byte hashes; preserve their original bytes.
+examples/privacy_eval/*.json -text whitespace=cr-at-eol
+examples/privacy_eval_v2/*.json -text whitespace=cr-at-eol
+examples/privacy_eval_v3/*.json -text whitespace=cr-at-eol
+examples/privacy_eval_v3_final/*.json -text whitespace=cr-at-eol
 *.cmd text eol=crlf

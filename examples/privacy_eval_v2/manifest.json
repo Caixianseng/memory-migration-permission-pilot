@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "corpus_version": "independent_challenge_v2_20261023",
+  "frozen_at_utc": "2026-10-22T17:06:37.816353+00:00",
+  "frozen_before_detection": true,
+  "detector_run_at_freeze": false,
+  "expected_heldout_cases": 48,
+  "case_count": 96,
+  "language_counts": {
+    "zh": 48,
+    "en": 48
+  },
+  "split_counts": {
+    "dev": 48,
+    "heldout": 48
+  },
+  "story_count": 94,
+  "template_family_count": 16,
+  "family_split_disjoint": true,
+  "story_split_disjoint": true,
+  "entity_registration": "unregistered_only",
+  "real_private_records": 0,
+  "synthetic": true,
+  "human_review": null,
+  "annotation_method": "authored complete-value code-point spans, filtered only by trusted policy categories",
+  "runtime_sha256": "401a7bee1f0efa9f7b5cf3e237eabbe2f7f1a092c3e8da473dd203ceed6f90d1",
+  "evaluation_sha256": "d43f88e2432b39c76685004320db9863e0acf202c57bf1d156a1551d1fcb6610",
+  "files": {
+    "runtime": {
+      "path": "runtime.json",
+      "sha256": "4c89a143bdc2b4e1621405bd3e8b89923548aa38ab03b7d1cbfeff61e5417d83"
+    },
+    "evaluation": {
+      "path": "evaluation.json",
+      "sha256": "170b4c01c7e92fcde074bf2a3561c234906428bbb4876c12005c7aede74bd849"
+    }
+  },
+  "generator_sha256": "af43aeb45d7457b145b18f855db23b7faa763fcd7019e9c994ca94bef6ccc7aa",
+  "limitations": [
+    "Synthetic authored examples; no human review or external sampling.",
+    "Protected categories are known inputs; this measures extraction within that scope.",
+    "No registered entity lexicon; named business entities must generalize semantically.",
+    "Held-out templates are available in the frozen artifact; keep them out of development feedback."
+  ]
+}

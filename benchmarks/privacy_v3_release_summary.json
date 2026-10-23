@@ -1,0 +1,213 @@
+{
+  "schema_version": 3,
+  "release_status": "experimental_below_acceptance_gate",
+  "promotion_decision": "Do not promote as a validated privacy pipeline; mixed detection change and worse ready-payload coverage.",
+  "dataset": "examples/privacy_eval_v3_final",
+  "synthetic": true,
+  "human_review": null,
+  "case_count": 40,
+  "heldout_cases": 40,
+  "corpus_runtime_sha256": "19ae1d4a892c11cd347bc2c9ec867edbdfc9dae912ae60b56286f69728b5ac7e",
+  "corpus_evaluation_sha256": "faf9ef1463368582e2e34b0864305311cce6c0d64dbddcbfa60d8a622e42519d",
+  "results": {
+    "baseline": {
+      "detector_heldout": [
+        {
+          "mode": "rules",
+          "split": "heldout",
+          "language": "all",
+          "cases": 40,
+          "tp": 18,
+          "fp": 4,
+          "fn": 78,
+          "precision": 0.8181818181818182,
+          "recall": 0.1875,
+          "character_precision": 1.0,
+          "character_recall": 0.2152112676056338,
+          "needs_review": 0,
+          "needs_review_rate": 0.0,
+          "error_cases": 0,
+          "elapsed_seconds_original_detection": 0.01191000000085296,
+          "cached_cases": 0
+        },
+        {
+          "mode": "agent",
+          "split": "heldout",
+          "language": "all",
+          "cases": 40,
+          "tp": 70,
+          "fp": 13,
+          "fn": 26,
+          "precision": 0.8433734939759037,
+          "recall": 0.7291666666666666,
+          "character_precision": 0.9760554505356017,
+          "character_recall": 0.8726760563380281,
+          "needs_review": 1,
+          "needs_review_rate": 0.025,
+          "error_cases": 1,
+          "elapsed_seconds_original_detection": 34.15091340000049,
+          "cached_cases": 0
+        },
+        {
+          "mode": "combined",
+          "split": "heldout",
+          "language": "all",
+          "cases": 40,
+          "tp": 75,
+          "fp": 16,
+          "fn": 21,
+          "precision": 0.8241758241758241,
+          "recall": 0.78125,
+          "character_precision": 0.9774212715389186,
+          "character_recall": 0.9267605633802817,
+          "needs_review": 1,
+          "needs_review_rate": 0.025,
+          "error_cases": 1,
+          "elapsed_seconds_original_detection": 33.91134760000023,
+          "cached_cases": 0
+        }
+      ],
+      "detector_gate": {
+        "passed": false,
+        "minimum_recall": 0.95,
+        "minimum_precision": 0.9,
+        "required_heldout_cases": 40,
+        "requires_all_expected_cases_and_no_review_or_errors": true
+      },
+      "payload_heldout": {
+        "split": "heldout",
+        "registered_cases": 40,
+        "ready_cases": 35,
+        "blocked_cases": 5,
+        "instrumentation_errors": 0,
+        "ready_cases_with_incomplete_masking": 5,
+        "ready_gold_spans": 81,
+        "complete_masked_spans": 70,
+        "partial_masked_spans": 6,
+        "unmasked_spans": 5,
+        "masked_unprotected_characters": 76,
+        "ready_cases_without_gold_masking_gaps": 30
+      },
+      "provenance": {
+        "version": "0.40.8",
+        "model": "qwen3:4b-instruct-2507-q4_K_M",
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "endpoint": "http://127.0.0.1:11435",
+        "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "prompt_version": "local_sensitive_spans_v2",
+        "prompt_sha256": "87a9a71eed8bdf47669ee6471f841e8f116ce3a46d1bb60350d3a968b6bdc1c4",
+        "revision": "baseline"
+      },
+      "detector_sha256": "234aa774818b97cdf86adfeddf077fe38a1f1040544073841e34be8b86c67d74",
+      "local_agent_sha256": "7228b2e8d25b4c548e4c45d732999ffd94c4ebbdd201be0152f8b0773a1c14b5"
+    },
+    "current": {
+      "detector_heldout": [
+        {
+          "mode": "rules",
+          "split": "heldout",
+          "language": "all",
+          "cases": 40,
+          "tp": 26,
+          "fp": 4,
+          "fn": 70,
+          "precision": 0.8666666666666667,
+          "recall": 0.2708333333333333,
+          "character_precision": 1.0,
+          "character_recall": 0.3233802816901408,
+          "needs_review": 0,
+          "needs_review_rate": 0.0,
+          "error_cases": 0,
+          "elapsed_seconds_original_detection": 0.008567199998651631,
+          "cached_cases": 0
+        },
+        {
+          "mode": "agent",
+          "split": "heldout",
+          "language": "all",
+          "cases": 40,
+          "tp": 72,
+          "fp": 23,
+          "fn": 24,
+          "precision": 0.7578947368421053,
+          "recall": 0.75,
+          "character_precision": 0.8901282766313441,
+          "character_recall": 0.8991549295774648,
+          "needs_review": 6,
+          "needs_review_rate": 0.15,
+          "error_cases": 6,
+          "elapsed_seconds_original_detection": 48.02154849999806,
+          "cached_cases": 0
+        },
+        {
+          "mode": "combined",
+          "split": "heldout",
+          "language": "all",
+          "cases": 40,
+          "tp": 77,
+          "fp": 24,
+          "fn": 19,
+          "precision": 0.7623762376237624,
+          "recall": 0.8020833333333334,
+          "character_precision": 0.8883547008547008,
+          "character_recall": 0.9369014084507042,
+          "needs_review": 6,
+          "needs_review_rate": 0.15,
+          "error_cases": 6,
+          "elapsed_seconds_original_detection": 46.689528199999586,
+          "cached_cases": 0
+        }
+      ],
+      "detector_gate": {
+        "passed": false,
+        "minimum_recall": 0.95,
+        "minimum_precision": 0.9,
+        "required_heldout_cases": 40,
+        "requires_all_expected_cases_and_no_review_or_errors": true
+      },
+      "payload_heldout": {
+        "split": "heldout",
+        "registered_cases": 40,
+        "ready_cases": 34,
+        "blocked_cases": 6,
+        "instrumentation_errors": 0,
+        "ready_cases_with_incomplete_masking": 11,
+        "ready_gold_spans": 80,
+        "complete_masked_spans": 67,
+        "partial_masked_spans": 6,
+        "unmasked_spans": 7,
+        "masked_unprotected_characters": 209,
+        "ready_cases_without_gold_masking_gaps": 23
+      },
+      "provenance": {
+        "version": "0.40.8",
+        "model": "qwen3:4b-instruct-2507-q4_K_M",
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "endpoint": "http://127.0.0.1:11435",
+        "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "prompt_version": "local_sensitive_spans_v3_1b_compact",
+        "prompt_sha256": "d88001e3b5614e03e60255556d50fe3d5e22736e61854d875e65f2e8cd21988e",
+        "revision": "current"
+      },
+      "detector_sha256": "3b922f4a669fbb786a475171659c780ca96c49832d8cb70483bed9365dc35474",
+      "local_agent_sha256": "09d7ee9ea362e5595111e7999e0c6a6a386a1bfffbaa502a0d6ca82188877054"
+    }
+  },
+  "new_cloud_calls": 0,
+  "new_api_cost_cny": "0",
+  "llm_task_correctness": null,
+  "old_story_regression": {
+    "registered_tasks": 7,
+    "ready_tasks": 5,
+    "blocked_tasks": 2,
+    "registered_value_residual_requests": 0,
+    "token_checks_passed": 24,
+    "token_checks_total": 24
+  },
+  "limits": [
+    "Same fresh corpus, single frozen run per implementation; no statistical significance claim.",
+    "Gold is scoring-only. Actual masking coverage includes request-local propagation, not semantic anonymization.",
+    "Ready-only masking counts retain blocked-case denominator. No new cloud question answering or live revocation tested.",
+    "Full local reports contain original public/synthetic text and are excluded from Git."
+  ]
+}

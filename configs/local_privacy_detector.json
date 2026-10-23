@@ -1,0 +1,7 @@
+{
+  "endpoint": "http://127.0.0.1:11435",
+  "model": "qwen3:4b-instruct-2507-q4_K_M",
+  "expected_version": "0.40.8",
+  "expected_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "timeout_seconds": 120
+}

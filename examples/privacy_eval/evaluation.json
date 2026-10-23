@@ -1,0 +1,1581 @@
+{
+  "schema_version": 1,
+  "kind": "synthetic_privacy_detection_gold",
+  "annotation_method": "authored segment offsets filtered by independently supplied policy categories",
+  "human_review": null,
+  "cases": [
+    {
+      "case_id": "contact_card-zh-00",
+      "findings": [
+        {
+          "source_id": "memory-contact_card-zh-00",
+          "start": 3,
+          "end": 6,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "memory-contact_card-zh-00",
+          "start": 10,
+          "end": 33,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "memory-contact_card-zh-00",
+          "start": 37,
+          "end": 52,
+          "category": "PHONE"
+        }
+      ]
+    },
+    {
+      "case_id": "contact_card-zh-01",
+      "findings": []
+    },
+    {
+      "case_id": "contact_card-zh-02",
+      "findings": [
+        {
+          "source_id": "memory-contact_card-zh-02",
+          "start": 10,
+          "end": 33,
+          "category": "EMAIL"
+        }
+      ]
+    },
+    {
+      "case_id": "contact_card-zh-03",
+      "findings": []
+    },
+    {
+      "case_id": "contact_card-zh-04",
+      "findings": [
+        {
+          "source_id": "memory-contact_card-zh-04",
+          "start": 3,
+          "end": 6,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "memory-contact_card-zh-04",
+          "start": 10,
+          "end": 33,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "memory-contact_card-zh-04",
+          "start": 37,
+          "end": 52,
+          "category": "PHONE"
+        }
+      ]
+    },
+    {
+      "case_id": "contact_card-en-00",
+      "findings": [
+        {
+          "source_id": "memory-contact_card-en-00",
+          "start": 6,
+          "end": 17,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "memory-contact_card-en-00",
+          "start": 26,
+          "end": 49,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "memory-contact_card-en-00",
+          "start": 58,
+          "end": 73,
+          "category": "PHONE"
+        }
+      ]
+    },
+    {
+      "case_id": "contact_card-en-01",
+      "findings": []
+    },
+    {
+      "case_id": "contact_card-en-02",
+      "findings": [
+        {
+          "source_id": "memory-contact_card-en-02",
+          "start": 24,
+          "end": 47,
+          "category": "EMAIL"
+        }
+      ]
+    },
+    {
+      "case_id": "contact_card-en-03",
+      "findings": []
+    },
+    {
+      "case_id": "contact_card-en-04",
+      "findings": [
+        {
+          "source_id": "memory-contact_card-en-04",
+          "start": 6,
+          "end": 14,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "memory-contact_card-en-04",
+          "start": 23,
+          "end": 46,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "memory-contact_card-en-04",
+          "start": 55,
+          "end": 70,
+          "category": "PHONE"
+        }
+      ]
+    },
+    {
+      "case_id": "identity_registry-zh-00",
+      "findings": [
+        {
+          "source_id": "memory-identity_registry-zh-00",
+          "start": 4,
+          "end": 7,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "memory-identity_registry-zh-00",
+          "start": 13,
+          "end": 31,
+          "category": "ID"
+        }
+      ]
+    },
+    {
+      "case_id": "identity_registry-zh-01",
+      "findings": []
+    },
+    {
+      "case_id": "identity_registry-zh-02",
+      "findings": [
+        {
+          "source_id": "memory-identity_registry-zh-02",
+          "start": 13,
+          "end": 31,
+          "category": "ID"
+        }
+      ]
+    },
+    {
+      "case_id": "identity_registry-zh-03",
+      "findings": []
+    },
+    {
+      "case_id": "identity_registry-zh-04",
+      "findings": [
+        {
+          "source_id": "memory-identity_registry-zh-04",
+          "start": 4,
+          "end": 7,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "memory-identity_registry-zh-04",
+          "start": 13,
+          "end": 31,
+          "category": "ID"
+        }
+      ]
+    },
+    {
+      "case_id": "identity_registry-en-00",
+      "findings": [
+        {
+          "source_id": "memory-identity_registry-en-00",
+          "start": 19,
+          "end": 30,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "memory-identity_registry-en-00",
+          "start": 49,
+          "end": 67,
+          "category": "ID"
+        }
+      ]
+    },
+    {
+      "case_id": "identity_registry-en-01",
+      "findings": []
+    },
+    {
+      "case_id": "identity_registry-en-02",
+      "findings": [
+        {
+          "source_id": "memory-identity_registry-en-02",
+          "start": 47,
+          "end": 65,
+          "category": "ID"
+        }
+      ]
+    },
+    {
+      "case_id": "identity_registry-en-03",
+      "findings": []
+    },
+    {
+      "case_id": "identity_registry-en-04",
+      "findings": [
+        {
+          "source_id": "memory-identity_registry-en-04",
+          "start": 19,
+          "end": 27,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "memory-identity_registry-en-04",
+          "start": 46,
+          "end": 64,
+          "category": "ID"
+        }
+      ]
+    },
+    {
+      "case_id": "delivery_label-zh-00",
+      "findings": [
+        {
+          "source_id": "memory-delivery_label-zh-00",
+          "start": 4,
+          "end": 7,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "memory-delivery_label-zh-00",
+          "start": 11,
+          "end": 21,
+          "category": "ADDRESS"
+        },
+        {
+          "source_id": "memory-delivery_label-zh-00",
+          "start": 25,
+          "end": 40,
+          "category": "PHONE"
+        }
+      ]
+    },
+    {
+      "case_id": "delivery_label-zh-01",
+      "findings": []
+    },
+    {
+      "case_id": "delivery_label-zh-02",
+      "findings": [
+        {
+          "source_id": "memory-delivery_label-zh-02",
+          "start": 11,
+          "end": 21,
+          "category": "ADDRESS"
+        }
+      ]
+    },
+    {
+      "case_id": "delivery_label-zh-03",
+      "findings": []
+    },
+    {
+      "case_id": "delivery_label-zh-04",
+      "findings": [
+        {
+          "source_id": "memory-delivery_label-zh-04",
+          "start": 4,
+          "end": 7,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "memory-delivery_label-zh-04",
+          "start": 11,
+          "end": 21,
+          "category": "ADDRESS"
+        },
+        {
+          "source_id": "memory-delivery_label-zh-04",
+          "start": 25,
+          "end": 40,
+          "category": "PHONE"
+        }
+      ]
+    },
+    {
+      "case_id": "delivery_label-en-00",
+      "findings": [
+        {
+          "source_id": "memory-delivery_label-en-00",
+          "start": 11,
+          "end": 22,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "memory-delivery_label-en-00",
+          "start": 33,
+          "end": 57,
+          "category": "ADDRESS"
+        },
+        {
+          "source_id": "memory-delivery_label-en-00",
+          "start": 66,
+          "end": 81,
+          "category": "PHONE"
+        }
+      ]
+    },
+    {
+      "case_id": "delivery_label-en-01",
+      "findings": []
+    },
+    {
+      "case_id": "delivery_label-en-02",
+      "findings": [
+        {
+          "source_id": "memory-delivery_label-en-02",
+          "start": 31,
+          "end": 55,
+          "category": "ADDRESS"
+        }
+      ]
+    },
+    {
+      "case_id": "delivery_label-en-03",
+      "findings": []
+    },
+    {
+      "case_id": "delivery_label-en-04",
+      "findings": [
+        {
+          "source_id": "memory-delivery_label-en-04",
+          "start": 11,
+          "end": 19,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "memory-delivery_label-en-04",
+          "start": 30,
+          "end": 54,
+          "category": "ADDRESS"
+        },
+        {
+          "source_id": "memory-delivery_label-en-04",
+          "start": 63,
+          "end": 78,
+          "category": "PHONE"
+        }
+      ]
+    },
+    {
+      "case_id": "customer_handover-zh-00",
+      "findings": [
+        {
+          "source_id": "memory-customer_handover-zh-00",
+          "start": 3,
+          "end": 11,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "memory-customer_handover-zh-00",
+          "start": 15,
+          "end": 21,
+          "category": "PROJECT"
+        }
+      ]
+    },
+    {
+      "case_id": "customer_handover-zh-01",
+      "findings": []
+    },
+    {
+      "case_id": "customer_handover-zh-02",
+      "findings": [
+        {
+          "source_id": "memory-customer_handover-zh-02",
+          "start": 3,
+          "end": 11,
+          "category": "CUSTOMER"
+        }
+      ]
+    },
+    {
+      "case_id": "customer_handover-zh-03",
+      "findings": []
+    },
+    {
+      "case_id": "customer_handover-zh-04",
+      "findings": [
+        {
+          "source_id": "memory-customer_handover-zh-04",
+          "start": 3,
+          "end": 11,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "memory-customer_handover-zh-04",
+          "start": 15,
+          "end": 21,
+          "category": "PROJECT"
+        }
+      ]
+    },
+    {
+      "case_id": "customer_handover-en-00",
+      "findings": [
+        {
+          "source_id": "memory-customer_handover-en-00",
+          "start": 10,
+          "end": 38,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "memory-customer_handover-en-00",
+          "start": 49,
+          "end": 58,
+          "category": "PROJECT"
+        }
+      ]
+    },
+    {
+      "case_id": "customer_handover-en-01",
+      "findings": []
+    },
+    {
+      "case_id": "customer_handover-en-02",
+      "findings": [
+        {
+          "source_id": "memory-customer_handover-en-02",
+          "start": 10,
+          "end": 38,
+          "category": "CUSTOMER"
+        }
+      ]
+    },
+    {
+      "case_id": "customer_handover-en-03",
+      "findings": []
+    },
+    {
+      "case_id": "customer_handover-en-04",
+      "findings": [
+        {
+          "source_id": "memory-customer_handover-en-04",
+          "start": 10,
+          "end": 38,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "memory-customer_handover-en-04",
+          "start": 49,
+          "end": 58,
+          "category": "PROJECT"
+        }
+      ]
+    },
+    {
+      "case_id": "funding_memo-zh-00",
+      "findings": [
+        {
+          "source_id": "memory-funding_memo-zh-00",
+          "start": 3,
+          "end": 11,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "memory-funding_memo-zh-00",
+          "start": 15,
+          "end": 26,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "funding_memo-zh-01",
+      "findings": []
+    },
+    {
+      "case_id": "funding_memo-zh-02",
+      "findings": [
+        {
+          "source_id": "memory-funding_memo-zh-02",
+          "start": 15,
+          "end": 26,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "funding_memo-zh-03",
+      "findings": []
+    },
+    {
+      "case_id": "funding_memo-zh-04",
+      "findings": [
+        {
+          "source_id": "memory-funding_memo-zh-04",
+          "start": 3,
+          "end": 11,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "memory-funding_memo-zh-04",
+          "start": 15,
+          "end": 26,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "funding_memo-en-00",
+      "findings": [
+        {
+          "source_id": "memory-funding_memo-en-00",
+          "start": 10,
+          "end": 38,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "memory-funding_memo-en-00",
+          "start": 48,
+          "end": 59,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "funding_memo-en-01",
+      "findings": []
+    },
+    {
+      "case_id": "funding_memo-en-02",
+      "findings": [
+        {
+          "source_id": "memory-funding_memo-en-02",
+          "start": 48,
+          "end": 59,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "funding_memo-en-03",
+      "findings": []
+    },
+    {
+      "case_id": "funding_memo-en-04",
+      "findings": [
+        {
+          "source_id": "memory-funding_memo-en-04",
+          "start": 10,
+          "end": 38,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "memory-funding_memo-en-04",
+          "start": 48,
+          "end": 59,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "schedule_brief-zh-00",
+      "findings": [
+        {
+          "source_id": "memory-schedule_brief-zh-00",
+          "start": 3,
+          "end": 9,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "memory-schedule_brief-zh-00",
+          "start": 15,
+          "end": 25,
+          "category": "DATE"
+        }
+      ]
+    },
+    {
+      "case_id": "schedule_brief-zh-01",
+      "findings": []
+    },
+    {
+      "case_id": "schedule_brief-zh-02",
+      "findings": [
+        {
+          "source_id": "memory-schedule_brief-zh-02",
+          "start": 15,
+          "end": 25,
+          "category": "DATE"
+        }
+      ]
+    },
+    {
+      "case_id": "schedule_brief-zh-03",
+      "findings": []
+    },
+    {
+      "case_id": "schedule_brief-zh-04",
+      "findings": [
+        {
+          "source_id": "memory-schedule_brief-zh-04",
+          "start": 3,
+          "end": 9,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "memory-schedule_brief-zh-04",
+          "start": 15,
+          "end": 25,
+          "category": "DATE"
+        }
+      ]
+    },
+    {
+      "case_id": "schedule_brief-en-00",
+      "findings": [
+        {
+          "source_id": "memory-schedule_brief-en-00",
+          "start": 9,
+          "end": 18,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "memory-schedule_brief-en-00",
+          "start": 34,
+          "end": 47,
+          "category": "DATE"
+        }
+      ]
+    },
+    {
+      "case_id": "schedule_brief-en-01",
+      "findings": []
+    },
+    {
+      "case_id": "schedule_brief-en-02",
+      "findings": [
+        {
+          "source_id": "memory-schedule_brief-en-02",
+          "start": 34,
+          "end": 47,
+          "category": "DATE"
+        }
+      ]
+    },
+    {
+      "case_id": "schedule_brief-en-03",
+      "findings": []
+    },
+    {
+      "case_id": "schedule_brief-en-04",
+      "findings": [
+        {
+          "source_id": "memory-schedule_brief-en-04",
+          "start": 9,
+          "end": 18,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "memory-schedule_brief-en-04",
+          "start": 34,
+          "end": 47,
+          "category": "DATE"
+        }
+      ]
+    },
+    {
+      "case_id": "directory_entry-zh-00",
+      "findings": [
+        {
+          "source_id": "memory-directory_entry-zh-00",
+          "start": 9,
+          "end": 12,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "memory-directory_entry-zh-00",
+          "start": 16,
+          "end": 39,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "memory-directory_entry-zh-00",
+          "start": 43,
+          "end": 53,
+          "category": "ADDRESS"
+        }
+      ]
+    },
+    {
+      "case_id": "directory_entry-zh-01",
+      "findings": []
+    },
+    {
+      "case_id": "directory_entry-zh-02",
+      "findings": [
+        {
+          "source_id": "memory-directory_entry-zh-02",
+          "start": 43,
+          "end": 53,
+          "category": "ADDRESS"
+        }
+      ]
+    },
+    {
+      "case_id": "directory_entry-zh-03",
+      "findings": []
+    },
+    {
+      "case_id": "directory_entry-zh-04",
+      "findings": [
+        {
+          "source_id": "memory-directory_entry-zh-04",
+          "start": 9,
+          "end": 12,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "memory-directory_entry-zh-04",
+          "start": 16,
+          "end": 39,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "memory-directory_entry-zh-04",
+          "start": 43,
+          "end": 53,
+          "category": "ADDRESS"
+        }
+      ]
+    },
+    {
+      "case_id": "directory_entry-en-00",
+      "findings": [
+        {
+          "source_id": "memory-directory_entry-en-00",
+          "start": 24,
+          "end": 35,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "memory-directory_entry-en-00",
+          "start": 44,
+          "end": 67,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "memory-directory_entry-en-00",
+          "start": 78,
+          "end": 102,
+          "category": "ADDRESS"
+        }
+      ]
+    },
+    {
+      "case_id": "directory_entry-en-01",
+      "findings": []
+    },
+    {
+      "case_id": "directory_entry-en-02",
+      "findings": [
+        {
+          "source_id": "memory-directory_entry-en-02",
+          "start": 76,
+          "end": 100,
+          "category": "ADDRESS"
+        }
+      ]
+    },
+    {
+      "case_id": "directory_entry-en-03",
+      "findings": []
+    },
+    {
+      "case_id": "directory_entry-en-04",
+      "findings": [
+        {
+          "source_id": "memory-directory_entry-en-04",
+          "start": 24,
+          "end": 32,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "memory-directory_entry-en-04",
+          "start": 41,
+          "end": 64,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "memory-directory_entry-en-04",
+          "start": 75,
+          "end": 99,
+          "category": "ADDRESS"
+        }
+      ]
+    },
+    {
+      "case_id": "policy_pair-zh-00",
+      "findings": [
+        {
+          "source_id": "memory-policy_pair-zh-00",
+          "start": 3,
+          "end": 11,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "memory-policy_pair-zh-00",
+          "start": 15,
+          "end": 21,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "memory-policy_pair-zh-00",
+          "start": 25,
+          "end": 36,
+          "category": "AMOUNT"
+        },
+        {
+          "source_id": "memory-policy_pair-zh-00",
+          "start": 40,
+          "end": 49,
+          "category": "DATE"
+        }
+      ]
+    },
+    {
+      "case_id": "policy_pair-zh-01",
+      "findings": []
+    },
+    {
+      "case_id": "policy_pair-zh-02",
+      "findings": [
+        {
+          "source_id": "memory-policy_pair-zh-02",
+          "start": 3,
+          "end": 11,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "memory-policy_pair-zh-02",
+          "start": 25,
+          "end": 36,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "policy_pair-zh-03",
+      "findings": []
+    },
+    {
+      "case_id": "policy_pair-zh-04",
+      "findings": [
+        {
+          "source_id": "memory-policy_pair-zh-04",
+          "start": 3,
+          "end": 11,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "memory-policy_pair-zh-04",
+          "start": 15,
+          "end": 21,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "memory-policy_pair-zh-04",
+          "start": 25,
+          "end": 36,
+          "category": "AMOUNT"
+        },
+        {
+          "source_id": "memory-policy_pair-zh-04",
+          "start": 40,
+          "end": 50,
+          "category": "DATE"
+        }
+      ]
+    },
+    {
+      "case_id": "policy_pair-en-00",
+      "findings": [
+        {
+          "source_id": "memory-policy_pair-en-00",
+          "start": 10,
+          "end": 38,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "memory-policy_pair-en-00",
+          "start": 49,
+          "end": 58,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "memory-policy_pair-en-00",
+          "start": 68,
+          "end": 79,
+          "category": "AMOUNT"
+        },
+        {
+          "source_id": "memory-policy_pair-en-00",
+          "start": 87,
+          "end": 99,
+          "category": "DATE"
+        }
+      ]
+    },
+    {
+      "case_id": "policy_pair-en-01",
+      "findings": []
+    },
+    {
+      "case_id": "policy_pair-en-02",
+      "findings": [
+        {
+          "source_id": "memory-policy_pair-en-02",
+          "start": 10,
+          "end": 38,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "memory-policy_pair-en-02",
+          "start": 68,
+          "end": 79,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "policy_pair-en-03",
+      "findings": []
+    },
+    {
+      "case_id": "policy_pair-en-04",
+      "findings": [
+        {
+          "source_id": "memory-policy_pair-en-04",
+          "start": 10,
+          "end": 38,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "memory-policy_pair-en-04",
+          "start": 49,
+          "end": 58,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "memory-policy_pair-en-04",
+          "start": 68,
+          "end": 79,
+          "category": "AMOUNT"
+        },
+        {
+          "source_id": "memory-policy_pair-en-04",
+          "start": 87,
+          "end": 100,
+          "category": "DATE"
+        }
+      ]
+    },
+    {
+      "case_id": "contract_narrative-zh-00",
+      "findings": [
+        {
+          "source_id": "memory-contract_narrative-zh-00",
+          "start": 4,
+          "end": 10,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "memory-contract_narrative-zh-00",
+          "start": 14,
+          "end": 22,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "memory-contract_narrative-zh-00",
+          "start": 26,
+          "end": 37,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "contract_narrative-zh-01",
+      "findings": []
+    },
+    {
+      "case_id": "contract_narrative-zh-02",
+      "findings": [
+        {
+          "source_id": "memory-contract_narrative-zh-02",
+          "start": 26,
+          "end": 37,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "contract_narrative-zh-03",
+      "findings": []
+    },
+    {
+      "case_id": "contract_narrative-zh-04",
+      "findings": [
+        {
+          "source_id": "memory-contract_narrative-zh-04",
+          "start": 4,
+          "end": 10,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "memory-contract_narrative-zh-04",
+          "start": 14,
+          "end": 22,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "memory-contract_narrative-zh-04",
+          "start": 26,
+          "end": 37,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "contract_narrative-en-00",
+      "findings": [
+        {
+          "source_id": "memory-contract_narrative-en-00",
+          "start": 12,
+          "end": 21,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "memory-contract_narrative-en-00",
+          "start": 42,
+          "end": 70,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "memory-contract_narrative-en-00",
+          "start": 97,
+          "end": 108,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "contract_narrative-en-01",
+      "findings": []
+    },
+    {
+      "case_id": "contract_narrative-en-02",
+      "findings": [
+        {
+          "source_id": "memory-contract_narrative-en-02",
+          "start": 97,
+          "end": 108,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "contract_narrative-en-03",
+      "findings": []
+    },
+    {
+      "case_id": "contract_narrative-en-04",
+      "findings": [
+        {
+          "source_id": "memory-contract_narrative-en-04",
+          "start": 12,
+          "end": 21,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "memory-contract_narrative-en-04",
+          "start": 42,
+          "end": 70,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "memory-contract_narrative-en-04",
+          "start": 97,
+          "end": 108,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "visit_narrative-zh-00",
+      "findings": [
+        {
+          "source_id": "memory-visit_narrative-zh-00",
+          "start": 0,
+          "end": 3,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "memory-visit_narrative-zh-00",
+          "start": 5,
+          "end": 14,
+          "category": "DATE"
+        },
+        {
+          "source_id": "memory-visit_narrative-zh-00",
+          "start": 16,
+          "end": 26,
+          "category": "ADDRESS"
+        },
+        {
+          "source_id": "memory-visit_narrative-zh-00",
+          "start": 34,
+          "end": 49,
+          "category": "PHONE"
+        }
+      ]
+    },
+    {
+      "case_id": "visit_narrative-zh-01",
+      "findings": []
+    },
+    {
+      "case_id": "visit_narrative-zh-02",
+      "findings": [
+        {
+          "source_id": "memory-visit_narrative-zh-02",
+          "start": 5,
+          "end": 14,
+          "category": "DATE"
+        },
+        {
+          "source_id": "memory-visit_narrative-zh-02",
+          "start": 16,
+          "end": 26,
+          "category": "ADDRESS"
+        }
+      ]
+    },
+    {
+      "case_id": "visit_narrative-zh-03",
+      "findings": []
+    },
+    {
+      "case_id": "visit_narrative-zh-04",
+      "findings": [
+        {
+          "source_id": "memory-visit_narrative-zh-04",
+          "start": 0,
+          "end": 3,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "memory-visit_narrative-zh-04",
+          "start": 5,
+          "end": 14,
+          "category": "DATE"
+        },
+        {
+          "source_id": "memory-visit_narrative-zh-04",
+          "start": 16,
+          "end": 26,
+          "category": "ADDRESS"
+        },
+        {
+          "source_id": "memory-visit_narrative-zh-04",
+          "start": 34,
+          "end": 49,
+          "category": "PHONE"
+        }
+      ]
+    },
+    {
+      "case_id": "visit_narrative-en-00",
+      "findings": [
+        {
+          "source_id": "memory-visit_narrative-en-00",
+          "start": 0,
+          "end": 11,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "memory-visit_narrative-en-00",
+          "start": 23,
+          "end": 47,
+          "category": "ADDRESS"
+        },
+        {
+          "source_id": "memory-visit_narrative-en-00",
+          "start": 51,
+          "end": 63,
+          "category": "DATE"
+        },
+        {
+          "source_id": "memory-visit_narrative-en-00",
+          "start": 70,
+          "end": 85,
+          "category": "PHONE"
+        }
+      ]
+    },
+    {
+      "case_id": "visit_narrative-en-01",
+      "findings": []
+    },
+    {
+      "case_id": "visit_narrative-en-02",
+      "findings": [
+        {
+          "source_id": "memory-visit_narrative-en-02",
+          "start": 21,
+          "end": 45,
+          "category": "ADDRESS"
+        },
+        {
+          "source_id": "memory-visit_narrative-en-02",
+          "start": 49,
+          "end": 61,
+          "category": "DATE"
+        }
+      ]
+    },
+    {
+      "case_id": "visit_narrative-en-03",
+      "findings": []
+    },
+    {
+      "case_id": "visit_narrative-en-04",
+      "findings": [
+        {
+          "source_id": "memory-visit_narrative-en-04",
+          "start": 0,
+          "end": 8,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "memory-visit_narrative-en-04",
+          "start": 20,
+          "end": 44,
+          "category": "ADDRESS"
+        },
+        {
+          "source_id": "memory-visit_narrative-en-04",
+          "start": 48,
+          "end": 60,
+          "category": "DATE"
+        },
+        {
+          "source_id": "memory-visit_narrative-en-04",
+          "start": 67,
+          "end": 82,
+          "category": "PHONE"
+        }
+      ]
+    },
+    {
+      "case_id": "identity_correction-zh-00",
+      "findings": [
+        {
+          "source_id": "memory-identity_correction-zh-00",
+          "start": 4,
+          "end": 22,
+          "category": "ID"
+        },
+        {
+          "source_id": "memory-identity_correction-zh-00",
+          "start": 32,
+          "end": 35,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "memory-identity_correction-zh-00",
+          "start": 42,
+          "end": 65,
+          "category": "EMAIL"
+        }
+      ]
+    },
+    {
+      "case_id": "identity_correction-zh-01",
+      "findings": []
+    },
+    {
+      "case_id": "identity_correction-zh-02",
+      "findings": [
+        {
+          "source_id": "memory-identity_correction-zh-02",
+          "start": 42,
+          "end": 65,
+          "category": "EMAIL"
+        }
+      ]
+    },
+    {
+      "case_id": "identity_correction-zh-03",
+      "findings": []
+    },
+    {
+      "case_id": "identity_correction-zh-04",
+      "findings": [
+        {
+          "source_id": "memory-identity_correction-zh-04",
+          "start": 4,
+          "end": 22,
+          "category": "ID"
+        },
+        {
+          "source_id": "memory-identity_correction-zh-04",
+          "start": 32,
+          "end": 35,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "memory-identity_correction-zh-04",
+          "start": 42,
+          "end": 65,
+          "category": "EMAIL"
+        }
+      ]
+    },
+    {
+      "case_id": "identity_correction-en-00",
+      "findings": [
+        {
+          "source_id": "memory-identity_correction-en-00",
+          "start": 25,
+          "end": 43,
+          "category": "ID"
+        },
+        {
+          "source_id": "memory-identity_correction-en-00",
+          "start": 56,
+          "end": 67,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "memory-identity_correction-en-00",
+          "start": 91,
+          "end": 114,
+          "category": "EMAIL"
+        }
+      ]
+    },
+    {
+      "case_id": "identity_correction-en-01",
+      "findings": []
+    },
+    {
+      "case_id": "identity_correction-en-02",
+      "findings": [
+        {
+          "source_id": "memory-identity_correction-en-02",
+          "start": 89,
+          "end": 112,
+          "category": "EMAIL"
+        }
+      ]
+    },
+    {
+      "case_id": "identity_correction-en-03",
+      "findings": []
+    },
+    {
+      "case_id": "identity_correction-en-04",
+      "findings": [
+        {
+          "source_id": "memory-identity_correction-en-04",
+          "start": 25,
+          "end": 43,
+          "category": "ID"
+        },
+        {
+          "source_id": "memory-identity_correction-en-04",
+          "start": 56,
+          "end": 64,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "memory-identity_correction-en-04",
+          "start": 88,
+          "end": 111,
+          "category": "EMAIL"
+        }
+      ]
+    },
+    {
+      "case_id": "publication_notice-zh-00",
+      "findings": [
+        {
+          "source_id": "memory-publication_notice-zh-00",
+          "start": 4,
+          "end": 12,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "memory-publication_notice-zh-00",
+          "start": 13,
+          "end": 23,
+          "category": "DATE"
+        },
+        {
+          "source_id": "memory-publication_notice-zh-00",
+          "start": 25,
+          "end": 31,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "memory-publication_notice-zh-00",
+          "start": 37,
+          "end": 48,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "publication_notice-zh-01",
+      "findings": []
+    },
+    {
+      "case_id": "publication_notice-zh-02",
+      "findings": [
+        {
+          "source_id": "memory-publication_notice-zh-02",
+          "start": 4,
+          "end": 12,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "memory-publication_notice-zh-02",
+          "start": 37,
+          "end": 48,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "publication_notice-zh-03",
+      "findings": []
+    },
+    {
+      "case_id": "publication_notice-zh-04",
+      "findings": [
+        {
+          "source_id": "memory-publication_notice-zh-04",
+          "start": 4,
+          "end": 12,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "memory-publication_notice-zh-04",
+          "start": 13,
+          "end": 23,
+          "category": "DATE"
+        },
+        {
+          "source_id": "memory-publication_notice-zh-04",
+          "start": 25,
+          "end": 31,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "memory-publication_notice-zh-04",
+          "start": 37,
+          "end": 48,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "publication_notice-en-00",
+      "findings": [
+        {
+          "source_id": "memory-publication_notice-en-00",
+          "start": 16,
+          "end": 44,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "memory-publication_notice-en-00",
+          "start": 52,
+          "end": 61,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "memory-publication_notice-en-00",
+          "start": 65,
+          "end": 78,
+          "category": "DATE"
+        },
+        {
+          "source_id": "memory-publication_notice-en-00",
+          "start": 84,
+          "end": 95,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "publication_notice-en-01",
+      "findings": []
+    },
+    {
+      "case_id": "publication_notice-en-02",
+      "findings": [
+        {
+          "source_id": "memory-publication_notice-en-02",
+          "start": 16,
+          "end": 44,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "memory-publication_notice-en-02",
+          "start": 84,
+          "end": 95,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "publication_notice-en-03",
+      "findings": []
+    },
+    {
+      "case_id": "publication_notice-en-04",
+      "findings": [
+        {
+          "source_id": "memory-publication_notice-en-04",
+          "start": 16,
+          "end": 44,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "memory-publication_notice-en-04",
+          "start": 52,
+          "end": 61,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "memory-publication_notice-en-04",
+          "start": 65,
+          "end": 78,
+          "category": "DATE"
+        },
+        {
+          "source_id": "memory-publication_notice-en-04",
+          "start": 84,
+          "end": 95,
+          "category": "AMOUNT"
+        }
+      ]
+    }
+  ],
+  "runtime_sha256": "1111f1cf1cd487550f3e54af73c599071596b8085c872d412c7bd65c3e8b8346"
+}

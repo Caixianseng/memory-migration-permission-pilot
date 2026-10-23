@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import hashlib
+import copy
 import json
 import random
 import re
@@ -13,7 +14,7 @@ from .evidence import _items
 from .policy import decision
 
 GROUPS = ("authorized_reference", "migrated", "no_memory")
-HIDDEN_FIELDS = {"expected_answer", "expected_action", "judge_spec", "leak_targets", "forbidden_markers"}
+HIDDEN_FIELDS = {"expected_answer", "expected_action", "judge_spec", "leak_targets", "forbidden_markers", "task_type"}
 
 
 def validate_runtime(value):
@@ -64,13 +65,15 @@ class DeterministicAnswerer:
         return "UNKNOWN"
 
 
-def available_from_http(adapter, actor_id, plan):
-    valid, _ = adapter.identity(actor_id)
+def available_from_http(adapter, actor_id, plan, *, capture_evidence=None):
+    valid, identity = adapter.identity(actor_id)
     if not valid:
         raise RuntimeError("task_identity_unverified")
     pages, complete = adapter.list_pages(actor_id)
     if not complete:
         raise RuntimeError("task_list_incomplete")
+    if capture_evidence is not None:
+        capture_evidence.update(identity=copy.deepcopy(identity), pages=copy.deepcopy(pages))
     reverse = {t: s for s, values in plan["object_mapping"].items() for t in values}
     memories = []
     for page in pages:
@@ -84,7 +87,8 @@ def available_from_http(adapter, actor_id, plan):
     return memories
 
 
-def run_tasks(runtime: dict, plan: dict, adapter, *, seed=42, answerer=None, top_k=2, context_chars=4096) -> dict:
+def run_tasks(runtime: dict, plan: dict, adapter, *, seed=42, answerer=None, top_k=2, context_chars=4096,
+              capture_contexts=False) -> dict:
     validate_runtime(runtime)
     answerer = answerer or DeterministicAnswerer()
     case_id = runtime["case_id"]
@@ -105,12 +109,17 @@ def run_tasks(runtime: dict, plan: dict, adapter, *, seed=42, answerer=None, top
                 if group == "authorized_reference":
                     memories = [{"source_id": r["source_id"], "text": r["text"]} for r in runtime["records"] if decision(r, task["actor_id"]) == "allow"]
                 elif group == "migrated":
-                    memories = available_from_http(adapter, task["actor_id"], plan)
+                    evidence = {} if capture_contexts else None
+                    memories = available_from_http(adapter, task["actor_id"], plan, capture_evidence=evidence)
+                    if capture_contexts:
+                        result["retrieval_evidence"] = evidence
                 else:
                     memories = []
                 context = retrieve(task["query"], memories, top_k, context_chars)
                 result["retrieved_source_ids"] = [m["source_id"] for m in context]
                 result["context_sha256"] = hashlib.sha256(json.dumps(context, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+                if capture_contexts:
+                    result["context_payload"] = {"query": task["query"], "memories": copy.deepcopy(context)}
                 result["answer"] = answerer(query=task["query"], memories=context, session_id=session_id)
                 if not isinstance(result["answer"], str):
                     raise TypeError("answerer must return a string")

@@ -40,6 +40,38 @@ def main(argv=None):
     native_public.add_argument("--output", type=Path, required=True)
     native_public.add_argument("--artifacts-root", type=Path)
     native_public.add_argument("--seed", type=int, default=42)
+    llm = commands.add_parser("llm-replay", description="Explicit opt-in serial LLM evaluation of verified native context snapshots")
+    llm.add_argument("--snapshots", type=Path, required=True)
+    llm.add_argument("--evaluation", type=Path, required=True)
+    llm.add_argument("--model-config", type=Path, required=True)
+    llm.add_argument("--ledger", type=Path, required=True)
+    llm.add_argument("--output", type=Path, required=True)
+    llm.add_argument("--enable-remote", action="store_true")
+    privacy = commands.add_parser("privacy-ablation", description="Explicit public-fixture four-condition privacy experiment; max64 cloud calls")
+    privacy.add_argument("--snapshots", type=Path, required=True)
+    privacy.add_argument("--evaluation", type=Path, required=True)
+    privacy.add_argument("--model-config", type=Path, required=True)
+    privacy.add_argument("--detector-config", type=Path, required=True)
+    privacy.add_argument("--privacy-policy", type=Path, required=True)
+    privacy.add_argument("--sensitivity-audit", type=Path, help="Local-only preregistered sensitive values; never passed to detectors or cloud")
+    privacy.add_argument("--ledger", type=Path, required=True)
+    privacy.add_argument("--output", type=Path, required=True)
+    privacy.add_argument("--enable-remote", action="store_true")
+    privacy.add_argument("--allow-public-raw-baseline", action="store_true")
+    detect_eval = commands.add_parser("privacy-detect-eval", description="Local-only rules/Agent/combined detection evaluation")
+    detect_eval.add_argument("--runtime", type=Path, required=True)
+    detect_eval.add_argument("--evaluation", type=Path, required=True)
+    detect_eval.add_argument("--detector-config", type=Path, required=True)
+    detect_eval.add_argument("--cache", type=Path, required=True)
+    detect_eval.add_argument("--output", type=Path, required=True)
+    detect_eval.add_argument("--expected-heldout-cases", type=int, default=40)
+    local_check = commands.add_parser("privacy-local-check", description="Free local preparation and token checks; no cloud connector")
+    local_check.add_argument("--snapshots", type=Path, required=True)
+    local_check.add_argument("--privacy-policy", type=Path, required=True)
+    local_check.add_argument("--detector-config", type=Path, required=True)
+    local_check.add_argument("--sensitivity-audit", type=Path)
+    local_check.add_argument("--output", type=Path, required=True)
+    local_check.add_argument("--reuse-detection-report", type=Path, help="Reuse matching saved detections; no new detector calls")
     prepare = commands.add_parser("prepare-gatemem")
     prepare.add_argument("--data-root", type=Path, required=True)
     prepare.add_argument("--output", type=Path, required=True)
@@ -53,6 +85,57 @@ def main(argv=None):
     native.add_argument("--config", type=Path)
     native.add_argument("--output", type=Path, required=True)
     args = parser.parse_args(argv)
+    if args.command == "privacy-local-check":
+        from .privacy_local import run_local_privacy_check
+        report = run_local_privacy_check(snapshot_path=args.snapshots, policy=_load(args.privacy_policy),
+                                         detector_config=_load(args.detector_config), output=args.output,
+                                         sensitivity_audit=_load(args.sensitivity_audit) if args.sensitivity_audit else None,
+                                         reuse_detection_report=args.reuse_detection_report,
+                                         progress=lambda value: print(json.dumps(value), flush=True))
+        print(json.dumps({key: report[key] for key in ("registered_tasks", "ready_tasks", "blocked_tasks",
+                         "registered_value_residual_requests", "token_checks_passed", "token_checks_total", "remote_model_calls")}))
+        return 0
+    if args.command == "privacy-detect-eval":
+        import hashlib
+        from .local_detector import LocalSensitivityAgent, SYSTEM_PROMPT, DIGEST, PROMPT_VERSION
+        from .privacy_corpus import evaluate_corpus
+        if args.output.exists():
+            raise FileExistsError("output_exists")
+        agent = LocalSensitivityAgent(_load(args.detector_config))
+        health = agent.health()
+        provenance = dict(health, model_digest=DIGEST, prompt_sha256=hashlib.sha256(SYSTEM_PROMPT.encode()).hexdigest(), prompt_version=PROMPT_VERSION)
+        result = evaluate_corpus(args.runtime, args.evaluation, agent=agent, cache_path=args.cache,
+                                 expected_heldout_cases=args.expected_heldout_cases,
+                                 detector_provenance=provenance, output_path=args.output,
+                                 progress=lambda value: print(json.dumps(value), flush=True))
+        print(json.dumps({"cases": result["case_count"], "gate": result["heldout_gate"], "remote_model_calls": 0}, ensure_ascii=False))
+        return 0
+    if args.command == "privacy-ablation":
+        from .privacy_experiment import run_privacy_ablation
+        result = run_privacy_ablation(snapshot_path=args.snapshots, evaluation_path=args.evaluation,
+                                      config=_load(args.model_config), detector_config=_load(args.detector_config),
+                                      policy=_load(args.privacy_policy), ledger_path=args.ledger, output=args.output,
+                                      sensitivity_audit=_load(args.sensitivity_audit) if args.sensitivity_audit else None,
+                                      enable_remote=args.enable_remote, allow_public_raw=args.allow_public_raw_baseline,
+                                      progress=lambda value: print(json.dumps(value), flush=True))
+        print(json.dumps({"status": result["status"], "utility_gate": result["utility_gate"],
+                          "calls": result["model_calls"], "estimated_cost_cny": result["estimated_cost_cny"],
+                          "report": str((args.output / "index.html").resolve())}, ensure_ascii=False))
+        if result["status"] != "completed":
+            raise SystemExit(1)
+        return 0
+    if args.command == "llm-replay":
+        from .llm_worker import run_frozen_llm
+        result = run_frozen_llm(snapshot_path=args.snapshots, evaluation_path=args.evaluation,
+                                config=_load(args.model_config), ledger_path=args.ledger, output=args.output,
+                                enable_remote=args.enable_remote,
+                                progress=lambda value: print(json.dumps(value), flush=True))
+        print(json.dumps({"status": result["status"], "calls": result["attempted_model_calls"],
+                          "estimated_cost_cny": result["estimated_cost_cny"],
+                          "report": str((args.output / "index.html").resolve())}, ensure_ascii=False))
+        if result["status"] != "completed":
+            raise SystemExit(1)
+        return 0
     if args.command == "native-webui-public":
         from .native_webui import run_native_webui_public
         result = run_native_webui_public(legacy_project=args.legacy_project, output=args.output,

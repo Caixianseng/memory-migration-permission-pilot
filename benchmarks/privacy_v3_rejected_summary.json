@@ -1,0 +1,189 @@
+{
+  "schema_version": 3,
+  "candidate": "local_sensitive_spans_v3",
+  "selected_for_default": false,
+  "status": "rejected_context_budget_regression",
+  "dataset": "examples/privacy_eval_v3",
+  "synthetic": true,
+  "human_review": null,
+  "corpus_runtime_sha256": "9a05a3dbd17584928a3c0f4ad1be04438c77929405f2b84f5977d8b8456a7c31",
+  "new_cloud_calls": 0,
+  "results": {
+    "baseline": {
+      "heldout_detection": [
+        {
+          "mode": "rules",
+          "split": "heldout",
+          "language": "all",
+          "cases": 40,
+          "tp": 19,
+          "fp": 6,
+          "fn": 91,
+          "precision": 0.76,
+          "recall": 0.17272727272727273,
+          "character_precision": 1.0,
+          "character_recall": 0.17685794920037629,
+          "needs_review": 0,
+          "needs_review_rate": 0.0,
+          "error_cases": 0,
+          "elapsed_seconds_original_detection": 0.008816500000421001,
+          "cached_cases": 0
+        },
+        {
+          "mode": "agent",
+          "split": "heldout",
+          "language": "all",
+          "cases": 40,
+          "tp": 81,
+          "fp": 6,
+          "fn": 29,
+          "precision": 0.9310344827586207,
+          "recall": 0.7363636363636363,
+          "character_precision": 1.0,
+          "character_recall": 0.7953904045155221,
+          "needs_review": 7,
+          "needs_review_rate": 0.175,
+          "error_cases": 7,
+          "elapsed_seconds_original_detection": 45.79190840000001,
+          "cached_cases": 0
+        },
+        {
+          "mode": "combined",
+          "split": "heldout",
+          "language": "all",
+          "cases": 40,
+          "tp": 82,
+          "fp": 8,
+          "fn": 28,
+          "precision": 0.9111111111111111,
+          "recall": 0.7454545454545455,
+          "character_precision": 1.0,
+          "character_recall": 0.8099717779868297,
+          "needs_review": 7,
+          "needs_review_rate": 0.175,
+          "error_cases": 7,
+          "elapsed_seconds_original_detection": 44.2174971999998,
+          "cached_cases": 0
+        }
+      ],
+      "heldout_payload": {
+        "split": "heldout",
+        "registered_cases": 40,
+        "ready_cases": 33,
+        "blocked_cases": 7,
+        "instrumentation_errors": 0,
+        "ready_cases_with_incomplete_masking": 6,
+        "ready_gold_spans": 87,
+        "complete_masked_spans": 81,
+        "partial_masked_spans": 6,
+        "unmasked_spans": 0,
+        "masked_unprotected_characters": 0
+      },
+      "gate": {
+        "passed": false,
+        "minimum_recall": 0.95,
+        "minimum_precision": 0.9,
+        "required_heldout_cases": 40,
+        "requires_all_expected_cases_and_no_review_or_errors": true
+      },
+      "provenance": {
+        "version": "0.40.8",
+        "model": "qwen3:4b-instruct-2507-q4_K_M",
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "endpoint": "http://127.0.0.1:11435",
+        "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "prompt_version": "local_sensitive_spans_v2",
+        "prompt_sha256": "87a9a71eed8bdf47669ee6471f841e8f116ce3a46d1bb60350d3a968b6bdc1c4",
+        "revision": "baseline"
+      }
+    },
+    "current": {
+      "heldout_detection": [
+        {
+          "mode": "rules",
+          "split": "heldout",
+          "language": "all",
+          "cases": 40,
+          "tp": 22,
+          "fp": 6,
+          "fn": 88,
+          "precision": 0.7857142857142857,
+          "recall": 0.2,
+          "character_precision": 1.0,
+          "character_recall": 0.2149576669802446,
+          "needs_review": 0,
+          "needs_review_rate": 0.0,
+          "error_cases": 0,
+          "elapsed_seconds_original_detection": 0.009559000000308515,
+          "cached_cases": 0
+        },
+        {
+          "mode": "agent",
+          "split": "heldout",
+          "language": "all",
+          "cases": 40,
+          "tp": 47,
+          "fp": 0,
+          "fn": 63,
+          "precision": 1.0,
+          "recall": 0.42727272727272725,
+          "character_precision": 1.0,
+          "character_recall": 0.3306679209783631,
+          "needs_review": 23,
+          "needs_review_rate": 0.575,
+          "error_cases": 23,
+          "elapsed_seconds_original_detection": 17.970571800000243,
+          "cached_cases": 0
+        },
+        {
+          "mode": "combined",
+          "split": "heldout",
+          "language": "all",
+          "cases": 40,
+          "tp": 57,
+          "fp": 4,
+          "fn": 53,
+          "precision": 0.9344262295081968,
+          "recall": 0.5181818181818182,
+          "character_precision": 1.0,
+          "character_recall": 0.44920037629350895,
+          "needs_review": 23,
+          "needs_review_rate": 0.575,
+          "error_cases": 23,
+          "elapsed_seconds_original_detection": 17.205446900000197,
+          "cached_cases": 0
+        }
+      ],
+      "heldout_payload": {
+        "split": "heldout",
+        "registered_cases": 40,
+        "ready_cases": 17,
+        "blocked_cases": 23,
+        "instrumentation_errors": 0,
+        "ready_cases_with_incomplete_masking": 2,
+        "ready_gold_spans": 44,
+        "complete_masked_spans": 42,
+        "partial_masked_spans": 0,
+        "unmasked_spans": 2,
+        "masked_unprotected_characters": 0
+      },
+      "gate": {
+        "passed": false,
+        "minimum_recall": 0.95,
+        "minimum_precision": 0.9,
+        "required_heldout_cases": 40,
+        "requires_all_expected_cases_and_no_review_or_errors": true
+      },
+      "provenance": {
+        "version": "0.40.8",
+        "model": "qwen3:4b-instruct-2507-q4_K_M",
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "endpoint": "http://127.0.0.1:11435",
+        "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "prompt_version": "local_sensitive_spans_v3",
+        "prompt_sha256": "3cc26250eba10fad5dd8263c7ff6e87b227a9cc36e40073f90972e8eb314bfe9",
+        "revision": "current"
+      }
+    }
+  }
+}

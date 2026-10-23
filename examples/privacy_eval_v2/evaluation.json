@@ -1,0 +1,1735 @@
+{
+  "schema_version": 1,
+  "kind": "synthetic_privacy_detection_gold",
+  "annotation_method": "authored complete-value code-point spans, filtered only by trusted policy categories",
+  "human_review": null,
+  "cases": [
+    {
+      "case_id": "callback_transcript_v2-zh-0",
+      "findings": [
+        {
+          "source_id": "v2-story-callback_transcript_v2-zh-0-m0",
+          "start": 9,
+          "end": 12,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-callback_transcript_v2-zh-0-m0",
+          "start": 28,
+          "end": 56,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "v2-story-callback_transcript_v2-zh-0-m0",
+          "start": 62,
+          "end": 79,
+          "category": "PHONE"
+        }
+      ]
+    },
+    {
+      "case_id": "callback_transcript_v2-zh-1",
+      "findings": [
+        {
+          "source_id": "v2-story-callback_transcript_v2-zh-1-m0",
+          "start": 28,
+          "end": 56,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "v2-story-callback_transcript_v2-zh-1-m0",
+          "start": 62,
+          "end": 79,
+          "category": "PHONE"
+        }
+      ]
+    },
+    {
+      "case_id": "callback_transcript_v2-zh-2",
+      "findings": []
+    },
+    {
+      "case_id": "callback_transcript_v2-en-0",
+      "findings": [
+        {
+          "source_id": "v2-story-callback_transcript_v2-en-0-m0",
+          "start": 42,
+          "end": 55,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-callback_transcript_v2-en-0-m0",
+          "start": 85,
+          "end": 113,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "v2-story-callback_transcript_v2-en-0-m0",
+          "start": 117,
+          "end": 134,
+          "category": "PHONE"
+        }
+      ]
+    },
+    {
+      "case_id": "callback_transcript_v2-en-1",
+      "findings": [
+        {
+          "source_id": "v2-story-callback_transcript_v2-en-1-m0",
+          "start": 85,
+          "end": 113,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "v2-story-callback_transcript_v2-en-1-m0",
+          "start": 117,
+          "end": 134,
+          "category": "PHONE"
+        }
+      ]
+    },
+    {
+      "case_id": "callback_transcript_v2-en-2",
+      "findings": []
+    },
+    {
+      "case_id": "incident_table_v2-zh-0",
+      "findings": [
+        {
+          "source_id": "v2-story-incident_table_v2-zh-0-m0",
+          "start": 40,
+          "end": 43,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-incident_table_v2-zh-0-m0",
+          "start": 46,
+          "end": 63,
+          "category": "PHONE"
+        },
+        {
+          "source_id": "v2-story-incident_table_v2-zh-0-m0",
+          "start": 66,
+          "end": 84,
+          "category": "ID"
+        }
+      ]
+    },
+    {
+      "case_id": "incident_table_v2-zh-1",
+      "findings": [
+        {
+          "source_id": "v2-story-incident_table_v2-zh-1-m0",
+          "start": 46,
+          "end": 63,
+          "category": "PHONE"
+        },
+        {
+          "source_id": "v2-story-incident_table_v2-zh-1-m0",
+          "start": 66,
+          "end": 84,
+          "category": "ID"
+        }
+      ]
+    },
+    {
+      "case_id": "incident_table_v2-zh-2",
+      "findings": []
+    },
+    {
+      "case_id": "incident_table_v2-en-0",
+      "findings": [
+        {
+          "source_id": "v2-story-incident_table_v2-en-0-m0",
+          "start": 76,
+          "end": 91,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-incident_table_v2-en-0-m0",
+          "start": 94,
+          "end": 111,
+          "category": "PHONE"
+        },
+        {
+          "source_id": "v2-story-incident_table_v2-en-0-m0",
+          "start": 114,
+          "end": 132,
+          "category": "ID"
+        }
+      ]
+    },
+    {
+      "case_id": "incident_table_v2-en-1",
+      "findings": [
+        {
+          "source_id": "v2-story-incident_table_v2-en-1-m0",
+          "start": 94,
+          "end": 111,
+          "category": "PHONE"
+        },
+        {
+          "source_id": "v2-story-incident_table_v2-en-1-m0",
+          "start": 114,
+          "end": 132,
+          "category": "ID"
+        }
+      ]
+    },
+    {
+      "case_id": "incident_table_v2-en-2",
+      "findings": []
+    },
+    {
+      "case_id": "travel_parcel_note_v2-zh-0",
+      "findings": [
+        {
+          "source_id": "v2-story-travel_parcel_note_v2-zh-0-m0",
+          "start": 9,
+          "end": 12,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-travel_parcel_note_v2-zh-0-m0",
+          "start": 14,
+          "end": 24,
+          "category": "DATE"
+        },
+        {
+          "source_id": "v2-story-travel_parcel_note_v2-zh-0-m0",
+          "start": 25,
+          "end": 41,
+          "category": "ADDRESS"
+        }
+      ]
+    },
+    {
+      "case_id": "travel_parcel_note_v2-zh-1",
+      "findings": [
+        {
+          "source_id": "v2-story-travel_parcel_note_v2-zh-1-m0",
+          "start": 9,
+          "end": 12,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-travel_parcel_note_v2-zh-1-m0",
+          "start": 25,
+          "end": 41,
+          "category": "ADDRESS"
+        }
+      ]
+    },
+    {
+      "case_id": "travel_parcel_note_v2-zh-2",
+      "findings": []
+    },
+    {
+      "case_id": "travel_parcel_note_v2-en-0",
+      "findings": [
+        {
+          "source_id": "v2-story-travel_parcel_note_v2-en-0-m0",
+          "start": 33,
+          "end": 47,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-travel_parcel_note_v2-en-0-m0",
+          "start": 67,
+          "end": 116,
+          "category": "ADDRESS"
+        },
+        {
+          "source_id": "v2-story-travel_parcel_note_v2-en-0-m0",
+          "start": 120,
+          "end": 132,
+          "category": "DATE"
+        }
+      ]
+    },
+    {
+      "case_id": "travel_parcel_note_v2-en-1",
+      "findings": [
+        {
+          "source_id": "v2-story-travel_parcel_note_v2-en-1-m0",
+          "start": 33,
+          "end": 48,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-travel_parcel_note_v2-en-1-m0",
+          "start": 68,
+          "end": 117,
+          "category": "ADDRESS"
+        }
+      ]
+    },
+    {
+      "case_id": "travel_parcel_note_v2-en-2",
+      "findings": []
+    },
+    {
+      "case_id": "procurement_recommendation_v2-zh-0",
+      "findings": [
+        {
+          "source_id": "v2-story-procurement_recommendation_v2-zh-0-m0",
+          "start": 5,
+          "end": 16,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "v2-story-procurement_recommendation_v2-zh-0-m0",
+          "start": 32,
+          "end": 40,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-procurement_recommendation_v2-zh-0-m0",
+          "start": 50,
+          "end": 61,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "procurement_recommendation_v2-zh-1",
+      "findings": [
+        {
+          "source_id": "v2-story-procurement_recommendation_v2-zh-1-m0",
+          "start": 32,
+          "end": 40,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-procurement_recommendation_v2-zh-1-m0",
+          "start": 50,
+          "end": 61,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "procurement_recommendation_v2-zh-2",
+      "findings": []
+    },
+    {
+      "case_id": "procurement_recommendation_v2-en-0",
+      "findings": [
+        {
+          "source_id": "v2-story-procurement_recommendation_v2-en-0-m0",
+          "start": 15,
+          "end": 47,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "v2-story-procurement_recommendation_v2-en-0-m0",
+          "start": 98,
+          "end": 116,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-procurement_recommendation_v2-en-0-m0",
+          "start": 153,
+          "end": 164,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "procurement_recommendation_v2-en-1",
+      "findings": [
+        {
+          "source_id": "v2-story-procurement_recommendation_v2-en-1-m0",
+          "start": 98,
+          "end": 116,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-procurement_recommendation_v2-en-1-m0",
+          "start": 153,
+          "end": 164,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "procurement_recommendation_v2-en-2",
+      "findings": []
+    },
+    {
+      "case_id": "quotation_archive_v2-zh-0",
+      "findings": [
+        {
+          "source_id": "__query__",
+          "start": 8,
+          "end": 16,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-quotation_archive_v2-zh-0-m0",
+          "start": 6,
+          "end": 17,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "v2-story-quotation_archive_v2-zh-0-m0",
+          "start": 20,
+          "end": 28,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-quotation_archive_v2-zh-0-m1",
+          "start": 6,
+          "end": 14,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-quotation_archive_v2-zh-0-m1",
+          "start": 18,
+          "end": 29,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "quotation_archive_v2-zh-1",
+      "findings": [
+        {
+          "source_id": "__query__",
+          "start": 8,
+          "end": 16,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-quotation_archive_v2-zh-1-m0",
+          "start": 20,
+          "end": 28,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-quotation_archive_v2-zh-1-m1",
+          "start": 6,
+          "end": 14,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-quotation_archive_v2-zh-1-m1",
+          "start": 18,
+          "end": 29,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "quotation_archive_v2-zh-2",
+      "findings": []
+    },
+    {
+      "case_id": "quotation_archive_v2-en-0",
+      "findings": [
+        {
+          "source_id": "__query__",
+          "start": 31,
+          "end": 51,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-quotation_archive_v2-en-0-m0",
+          "start": 21,
+          "end": 41,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-quotation_archive_v2-en-0-m0",
+          "start": 62,
+          "end": 96,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "v2-story-quotation_archive_v2-en-0-m1",
+          "start": 22,
+          "end": 33,
+          "category": "AMOUNT"
+        },
+        {
+          "source_id": "v2-story-quotation_archive_v2-en-0-m1",
+          "start": 50,
+          "end": 70,
+          "category": "PROJECT"
+        }
+      ]
+    },
+    {
+      "case_id": "quotation_archive_v2-en-1",
+      "findings": [
+        {
+          "source_id": "__query__",
+          "start": 31,
+          "end": 51,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-quotation_archive_v2-en-1-m0",
+          "start": 21,
+          "end": 41,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-quotation_archive_v2-en-1-m1",
+          "start": 22,
+          "end": 33,
+          "category": "AMOUNT"
+        },
+        {
+          "source_id": "v2-story-quotation_archive_v2-en-1-m1",
+          "start": 50,
+          "end": 70,
+          "category": "PROJECT"
+        }
+      ]
+    },
+    {
+      "case_id": "quotation_archive_v2-en-2",
+      "findings": []
+    },
+    {
+      "case_id": "correction_request_v2-zh-0",
+      "findings": [
+        {
+          "source_id": "__query__",
+          "start": 4,
+          "end": 7,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "__query__",
+          "start": 13,
+          "end": 41,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "v2-story-correction_request_v2-zh-0-m0",
+          "start": 8,
+          "end": 36,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "v2-story-correction_request_v2-zh-0-m0",
+          "start": 49,
+          "end": 52,
+          "category": "PERSON"
+        }
+      ]
+    },
+    {
+      "case_id": "correction_request_v2-zh-1",
+      "findings": [
+        {
+          "source_id": "__query__",
+          "start": 13,
+          "end": 41,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "v2-story-correction_request_v2-zh-1-m0",
+          "start": 8,
+          "end": 36,
+          "category": "EMAIL"
+        }
+      ]
+    },
+    {
+      "case_id": "correction_request_v2-zh-2",
+      "findings": []
+    },
+    {
+      "case_id": "correction_request_v2-en-0",
+      "findings": [
+        {
+          "source_id": "__query__",
+          "start": 7,
+          "end": 19,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "__query__",
+          "start": 46,
+          "end": 74,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "v2-story-correction_request_v2-en-0-m0",
+          "start": 27,
+          "end": 55,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "v2-story-correction_request_v2-en-0-m0",
+          "start": 104,
+          "end": 116,
+          "category": "PERSON"
+        }
+      ]
+    },
+    {
+      "case_id": "correction_request_v2-en-1",
+      "findings": [
+        {
+          "source_id": "__query__",
+          "start": 47,
+          "end": 75,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "v2-story-correction_request_v2-en-1-m0",
+          "start": 27,
+          "end": 55,
+          "category": "EMAIL"
+        }
+      ]
+    },
+    {
+      "case_id": "correction_request_v2-en-2",
+      "findings": []
+    },
+    {
+      "case_id": "public_scope_dispute_v2-zh-0",
+      "findings": [
+        {
+          "source_id": "v2-story-public_scope_dispute_v2-zh-0-m0",
+          "start": 19,
+          "end": 22,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-public_scope_dispute_v2-zh-0-m0",
+          "start": 25,
+          "end": 53,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "v2-story-public_scope_dispute_v2-zh-0-m0",
+          "start": 60,
+          "end": 76,
+          "category": "ADDRESS"
+        }
+      ]
+    },
+    {
+      "case_id": "public_scope_dispute_v2-zh-1",
+      "findings": [
+        {
+          "source_id": "v2-story-public_scope_dispute_v2-zh-1-m0",
+          "start": 19,
+          "end": 22,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-public_scope_dispute_v2-zh-1-m0",
+          "start": 25,
+          "end": 53,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "v2-story-public_scope_dispute_v2-zh-1-m0",
+          "start": 60,
+          "end": 76,
+          "category": "ADDRESS"
+        }
+      ]
+    },
+    {
+      "case_id": "public_scope_dispute_v2-zh-2",
+      "findings": [
+        {
+          "source_id": "v2-story-public_scope_dispute_v2-zh-2-m0",
+          "start": 19,
+          "end": 22,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-public_scope_dispute_v2-zh-2-m0",
+          "start": 25,
+          "end": 53,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "v2-story-public_scope_dispute_v2-zh-2-m0",
+          "start": 60,
+          "end": 76,
+          "category": "ADDRESS"
+        }
+      ]
+    },
+    {
+      "case_id": "public_scope_dispute_v2-en-0",
+      "findings": [
+        {
+          "source_id": "v2-story-public_scope_dispute_v2-en-0-m0",
+          "start": 59,
+          "end": 74,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-public_scope_dispute_v2-en-0-m0",
+          "start": 83,
+          "end": 111,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "v2-story-public_scope_dispute_v2-en-0-m0",
+          "start": 132,
+          "end": 181,
+          "category": "ADDRESS"
+        }
+      ]
+    },
+    {
+      "case_id": "public_scope_dispute_v2-en-1",
+      "findings": [
+        {
+          "source_id": "v2-story-public_scope_dispute_v2-en-1-m0",
+          "start": 59,
+          "end": 72,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-public_scope_dispute_v2-en-1-m0",
+          "start": 81,
+          "end": 109,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "v2-story-public_scope_dispute_v2-en-1-m0",
+          "start": 130,
+          "end": 179,
+          "category": "ADDRESS"
+        }
+      ]
+    },
+    {
+      "case_id": "public_scope_dispute_v2-en-2",
+      "findings": [
+        {
+          "source_id": "v2-story-public_scope_dispute_v2-en-2-m0",
+          "start": 59,
+          "end": 72,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-public_scope_dispute_v2-en-2-m0",
+          "start": 81,
+          "end": 109,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "v2-story-public_scope_dispute_v2-en-2-m0",
+          "start": 130,
+          "end": 179,
+          "category": "ADDRESS"
+        }
+      ]
+    },
+    {
+      "case_id": "resource_allocation_note_v2-zh-0",
+      "findings": [
+        {
+          "source_id": "v2-story-resource_allocation_note_v2-zh-0-m0",
+          "start": 11,
+          "end": 19,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-resource_allocation_note_v2-zh-0-m0",
+          "start": 28,
+          "end": 39,
+          "category": "AMOUNT"
+        },
+        {
+          "source_id": "v2-story-resource_allocation_note_v2-zh-0-m0",
+          "start": 42,
+          "end": 51,
+          "category": "DATE"
+        }
+      ]
+    },
+    {
+      "case_id": "resource_allocation_note_v2-zh-1",
+      "findings": [
+        {
+          "source_id": "v2-story-resource_allocation_note_v2-zh-1-m0",
+          "start": 11,
+          "end": 19,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-resource_allocation_note_v2-zh-1-m0",
+          "start": 28,
+          "end": 39,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "resource_allocation_note_v2-zh-2",
+      "findings": []
+    },
+    {
+      "case_id": "resource_allocation_note_v2-en-0",
+      "findings": [
+        {
+          "source_id": "v2-story-resource_allocation_note_v2-en-0-m0",
+          "start": 41,
+          "end": 61,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-resource_allocation_note_v2-en-0-m0",
+          "start": 94,
+          "end": 105,
+          "category": "AMOUNT"
+        },
+        {
+          "source_id": "v2-story-resource_allocation_note_v2-en-0-m0",
+          "start": 129,
+          "end": 139,
+          "category": "DATE"
+        }
+      ]
+    },
+    {
+      "case_id": "resource_allocation_note_v2-en-1",
+      "findings": [
+        {
+          "source_id": "v2-story-resource_allocation_note_v2-en-1-m0",
+          "start": 41,
+          "end": 61,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-resource_allocation_note_v2-en-1-m0",
+          "start": 94,
+          "end": 105,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "resource_allocation_note_v2-en-2",
+      "findings": []
+    },
+    {
+      "case_id": "calendar_export_v2-zh-0",
+      "findings": [
+        {
+          "source_id": "v2-story-calendar_export_v2-zh-0-m0",
+          "start": 22,
+          "end": 25,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-calendar_export_v2-zh-0-m0",
+          "start": 35,
+          "end": 44,
+          "category": "DATE"
+        },
+        {
+          "source_id": "v2-story-calendar_export_v2-zh-0-m0",
+          "start": 54,
+          "end": 70,
+          "category": "ADDRESS"
+        }
+      ]
+    },
+    {
+      "case_id": "calendar_export_v2-zh-1",
+      "findings": [
+        {
+          "source_id": "v2-story-calendar_export_v2-zh-1-m0",
+          "start": 22,
+          "end": 25,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-calendar_export_v2-zh-1-m0",
+          "start": 55,
+          "end": 71,
+          "category": "ADDRESS"
+        }
+      ]
+    },
+    {
+      "case_id": "calendar_export_v2-zh-2",
+      "findings": []
+    },
+    {
+      "case_id": "calendar_export_v2-en-0",
+      "findings": [
+        {
+          "source_id": "v2-story-calendar_export_v2-en-0-m0",
+          "start": 39,
+          "end": 55,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-calendar_export_v2-en-0-m0",
+          "start": 61,
+          "end": 73,
+          "category": "DATE"
+        },
+        {
+          "source_id": "v2-story-calendar_export_v2-en-0-m0",
+          "start": 83,
+          "end": 132,
+          "category": "ADDRESS"
+        }
+      ]
+    },
+    {
+      "case_id": "calendar_export_v2-en-1",
+      "findings": [
+        {
+          "source_id": "v2-story-calendar_export_v2-en-1-m0",
+          "start": 39,
+          "end": 53,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-calendar_export_v2-en-1-m0",
+          "start": 80,
+          "end": 129,
+          "category": "ADDRESS"
+        }
+      ]
+    },
+    {
+      "case_id": "calendar_export_v2-en-2",
+      "findings": []
+    },
+    {
+      "case_id": "board_minutes_v2-zh-0",
+      "findings": [
+        {
+          "source_id": "v2-story-board_minutes_v2-zh-0-m0",
+          "start": 11,
+          "end": 19,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-board_minutes_v2-zh-0-m0",
+          "start": 29,
+          "end": 40,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "v2-story-board_minutes_v2-zh-0-m0",
+          "start": 59,
+          "end": 70,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "board_minutes_v2-zh-1",
+      "findings": [
+        {
+          "source_id": "v2-story-board_minutes_v2-zh-1-m0",
+          "start": 11,
+          "end": 19,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-board_minutes_v2-zh-1-m0",
+          "start": 59,
+          "end": 70,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "board_minutes_v2-zh-2",
+      "findings": []
+    },
+    {
+      "case_id": "board_minutes_v2-en-0",
+      "findings": [
+        {
+          "source_id": "v2-story-board_minutes_v2-en-0-m0",
+          "start": 46,
+          "end": 63,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-board_minutes_v2-en-0-m0",
+          "start": 81,
+          "end": 113,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "v2-story-board_minutes_v2-en-0-m0",
+          "start": 187,
+          "end": 198,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "board_minutes_v2-en-1",
+      "findings": [
+        {
+          "source_id": "v2-story-board_minutes_v2-en-1-m0",
+          "start": 46,
+          "end": 63,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-board_minutes_v2-en-1-m0",
+          "start": 187,
+          "end": 198,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "board_minutes_v2-en-2",
+      "findings": []
+    },
+    {
+      "case_id": "support_chain_v2-zh-0",
+      "findings": [
+        {
+          "source_id": "__query__",
+          "start": 2,
+          "end": 30,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "v2-story-support_chain_v2-zh-0-m0",
+          "start": 4,
+          "end": 7,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-support_chain_v2-zh-0-m0",
+          "start": 8,
+          "end": 36,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "v2-story-support_chain_v2-zh-0-m0",
+          "start": 45,
+          "end": 62,
+          "category": "PHONE"
+        },
+        {
+          "source_id": "v2-story-support_chain_v2-zh-0-m1",
+          "start": 7,
+          "end": 35,
+          "category": "EMAIL"
+        }
+      ]
+    },
+    {
+      "case_id": "support_chain_v2-zh-1",
+      "findings": [
+        {
+          "source_id": "__query__",
+          "start": 2,
+          "end": 30,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "v2-story-support_chain_v2-zh-1-m0",
+          "start": 8,
+          "end": 36,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "v2-story-support_chain_v2-zh-1-m0",
+          "start": 45,
+          "end": 62,
+          "category": "PHONE"
+        },
+        {
+          "source_id": "v2-story-support_chain_v2-zh-1-m1",
+          "start": 7,
+          "end": 35,
+          "category": "EMAIL"
+        }
+      ]
+    },
+    {
+      "case_id": "support_chain_v2-zh-2",
+      "findings": []
+    },
+    {
+      "case_id": "support_chain_v2-en-0",
+      "findings": [
+        {
+          "source_id": "__query__",
+          "start": 10,
+          "end": 38,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "v2-story-support_chain_v2-en-0-m0",
+          "start": 16,
+          "end": 30,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-support_chain_v2-en-0-m0",
+          "start": 51,
+          "end": 79,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "v2-story-support_chain_v2-en-0-m0",
+          "start": 85,
+          "end": 102,
+          "category": "PHONE"
+        },
+        {
+          "source_id": "v2-story-support_chain_v2-en-0-m1",
+          "start": 30,
+          "end": 58,
+          "category": "EMAIL"
+        }
+      ]
+    },
+    {
+      "case_id": "support_chain_v2-en-1",
+      "findings": [
+        {
+          "source_id": "__query__",
+          "start": 10,
+          "end": 38,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "v2-story-support_chain_v2-en-1-m0",
+          "start": 53,
+          "end": 81,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "v2-story-support_chain_v2-en-1-m0",
+          "start": 87,
+          "end": 104,
+          "category": "PHONE"
+        },
+        {
+          "source_id": "v2-story-support_chain_v2-en-1-m1",
+          "start": 30,
+          "end": 58,
+          "category": "EMAIL"
+        }
+      ]
+    },
+    {
+      "case_id": "support_chain_v2-en-2",
+      "findings": []
+    },
+    {
+      "case_id": "relocation_dialog_v2-zh-0",
+      "findings": [
+        {
+          "source_id": "v2-story-relocation_dialog_v2-zh-0-m0",
+          "start": 3,
+          "end": 6,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-relocation_dialog_v2-zh-0-m0",
+          "start": 10,
+          "end": 26,
+          "category": "ADDRESS"
+        },
+        {
+          "source_id": "v2-story-relocation_dialog_v2-zh-0-m0",
+          "start": 35,
+          "end": 51,
+          "category": "ADDRESS"
+        }
+      ]
+    },
+    {
+      "case_id": "relocation_dialog_v2-zh-1",
+      "findings": [
+        {
+          "source_id": "v2-story-relocation_dialog_v2-zh-1-m0",
+          "start": 10,
+          "end": 26,
+          "category": "ADDRESS"
+        },
+        {
+          "source_id": "v2-story-relocation_dialog_v2-zh-1-m0",
+          "start": 35,
+          "end": 51,
+          "category": "ADDRESS"
+        }
+      ]
+    },
+    {
+      "case_id": "relocation_dialog_v2-zh-2",
+      "findings": []
+    },
+    {
+      "case_id": "relocation_dialog_v2-en-0",
+      "findings": [
+        {
+          "source_id": "v2-story-relocation_dialog_v2-en-0-m0",
+          "start": 4,
+          "end": 20,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-relocation_dialog_v2-en-0-m0",
+          "start": 37,
+          "end": 86,
+          "category": "ADDRESS"
+        },
+        {
+          "source_id": "v2-story-relocation_dialog_v2-en-0-m0",
+          "start": 108,
+          "end": 157,
+          "category": "ADDRESS"
+        }
+      ]
+    },
+    {
+      "case_id": "relocation_dialog_v2-en-1",
+      "findings": [
+        {
+          "source_id": "v2-story-relocation_dialog_v2-en-1-m0",
+          "start": 36,
+          "end": 85,
+          "category": "ADDRESS"
+        },
+        {
+          "source_id": "v2-story-relocation_dialog_v2-en-1-m0",
+          "start": 107,
+          "end": 156,
+          "category": "ADDRESS"
+        }
+      ]
+    },
+    {
+      "case_id": "relocation_dialog_v2-en-2",
+      "findings": []
+    },
+    {
+      "case_id": "ledger_yaml_v2-zh-0",
+      "findings": [
+        {
+          "source_id": "v2-story-ledger_yaml_v2-zh-0-m0",
+          "start": 28,
+          "end": 39,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "v2-story-ledger_yaml_v2-zh-0-m0",
+          "start": 56,
+          "end": 64,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-ledger_yaml_v2-zh-0-m0",
+          "start": 78,
+          "end": 89,
+          "category": "AMOUNT"
+        },
+        {
+          "source_id": "v2-story-ledger_yaml_v2-zh-0-m0",
+          "start": 105,
+          "end": 115,
+          "category": "DATE"
+        }
+      ]
+    },
+    {
+      "case_id": "ledger_yaml_v2-zh-1",
+      "findings": [
+        {
+          "source_id": "v2-story-ledger_yaml_v2-zh-1-m0",
+          "start": 78,
+          "end": 89,
+          "category": "AMOUNT"
+        },
+        {
+          "source_id": "v2-story-ledger_yaml_v2-zh-1-m0",
+          "start": 105,
+          "end": 115,
+          "category": "DATE"
+        }
+      ]
+    },
+    {
+      "case_id": "ledger_yaml_v2-zh-2",
+      "findings": []
+    },
+    {
+      "case_id": "ledger_yaml_v2-en-0",
+      "findings": [
+        {
+          "source_id": "v2-story-ledger_yaml_v2-en-0-m0",
+          "start": 28,
+          "end": 60,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "v2-story-ledger_yaml_v2-en-0-m0",
+          "start": 77,
+          "end": 93,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-ledger_yaml_v2-en-0-m0",
+          "start": 107,
+          "end": 118,
+          "category": "AMOUNT"
+        },
+        {
+          "source_id": "v2-story-ledger_yaml_v2-en-0-m0",
+          "start": 134,
+          "end": 147,
+          "category": "DATE"
+        }
+      ]
+    },
+    {
+      "case_id": "ledger_yaml_v2-en-1",
+      "findings": [
+        {
+          "source_id": "v2-story-ledger_yaml_v2-en-1-m0",
+          "start": 107,
+          "end": 118,
+          "category": "AMOUNT"
+        },
+        {
+          "source_id": "v2-story-ledger_yaml_v2-en-1-m0",
+          "start": 134,
+          "end": 145,
+          "category": "DATE"
+        }
+      ]
+    },
+    {
+      "case_id": "ledger_yaml_v2-en-2",
+      "findings": []
+    },
+    {
+      "case_id": "malicious_override_v2-zh-0",
+      "findings": [
+        {
+          "source_id": "__query__",
+          "start": 8,
+          "end": 11,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-malicious_override_v2-zh-0-m0",
+          "start": 40,
+          "end": 43,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-malicious_override_v2-zh-0-m0",
+          "start": 44,
+          "end": 62,
+          "category": "ID"
+        },
+        {
+          "source_id": "v2-story-malicious_override_v2-zh-0-m0",
+          "start": 67,
+          "end": 84,
+          "category": "PHONE"
+        }
+      ]
+    },
+    {
+      "case_id": "malicious_override_v2-zh-1",
+      "findings": [
+        {
+          "source_id": "__query__",
+          "start": 8,
+          "end": 11,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-malicious_override_v2-zh-1-m0",
+          "start": 40,
+          "end": 43,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-malicious_override_v2-zh-1-m0",
+          "start": 44,
+          "end": 62,
+          "category": "ID"
+        },
+        {
+          "source_id": "v2-story-malicious_override_v2-zh-1-m0",
+          "start": 67,
+          "end": 84,
+          "category": "PHONE"
+        }
+      ]
+    },
+    {
+      "case_id": "malicious_override_v2-zh-2",
+      "findings": [
+        {
+          "source_id": "__query__",
+          "start": 8,
+          "end": 11,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-malicious_override_v2-zh-2-m0",
+          "start": 40,
+          "end": 43,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-malicious_override_v2-zh-2-m0",
+          "start": 44,
+          "end": 62,
+          "category": "ID"
+        },
+        {
+          "source_id": "v2-story-malicious_override_v2-zh-2-m0",
+          "start": 67,
+          "end": 84,
+          "category": "PHONE"
+        }
+      ]
+    },
+    {
+      "case_id": "malicious_override_v2-en-0",
+      "findings": [
+        {
+          "source_id": "__query__",
+          "start": 46,
+          "end": 60,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-malicious_override_v2-en-0-m0",
+          "start": 90,
+          "end": 104,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-malicious_override_v2-en-0-m0",
+          "start": 107,
+          "end": 125,
+          "category": "ID"
+        },
+        {
+          "source_id": "v2-story-malicious_override_v2-en-0-m0",
+          "start": 151,
+          "end": 168,
+          "category": "PHONE"
+        }
+      ]
+    },
+    {
+      "case_id": "malicious_override_v2-en-1",
+      "findings": [
+        {
+          "source_id": "__query__",
+          "start": 46,
+          "end": 60,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-malicious_override_v2-en-1-m0",
+          "start": 90,
+          "end": 104,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-malicious_override_v2-en-1-m0",
+          "start": 107,
+          "end": 125,
+          "category": "ID"
+        },
+        {
+          "source_id": "v2-story-malicious_override_v2-en-1-m0",
+          "start": 151,
+          "end": 168,
+          "category": "PHONE"
+        }
+      ]
+    },
+    {
+      "case_id": "malicious_override_v2-en-2",
+      "findings": [
+        {
+          "source_id": "__query__",
+          "start": 46,
+          "end": 61,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-malicious_override_v2-en-2-m0",
+          "start": 90,
+          "end": 105,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-malicious_override_v2-en-2-m0",
+          "start": 108,
+          "end": 126,
+          "category": "ID"
+        },
+        {
+          "source_id": "v2-story-malicious_override_v2-en-2-m0",
+          "start": 152,
+          "end": 169,
+          "category": "PHONE"
+        }
+      ]
+    },
+    {
+      "case_id": "public_reprint_v2-zh-0",
+      "findings": [
+        {
+          "source_id": "v2-story-public_reprint_v2-zh-0-m0",
+          "start": 29,
+          "end": 40,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "v2-story-public_reprint_v2-zh-0-m0",
+          "start": 46,
+          "end": 54,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-public_reprint_v2-zh-0-m0",
+          "start": 65,
+          "end": 76,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "public_reprint_v2-zh-1",
+      "findings": [
+        {
+          "source_id": "v2-story-public_reprint_v2-zh-1-m0",
+          "start": 29,
+          "end": 40,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "v2-story-public_reprint_v2-zh-1-m0",
+          "start": 46,
+          "end": 54,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-public_reprint_v2-zh-1-m0",
+          "start": 65,
+          "end": 76,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "public_reprint_v2-zh-2",
+      "findings": [
+        {
+          "source_id": "v2-story-public_reprint_v2-zh-2-m0",
+          "start": 29,
+          "end": 40,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "v2-story-public_reprint_v2-zh-2-m0",
+          "start": 46,
+          "end": 54,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-public_reprint_v2-zh-2-m0",
+          "start": 65,
+          "end": 76,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "public_reprint_v2-en-0",
+      "findings": [
+        {
+          "source_id": "v2-story-public_reprint_v2-en-0-m0",
+          "start": 89,
+          "end": 107,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-public_reprint_v2-en-0-m0",
+          "start": 127,
+          "end": 159,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "v2-story-public_reprint_v2-en-0-m0",
+          "start": 171,
+          "end": 182,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "public_reprint_v2-en-1",
+      "findings": [
+        {
+          "source_id": "v2-story-public_reprint_v2-en-1-m0",
+          "start": 89,
+          "end": 107,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-public_reprint_v2-en-1-m0",
+          "start": 127,
+          "end": 159,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "v2-story-public_reprint_v2-en-1-m0",
+          "start": 171,
+          "end": 182,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "public_reprint_v2-en-2",
+      "findings": [
+        {
+          "source_id": "v2-story-public_reprint_v2-en-2-m0",
+          "start": 89,
+          "end": 107,
+          "category": "PROJECT"
+        },
+        {
+          "source_id": "v2-story-public_reprint_v2-en-2-m0",
+          "start": 127,
+          "end": 159,
+          "category": "CUSTOMER"
+        },
+        {
+          "source_id": "v2-story-public_reprint_v2-en-2-m0",
+          "start": 171,
+          "end": 182,
+          "category": "AMOUNT"
+        }
+      ]
+    },
+    {
+      "case_id": "policy_scope_twins_v2-zh-0",
+      "findings": [
+        {
+          "source_id": "v2-story-policy_scope_twins_v2-zh-0-m0",
+          "start": 3,
+          "end": 12,
+          "category": "DATE"
+        },
+        {
+          "source_id": "v2-story-policy_scope_twins_v2-zh-0-m0",
+          "start": 18,
+          "end": 21,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-policy_scope_twins_v2-zh-0-m0",
+          "start": 22,
+          "end": 50,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "v2-story-policy_scope_twins_v2-zh-0-m0",
+          "start": 64,
+          "end": 82,
+          "category": "ID"
+        }
+      ]
+    },
+    {
+      "case_id": "policy_scope_twins_v2-zh-1",
+      "findings": []
+    },
+    {
+      "case_id": "policy_scope_twins_v2-zh-2",
+      "findings": [
+        {
+          "source_id": "v2-story-policy_scope_twins_v2-zh-2-m0",
+          "start": 23,
+          "end": 51,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "v2-story-policy_scope_twins_v2-zh-2-m0",
+          "start": 65,
+          "end": 83,
+          "category": "ID"
+        }
+      ]
+    },
+    {
+      "case_id": "policy_scope_twins_v2-en-0",
+      "findings": [
+        {
+          "source_id": "v2-story-policy_scope_twins_v2-en-0-m0",
+          "start": 26,
+          "end": 36,
+          "category": "DATE"
+        },
+        {
+          "source_id": "v2-story-policy_scope_twins_v2-en-0-m0",
+          "start": 50,
+          "end": 63,
+          "category": "PERSON"
+        },
+        {
+          "source_id": "v2-story-policy_scope_twins_v2-en-0-m0",
+          "start": 91,
+          "end": 119,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "v2-story-policy_scope_twins_v2-en-0-m0",
+          "start": 164,
+          "end": 182,
+          "category": "ID"
+        }
+      ]
+    },
+    {
+      "case_id": "policy_scope_twins_v2-en-1",
+      "findings": []
+    },
+    {
+      "case_id": "policy_scope_twins_v2-en-2",
+      "findings": [
+        {
+          "source_id": "v2-story-policy_scope_twins_v2-en-2-m0",
+          "start": 97,
+          "end": 125,
+          "category": "EMAIL"
+        },
+        {
+          "source_id": "v2-story-policy_scope_twins_v2-en-2-m0",
+          "start": 170,
+          "end": 188,
+          "category": "ID"
+        }
+      ]
+    }
+  ],
+  "runtime_sha256": "401a7bee1f0efa9f7b5cf3e237eabbe2f7f1a092c3e8da473dd203ceed6f90d1"
+}

@@ -22,6 +22,7 @@ from .policy import make_plan
 from .public_fixture import SpanInstrumentationAnswerer, prepare_controlled_fixture
 from .runner import save_json
 from .tasks import run_tasks, score_runs
+from .snapshots import freeze_snapshot_bundle
 
 
 VERSION = "0.12.3"
@@ -59,7 +60,8 @@ class NativeRecorder:
         self.client.cookies.clear()
         headers = {"Authorization": "Bearer " + self.tokens[actor_id]} if actor_id in self.tokens else {}
         kwargs = {"json": payload} if payload is not None else {}
-        trace = {"native_method": method, "native_path": path, "actor_id": actor_id,
+        trace = {"native_request_index": len(self.requests),
+                 "native_method": method, "native_path": path, "actor_id": actor_id,
                  "authorization_present": bool(headers), "cookie_present": False}
         if payload is not None and "/auths" not in path:
             trace["native_request_json"] = payload
@@ -339,15 +341,25 @@ def run_native_webui_public(*, legacy_project: Path, output: Path, artifacts_roo
             report["direct"] = evaluate(bundle)
             report["evidence_file"] = str((output / "direct_evidence.json").resolve())
             report["stage"] = "seven_paired_span_instrumentation_tasks"
-            task_run = run_tasks(case, plan, adapter, seed=seed, answerer=SpanInstrumentationAnswerer())
+            task_run = run_tasks(case, plan, adapter, seed=seed, answerer=SpanInstrumentationAnswerer(), capture_contexts=True)
             report["tasks"] = dict(score_runs(task_run, evaluation["cases"][case["case_id"]]), run=task_run)
             save_json(output / "task_runs.json", report["tasks"])
+            save_json(output / "native_requests.json", {"requests": recorder.requests})
+            report["stage"] = "freeze_three_group_context_snapshots"
+            snapshots = freeze_snapshot_bundle(runtime_path=output / "native_runtime.json",
+                                                evidence_path=output / "direct_evidence.json",
+                                                requests_path=output / "native_requests.json", task_run=task_run,
+                                                output_path=output / "contexts.json")
+            report["context_snapshots"] = {"path": str((output / "contexts.json").resolve()),
+                                           "sha256": _sha((output / "contexts.json").read_bytes()),
+                                           "count": len(snapshots["snapshots"]), "remote_model_calls": 0}
+            report["task_retrieval_report"] = snapshots["task_retrieval_report"]
             report["native_status"] = "native_application_api_executed"
             if egress:
                 report["status"] = "failed_remote_connection_attempt"
             elif any(request.get("cookie_present") for request in recorder.requests):
                 report["status"] = "failed_cookie_isolation"
-            elif report["direct"]["known_w_plus"]:
+            elif report["direct"]["known_w_plus"] or report["task_retrieval_report"]["known_w_plus_task_lists"]:
                 report["status"] = "counterexample_found"
             elif report["direct"]["finite_scope_safe"] is not True:
                 report["status"] = "incomplete_evidence"
