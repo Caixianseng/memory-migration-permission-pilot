@@ -60,7 +60,7 @@ class LegacyBridgeTests(unittest.TestCase):
         self.assertTrue(result["legacy_checker_called"])
         self.assertTrue(result["legacy_report"]["fixture_checker_called"])
         self.assertEqual(result["module_sha256"], hashlib.sha256(original).hexdigest())
-        self.assertEqual(Path(result["module_path"]), self.module)
+        self.assertEqual(Path(result["module_path"]), self.module.resolve())
         received = result["legacy_report"]["received"]
         self.assertEqual(received["records"], [{"key": "shared", "readers": ["alice", "bob"]},
                                                {"key": "denied", "readers": []}])

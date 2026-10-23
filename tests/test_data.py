@@ -33,8 +33,10 @@ class DataTests(unittest.TestCase):
 
     def test_discover_nested_dataset_root(self):
         self.write_synthetic([])
-        self.assertEqual(discover_data_root(self.workspace), self.root)
-        self.assertEqual(discover_data_root(self.synthetic), self.root)
+        # Windows temporary paths can use an 8.3 alias; discovery returns the
+        # canonical long path, so compare against the same resolved identity.
+        self.assertEqual(discover_data_root(self.workspace), self.root.resolve())
+        self.assertEqual(discover_data_root(self.synthetic), self.root.resolve())
 
     def test_group_expansion_and_unknown_acl_are_fail_closed(self):
         self.write_synthetic([
