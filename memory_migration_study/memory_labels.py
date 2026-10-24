@@ -200,7 +200,7 @@ class MemoryLabelAuthority:
             return "invalid_record"
         return None
 
-    def validate_label(self, record, policy):
+    def validate_label(self, record, policy, *, expected_builder_version=None, expected_detector_version=None):
         """Return a fixed invalidation reason or None; no authority decision."""
         try:
             label = record.get("label")
@@ -208,6 +208,10 @@ class MemoryLabelAuthority:
                 return "label_missing"
             if not self._valid_signature("label", label, record["label_signature"]):
                 return "label_signature_invalid"
+            if expected_builder_version is not None and label.get("builder_version") != expected_builder_version:
+                return "label_builder_changed"
+            if expected_detector_version is not None and label.get("detector_version") != expected_detector_version:
+                return "label_detector_changed"
             if label.get("policy_sha256") != _digest(_policy(policy)):
                 return "label_policy_changed"
             if (label.get("content_sha256") != _text_hash(record["text"])
@@ -248,7 +252,8 @@ def _blocked(code, *, checks=None, original_payload=None):
 
 def prepare_labeled_transfer(records, query, policy, *, authority: MemoryLabelAuthority,
                              actor_id, agent_id, request_id, mode="migration", agent=None,
-                             authorizer: Callable | None = None):
+                             authorizer: Callable | None = None, detection_cache=None,
+                             label_requirements=None):
     """Run A migration detection, B generation reuse, or C both, then real egress.
 
     All methods use the SAME records and ACL checks. B still independently
@@ -264,6 +269,12 @@ def prepare_labeled_transfer(records, query, policy, *, authority: MemoryLabelAu
         normalized = _policy(policy)
     except ValueError:
         return _blocked("invalid_sensitivity_policy")
+    if label_requirements is not None and not isinstance(label_requirements, dict):
+        return _blocked("invalid_label_requirements")
+    requirements = dict(label_requirements or {})
+    if (set(requirements) - {"expected_builder_version", "expected_detector_version"}
+            or any(not _version(v) for v in requirements.values())):
+        return _blocked("invalid_label_requirements")
     checks, by_id, fallback = [], {}, []
     for record in records:
         access_error = authority.validate_access(record, actor_id=actor_id, agent_id=agent_id,
@@ -274,7 +285,7 @@ def prepare_labeled_transfer(records, query, policy, *, authority: MemoryLabelAu
         if rid in by_id:
             return _blocked("duplicate_memory_identity", checks=checks)
         by_id[rid] = record
-        reason = authority.validate_label(record, normalized)
+        reason = authority.validate_label(record, normalized, **requirements)
         checks.append({"record_id": rid, "label_valid": reason is None,
                        "fallback_reason": reason if mode == "generation" else None,
                        "label_check_reason": reason, "access_valid": True})
@@ -282,6 +293,21 @@ def prepare_labeled_transfer(records, query, policy, *, authority: MemoryLabelAu
             fallback.append({"source_id": rid, "text": record["text"]})
     payload = {"query": query, "memories": [{"source_id": rid, "text": record["text"]}
                                               for rid, record in by_id.items()]}
+    cache_before = None
+    if detection_cache is not None:
+        from .detection_cache import DetectionCache
+        if not isinstance(detection_cache, DetectionCache):
+            return _blocked("invalid_detection_cache", checks=checks)
+        cache_before = detection_cache.stats()
+        if agent is not None:
+            # Cache entries are never permission grants. Every record has already
+            # passed current identity/source/lifecycle checks above; grant and
+            # authority domains prevent reuse across users, Agents or authorities.
+            scope = {"authority": authority._sign("detection_cache_domain", {}),
+                     "actor_id": actor_id, "agent_id": agent_id,
+                     "lifecycle": _digest(authority.export_state()),
+                     "grants": {rid: _digest(r["access"]) for rid, r in by_id.items()}}
+            agent = detection_cache.bind(agent, scope=scope)
     # Start with a real rules result: it binds payload and full normalized policy
     # and enforces format, reserved-token and size checks in all three arms.
     base = detect_sensitive(payload, normalized, mode="rules")
@@ -329,6 +355,14 @@ def prepare_labeled_transfer(records, query, policy, *, authority: MemoryLabelAu
                                  valid_label_count=sum(c["label_valid"] for c in checks),
                                  fallback_count=len(fallback) if mode == "generation" else 0,
                                  generation_local_calls=0, migration_local_calls=detection["local_calls"])
+    if cache_before is not None:
+        cache_after = detection_cache.stats()
+        prepared["metadata"]["detection_cache"] = {
+            key: cache_after[key] - cache_before[key]
+            for key in ("hits", "misses", "bypasses", "expired", "evictions", "stores")}
+        prepared["metadata"]["detection_cache"]["entries"] = cache_after["entries"]
+    if requirements:
+        prepared["metadata"]["label_requirements"] = requirements
     return prepared
 
 

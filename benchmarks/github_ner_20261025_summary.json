@@ -1,0 +1,271 @@
+{
+  "kind": "paired_local_encoder_comparison",
+  "implementation_unchanged": true,
+  "independent_stories": 8,
+  "template_families": 4,
+  "legal_tasks_per_arm": 24,
+  "arms": {
+    "qwen": {
+      "legal_tasks": 24,
+      "correct": 7,
+      "ready": 18,
+      "preprocessing_blocks": 6,
+      "true_model_unknown": 5,
+      "restoration_failures": 6,
+      "ready_with_memory_gaps": 0,
+      "ready_with_query_gaps": 0,
+      "extra_masked_memory_characters": 0,
+      "extra_masked_query_characters": 102,
+      "unauthorized_outputs": 0,
+      "outsider_blocks": 8,
+      "detector_invocations": 48,
+      "detector_seconds": 22.095,
+      "answer_generations": 18,
+      "by_language": {
+        "zh": {
+          "legal": 12,
+          "correct": 1,
+          "ready": 9
+        },
+        "en": {
+          "legal": 12,
+          "correct": 6,
+          "ready": 9
+        }
+      }
+    },
+    "gliner_whitespace": {
+      "legal_tasks": 24,
+      "correct": 8,
+      "ready": 24,
+      "preprocessing_blocks": 0,
+      "true_model_unknown": 5,
+      "restoration_failures": 11,
+      "ready_with_memory_gaps": 9,
+      "ready_with_query_gaps": 4,
+      "extra_masked_memory_characters": 30,
+      "extra_masked_query_characters": 84,
+      "unauthorized_outputs": 0,
+      "outsider_blocks": 8,
+      "detector_invocations": 48,
+      "detector_seconds": 6.249,
+      "answer_generations": 24,
+      "by_language": {
+        "zh": {
+          "legal": 12,
+          "correct": 0,
+          "ready": 12
+        },
+        "en": {
+          "legal": 12,
+          "correct": 8,
+          "ready": 12
+        }
+      }
+    },
+    "gliner_char": {
+      "legal_tasks": 24,
+      "correct": 9,
+      "ready": 24,
+      "preprocessing_blocks": 0,
+      "true_model_unknown": 9,
+      "restoration_failures": 6,
+      "ready_with_memory_gaps": 0,
+      "ready_with_query_gaps": 0,
+      "extra_masked_memory_characters": 19,
+      "extra_masked_query_characters": 102,
+      "unauthorized_outputs": 0,
+      "outsider_blocks": 8,
+      "detector_invocations": 48,
+      "detector_seconds": 6.686,
+      "answer_generations": 24,
+      "by_language": {
+        "zh": {
+          "legal": 12,
+          "correct": 1,
+          "ready": 12
+        },
+        "en": {
+          "legal": 12,
+          "correct": 8,
+          "ready": 12
+        }
+      }
+    },
+    "gliner_cjk": {
+      "legal_tasks": 24,
+      "correct": 9,
+      "ready": 24,
+      "preprocessing_blocks": 0,
+      "true_model_unknown": 9,
+      "restoration_failures": 6,
+      "ready_with_memory_gaps": 0,
+      "ready_with_query_gaps": 0,
+      "extra_masked_memory_characters": 16,
+      "extra_masked_query_characters": 102,
+      "unauthorized_outputs": 0,
+      "outsider_blocks": 8,
+      "detector_invocations": 48,
+      "detector_seconds": 6.872,
+      "answer_generations": 24,
+      "by_language": {
+        "zh": {
+          "legal": 12,
+          "correct": 1,
+          "ready": 12
+        },
+        "en": {
+          "legal": 12,
+          "correct": 8,
+          "ready": 12
+        }
+      }
+    }
+  },
+  "matched_ready_tasks": 18,
+  "matched_ready_stories": 6,
+  "matched_ready_correct": {
+    "qwen": 7,
+    "gliner_whitespace": 6,
+    "gliner_char": 7,
+    "gliner_cjk": 7
+  },
+  "qwen_detector_generations": 48,
+  "encoder_invocations": 144,
+  "answer_generations": 90,
+  "cloud_calls": 0,
+  "new_api_cost_cny": 0,
+  "runtime_identity": {
+    "code_revision": "ca4f68235b50fe4c3ecf3876851d748fe4b15c6c",
+    "model_revision": "cf5593a5d45e3bbf204b9df621b13b1c0cf25ee3",
+    "model_id": "fastino/gliner2.5-multi-v1",
+    "files_sha256": "d02e8f0c34637be33096d001d1f696f4014b99033dd2918a7d8d3d82cbdde431",
+    "weights_sha256": "c1ff4ec0bc00031c15530b8f3c33d3677f27949e6a0cb52e1247a6224b6c5395",
+    "device": "cpu",
+    "threads": 4,
+    "dependencies": {
+      "torch": "2.14.1",
+      "transformers": "5.5.4",
+      "safetensors": "0.8.0",
+      "tokenizers": "0.22.2"
+    }
+  },
+  "initialization_seconds": 19.953,
+  "scope": "Authored eight-story regression. Threshold and schemas frozen before this run. All conditions use unchanged rules, original facts, authorization and restoration. This is not a general safety proof or a new heldout memory-builder evaluation.",
+  "date": "2026-10-25",
+  "counts_scope_note": "Eight authored stories from four bilingual template families, three legal questions per story; repeated questions are not independent stories. Single run per condition.",
+  "development_smoke_encoder_invocations": 3,
+  "verification": {
+    "status": "passed",
+    "rows_verified": 128,
+    "checks": [
+      {
+        "check": "complete_unique_condition_matrix",
+        "passed": true
+      },
+      {
+        "check": "input_hashes",
+        "passed": true
+      },
+      {
+        "check": "report_rows_match",
+        "passed": true
+      },
+      {
+        "check": "answer_scores",
+        "passed": true
+      },
+      {
+        "check": "all_condition_aggregates",
+        "passed": true
+      },
+      {
+        "check": "detector_accounting",
+        "passed": true
+      },
+      {
+        "check": "call_totals",
+        "passed": true
+      },
+      {
+        "check": "paired_denominators",
+        "passed": true
+      },
+      {
+        "check": "executed_source_archive",
+        "passed": true
+      },
+      {
+        "check": "current_source_matches_experiment",
+        "passed": true
+      }
+    ],
+    "registered_name_literal_scan": {
+      "qwen": {
+        "ready_legal_tasks": 18,
+        "memory_literal_exposures": 0,
+        "query_literal_exposures": 0,
+        "memory_exposure_stories": [],
+        "query_exposure_stories": []
+      },
+      "gliner_whitespace": {
+        "ready_legal_tasks": 24,
+        "memory_literal_exposures": 9,
+        "query_literal_exposures": 4,
+        "memory_exposure_stories": [
+          "zh_1",
+          "zh_3",
+          "zh_4"
+        ],
+        "query_exposure_stories": [
+          "zh_1",
+          "zh_2",
+          "zh_3",
+          "zh_4"
+        ]
+      },
+      "gliner_char": {
+        "ready_legal_tasks": 24,
+        "memory_literal_exposures": 0,
+        "query_literal_exposures": 0,
+        "memory_exposure_stories": [],
+        "query_exposure_stories": []
+      },
+      "gliner_cjk": {
+        "ready_legal_tasks": 24,
+        "memory_literal_exposures": 0,
+        "query_literal_exposures": 0,
+        "memory_exposure_stories": [],
+        "query_exposure_stories": []
+      }
+    },
+    "network_audit": {
+      "allowed_loopback_connections": 236,
+      "blocked_external_connections": 0
+    },
+    "verification_model_calls": 0,
+    "verification_script_sha256": "30c06aba44b56d15241f7879fbb818dccf60b1f5ebceb9e862a11df21f0a63a7",
+    "scope": "Score, denominator, accounting, archived/current source and input checks. Literal scan only tests registered full names. Character-level masking counts remain original in-process instrumentation; restoration maps were not saved. Passing consistency checks is not passing a privacy or task-quality acceptance threshold."
+  },
+  "engineering_tests": {
+    "executed": 418,
+    "passed": 418,
+    "scope": "Local standard-library unittest suite; model evidence is the separately executed paired experiment."
+  },
+  "source_urls": [
+    "https://github.com/fastino-ai/GLiNER2/tree/ca4f68235b50fe4c3ecf3876851d748fe4b15c6c",
+    "https://huggingface.co/fastino/gliner2.5-multi-v1/tree/cf5593a5d45e3bbf204b9df621b13b1c0cf25ee3",
+    "https://github.com/data-privacy-stack/presidio/blob/4f0e236e31a57767958a3eec2de3fc58dffc3034/README.MD",
+    "https://github.com/NVIDIA-NeMo/Anonymizer/blob/1872309de04d78423caeb9a4a64c89a4f5a026e5/README.md"
+  ],
+  "limitations": [
+    "Optional detector; existing defaults unchanged. Explicitly approved entity-type policies only; no arbitrary conditional business-rule understanding.",
+    "CUSTOMER uses conservative organization candidates; only that category is evaluated here.",
+    "9/24 total correct versus 7/24 baseline; on 18 mutually ready tasks both are 7/18. Improvement comes from additional ready tasks.",
+    "Chinese accuracy remains 1/12. Real model UNKNOWN increases from 5 to 9; no demonstrated refusal reduction.",
+    "CJK wrapper and upstream char splitter have equal accuracy and zero registered masking gaps here; wrapper masks three fewer irrelevant memory characters.",
+    "Masking metrics use known synthetic labels; zero observed gaps is not general privacy or semantic-inference protection.",
+    "Exact source facts, no upstream memory construction, no cache or generation-label comparison in this experiment.",
+    "No training, fine-tuning, repeated-run variance, enterprise test or production claim."
+  ]
+}

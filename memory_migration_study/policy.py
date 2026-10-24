@@ -4,7 +4,7 @@ from __future__ import annotations
 import hashlib
 import json
 
-METHODS = ("exact_groups", "reader_copies", "reject_all", "partial")
+METHODS = ("exact_groups", "reader_copies", "reject_all", "partial", "role_cover")
 RULES = ("source_readers", "recipient_readers", "target_readers")
 
 
@@ -62,7 +62,7 @@ def decision(record: dict, actor_id: str, *, source_only: bool = False) -> str:
 
 
 def make_plan(case: dict, method: str, run_id: str, *, source_only: bool = False,
-              keep_source: bool = False, partial_limit: int = 1) -> dict:
+              keep_source: bool = False, partial_limit: int = 1, planner_options=None) -> dict:
     validate_case(case)
     if method not in METHODS:
         raise ValueError("unknown method")
@@ -70,6 +70,12 @@ def make_plan(case: dict, method: str, run_id: str, *, source_only: bool = False
         raise ValueError("run_id is required")
     if partial_limit < 0:
         raise ValueError("partial_limit must be nonnegative")
+    if method == "role_cover":
+        from .role_cover import make_role_plan
+        return make_role_plan(case, run_id, source_only=source_only, keep_source=keep_source,
+                              options=planner_options)
+    if planner_options is not None:
+        raise ValueError("planner_options_require_role_cover")
     actors = [a["actor_id"] for a in case["actors"]]
     mapping = {r["source_id"]: [] for r in case["records"]}
     objects, groups, excluded = [], {}, []

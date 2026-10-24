@@ -6,9 +6,11 @@ There are no tools, remote fallback, raw-text logs, or evaluation-label inputs.
 from __future__ import annotations
 
 import http.client
+import hashlib
 import json
 import time
 from copy import deepcopy
+from pathlib import Path
 
 MODEL = "qwen3:4b-instruct-2507-q4_K_M"
 VERSION = "0.40.8"
@@ -140,6 +142,15 @@ class LocalSensitivityAgent:
             raise ValueError("pinned_digest_required")
         self.transport = transport or self._transport
         self.timeout = min(180, max(1, int(self.config.get("timeout_seconds", 120))))
+
+    def cache_identity(self):
+        """Trusted host contract; model response text cannot choose this identity."""
+        return {"implementation_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+                "model": MODEL, "digest": DIGEST, "runtime": VERSION,
+                "prompt_version": PROMPT_VERSION,
+                "prompt_sha256": hashlib.sha256(SYSTEM_PROMPT.encode()).hexdigest(),
+                "config": deepcopy(self.config),
+                "options": {"num_ctx": 4096, "num_predict": 1024, "temperature": 0, "seed": 42}}
 
     def _transport(self, method, path, body=None):
         connection = http.client.HTTPConnection("127.0.0.1", 11435, timeout=self.timeout)
