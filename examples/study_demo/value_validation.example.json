@@ -1,0 +1,16 @@
+{
+  "payload": {
+    "query": "检查这份自编记录中的敏感值。",
+    "memories": [
+      {
+        "source_id": "synthetic-validation-demo",
+        "text": "证件号：000000199002290001。日期：2026-13-41。邮箱：demo..test@example.invalid。电话：+86 138 0000 0000。"
+      }
+    ]
+  },
+  "policy": {
+    "version": "synthetic-validation-demo-v1",
+    "protected_categories": ["ID", "DATE", "EMAIL", "PHONE"],
+    "instructions": "这些字段均为自编测试值。看似证件号、日期、邮箱和电话的值仍需保护；格式、校验位或日历无效不能成为放行依据。"
+  }
+}

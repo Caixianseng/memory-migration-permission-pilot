@@ -130,6 +130,8 @@ class LocalSensitivityAgent:
     Production uses HTTPConnection to a fixed IPv4 loopback address, ignoring
     proxy environment variables and never following redirects.
     """
+    max_local_calls = 2
+
     def __init__(self, config=None, *, transport=None):
         self.config = dict(config or {})
         if self.config.get("endpoint", "http://127.0.0.1:11435") != "http://127.0.0.1:11435":

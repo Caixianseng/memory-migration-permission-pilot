@@ -1,0 +1,325 @@
+{
+  "dev_en_01": {
+    "answers": {
+      "private": "Cobalt Reed Devices Ltd.",
+      "status": "awaiting pickup",
+      "query_contains_value": "awaiting pickup",
+      "paraphrase": "Cobalt Reed Devices Ltd."
+    },
+    "sensitive_spans": [
+      {
+        "start": 37,
+        "end": 61,
+        "category": "CUSTOMER"
+      }
+    ],
+    "public_entity_spans": [],
+    "query_sensitive_spans": {
+      "private": [],
+      "status": [],
+      "query_contains_value": [
+        {
+          "start": 4,
+          "end": 28,
+          "category": "CUSTOMER"
+        }
+      ],
+      "paraphrase": [],
+      "outsider": []
+    },
+    "features": [
+      "labeled_record",
+      "generic_noun_queries"
+    ],
+    "expected_actor_access": {
+      "owner": true,
+      "outsider": false
+    }
+  },
+  "dev_zh_01": {
+    "answers": {
+      "private": "晨浦精密器件合作社",
+      "status": "等待取件",
+      "query_contains_value": "等待取件",
+      "paraphrase": "晨浦精密器件合作社"
+    },
+    "sensitive_spans": [
+      {
+        "start": 17,
+        "end": 26,
+        "category": "CUSTOMER"
+      }
+    ],
+    "public_entity_spans": [],
+    "query_sensitive_spans": {
+      "private": [],
+      "status": [],
+      "query_contains_value": [
+        {
+          "start": 0,
+          "end": 9,
+          "category": "CUSTOMER"
+        }
+      ],
+      "paraphrase": [],
+      "outsider": []
+    },
+    "features": [
+      "labeled_record",
+      "generic_noun_queries",
+      "fullwidth_punctuation"
+    ],
+    "expected_actor_access": {
+      "owner": true,
+      "outsider": false
+    }
+  },
+  "dev_en_02": {
+    "answers": {
+      "private": "Elm Cinder Research Cooperative",
+      "status": "approved",
+      "query_contains_value": "approved",
+      "paraphrase": "Elm Cinder Research Cooperative"
+    },
+    "sensitive_spans": [
+      {
+        "start": 37,
+        "end": 68,
+        "category": "CUSTOMER"
+      }
+    ],
+    "public_entity_spans": [
+      {
+        "start": 159,
+        "end": 183,
+        "category": "PUBLIC_ORGANIZATION"
+      }
+    ],
+    "query_sensitive_spans": {
+      "private": [],
+      "status": [],
+      "query_contains_value": [
+        {
+          "start": 40,
+          "end": 71,
+          "category": "CUSTOMER"
+        }
+      ],
+      "paraphrase": [],
+      "outsider": []
+    },
+    "features": [
+      "multiple_organizations",
+      "public_noncustomer"
+    ],
+    "expected_actor_access": {
+      "owner": true,
+      "outsider": false
+    }
+  },
+  "dev_zh_02": {
+    "answers": {
+      "private": "荷岑应用研究联合社",
+      "status": "通过",
+      "query_contains_value": "通过",
+      "paraphrase": "荷岑应用研究联合社"
+    },
+    "sensitive_spans": [
+      {
+        "start": 9,
+        "end": 18,
+        "category": "CUSTOMER"
+      }
+    ],
+    "public_entity_spans": [
+      {
+        "start": 48,
+        "end": 55,
+        "category": "PUBLIC_ORGANIZATION"
+      }
+    ],
+    "query_sensitive_spans": {
+      "private": [],
+      "status": [],
+      "query_contains_value": [
+        {
+          "start": 0,
+          "end": 9,
+          "category": "CUSTOMER"
+        }
+      ],
+      "paraphrase": [],
+      "outsider": []
+    },
+    "features": [
+      "multiple_organizations",
+      "public_noncustomer"
+    ],
+    "expected_actor_access": {
+      "owner": true,
+      "outsider": false
+    }
+  },
+  "dev_en_03": {
+    "answers": {
+      "private": "Stone Finch Components PLC",
+      "status": "ready for loading",
+      "query_contains_value": "ready for loading",
+      "paraphrase": "Stone Finch Components PLC"
+    },
+    "sensitive_spans": [
+      {
+        "start": 61,
+        "end": 87,
+        "category": "CUSTOMER"
+      }
+    ],
+    "public_entity_spans": [
+      {
+        "start": 138,
+        "end": 160,
+        "category": "PUBLIC_ORGANIZATION"
+      }
+    ],
+    "query_sensitive_spans": {
+      "private": [],
+      "status": [],
+      "query_contains_value": [
+        {
+          "start": 36,
+          "end": 62,
+          "category": "CUSTOMER"
+        }
+      ],
+      "paraphrase": [],
+      "outsider": []
+    },
+    "features": [
+      "labeled_record",
+      "public_noncustomer"
+    ],
+    "expected_actor_access": {
+      "owner": true,
+      "outsider": false
+    }
+  },
+  "dev_zh_03": {
+    "answers": {
+      "private": "栖岩连接器有限公司",
+      "status": "待装车",
+      "query_contains_value": "待装车",
+      "paraphrase": "栖岩连接器有限公司"
+    },
+    "sensitive_spans": [
+      {
+        "start": 18,
+        "end": 27,
+        "category": "CUSTOMER"
+      }
+    ],
+    "public_entity_spans": [
+      {
+        "start": 42,
+        "end": 48,
+        "category": "PUBLIC_ORGANIZATION"
+      }
+    ],
+    "query_sensitive_spans": {
+      "private": [],
+      "status": [],
+      "query_contains_value": [
+        {
+          "start": 0,
+          "end": 9,
+          "category": "CUSTOMER"
+        }
+      ],
+      "paraphrase": [],
+      "outsider": []
+    },
+    "features": [
+      "labeled_record",
+      "fullwidth_punctuation",
+      "public_noncustomer"
+    ],
+    "expected_actor_access": {
+      "owner": true,
+      "outsider": false
+    }
+  },
+  "dev_en_04": {
+    "answers": {
+      "private": "North Lantern Controls Ltd.",
+      "status": "passed",
+      "query_contains_value": "passed",
+      "paraphrase": "North Lantern Controls Ltd."
+    },
+    "sensitive_spans": [
+      {
+        "start": 29,
+        "end": 56,
+        "category": "CUSTOMER"
+      }
+    ],
+    "public_entity_spans": [],
+    "query_sensitive_spans": {
+      "private": [],
+      "status": [],
+      "query_contains_value": [
+        {
+          "start": 44,
+          "end": 71,
+          "category": "CUSTOMER"
+        }
+      ],
+      "paraphrase": [],
+      "outsider": []
+    },
+    "features": [
+      "instruction_in_source",
+      "generic_noun_queries"
+    ],
+    "expected_actor_access": {
+      "owner": true,
+      "outsider": false
+    }
+  },
+  "dev_zh_04": {
+    "answers": {
+      "private": "北灯自动控制有限公司",
+      "status": "合格",
+      "query_contains_value": "合格",
+      "paraphrase": "北灯自动控制有限公司"
+    },
+    "sensitive_spans": [
+      {
+        "start": 19,
+        "end": 29,
+        "category": "CUSTOMER"
+      }
+    ],
+    "public_entity_spans": [],
+    "query_sensitive_spans": {
+      "private": [],
+      "status": [],
+      "query_contains_value": [
+        {
+          "start": 0,
+          "end": 10,
+          "category": "CUSTOMER"
+        }
+      ],
+      "paraphrase": [],
+      "outsider": []
+    },
+    "features": [
+      "instruction_in_source",
+      "fullwidth_punctuation",
+      "generic_noun_queries"
+    ],
+    "expected_actor_access": {
+      "owner": true,
+      "outsider": false
+    }
+  }
+}

@@ -1,0 +1,1318 @@
+{
+  "det_development_en_customer_1": {
+    "findings": [
+      {
+        "source_id": "det_development_en_customer_1.memory",
+        "start": 34,
+        "end": 59,
+        "category": "CUSTOMER"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "CUSTOMER",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": "development_en_CUSTOMER_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_en_customer_1_public": {
+    "findings": [],
+    "expected_status": "ok",
+    "features": [
+      "same_field_public_policy",
+      "CUSTOMER"
+    ],
+    "policy_pair_id": "development_en_CUSTOMER_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_en_customer_2": {
+    "findings": [
+      {
+        "source_id": "det_development_en_customer_2.memory",
+        "start": 80,
+        "end": 111,
+        "category": "CUSTOMER"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "CUSTOMER",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_en_customer_3": {
+    "findings": [
+      {
+        "source_id": "__query__",
+        "start": 68,
+        "end": 97,
+        "category": "CUSTOMER"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "CUSTOMER",
+      "private_type_policy",
+      "query_only_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_en_project_1": {
+    "findings": [
+      {
+        "source_id": "det_development_en_project_1.memory",
+        "start": 35,
+        "end": 48,
+        "category": "PROJECT"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "PROJECT",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": "development_en_PROJECT_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_en_project_1_public": {
+    "findings": [],
+    "expected_status": "ok",
+    "features": [
+      "same_field_public_policy",
+      "PROJECT"
+    ],
+    "policy_pair_id": "development_en_PROJECT_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_en_project_2": {
+    "findings": [
+      {
+        "source_id": "det_development_en_project_2.memory",
+        "start": 81,
+        "end": 97,
+        "category": "PROJECT"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "PROJECT",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_en_project_3": {
+    "findings": [
+      {
+        "source_id": "__query__",
+        "start": 69,
+        "end": 85,
+        "category": "PROJECT"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "PROJECT",
+      "private_type_policy",
+      "query_only_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_en_person_1": {
+    "findings": [
+      {
+        "source_id": "det_development_en_person_1.memory",
+        "start": 32,
+        "end": 45,
+        "category": "PERSON"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "PERSON",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": "development_en_PERSON_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_en_person_1_public": {
+    "findings": [],
+    "expected_status": "ok",
+    "features": [
+      "same_field_public_policy",
+      "PERSON"
+    ],
+    "policy_pair_id": "development_en_PERSON_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_en_person_2": {
+    "findings": [
+      {
+        "source_id": "det_development_en_person_2.memory",
+        "start": 78,
+        "end": 91,
+        "category": "PERSON"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "PERSON",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_en_person_3": {
+    "findings": [
+      {
+        "source_id": "__query__",
+        "start": 66,
+        "end": 78,
+        "category": "PERSON"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "PERSON",
+      "private_type_policy",
+      "query_only_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_en_address_1": {
+    "findings": [
+      {
+        "source_id": "det_development_en_address_1.memory",
+        "start": 40,
+        "end": 73,
+        "category": "ADDRESS"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "ADDRESS",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": "development_en_ADDRESS_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_en_address_1_public": {
+    "findings": [],
+    "expected_status": "ok",
+    "features": [
+      "same_field_public_policy",
+      "ADDRESS"
+    ],
+    "policy_pair_id": "development_en_ADDRESS_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_en_address_2": {
+    "findings": [
+      {
+        "source_id": "det_development_en_address_2.memory",
+        "start": 86,
+        "end": 124,
+        "category": "ADDRESS"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "ADDRESS",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_en_address_3": {
+    "findings": [
+      {
+        "source_id": "__query__",
+        "start": 74,
+        "end": 105,
+        "category": "ADDRESS"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "ADDRESS",
+      "private_type_policy",
+      "query_only_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_en_email_1": {
+    "findings": [
+      {
+        "source_id": "det_development_en_email_1.memory",
+        "start": 28,
+        "end": 58,
+        "category": "EMAIL"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "EMAIL",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": "development_en_EMAIL_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_en_email_1_public": {
+    "findings": [],
+    "expected_status": "ok",
+    "features": [
+      "same_field_public_policy",
+      "EMAIL"
+    ],
+    "policy_pair_id": "development_en_EMAIL_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_en_email_2": {
+    "findings": [
+      {
+        "source_id": "det_development_en_email_2.memory",
+        "start": 74,
+        "end": 101,
+        "category": "EMAIL"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "EMAIL",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_en_email_3": {
+    "findings": [
+      {
+        "source_id": "__query__",
+        "start": 62,
+        "end": 94,
+        "category": "EMAIL"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "EMAIL",
+      "private_type_policy",
+      "query_only_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_en_phone_1": {
+    "findings": [
+      {
+        "source_id": "det_development_en_phone_1.memory",
+        "start": 33,
+        "end": 48,
+        "category": "PHONE"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "PHONE",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": "development_en_PHONE_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_en_phone_1_public": {
+    "findings": [],
+    "expected_status": "ok",
+    "features": [
+      "same_field_public_policy",
+      "PHONE"
+    ],
+    "policy_pair_id": "development_en_PHONE_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_en_phone_2": {
+    "findings": [
+      {
+        "source_id": "det_development_en_phone_2.memory",
+        "start": 79,
+        "end": 96,
+        "category": "PHONE"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "PHONE",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_en_phone_3": {
+    "findings": [
+      {
+        "source_id": "__query__",
+        "start": 67,
+        "end": 82,
+        "category": "PHONE"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "PHONE",
+      "private_type_policy",
+      "query_only_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_en_id_1": {
+    "findings": [
+      {
+        "source_id": "det_development_en_id_1.memory",
+        "start": 35,
+        "end": 44,
+        "category": "ID"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "ID",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": "development_en_ID_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_en_id_1_public": {
+    "findings": [],
+    "expected_status": "ok",
+    "features": [
+      "same_field_public_policy",
+      "ID"
+    ],
+    "policy_pair_id": "development_en_ID_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_en_id_2": {
+    "findings": [
+      {
+        "source_id": "det_development_en_id_2.memory",
+        "start": 81,
+        "end": 90,
+        "category": "ID"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "ID",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_en_id_3": {
+    "findings": [
+      {
+        "source_id": "__query__",
+        "start": 69,
+        "end": 78,
+        "category": "ID"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "ID",
+      "private_type_policy",
+      "query_only_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_en_amount_1": {
+    "findings": [
+      {
+        "source_id": "det_development_en_amount_1.memory",
+        "start": 31,
+        "end": 41,
+        "category": "AMOUNT"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "AMOUNT",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": "development_en_AMOUNT_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_en_amount_1_public": {
+    "findings": [],
+    "expected_status": "ok",
+    "features": [
+      "same_field_public_policy",
+      "AMOUNT"
+    ],
+    "policy_pair_id": "development_en_AMOUNT_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_en_amount_2": {
+    "findings": [
+      {
+        "source_id": "det_development_en_amount_2.memory",
+        "start": 77,
+        "end": 88,
+        "category": "AMOUNT"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "AMOUNT",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_en_amount_3": {
+    "findings": [
+      {
+        "source_id": "__query__",
+        "start": 65,
+        "end": 78,
+        "category": "AMOUNT"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "AMOUNT",
+      "private_type_policy",
+      "query_only_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_en_date_1": {
+    "findings": [
+      {
+        "source_id": "det_development_en_date_1.memory",
+        "start": 29,
+        "end": 39,
+        "category": "DATE"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "DATE",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": "development_en_DATE_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_en_date_1_public": {
+    "findings": [],
+    "expected_status": "ok",
+    "features": [
+      "same_field_public_policy",
+      "DATE"
+    ],
+    "policy_pair_id": "development_en_DATE_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_en_date_2": {
+    "findings": [
+      {
+        "source_id": "det_development_en_date_2.memory",
+        "start": 75,
+        "end": 92,
+        "category": "DATE"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "DATE",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_en_date_3": {
+    "findings": [
+      {
+        "source_id": "__query__",
+        "start": 63,
+        "end": 73,
+        "category": "DATE"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "DATE",
+      "private_type_policy",
+      "query_only_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_en_generic_negative": {
+    "findings": [],
+    "expected_status": "ok",
+    "features": [
+      "generic_noun_no_entity",
+      "CUSTOMER"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_en_generic_named": {
+    "findings": [
+      {
+        "source_id": "det_development_en_generic.memory",
+        "start": 41,
+        "end": 62,
+        "category": "CUSTOMER"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "generic_words_used_as_proper_name",
+      "CUSTOMER"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_en_extra_query": {
+    "findings": [
+      {
+        "source_id": "__query__",
+        "start": 20,
+        "end": 44,
+        "category": "EMAIL"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "query_only_sensitive_value",
+      "EMAIL"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_en_benign": {
+    "findings": [],
+    "expected_status": "ok",
+    "features": [
+      "public_nonentity_information",
+      "generic_noun_no_entity",
+      "CUSTOMER"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_zh_customer_1": {
+    "findings": [
+      {
+        "source_id": "det_development_zh_customer_1.memory",
+        "start": 12,
+        "end": 21,
+        "category": "CUSTOMER"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "CUSTOMER",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": "development_zh_CUSTOMER_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_zh_customer_1_public": {
+    "findings": [],
+    "expected_status": "ok",
+    "features": [
+      "same_field_public_policy",
+      "CUSTOMER"
+    ],
+    "policy_pair_id": "development_zh_CUSTOMER_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_zh_customer_2": {
+    "findings": [
+      {
+        "source_id": "det_development_zh_customer_2.memory",
+        "start": 21,
+        "end": 28,
+        "category": "CUSTOMER"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "CUSTOMER",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_zh_customer_3": {
+    "findings": [
+      {
+        "source_id": "__query__",
+        "start": 22,
+        "end": 32,
+        "category": "CUSTOMER"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "CUSTOMER",
+      "private_type_policy",
+      "query_only_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_zh_project_1": {
+    "findings": [
+      {
+        "source_id": "det_development_zh_project_1.memory",
+        "start": 10,
+        "end": 14,
+        "category": "PROJECT"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "PROJECT",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": "development_zh_PROJECT_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_zh_project_1_public": {
+    "findings": [],
+    "expected_status": "ok",
+    "features": [
+      "same_field_public_policy",
+      "PROJECT"
+    ],
+    "policy_pair_id": "development_zh_PROJECT_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_zh_project_2": {
+    "findings": [
+      {
+        "source_id": "det_development_zh_project_2.memory",
+        "start": 19,
+        "end": 25,
+        "category": "PROJECT"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "PROJECT",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_zh_project_3": {
+    "findings": [
+      {
+        "source_id": "__query__",
+        "start": 20,
+        "end": 25,
+        "category": "PROJECT"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "PROJECT",
+      "private_type_policy",
+      "query_only_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_zh_person_1": {
+    "findings": [
+      {
+        "source_id": "det_development_zh_person_1.memory",
+        "start": 10,
+        "end": 13,
+        "category": "PERSON"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "PERSON",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": "development_zh_PERSON_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_zh_person_1_public": {
+    "findings": [],
+    "expected_status": "ok",
+    "features": [
+      "same_field_public_policy",
+      "PERSON"
+    ],
+    "policy_pair_id": "development_zh_PERSON_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_zh_person_2": {
+    "findings": [
+      {
+        "source_id": "det_development_zh_person_2.memory",
+        "start": 19,
+        "end": 22,
+        "category": "PERSON"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "PERSON",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_zh_person_3": {
+    "findings": [
+      {
+        "source_id": "__query__",
+        "start": 20,
+        "end": 23,
+        "category": "PERSON"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "PERSON",
+      "private_type_policy",
+      "query_only_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_zh_address_1": {
+    "findings": [
+      {
+        "source_id": "det_development_zh_address_1.memory",
+        "start": 10,
+        "end": 24,
+        "category": "ADDRESS"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "ADDRESS",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": "development_zh_ADDRESS_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_zh_address_1_public": {
+    "findings": [],
+    "expected_status": "ok",
+    "features": [
+      "same_field_public_policy",
+      "ADDRESS"
+    ],
+    "policy_pair_id": "development_zh_ADDRESS_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_zh_address_2": {
+    "findings": [
+      {
+        "source_id": "det_development_zh_address_2.memory",
+        "start": 19,
+        "end": 34,
+        "category": "ADDRESS"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "ADDRESS",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_zh_address_3": {
+    "findings": [
+      {
+        "source_id": "__query__",
+        "start": 20,
+        "end": 32,
+        "category": "ADDRESS"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "ADDRESS",
+      "private_type_policy",
+      "query_only_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_zh_email_1": {
+    "findings": [
+      {
+        "source_id": "det_development_zh_email_1.memory",
+        "start": 10,
+        "end": 39,
+        "category": "EMAIL"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "EMAIL",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": "development_zh_EMAIL_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_zh_email_1_public": {
+    "findings": [],
+    "expected_status": "ok",
+    "features": [
+      "same_field_public_policy",
+      "EMAIL"
+    ],
+    "policy_pair_id": "development_zh_EMAIL_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_zh_email_2": {
+    "findings": [
+      {
+        "source_id": "det_development_zh_email_2.memory",
+        "start": 19,
+        "end": 48,
+        "category": "EMAIL"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "EMAIL",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_zh_email_3": {
+    "findings": [
+      {
+        "source_id": "__query__",
+        "start": 20,
+        "end": 46,
+        "category": "EMAIL"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "EMAIL",
+      "private_type_policy",
+      "query_only_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_zh_phone_1": {
+    "findings": [
+      {
+        "source_id": "det_development_zh_phone_1.memory",
+        "start": 10,
+        "end": 23,
+        "category": "PHONE"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "PHONE",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": "development_zh_PHONE_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_zh_phone_1_public": {
+    "findings": [],
+    "expected_status": "ok",
+    "features": [
+      "same_field_public_policy",
+      "PHONE"
+    ],
+    "policy_pair_id": "development_zh_PHONE_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_zh_phone_2": {
+    "findings": [
+      {
+        "source_id": "det_development_zh_phone_2.memory",
+        "start": 19,
+        "end": 35,
+        "category": "PHONE"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "PHONE",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_zh_phone_3": {
+    "findings": [
+      {
+        "source_id": "__query__",
+        "start": 20,
+        "end": 33,
+        "category": "PHONE"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "PHONE",
+      "private_type_policy",
+      "query_only_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_zh_id_1": {
+    "findings": [
+      {
+        "source_id": "det_development_zh_id_1.memory",
+        "start": 12,
+        "end": 30,
+        "category": "ID"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "ID",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": "development_zh_ID_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_zh_id_1_public": {
+    "findings": [],
+    "expected_status": "ok",
+    "features": [
+      "same_field_public_policy",
+      "ID"
+    ],
+    "policy_pair_id": "development_zh_ID_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_zh_id_2": {
+    "findings": [
+      {
+        "source_id": "det_development_zh_id_2.memory",
+        "start": 21,
+        "end": 39,
+        "category": "ID"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "ID",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_zh_id_3": {
+    "findings": [
+      {
+        "source_id": "__query__",
+        "start": 22,
+        "end": 40,
+        "category": "ID"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "ID",
+      "private_type_policy",
+      "query_only_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_zh_amount_1": {
+    "findings": [
+      {
+        "source_id": "det_development_zh_amount_1.memory",
+        "start": 10,
+        "end": 21,
+        "category": "AMOUNT"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "AMOUNT",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": "development_zh_AMOUNT_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_zh_amount_1_public": {
+    "findings": [],
+    "expected_status": "ok",
+    "features": [
+      "same_field_public_policy",
+      "AMOUNT"
+    ],
+    "policy_pair_id": "development_zh_AMOUNT_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_zh_amount_2": {
+    "findings": [
+      {
+        "source_id": "det_development_zh_amount_2.memory",
+        "start": 19,
+        "end": 25,
+        "category": "AMOUNT"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "AMOUNT",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_zh_amount_3": {
+    "findings": [
+      {
+        "source_id": "__query__",
+        "start": 20,
+        "end": 29,
+        "category": "AMOUNT"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "AMOUNT",
+      "private_type_policy",
+      "query_only_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_zh_date_1": {
+    "findings": [
+      {
+        "source_id": "det_development_zh_date_1.memory",
+        "start": 10,
+        "end": 20,
+        "category": "DATE"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "DATE",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": "development_zh_DATE_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_zh_date_1_public": {
+    "findings": [],
+    "expected_status": "ok",
+    "features": [
+      "same_field_public_policy",
+      "DATE"
+    ],
+    "policy_pair_id": "development_zh_DATE_policy_pair",
+    "shared_story_id": null
+  },
+  "det_development_zh_date_2": {
+    "findings": [
+      {
+        "source_id": "det_development_zh_date_2.memory",
+        "start": 19,
+        "end": 29,
+        "category": "DATE"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "DATE",
+      "private_type_policy",
+      "memory_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_zh_date_3": {
+    "findings": [
+      {
+        "source_id": "__query__",
+        "start": 20,
+        "end": 30,
+        "category": "DATE"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "entity_value",
+      "DATE",
+      "private_type_policy",
+      "query_only_sensitive_value"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_zh_generic_negative": {
+    "findings": [],
+    "expected_status": "ok",
+    "features": [
+      "generic_noun_no_entity",
+      "CUSTOMER"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_zh_generic_named": {
+    "findings": [
+      {
+        "source_id": "det_development_zh_generic.memory",
+        "start": 17,
+        "end": 21,
+        "category": "CUSTOMER"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "generic_words_used_as_proper_name",
+      "CUSTOMER"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_zh_extra_query": {
+    "findings": [
+      {
+        "source_id": "__query__",
+        "start": 3,
+        "end": 26,
+        "category": "EMAIL"
+      }
+    ],
+    "expected_status": "ok",
+    "features": [
+      "query_only_sensitive_value",
+      "EMAIL"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  },
+  "det_development_zh_benign": {
+    "findings": [],
+    "expected_status": "ok",
+    "features": [
+      "public_nonentity_information",
+      "generic_noun_no_entity",
+      "CUSTOMER"
+    ],
+    "policy_pair_id": null,
+    "shared_story_id": null
+  }
+}

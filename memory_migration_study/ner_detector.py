@@ -121,6 +121,8 @@ class LocalNerRuntime:
 
 
 class GlinerEntityAgent:
+    max_local_calls = 1
+
     def __init__(self, runtime, *, approved_policies, splitter="cjk_aware", threshold=0.5):
         if splitter not in {"char", "whitespace", "cjk_aware"}:
             raise ValueError("invalid_ner_splitter")

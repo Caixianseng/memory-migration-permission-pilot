@@ -1,0 +1,88 @@
+{
+  "version": "privacy_semantics_v1",
+  "frozen_date": "2026-10-25",
+  "origin": "independently authored synthetic bilingual business memories; no model-generated answers",
+  "scope": "Static CUSTOMER entity policies, controlled host ACL and exact single-fact answers. Not enterprise or public benchmark data.",
+  "indexing": "zero-based Python Unicode character offsets; end exclusive; original text must not be normalized",
+  "splits": {
+    "development": {
+      "stories": 8,
+      "languages": {
+        "en": 4,
+        "zh": 4
+      },
+      "template_families": 4,
+      "legal_tasks": 32,
+      "unauthorized_tasks": 8,
+      "sensitive_source_spans": 8,
+      "public_organization_spans": 4,
+      "features": {
+        "generic_noun_queries": 4,
+        "labeled_record": 4,
+        "fullwidth_punctuation": 3,
+        "multiple_organizations": 2,
+        "public_noncustomer": 4,
+        "instruction_in_source": 2
+      }
+    },
+    "heldout": {
+      "stories": 16,
+      "languages": {
+        "en": 8,
+        "zh": 8
+      },
+      "template_families": 8,
+      "legal_tasks": 64,
+      "unauthorized_tasks": 16,
+      "sensitive_source_spans": 18,
+      "public_organization_spans": 8,
+      "features": {
+        "generic_noun_queries": 6,
+        "quoted_correspondence": 2,
+        "fullwidth_punctuation": 8,
+        "table_layout": 2,
+        "multiple_organizations": 6,
+        "public_noncustomer": 8,
+        "legal_clause": 2,
+        "correction_history": 2,
+        "shared_prefix": 4,
+        "multiple_sensitive_names": 2,
+        "category_words": 2,
+        "mixed_script": 2,
+        "bullet_layout": 2,
+        "date_value": 2,
+        "instruction_in_source": 2
+      }
+    }
+  },
+  "files": {
+    "development/runtime.json": {
+      "sha256": "22647d2e6e813ee094fe94609d6eb0804308d887059fb64e2331c9195e6e15f4",
+      "bytes": 13329
+    },
+    "development/evaluation.json": {
+      "sha256": "acb8b84664876f14cd6b788bfb32ad7600060cda3377d0681d6c305f4b23a98c",
+      "bytes": 6849
+    },
+    "heldout/runtime.json": {
+      "sha256": "433cd93abf06aeb5d6287c4bee7a7d10cc2865b8b1e19b203043387ead793811",
+      "bytes": 28308
+    },
+    "heldout/evaluation.json": {
+      "sha256": "481c7ddb6e8da10255e32d99881679c93c1754683b491daa45092b964845cad1",
+      "bytes": 14347
+    }
+  },
+  "static_validation": {
+    "all_24_unique_story_ids": true,
+    "all_manual_answers_have_exact_source_evidence": true,
+    "all_sensitive_and_public_spans_match_source": true,
+    "sensitive_spans_do_not_overlap": true,
+    "all_query_contains_value_tasks_include_sensitive_customer": true,
+    "all_other_legal_queries_have_no_full_sensitive_customer_value": true,
+    "all_outsider_queries_match_corresponding_private_query": true,
+    "development_and_heldout_template_families_disjoint": true
+  },
+  "evaluation_separation": "Runtime files contain no answer or scoring-span fields. Evaluation files must be loaded only for scoring after frozen pipeline execution.",
+  "heldout_protocol": "Freeze algorithms, prompt versions, thresholds, budgets and comparators before reading heldout evaluation or running models; preserve all failures and full denominators."
+}

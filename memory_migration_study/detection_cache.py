@@ -94,8 +94,11 @@ class DetectionCache:
             self.__counts["misses"] += 1
             response = agent(text=text, source_id=source_id, policy=policy, rule_findings=rule_findings)
             # Reuse the independent host validator, with no new model call.
+            def observed_response(**_):
+                return response
+            observed_response.max_local_calls = getattr(agent, "max_local_calls", 2)
             validation = detect_sensitive({"query": "", "memories": [{"source_id": "cache_check", "text": text}]},
-                                          policy, mode="agent", agent=lambda **_: response)
+                                          policy, mode="agent", agent=observed_response)
             try:
                 unchanged = _digest(agent.cache_identity()) == identity_before
             except (AttributeError, TypeError, ValueError):
@@ -118,4 +121,5 @@ class DetectionCache:
                     self.__entries.popitem(last=False)
                     self.__counts["evictions"] += 1
             return response
+        wrapped.max_local_calls = getattr(agent, "max_local_calls", 2)
         return wrapped

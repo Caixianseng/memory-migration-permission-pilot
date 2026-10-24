@@ -13,6 +13,7 @@ import math
 import re
 import secrets
 from typing import Callable
+import unicodedata
 
 CATEGORIES = frozenset("EMAIL PHONE ID PERSON ADDRESS CUSTOMER PROJECT AMOUNT DATE".split())
 QUERY_SOURCE = "__query__"
@@ -113,6 +114,26 @@ def _ascii_identifier(character: str) -> bool:
     return character.isascii() and (character.isalnum() or character == "_")
 
 
+def _literal_word_continues(left: str, right: str) -> bool:
+    """Reject alphabetic/identifier fragments without treating Han prose as a word.
+
+    Han characters are alphanumeric in Python, but ordinary Chinese text does
+    not delimit words with spaces. For example, a quoted value can directly
+    follow its predicate. This is an exact-source evidence boundary check, not
+    Chinese segmentation or a claim that every substring answers the question.
+    Sensitive-span overlap and authorization are checked independently below.
+    """
+    def word_character(character):
+        return character.isalnum() or character == "_"
+
+    def han(character):
+        name = unicodedata.name(character, "")
+        return name.startswith(("CJK UNIFIED IDEOGRAPH", "CJK COMPATIBILITY IDEOGRAPH"))
+
+    return (word_character(left) and word_character(right)
+            and not han(left) and not han(right))
+
+
 def _entity_bounds(text: str, start: int, end: int, category: str) -> tuple[int, int]:
     """Close a verified span only over contiguous ASCII identifier characters.
 
@@ -191,6 +212,87 @@ def _close_and_propagate(sources: dict[str, str], findings: list[dict],
     return closed + propagated
 
 
+def _labeled_field_spans(text: str, labels: dict):
+    """Locate explicit label:value fields without consuming the following key.
+
+    Only balanced quote pairs protect internal punctuation/key-like text.
+    Known field keys can follow an unpunctuated value; unknown keys require an
+    explicit separator, rather than guessing that words inside a name are keys.
+    This is a field grammar, not semantic name extraction or authorization.
+    """
+    pairs = {'"': '"', "'": "'", "“": "”", "‘": "’", "「": "」", "『": "』"}
+    stack, regions = [], []
+    for position, character in enumerate(text):
+        # Escaped quote characters and apostrophes inside names are literal.
+        backslashes, previous = 0, position-1
+        while previous >= 0 and text[previous] == "\\":
+            backslashes, previous = backslashes+1, previous-1
+        if backslashes % 2:
+            continue
+        if (character == "'" and position and position+1 < len(text)
+                and text[position-1].isalnum() and text[position+1].isalnum()):
+            continue
+        if stack and character == stack[-1][1]:
+            start, _ = stack.pop()
+            regions.append((start, position+1))
+        elif character in pairs:
+            stack.append((position, pairs[character]))
+    quoted = [False] * len(text)
+    for start, end in regions:
+        quoted[start:end] = [True] * (end-start)
+
+    anchors, boundaries = [], set()
+    for category, label in labels.items():
+        for match in re.finditer(rf"(?<![A-Za-z0-9_])(?:{label})\s*[:：]\s*", text, re.IGNORECASE):
+            if not quoted[match.start()]:
+                anchors.append((category, match.start(), match.end()))
+                boundaries.add(match.start())
+    # Non-sensitive fields delimit values too. These are field *keys*, not a
+    # vocabulary of story values. They do not decide sensitivity or access.
+    other_keys = (r"(?:review|shipment|delivery|business|order)\s+status|"
+                  r"status|state|stage|phase|notes?|description|purpose|owner|tenant|agent|role|readers|public|permissions|scope|"
+                  r"(?:contact\s+)?(?:e-?mail|phone|telephone)|budget|amount|currency|date|deadline|"
+                  r"配送状态|审核状态|业务状态|处理状态|订单状态|状态|阶段|备注|说明|用途|所有者|权限|读者|"
+                  r"邮箱|电子邮箱|电话|联系电话|预算|金额|币种|日期|截止日期")
+    for match in re.finditer(rf"(?<![A-Za-z0-9_])(?:{other_keys})\s*[:：]", text, re.IGNORECASE):
+        if not quoted[match.start()]:
+            boundaries.add(match.start())
+    # An unfamiliar key is accepted only at a visible record/field separator.
+    # Plain spaces alone do not turn 'North Research: Development' into a key.
+    generic_key = r"(?<![A-Za-z0-9_])(?:[A-Za-z][A-Za-z0-9_-]{0,63}|[\u3400-\u4dbf\u4e00-\u9fff]{1,24})\s*[:：]"
+    for match in re.finditer(generic_key, text):
+        if quoted[match.start()]:
+            continue
+        prefix = text[:match.start()].rstrip(" \t")
+        if not prefix or prefix[-1] in ";；,，|\r\n。.!?！？":
+            boundaries.add(match.start())
+    # A dot can be part of an organization suffix or an initialism. Retain it
+    # instead of applying the previous unconditional final-dot removal.
+    abbreviated = re.compile(r"(?:\b(?:Inc|Ltd|Co|Corp|Pty|Bros|Assoc|Dept|LLC|PLC)\.|\b(?:[A-Za-z]{1,4}\.){2,})$", re.IGNORECASE)
+    terminators = ";；\r\n。!?！？"
+    for category, marker_start, start in anchors:
+        end = len(text)
+        for position in range(start, len(text)):
+            if not quoted[position] and (text[position] in terminators or position in boundaries):
+                end = position
+                break
+        while start < end and text[start].isspace():
+            start += 1
+        while end > start and (text[end-1].isspace()
+                              or (not quoted[end-1] and text[end-1] in ",，|")):
+            end -= 1
+        if (end > start and text[end-1] == "." and not quoted[end-1]
+                and not abbreviated.search(text[start:end])):
+            end -= 1
+        while end > start and text[end-1].isspace():
+            end -= 1
+        # Whole-value quote wrappers delimit, rather than belong to, the value.
+        if (start, end) in regions:
+            start, end = start+1, end-1
+        if start < end:
+            yield category, start, end
+
+
 def _rule_findings(text: str, source_id: str, policy: dict) -> list[dict]:
     findings = []
 
@@ -225,13 +327,8 @@ def _rule_findings(text: str, source_id: str, policy: dict) -> list[dict]:
               "CUSTOMER": r"customer|client|客户(?:名称)?",
               "PROJECT": r"project(?:\s+(?:name|code))?|项目(?:名称|代号)?",
               "ID": r"ID(?:\s+(?:number|card))?|passport|证件号|身份证号|护照号"}
-    for category, label in labels.items():
-        pattern = rf"(?<![A-Za-z0-9_])(?:{label})\s*[:：]\s*([^;；\n。!?]+)"
-        for match in re.finditer(pattern, text, re.IGNORECASE):
-            start, end = match.span(1)
-            if end > start and text[end - 1] == ".":
-                end -= 1
-            add(category, start, end)
+    for category, start, end in _labeled_field_spans(text, labels):
+        add(category, start, end)
     # Simple standalone project references, including the current public-memory style.
     for match in re.finditer(r"(?i:\bproject)\s+([A-Za-z0-9][A-Za-z0-9_-]*)(?![A-Za-z0-9_-])", text):
         if match.group(1).casefold() not in {"is", "was", "has", "had", "will", "name", "code", "identifier", "status", "customer", "budget", "deadline", "the", "a", "an"}:
@@ -286,6 +383,17 @@ def detect_sensitive(payload: dict, sensitivity_policy: dict, *, agent=None, mod
         if agent is None:
             result["errors"].append("local_agent_required")
             continue
+        # This bound belongs to the trusted callable, never to its model reply.
+        # Ordinary detectors retain the two-generation limit; an explicit local
+        # composite may account for up to four physical member invocations.
+        try:
+            call_limit = getattr(agent, "max_local_calls", 2)
+        except Exception:
+            call_limit = None
+        if type(call_limit) is not int or not 1 <= call_limit <= 4:
+            result["errors"].append("invalid_local_agent_call_contract")
+            result["local_calls_complete"] = False
+            continue
         try:
             # Independent channels avoid priming the semantic detector with a
             # partial rule extraction. Their validated spans are unioned below.
@@ -298,7 +406,7 @@ def detect_sensitive(payload: dict, sensitivity_policy: dict, *, agent=None, mod
         if isinstance(response, dict):
             calls = response.get("local_calls")
             elapsed = response.get("elapsed_seconds")
-            if type(calls) is int and 0 <= calls <= 2:
+            if type(calls) is int and 0 <= calls <= call_limit:
                 observation["local_calls"] = calls
                 result["local_calls"] += calls
             if isinstance(elapsed, (int, float)) and not isinstance(elapsed, bool) and math.isfinite(elapsed) and elapsed >= 0:
@@ -614,8 +722,8 @@ def restore_answer(answer: str, mapping: RestorationMap, *, actor_id: str, reque
     supported = []
     for sid, memory in mapping._memories.items():
         for start, end in _occurrences(memory, value):
-            left = start == 0 or not (memory[start - 1].isalnum() and value[0].isalnum())
-            right = end == len(memory) or not (memory[end].isalnum() and value[-1].isalnum())
+            left = start == 0 or not _literal_word_continues(memory[start - 1], value[0])
+            right = end == len(memory) or not _literal_word_continues(memory[end], value[-1])
             sensitive = any(start < p_end and end > p_start for p_start, p_end in mapping._sensitive_spans.get(sid, ()))
             if left and right and not sensitive:
                 supported.append(sid)

@@ -1,0 +1,91 @@
+{
+  "version": "privacy_semantics_detection_v1",
+  "frozen_date": "2026-10-25",
+  "origin": "independently authored synthetic entity-detection materials; no model use; none reused from the 24-story corpus",
+  "categories": [
+    "CUSTOMER",
+    "PROJECT",
+    "PERSON",
+    "ADDRESS",
+    "EMAIL",
+    "PHONE",
+    "ID",
+    "AMOUNT",
+    "DATE"
+  ],
+  "files": {
+    "development/runtime.json": {
+      "sha256": "4862baa9c543e24b42003ac81c5bc50e3fcdc13ca2af6de5406e8b238c3279d6",
+      "bytes": 68103
+    },
+    "development/evaluation.json": {
+      "sha256": "d0d657a2194d8443a8c7d4636742b665a16c4462dc6a93e1f792fea9f01a3e54",
+      "bytes": 29636
+    },
+    "heldout/runtime.json": {
+      "sha256": "98a72e64c8e44b310295075105e5355c79061a80e4bec825628611ef7aea0102",
+      "bytes": 35187
+    },
+    "heldout/evaluation.json": {
+      "sha256": "d405cfa815fd783dacfad2253aa6f04f372bf89538cd5e97c5589f9d1024797b",
+      "bytes": 13411
+    }
+  },
+  "splits": {
+    "development": {
+      "materials": 80,
+      "languages": {
+        "en": 40,
+        "zh": 40
+      },
+      "template_families": 6,
+      "unique_payload_contents": 62,
+      "sensitive_materials": 58,
+      "registered_sensitive_spans": 58,
+      "category_spans": {
+        "CUSTOMER": 8,
+        "PROJECT": 6,
+        "PERSON": 6,
+        "ADDRESS": 6,
+        "EMAIL": 8,
+        "PHONE": 6,
+        "ID": 6,
+        "AMOUNT": 6,
+        "DATE": 6
+      },
+      "private_public_policy_pairs": 18,
+      "query_only_sensitive_materials": 20,
+      "shared_story_materials": 0
+    },
+    "heldout": {
+      "materials": 40,
+      "languages": {
+        "en": 20,
+        "zh": 20
+      },
+      "template_families": 3,
+      "unique_payload_contents": 22,
+      "sensitive_materials": 20,
+      "registered_sensitive_spans": 20,
+      "category_spans": {
+        "CUSTOMER": 4,
+        "PROJECT": 2,
+        "PERSON": 2,
+        "ADDRESS": 2,
+        "EMAIL": 2,
+        "PHONE": 2,
+        "ID": 2,
+        "AMOUNT": 2,
+        "DATE": 2
+      },
+      "private_public_policy_pairs": 18,
+      "query_only_sensitive_materials": 4,
+      "shared_story_materials": 0
+    }
+  },
+  "unit_note": "A private/public policy pair intentionally shares exactly the same payload and is one content pair, not two independent texts. Bilingual template translations also have dependence.",
+  "label_review_status": "Programmatically checked spans and explicit authored labels; not independently human adjudicated. No empirical performance results.",
+  "boundary_rule": "Complete designated value only, excluding wrapper quotes, angle brackets and field separator punctuation; currency units/legal-name suffixes are included when part of designated values.",
+  "indexing": "zero-based Python Unicode character positions; end exclusive; preserve raw text",
+  "read_protocol": "Runtime and gold separated. Freeze algorithm and metrics before heldout evaluation. Any rerun after tuning must retain the original failed result and must not be presented as an untouched holdout."
+}

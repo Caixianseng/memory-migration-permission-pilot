@@ -7,4 +7,5 @@ examples/privacy_eval/*.json -text whitespace=cr-at-eol
 examples/privacy_eval_v2/*.json -text whitespace=cr-at-eol
 examples/privacy_eval_v3/*.json -text whitespace=cr-at-eol
 examples/privacy_eval_v3_final/*.json -text whitespace=cr-at-eol
+examples/privacy_semantics_v1/**/*.json -text whitespace=cr-at-eol
 *.cmd text eol=crlf
