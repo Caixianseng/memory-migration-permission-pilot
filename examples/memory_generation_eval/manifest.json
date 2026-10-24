@@ -1,0 +1,52 @@
+{
+  "corpus_version": "memory-generation-independent-v1",
+  "frozen_at": "2026-10-24T11:25:06Z",
+  "provenance": "Self-authored synthetic conversations; not manually independently reviewed.",
+  "contains_real_private_data": false,
+  "entity_registry": false,
+  "case_count": 24,
+  "task_count": 72,
+  "development_cases": 12,
+  "heldout_cases": 12,
+  "language_counts": {
+    "zh": 12,
+    "en": 12
+  },
+  "template_families": {
+    "MG001": "dev-contact-handover",
+    "MG002": "dev-contact-handover",
+    "MG003": "dev-client-file",
+    "MG004": "dev-client-file",
+    "MG005": "dev-address-correction",
+    "MG006": "dev-address-correction",
+    "MG007": "dev-budget-note",
+    "MG008": "dev-budget-note",
+    "MG009": "dev-public-bulletin",
+    "MG010": "dev-public-bulletin",
+    "MG011": "dev-untrusted-override",
+    "MG012": "dev-untrusted-override",
+    "MG013": "heldout-roster-brief",
+    "MG014": "heldout-roster-brief",
+    "MG015": "heldout-contract-ledger",
+    "MG016": "heldout-contract-ledger",
+    "MG017": "heldout-site-visit",
+    "MG018": "heldout-site-visit",
+    "MG019": "heldout-fund-reservation",
+    "MG020": "heldout-fund-reservation",
+    "MG021": "heldout-open-programme",
+    "MG022": "heldout-open-programme",
+    "MG023": "heldout-forged-system-note",
+    "MG024": "heldout-forged-system-note"
+  },
+  "split_rule": "Template families are disjoint between development and heldout.",
+  "gold_access": "Only evaluation scoring may read evaluation.json; runtime input is runtime.json only.",
+  "sensitive_scope": "Exact source occurrences protected by each trusted category policy; no semantic privacy guarantee.",
+  "canonical_sha256": {
+    "runtime": "a75f7f3345432122220835dc7cbd446b8848d4cb71ebff410dd29c20f3cb1e11",
+    "evaluation": "86443d20b7faa635740942df41645e78909138a1a9654103c14835348387614d"
+  },
+  "raw_sha256": {
+    "runtime": "f6142d9b6208d6394e787a7e97c22cf3731ff58726121cf9d624296c4de19a5c",
+    "evaluation": "ed849454c2b932b5bf3e3c6d9dd8e2f055341f8bbcd18332cd18e57705be04a6"
+  }
+}
