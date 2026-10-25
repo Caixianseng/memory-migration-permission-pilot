@@ -1,0 +1,2 @@
+# Optional dependency for the full offline JSON Schema contract test suite.
+jsonschema==4.23.0

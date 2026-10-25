@@ -1,0 +1,28 @@
+{
+  "schema": "native-agent-handoff-report-v1",
+  "generated_at": "2026-10-25T17:40:47.437736+00:00",
+  "initial_client_attempts": 4,
+  "initial_successes": 2,
+  "supplement_client_attempts": 2,
+  "combined_correct_conditions": 4,
+  "earlier_supplement_attempts": 2,
+  "combined_total_conditions": 4,
+  "target_response_coverage": 2,
+  "target_total_conditions": 2,
+  "target_registered_canary_disclosures": 0,
+  "bidirectional_content_interop_observed": true,
+  "host_checks_passed": 22,
+  "host_checks_total": 22,
+  "native_read_acl": "unsupported",
+  "native_live_revocation": "unsupported",
+  "account_cost": null,
+  "independent_verification_sha256": "c56b8eb1755b7ff3cbf2bb488647b2c4ef129b7ea25dd0a83a1fc12f9d66f746",
+  "explicit_attempt_ledger": {
+    "base_attempts": 4,
+    "supplement_attempts": 4,
+    "total_attempts": 8,
+    "successful_answers_all_attempts": 4,
+    "new_qoder_calls_after_base": 0,
+    "scope": "base_and_explicitly_named_supplements_only_no_best_answer_selection"
+  }
+}

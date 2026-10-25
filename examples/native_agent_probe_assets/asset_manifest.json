@@ -1,0 +1,10 @@
+{
+  "schema": "native-probe-public-assets-v1",
+  "provenance": "Project-authored request guard copied byte-for-byte; configuration paths replaced with placeholders. No vendor binaries or account material.",
+  "guard_byte_identical_to_local_study_source": true,
+  "files": {
+    "dsh_single_request_guard.mjs": "dba2d87024b342ebc9fa54a91a2bb195223f6029d578ef12f2a91acad272f8ed",
+    "qoder_capabilities.example.json": "86768af67649324324ed180958f871517107e4975f3d281950e8c4e49154acfa",
+    "sdk_guard_metadata.patch.template.json": "fa96b1d31c0a63b03f72475bc4a34b317fc4a429bb0d6a9ae78f5953da0466df"
+  }
+}

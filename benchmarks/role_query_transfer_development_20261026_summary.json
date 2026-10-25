@@ -1,0 +1,140 @@
+{
+  "version": "role_query_transfer_development_summary_v1",
+  "date": "2026-10-26",
+  "registered_protocol": "source_role_query_join_development_v1",
+  "report": "docs/问题角色解析_真实负结果与机制裁决_2026-10-26.md",
+  "source_stories": 8,
+  "material_status": "Previously exposed bilingual synthetic development, not a fresh acceptance set.",
+  "registered_rows": 144,
+  "recorded_rows": 144,
+  "registered_tasks": 48,
+  "shared_contexts": 48,
+  "shared_contexts_ready": 40,
+  "shared_contexts_authorization_blocked": 8,
+  "common_build_failures": 0,
+  "union_label_set_failures": 0,
+  "legal_tasks_per_arm": 32,
+  "missing_tasks_per_arm": 8,
+  "outsider_tasks_per_arm": 8,
+  "arms": {
+    "F": {
+      "legal_correct": 30,
+      "legal_joint_correct_no_registered_masking_gap": 30,
+      "strict_raw_output_correct": 26,
+      "model_chose_unknown_legal": 2,
+      "host_join_unknown_legal": null,
+      "missing_correct": 8,
+      "outsider_pre_model_blocked": 8,
+      "answer_generation_calls": 40,
+      "restoration_failures_legal": 0
+    },
+    "Q0": {
+      "legal_correct": 24,
+      "legal_joint_correct_no_registered_masking_gap": 24,
+      "model_chose_unknown_legal": null,
+      "host_join_unknown_legal": 8,
+      "missing_correct": 8,
+      "outsider_pre_model_blocked": 8,
+      "answer_generation_calls": 0,
+      "restoration_failures_legal": 0,
+      "failures": {
+        "multiple_lexical_role_hits_return_unknown": 4,
+        "no_lexical_role_hit_returns_unknown": 4,
+        "classification_processing_failures": 0
+      },
+      "paired_against_F": {
+        "fixes_F_failures": 2,
+        "regresses_F_successes": 8,
+        "net_correct_change": -6
+      }
+    },
+    "Q1": {
+      "legal_correct": 15,
+      "legal_joint_correct_no_registered_masking_gap": 15,
+      "model_chose_unknown_legal": 15,
+      "host_join_unknown_legal": 16,
+      "missing_correct": 8,
+      "outsider_pre_model_blocked": 8,
+      "answer_generation_calls": 40,
+      "restoration_failures_legal": 0,
+      "mutually_exclusive_legal_failures": {
+        "valid_model_unknown": 15,
+        "wrong_role_then_no_role_value": 1,
+        "correct_role_but_semantically_wrong_card_value": 1
+      },
+      "classification_processing_failures_legal": 0,
+      "paired_against_F": {
+        "fixes_F_failures": 2,
+        "regresses_F_successes": 17,
+        "net_correct_change": -15
+      }
+    }
+  },
+  "registered_literal_masking_legal_per_arm": {
+    "ready": 32,
+    "partial": 0,
+    "unmasked": 0,
+    "extra_masked_characters_summed_across_requests": 304,
+    "scope": "Registered source/query literal characters only, not all sensitive information or semantic inference."
+  },
+  "posthoc_role_card_diagnostic": {
+    "legal_contexts_with_correct_reference_value_card": 31,
+    "legal_contexts_total": 32,
+    "failing_context": "dev_en_03:paraphrase",
+    "observed_chain": "A generic organization query span is masked and propagated into the memory field; the resulting consignee card selects the generic placeholder instead of the following company placeholder.",
+    "q1_selected_role": "consignee",
+    "q1_host_decision": "unique_role_value",
+    "q1_final_answer": "organization",
+    "uses_scoring_references_after_model_phase_closed": true,
+    "used_as_method_input": false,
+    "is_new_third_party_vulnerability_or_novelty_proof": false
+  },
+  "generation_calls_observed": 106,
+  "generation_limits": {"total": 224, "build": 16, "write_annotation": 128, "answer": 80},
+  "generation_calls_by_stage": {"build": 8, "write_annotation": 18, "answer": 80},
+  "encoder_calls": {"build": 18, "write_annotation": 18, "shared_query_prepare": 40, "total": 76},
+  "physical_costs": [
+    {"stage": "build", "arm": "common", "physical_calls": 8, "prompt_tokens": 1442, "output_tokens": 188, "request_json_utf8_bytes": 11100},
+    {"stage": "write_annotation", "arm": "union_labels", "physical_calls": 18, "prompt_tokens": 5396, "output_tokens": 502, "request_json_utf8_bytes": 38944},
+    {"stage": "answer", "arm": "F", "physical_calls": 40, "prompt_tokens": 10146, "output_tokens": 469, "request_json_utf8_bytes": 43442},
+    {"stage": "answer", "arm": "Q1", "physical_calls": 40, "prompt_tokens": 9472, "output_tokens": 253, "request_json_utf8_bytes": 67012}
+  ],
+  "network": {"loopback_connections": 160, "external_attempts_blocked": 0},
+  "cloud_calls": 0,
+  "new_api_cost_cny": 0,
+  "closed_phase_attempts": 0,
+  "independent_verification": {
+    "status": "passed",
+    "current_snapshot_identical": true,
+    "verification_model_calls": 0,
+    "local_receipt": "results/role_query_transfer_development_20261026_v1/independent_verification.json",
+    "receipt_sha256": "1ea3065cd6cbde67e0c1575a6fa4c5a008811cd2ede6259d336265924fcf601f"
+  },
+  "offline_preflight_regression": {
+    "status": "passed",
+    "tests_run": 1076,
+    "test_runner_seconds": 194.19,
+    "outer_elapsed_seconds": 195.609,
+    "local_receipt": "results/role_query_transfer_preflight_20261026/offline_regression.json",
+    "receipt_sha256": "fe32c73ee5386bc1a0c6554a2390e4bc531a69ab16ae8ea0d227a3f503225151",
+    "scope": "Engineering regression before actual model execution, not efficacy."
+  },
+  "artifact_sha256": {
+    "plan.json": "1bdc123a6010b7381f82c55d655287c1d8a4b1ebaf32d7ec90b65cabe6c5ca24",
+    "report.json": "fb5cbef02e31450b40e0cdfa6a1a28bc18fe8521c951dc4d757fdfd414036e93",
+    "rows.json": "ab04a9cdb243d61ac9c53f77e9288cdcff51ec366af60b42ff91f4d5b483e13a",
+    "shared_contexts.json": "5cae7eb2d2b67bbe24c2bdf5d44464a87941985a8f5a17ad5a56f809ef431fb7",
+    "transport_audit.json": "84576dacfd7bdff1e118fa3ec20553d422f8b7e524bbbe090595559ba65d7119",
+    "network_audit.json": "b02e20720d8d3fd67c63597d405f72b0463efa69e38250c9b7714b8f46742005"
+  },
+  "acceptance": {
+    "role_query_method_better_than_free_baseline": false,
+    "default_changed": false,
+    "new_independent_64_task_acceptance_passed": false,
+    "original_detection_acceptance_passed": false,
+    "native_interoperability_tested_this_run": false,
+    "qoder_deepseek_harness_native_migration_tested_this_run": false,
+    "paper_novelty_established": false,
+    "overall_research_goal_achieved": false
+  }
+}

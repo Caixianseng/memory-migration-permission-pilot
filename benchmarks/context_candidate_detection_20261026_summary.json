@@ -1,0 +1,232 @@
+{
+  "kind": "exposed_development_context_candidate_detection_diagnostic",
+  "date": "2026-10-26",
+  "source_run": "context_candidate_detection_20261026_v1",
+  "scope": {
+    "development_materials": 80,
+    "already_exposed_regression_materials": 40,
+    "fresh_independent_acceptance_materials": 0,
+    "registered_rows": 360,
+    "arms": [
+      "ner_rules",
+      "typed_seeded_only",
+      "typed_all_candidates"
+    ],
+    "seeded_only_is_shared_verdict_ablation": true,
+    "baseline": "Concurrent fresh NER plus rules; not the historical best 80-material detector.",
+    "historical_stronger_ner_rerun": false
+  },
+  "models": {
+    "typer": {
+      "version": "optional_context_candidate_typing_v2",
+      "prompt_version": "fixed_occurrence_context_type_role_v1",
+      "model": "qwen3:4b-instruct-2507-q4_K_M",
+      "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+      "runtime": "0.40.8",
+      "options": {
+        "num_ctx": 4096,
+        "num_predict": 1024,
+        "temperature": 0,
+        "seed": 42
+      },
+      "context_window_chars": 24,
+      "max_candidates": 16
+    },
+    "ner": {
+      "model_id": "fastino/gliner2.5-multi-v1",
+      "model_revision": "cf5593a5d45e3bbf204b9df621b13b1c0cf25ee3",
+      "code_revision": "ca4f68235b50fe4c3ecf3876851d748fe4b15c6c",
+      "weights_sha256": "c1ff4ec0bc00031c15530b8f3c33d3677f27949e6a0cb52e1247a6224b6c5395",
+      "device": "cpu",
+      "threads": 4,
+      "dependencies": {
+        "torch": "2.14.1",
+        "transformers": "5.5.4",
+        "safetensors": "0.8.0",
+        "tokenizers": "0.22.2"
+      },
+      "splitter": "cjk_aware",
+      "threshold": 0.5,
+      "schema_version": "typed_local_ner_v1"
+    }
+  },
+  "execution": {
+    "materials": 120,
+    "rows": 360,
+    "observed_chat_post_attempts": 81,
+    "observed_encoder_infer_entrypoints": 168,
+    "adapter_reported_encoder_calls": 168,
+    "encoder_observation_scope": "LocalNerRuntime.infer entrypoints, not GPU kernels.",
+    "material_generation_attempt_histogram": {
+      "0": 39,
+      "1": 81,
+      "2": 0
+    },
+    "cloud_calls": 0,
+    "new_api_cost_cny": 0,
+    "observed_prompt_tokens": 21842,
+    "observed_output_tokens": 7856,
+    "unavailable_usage_calls": 0,
+    "over_budget_calls": 0
+  },
+  "same_run_results": {
+    "development_original_80": {
+      "ner_rules": {
+        "materials": 80,
+        "accepted": {
+          "tp": 55,
+          "fp": 12,
+          "fn": 3,
+          "precision": 0.8208955223880597,
+          "recall": 0.9482758620689655
+        },
+        "ok": 80,
+        "exact_materials": 69,
+        "errors": {}
+      },
+      "typed_seeded_only": {
+        "materials": 80,
+        "accepted": {
+          "tp": 55,
+          "fp": 12,
+          "fn": 3,
+          "precision": 0.8208955223880597,
+          "recall": 0.9482758620689655
+        },
+        "ok": 80,
+        "exact_materials": 69,
+        "errors": {}
+      },
+      "typed_all_candidates": {
+        "materials": 80,
+        "accepted": {
+          "tp": 55,
+          "fp": 17,
+          "fn": 3,
+          "precision": 0.7638888888888888,
+          "recall": 0.9482758620689655
+        },
+        "ok": 80,
+        "exact_materials": 64,
+        "errors": {}
+      }
+    },
+    "already_exposed_regression_40": {
+      "ner_rules": {
+        "materials": 40,
+        "accepted": {
+          "tp": 18,
+          "fp": 2,
+          "fn": 2,
+          "precision": 0.9,
+          "recall": 0.9
+        },
+        "ok": 40,
+        "exact_materials": 36,
+        "errors": {}
+      },
+      "typed_seeded_only": {
+        "materials": 40,
+        "accepted": {
+          "tp": 18,
+          "fp": 2,
+          "fn": 2,
+          "precision": 0.9,
+          "recall": 0.9
+        },
+        "ok": 40,
+        "exact_materials": 36,
+        "errors": {}
+      },
+      "typed_all_candidates": {
+        "materials": 40,
+        "accepted": {
+          "tp": 20,
+          "fp": 8,
+          "fn": 0,
+          "precision": 0.7142857142857143,
+          "recall": 1.0
+        },
+        "ok": 40,
+        "exact_materials": 32,
+        "errors": {}
+      }
+    }
+  },
+  "roles": {
+    "final_verdicts": 113,
+    "final_counts": {
+      "value": 101,
+      "generic_role": 12
+    },
+    "original_typed_candidates": 87,
+    "original_typed_roles": {
+      "value": 87
+    },
+    "untyped_candidates": 26,
+    "untyped_roles": {
+      "value": 14,
+      "generic_role": 12
+    },
+    "field_label": 0,
+    "other": 0,
+    "uncertain": 0,
+    "typing_only_materials": 120
+  },
+  "all_candidates_vs_same_run_baseline": {
+    "new_true_positive_spans": 2,
+    "new_false_positive_spans": 12,
+    "old_false_positive_spans_replaced_by_larger_false_positive": 1,
+    "net_false_positive_increase": 11,
+    "lost_true_positive_spans": 0,
+    "confirmed_semantic_corrections_of_existing_false_positives": 0,
+    "new_false_positive_spans_by_split": {
+      "development": 5,
+      "already_exposed_regression": 7
+    },
+    "net_false_positive_change_by_split": {
+      "development": 5,
+      "already_exposed_regression": 6
+    },
+    "new_false_positive_kind": "Field or section headings classified as protected values; no overlap with registered sensitive spans."
+  },
+  "verification": {
+    "status": "passed",
+    "passed_checks": 747,
+    "total_checks": 747,
+    "verification_model_calls": 0,
+    "history": [
+      {
+        "version": "v1",
+        "status": "failed",
+        "preserved": true,
+        "causes": [
+          "Stale actual_encodings report-field reference.",
+          "Question-source namespace mismatch: query versus __query__."
+        ],
+        "raw_outputs_or_truth_changed": false
+      },
+      {
+        "version": "v2",
+        "status": "passed",
+        "checks": 747,
+        "raw_outputs_or_truth_changed": false
+      }
+    ],
+    "scope": "Saved-evidence consistency and offline replay; not quality acceptance or resistance to coordinated forgery."
+  },
+  "decision": {
+    "outcome": "negative",
+    "precision_target": 0.9,
+    "recall_target": 0.95,
+    "both_targets_met_development_all_candidates": false,
+    "both_targets_met_exposed_regression_all_candidates": false,
+    "fresh_independent_acceptance_established": false,
+    "default_changed": false,
+    "legal_refusal_evaluated": false,
+    "downstream_answer_evaluated": false,
+    "native_memory_migration_evaluated": false,
+    "novelty_established": false
+  },
+  "publication_scope": "Aggregates and model identities only; no material text, per-case truth names, credentials, or recovery mappings."
+}

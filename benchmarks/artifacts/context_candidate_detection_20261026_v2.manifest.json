@@ -1,0 +1,9 @@
+{
+  "file": "context_candidate_detection_20261026_v2.zip",
+  "sha256": "330d31c9e70980631dd3b67dc8a059512af77693e39870c2b8570b696effce43",
+  "bytes": 360699,
+  "entry_count": 30,
+  "verification_script_sha256": "64b426ac555e8b7adb57785087486e52010028de4d1bb3182f7db4db08993213",
+  "method_acceptance": false,
+  "synthetic_only": true
+}
