@@ -1,0 +1,58 @@
+{
+  "version": "complete_fact_ordinary_cache_falsification_v1",
+  "status": "passed",
+  "scope": "Host-declared complete structured support; zero-model mechanism ceiling, not semantic extraction or task accuracy.",
+  "atoms": 7,
+  "state_phases": 7,
+  "repeated_requests": 2,
+  "all_baselines_equal_manual_reference": true,
+  "ordinary_cache": {
+    "hits": 83,
+    "misses": 15,
+    "cached_authorization_bypasses_delivery": false,
+    "trusted_version_notification_assumed": true,
+    "timing_or_cost_advantage_claimed": false
+  },
+  "existing_independent_grant_witness": {
+    "all_checks_passed": true,
+    "checks": 21,
+    "scope": "local_simulated_authority_json_handoff_and_programmatic_restore_probe"
+  },
+  "source_card_granularity": {
+    "different_roles": [
+      "carrier",
+      "customer"
+    ],
+    "one_value_token_for_two_relationships": true,
+    "old_card_status": "blocked",
+    "old_card_error": "source_access_grant_revoked",
+    "old_restore_status": "blocked",
+    "old_restore_error": "grant_revoked",
+    "standard_fresh_existing_source_restores": true,
+    "mapping_cropped_or_reused": false,
+    "model_calls": 0
+  },
+  "unrelated_source_card_invalidation": {
+    "request_records_still_authorized": true,
+    "unrelated_source_changed": "S4",
+    "old_card_status": "blocked",
+    "old_card_error": "source_card_context_changed",
+    "original_complete_restore_still_succeeds": true,
+    "normal_current_card_rebuild_succeeds": true,
+    "model_calls": 0
+  },
+  "model_calls": 0,
+  "native_client_calls": 0,
+  "fresh64_read": false,
+  "novel_algorithm_advantage_established": false,
+  "negative_conclusion": "With complete correct atom/support inputs, standard full-fact recomputation and ordinary dependency-scoped caching handle every registered case. Current old-context overblocking does not defeat that baseline.",
+  "limitations": [
+    "All source independence, semantic atom keys and AND/OR support clauses are manually declared, not discovered.",
+    "Synthetic authorization callbacks and versions are local trusted-host instruments, not native or distributed current-state guarantees.",
+    "No natural-language extraction, paid/model answer, actual latency benchmark or paper novelty test."
+  ],
+  "structured_check_cells": 98,
+  "report_sha256": "320c4054eec504385541ef20de913f8054d6ef34eab72ba4ca65850da54755a3",
+  "script_sha256": "2d62e9c74b18c3df06975089b80154ad2c86be5b7fb916f506a06b3cb91b86f5",
+  "independent_effect_acceptance": false
+}

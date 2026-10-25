@@ -1,0 +1,119 @@
+{
+  "version": "native_vector_timing_fixed_input_summary_v1",
+  "date": "2026-10-26",
+  "report": "docs/原生向量时序_固定文本配对诊断_2026-10-26.md",
+  "registered_protocol": "same_geometry_native_timing_pairs_v1",
+  "scope": "Bounded target-only first-query diagnostic, not full migration acceptance or a repair.",
+  "original_v3_failure_closed": false,
+  "original_v3_null_count_still_open": 4,
+  "original_same_text_path_actor_write_order": true,
+  "pairs": 6,
+  "native_queries": 12,
+  "native_writes": 72,
+  "wrapped_native_embedding_function_invocations": 84,
+  "generations": 0,
+  "cloud_calls": 0,
+  "new_api_cost_cny": 0,
+  "arms": {
+    "immediate": {
+      "queries": 6,
+      "complete_native_responses": 6,
+      "null": 0,
+      "foreign_id_events": 0,
+      "search_exception_events": 0,
+      "actors": {
+        "assistant": 2,
+        "owner": 2,
+        "outsider": 2
+      },
+      "scheduled_to_http_ms_range": [
+        0.0003,
+        0.0005
+      ],
+      "last_upsert_to_http_ms_range": [
+        5.5252,
+        6.8826
+      ],
+      "last_upsert_to_search_ms_range": [
+        27.0086,
+        38.4814
+      ]
+    },
+    "delay500": {
+      "queries": 6,
+      "complete_native_responses": 6,
+      "null": 0,
+      "foreign_id_events": 0,
+      "search_exception_events": 0,
+      "actors": {
+        "assistant": 2,
+        "owner": 2,
+        "outsider": 2
+      },
+      "scheduled_to_http_ms_range": [
+        500.1655,
+        500.5796
+      ],
+      "last_upsert_to_http_ms_range": [
+        505.5755,
+        507.6345
+      ],
+      "last_upsert_to_search_ms_range": [
+        528.0913,
+        535.1404
+      ]
+    }
+  },
+  "independent_native_users": 36,
+  "unique_target_ids": 72,
+  "write_and_query_geometry_bit_identical_pairs": 6,
+  "fresh_process_and_database_per_arm": true,
+  "queries_per_fresh_database": 1,
+  "trace_enabled_in_both_arms": true,
+  "extra_vector_count_get": 0,
+  "retries": 0,
+  "deletion_or_reindex_this_run": false,
+  "threshold": 0,
+  "k": 100,
+  "query": "Customer service and delivery status.",
+  "stop_reason": null,
+  "failure_stop_branch_exercised_in_real_run": false,
+  "postflight": {
+    "code_files": 13,
+    "asset_files": 15,
+    "code_status": "passed",
+    "asset_status": "passed"
+  },
+  "independent_verification": {
+    "status": "passed",
+    "checks": 741,
+    "model_calls": 0,
+    "native_calls": 0,
+    "receipt": "results/native_vector_timing_20261026_v1/independent_timing_audit_v2.json",
+    "receipt_sha256": "c59e4a11d762f69063c78f057b4aac6d1912201cf12e7887c86da3ca4812d014",
+    "verifier": "scripts/verify_native_vector_timing.py",
+    "verifier_sha256": "4c0756455c971907d544be19b095bdb0c1d873e5cd4232f83354a62051b56e84"
+  },
+  "artifact_sha256": {
+    "plan.json": "5b378769761c4ae407a624f35c32f3ba3ca1e6fac5aa909a446c13268674722b",
+    "rows.json": "2351d9a786ef24414e6cbfd856875ea572af41efc25ecee0e7b69c9c5e17fa70",
+    "report.json": "bc59ae12d73b7a5eb8d094772d8f7a66dd8aa90512554874aabb91972c2ddb51",
+    "pair_alignment.json": "15721119b355bc37ac661b62d5780532fd0e33f905e32c8c852293d4bfd4cb71"
+  },
+  "interpretation": "Not reproduced in 12 fixed-input traced first queries. No observed success-rate benefit of delay; root cause remains unknown.",
+  "limitations": [
+    "Both arms use sys.settrace, which may change scheduling.",
+    "No original multi-snapshot/deletion/replay lifecycle in this diagnostic.",
+    "The immediate API request still reached native search 27.01-38.48ms after last upsert.",
+    "Producer interpretation string does not gate on postflight; independent audit separately verified actual postflight/current/archive hashes all passed.",
+    "Asset checks are pre/postflight, not continuous modification monitoring.",
+    "Embedding counts cover the wrapped native function boundary, not physical neural-network forwards.",
+    "Local Python network audit is not OS packet capture or proof against malicious native extensions."
+  ],
+  "acceptance": {
+    "native_failure_fixed": false,
+    "native_end_to_end_stability_passed": false,
+    "original_research_acceptance_passed": false,
+    "paper_novelty_established": false
+  }
+}

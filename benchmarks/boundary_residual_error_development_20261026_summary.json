@@ -1,0 +1,182 @@
+{
+  "version": "boundary_residual_error_development_audit_v1",
+  "date": "2026-10-26",
+  "scope": "Exposed 80+40 development diagnosis only; no fresh64 read, no new independent acceptance, no default/raw changes, no model calls.",
+  "new_local_model_calls": 0,
+  "new_cloud_model_calls": 0,
+  "result_kind": "read_only_post_hoc_error_audit_and_unimplemented_contract",
+  "materials": {
+    "development": {
+      "materials": 80,
+      "gold_spans": 58,
+      "tp": 57,
+      "fp": 8,
+      "fn": 1,
+      "precision": 0.8769230769230769,
+      "recall": 0.9827586206896551,
+      "error_materials": 8,
+      "raw_pool_exact_gold_coverage": 55,
+      "boundary_pool_exact_gold_coverage": 57
+    },
+    "heldout": {
+      "materials": 40,
+      "gold_spans": 20,
+      "tp": 18,
+      "fp": 2,
+      "fn": 2,
+      "precision": 0.9,
+      "recall": 0.9,
+      "error_materials": 4,
+      "raw_pool_exact_gold_coverage": 20,
+      "boundary_pool_exact_gold_coverage": 20
+    }
+  },
+  "distinct_error_materials": 12,
+  "error_groups": [
+    {
+      "mechanism": "missing_complete_organization_boundary",
+      "materials": 1,
+      "fp": 1,
+      "fn": 1,
+      "boundary_pool_exact_fn_present": 0
+    },
+    {
+      "mechanism": "complete_untyped_candidate_not_recognized_as_value",
+      "materials": 2,
+      "fp": 0,
+      "fn": 2,
+      "boundary_pool_exact_fn_present": 2
+    },
+    {
+      "mechanism": "rule_project_following_token_is_field_name",
+      "materials": 3,
+      "fp": 3,
+      "fn": 0,
+      "original_method": "rules",
+      "boundary_output_method": "agent"
+    },
+    {
+      "mechanism": "description_placeholder_ner_entityhood",
+      "materials": 3,
+      "fp": 3,
+      "fn": 0
+    },
+    {
+      "mechanism": "generic_role_or_definition_ner_entityhood",
+      "materials": 3,
+      "fp": 3,
+      "fn": 0
+    }
+  ],
+  "remaining_false_negatives": {
+    "complete_boundary_candidate_absent": 1,
+    "complete_untyped_candidate_present": 2
+  },
+  "false_positive_method_provenance": {
+    "original_baseline": {
+      "rules": 3,
+      "agent": 7
+    },
+    "after_boundary_replay": {
+      "agent": 10
+    },
+    "warning": "Output method agent after replay is not a valid source-model attribution."
+  },
+  "annotation_review": {
+    "gold_modified": false,
+    "confirmed_annotation_errors": 0,
+    "claim": "No evidence supporting changes to these exposed labels; one partial-name case contributes both FP and FN under exact-span scoring."
+  },
+  "generation_labels": {
+    "old_memory_unique_fulltext_hashes": 66,
+    "generation_source_stories": 8,
+    "shared_complete_source_hashes": 0,
+    "facts_with_changed_ner_vs_union_label_set": 1,
+    "measured_recovery_of_old_three_fn": null,
+    "label_authenticity_does_not_prove_semantic_truth_or_completeness": true,
+    "positive_union_may_add_coverage_but_does_not_remove_false_positives": true
+  },
+  "prototype_contract": {
+    "name": "typed_seeded_open_container_candidates_v1",
+    "status": "design_only_not_implemented",
+    "default_enabled": false,
+    "output_kind": "candidates_only",
+    "model_calls": 0,
+    "input": "payload/policy/exact typed findings/fixed parser config; source_id only for binding, never decision features",
+    "scope": "Standalone physical-line key/value containers only; no known-key dictionary required; value-side typed seed required; no inferred category or authorization.",
+    "semantic_atomicity": "unverified without independent trusted atomic-field evidence",
+    "preserve_key_findings": true,
+    "delete_reference_false_positives": false,
+    "delete_any_existing_finding": false,
+    "proposed_candidate_limit": 128,
+    "proposed_key_character_limit": 80,
+    "proposed_value_container_character_limit": 256,
+    "proposed_input_character_limit": 4096,
+    "success_claim": "Proposal coverage and invariants only; no joint precision/recall acceptance claim."
+  },
+  "evidence": [
+    {
+      "path": "benchmarks/artifacts/context_candidate_detection_20261026_v2.zip",
+      "sha256": "330d31c9e70980631dd3b67dc8a059512af77693e39870c2b8570b696effce43",
+      "kind": "existing_saved_artifact"
+    },
+    {
+      "path": "results/flat_candidate_detection_20261026_v1/materials.json",
+      "sha256": "ce58db8a59503a968d933418e0ae6eca4ece9ea44fb335cb3104eca755ade60a",
+      "kind": "existing_saved_artifact"
+    },
+    {
+      "path": "results/generation_union_transfer_development_20261025_v1/runtime.json",
+      "sha256": "f95e8f462fbf4e0256163d672665256b6983c69c5780e21e3262b74a42d253db",
+      "kind": "existing_saved_artifact"
+    },
+    {
+      "path": "results/generation_union_transfer_development_20261025_v1/record_store.json",
+      "sha256": "c947179106514217bc7ccfafdf7eeaa932c25e6767e949f9938fcace5c0da500",
+      "kind": "existing_saved_artifact"
+    },
+    {
+      "path": "results/generation_union_transfer_development_20261025_v1/report.json",
+      "sha256": "72b1179ea552ea3526cd1056e1f90715a17dffffb178669d5defb2d0eb37e9d3",
+      "kind": "existing_saved_artifact"
+    }
+  ],
+  "post_hoc_code_reference_hashes": [
+    {
+      "path": "memory_migration_study/privacy.py",
+      "sha256": "c6db0bb46c983c6f42d35a3fe028f35309905e5c447e5de9260d927e10dac7e9",
+      "kind": "read_only_current_source_reference_not_retrospective_preregistration"
+    },
+    {
+      "path": "memory_migration_study/ner_detector.py",
+      "sha256": "89b3485c6a6a7759b99b5a5234665c024870b7b78de59661d19420109185615d",
+      "kind": "read_only_current_source_reference_not_retrospective_preregistration"
+    },
+    {
+      "path": "memory_migration_study/structured_candidates.py",
+      "sha256": "f460c12e838d1fc029da71fbe593cc835c4a8c082d6fb4aba0c499e6b1bcc22d",
+      "kind": "read_only_current_source_reference_not_retrospective_preregistration"
+    },
+    {
+      "path": "memory_migration_study/boundary_reconciliation.py",
+      "sha256": "63ee4781ed1d784710ef64c2ba1e81654e5d5596a7e1d45d597eadd2a3786e57",
+      "kind": "read_only_current_source_reference_not_retrospective_preregistration"
+    },
+    {
+      "path": "memory_migration_study/boundary_detector.py",
+      "sha256": "6bd9e1527d6eb772a05b89925c3db1cf160088a1fe73ee6b378affc1200cfd4d",
+      "kind": "read_only_current_source_reference_not_retrospective_preregistration"
+    },
+    {
+      "path": "memory_migration_study/memory_labels.py",
+      "sha256": "68a129089dda79067b24bc266093c48f0efa9a91e909a0a4eb48b970833477ba",
+      "kind": "read_only_current_source_reference_not_retrospective_preregistration"
+    },
+    {
+      "path": "memory_migration_study/memory_builder.py",
+      "sha256": "481926a33f8deedfdb36f1a025e3578660894818700048ae78c1bc0e84da6140",
+      "kind": "read_only_current_source_reference_not_retrospective_preregistration"
+    }
+  ],
+  "delivery_note": "Aggregate only: no per-case gold, questions, answers or source-value database included."
+}
