@@ -1,0 +1,938 @@
+{
+  "kind": "public_development_boundary_diagnostic",
+  "date": "2026-10-25",
+  "runs": {
+    "replay": {
+      "version": "boundary_detection_diagnostic_v1",
+      "baseline_origin": "saved_host_findings",
+      "noop_equal_materials": 80,
+      "material_count": 80,
+      "new_inference_counts": {
+        "local_encoder": 0,
+        "local_generation": 0
+      },
+      "cloud_calls": 0,
+      "api_cost_cny": 0,
+      "source_unchanged": true,
+      "implementation_unchanged": true,
+      "baseline_call_accounting_complete": true,
+      "historical_encoder_calls_referenced_once": 124,
+      "arms": {
+        "host_baseline": {
+          "tp": 55,
+          "fp": 12,
+          "fn": 3,
+          "precision": 0.8208955223880597,
+          "recall": 0.9482758620689655,
+          "materials": 80,
+          "needs_review": 0,
+          "ready": 80,
+          "instrumentation_errors": 0,
+          "masked_unprotected_characters": 51,
+          "complete_exact_materials": 69,
+          "gold_spans": 58,
+          "fully_masked_spans": 57,
+          "partially_masked_spans": 1,
+          "unmasked_or_not_ready_spans": 0,
+          "by_language": {
+            "zh": {
+              "materials": 40,
+              "tp": 26,
+              "fp": 8,
+              "fn": 3,
+              "precision": 0.7647058823529411,
+              "recall": 0.896551724137931,
+              "ready": 40,
+              "needs_review": 0,
+              "fully_masked_spans": 28,
+              "gold_spans": 29
+            },
+            "en": {
+              "materials": 40,
+              "tp": 29,
+              "fp": 4,
+              "fn": 0,
+              "precision": 0.8787878787878788,
+              "recall": 1.0,
+              "ready": 40,
+              "needs_review": 0,
+              "fully_masked_spans": 29,
+              "gold_spans": 29
+            }
+          },
+          "by_policy_scope": {
+            "private": {
+              "materials": 62,
+              "tp": 55,
+              "fp": 12,
+              "fn": 3,
+              "precision": 0.8208955223880597,
+              "recall": 0.9482758620689655,
+              "ready": 62,
+              "needs_review": 0,
+              "fully_masked_spans": 57,
+              "gold_spans": 58
+            },
+            "public": {
+              "materials": 18,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "ready": 18,
+              "needs_review": 0,
+              "fully_masked_spans": 0,
+              "gold_spans": 0
+            }
+          },
+          "by_category": {
+            "ADDRESS": {
+              "tp": 6,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.8571428571428571,
+              "recall": 1.0
+            },
+            "AMOUNT": {
+              "tp": 5,
+              "fp": 2,
+              "fn": 1,
+              "precision": 0.7142857142857143,
+              "recall": 0.8333333333333334
+            },
+            "CUSTOMER": {
+              "tp": 7,
+              "fp": 4,
+              "fn": 1,
+              "precision": 0.6363636363636364,
+              "recall": 0.875
+            },
+            "DATE": {
+              "tp": 6,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "EMAIL": {
+              "tp": 8,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "ID": {
+              "tp": 6,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "PERSON": {
+              "tp": 6,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "PHONE": {
+              "tp": 6,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "PROJECT": {
+              "tp": 5,
+              "fp": 5,
+              "fn": 1,
+              "precision": 0.5,
+              "recall": 0.8333333333333334
+            }
+          }
+        },
+        "rehost_noop": {
+          "tp": 55,
+          "fp": 12,
+          "fn": 3,
+          "precision": 0.8208955223880597,
+          "recall": 0.9482758620689655,
+          "materials": 80,
+          "needs_review": 0,
+          "ready": 80,
+          "instrumentation_errors": 0,
+          "masked_unprotected_characters": 51,
+          "complete_exact_materials": 69,
+          "gold_spans": 58,
+          "fully_masked_spans": 57,
+          "partially_masked_spans": 1,
+          "unmasked_or_not_ready_spans": 0,
+          "by_language": {
+            "zh": {
+              "materials": 40,
+              "tp": 26,
+              "fp": 8,
+              "fn": 3,
+              "precision": 0.7647058823529411,
+              "recall": 0.896551724137931,
+              "ready": 40,
+              "needs_review": 0,
+              "fully_masked_spans": 28,
+              "gold_spans": 29
+            },
+            "en": {
+              "materials": 40,
+              "tp": 29,
+              "fp": 4,
+              "fn": 0,
+              "precision": 0.8787878787878788,
+              "recall": 1.0,
+              "ready": 40,
+              "needs_review": 0,
+              "fully_masked_spans": 29,
+              "gold_spans": 29
+            }
+          },
+          "by_policy_scope": {
+            "private": {
+              "materials": 62,
+              "tp": 55,
+              "fp": 12,
+              "fn": 3,
+              "precision": 0.8208955223880597,
+              "recall": 0.9482758620689655,
+              "ready": 62,
+              "needs_review": 0,
+              "fully_masked_spans": 57,
+              "gold_spans": 58
+            },
+            "public": {
+              "materials": 18,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "ready": 18,
+              "needs_review": 0,
+              "fully_masked_spans": 0,
+              "gold_spans": 0
+            }
+          },
+          "by_category": {
+            "ADDRESS": {
+              "tp": 6,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.8571428571428571,
+              "recall": 1.0
+            },
+            "AMOUNT": {
+              "tp": 5,
+              "fp": 2,
+              "fn": 1,
+              "precision": 0.7142857142857143,
+              "recall": 0.8333333333333334
+            },
+            "CUSTOMER": {
+              "tp": 7,
+              "fp": 4,
+              "fn": 1,
+              "precision": 0.6363636363636364,
+              "recall": 0.875
+            },
+            "DATE": {
+              "tp": 6,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "EMAIL": {
+              "tp": 8,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "ID": {
+              "tp": 6,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "PERSON": {
+              "tp": 6,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "PHONE": {
+              "tp": 6,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "PROJECT": {
+              "tp": 5,
+              "fp": 5,
+              "fn": 1,
+              "precision": 0.5,
+              "recall": 0.8333333333333334
+            }
+          }
+        },
+        "boundary_refined": {
+          "tp": 57,
+          "fp": 8,
+          "fn": 1,
+          "precision": 0.8769230769230769,
+          "recall": 0.9827586206896551,
+          "materials": 80,
+          "needs_review": 0,
+          "ready": 80,
+          "instrumentation_errors": 0,
+          "masked_unprotected_characters": 36,
+          "complete_exact_materials": 72,
+          "gold_spans": 58,
+          "fully_masked_spans": 57,
+          "partially_masked_spans": 1,
+          "unmasked_or_not_ready_spans": 0,
+          "by_language": {
+            "zh": {
+              "materials": 40,
+              "tp": 28,
+              "fp": 5,
+              "fn": 1,
+              "precision": 0.8484848484848485,
+              "recall": 0.9655172413793104,
+              "ready": 40,
+              "needs_review": 0,
+              "fully_masked_spans": 28,
+              "gold_spans": 29
+            },
+            "en": {
+              "materials": 40,
+              "tp": 29,
+              "fp": 3,
+              "fn": 0,
+              "precision": 0.90625,
+              "recall": 1.0,
+              "ready": 40,
+              "needs_review": 0,
+              "fully_masked_spans": 29,
+              "gold_spans": 29
+            }
+          },
+          "by_policy_scope": {
+            "private": {
+              "materials": 62,
+              "tp": 57,
+              "fp": 8,
+              "fn": 1,
+              "precision": 0.8769230769230769,
+              "recall": 0.9827586206896551,
+              "ready": 62,
+              "needs_review": 0,
+              "fully_masked_spans": 57,
+              "gold_spans": 58
+            },
+            "public": {
+              "materials": 18,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "ready": 18,
+              "needs_review": 0,
+              "fully_masked_spans": 0,
+              "gold_spans": 0
+            }
+          },
+          "by_category": {
+            "ADDRESS": {
+              "tp": 6,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.8571428571428571,
+              "recall": 1.0
+            },
+            "AMOUNT": {
+              "tp": 6,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "CUSTOMER": {
+              "tp": 7,
+              "fp": 4,
+              "fn": 1,
+              "precision": 0.6363636363636364,
+              "recall": 0.875
+            },
+            "DATE": {
+              "tp": 6,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "EMAIL": {
+              "tp": 8,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "ID": {
+              "tp": 6,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "PERSON": {
+              "tp": 6,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "PHONE": {
+              "tp": 6,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "PROJECT": {
+              "tp": 6,
+              "fp": 3,
+              "fn": 0,
+              "precision": 0.6666666666666666,
+              "recall": 1.0
+            }
+          }
+        }
+      },
+      "network_audit": {
+        "allowed_loopback_connections": 0,
+        "blocked_external_connections": 0
+      },
+      "report_sha256": "e01b139c40385b575f94893e4ed4d945f7718581e0ec4983b5fe07056af41d8c"
+    },
+    "fresh": {
+      "version": "boundary_detection_diagnostic_v1",
+      "baseline_origin": "fresh_encoder",
+      "noop_equal_materials": 80,
+      "material_count": 80,
+      "new_inference_counts": {
+        "local_encoder": 124,
+        "local_generation": 0
+      },
+      "cloud_calls": 0,
+      "api_cost_cny": 0,
+      "source_unchanged": true,
+      "implementation_unchanged": true,
+      "baseline_call_accounting_complete": true,
+      "historical_encoder_calls_referenced_once": 0,
+      "arms": {
+        "host_baseline": {
+          "tp": 55,
+          "fp": 12,
+          "fn": 3,
+          "precision": 0.8208955223880597,
+          "recall": 0.9482758620689655,
+          "materials": 80,
+          "needs_review": 0,
+          "ready": 80,
+          "instrumentation_errors": 0,
+          "masked_unprotected_characters": 51,
+          "complete_exact_materials": 69,
+          "gold_spans": 58,
+          "fully_masked_spans": 57,
+          "partially_masked_spans": 1,
+          "unmasked_or_not_ready_spans": 0,
+          "by_language": {
+            "zh": {
+              "materials": 40,
+              "tp": 26,
+              "fp": 8,
+              "fn": 3,
+              "precision": 0.7647058823529411,
+              "recall": 0.896551724137931,
+              "ready": 40,
+              "needs_review": 0,
+              "fully_masked_spans": 28,
+              "gold_spans": 29
+            },
+            "en": {
+              "materials": 40,
+              "tp": 29,
+              "fp": 4,
+              "fn": 0,
+              "precision": 0.8787878787878788,
+              "recall": 1.0,
+              "ready": 40,
+              "needs_review": 0,
+              "fully_masked_spans": 29,
+              "gold_spans": 29
+            }
+          },
+          "by_policy_scope": {
+            "private": {
+              "materials": 62,
+              "tp": 55,
+              "fp": 12,
+              "fn": 3,
+              "precision": 0.8208955223880597,
+              "recall": 0.9482758620689655,
+              "ready": 62,
+              "needs_review": 0,
+              "fully_masked_spans": 57,
+              "gold_spans": 58
+            },
+            "public": {
+              "materials": 18,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "ready": 18,
+              "needs_review": 0,
+              "fully_masked_spans": 0,
+              "gold_spans": 0
+            }
+          },
+          "by_category": {
+            "ADDRESS": {
+              "tp": 6,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.8571428571428571,
+              "recall": 1.0
+            },
+            "AMOUNT": {
+              "tp": 5,
+              "fp": 2,
+              "fn": 1,
+              "precision": 0.7142857142857143,
+              "recall": 0.8333333333333334
+            },
+            "CUSTOMER": {
+              "tp": 7,
+              "fp": 4,
+              "fn": 1,
+              "precision": 0.6363636363636364,
+              "recall": 0.875
+            },
+            "DATE": {
+              "tp": 6,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "EMAIL": {
+              "tp": 8,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "ID": {
+              "tp": 6,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "PERSON": {
+              "tp": 6,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "PHONE": {
+              "tp": 6,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "PROJECT": {
+              "tp": 5,
+              "fp": 5,
+              "fn": 1,
+              "precision": 0.5,
+              "recall": 0.8333333333333334
+            }
+          }
+        },
+        "rehost_noop": {
+          "tp": 55,
+          "fp": 12,
+          "fn": 3,
+          "precision": 0.8208955223880597,
+          "recall": 0.9482758620689655,
+          "materials": 80,
+          "needs_review": 0,
+          "ready": 80,
+          "instrumentation_errors": 0,
+          "masked_unprotected_characters": 51,
+          "complete_exact_materials": 69,
+          "gold_spans": 58,
+          "fully_masked_spans": 57,
+          "partially_masked_spans": 1,
+          "unmasked_or_not_ready_spans": 0,
+          "by_language": {
+            "zh": {
+              "materials": 40,
+              "tp": 26,
+              "fp": 8,
+              "fn": 3,
+              "precision": 0.7647058823529411,
+              "recall": 0.896551724137931,
+              "ready": 40,
+              "needs_review": 0,
+              "fully_masked_spans": 28,
+              "gold_spans": 29
+            },
+            "en": {
+              "materials": 40,
+              "tp": 29,
+              "fp": 4,
+              "fn": 0,
+              "precision": 0.8787878787878788,
+              "recall": 1.0,
+              "ready": 40,
+              "needs_review": 0,
+              "fully_masked_spans": 29,
+              "gold_spans": 29
+            }
+          },
+          "by_policy_scope": {
+            "private": {
+              "materials": 62,
+              "tp": 55,
+              "fp": 12,
+              "fn": 3,
+              "precision": 0.8208955223880597,
+              "recall": 0.9482758620689655,
+              "ready": 62,
+              "needs_review": 0,
+              "fully_masked_spans": 57,
+              "gold_spans": 58
+            },
+            "public": {
+              "materials": 18,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "ready": 18,
+              "needs_review": 0,
+              "fully_masked_spans": 0,
+              "gold_spans": 0
+            }
+          },
+          "by_category": {
+            "ADDRESS": {
+              "tp": 6,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.8571428571428571,
+              "recall": 1.0
+            },
+            "AMOUNT": {
+              "tp": 5,
+              "fp": 2,
+              "fn": 1,
+              "precision": 0.7142857142857143,
+              "recall": 0.8333333333333334
+            },
+            "CUSTOMER": {
+              "tp": 7,
+              "fp": 4,
+              "fn": 1,
+              "precision": 0.6363636363636364,
+              "recall": 0.875
+            },
+            "DATE": {
+              "tp": 6,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "EMAIL": {
+              "tp": 8,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "ID": {
+              "tp": 6,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "PERSON": {
+              "tp": 6,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "PHONE": {
+              "tp": 6,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "PROJECT": {
+              "tp": 5,
+              "fp": 5,
+              "fn": 1,
+              "precision": 0.5,
+              "recall": 0.8333333333333334
+            }
+          }
+        },
+        "boundary_refined": {
+          "tp": 57,
+          "fp": 8,
+          "fn": 1,
+          "precision": 0.8769230769230769,
+          "recall": 0.9827586206896551,
+          "materials": 80,
+          "needs_review": 0,
+          "ready": 80,
+          "instrumentation_errors": 0,
+          "masked_unprotected_characters": 36,
+          "complete_exact_materials": 72,
+          "gold_spans": 58,
+          "fully_masked_spans": 57,
+          "partially_masked_spans": 1,
+          "unmasked_or_not_ready_spans": 0,
+          "by_language": {
+            "zh": {
+              "materials": 40,
+              "tp": 28,
+              "fp": 5,
+              "fn": 1,
+              "precision": 0.8484848484848485,
+              "recall": 0.9655172413793104,
+              "ready": 40,
+              "needs_review": 0,
+              "fully_masked_spans": 28,
+              "gold_spans": 29
+            },
+            "en": {
+              "materials": 40,
+              "tp": 29,
+              "fp": 3,
+              "fn": 0,
+              "precision": 0.90625,
+              "recall": 1.0,
+              "ready": 40,
+              "needs_review": 0,
+              "fully_masked_spans": 29,
+              "gold_spans": 29
+            }
+          },
+          "by_policy_scope": {
+            "private": {
+              "materials": 62,
+              "tp": 57,
+              "fp": 8,
+              "fn": 1,
+              "precision": 0.8769230769230769,
+              "recall": 0.9827586206896551,
+              "ready": 62,
+              "needs_review": 0,
+              "fully_masked_spans": 57,
+              "gold_spans": 58
+            },
+            "public": {
+              "materials": 18,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "ready": 18,
+              "needs_review": 0,
+              "fully_masked_spans": 0,
+              "gold_spans": 0
+            }
+          },
+          "by_category": {
+            "ADDRESS": {
+              "tp": 6,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.8571428571428571,
+              "recall": 1.0
+            },
+            "AMOUNT": {
+              "tp": 6,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "CUSTOMER": {
+              "tp": 7,
+              "fp": 4,
+              "fn": 1,
+              "precision": 0.6363636363636364,
+              "recall": 0.875
+            },
+            "DATE": {
+              "tp": 6,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "EMAIL": {
+              "tp": 8,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "ID": {
+              "tp": 6,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "PERSON": {
+              "tp": 6,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "PHONE": {
+              "tp": 6,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "PROJECT": {
+              "tp": 6,
+              "fp": 3,
+              "fn": 0,
+              "precision": 0.6666666666666666,
+              "recall": 1.0
+            }
+          }
+        }
+      },
+      "network_audit": {
+        "allowed_loopback_connections": 0,
+        "blocked_external_connections": 0
+      },
+      "report_sha256": "50ae5441eded8dfe623c851d2192fb940cf8ed367e1788c8b054ece8a1ce528a"
+    }
+  },
+  "distinct_materials": 80,
+  "new_local_encoder_calls": 124,
+  "new_local_generations": 0,
+  "new_cloud_calls": 0,
+  "new_api_cost_cny": 0,
+  "engineering_tests_passed_at_detection_run": 689,
+  "overall_effectiveness_acceptance": "not_established",
+  "task_correctness": null,
+  "local_refusal_effect": null,
+  "scope": "Same exposed development materials in replay and fresh runs. Exact span boundaries improved; complete masking stayed57/58 with1partially masked entity. No new blind evaluation or answer-model effect. No source text, restoration tables or answers included.",
+  "independent_verification": {
+    "path": "results/acceptance_v2_research/boundary_fresh_v1/independent_verification.json",
+    "sha256": "1043a682539bbe3acb93acb195622ae799b5351513ca711111aff94eedf86bcb",
+    "checks_passed": 37,
+    "failed_checks": [],
+    "sensitive_characters_covered_before": 897,
+    "sensitive_characters_covered_after": 897,
+    "scope": "Two frozen detection runs only; excludes later source-evidence preparation changes."
+  },
+  "preparation_evidence_refinement": {
+    "material_count": 80,
+    "arms": {
+      "legacy_prepare": {
+        "registered_materials": 80,
+        "detection_non_ok": 0,
+        "prepare_non_ok": 0,
+        "egress_non_ok": 0,
+        "instrumentation_errors": 0,
+        "preparation_exceptions": 0,
+        "ready": 80,
+        "masked_unprotected_characters": 36,
+        "gold_spans": 58,
+        "fully_masked_spans": 57,
+        "partially_masked_spans": 1,
+        "unmasked_or_not_ready_spans": 0
+      },
+      "boundary_prepare": {
+        "registered_materials": 80,
+        "detection_non_ok": 0,
+        "prepare_non_ok": 0,
+        "egress_non_ok": 0,
+        "instrumentation_errors": 0,
+        "preparation_exceptions": 0,
+        "ready": 80,
+        "masked_unprotected_characters": 36,
+        "gold_spans": 58,
+        "fully_masked_spans": 57,
+        "partially_masked_spans": 1,
+        "unmasked_or_not_ready_spans": 0
+      }
+    },
+    "boundary_witness_expectations_met": true,
+    "legacy_query_key_only_allowed": true,
+    "new_inference_counts": {
+      "local_encoder": 0,
+      "local_generation": 0,
+      "unknown": 0
+    },
+    "cloud_calls": 0,
+    "new_api_cost_cny": 0,
+    "source_unchanged": true,
+    "implementation_unchanged": true,
+    "mapping_persisted": false,
+    "scope": "Reuses all frozen development findings. Scores actual prepared payloads after all processing. Non-ready materials retain their reference spans. Witnesses check source attribution only; no answer model, fresh detection, new holdout or semantic privacy guarantee.",
+    "report_sha256": "93a77c42a3ce6fec1193baf2f665472be8f65e06e627c00c92fc3737be4e3f11",
+    "removed_source_relations_on_80_materials": 0,
+    "witness_count": 3,
+    "independent_verification": {
+      "path": "results/acceptance_v2_research/boundary_preparation_v1/independent_verification.json",
+      "sha256": "7d8df2aaec571034dd00d0ea775c6c8d1e5c1e7225fe0e78fef1d2c54154c157",
+      "checks_passed": 21,
+      "failed_checks": []
+    }
+  },
+  "final_engineering_tests_passed": 710,
+  "component_sha256": {
+    "memory_migration_study/boundary_reconciliation.py": "63ee4781ed1d784710ef64c2ba1e81654e5d5596a7e1d45d597eadd2a3786e57",
+    "memory_migration_study/boundary_detector.py": "6bd9e1527d6eb772a05b89925c3db1cf160088a1fe73ee6b378affc1200cfd4d",
+    "memory_migration_study/boundary_preparation.py": "e4e8094bfae1a7b76954f7c576c4f53d0366104379b69e34000d901fe81275c8",
+    "scripts/run_boundary_detection_diagnostic.py": "a42f019735692df40d97702b47426e7efd75fb30306b3dcedf3f456e64a148ba",
+    "scripts/run_boundary_preparation_audit.py": "99e371e8088369433a9a2a674d6f9c1795c7c3f6296ccfc68f8ffa3d72083cb1"
+  }
+}

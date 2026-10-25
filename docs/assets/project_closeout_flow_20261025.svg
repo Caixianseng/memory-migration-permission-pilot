@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="920" viewBox="0 0 1440 920" role="img" aria-labelledby="flow-title flow-desc">
+  <title id="flow-title">Agent 安全记忆权限迁移研究流程</title>
+  <desc id="flow-desc">第一层从本地原始文本构建有来源位置的事实，认证敏感标签，核对真实主体、当前权限和迁出复制资格后保存目标记忆。第二层授权检索后同步替换问题和记忆中的敏感值，模型回答后再次核权并在本地恢复。第三层单独核验撤权、目标清理和旧任务重放。模型任务链与原生后端实验分开验收。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#396581"/></marker>
+    <marker id="warn-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#a46b22"/></marker>
+    <style>
+      text{font-family:'Segoe UI','Microsoft YaHei',sans-serif;fill:#1b3348} .title{font-size:30px;font-weight:700}.subtitle{font-size:17px;fill:#526b7f}.phase{font-size:20px;font-weight:700}.label{font-size:19px;font-weight:600}.small{font-size:15px;fill:#526b7f}.node{fill:#fff;stroke:#a7c5d8;stroke-width:1.5}.line{fill:none;stroke:#396581;stroke-width:2.5;marker-end:url(#arrow)}.warn{fill:none;stroke:#a46b22;stroke-width:2.3;stroke-dasharray:7 5;marker-end:url(#warn-arrow)}
+    </style>
+  </defs>
+  <rect width="1440" height="920" fill="#fff"/>
+  <text x="48" y="54" class="title">Agent 安全记忆权限迁移 · 模块衔接总览</text>
+  <text x="48" y="86" class="subtitle">研究原型；模型任务链与原生后端实验分开验收</text>
+
+  <rect x="28" y="120" width="1380" height="250" rx="16" fill="#eff6fb"/>
+  <text x="50" y="157" class="phase">一、生成、标注与核权迁移</text>
+  <rect x="50" y="194" width="230" height="118" rx="12" class="node"/>
+  <text x="165" y="232" text-anchor="middle" class="label">1  本地源文本</text>
+  <text x="165" y="264" text-anchor="middle" class="small">公开 / 合成受控材料</text>
+  <text x="165" y="288" text-anchor="middle" class="small">来源原文与敏感策略</text>
+  <rect x="325" y="194" width="230" height="118" rx="12" class="node"/>
+  <text x="440" y="232" text-anchor="middle" class="label">2  构建事实记忆</text>
+  <text x="440" y="264" text-anchor="middle" class="small">绑定原文位置和内容哈希</text>
+  <text x="440" y="288" text-anchor="middle" class="small">生成不等于自动授权</text>
+  <rect x="600" y="194" width="230" height="118" rx="12" class="node"/>
+  <text x="715" y="232" text-anchor="middle" class="label">3  敏感标签认证</text>
+  <text x="715" y="264" text-anchor="middle" class="small">规则 / 本地模型检测</text>
+  <text x="715" y="288" text-anchor="middle" class="small">HMAC 绑定内容与策略</text>
+  <rect x="875" y="194" width="230" height="118" rx="12" class="node"/>
+  <text x="990" y="232" text-anchor="middle" class="label">4  核权与迁移计划</text>
+  <text x="990" y="264" text-anchor="middle" class="small">真实用户、Agent、当前权限</text>
+  <text x="990" y="288" text-anchor="middle" class="small">迁出 / 复制 / 接收范围</text>
+  <rect x="1150" y="194" width="230" height="118" rx="12" class="node"/>
+  <text x="1265" y="232" text-anchor="middle" class="label">5  目标记忆</text>
+  <text x="1265" y="264" text-anchor="middle" class="small">按合格接收者写入</text>
+  <text x="1265" y="288" text-anchor="middle" class="small">保留来源及对象映射</text>
+  <path d="M280 253H317" class="line"/><path d="M555 253H592" class="line"/><path d="M830 253H867" class="line"/><path d="M1105 253H1142" class="line"/>
+  <text x="50" y="345" class="small">不支持的约束、认证失败或内容变化应阻断；标签不能提升读取、共享或迁出权限。</text>
+
+  <rect x="28" y="418" width="1380" height="248" rx="16" fill="#f1f8f5"/>
+  <path d="M1265 312V391H14V549H42" class="line"/>
+  <text x="50" y="455" class="phase">二、授权使用与隐私恢复</text>
+  <rect x="50" y="490" width="290" height="118" rx="12" class="node"/>
+  <text x="195" y="528" text-anchor="middle" class="label">6  按当前权限检索</text>
+  <text x="195" y="560" text-anchor="middle" class="small">只提供有权读取的记忆</text>
+  <text x="195" y="584" text-anchor="middle" class="small">用户和 Agent 身份分别核对</text>
+  <rect x="395" y="490" width="290" height="118" rx="12" class="node"/>
+  <text x="540" y="528" text-anchor="middle" class="label">7  同步假名化与出口校验</text>
+  <text x="540" y="560" text-anchor="middle" class="small">问题与记忆使用同一请求代号</text>
+  <text x="540" y="584" text-anchor="middle" class="small">恢复映射保留在本地内存</text>
+  <rect x="740" y="490" width="290" height="118" rx="12" class="node"/>
+  <text x="885" y="528" text-anchor="middle" class="label">8  模型依据记忆回答</text>
+  <text x="885" y="560" text-anchor="middle" class="small">只接收问题与允许的记忆</text>
+  <text x="885" y="584" text-anchor="middle" class="small">记录原始回答与失败阶段</text>
+  <rect x="1085" y="490" width="295" height="118" rx="12" class="node"/>
+  <text x="1232" y="528" text-anchor="middle" class="label">9  再核权后本地恢复</text>
+  <text x="1232" y="560" text-anchor="middle" class="small">验证代号、来源、主体和策略</text>
+  <text x="1232" y="584" text-anchor="middle" class="small">恢复合法原值或明确阻断</text>
+  <path d="M340 549H387" class="line"/><path d="M685 549H732" class="line"/><path d="M1030 549H1077" class="line"/>
+  <text x="50" y="640" class="small">假名化后仍继承原权限；检测待审、模型 UNKNOWN、调用错误及恢复失败分别计数。</text>
+
+  <rect x="28" y="714" width="1380" height="142" rx="16" fill="#fff7e9"/>
+  <text x="50" y="751" class="phase">三、生命周期与双轨评估</text>
+  <text x="50" y="785" class="label">10  撤权 → 清理目标副本 → 拒绝旧任务重放 → 保留独立合法授权</text>
+  <text x="50" y="819" class="small">直接评估：内容、权限、撤权及重放 ｜ 间接评估：合法回答、泄露、拒答、费用及失败分母</text>
+  <path d="M1232 608V704" class="warn"/>
+  <text x="48" y="894" class="subtitle">这是研究模块结构图；未将有限场景通过、开发集高分或工程测试数表述为普遍安全与论文创新。</text>
+</svg>

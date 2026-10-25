@@ -101,12 +101,42 @@ class DetectionCacheTests(unittest.TestCase):
 
     def test_modified_fact_cannot_reuse_old_offsets(self):
         self.transfer()
+        calls = self.detector.calls
         self.record["text"] = "Aster Bay"
         self.record["source_start"] = self.text.index("Aster Bay")
         self.record["source_end"] = self.record["source_start"] + 9
         new = self.transfer()
-        self.assertEqual(new["local_calls"], 1)  # same query; changed memory
+        # A changed exact-fact record has no authorization. Do not classify it
+        # or let a cached query turn label fallback into a fresh access grant.
+        self.assertEqual(new["error"], "access_content_changed")
+        self.assertEqual(new["local_calls"], 0)
+        self.assertEqual(self.detector.calls, calls)
+        self.assertIsNone(new["payload"])
+
+    def test_newly_authorized_changed_fact_misses_old_scope_and_uses_new_offsets(self):
+        self.transfer()
+        calls = self.detector.calls
+        start = self.text.index("Aster Bay")
+        # Only the trusted host can issue a new exact fact grant. Retain the old
+        # cache to exercise changed content and grant-domain invalidation.
+        self.record = self.authority.build_record(
+            {"source_id": "conversation", "text": self.text},
+            {"text": "Aster Bay", "source_start": start, "source_end": start + 9,
+             "findings": [{"start": 0, "end": 9, "category": "CUSTOMER"}]},
+            self.policy, owner_id="owner", readers=["colleague"], agent_id="source-agent",
+            allowed_agent_ids=["target-agent", "other-agent"], builder_version="builder-1", detector_version="generation-detector-1")
+        new = self.transfer()
+        self.assertEqual(new["status"], "ok")
+        # Current cache scope includes the signed grants, so both the identical
+        # query and the changed memory legitimately miss in this new scope.
+        self.assertEqual(new["local_calls"], 2)
+        self.assertEqual(self.detector.calls - calls, 2)
+        self.assertEqual(new["metadata"]["detection_cache"]["hits"], 0)
+        self.assertEqual(new["metadata"]["detection_cache"]["misses"], 2)
+        memory_findings = [f for f in new["detection"]["findings"] if f["source_id"] == self.record["record_id"]]
+        self.assertTrue(any((f["start"], f["end"]) == (0, 9) for f in memory_findings))
         self.assertNotIn("Aster Bay", new["payload"]["memories"][0]["text"])
+        self.assertEqual(self.transfer()["local_calls"], 0)
 
     def test_needs_review_and_invalid_spans_are_never_cached(self):
         for attr, value in (("status", "needs_review"), ("bad_span", True)):

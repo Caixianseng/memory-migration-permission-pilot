@@ -1,0 +1,794 @@
+{
+  "kind": "candidate_proposal_research_only",
+  "date": "2026-10-25",
+  "effectiveness_acceptance_passed": false,
+  "additional_model_calls": 0,
+  "additional_cloud_calls": 0,
+  "additional_api_cost_cny": 0,
+  "related_offline_tests_passed": 83,
+  "new_candidate_tests_passed": 19,
+  "component_sha256": {
+    "memory_migration_study/candidate_proposals.py": "32be4b9a305f43e8f9701c3b50c822f0a98b13411c2d12dd57a2692dc4b9e323",
+    "tests/test_candidate_proposals.py": "20692532d9e9a1ea3b949a7278e56c44a838ef69b6514f59429803b486faa546",
+    "scripts/analyze_candidate_coverage.py": "3f7eb3a47b8c459cf9c01aeb771f7ded555b76170a01bee2574200bba9d587f3"
+  },
+  "scope": "Candidate presence is an oracle recall ceiling, not actual sensitivity precision/recall. All datasets below are exposed development/regression only. Original thresholds and historical results remain unchanged.",
+  "sets": {
+    "development": {
+      "pools": {
+        "rules": {
+          "materials": 80,
+          "proposed_spans": 34,
+          "gold_spans": 58,
+          "complete_gold_spans_in_pool": 28,
+          "subset_classifier_recall_ceiling": 0.4827586206896552,
+          "accepted_sources_only_ceiling": 0.4827586206896552,
+          "per_category": {
+            "ADDRESS": {
+              "gold": 6,
+              "covered": 2
+            },
+            "AMOUNT": {
+              "gold": 6,
+              "covered": 3
+            },
+            "CUSTOMER": {
+              "gold": 8,
+              "covered": 0
+            },
+            "DATE": {
+              "gold": 6,
+              "covered": 5
+            },
+            "EMAIL": {
+              "gold": 8,
+              "covered": 8
+            },
+            "ID": {
+              "gold": 6,
+              "covered": 3
+            },
+            "PERSON": {
+              "gold": 6,
+              "covered": 1
+            },
+            "PHONE": {
+              "gold": 6,
+              "covered": 5
+            },
+            "PROJECT": {
+              "gold": 6,
+              "covered": 1
+            }
+          }
+        },
+        "qwen": {
+          "materials": 80,
+          "proposed_spans": 58,
+          "gold_spans": 58,
+          "complete_gold_spans_in_pool": 53,
+          "subset_classifier_recall_ceiling": 0.9137931034482759,
+          "accepted_sources_only_ceiling": 0.7758620689655172,
+          "per_category": {
+            "ADDRESS": {
+              "gold": 6,
+              "covered": 6
+            },
+            "AMOUNT": {
+              "gold": 6,
+              "covered": 6
+            },
+            "CUSTOMER": {
+              "gold": 8,
+              "covered": 8
+            },
+            "DATE": {
+              "gold": 6,
+              "covered": 6
+            },
+            "EMAIL": {
+              "gold": 8,
+              "covered": 8
+            },
+            "ID": {
+              "gold": 6,
+              "covered": 4
+            },
+            "PERSON": {
+              "gold": 6,
+              "covered": 6
+            },
+            "PHONE": {
+              "gold": 6,
+              "covered": 4
+            },
+            "PROJECT": {
+              "gold": 6,
+              "covered": 5
+            }
+          }
+        },
+        "gliner_and_rules": {
+          "materials": 80,
+          "proposed_spans": 67,
+          "gold_spans": 58,
+          "complete_gold_spans_in_pool": 55,
+          "subset_classifier_recall_ceiling": 0.9482758620689655,
+          "accepted_sources_only_ceiling": 0.9482758620689655,
+          "per_category": {
+            "ADDRESS": {
+              "gold": 6,
+              "covered": 6
+            },
+            "AMOUNT": {
+              "gold": 6,
+              "covered": 5
+            },
+            "CUSTOMER": {
+              "gold": 8,
+              "covered": 7
+            },
+            "DATE": {
+              "gold": 6,
+              "covered": 6
+            },
+            "EMAIL": {
+              "gold": 8,
+              "covered": 8
+            },
+            "ID": {
+              "gold": 6,
+              "covered": 6
+            },
+            "PERSON": {
+              "gold": 6,
+              "covered": 6
+            },
+            "PHONE": {
+              "gold": 6,
+              "covered": 6
+            },
+            "PROJECT": {
+              "gold": 6,
+              "covered": 5
+            }
+          }
+        },
+        "preserve_all_three_detector_spans": {
+          "materials": 80,
+          "proposed_spans": 77,
+          "gold_spans": 58,
+          "complete_gold_spans_in_pool": 58,
+          "subset_classifier_recall_ceiling": 1.0,
+          "accepted_sources_only_ceiling": 1.0,
+          "per_category": {
+            "ADDRESS": {
+              "gold": 6,
+              "covered": 6
+            },
+            "AMOUNT": {
+              "gold": 6,
+              "covered": 6
+            },
+            "CUSTOMER": {
+              "gold": 8,
+              "covered": 8
+            },
+            "DATE": {
+              "gold": 6,
+              "covered": 6
+            },
+            "EMAIL": {
+              "gold": 8,
+              "covered": 8
+            },
+            "ID": {
+              "gold": 6,
+              "covered": 6
+            },
+            "PERSON": {
+              "gold": 6,
+              "covered": 6
+            },
+            "PHONE": {
+              "gold": 6,
+              "covered": 6
+            },
+            "PROJECT": {
+              "gold": 6,
+              "covered": 6
+            }
+          }
+        },
+        "current_final_union": {
+          "materials": 80,
+          "proposed_spans": 66,
+          "gold_spans": 58,
+          "complete_gold_spans_in_pool": 55,
+          "subset_classifier_recall_ceiling": 0.9482758620689655,
+          "accepted_sources_only_ceiling": 0.8103448275862069,
+          "per_category": {
+            "ADDRESS": {
+              "gold": 6,
+              "covered": 6
+            },
+            "AMOUNT": {
+              "gold": 6,
+              "covered": 6
+            },
+            "CUSTOMER": {
+              "gold": 8,
+              "covered": 8
+            },
+            "DATE": {
+              "gold": 6,
+              "covered": 6
+            },
+            "EMAIL": {
+              "gold": 8,
+              "covered": 8
+            },
+            "ID": {
+              "gold": 6,
+              "covered": 5
+            },
+            "PERSON": {
+              "gold": 6,
+              "covered": 6
+            },
+            "PHONE": {
+              "gold": 6,
+              "covered": 6
+            },
+            "PROJECT": {
+              "gold": 6,
+              "covered": 4
+            }
+          }
+        },
+        "quoted_values_only": {
+          "materials": 80,
+          "proposed_candidates": 30,
+          "gold_spans": 58,
+          "complete_gold_spans_in_pool": 20,
+          "subset_classifier_recall_ceiling": 0.3448275862068966,
+          "statuses": {
+            "candidates_only": 80
+          },
+          "errors": {},
+          "per_category": {
+            "ADDRESS": {
+              "gold": 6,
+              "covered": 2
+            },
+            "AMOUNT": {
+              "gold": 6,
+              "covered": 2
+            },
+            "CUSTOMER": {
+              "gold": 8,
+              "covered": 4
+            },
+            "DATE": {
+              "gold": 6,
+              "covered": 2
+            },
+            "EMAIL": {
+              "gold": 8,
+              "covered": 2
+            },
+            "ID": {
+              "gold": 6,
+              "covered": 2
+            },
+            "PERSON": {
+              "gold": 6,
+              "covered": 2
+            },
+            "PHONE": {
+              "gold": 6,
+              "covered": 2
+            },
+            "PROJECT": {
+              "gold": 6,
+              "covered": 2
+            }
+          }
+        },
+        "gliner_and_rules_plus_quoted_values": {
+          "materials": 80,
+          "proposed_candidates": 77,
+          "gold_spans": 58,
+          "complete_gold_spans_in_pool": 55,
+          "subset_classifier_recall_ceiling": 0.9482758620689655,
+          "statuses": {
+            "candidates_only": 80
+          },
+          "errors": {},
+          "per_category": {
+            "ADDRESS": {
+              "gold": 6,
+              "covered": 6
+            },
+            "AMOUNT": {
+              "gold": 6,
+              "covered": 5
+            },
+            "CUSTOMER": {
+              "gold": 8,
+              "covered": 7
+            },
+            "DATE": {
+              "gold": 6,
+              "covered": 6
+            },
+            "EMAIL": {
+              "gold": 8,
+              "covered": 8
+            },
+            "ID": {
+              "gold": 6,
+              "covered": 6
+            },
+            "PERSON": {
+              "gold": 6,
+              "covered": 6
+            },
+            "PHONE": {
+              "gold": 6,
+              "covered": 6
+            },
+            "PROJECT": {
+              "gold": 6,
+              "covered": 5
+            }
+          }
+        },
+        "all_three_raw_detectors_plus_quoted_values": {
+          "materials": 80,
+          "proposed_candidates": 87,
+          "gold_spans": 58,
+          "complete_gold_spans_in_pool": 58,
+          "subset_classifier_recall_ceiling": 1.0,
+          "statuses": {
+            "candidates_only": 80
+          },
+          "errors": {},
+          "per_category": {
+            "ADDRESS": {
+              "gold": 6,
+              "covered": 6
+            },
+            "AMOUNT": {
+              "gold": 6,
+              "covered": 6
+            },
+            "CUSTOMER": {
+              "gold": 8,
+              "covered": 8
+            },
+            "DATE": {
+              "gold": 6,
+              "covered": 6
+            },
+            "EMAIL": {
+              "gold": 8,
+              "covered": 8
+            },
+            "ID": {
+              "gold": 6,
+              "covered": 6
+            },
+            "PERSON": {
+              "gold": 6,
+              "covered": 6
+            },
+            "PHONE": {
+              "gold": 6,
+              "covered": 6
+            },
+            "PROJECT": {
+              "gold": 6,
+              "covered": 6
+            }
+          }
+        }
+      },
+      "source_sha256": {
+        "runtime.json": "4862baa9c543e24b42003ac81c5bc50e3fcdc13ca2af6de5406e8b238c3279d6",
+        "evaluation.json": "d0d657a2194d8443a8c7d4636742b665a16c4462dc6a93e1f792fea9f01a3e54",
+        "rows.json": "b09b7622e71dfe33ab8006764e832df6baa4d7f82b809ffa802428a41ca2ece0"
+      },
+      "diagnostic_sha256": "22f601a6723fa3a29662695b0ad3fa6f944de31277fd4ba5fa3165414b1983eb",
+      "diagnostic_path": "results/acceptance_v2_research/candidate_coverage_development_quoted_v2.json"
+    },
+    "exposed_regression": {
+      "pools": {
+        "rules": {
+          "materials": 40,
+          "proposed_spans": 7,
+          "gold_spans": 20,
+          "complete_gold_spans_in_pool": 6,
+          "subset_classifier_recall_ceiling": 0.3,
+          "accepted_sources_only_ceiling": 0.3,
+          "per_category": {
+            "ADDRESS": {
+              "gold": 2,
+              "covered": 0
+            },
+            "AMOUNT": {
+              "gold": 2,
+              "covered": 0
+            },
+            "CUSTOMER": {
+              "gold": 4,
+              "covered": 0
+            },
+            "DATE": {
+              "gold": 2,
+              "covered": 1
+            },
+            "EMAIL": {
+              "gold": 2,
+              "covered": 2
+            },
+            "ID": {
+              "gold": 2,
+              "covered": 1
+            },
+            "PERSON": {
+              "gold": 2,
+              "covered": 0
+            },
+            "PHONE": {
+              "gold": 2,
+              "covered": 2
+            },
+            "PROJECT": {
+              "gold": 2,
+              "covered": 0
+            }
+          }
+        },
+        "qwen": {
+          "materials": 40,
+          "proposed_spans": 20,
+          "gold_spans": 20,
+          "complete_gold_spans_in_pool": 11,
+          "subset_classifier_recall_ceiling": 0.55,
+          "accepted_sources_only_ceiling": 0.55,
+          "per_category": {
+            "ADDRESS": {
+              "gold": 2,
+              "covered": 1
+            },
+            "AMOUNT": {
+              "gold": 2,
+              "covered": 2
+            },
+            "CUSTOMER": {
+              "gold": 4,
+              "covered": 1
+            },
+            "DATE": {
+              "gold": 2,
+              "covered": 1
+            },
+            "EMAIL": {
+              "gold": 2,
+              "covered": 2
+            },
+            "ID": {
+              "gold": 2,
+              "covered": 0
+            },
+            "PERSON": {
+              "gold": 2,
+              "covered": 1
+            },
+            "PHONE": {
+              "gold": 2,
+              "covered": 2
+            },
+            "PROJECT": {
+              "gold": 2,
+              "covered": 1
+            }
+          }
+        },
+        "gliner_and_rules": {
+          "materials": 40,
+          "proposed_spans": 20,
+          "gold_spans": 20,
+          "complete_gold_spans_in_pool": 18,
+          "subset_classifier_recall_ceiling": 0.9,
+          "accepted_sources_only_ceiling": 0.9,
+          "per_category": {
+            "ADDRESS": {
+              "gold": 2,
+              "covered": 2
+            },
+            "AMOUNT": {
+              "gold": 2,
+              "covered": 2
+            },
+            "CUSTOMER": {
+              "gold": 4,
+              "covered": 3
+            },
+            "DATE": {
+              "gold": 2,
+              "covered": 2
+            },
+            "EMAIL": {
+              "gold": 2,
+              "covered": 2
+            },
+            "ID": {
+              "gold": 2,
+              "covered": 2
+            },
+            "PERSON": {
+              "gold": 2,
+              "covered": 2
+            },
+            "PHONE": {
+              "gold": 2,
+              "covered": 2
+            },
+            "PROJECT": {
+              "gold": 2,
+              "covered": 1
+            }
+          }
+        },
+        "preserve_all_three_detector_spans": {
+          "materials": 40,
+          "proposed_spans": 29,
+          "gold_spans": 20,
+          "complete_gold_spans_in_pool": 18,
+          "subset_classifier_recall_ceiling": 0.9,
+          "accepted_sources_only_ceiling": 0.9,
+          "per_category": {
+            "ADDRESS": {
+              "gold": 2,
+              "covered": 2
+            },
+            "AMOUNT": {
+              "gold": 2,
+              "covered": 2
+            },
+            "CUSTOMER": {
+              "gold": 4,
+              "covered": 3
+            },
+            "DATE": {
+              "gold": 2,
+              "covered": 2
+            },
+            "EMAIL": {
+              "gold": 2,
+              "covered": 2
+            },
+            "ID": {
+              "gold": 2,
+              "covered": 2
+            },
+            "PERSON": {
+              "gold": 2,
+              "covered": 2
+            },
+            "PHONE": {
+              "gold": 2,
+              "covered": 2
+            },
+            "PROJECT": {
+              "gold": 2,
+              "covered": 1
+            }
+          }
+        },
+        "current_final_union": {
+          "materials": 40,
+          "proposed_spans": 22,
+          "gold_spans": 20,
+          "complete_gold_spans_in_pool": 11,
+          "subset_classifier_recall_ceiling": 0.55,
+          "accepted_sources_only_ceiling": 0.55,
+          "per_category": {
+            "ADDRESS": {
+              "gold": 2,
+              "covered": 1
+            },
+            "AMOUNT": {
+              "gold": 2,
+              "covered": 2
+            },
+            "CUSTOMER": {
+              "gold": 4,
+              "covered": 1
+            },
+            "DATE": {
+              "gold": 2,
+              "covered": 1
+            },
+            "EMAIL": {
+              "gold": 2,
+              "covered": 2
+            },
+            "ID": {
+              "gold": 2,
+              "covered": 0
+            },
+            "PERSON": {
+              "gold": 2,
+              "covered": 1
+            },
+            "PHONE": {
+              "gold": 2,
+              "covered": 2
+            },
+            "PROJECT": {
+              "gold": 2,
+              "covered": 1
+            }
+          }
+        },
+        "quoted_values_only": {
+          "materials": 40,
+          "proposed_candidates": 34,
+          "gold_spans": 20,
+          "complete_gold_spans_in_pool": 20,
+          "subset_classifier_recall_ceiling": 1.0,
+          "statuses": {
+            "candidates_only": 40
+          },
+          "errors": {},
+          "per_category": {
+            "ADDRESS": {
+              "gold": 2,
+              "covered": 2
+            },
+            "AMOUNT": {
+              "gold": 2,
+              "covered": 2
+            },
+            "CUSTOMER": {
+              "gold": 4,
+              "covered": 4
+            },
+            "DATE": {
+              "gold": 2,
+              "covered": 2
+            },
+            "EMAIL": {
+              "gold": 2,
+              "covered": 2
+            },
+            "ID": {
+              "gold": 2,
+              "covered": 2
+            },
+            "PERSON": {
+              "gold": 2,
+              "covered": 2
+            },
+            "PHONE": {
+              "gold": 2,
+              "covered": 2
+            },
+            "PROJECT": {
+              "gold": 2,
+              "covered": 2
+            }
+          }
+        },
+        "gliner_and_rules_plus_quoted_values": {
+          "materials": 40,
+          "proposed_candidates": 36,
+          "gold_spans": 20,
+          "complete_gold_spans_in_pool": 20,
+          "subset_classifier_recall_ceiling": 1.0,
+          "statuses": {
+            "candidates_only": 40
+          },
+          "errors": {},
+          "per_category": {
+            "ADDRESS": {
+              "gold": 2,
+              "covered": 2
+            },
+            "AMOUNT": {
+              "gold": 2,
+              "covered": 2
+            },
+            "CUSTOMER": {
+              "gold": 4,
+              "covered": 4
+            },
+            "DATE": {
+              "gold": 2,
+              "covered": 2
+            },
+            "EMAIL": {
+              "gold": 2,
+              "covered": 2
+            },
+            "ID": {
+              "gold": 2,
+              "covered": 2
+            },
+            "PERSON": {
+              "gold": 2,
+              "covered": 2
+            },
+            "PHONE": {
+              "gold": 2,
+              "covered": 2
+            },
+            "PROJECT": {
+              "gold": 2,
+              "covered": 2
+            }
+          }
+        },
+        "all_three_raw_detectors_plus_quoted_values": {
+          "materials": 40,
+          "proposed_candidates": 45,
+          "gold_spans": 20,
+          "complete_gold_spans_in_pool": 20,
+          "subset_classifier_recall_ceiling": 1.0,
+          "statuses": {
+            "candidates_only": 40
+          },
+          "errors": {},
+          "per_category": {
+            "ADDRESS": {
+              "gold": 2,
+              "covered": 2
+            },
+            "AMOUNT": {
+              "gold": 2,
+              "covered": 2
+            },
+            "CUSTOMER": {
+              "gold": 4,
+              "covered": 4
+            },
+            "DATE": {
+              "gold": 2,
+              "covered": 2
+            },
+            "EMAIL": {
+              "gold": 2,
+              "covered": 2
+            },
+            "ID": {
+              "gold": 2,
+              "covered": 2
+            },
+            "PERSON": {
+              "gold": 2,
+              "covered": 2
+            },
+            "PHONE": {
+              "gold": 2,
+              "covered": 2
+            },
+            "PROJECT": {
+              "gold": 2,
+              "covered": 2
+            }
+          }
+        }
+      },
+      "source_sha256": {
+        "runtime.json": "98a72e64c8e44b310295075105e5355c79061a80e4bec825628611ef7aea0102",
+        "evaluation.json": "d405cfa815fd783dacfad2253aa6f04f372bf89538cd5e97c5589f9d1024797b",
+        "rows.json": "93fcf8cbaee6db64bebf7fd094d741053aa169fb58277870dd4ed070d02d787b"
+      },
+      "diagnostic_sha256": "d2b871e20f5279f71b8508a9738a54da8f6289d67b32f183e0bee7a7ff0036db",
+      "diagnostic_path": "results/acceptance_v2_research/candidate_coverage_exposed_regression_quoted_v2.json"
+    }
+  }
+}

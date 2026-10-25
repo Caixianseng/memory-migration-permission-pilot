@@ -21,10 +21,10 @@ def sha(data):
     return hashlib.sha256(data).hexdigest()
 
 
-def independent_score(row, gold):
+def independent_score(row, gold, *, schema_version=1):
     legal = row["actor_id"] == "owner"
     answer, expected = row.get("final_answer"), gold["answers"].get(row["task_id"])
-    return {"legal": legal,
+    result = {"legal": legal,
             "correct": bool(legal and isinstance(answer, str) and isinstance(expected, str)
                             and answer.strip().casefold() == expected.casefold()),
             "build_block": legal and row.get("build_status") != "ok",
@@ -34,6 +34,21 @@ def independent_score(row, gold):
             "outsider_blocked": (not legal and row.get("module_authorization_error") == "principal_not_authorized"
                                   and row.get("answer_calls", 0) == 0),
             "unauthorized_output": not legal and (row.get("prepare_status") == "ok" or bool(answer))}
+    if schema_version == 2:
+        mask = row.get("masking")
+        no_gap = (isinstance(mask, dict) and mask.get("ready") is True
+                  and type(mask.get("partial")) is int and mask["partial"] == 0
+                  and type(mask.get("unmasked")) is int and mask["unmasked"] == 0)
+        secondary_enabled = row.get("secondary_serialization_registered") is True
+        secondary = (row.get("secondary_serialization") or {}).get("final_answer")
+        secondary_correct = (legal and isinstance(secondary, str) and isinstance(expected, str)
+                             and secondary.strip().casefold() == expected.casefold())
+        result.update(joint_correct_no_masking_gap=None if row.get("mode") == "raw" else
+            bool(result["correct"] and row.get("prepare_status") == "ok" and no_gap),
+            secondary_serialization_correct=bool(secondary_correct) if secondary_enabled else None,
+            secondary_joint_correct_no_masking_gap=bool(secondary_correct and row.get("prepare_status") == "ok" and no_gap)
+                if secondary_enabled else None)
+    return result
 
 
 def verify(run, *, corpus=None, allow_added_sources=()):
@@ -50,6 +65,8 @@ def verify(run, *, corpus=None, allow_added_sources=()):
     checks = []
     def check(name, passed):
         checks.append({"check": name, "passed": bool(passed)})
+    score_schema = plan.get("score_schema_version", 1)
+    check("known_score_schema_version", type(score_schema) is int and score_schema in (1, 2))
 
     expected_builds = Counter((sid, family) for sid in stories for family in ("model", "coverage"))
     expected_rows = Counter((s["story_id"], t["task_id"], arm) for s in runtime for t in s["tasks"] for arm in ARMS)
@@ -78,8 +95,20 @@ def verify(run, *, corpus=None, allow_added_sources=()):
         check("frozen_" + field, matched)
     archive = run / "implementation"
     expected_code = plan["implementation_sha256"]
-    check("complete_executed_source_archive", {p.name for p in archive.glob("*.py")} == set(expected_code)
-          and all(sha((archive / name).read_bytes()) == value for name, value in expected_code.items()))
+    entrypoints = plan.get("entrypoint_sha256", {})
+    expected_archive = dict(expected_code)
+    entrypoints_ok = isinstance(entrypoints, dict)
+    if entrypoints_ok:
+        for declared, digest in entrypoints.items():
+            path = Path(declared)
+            entrypoints_ok &= (path.resolve().is_relative_to((project/"scripts").resolve())
+                               and path.suffix == ".py" and path.name not in expected_archive
+                               and path.is_file() and sha(path.read_bytes()) == digest)
+            expected_archive[path.name] = digest
+    check("declared_entrypoint_hashes_unchanged", entrypoints_ok)
+    check("complete_executed_source_archive", {p.name for p in archive.glob("*.py")} == set(expected_archive)
+          and all((archive/name).is_file() and sha((archive / name).read_bytes()) == value
+                  for name, value in expected_archive.items()))
     current_code = {p.name: sha(p.read_bytes()) for p in (project / "memory_migration_study").glob("*.py")}
     allowed_additions = set(allow_added_sources)
     if any(not isinstance(name, str) or Path(name).name != name or not name.endswith(".py")
@@ -151,7 +180,7 @@ def verify(run, *, corpus=None, allow_added_sources=()):
         row_bindings &= (row["actor_id"] == task["actor_id"] and row["mode"] == mode
                          and row["language"] == story["language"] and row["template_family"] == story["template_family"]
                          and row["build_status"] == build["status"])
-        recomputed = independent_score(row, evaluation[sid])
+        recomputed = independent_score(row, evaluation[sid], schema_version=score_schema)
         scores_ok &= recomputed == row["score"]
         expected = evaluation[sid]["answers"].get(row["task_id"])
         supported = bool(expected and any(expected in r["text"] for r in records))
@@ -235,7 +264,15 @@ def verify(run, *, corpus=None, allow_added_sources=()):
               "migration_detector_generations": sum(r["inference_counts"]["local_generation"] for r in rows),
               "answer_generations": sum(r["answer_calls"] for r in rows)}
     check("all_actual_physical_call_total_fields", all(report[k] == v for k, v in totals.items()))
-    check("all_six_arm_aggregates_recomputed", aggregate(rows, builds) == report["arms"])
+    recomputed_aggregate = aggregate(rows, builds)
+    if score_schema == 1:
+        # Archived v1 reports predate these explicit optional metric fields.
+        auxiliary = {"joint_masked_legal_tasks", "joint_correct_no_masking_gap",
+                     "secondary_serialization_legal_tasks", "secondary_serialization_correct",
+                     "secondary_joint_correct_no_masking_gap"}
+        recomputed_aggregate = {arm: {key: value for key, value in metrics.items() if key not in auxiliary}
+                                for arm, metrics in recomputed_aggregate.items()}
+    check("all_six_arm_aggregates_recomputed", recomputed_aggregate == report["arms"])
     check("no_cloud_declared_by_plan_and_report", plan["no_cloud"] is True and report["cloud_calls"] == 0 and report["new_api_cost_cny"] == 0)
     storage_totals = {family: {key: sum(value[key] for (_, f), value in storage.items() if f == family)
                               for key in ("stored_characters", "stored_record_json_bytes", "stored_source_copy_characters", "stored_source_copy_utf8_bytes")}

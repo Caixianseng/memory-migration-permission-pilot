@@ -91,6 +91,47 @@ class SemanticEvidenceAdditionTests(unittest.TestCase):
         self.assertEqual(result["additional_current_sources"], [])
         self.assertEqual(result["declared_allowed_additions"], [])
 
+    def test_v2_missing_joint_score_key_cannot_downgrade_to_legacy_scoring(self):
+        self.assertEqual(self.plan["score_schema_version"], 2)
+        path = self.output/"rows.json"
+        rows = json.loads(path.read_bytes())
+        rows[0]["score"].pop("joint_correct_no_masking_gap")
+        path.write_text(json.dumps(rows), encoding="utf-8")
+        result = self.verify()
+        self.assertEqual(result["status"], "failed")
+        self.assertFalse(next(check["passed"] for check in result["checks"] if check["check"] == "independent_per_task_scores"))
+
+    def test_v1_plan_without_schema_uses_original_eight_score_fields(self):
+        plan = dict(self.plan)
+        plan.pop("score_schema_version")
+        declared = plan.pop("entrypoint_sha256")
+        for name in declared:
+            archived = self.output/"implementation"/Path(name).name
+            self.assertTrue(archived.resolve().is_relative_to((self.output/"implementation").resolve()))
+            archived.unlink()
+        (self.output/"plan.json").write_text(json.dumps(plan), encoding="utf-8")
+        evaluation = json.loads((self.output/"evaluation.json").read_bytes())
+        rows = json.loads((self.output/"rows.json").read_bytes())
+        for row in rows:
+            row["score"] = verifier.independent_score(row, evaluation[row["story_id"]])
+            self.assertEqual(len(row["score"]), 8)
+        (self.output/"rows.json").write_text(json.dumps(rows), encoding="utf-8")
+        report = json.loads((self.output/"report.json").read_bytes())
+        auxiliary = {"joint_masked_legal_tasks", "joint_correct_no_masking_gap", "secondary_serialization_legal_tasks",
+                     "secondary_serialization_correct", "secondary_joint_correct_no_masking_gap"}
+        report["arms"] = {arm: {key: value for key, value in metrics.items() if key not in auxiliary}
+                          for arm, metrics in report["arms"].items()}
+        (self.output/"report.json").write_text(json.dumps(report), encoding="utf-8")
+        self.assertEqual(self.verify()["status"], "passed")
+
+    def test_declared_entrypoint_archive_is_not_exempt_from_hash_checks(self):
+        entry = next(iter(self.plan["entrypoint_sha256"]))
+        archived = self.output/"implementation"/Path(entry).name
+        archived.write_bytes(archived.read_bytes()+b"\n# changed archived entrypoint\n")
+        result = self.verify()
+        self.assertEqual(result["status"], "failed")
+        self.assertFalse(next(check["passed"] for check in result["checks"] if check["check"] == "complete_executed_source_archive"))
+
     def test_default_rejects_extra_current_module(self):
         with self.current_view(additions=[(self.addition, b"# independent metadata check\n")]):
             result = self.verify()

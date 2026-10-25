@@ -1,0 +1,259 @@
+{
+  "version": "generation_union_transfer_development_v1",
+  "registered_rows": 160,
+  "recorded_rows": 160,
+  "source_stories": 8,
+  "common_fact_constructions": 8,
+  "label_set_instances": 16,
+  "arms": {
+    "M": {
+      "registered_tasks": 40,
+      "legal_tasks": 32,
+      "correct": 25,
+      "ready": 32,
+      "joint_masked_legal_tasks": 32,
+      "joint_correct_no_masking_gap": 23,
+      "secondary_serialization_legal_tasks": 32,
+      "secondary_serialization_correct": 28,
+      "secondary_joint_correct_no_masking_gap": 26,
+      "build_block": 0,
+      "preprocessing_block": 0,
+      "true_model_unknown": 1,
+      "restoration_failure": 4,
+      "outsider_blocked": 8,
+      "unauthorized_output": 0,
+      "supported_legal_tasks": 32,
+      "ready_masked_requests": 32,
+      "ready_with_masking_gaps": 4,
+      "complete_spans": 35,
+      "partial_spans": 5,
+      "unmasked_spans": 0,
+      "extra_masked_characters": 304,
+      "build_stories": 8,
+      "build_successes": 8,
+      "stored_characters": 942,
+      "stored_record_json_bytes": 36218,
+      "stored_source_copy_characters": 2096,
+      "source_characters": 1014,
+      "builder_calls_allocated": 8,
+      "migration_detector_calls": 104,
+      "answer_calls": 32,
+      "intent_applied": 0,
+      "by_language": {
+        "en": {
+          "legal": 16,
+          "correct": 13
+        },
+        "zh": {
+          "legal": 16,
+          "correct": 12
+        }
+      }
+    },
+    "U": {
+      "registered_tasks": 40,
+      "legal_tasks": 32,
+      "correct": 20,
+      "ready": 27,
+      "joint_masked_legal_tasks": 32,
+      "joint_correct_no_masking_gap": 20,
+      "secondary_serialization_legal_tasks": 32,
+      "secondary_serialization_correct": 22,
+      "secondary_joint_correct_no_masking_gap": 22,
+      "build_block": 0,
+      "preprocessing_block": 5,
+      "true_model_unknown": 4,
+      "restoration_failure": 3,
+      "outsider_blocked": 8,
+      "unauthorized_output": 0,
+      "supported_legal_tasks": 32,
+      "ready_masked_requests": 27,
+      "ready_with_masking_gaps": 0,
+      "complete_spans": 35,
+      "partial_spans": 0,
+      "unmasked_spans": 0,
+      "extra_masked_characters": 296,
+      "build_stories": 8,
+      "build_successes": 8,
+      "stored_characters": 942,
+      "stored_record_json_bytes": 36218,
+      "stored_source_copy_characters": 2096,
+      "source_characters": 1014,
+      "builder_calls_allocated": 8,
+      "migration_detector_calls": 100,
+      "answer_calls": 27,
+      "intent_applied": 0,
+      "by_language": {
+        "en": {
+          "legal": 16,
+          "correct": 10
+        },
+        "zh": {
+          "legal": 16,
+          "correct": 10
+        }
+      }
+    },
+    "G": {
+      "registered_tasks": 40,
+      "legal_tasks": 32,
+      "correct": 23,
+      "ready": 32,
+      "joint_masked_legal_tasks": 32,
+      "joint_correct_no_masking_gap": 23,
+      "secondary_serialization_legal_tasks": 32,
+      "secondary_serialization_correct": 27,
+      "secondary_joint_correct_no_masking_gap": 27,
+      "build_block": 0,
+      "preprocessing_block": 0,
+      "true_model_unknown": 3,
+      "restoration_failure": 6,
+      "outsider_blocked": 8,
+      "unauthorized_output": 0,
+      "supported_legal_tasks": 32,
+      "ready_masked_requests": 32,
+      "ready_with_masking_gaps": 0,
+      "complete_spans": 40,
+      "partial_spans": 0,
+      "unmasked_spans": 0,
+      "extra_masked_characters": 304,
+      "build_stories": 8,
+      "build_successes": 8,
+      "stored_characters": 942,
+      "stored_record_json_bytes": 36217,
+      "stored_source_copy_characters": 2096,
+      "source_characters": 1014,
+      "builder_calls_allocated": 8,
+      "migration_detector_calls": 32,
+      "answer_calls": 32,
+      "intent_applied": 0,
+      "by_language": {
+        "en": {
+          "legal": 16,
+          "correct": 12
+        },
+        "zh": {
+          "legal": 16,
+          "correct": 11
+        }
+      }
+    },
+    "T": {
+      "registered_tasks": 40,
+      "legal_tasks": 32,
+      "correct": 25,
+      "ready": 32,
+      "joint_masked_legal_tasks": 32,
+      "joint_correct_no_masking_gap": 25,
+      "secondary_serialization_legal_tasks": 32,
+      "secondary_serialization_correct": 29,
+      "secondary_joint_correct_no_masking_gap": 29,
+      "build_block": 0,
+      "preprocessing_block": 0,
+      "true_model_unknown": 3,
+      "restoration_failure": 4,
+      "outsider_blocked": 8,
+      "unauthorized_output": 0,
+      "supported_legal_tasks": 32,
+      "ready_masked_requests": 32,
+      "ready_with_masking_gaps": 0,
+      "complete_spans": 40,
+      "partial_spans": 0,
+      "unmasked_spans": 0,
+      "extra_masked_characters": 304,
+      "build_stories": 8,
+      "build_successes": 8,
+      "stored_characters": 942,
+      "stored_record_json_bytes": 36217,
+      "stored_source_copy_characters": 2096,
+      "source_characters": 1014,
+      "builder_calls_allocated": 8,
+      "migration_detector_calls": 104,
+      "answer_calls": 32,
+      "intent_applied": 0,
+      "by_language": {
+        "en": {
+          "legal": 16,
+          "correct": 12
+        },
+        "zh": {
+          "legal": 16,
+          "correct": 13
+        }
+      }
+    }
+  },
+  "common_build_failures": 0,
+  "union_label_set_failures": 0,
+  "generation_calls_observed": 199,
+  "builder_generations": 8,
+  "write_annotation_generations": 18,
+  "union_migration_generations": 50,
+  "answer_generations": 123,
+  "build_encoder_calls": 18,
+  "write_annotation_encoder_calls": 18,
+  "total_encoder_calls": 326,
+  "union_label_stories_ready": 8,
+  "per_arm_operation_costs": {
+    "M": {
+      "encoder_calls": 104,
+      "generation_calls": 0,
+      "answer_calls": 32,
+      "union_cache_hits": 0
+    },
+    "U": {
+      "encoder_calls": 50,
+      "generation_calls": 50,
+      "answer_calls": 27,
+      "union_cache_hits": 54
+    },
+    "G": {
+      "encoder_calls": 32,
+      "generation_calls": 0,
+      "answer_calls": 32,
+      "union_cache_hits": 0
+    },
+    "T": {
+      "encoder_calls": 104,
+      "generation_calls": 0,
+      "answer_calls": 32,
+      "union_cache_hits": 0
+    }
+  },
+  "request_wire_json_bytes": 291459,
+  "detector_call_accounting_complete": true,
+  "implementation_unchanged": true,
+  "closed_phase_attempts": 0,
+  "cloud_calls": 0,
+  "new_api_cost_cny": 0,
+  "cost_scope": "Common construction and union write annotation paid once; operation costs by arm. Label-set counts are not independent fact constructions.",
+  "scope": "Exposed synthetic development; same-host trusted full-source envelopes, signed exact-fact JSON handoff. Two labels are not independent sources. No native interoperability, privacy proof or novelty claim.",
+  "evidence_verification": {
+    "status": "passed",
+    "current_snapshot_identical_at_verification": true
+  },
+  "mechanism_observations": {
+    "annotations_ok": 18,
+    "union_label_sets_ready": 8,
+    "label_fallbacks_G": 0,
+    "label_fallbacks_T": 0,
+    "M_to_G_changed_masking_tasks": 4,
+    "G_T_nonce_normalized_identical_inputs": 32,
+    "scope": "Independent verifier checked actual annotation member responses, labels and downstream payloads. G/T answer score variation is not evidence of rescan benefit."
+  },
+  "acceptance_status": "not_passed",
+  "limits": [
+    "Eight exposed synthetic development stories, not independent generalization.",
+    "Zero registered literal masking gaps does not prove semantic privacy or detector precision targets.",
+    "Strong annotation and authenticated reuse are standard mechanisms, not established paper novelty."
+  ],
+  "artifact_sha256": {
+    "plan.json": "1cdffa123572d99594956ce1ddade5bf77b4399558d6674ff971987bd2abf42c",
+    "report.json": "72b1179ea552ea3526cd1056e1f90715a17dffffb178669d5defb2d0eb37e9d3",
+    "rows.json": "4f52ff299a206e8f188343eefef93ceed37aa06e2593b89340b019e49313a36b",
+    "annotations.json": "6f1a41e7d696aa5b4c99086e6096ecd213d2f93dd8da5db708387c7e86888df7",
+    "fact_bindings.json": "fba3e65dbf31622fa4f8f90c83b0c47bbe5e89a3d661428638a003181d499531",
+    "request_transport.jsonl": "f60f4e2f025d6f4cd170e27e2bbfe936611ec8c7b53738cf074f99a6fa93999c",
+    "independent_verification.json": "8e589ab5132b16f7509ee6d98c6b3b83b68211f5c51949a01a17bb259a2c67bb"
+  }
+}

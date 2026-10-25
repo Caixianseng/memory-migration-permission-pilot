@@ -14,6 +14,7 @@ if __name__ == "__main__":
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--config", type=Path, default=Path("configs/local_privacy_detector.json"))
     parser.add_argument("--model-root", type=Path, default=Path(".runtime/github_ner"))
+    parser.add_argument("--paired-boundary", action="store_true", help="Opt in to five legacy/boundary pairs plus the original raw control")
     args = parser.parse_args()
     network = {"loopback_connections": 0, "external_attempts_blocked": 0}
     def audit(event, values):
@@ -27,6 +28,6 @@ if __name__ == "__main__":
     from memory_migration_study.semantic_memory_benchmark import run
     from memory_migration_study.reuse_benchmark import save
     report = run(args.corpus, args.output, args.model_root, json.loads(args.config.read_text(encoding="utf-8")), split=args.split, detector_kind=args.detector_kind,
-                 progress=lambda row: print(json.dumps(row), flush=True))
+                 paired_boundary=args.paired_boundary, progress=lambda row: print(json.dumps(row), flush=True))
     save(args.output / "network_audit.json", network)
     print(json.dumps({"output": str(args.output), "report": report, "network": network}, ensure_ascii=False))

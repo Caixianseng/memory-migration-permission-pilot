@@ -1,0 +1,71 @@
+{
+  "version": "native_exact_fact_bridge_scoped_summary_v1",
+  "runs": {
+    "v1": {
+      "version": "native_exact_fact_research_gateway_bridge_v1",
+      "status": "failed",
+      "functional_checks": 17,
+      "passed_checks": 17,
+      "failed_checks": [],
+      "generation_calls": 0,
+      "source_embedding": 2,
+      "target_embedding": 4,
+      "blocked_network_events": 4,
+      "report_sha256": "6e74ba38aa5dc0f116bab0a01951d804bc7c188338d046f739dddf7fd720cc48"
+    },
+    "v2": {
+      "version": "native_exact_fact_research_gateway_bridge_v2",
+      "status": "passed",
+      "functional_checks": 17,
+      "passed_checks": 17,
+      "failed_checks": [],
+      "generation_calls": 0,
+      "source_embedding": 2,
+      "target_embedding": 4,
+      "blocked_network_events": 0,
+      "report_sha256": "413a2765895e18e8daef3aec11317b7e1411f2714f972bf53366d04877b9af61"
+    },
+    "v3": {
+      "version": "native_exact_fact_research_gateway_bridge_v3",
+      "status": "failed",
+      "functional_checks": 29,
+      "passed_checks": 25,
+      "failed_checks": [
+        "export_disable_does_not_revoke_already_delivered_copies",
+        "native_copies_still_visible_before_explicit_cleanup",
+        "all_old_ids_removed_resident_and_valid_control_preserved",
+        "replay_left_target_matrix_unchanged"
+      ],
+      "generation_calls": 0,
+      "source_embedding": 2,
+      "target_embedding": 21,
+      "blocked_network_events": 0,
+      "report_sha256": "d0879b96e57580e5f74fb2b5a8a3d072e33d3dab93fe6accfce39a2786cece52"
+    },
+    "trace_only": {
+      "version": "native_exact_fact_research_gateway_bridge_v3",
+      "status": "passed",
+      "functional_checks": 29,
+      "passed_checks": 29,
+      "failed_checks": [],
+      "generation_calls": 0,
+      "source_embedding": 2,
+      "target_embedding": 21,
+      "blocked_network_events": 0,
+      "report_sha256": "96e355320a7174c504d6affce7bc2f649645ed69c3330719931b8f7af9ace8af",
+      "independent_evidence_status": "passed"
+    }
+  },
+  "original_v3_failure_preserved": true,
+  "stable_native_acceptance_proven": false,
+  "overall_paper_goal_passed": false,
+  "cloud_calls": 0,
+  "new_api_cost_cny": 0,
+  "scope": "Finite synthetic exact-fact source fixture through research ACL gateway to user-scoped WebUI; no generative Agent task in these native trials.",
+  "limits": [
+    "V1/V2 have fewer qualification dimensions; their pass flags do not replace V3.",
+    "One trace-only same-sequence pass does not repair unexplained intermittent V3 nulls.",
+    "Generation and annotation effects are separate local studies, not proved combined native efficacy.",
+    "Standard ACL/export/copy/source-projection/cleanup controls are engineering strong baselines, not established novelty."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "controlled_signed_memory_transfer_integration",
+  "date": "2026-10-25",
+  "default_pipeline": "legacy",
+  "optional_pipeline": "boundary",
+  "shared_checks": [
+    "authenticated_actor_and_agent",
+    "record_signature",
+    "source_and_fact_binding",
+    "current_authorization",
+    "valid_signed_generation_labels_preserved",
+    "original_egress",
+    "restoration_all_records_reauthorization"
+  ],
+  "new_integration_tests_passed": 13,
+  "full_offline_tests_passed": 751,
+  "full_suite_seconds": 49.767,
+  "new_model_calls": 0,
+  "new_api_cost_cny": 0,
+  "optional_completion_and_role_modules": "fake_tests_only_effect_unvalidated",
+  "new_end_to_end_model_success_rate": null,
+  "paper_novelty": "not_established",
+  "overall_effectiveness_acceptance": "not_established",
+  "scope": "Controlled same-process authority and JSON handoff. Integration tests do not demonstrate native cross-backend interoperability, broad authorization security, or new model utility. Defaults retain the strong baseline.",
+  "component_sha256": {
+    "memory_migration_study/memory_labels.py": "e858ffb5640e268c45e8e8707c26a1cf38c781a170b58e2ba1c32582e9093d17",
+    "memory_migration_study/boundary_detector.py": "6bd9e1527d6eb772a05b89925c3db1cf160088a1fe73ee6b378affc1200cfd4d",
+    "memory_migration_study/boundary_preparation.py": "e4e8094bfae1a7b76954f7c576c4f53d0366104379b69e34000d901fe81275c8",
+    "tests/test_boundary_transfer.py": "f73ae3d3464e733fc4df360d023c34c92cc93b3aa8337e02681633067bb44a50",
+    "memory_migration_study/span_completion.py": "24cf30bf3cc6ac77580b8c0dbe789b04bdf101b8f7d60386a15ebb945078940b",
+    "memory_migration_study/semantic_refinement.py": "7c5eea539a0577b76f227bf53efb2776efeae3acf1e3feab9c3110360d211e3d"
+  }
+}

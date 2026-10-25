@@ -1,0 +1,92 @@
+{
+  "version": "project_stage_closeout_v1",
+  "date": "2026-10-25",
+  "project": "Agent memory migration with permission preservation",
+  "report": "docs/项目阶段收尾与任务汇报_2026-10-25.md",
+  "scope": "Stage closeout of a research prototype and evidence archive; not achievement of the overall publication goal.",
+  "offline_regression": {
+    "status": "passed",
+    "command": "python -B -X utf8 -m unittest discover -s tests -q",
+    "tests_run": 1028,
+    "test_runner_elapsed_seconds": 228.391,
+    "outer_elapsed_seconds": 234.75,
+    "exit_code": 0,
+    "local_receipt": "results/project_closeout_20261025/offline_regression.json"
+  },
+  "zero_model_demos": {
+    "reference_migration": "passed",
+    "privacy_roundtrip": "passed",
+    "local_receipt": "results/project_closeout_20261025/demo_verification.json"
+  },
+  "latest_task_development_comparison": {
+    "source_stories": 8,
+    "recorded_rows": 96,
+    "legal_tasks_per_arm": 32,
+    "default_A_strict_correct": 26,
+    "default_A_same_output_format_secondary_correct": 30,
+    "candidate_B_strict_correct": 24,
+    "candidate_B_same_output_format_secondary_correct": 28,
+    "default_changed": false,
+    "evidence": "benchmarks/query_schema_transfer_development_20261025_summary.json",
+    "is_new_independent_acceptance": false
+  },
+  "other_evidence": {
+    "generation_union": "benchmarks/generation_union_transfer_development_20261025_summary.json",
+    "pointer_answering_negative_result": "benchmarks/span_answer_transfer_development_20261025_summary.json",
+    "native_bridge": "benchmarks/native_exact_fact_bridge_20261025_summary.json",
+    "source_role_v1": {
+      "role_reference_items": 20,
+      "structured_tp": 0,
+      "structured_fn": 20,
+      "structured_review_rows": 8,
+      "weak_projection_tp": 19,
+      "actual_neural_forward_count": null,
+      "source_role_v2_plan_frozen": false,
+      "source_role_v2_real_run": false,
+      "local_receipt": "results/source_role_probe_development_20261025_v1/independent_verification.json"
+    },
+    "stored_union_role_replay": {
+      "source_stories": 8,
+      "selected_exact_facts": 18,
+      "stored_organization_candidates": 13,
+      "source_only_tp": 20,
+      "projectable_tp": 20,
+      "fp": 0,
+      "fn": 0,
+      "new_model_calls": 0,
+      "historical_shared_A_generation_calls": 26,
+      "historical_shared_A_encoder_calls": 36,
+      "downstream_task_effectiveness_proven": false,
+      "local_receipt": "results/union_role_baseline_replay_20261025_v1/replay.json"
+    },
+    "lifecycle_controlled_checks": 21,
+    "native_original_v3_checks_passed": 25,
+    "native_original_v3_checks_total": 29,
+    "native_trace_only_checks_passed": 29,
+    "native_trace_only_checks_total": 29,
+    "native_original_v3_failure_preserved": true,
+    "native_root_cause_known": false
+  },
+  "acceptance_status": {
+    "original_detection_recall_95_precision_90": false,
+    "new_independent_64_tasks_run": false,
+    "new_independent_joint_63_of_64": false,
+    "stable_native_acceptance_proven": false,
+    "combined_native_and_generative_task_acceptance": false,
+    "algorithm_advantage_over_complete_strong_baselines": false,
+    "paper_novelty_established": false,
+    "overall_publication_goal_achieved": false
+  },
+  "closeout_new_model_calls": 0,
+  "closeout_new_paid_api_calls": 0,
+  "closeout_new_api_cost_cny": 0,
+  "limits": [
+    "Engineering test counts are not model success rates or independent security cases.",
+    "Previously exposed development stories are not a fresh acceptance set.",
+    "Registered literal coverage is not comprehensive semantic privacy.",
+    "The same-process model task chain and native backend bridge remain separately evaluated.",
+    "A later diagnostic pass does not repair or erase the original native failure.",
+    "Source role v2 code remains an unexecuted research draft.",
+    "Raw local results, downloaded assets, credentials and environments are excluded from GitHub."
+  ]
+}

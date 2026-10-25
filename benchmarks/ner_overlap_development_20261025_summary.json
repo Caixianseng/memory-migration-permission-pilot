@@ -1,0 +1,51 @@
+{
+  "version": "source_ner_overlap_development_v1",
+  "rows": 8,
+  "actual_encoder_api_calls": 16,
+  "generation_calls": 0,
+  "cloud_calls": 0,
+  "new_api_cost_cny": 0,
+  "totals": {
+    "default_flat": {
+      "source_spans": 8,
+      "fully_covered": 7,
+      "partially_covered": 1,
+      "uncovered": 0,
+      "extra_covered_characters": 59,
+      "candidate_spans": 12
+    },
+    "allow": {
+      "source_spans": 8,
+      "fully_covered": 7,
+      "partially_covered": 1,
+      "uncovered": 0,
+      "extra_covered_characters": 59,
+      "candidate_spans": 12
+    },
+    "allow_longest_view": {
+      "source_spans": 8,
+      "fully_covered": 7,
+      "partially_covered": 1,
+      "uncovered": 0,
+      "extra_covered_characters": 59,
+      "candidate_spans": 12
+    }
+  },
+  "scoring_after_model_phase": true,
+  "limits": [
+    "Coverage unions are a proposal diagnostic, not sensitive-label precision or final egress.",
+    "All eight sources are exposed development data; the longest view uses the same encoder output."
+  ],
+  "default_allow_identical_story_geometries": 8,
+  "implementation_sha256": {
+    "scripts\\run_ner_overlap_diagnostic.py": "1c93ed119a3ca414cd3176936e0a6e3fcef92f11a4b392f95125b4d452b07bb0",
+    "memory_migration_study\\ner_detector.py": "89b3485c6a6a7759b99b5a5234665c024870b7b78de59661d19420109185615d"
+  },
+  "artifact_sha256": {
+    "plan.json": "a212dea507009c4f3ff212e711d9840b1b54550501fdc08404537a3890c616dc",
+    "rows.json": "fc689f9c49740a807978cc5d289a8a17af45b975bb978e9c711d329f961f19c6",
+    "report.json": "fcceec71c7698c7f4843affc00bdb22dfaecfe0f6f60d260a1ba087f6111e6fb",
+    "network_audit.json": "11fb4ba93844a15e2bf76736af314ec6053965f6e2d9f8a9b7af325a1be9faca"
+  },
+  "interpretation": "At fixed threshold 0.5, keeping overlaps did not supply any additional candidate; not a performance improvement."
+}

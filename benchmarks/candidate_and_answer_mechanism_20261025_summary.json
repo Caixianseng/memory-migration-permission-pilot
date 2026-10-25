@@ -1,0 +1,126 @@
+{
+  "kind": "development_mechanism_comparison",
+  "date": "2026-10-25",
+  "overall_effectiveness_acceptance": "not_established",
+  "related_offline_tests_passed": 179,
+  "new_local_answer_generations": 42,
+  "new_local_detection_generations": 37,
+  "new_local_generations_total": 79,
+  "new_encoder_calls": 0,
+  "new_cloud_calls": 0,
+  "new_api_cost_cny": 0,
+  "answer_groups": {
+    "free": {
+      "registered": 14,
+      "legal": 8,
+      "legal_correct": 8,
+      "denied": 6,
+      "denied_correct": 6,
+      "legal_unknown": 0,
+      "model_errors": 0,
+      "not_run": 0,
+      "input_exposure_requests": 0,
+      "unauthorized_final_disclosures": 0,
+      "local_generations": 14
+    },
+    "free_candidates": {
+      "registered": 14,
+      "legal": 8,
+      "legal_correct": 8,
+      "denied": 6,
+      "denied_correct": 6,
+      "legal_unknown": 0,
+      "model_errors": 0,
+      "not_run": 0,
+      "input_exposure_requests": 0,
+      "unauthorized_final_disclosures": 0,
+      "local_generations": 14
+    },
+    "evidence_id": {
+      "registered": 14,
+      "legal": 8,
+      "legal_correct": 8,
+      "denied": 6,
+      "denied_correct": 5,
+      "legal_unknown": 0,
+      "model_errors": 0,
+      "not_run": 0,
+      "input_exposure_requests": 0,
+      "unauthorized_final_disclosures": 0,
+      "local_generations": 14
+    }
+  },
+  "candidate_role_groups": {
+    "without_position": {
+      "tp": 14,
+      "fp": 4,
+      "fn": 4,
+      "precision": 0.7777777777777778,
+      "recall": 0.7777777777777778,
+      "materials": 22,
+      "needs_review": 1,
+      "local_generations": 19
+    },
+    "with_position": {
+      "tp": 15,
+      "fp": 5,
+      "fn": 3,
+      "precision": 0.75,
+      "recall": 0.8333333333333334,
+      "materials": 22,
+      "needs_review": 0,
+      "local_generations": 18
+    }
+  },
+  "same_22_materials_saved_gliner_baseline": {
+    "tp": 15,
+    "fp": 5,
+    "fn": 3,
+    "precision": 0.75,
+    "recall": 0.8333333333333334,
+    "materials": 22,
+    "needs_review": 0,
+    "new_model_calls": 0
+  },
+  "structured_candidate_oracle": {
+    "development": {
+      "materials": 80,
+      "gold_spans": 58,
+      "complete_gold_spans_in_pool": 57,
+      "oracle_recall_ceiling": 0.9827586206896551,
+      "proposed_candidates": 79,
+      "needs_review": 0,
+      "field_additions": 5,
+      "amount_additions": 1
+    },
+    "exposed_regression": {
+      "materials": 40,
+      "gold_spans": 20,
+      "complete_gold_spans_in_pool": 20,
+      "oracle_recall_ceiling": 1.0,
+      "proposed_candidates": 36,
+      "needs_review": 0,
+      "field_additions": 0,
+      "amount_additions": 0
+    }
+  },
+  "independent_answer_verification": {
+    "receipt_sha256": "120b448701b19b9f980df086c0d3b67a3b3e8e89554e6c3657f8aa97d5638482",
+    "status": "passed",
+    "failed_checks": [],
+    "scope": "Consistency verification of 42 local calls, not overall acceptance. Seven explicit execution files frozen, not every transitive import."
+  },
+  "component_sha256": {
+    "memory_migration_study/candidate_proposals.py": "32be4b9a305f43e8f9701c3b50c822f0a98b13411c2d12dd57a2692dc4b9e323",
+    "memory_migration_study/candidate_adjudicator.py": "9124421e79051fa0cceea7c3a9dbfa3eceaf9fe5f46d3ca5e9e62913df7e8bf2",
+    "memory_migration_study/answer_evidence.py": "d3d151da9318ed5b6e993a27cf215e1165be37d884493de25664d98cd432266a",
+    "memory_migration_study/evidence_answerer.py": "354a99f342113e9adab5e6efb8a046918bb7f46d8cac1296ff2a53c175683a64",
+    "memory_migration_study/structured_candidates.py": "f460c12e838d1fc029da71fbe593cc835c4a8c082d6fb4aba0c499e6b1bcc22d",
+    "memory_migration_study/amount_candidates.py": "bf5d5b71300da1f6dbe92c79f79690389779738d7a29241e574dc551063d9640",
+    "scripts/run_evidence_answer_diagnostic.py": "171b75691b5a9a20d2303b3a38b24c007579a649296bc4e1db91d9081267ea97",
+    "scripts/run_candidate_adjudication_diagnostic.py": "5ac9608b4855ba10a3a307854b19c9406cf36edbafd5e77337dc06b3d14b3f01",
+    "scripts/analyze_structured_candidate_coverage.py": "14ec788c658c32bf5df019b4245a3e0778ae3fa1e998275a2874c3bc8dcb8cd2",
+    "scripts/verify_evidence_answer_diagnostic.py": "d6f914d82950fae43e2defc734f600ecdf515e3b9fd46b3ce6b98b0168e52dcf"
+  },
+  "scope": "Exposed development/regression only. Answer study uses the pre-existing business registry and all seven tasks twice, not fresh category-only detection or cloud evidence. Position adjudication did not improve the same saved NER baseline. Field/amount availability is an oracle candidate ceiling, not achieved detection. Defaults were not promoted. Raw local artifacts retain public original text and ID-to-PVT views; this aggregate has neither."
+}

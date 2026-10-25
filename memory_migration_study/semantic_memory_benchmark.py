@@ -36,6 +36,22 @@ ARMS = {
 VERSION = "semantic_memory_paired_v1"
 
 
+def study_arms(paired_boundary=False):
+    """Keep the original six defaults; opt in to five paired arms plus raw."""
+    if type(paired_boundary) is not bool:
+        raise ValueError("invalid_paired_boundary_mode")
+    if not paired_boundary:
+        return dict(ARMS)
+    arms = {}
+    for name, spec in ARMS.items():
+        if spec[1] == "raw":
+            arms[name] = spec
+        else:
+            arms[name+"__legacy"] = spec
+            arms[name+"__boundary"] = spec
+    return arms
+
+
 class CountingDetector:
     """Observe physical member calls without recording text or candidates."""
     def __init__(self, detector, default_kind="local_encoder"):
@@ -58,6 +74,8 @@ class CountingDetector:
         if valid:
             for kind, calls in breakdown.items():
                 self.counts[kind] += calls
+            if breakdown.get("unknown", 0) or result.get("local_calls_complete", True) is not True:
+                self.complete = False
         else:
             self.complete = False
         return result
@@ -80,8 +98,21 @@ def score(row, gold):
     expected = gold["answers"].get(row["task_id"])
     legal = row["actor_id"] == "owner"
     answer = row.get("final_answer")
-    return {"legal": legal,
-            "correct": legal and isinstance(answer, str) and answer.strip().casefold() == expected.casefold(),
+    correct = legal and isinstance(answer, str) and answer.strip().casefold() == expected.casefold()
+    secondary_enabled = row.get("secondary_serialization_registered") is True
+    secondary_answer = (row.get("secondary_serialization") or {}).get("final_answer")
+    secondary_correct = (legal and isinstance(secondary_answer, str)
+                         and secondary_answer.strip().casefold() == expected.casefold())
+    masking = row.get("masking")
+    no_gap = (isinstance(masking, dict) and masking.get("ready") is True
+              and type(masking.get("partial")) is int and masking["partial"] == 0
+              and type(masking.get("unmasked")) is int and masking["unmasked"] == 0)
+    return {"legal": legal, "correct": correct,
+            "joint_correct_no_masking_gap": None if row.get("mode") == "raw" else
+                bool(correct and row.get("prepare_status") == "ok" and no_gap),
+            "secondary_serialization_correct": bool(secondary_correct) if secondary_enabled else None,
+            "secondary_joint_correct_no_masking_gap": bool(secondary_correct and row.get("prepare_status") == "ok" and no_gap)
+                if secondary_enabled else None,
             "build_block": legal and row.get("build_status") != "ok",
             "preprocessing_block": legal and row.get("prepare_status") != "ok",
             "true_model_unknown": legal and (row.get("model_answer") or "").strip().casefold() == "unknown",
@@ -91,18 +122,27 @@ def score(row, gold):
             "unauthorized_output": not legal and (row.get("prepare_status") == "ok" or bool(answer))}
 
 
-def aggregate(rows, builds):
+def aggregate(rows, builds, arms=None):
+    arms = ARMS if arms is None else arms
     out = {}
-    for arm in ARMS:
+    for arm in arms:
         selected = [r for r in rows if r["arm"] == arm]
         legal = [r for r in selected if r["score"]["legal"]]
         ready = [r for r in legal if r.get("prepare_status") == "ok"]
         masked = [r for r in ready if r["mode"] != "raw"]
-        family = ARMS[arm][0]
+        family = arms[arm][0]
         creation = [b for b in builds if b["builder"] == family]
         out[arm] = {
             "registered_tasks": len(selected), "legal_tasks": len(legal),
             "correct": sum(r["score"]["correct"] for r in legal), "ready": len(ready),
+            "joint_masked_legal_tasks": sum(r["mode"] != "raw" for r in legal),
+            "joint_correct_no_masking_gap": None if arms[arm][1] == "raw" else
+                sum(r["score"].get("joint_correct_no_masking_gap") is True for r in legal),
+            "secondary_serialization_legal_tasks": sum(r.get("secondary_serialization_registered") is True for r in legal),
+            "secondary_serialization_correct": None if not any(r.get("secondary_serialization_registered") is True for r in legal)
+                else sum(r["score"].get("secondary_serialization_correct") is True for r in legal),
+            "secondary_joint_correct_no_masking_gap": None if not any(r.get("secondary_serialization_registered") is True for r in legal)
+                else sum(r["score"].get("secondary_joint_correct_no_masking_gap") is True for r in legal),
             **{key: sum(r["score"][key] for r in selected) for key in
                ("build_block", "preprocessing_block", "true_model_unknown", "restoration_failure", "outsider_blocked", "unauthorized_output")},
             "supported_legal_tasks": sum(r["required_fact_retained"] for r in legal),
@@ -127,28 +167,62 @@ def aggregate(rows, builds):
     return out
 
 
-def run(corpus, output, model_root, config, *, split="development", detector_kind="gliner", progress=None):
+def run(corpus, output, model_root, config, *, split="development", detector_kind="gliner", progress=None,
+        paired_boundary=False):
     if detector_kind not in {"gliner", "union"}:
         raise ValueError("unknown_detector_kind")
+    arms = study_arms(paired_boundary)
+    if paired_boundary and (split != "development" or detector_kind != "gliner"):
+        raise ValueError("paired_boundary_protocol_requires_development_gliner")
     corpus, output = Path(corpus), Path(output)
     runtime_bytes = (corpus / split / "runtime.json").read_bytes()
     evaluation_bytes = (corpus / split / "evaluation.json").read_bytes()
-    runtime, evaluation = json.loads(runtime_bytes), json.loads(evaluation_bytes)
+    runtime = json.loads(runtime_bytes)
+    evaluation = None if paired_boundary else json.loads(evaluation_bytes)
+    expected_rows = sum(len(story["tasks"]) for story in runtime)*len(arms)
+    legal_tasks = sum(task["actor_id"] == "owner" for story in runtime for task in story["tasks"])
+    registered_generation_bounds = {"answers": legal_tasks*len(arms), "query_intent": legal_tasks,
+                                    "model_build": len(runtime)*2}
+    if paired_boundary and (registered_generation_bounds["answers"] > 352
+            or registered_generation_bounds["query_intent"] > 32
+            or registered_generation_bounds["model_build"] > 16
+            or sum(registered_generation_bounds.values()) > 400):
+        raise ValueError("paired_boundary_registered_generation_budget_exceeded")
+    if (len({s["story_id"] for s in runtime}) != len(runtime)
+            or any(len({t["task_id"] for t in s["tasks"]}) != len(s["tasks"]) for s in runtime)):
+        raise ValueError("duplicate_story_or_task_identity")
     output.mkdir(parents=True, exist_ok=False)
     package = Path(__file__).parent
     hashes = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in package.glob("*.py")}
+    entrypoints = [package.parent/"scripts"/"run_semantic_memory_benchmark.py"]
+    paired_launcher = package.parent/"scripts"/"run_boundary_transfer_diagnostic.py"
+    if paired_boundary and paired_launcher.exists():
+        entrypoints.append(paired_launcher)
+    entrypoint_hashes = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in entrypoints}
     archive = output / "implementation"
     archive.mkdir()
     for p in package.glob("*.py"):
         shutil.copy2(p, archive / p.name)
-    save(output / "plan.json", {"version": VERSION, "split": split, "detector_kind": detector_kind, "arms": ARMS, "ordering_seed": 2026102502,
+    for p in entrypoints:
+        shutil.copy2(p, archive/p.name)
+    save(output / "config.json", config)
+    save(output / "plan.json", {"version": VERSION, "split": split, "detector_kind": detector_kind,
+         "arms": arms, "paired_boundary": paired_boundary, "expected_rows": expected_rows, "ordering_seed": 2026102502,
+         "score_schema_version": 2,
          "runtime_sha256": hashlib.sha256(runtime_bytes).hexdigest(),
          "evaluation_sha256": hashlib.sha256(evaluation_bytes).hexdigest(), "implementation_sha256": hashes,
+         "entrypoint_sha256": entrypoint_hashes, "config_sha256": _digest(config),
+         "evaluation_timing": "after_all_model_processing" if paired_boundary else "legacy_per_row_scoring",
+         "secondary_serialization": "same_answer_exact_current_outbound_token_canonicalization_then_full_restore_no_new_model_calls" if paired_boundary else None,
+         "generation_limits": {"max_generations": 400, "max_answer": 352, "max_intent": 32, "max_build": 16,
+             "registered_upper_bounds": registered_generation_bounds,
+             "hard_cap_enforced_by": "run_boundary_transfer_diagnostic launcher"} if paired_boundary else None,
          "config": config, "no_cloud": True, "threshold": .5,
          "unit": "Authored source story; related templates cluster stories. Tasks and repeated conditions are not independent stories.",
          "scope": "Full runtime construction, no gold-fed facts; lossless source chunks are a larger-storage baseline, not semantic compression. Raw control is synthetic local-only. Fixed restored CJK evidence boundaries in all arms."})
     save(output / "runtime.json", runtime)
-    save(output / "evaluation.json", evaluation)
+    if not paired_boundary:
+        save(output / "evaluation.json", evaluation)
     runtime_model = LocalNerRuntime(model_root)
     detector = GlinerEntityAgent(runtime_model, approved_policies=[s["policy"] for s in runtime])
     local = LocalSensitivityAgent(config)
@@ -163,7 +237,7 @@ def run(corpus, output, model_root, config, *, split="development", detector_kin
     save(output / "runtime_identity.json", {"ner": runtime_model.identity,
          "initialization_seconds": runtime_model.initialization_seconds,
          "detector": detector.cache_identity()})
-    rows, builds, intents, stores = [], [], [], []
+    rows, builds, intents, stores, pending_scores = [], [], [], [], []
     for story in runtime:
         source, policy, sid = story["source"], story["policy"], story["story_id"]
         authority = MemoryLabelAuthority(secrets.token_bytes(32))
@@ -195,14 +269,17 @@ def run(corpus, output, model_root, config, *, split="development", detector_kin
                 intent = classifier(query=task["query"], request_id=request_id)
                 intents.append(dict(intent, story_id=sid, task_id=task["task_id"]))
                 save(output / "intents.json", intents)
-            order = list(ARMS)
+            order = list(arms)
             random.Random(f"2026102502:{sid}:{task['task_id']}").shuffle(order)
             for arm in order:
-                family, mode, use_intent = ARMS[arm]
+                family, mode, use_intent = arms[arm]
+                privacy_pipeline = "boundary" if paired_boundary and arm.endswith("__boundary") else "legacy"
                 records = records_by_builder[family]
                 built = next(b for b in reversed(builds) if b["story_id"] == sid and b["builder"] == family)
                 row = {"story_id": sid, "language": story["language"], "template_family": story["template_family"],
                        "task_id": task["task_id"], "actor_id": task["actor_id"], "arm": arm, "mode": mode,
+                       "privacy_pipeline": privacy_pipeline,
+                       "secondary_serialization_registered": paired_boundary and mode != "raw",
                        "build_status": built["status"], "prepare_status": "blocked", "prepare_error": "memory_build_unavailable",
                        "detector_calls": 0, "answer_calls": 0, "model_answer": None, "final_answer": None,
                        "restoration_status": None, "intent_applied": False}
@@ -218,10 +295,14 @@ def run(corpus, output, model_root, config, *, split="development", detector_kin
                             prepared = {"status": "ok", "payload": {"query": task["query"], "memories": [{"source_id": r["record_id"], "text": r["text"]} for r in records]}}
                     else:
                         prepared = prepare_labeled_transfer(records, task["query"], policy, authority=authority,
-                            actor_id=task["actor_id"], agent_id="target-agent", request_id=request_id, mode=mode, agent=detector)
+                            actor_id=task["actor_id"], agent_id="target-agent", request_id=request_id, mode=mode,
+                            agent=detector, privacy_pipeline=privacy_pipeline)
                         row.update(prepare_status=prepared["status"], prepare_error=prepared.get("error"),
                                    detector_calls=prepared.get("local_calls", 0), module_authorization_error=prepared.get("error"),
                                    checks=prepared.get("checks"), detection=prepared.get("detection"))
+                        if paired_boundary:
+                            row.update(prepare_metadata=copy.deepcopy(prepared.get("metadata", {})),
+                                       egress=copy.deepcopy(prepared.get("egress")))
                     if prepared and prepared["status"] == "ok":
                         row.update(prepare_status="ok", prepare_error=None)
                         response = intent_answerer(prepared["payload"], intent_result=intent, original_query=task["query"], request_id=request_id) if use_intent else answerer(prepared["payload"])
@@ -236,26 +317,62 @@ def run(corpus, output, model_root, config, *, split="development", detector_kin
                                 restored = restore_labeled_answer(response["answer"], prepared, records, policy, authority=authority,
                                     actor_id=task["actor_id"], agent_id="target-agent", request_id=request_id)
                                 row.update(final_answer=restored.get("answer"), restoration_status=restored["status"], restoration_error=restored.get("error"))
+                                if paired_boundary:
+                                    from .answer_serialization import canonicalize_answer
+                                    canonical = canonicalize_answer(response["answer"], answerer.last_payload or prepared["payload"])
+                                    secondary = restore_labeled_answer(canonical["answer"], prepared, records, policy,
+                                        authority=authority, actor_id=task["actor_id"], agent_id="target-agent", request_id=request_id)
+                                    row["secondary_serialization"] = {"decision": canonical["decision"],
+                                        "canonical_answer": canonical["answer"], "final_answer": secondary.get("answer"),
+                                        "restoration_status": secondary["status"], "restoration_error": secondary.get("error")}
                 # Evaluation begins after every mechanism has finished for this row.
                 row["inference_counts"] = detector.delta(before_calls)
-                gold = evaluation[sid]
-                expected = gold["answers"].get(task["task_id"])
-                row["required_fact_retained"] = bool(expected and any(expected in r["text"] for r in records))
-                if mode != "raw":
-                    row["masking"] = score_masking({"source": source}, gold, records, prepared or {"status": "blocked"})
-                row["score"] = score(row, gold)
-                if prepared:
-                    prepared["mapping"] = None
+                if paired_boundary:
+                    # Opaque maps stay process-local until actual masking is
+                    # scored; neither rows nor logs contain these references.
+                    pending_scores.append((row, source, records, prepared))
+                else:
+                    gold = evaluation[sid]
+                    expected = gold["answers"].get(task["task_id"])
+                    row["required_fact_retained"] = bool(expected and any(expected in r["text"] for r in records))
+                    if mode != "raw":
+                        row["masking"] = score_masking({"source": source}, gold, records, prepared or {"status": "blocked"})
+                    row["score"] = score(row, gold)
+                    if prepared:
+                        prepared["mapping"] = None
                 rows.append(row)
                 save(output / "rows.json", rows)
                 if progress:
-                    progress({"completed": len(rows), "expected": len(runtime)*5*len(ARMS), "story": sid, "arm": arm,
-                              "prepare": row["prepare_status"], "correct": row["score"]["correct"]})
+                    progress({"completed": len(rows), "expected": expected_rows, "story": sid, "arm": arm,
+                              "prepare": row["prepare_status"], "correct": row.get("score", {}).get("correct")})
+    if paired_boundary:
+        if len(rows) != expected_rows:
+            raise ValueError("registered_rows_missing")
+        if hashlib.sha256((corpus/split/"evaluation.json").read_bytes()).hexdigest() != hashlib.sha256(evaluation_bytes).hexdigest():
+            raise ValueError("evaluation_changed_during_study")
+        evaluation = json.loads(evaluation_bytes)
+        if set(evaluation) != {s["story_id"] for s in runtime}:
+            raise ValueError("evaluation_story_identity_mismatch")
+        for row, source, records, prepared in pending_scores:
+            gold = evaluation[row["story_id"]]
+            expected = gold["answers"].get(row["task_id"])
+            row["required_fact_retained"] = bool(expected and any(expected in r["text"] for r in records))
+            if row["mode"] != "raw":
+                row["masking"] = score_masking({"source": source}, gold, records, prepared or {"status": "blocked"})
+            row["score"] = score(row, gold)
+            if prepared:
+                prepared["mapping"] = None
+        pending_scores.clear()
+        save(output/"evaluation.json", evaluation)
+        save(output/"rows.json", rows)
     after = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in package.glob("*.py")}
-    if after != hashes:
+    if after != hashes or entrypoint_hashes != {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in entrypoints}:
         raise ValueError("implementation_changed_during_study")
     report = {"version": VERSION, "split": split, "detector_kind": detector_kind, "source_stories": len(runtime),
-              "template_families": len({s["template_family"] for s in runtime}), "arms": aggregate(rows, builds),
+              "template_families": len({s["template_family"] for s in runtime}), "arms": aggregate(rows, builds, arms),
+              "paired_boundary": paired_boundary, "registered_rows": expected_rows, "recorded_rows": len(rows),
+              "legal_rows": sum(row["actor_id"] == "owner" for row in rows),
+              "outsider_rows": sum(row["actor_id"] != "owner" for row in rows),
               "model_builder_generations": sum(b["local_calls"] for b in builds if b["builder"] == "model"),
               "coverage_builder_encoder_calls": sum(b["inference_counts"]["local_encoder"] for b in builds),
               "coverage_builder_detector_generations": sum(b["inference_counts"]["local_generation"] for b in builds),
@@ -273,10 +390,14 @@ def run(corpus, output, model_root, config, *, split="development", detector_kin
 
 def render(output, report):
     esc = lambda x: html.escape(str(x))
-    keys = ("legal_tasks", "correct", "ready", "build_successes", "supported_legal_tasks", "true_model_unknown", "restoration_failure",
+    keys = ("legal_tasks", "correct", "joint_correct_no_masking_gap", "secondary_serialization_correct",
+            "secondary_joint_correct_no_masking_gap", "ready", "build_successes", "supported_legal_tasks", "true_model_unknown", "restoration_failure",
             "ready_with_masking_gaps", "extra_masked_characters", "migration_detector_calls", "answer_calls")
     body = '<!doctype html><meta charset="utf-8"><title>完整记忆构建与语义辅助对照</title><style>body{font:16px/1.7 system-ui;margin:32px}table{border-collapse:collapse;display:block;overflow:auto}td,th{border:1px solid #bcc;padding:8px}p{max-width:1100px}</style><h1>完整记忆构建与语义辅助对照</h1>'
-    body += '<p>新故事、真实本地构建、固定NER与回答模型。程序分块保留更多原文，是更大存储基线，不声称语义摘要。所有条件采用修复后的中文证据边界。闭集意图仅补充所问字段，不撤掉遮蔽、不赋予权限。</p>'
+    body += ('<p>既有开发故事，已暴露，用于开发诊断；本地真实模型构建与原文分块共享后，比较 legacy/boundary。'
+             '主成绩保持原回答；序列化修复属于同一输出的次要配对分析，重新经过完整恢复核权，没有额外模型调用。'
+             '安全效用交集仅覆盖受控静态授权和注册敏感跨度，不是全面安全证明。</p>') if report.get("paired_boundary") else '<p>新故事、真实本地构建、固定NER与回答模型。</p>'
+    body += '<p>程序分块保留更多原文，是更大存储基线，不声称语义摘要。所有条件采用修复后的中文证据边界。闭集意图仅补充所问字段，不撤掉遮蔽、不赋予权限。raw 对照不适用遮蔽交集和序列化修复指标。</p>'
     body += '<p>范围：'+esc(report["split"])+'；故事 '+esc(report["source_stories"])+'；模板族 '+esc(report["template_families"])+ '。重复题和条件不是独立故事。云端调用及API新增费用为0。</p><table><tr><th>条件</th>'+''.join('<th>'+esc(k)+'</th>' for k in keys)+'</tr>'
     for arm, metrics in report["arms"].items():
         body += '<tr><td>'+esc(arm)+'</td>'+''.join('<td>'+esc(metrics[k])+'</td>' for k in keys)+'</tr>'

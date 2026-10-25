@@ -1,0 +1,313 @@
+{
+  "version": "source_roles_reference_v1",
+  "created_date": "2026-10-25",
+  "split": "exposed_development",
+  "provenance": {
+    "annotation_origin": "AI-precompiled from runtime.source.text only",
+    "root_review_status": "reviewed_by_root_agent_from_source_before_probe_inference",
+    "human_annotation": false,
+    "query_or_evaluation_used": false,
+    "future_model_output_used": false,
+    "scope": "Development scoring reference only; not blind test, independent human annotation, sensitivity labels or authorization grants.",
+    "additional_local_or_cloud_experiment_inference_calls": 0,
+    "review_origin": "Root AI agent reread all eight original sources and all twenty exact value/support annotations before probe inference. This is not an independent human review or annotation.",
+    "independent_human_review": false
+  },
+  "offset_contract": "Python Unicode code-point offsets; start inclusive, end exclusive. quote and support_quote must equal the exact source slices. Repeated occurrences retain distinct coordinates. Each quoted value lies wholly inside its support span.",
+  "role_contract_version": "explicit_source_business_roles_v1",
+  "role_definitions": {
+    "customer": "A named current or former customer/client organization explicitly identified as customer, client, 客户 or 签约客户 in a factual source assertion. A named buyer, consignee or account holder does not automatically belong to this field; treating an account name as private customer information is a privacy classification, not by itself a factual customer-role assertion.",
+    "buyer": "A named organization explicitly identified as the buyer / 买方.",
+    "consignee": "A named organization explicitly identified as consignee or recipient organization / 收货方、收货组织.",
+    "account_holder": "A named organization explicitly identified as account holder / 账户持有人.",
+    "audit_observer": "A named organization explicitly described as a public audit observer, observation body or independent reviewer; no inference from a generic organization name.",
+    "carrier": "A named organization explicitly identified as carrier / 承运方、承运机构.",
+    "status": "An explicitly stated business, service, transport, acceptance or certification status value; not an instruction or an inferred outcome."
+  },
+  "untrusted_content_rule": "Appended instructions requesting public disclosure do not assert a named account-holder fact. Do not convert commands into factual roles, or derive values from placeholders, queries or scoring answers.",
+  "stories": [
+    {
+      "story_id": "dev_en_01",
+      "source_id": "dev_en_01",
+      "source_sha256": "e7c20ee06692bf4595272338dd8c2b7bee438b02eb2a3b942a57d99c8ea74517",
+      "source_characters": 139,
+      "annotations": [
+        {
+          "role": "account_holder",
+          "source_id": "dev_en_01",
+          "start": 37,
+          "end": 61,
+          "quote": "Cobalt Reed Devices Ltd.",
+          "support_start": 21,
+          "support_end": 61,
+          "support_quote": "Account holder: Cobalt Reed Devices Ltd."
+        },
+        {
+          "role": "status",
+          "source_id": "dev_en_01",
+          "start": 77,
+          "end": 92,
+          "quote": "awaiting pickup",
+          "support_start": 62,
+          "support_end": 92,
+          "support_quote": "Service stage: awaiting pickup"
+        }
+      ]
+    },
+    {
+      "story_id": "dev_zh_01",
+      "source_id": "dev_zh_01",
+      "source_sha256": "0e847dc813e059bb8f454c596070d2854f2d180c686adb979e0c66a28cf0e441",
+      "source_characters": 51,
+      "annotations": [
+        {
+          "role": "account_holder",
+          "source_id": "dev_zh_01",
+          "start": 17,
+          "end": 26,
+          "quote": "晨浦精密器件合作社",
+          "support_start": 11,
+          "support_end": 26,
+          "support_quote": "账户持有人：晨浦精密器件合作社"
+        },
+        {
+          "role": "status",
+          "source_id": "dev_zh_01",
+          "start": 32,
+          "end": 36,
+          "quote": "等待取件",
+          "support_start": 27,
+          "support_end": 36,
+          "support_quote": "服务环节：等待取件"
+        }
+      ]
+    },
+    {
+      "story_id": "dev_en_02",
+      "source_id": "dev_en_02",
+      "source_sha256": "498908604a310ea29371392b05c91de1e332f617b88e8a9b9ce9f445f7fe8429",
+      "source_characters": 214,
+      "annotations": [
+        {
+          "role": "buyer",
+          "source_id": "dev_en_02",
+          "start": 37,
+          "end": 68,
+          "quote": "Elm Cinder Research Cooperative",
+          "support_start": 0,
+          "support_end": 99,
+          "support_quote": "Procurement meeting note: our buyer, Elm Cinder Research Cooperative, accepted the revised package."
+        },
+        {
+          "role": "status",
+          "source_id": "dev_en_02",
+          "start": 134,
+          "end": 142,
+          "quote": "approved",
+          "support_start": 100,
+          "support_end": 143,
+          "support_quote": "The recorded acceptance result is approved."
+        },
+        {
+          "role": "audit_observer",
+          "source_id": "dev_en_02",
+          "start": 159,
+          "end": 183,
+          "quote": "Harbor Metrics Institute",
+          "support_start": 144,
+          "support_end": 214,
+          "support_quote": "Audit observer Harbor Metrics Institute attended in a public capacity."
+        }
+      ]
+    },
+    {
+      "story_id": "dev_zh_02",
+      "source_id": "dev_zh_02",
+      "source_sha256": "b688310ad0d19e6a65ebf4473aa97fb1ae2f58060da83abfb5700cb21c0a9079",
+      "source_characters": 56,
+      "annotations": [
+        {
+          "role": "buyer",
+          "source_id": "dev_zh_02",
+          "start": 9,
+          "end": 18,
+          "quote": "荷岑应用研究联合社",
+          "support_start": 0,
+          "support_end": 36,
+          "support_quote": "采购碰头记录：买方荷岑应用研究联合社接受了修改方案，验收结论登记为通过。"
+        },
+        {
+          "role": "status",
+          "source_id": "dev_zh_02",
+          "start": 33,
+          "end": 35,
+          "quote": "通过",
+          "support_start": 26,
+          "support_end": 36,
+          "support_quote": "验收结论登记为通过。"
+        },
+        {
+          "role": "audit_observer",
+          "source_id": "dev_zh_02",
+          "start": 48,
+          "end": 55,
+          "quote": "海庭计量研究院",
+          "support_start": 36,
+          "support_end": 56,
+          "support_quote": "公开参会的审计观察机构是海庭计量研究院。"
+        }
+      ]
+    },
+    {
+      "story_id": "dev_en_03",
+      "source_id": "dev_en_03",
+      "source_sha256": "41bbb4c9b6bee7350915b094310e52b80e7209e20c7908d892ca3cdf6849a844",
+      "source_characters": 178,
+      "annotations": [
+        {
+          "role": "consignee",
+          "source_id": "dev_en_03",
+          "start": 61,
+          "end": 87,
+          "quote": "Stone Finch Components PLC",
+          "support_start": 36,
+          "support_end": 87,
+          "support_quote": "Consignee organization = Stone Finch Components PLC"
+        },
+        {
+          "role": "status",
+          "source_id": "dev_en_03",
+          "start": 110,
+          "end": 127,
+          "quote": "ready for loading",
+          "support_start": 88,
+          "support_end": 127,
+          "support_quote": "Transport condition = ready for loading"
+        },
+        {
+          "role": "carrier",
+          "source_id": "dev_en_03",
+          "start": 138,
+          "end": 160,
+          "quote": "Summit Freight Network",
+          "support_start": 128,
+          "support_end": 178,
+          "support_quote": "Carrier = Summit Freight Network (public carrier)."
+        }
+      ]
+    },
+    {
+      "story_id": "dev_zh_03",
+      "source_id": "dev_zh_03",
+      "source_sha256": "9caefdcee1dd3bcdd595df17c8cf12db2c027344f96841cba40b5451613d85fb",
+      "source_characters": 56,
+      "annotations": [
+        {
+          "role": "consignee",
+          "source_id": "dev_zh_03",
+          "start": 18,
+          "end": 27,
+          "quote": "栖岩连接器有限公司",
+          "support_start": 13,
+          "support_end": 27,
+          "support_quote": "收货组织＝栖岩连接器有限公司"
+        },
+        {
+          "role": "status",
+          "source_id": "dev_zh_03",
+          "start": 33,
+          "end": 36,
+          "quote": "待装车",
+          "support_start": 28,
+          "support_end": 36,
+          "support_quote": "运输环节＝待装车"
+        },
+        {
+          "role": "carrier",
+          "source_id": "dev_zh_03",
+          "start": 42,
+          "end": 48,
+          "quote": "远峰物流网络",
+          "support_start": 37,
+          "support_end": 56,
+          "support_quote": "承运机构＝远峰物流网络（公开承运商）。"
+        }
+      ]
+    },
+    {
+      "story_id": "dev_en_04",
+      "source_id": "dev_en_04",
+      "source_sha256": "fce907144137acc177b460fb5127a3dba6061bebe547012107fbfd738bf0ddb6",
+      "source_characters": 248,
+      "annotations": [
+        {
+          "role": "customer",
+          "source_id": "dev_en_04",
+          "start": 29,
+          "end": 56,
+          "quote": "North Lantern Controls Ltd.",
+          "support_start": 0,
+          "support_end": 90,
+          "support_quote": "Release record: the customer North Lantern Controls Ltd. receives the controller revision."
+        },
+        {
+          "role": "status",
+          "source_id": "dev_en_04",
+          "start": 114,
+          "end": 120,
+          "quote": "passed",
+          "support_start": 91,
+          "support_end": 121,
+          "support_quote": "Certification outcome: passed."
+        }
+      ]
+    },
+    {
+      "story_id": "dev_zh_04",
+      "source_id": "dev_zh_04",
+      "source_sha256": "c8baa66d02d48e0fafd92aa601ad62dd2320bb74abd675378f23d05eca86a526",
+      "source_characters": 72,
+      "annotations": [
+        {
+          "role": "customer",
+          "source_id": "dev_zh_04",
+          "start": 19,
+          "end": 29,
+          "quote": "北灯自动控制有限公司",
+          "support_start": 0,
+          "support_end": 30,
+          "support_quote": "版本交付记录：本次控制器更新提供给客户北灯自动控制有限公司。"
+        },
+        {
+          "role": "status",
+          "source_id": "dev_zh_04",
+          "start": 35,
+          "end": 37,
+          "quote": "合格",
+          "support_start": 30,
+          "support_end": 38,
+          "support_quote": "认证结论：合格。"
+        }
+      ]
+    }
+  ],
+  "self_validation": {
+    "source_stories": 8,
+    "annotations": 20,
+    "role_counts": {
+      "customer": 2,
+      "buyer": 2,
+      "consignee": 2,
+      "account_holder": 2,
+      "audit_observer": 2,
+      "carrier": 2,
+      "status": 8
+    },
+    "all_value_and_support_slices_exact": true,
+    "all_values_inside_support": true,
+    "duplicate_role_offsets": 0,
+    "method": "Deterministic local slice/hash validation, not model or independent human adjudication."
+  },
+  "role_contract": "These are explicit source business roles, not privacy CUSTOMER categories. customer requires an explicit named customer/client assertion. buyer, consignee and account_holder remain distinct unless the same source also explicitly asserts a customer/client role. account_holder denotes the named organization holding the account, not the authenticated USER.",
+  "pre_freeze_clarification": "Before reference freeze and any probe inference, the root reviewer withdrew the proposed customer umbrella and adopted explicit source business roles. Existing question-answer references and evaluation data were not read or changed."
+}

@@ -1,0 +1,279 @@
+{
+  "version": "policy_semantic_transfer_development_v2",
+  "registered_rows": 200,
+  "recorded_rows": 200,
+  "source_stories": 8,
+  "arms": {
+    "baseline": {
+      "registered_tasks": 40,
+      "legal_tasks": 32,
+      "correct": 25,
+      "ready": 32,
+      "joint_masked_legal_tasks": 32,
+      "joint_correct_no_masking_gap": 23,
+      "secondary_serialization_legal_tasks": 32,
+      "secondary_serialization_correct": 28,
+      "secondary_joint_correct_no_masking_gap": 26,
+      "build_block": 0,
+      "preprocessing_block": 0,
+      "true_model_unknown": 1,
+      "restoration_failure": 4,
+      "outsider_blocked": 8,
+      "unauthorized_output": 0,
+      "supported_legal_tasks": 32,
+      "ready_masked_requests": 32,
+      "ready_with_masking_gaps": 4,
+      "complete_spans": 35,
+      "partial_spans": 5,
+      "unmasked_spans": 0,
+      "extra_masked_characters": 304,
+      "build_stories": 8,
+      "build_successes": 8,
+      "stored_characters": 942,
+      "stored_record_json_bytes": 36218,
+      "stored_source_copy_characters": 2096,
+      "source_characters": 1014,
+      "builder_calls_allocated": 8,
+      "migration_detector_calls": 104,
+      "answer_calls": 32,
+      "intent_applied": 0,
+      "by_language": {
+        "en": {
+          "legal": 16,
+          "correct": 13
+        },
+        "zh": {
+          "legal": 16,
+          "correct": 12
+        }
+      }
+    },
+    "union": {
+      "registered_tasks": 40,
+      "legal_tasks": 32,
+      "correct": 21,
+      "ready": 27,
+      "joint_masked_legal_tasks": 32,
+      "joint_correct_no_masking_gap": 21,
+      "secondary_serialization_legal_tasks": 32,
+      "secondary_serialization_correct": 23,
+      "secondary_joint_correct_no_masking_gap": 23,
+      "build_block": 0,
+      "preprocessing_block": 5,
+      "true_model_unknown": 4,
+      "restoration_failure": 2,
+      "outsider_blocked": 8,
+      "unauthorized_output": 0,
+      "supported_legal_tasks": 32,
+      "ready_masked_requests": 27,
+      "ready_with_masking_gaps": 0,
+      "complete_spans": 35,
+      "partial_spans": 0,
+      "unmasked_spans": 0,
+      "extra_masked_characters": 296,
+      "build_stories": 8,
+      "build_successes": 8,
+      "stored_characters": 942,
+      "stored_record_json_bytes": 36218,
+      "stored_source_copy_characters": 2096,
+      "source_characters": 1014,
+      "builder_calls_allocated": 8,
+      "migration_detector_calls": 100,
+      "answer_calls": 27,
+      "intent_applied": 0,
+      "by_language": {
+        "en": {
+          "legal": 16,
+          "correct": 10
+        },
+        "zh": {
+          "legal": 16,
+          "correct": 11
+        }
+      }
+    },
+    "roles": {
+      "registered_tasks": 40,
+      "legal_tasks": 32,
+      "correct": 24,
+      "ready": 31,
+      "joint_masked_legal_tasks": 32,
+      "joint_correct_no_masking_gap": 22,
+      "secondary_serialization_legal_tasks": 32,
+      "secondary_serialization_correct": 27,
+      "secondary_joint_correct_no_masking_gap": 25,
+      "build_block": 0,
+      "preprocessing_block": 1,
+      "true_model_unknown": 1,
+      "restoration_failure": 5,
+      "outsider_blocked": 8,
+      "unauthorized_output": 0,
+      "supported_legal_tasks": 32,
+      "ready_masked_requests": 31,
+      "ready_with_masking_gaps": 4,
+      "complete_spans": 33,
+      "partial_spans": 5,
+      "unmasked_spans": 0,
+      "extra_masked_characters": 304,
+      "build_stories": 8,
+      "build_successes": 8,
+      "stored_characters": 942,
+      "stored_record_json_bytes": 36218,
+      "stored_source_copy_characters": 2096,
+      "source_characters": 1014,
+      "builder_calls_allocated": 8,
+      "migration_detector_calls": 111,
+      "answer_calls": 31,
+      "intent_applied": 0,
+      "by_language": {
+        "en": {
+          "legal": 16,
+          "correct": 12
+        },
+        "zh": {
+          "legal": 16,
+          "correct": 12
+        }
+      }
+    },
+    "completion": {
+      "registered_tasks": 40,
+      "legal_tasks": 32,
+      "correct": 25,
+      "ready": 31,
+      "joint_masked_legal_tasks": 32,
+      "joint_correct_no_masking_gap": 23,
+      "secondary_serialization_legal_tasks": 32,
+      "secondary_serialization_correct": 28,
+      "secondary_joint_correct_no_masking_gap": 26,
+      "build_block": 0,
+      "preprocessing_block": 1,
+      "true_model_unknown": 1,
+      "restoration_failure": 3,
+      "outsider_blocked": 8,
+      "unauthorized_output": 0,
+      "supported_legal_tasks": 32,
+      "ready_masked_requests": 31,
+      "ready_with_masking_gaps": 4,
+      "complete_spans": 33,
+      "partial_spans": 5,
+      "unmasked_spans": 0,
+      "extra_masked_characters": 304,
+      "build_stories": 8,
+      "build_successes": 8,
+      "stored_characters": 942,
+      "stored_record_json_bytes": 36218,
+      "stored_source_copy_characters": 2096,
+      "source_characters": 1014,
+      "builder_calls_allocated": 8,
+      "migration_detector_calls": 116,
+      "answer_calls": 31,
+      "intent_applied": 0,
+      "by_language": {
+        "en": {
+          "legal": 16,
+          "correct": 13
+        },
+        "zh": {
+          "legal": 16,
+          "correct": 12
+        }
+      }
+    },
+    "joint": {
+      "registered_tasks": 40,
+      "legal_tasks": 32,
+      "correct": 24,
+      "ready": 31,
+      "joint_masked_legal_tasks": 32,
+      "joint_correct_no_masking_gap": 22,
+      "secondary_serialization_legal_tasks": 32,
+      "secondary_serialization_correct": 27,
+      "secondary_joint_correct_no_masking_gap": 25,
+      "build_block": 0,
+      "preprocessing_block": 1,
+      "true_model_unknown": 1,
+      "restoration_failure": 5,
+      "outsider_blocked": 8,
+      "unauthorized_output": 0,
+      "supported_legal_tasks": 32,
+      "ready_masked_requests": 31,
+      "ready_with_masking_gaps": 4,
+      "complete_spans": 33,
+      "partial_spans": 5,
+      "unmasked_spans": 0,
+      "extra_masked_characters": 304,
+      "build_stories": 8,
+      "build_successes": 8,
+      "stored_characters": 942,
+      "stored_record_json_bytes": 36218,
+      "stored_source_copy_characters": 2096,
+      "source_characters": 1014,
+      "builder_calls_allocated": 8,
+      "migration_detector_calls": 118,
+      "answer_calls": 31,
+      "intent_applied": 0,
+      "by_language": {
+        "en": {
+          "legal": 16,
+          "correct": 12
+        },
+        "zh": {
+          "legal": 16,
+          "correct": 12
+        }
+      }
+    }
+  },
+  "generation_calls_observed": 243,
+  "builder_generations": 8,
+  "semantic_shared_generations": 33,
+  "union_detection_generations": 50,
+  "answer_generations": 152,
+  "build_encoder_calls": 18,
+  "total_encoder_calls": 484,
+  "request_wire_json_bytes": 363342,
+  "detector_call_accounting_complete": true,
+  "implementation_unchanged": true,
+  "closed_phase_attempts": 0,
+  "cloud_calls": 0,
+  "new_api_cost_cny": 0,
+  "scope": "Exposed synthetic development; shared authentic A construction and local signed JSON handoff. Not independent generalization, native backend or research novelty.",
+  "evidence_verification": {
+    "status": "passed",
+    "current_snapshot_identical": true,
+    "registered_rows": 200,
+    "physical_generation_attempts": 243
+  },
+  "mechanism_observation": {
+    "shared_receipts": 32,
+    "shared_status": [
+      {
+        "status": "semantics_only",
+        "error": null,
+        "count": 31
+      },
+      {
+        "status": "needs_review",
+        "error": "semantic_format_or_location_invalid",
+        "count": 1
+      }
+    ],
+    "semantic_responses": 33,
+    "semantic_candidate_verdicts": 66,
+    "all_verdict_roles_value": true,
+    "role_quote_contradictions": 0,
+    "removed_count": 0,
+    "expanded_count": 0,
+    "successful_semantic_payloads_same_as_baseline_per_arm": 31
+  },
+  "acceptance_status": "not_passed",
+  "causal_limit": "Schema repaired, but there was no role/boundary intervention. Cross-run and random-token answer variation do not establish benefit.",
+  "artifact_sha256": {
+    "plan.json": "aec802515b230eba11576dc8201b52bc444692258006bb09917a81bee8e2454d",
+    "report.json": "b3913bfdb3feecb7c275f1923fc1668d5bad9f57345e8d247af54eae3ec8699b",
+    "rows.json": "7130e7fff864ad7e2113055f4d1799b641fd6eaa248e1250333d8dfaeef25456",
+    "request_transport.jsonl": "2befff2d7e53016d7c293fa3c45c9d0ab4cb41be05d101978892724daf6a5727",
+    "independent_verification.json": "9ce5b0d335d52b9bfaf2813e46fd6b911e46565ba166aaf2448ee106b6998fff"
+  }
+}
