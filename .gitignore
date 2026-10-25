@@ -23,6 +23,7 @@
 *.key
 .venv/
 /.venv-native-webui/
+/.venv-native-cognee/
 /.runtime/
 venv/
 __pycache__/

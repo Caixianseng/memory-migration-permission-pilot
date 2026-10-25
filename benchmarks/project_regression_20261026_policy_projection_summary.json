@@ -1,0 +1,14 @@
+{
+  "scope": "complete offline fake unittest discovery; not native/model efficacy",
+  "tests_run": 1365,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_seconds": 235.042,
+  "status": "passed",
+  "changed_during_tests": [],
+  "report_sha256": "3300bdfb697337af178f5875964ecdca10c37119f8801fa25e280990000dd77e",
+  "model_efficacy": false,
+  "native_policy_acceptance": false,
+  "paper_novelty_established": false
+}

@@ -1,0 +1,261 @@
+{
+  "version": "cognee_read_share_capability_summary_v1",
+  "date": "2026-10-26",
+  "report": "docs/Cognee原生读取分享撤权_两周期能力资格_2026-10-26.md",
+  "scope": "Native capability qualification on one synthetic exact fact, not migration projection or the 25-case matrix.",
+  "source_policy_projection_performed": false,
+  "all_25_projection_entries_remain_unverified": true,
+  "cognee_version": "1.6.5",
+  "fact_object_id": "fact.readonly",
+  "fact_text_sha256": "44075df319073a82d6edebc7652ef77d2d6e312beae68e0aae585332fe67d99a",
+  "exact_text_bytes": 19,
+  "datasets": 1,
+  "facts": 1,
+  "regular_principals": 3,
+  "native_child_principals": 1,
+  "native_http_requests_v2": 37,
+  "native_http_hard_cap": 48,
+  "cumulative_native_http_requests": {
+    "identity_qualification": 10,
+    "v1_ingestion_configuration_failure": 13,
+    "v2_capability_qualification": 37,
+    "total": 60
+  },
+  "independent_story_count_increased": false,
+  "observed_generation_attempts_all_three_runs": 0,
+  "observed_embedding_attempts_all_three_runs": 0,
+  "native_http_status_counts_v2": {
+    "201": 3,
+    "200": 26,
+    "401": 1,
+    "403": 7
+  },
+  "outcomes": {
+    "basic_user_read": true,
+    "read_not_share": true,
+    "basic_user_revocation": true,
+    "child_identity": true,
+    "child_initial_read": "denied",
+    "child_after_first_parent_revocation": "denied",
+    "independent_child_read_retained": true,
+    "parent_read_after_independent_child_grant": "available",
+    "final_owner_access": true,
+    "final_outsider_denial": true
+  },
+  "parent_after_independent_child_grant_interpretation": "Parent read available in this declared sequence. Fixed raw-authorization code unions direct child ACLs; consistent static explanation, no SQL decision trace, vulnerability or source-projection failure claim.",
+  "phase_http_indices_zero_based": [
+    {
+      "phase": "owner_positive",
+      "index": 15,
+      "actor": "owner",
+      "http": 200,
+      "full_fact_observed": true
+    },
+    {
+      "phase": "outsider_before_grant",
+      "index": 16,
+      "actor": "outsider",
+      "http": 403,
+      "full_fact_observed": false
+    },
+    {
+      "phase": "owner_grants_assistant_read",
+      "index": 17,
+      "actor": "owner",
+      "recipient": "assistant",
+      "http": 200
+    },
+    {
+      "phase": "assistant_read_only_positive",
+      "index": 18,
+      "actor": "assistant",
+      "http": 200,
+      "full_fact_observed": true
+    },
+    {
+      "phase": "assistant_attempts_share",
+      "index": 19,
+      "actor": "assistant",
+      "recipient": "outsider",
+      "http": 403
+    },
+    {
+      "phase": "outsider_after_share_attempt",
+      "index": 20,
+      "actor": "outsider",
+      "http": 403,
+      "full_fact_observed": false
+    },
+    {
+      "phase": "child_initial_read_discovery",
+      "index": 24,
+      "actor": "assistant_agent",
+      "http": 403,
+      "full_fact_observed": false
+    },
+    {
+      "phase": "owner_revokes_assistant_basic_read",
+      "index": 25,
+      "actor": "owner",
+      "recipient": "assistant",
+      "http": 200
+    },
+    {
+      "phase": "assistant_after_basic_revocation",
+      "index": 26,
+      "actor": "assistant",
+      "http": 403,
+      "full_fact_observed": false
+    },
+    {
+      "phase": "child_after_basic_parent_revocation_discovery",
+      "index": 27,
+      "actor": "assistant_agent",
+      "http": 403,
+      "full_fact_observed": false
+    },
+    {
+      "phase": "second_cycle_regrant_assistant",
+      "index": 28,
+      "actor": "owner",
+      "recipient": "assistant",
+      "http": 200
+    },
+    {
+      "phase": "second_cycle_assistant_positive",
+      "index": 29,
+      "actor": "assistant",
+      "http": 200,
+      "full_fact_observed": true
+    },
+    {
+      "phase": "independent_root_grants_child",
+      "index": 30,
+      "actor": "owner",
+      "recipient": "assistant_agent",
+      "http": 200
+    },
+    {
+      "phase": "independent_child_positive",
+      "index": 31,
+      "actor": "assistant_agent",
+      "http": 200,
+      "full_fact_observed": true
+    },
+    {
+      "phase": "second_cycle_revokes_parent_direct_read",
+      "index": 32,
+      "actor": "owner",
+      "recipient": "assistant",
+      "http": 200
+    },
+    {
+      "phase": "parent_after_independent_child_grant_discovery",
+      "index": 33,
+      "actor": "assistant",
+      "http": 200,
+      "full_fact_observed": true
+    },
+    {
+      "phase": "independent_child_after_parent_revocation",
+      "index": 34,
+      "actor": "assistant_agent",
+      "http": 200,
+      "full_fact_observed": true
+    },
+    {
+      "phase": "owner_final_positive",
+      "index": 35,
+      "actor": "owner",
+      "http": 200,
+      "full_fact_observed": true
+    },
+    {
+      "phase": "outsider_final_negative",
+      "index": 36,
+      "actor": "outsider",
+      "http": 403,
+      "full_fact_observed": false
+    }
+  ],
+  "v1_failure_preserved": {
+    "status": "not_qualified",
+    "http": 13,
+    "native_add_status": 415,
+    "classification": "Worker global local-file-read switch blocked native internal staging; not object authorization denial.",
+    "same_raw_fact_and_driver_kept_in_v2": true,
+    "report": "results/cognee_read_share_qualification_20261026_v1/report.json",
+    "sha256": "878896a97b79f5aedb6dab58edb6191e2491cf4112104d2c4fca430759a9a9c0"
+  },
+  "v2_configuration": {
+    "ACCEPT_LOCAL_FILE_PATH": true,
+    "COGNEE_ALLOWED_LOCAL_FILE_ROOTS": "current_new_state_only",
+    "ALLOW_HTTP_REQUESTS": false,
+    "raw_data_changed": false,
+    "file_scope": {
+      "all_official_roots_within_state": true,
+      "state_internal_resolution_allowed": true,
+      "outside_state_resolution_denied": true,
+      "probe_files_created": false,
+      "scope": "Official ingestion/storage path helpers, not an OS filesystem sandbox."
+    }
+  },
+  "instrumentation": {
+    "physical_http_cap": true,
+    "zero_observed_inference": true,
+    "network_clear": true,
+    "credentials_omitted": true,
+    "fixed_http_cap": true,
+    "one_dataset_one_fact": true,
+    "postflight": true
+  },
+  "raw_artifact_counts_v2": {
+    "credential_responses_omitted": 7,
+    "noncredential_raw_bin_checked": 30
+  },
+  "independent_verification": {
+    "status": "passed",
+    "checks": 284,
+    "native_calls": 0,
+    "model_calls": 0,
+    "receipt": "results/cognee_read_share_qualification_20261026_v2/independent_capability_audit.json",
+    "receipt_sha256": "ac19f3c9a26ceff466984ce0ae7505998ca396dcf099ef38eb949dee459d9546",
+    "verifier": "scripts/verify_cognee_read_share_qualification.py",
+    "verifier_sha256": "b3774cb7a8b022362c0f998ff477152cc78de86631e7314f3820fc35350a9be7"
+  },
+  "fixed_wheel_sha256": "aaef9fdc02f542b1d125cde21759dde2fac56355d8928e39c734e7b5c6705eca",
+  "vendor_interpretation_source_sha256": {
+    "cognee/modules/data/methods/get_authorized_existing_datasets.py": "3504feadd4f0a482514d6ad94cd380bdf8aa7cad48ded5130e8f5df4d57329c7",
+    "cognee/modules/users/permissions/methods/get_specific_user_permission_datasets.py": "5b0505ecff9619c13fc4d19c2c55d9cba534058c6479a885275ba543264c435b",
+    "cognee/modules/users/permissions/methods/get_all_user_permission_datasets.py": "086144118fbfaf2cbd6b6a0e72d847e1c1ac7ab459ddf5ac41df82a2c9c4bda3",
+    "cognee/modules/users/methods/get_user_agents.py": "512c1a49e08f092ca0720db2779f3aff636a6e0e4de525cf8407c7754d064e04",
+    "cognee/modules/users/permissions/methods/get_principal_datasets.py": "6ab261722936e6032be244a57f9adb6a367bc3ac15c97581dcbb50b624c29c7c",
+    "cognee/modules/users/permissions/methods/authorized_give_permission_on_datasets.py": "1f862f6b1b2b4d58108eed7ab2869e22e37142d48dbbd35d7125117270ef0d89",
+    "cognee/modules/users/permissions/methods/authorized_revoke_permission_on_datasets.py": "a31f5fc0d9083980684ec94dd0fa851af0622ef2c5f5026825c067f28394cc96",
+    "cognee/modules/users/permissions/methods/revoke_permission_on_dataset.py": "d67facb5c03ab2e2d691b009b94dee64a32d3a5c4e1c1dd16a8b672180d49cc9"
+  },
+  "artifact_sha256": {
+    "plan.json": "aea4b1c7c80acfcb1b3158124ea898da5ca81209bcc3971fd8df13e3491abf85",
+    "proposal.json": "918e6c4cc0c82e1c51bd43659d100b41c8b0393f4db8a4880c7862036a73ca6f",
+    "report.json": "8a1d54b44b7289549cbb5e3844381c22432134dd5d8eb66802d225af4fbbb6a9",
+    "rpc_receipts.json": "5cee49c5ab3c2734887a58b73e3a472ff98dbf2ec584c6b9b0d84f1f77064619"
+  },
+  "limits": [
+    "One exact synthetic fact and one dataset; not independent natural ACL cases.",
+    "No complete source_ref/current-policy projection or 25-case matrix execution.",
+    "No LLM task, vector quality, lifespan/recipient/depth or replay acceptance.",
+    "Client credential values intentionally omitted; cannot compare discarded RAM secrets offline.",
+    "Python profile/network guards are not GPU tracing or an OS sandbox."
+  ],
+  "acceptance": {
+    "native_user_read_share_revocation_capability_qualified": true,
+    "native_child_identity_qualified": true,
+    "independent_direct_root_child_grant_retention_observed": true,
+    "source_user_agent_independence_preserved": null,
+    "full_policy_projection_matrix_passed": false,
+    "native_webui_v3_four_nulls_closed": false,
+    "paper_novelty_established": false
+  },
+  "native_child_is_autonomous_llm_agent": false,
+  "downstream_agent_qa_run": false
+}

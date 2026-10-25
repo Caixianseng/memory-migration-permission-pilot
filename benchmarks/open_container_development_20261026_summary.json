@@ -1,0 +1,182 @@
+{
+  "version": "open_container_exposed_development_summary_v1",
+  "date": "2026-10-26",
+  "authoritative_run": "results/open_container_development_20261026_v3",
+  "scope": "80 development + 40 already exposed regression. Candidate representation only; no fresh64, new independent acceptance or automatic sensitivity decision.",
+  "coverage_summary": {
+    "development": {
+      "materials": 80,
+      "statuses": {
+        "candidates_only": 33,
+        "needs_review": 47
+      },
+      "gold_spans": 58,
+      "prior_pool_covered": 57,
+      "all_proposal_union_covered": 58,
+      "fully_qualified_union_covered": 58,
+      "new_exact_gold_candidates": 1,
+      "new_nongold_candidates": 8,
+      "total_completion_candidates": 9,
+      "errors": {
+        "unsupported_container_syntax": 40,
+        "multiple_outer_delimiters": 7
+      }
+    },
+    "heldout": {
+      "materials": 40,
+      "statuses": {
+        "needs_review": 25,
+        "candidates_only": 15
+      },
+      "gold_spans": 20,
+      "prior_pool_covered": 20,
+      "all_proposal_union_covered": 20,
+      "fully_qualified_union_covered": 20,
+      "new_exact_gold_candidates": 0,
+      "new_nongold_candidates": 6,
+      "total_completion_candidates": 6,
+      "errors": {
+        "key_character_budget_exceeded": 14,
+        "unsupported_container_syntax": 11
+      }
+    }
+  },
+  "parser_status_totals": {
+    "candidates_only": 48,
+    "needs_review": 72
+  },
+  "review_reason_totals": {
+    "unsupported_container_syntax": 51,
+    "multiple_outer_delimiters": 7,
+    "key_character_budget_exceeded": 14
+  },
+  "completion_analysis": {
+    "completion_candidates": 15,
+    "new_exact_gold_candidates": 1,
+    "new_nongold_candidates": 14,
+    "nongold_strictly_contains_one_already_covered_exact_gold_value": 14,
+    "qualified_status_only": {
+      "exact_gold_candidates": 1,
+      "nongold_candidates": 6
+    },
+    "nongold_by_parser_status": {
+      "needs_review": 8,
+      "candidates_only": 6
+    },
+    "nongold_structural_groups": {
+      "embedded_fullwidth_equal_field_and_trailing_question": 8,
+      "quoted_name_followed_by_role_sentence": 1,
+      "bracketed_name_followed_by_sentence": 5
+    },
+    "nongold_review_errors": {
+      "unsupported_container_syntax": 8
+    },
+    "semantic_atomicity": "unverified_for_every_completion",
+    "interpretation": "The 14 nongold proposals are overly broad values, not 14 newly discovered entities. Parser-qualified does not mean semantically atomic."
+  },
+  "cost": {
+    "new_model_calls": 0,
+    "new_encoder_calls": 0,
+    "cloud_calls": 0,
+    "network_attempts": 0,
+    "new_api_cost_cny": 0
+  },
+  "default_changed": false,
+  "final_detection_unchanged": true,
+  "semantic_atomicity_proven": false,
+  "new_sensitive_detection_precision": null,
+  "new_sensitive_detection_recall": null,
+  "new_legal_qa_effect": null,
+  "method_acceptance": false,
+  "independent_acceptance": false,
+  "independent_verification": {
+    "receipt": "results/open_container_development_20261026_v3/independent_verification_v2.json",
+    "sha256": "3fdb5fa827130b70d56616bed4795c07b66195f2cbcfe2720689d5fe1c269412",
+    "status": "passed",
+    "checks": 626,
+    "all_passed": true,
+    "verification_model_calls": 0,
+    "verification_encoder_calls": 0,
+    "means": "Saved artifacts, phase closure, bindings, statistics and guarded same-parser driver replay are consistent; not semantic method acceptance."
+  },
+  "earlier_runs": {
+    "v1_scoring_failure_preserved": true,
+    "v1_predictions_completed": 120,
+    "v1_error_code": "candidate_pool_uses_optional_proposed_category_not_category",
+    "v2_v3_metric_values_identical": true,
+    "all_three_unscored_rows_sha256": "df51f0b7066dcaf6d3f57fa945d4306a82daea6a4f6d01a0e2f9ec72806ad2ba",
+    "independent_runs": false,
+    "parser_changed": false
+  },
+  "offline_reproduction": {
+    "inspected_python": "3.12.7",
+    "third_party_packages_required_for_this_module_and_verifier": [],
+    "model_assets_required": false,
+    "credentials_required": false,
+    "full_repository_python_helpers_required": true,
+    "fixed_public_archive_sha256": "330d31c9e70980631dd3b67dc8a059512af77693e39870c2b8570b696effce43",
+    "parent_flat_bound_artifacts_available_in_public_candidate_zip": true,
+    "run_v1_v2_v3_raw_directories_required_for_full_626_check": true,
+    "summary_alone_is_sufficient": false,
+    "output_requires_new_file_inside_results": true,
+    "run_and_parent_require_inside_results": true,
+    "does_not_reproduce_original_parent_model_inference": true
+  },
+  "frozen_implementation_sha256": {
+    "memory_migration_study/open_container_candidates.py": "a4cd5082bb43573a6d1e26770f4786f394b427555e1febc0bce4978253ed30f8",
+    "memory_migration_study/candidate_proposals.py": "32be4b9a305f43e8f9701c3b50c822f0a98b13411c2d12dd57a2692dc4b9e323",
+    "memory_migration_study/privacy.py": "c6db0bb46c983c6f42d35a3fe028f35309905e5c447e5de9260d927e10dac7e9",
+    "scripts/run_open_container_diagnostic.py": "da75a5c916f20301721f367022c68c14d9ba16be96ba0d82c6e95c9afd9cd8ce"
+  },
+  "evidence": [
+    {
+      "path": "results/open_container_development_20261026_v3/plan.json",
+      "sha256": "662eba5176cdc3a8da48f84186941fb0230290e6bbf01f17c59b4ceb61eca360"
+    },
+    {
+      "path": "results/open_container_development_20261026_v3/report.json",
+      "sha256": "5d8ec47ec33c11d2ada2737134f3993e424477154313bc61aa61623f4e1f2e8f"
+    },
+    {
+      "path": "results/open_container_development_20261026_v3/rows.json",
+      "sha256": "04f4c743c30e948a637858b582a06035966a2d17aced55d6b614e47e01a01b87"
+    },
+    {
+      "path": "results/open_container_development_20261026_v3/unscored_rows.json",
+      "sha256": "df51f0b7066dcaf6d3f57fa945d4306a82daea6a4f6d01a0e2f9ec72806ad2ba"
+    },
+    {
+      "path": "results/open_container_development_20261026_v3/proposal_phase_closed.json",
+      "sha256": "c1131ef4f5f58d785acd1eeb0f97b1b7cbd6e0365a5b1d7aa61fd9e737a65155"
+    },
+    {
+      "path": "results/open_container_development_20261026_v3/independent_verification_v2.json",
+      "sha256": "3fdb5fa827130b70d56616bed4795c07b66195f2cbcfe2720689d5fe1c269412"
+    },
+    {
+      "path": "results/open_container_development_20261026_v1/scoring_failure.json",
+      "sha256": "b1e07e7a15384a5d04d35f18e8374315fde0b0d2b687a1c8909ac13f407ba2d4"
+    },
+    {
+      "path": "results/open_container_development_20261026_v1/unscored_rows.json",
+      "sha256": "df51f0b7066dcaf6d3f57fa945d4306a82daea6a4f6d01a0e2f9ec72806ad2ba"
+    },
+    {
+      "path": "results/open_container_development_20261026_v2/report.json",
+      "sha256": "5d8ec47ec33c11d2ada2737134f3993e424477154313bc61aa61623f4e1f2e8f"
+    },
+    {
+      "path": "results/open_container_development_20261026_v2/unscored_rows.json",
+      "sha256": "df51f0b7066dcaf6d3f57fa945d4306a82daea6a4f6d01a0e2f9ec72806ad2ba"
+    },
+    {
+      "path": "benchmarks/artifacts/context_candidate_detection_20261026_v2.zip",
+      "sha256": "330d31c9e70980631dd3b67dc8a059512af77693e39870c2b8570b696effce43"
+    },
+    {
+      "path": "benchmarks/artifacts/candidate_classifier_diagnostics_20261026_v1.zip",
+      "sha256": "93a6ab37dd4bd00bbc88892b8fb9078efbbfd1df1a0964cfbda00ed23d0716cb"
+    }
+  ],
+  "delivery_note": "Aggregate only; no per-case source/gold/answer database. Frozen parser, defaults, old raw artifacts and scoring unchanged by this audit."
+}

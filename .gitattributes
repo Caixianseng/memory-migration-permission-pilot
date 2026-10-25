@@ -4,6 +4,9 @@
 *.json text eol=lf
 # This new diagnostic was frozen with CRLF before its real experiment.
 memory_migration_study/candidate_decision_detection.py -text whitespace=cr-at-eol
+examples/native_cognee_probe_assets/scripts/cognee_local_migration_probe.py -text whitespace=cr-at-eol
+# Native qualification binds the original contract bytes, including CRLF.
+docs/proposals/source_policy_projection_contract_v1_20261026.json -text whitespace=cr-at-eol
 # Frozen corpus manifests include raw-byte hashes; preserve their original bytes.
 examples/privacy_eval/*.json -text whitespace=cr-at-eol
 examples/privacy_eval_v2/*.json -text whitespace=cr-at-eol

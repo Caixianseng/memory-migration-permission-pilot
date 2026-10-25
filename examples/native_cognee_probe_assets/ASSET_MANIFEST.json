@@ -1,0 +1,57 @@
+{
+  "schema": "native_cognee_configuration_helper_asset_v1",
+  "date": "2026-10-26",
+  "scope": "Only the complete user-authored configuration helper; no native or model execution performed.",
+  "source_kind": "user_authored_legacy_probe",
+  "source_relative_path": "memory_migration_permission_149tests_20261021/memory_migration_permission_pilot/scripts/cognee_local_migration_probe.py",
+  "worker_usage": {
+    "path": "scripts/native_cognee_policy_worker.py",
+    "imported_module": "cognee_local_migration_probe",
+    "entrypoint": "configure_isolated_cognee",
+    "argument": "--legacy-project examples/native_cognee_probe_assets",
+    "other_legacy_project_modules_required": false
+  },
+  "files": {
+    "scripts/cognee_local_migration_probe.py": {
+      "sha256": "11f295bf655690b33c9051a48b650bbb8592e5d83bfb78beba57ee5694de6aad",
+      "bytes": 20732,
+      "crlf_count": 361,
+      "bare_lf_count": 0,
+      "copy_mode": "verbatim_original_bytes"
+    }
+  },
+  "requirements": {
+    "dedicated_python_venv": ".venv-native-cognee",
+    "cognee_version": "1.6.5",
+    "official_wheel_filename": "cognee-1.6.5-py3-none-any.whl",
+    "official_wheel_sha256": "aaef9fdc02f542b1d125cde21759dde2fac56355d8928e39c734e7b5c6705eca",
+    "state": "new ASCII-only isolated child of system temp; native state not included",
+    "fresh_process": true,
+    "existing_openssl3_directory_optional": true,
+    "dependency_wheels_or_lock_included": false
+  },
+  "review": {
+    "complete_source_ast_and_manual_review": true,
+    "fixed_actual_secret_found": false,
+    "new_generation_calls": 0,
+    "new_embedding_calls": 0,
+    "new_native_operations": 0,
+    "private_data_copied": false,
+    "third_party_code_copied": false,
+    "old_cli_run_not_executed": true,
+    "configure_not_executed": true
+  },
+  "excluded": [
+    "legacy results",
+    "datasets or Mem0/Letta exports",
+    "credentials or native auth storage",
+    "third-party wheels or source",
+    "models",
+    "runtime databases or logs"
+  ],
+  "git_bytes": {
+    "required_attribute": "examples/native_cognee_probe_assets/scripts/cognee_local_migration_probe.py -text",
+    "attributes_modified_by_this_delivery": false,
+    "reason": "Original file is CRLF and worker pins the complete byte hash."
+  }
+}

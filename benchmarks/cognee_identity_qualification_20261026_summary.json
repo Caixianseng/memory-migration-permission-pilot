@@ -1,0 +1,29 @@
+{
+  "scope": "Cognee native identity readiness only; no fact import or common-policy projection",
+  "status": "qualified",
+  "native_http_requests": 10,
+  "ordinary_distinct_user_count": 3,
+  "checks": {
+    "three_ordinary_independent_users": true,
+    "physical_http_cap": true,
+    "zero_inference": true,
+    "no_blocked_network": true,
+    "redacted_client_credentials": true,
+    "no_datasets_or_facts": true,
+    "fixed_wheel": true
+  },
+  "generation_attempts": 0,
+  "embedding_attempts": 0,
+  "source_policy_projection_performed": false,
+  "all_projection_matrix_entries_remain_unverified": true,
+  "wheel_sha256": "aaef9fdc02f542b1d125cde21759dde2fac56355d8928e39c734e7b5c6705eca",
+  "postflight": {
+    "status": "passed",
+    "checked_files": 5,
+    "differences": []
+  },
+  "report_sha256": "fc483da93a85687359dc0dbb6e2a9984246aa3ac3129c373f43e66b03150b7bf",
+  "requirements": "configs/native_cognee_windows_py312_requirements.txt",
+  "requirements_sha256": "c26d7b529a532223e77ae1377b64c55332e215485af12200499315db3d57b628",
+  "new_api_cost_cny": 0
+}

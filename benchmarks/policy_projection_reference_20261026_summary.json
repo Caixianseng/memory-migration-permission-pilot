@@ -1,0 +1,19 @@
+{
+  "scope": "pure trusted reference evaluator; no deployed authentication or native projection",
+  "unit_tests": 25,
+  "contract_assertions_in_tests": 25,
+  "model_calls": 0,
+  "native_calls": 0,
+  "default_integration": false,
+  "novel_algorithm_claim": false,
+  "source_sha256": {
+    "memory_migration_study/policy_projection_reference.py": "0bec670bcd8b13dae6e9a4ac157e7c1edf851cb45933b26f3fa1c3d31746dfb3",
+    "tests/test_policy_projection_reference.py": "27b361ce44264b89c41244084abe33dbb998618ccaa78e27fa1e50ff417cd57b"
+  },
+  "contract_sha256": "918e6c4cc0c82e1c51bd43659d100b41c8b0393f4db8a4880c7862036a73ca6f",
+  "host_requirements": [
+    "authentic user/agent tuple binding",
+    "protected contract and registered manifest storage",
+    "trusted current state and logical clock updates"
+  ]
+}

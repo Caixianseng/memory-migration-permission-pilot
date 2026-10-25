@@ -1,0 +1,1129 @@
+{
+  "schema": "source_policy_projection_measurement_proposal_v1",
+  "proposal_date": "2026-10-26",
+  "status": "draft_not_frozen_not_executable",
+  "execution": {
+    "native_operations_performed": 0,
+    "model_calls_performed": 0,
+    "paid_research_calls_performed": 0,
+    "requires_endpoint_manifest_and_request_cap_before_execution": true,
+    "maximum_native_requests": null,
+    "maximum_model_calls": 0,
+    "concurrency": 1,
+    "source_clock": "logical_integer_no_wall_clock_claim",
+    "lifecycle_order": "serial_barrier_no_atomic_concurrency_claim"
+  },
+  "source": {
+    "kind": "trusted_reference_gateway",
+    "vendor_native_iam": false,
+    "not_claimed": [
+      "native_Mem0_source_IAM",
+      "arbitrary_Agent_interoperability",
+      "automatic_memory_extraction",
+      "native_online_revocation_already_implemented"
+    ],
+    "trusted_inputs": [
+      "authenticated_user_agent_binding",
+      "exact_source_occurrence",
+      "grant_registry",
+      "current_revocation_and_time",
+      "approved_migration_destination"
+    ],
+    "current_module_alignment": {
+      "read_exact_user_and_agent": "MemoryLabelAuthority.validate_access",
+      "source_span_integrity": "MemoryLabelAuthority.build_record/validate_access",
+      "host_handoff": "NativeAgentBroker.export/validate",
+      "single_value_privacy_restore": "prepare_native_private_memory/restore_native_private_answer",
+      "share_and_delegate_evaluator": "proposed_not_implemented",
+      "current_per_operation_backend_gateway": "proposed_not_implemented"
+    },
+    "legacy_spec": {
+      "path": "scripts/migration_policy.py",
+      "status": "not_present_in_reviewed_concrete_paths",
+      "used_as_evidence": false
+    }
+  },
+  "semantics": {
+    "default": "deny",
+    "principal_matching": "exact_user_agent_tuple_per_grant_not_cartesian_union",
+    "grant_combination": "OR_of_independent_valid_grants_AND_all_ancestors_valid",
+    "grant_validity_interval": "not_before <= current_time < expires_at",
+    "read": "deliver_exact_fact_from_target_managed_read_surface",
+    "share": "create_a_revocable_platform_read_grant_for_named_recipient_not_arbitrary_text_repetition",
+    "export": "invoke_a_managed_export_operation_to_named_destination_not_information_theoretic_prevention_of_copy_after_read",
+    "delegate": "create_explicit_child_grant_with_subset_actions_recipient_object_expiry_depth_and_parent_dependency",
+    "revocation": "blocks_new_managed_delivery_and_dependent_reimport_not_forgetting_already_received_plaintext",
+    "source_fact_validity": "fixed_in_this_fixture_not_same_as_grant_expiry",
+    "migration_control_plane": "trusted_service_provisions_initial_target_objects_under_separate_explicit_migration_approval_not_implicitly_user_export",
+    "cache": "normal_complete_current_acl_cache_allowed_must_expire_by_grant_time_and_refresh_on_serial_policy_revision"
+  },
+  "principals": [
+    {
+      "principal_id": "alice.reader",
+      "user_id": "user.alice",
+      "agent_id": "agent.reader"
+    },
+    {
+      "principal_id": "alice.worker",
+      "user_id": "user.alice",
+      "agent_id": "agent.worker"
+    },
+    {
+      "principal_id": "bob.reader",
+      "user_id": "user.bob",
+      "agent_id": "agent.reader"
+    },
+    {
+      "principal_id": "bob.worker",
+      "user_id": "user.bob",
+      "agent_id": "agent.worker"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "source.synthetic.001",
+      "text": "Internal record A: SYNTHETIC_VALUE_A71. Internal record B: SYNTHETIC_VALUE_B92.",
+      "sha256": "214b2cd31ab745b0f9b9507112d24e5dde2e970c4cb2e31d080979b9f9008698",
+      "public_synthetic_material": true
+    }
+  ],
+  "facts": [
+    {
+      "object_id": "fact.readonly",
+      "source_id": "source.synthetic.001",
+      "source_start": 19,
+      "source_end": 38,
+      "text": "SYNTHETIC_VALUE_A71",
+      "content_sha256": "44075df319073a82d6edebc7652ef77d2d6e312beae68e0aae585332fe67d99a",
+      "sensitivity": "synthetic_restricted",
+      "labels_are_authorization": false
+    },
+    {
+      "object_id": "fact.managed",
+      "source_id": "source.synthetic.001",
+      "source_start": 59,
+      "source_end": 78,
+      "text": "SYNTHETIC_VALUE_B92",
+      "content_sha256": "3f527081e0b9b412610d0b46717ec28b65a2c91fd9a6692d48768e52f7e58008",
+      "sensitivity": "synthetic_restricted",
+      "labels_are_authorization": false
+    }
+  ],
+  "destinations": [
+    {
+      "destination_id": "destination.approved",
+      "kind": "isolated_study_sink",
+      "value": null
+    },
+    {
+      "destination_id": "destination.other",
+      "kind": "different_controlled_denied_sink",
+      "value": null
+    }
+  ],
+  "grants": [
+    {
+      "grant_id": "grant.readonly",
+      "object_id": "fact.readonly",
+      "subject": "alice.reader",
+      "actions": [
+        "read"
+      ],
+      "not_before": 0,
+      "expires_at": 30,
+      "parent_grant_id": null,
+      "delegation_depth": 0
+    },
+    {
+      "grant_id": "grant.root",
+      "object_id": "fact.managed",
+      "subject": "alice.reader",
+      "actions": [
+        "read",
+        "share",
+        "export",
+        "delegate"
+      ],
+      "not_before": 0,
+      "expires_at": 30,
+      "parent_grant_id": null,
+      "delegation_depth": 1,
+      "share_recipients": [
+        "bob.worker"
+      ],
+      "share_actions": [
+        "read"
+      ],
+      "export_destinations": [
+        "destination.approved"
+      ],
+      "delegate_recipients": [
+        "alice.worker"
+      ],
+      "delegate_actions": [
+        "read"
+      ],
+      "maximum_delegated_expiry": 20,
+      "maximum_child_delegation_depth": 0
+    },
+    {
+      "grant_id": "grant.independent",
+      "object_id": "fact.managed",
+      "subject": "bob.reader",
+      "actions": [
+        "read"
+      ],
+      "not_before": 0,
+      "expires_at": 30,
+      "parent_grant_id": null,
+      "delegation_depth": 0
+    },
+    {
+      "grant_id": "grant.share",
+      "object_id": "fact.managed",
+      "subject": "bob.worker",
+      "actions": [
+        "read"
+      ],
+      "not_before": 10,
+      "expires_at": 30,
+      "parent_grant_id": "grant.root",
+      "issued_by_operation": "share",
+      "delegation_depth": 0
+    },
+    {
+      "grant_id": "grant.delegate",
+      "object_id": "fact.managed",
+      "subject": "alice.worker",
+      "actions": [
+        "read"
+      ],
+      "not_before": 10,
+      "expires_at": 20,
+      "parent_grant_id": "grant.root",
+      "issued_by_operation": "delegate",
+      "delegation_depth": 0
+    }
+  ],
+  "states": [
+    {
+      "state_id": "initial",
+      "time": 10,
+      "policy_revision": 1,
+      "registered_grants": [
+        "grant.readonly",
+        "grant.root",
+        "grant.independent"
+      ],
+      "revoked_grants": []
+    },
+    {
+      "state_id": "with_children",
+      "time": 12,
+      "policy_revision": 2,
+      "registered_grants": [
+        "grant.readonly",
+        "grant.root",
+        "grant.independent",
+        "grant.share",
+        "grant.delegate"
+      ],
+      "revoked_grants": [],
+      "trusted_fixture_events": [
+        "P07_and_P11_reference_approved_grants_installed"
+      ]
+    },
+    {
+      "state_id": "delegation_expired",
+      "parent_state": "with_children",
+      "time": 20,
+      "policy_revision": 2,
+      "registered_grants": [
+        "grant.readonly",
+        "grant.root",
+        "grant.independent",
+        "grant.share",
+        "grant.delegate"
+      ],
+      "revoked_grants": []
+    },
+    {
+      "state_id": "root_revoked",
+      "parent_state": "with_children",
+      "time": 14,
+      "policy_revision": 3,
+      "registered_grants": [
+        "grant.readonly",
+        "grant.root",
+        "grant.independent",
+        "grant.share",
+        "grant.delegate"
+      ],
+      "revoked_grants": [
+        "grant.root"
+      ]
+    },
+    {
+      "state_id": "all_managed_revoked",
+      "parent_state": "root_revoked",
+      "time": 15,
+      "policy_revision": 4,
+      "registered_grants": [
+        "grant.readonly",
+        "grant.root",
+        "grant.independent",
+        "grant.share",
+        "grant.delegate"
+      ],
+      "revoked_grants": [
+        "grant.root",
+        "grant.independent"
+      ]
+    }
+  ],
+  "job_manifests": [
+    {
+      "job_id": "job.dependent",
+      "issued_state": "with_children",
+      "payload": {
+        "object_id": "fact.managed",
+        "recipient": "alice.worker",
+        "grant_id": "grant.delegate",
+        "source_policy_revision": 2
+      },
+      "body_sha256": "6dda7e013353ab29f143ae46471d799761e6d4771af5000c2ca3b4a1610c3d91"
+    },
+    {
+      "job_id": "job.independent",
+      "issued_state": "with_children",
+      "payload": {
+        "object_id": "fact.managed",
+        "recipient": "bob.reader",
+        "grant_id": "grant.independent",
+        "source_policy_revision": 2
+      },
+      "body_sha256": "38b5e52eb4323440a53e8281a890a96bbf0b78e01b44167c91bcb885980ca82f"
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "P01",
+      "group": "identity",
+      "state_id": "initial",
+      "actor": "alice.reader",
+      "operation": "read",
+      "object_id": "fact.readonly",
+      "expected": "allow"
+    },
+    {
+      "case_id": "P02",
+      "group": "identity",
+      "state_id": "initial",
+      "actor": "bob.reader",
+      "operation": "read",
+      "object_id": "fact.readonly",
+      "expected": "deny"
+    },
+    {
+      "case_id": "P03",
+      "group": "identity",
+      "state_id": "initial",
+      "actor": "alice.worker",
+      "operation": "read",
+      "object_id": "fact.readonly",
+      "expected": "deny"
+    },
+    {
+      "case_id": "P04",
+      "group": "no_rights_from_read",
+      "state_id": "initial",
+      "actor": "alice.reader",
+      "operation": "share",
+      "object_id": "fact.readonly",
+      "expected": "deny",
+      "recipient": "bob.worker",
+      "child_actions": [
+        "read"
+      ],
+      "child_expires_at": 30
+    },
+    {
+      "case_id": "P05",
+      "group": "no_rights_from_read",
+      "state_id": "initial",
+      "actor": "alice.reader",
+      "operation": "export",
+      "object_id": "fact.readonly",
+      "expected": "deny",
+      "destination": "destination.approved"
+    },
+    {
+      "case_id": "P06",
+      "group": "no_rights_from_read",
+      "state_id": "initial",
+      "actor": "alice.reader",
+      "operation": "delegate",
+      "object_id": "fact.readonly",
+      "expected": "deny",
+      "recipient": "alice.worker",
+      "child_actions": [
+        "read"
+      ],
+      "child_expires_at": 20,
+      "child_delegation_depth": 0
+    },
+    {
+      "case_id": "P07",
+      "group": "share",
+      "state_id": "initial",
+      "actor": "alice.reader",
+      "operation": "share",
+      "object_id": "fact.managed",
+      "expected": "allow",
+      "recipient": "bob.worker",
+      "child_actions": [
+        "read"
+      ],
+      "child_expires_at": 30,
+      "creates_grant": "grant.share"
+    },
+    {
+      "case_id": "P08",
+      "group": "share",
+      "state_id": "initial",
+      "actor": "alice.reader",
+      "operation": "share",
+      "object_id": "fact.managed",
+      "expected": "deny",
+      "recipient": "bob.reader",
+      "child_actions": [
+        "read"
+      ],
+      "child_expires_at": 30
+    },
+    {
+      "case_id": "P09",
+      "group": "export",
+      "state_id": "initial",
+      "actor": "alice.reader",
+      "operation": "export",
+      "object_id": "fact.managed",
+      "expected": "allow",
+      "destination": "destination.approved"
+    },
+    {
+      "case_id": "P10",
+      "group": "export",
+      "state_id": "initial",
+      "actor": "alice.reader",
+      "operation": "export",
+      "object_id": "fact.managed",
+      "expected": "deny",
+      "destination": "destination.other"
+    },
+    {
+      "case_id": "P11",
+      "group": "delegation",
+      "state_id": "initial",
+      "actor": "alice.reader",
+      "operation": "delegate",
+      "object_id": "fact.managed",
+      "expected": "allow",
+      "recipient": "alice.worker",
+      "child_actions": [
+        "read"
+      ],
+      "child_expires_at": 20,
+      "child_delegation_depth": 0,
+      "creates_grant": "grant.delegate"
+    },
+    {
+      "case_id": "P12",
+      "group": "delegation",
+      "state_id": "initial",
+      "actor": "alice.reader",
+      "operation": "delegate",
+      "object_id": "fact.managed",
+      "expected": "deny",
+      "recipient": "alice.worker",
+      "child_actions": [
+        "read",
+        "export"
+      ],
+      "child_expires_at": 20,
+      "child_delegation_depth": 0
+    },
+    {
+      "case_id": "P13",
+      "group": "share",
+      "state_id": "with_children",
+      "actor": "bob.worker",
+      "operation": "read",
+      "object_id": "fact.managed",
+      "expected": "allow"
+    },
+    {
+      "case_id": "P14",
+      "group": "delegation",
+      "state_id": "with_children",
+      "actor": "alice.worker",
+      "operation": "read",
+      "object_id": "fact.managed",
+      "expected": "allow"
+    },
+    {
+      "case_id": "P15",
+      "group": "delegation",
+      "state_id": "with_children",
+      "actor": "alice.worker",
+      "operation": "delegate",
+      "object_id": "fact.managed",
+      "expected": "deny",
+      "recipient": "bob.worker",
+      "child_actions": [
+        "read"
+      ],
+      "child_expires_at": 20,
+      "child_delegation_depth": 0
+    },
+    {
+      "case_id": "P16",
+      "group": "delegation",
+      "state_id": "with_children",
+      "actor": "alice.worker",
+      "operation": "export",
+      "object_id": "fact.managed",
+      "expected": "deny",
+      "destination": "destination.approved"
+    },
+    {
+      "case_id": "P17",
+      "group": "expiry",
+      "state_id": "delegation_expired",
+      "actor": "alice.worker",
+      "operation": "read",
+      "object_id": "fact.managed",
+      "expected": "deny"
+    },
+    {
+      "case_id": "P18",
+      "group": "partial_revocation",
+      "state_id": "root_revoked",
+      "actor": "alice.reader",
+      "operation": "read",
+      "object_id": "fact.managed",
+      "expected": "deny"
+    },
+    {
+      "case_id": "P19",
+      "group": "partial_revocation",
+      "state_id": "root_revoked",
+      "actor": "bob.worker",
+      "operation": "read",
+      "object_id": "fact.managed",
+      "expected": "deny"
+    },
+    {
+      "case_id": "P20",
+      "group": "partial_revocation",
+      "state_id": "root_revoked",
+      "actor": "alice.worker",
+      "operation": "read",
+      "object_id": "fact.managed",
+      "expected": "deny"
+    },
+    {
+      "case_id": "P21",
+      "group": "partial_revocation",
+      "state_id": "root_revoked",
+      "actor": "bob.reader",
+      "operation": "read",
+      "object_id": "fact.managed",
+      "expected": "allow"
+    },
+    {
+      "case_id": "P22",
+      "group": "replay",
+      "state_id": "root_revoked",
+      "actor": "alice.worker",
+      "operation": "import_replay",
+      "object_id": "fact.managed",
+      "expected": "deny",
+      "job_id": "job.dependent",
+      "payload": "registered_unchanged",
+      "underlying_operation": "read"
+    },
+    {
+      "case_id": "P23",
+      "group": "replay",
+      "state_id": "root_revoked",
+      "actor": "bob.reader",
+      "operation": "import_replay",
+      "object_id": "fact.managed",
+      "expected": "allow",
+      "job_id": "job.independent",
+      "payload": "registered_unchanged",
+      "underlying_operation": "read"
+    },
+    {
+      "case_id": "P24",
+      "group": "all_revoked",
+      "state_id": "all_managed_revoked",
+      "actor": "bob.reader",
+      "operation": "read",
+      "object_id": "fact.managed",
+      "expected": "deny"
+    },
+    {
+      "case_id": "P25",
+      "group": "replay",
+      "state_id": "initial",
+      "actor": "bob.reader",
+      "operation": "import_replay",
+      "object_id": "fact.managed",
+      "expected": "invalid_replay",
+      "job_id": "job.independent",
+      "payload": "same_id_changed_recipient",
+      "underlying_operation": "read"
+    }
+  ],
+  "projection_classifications": {
+    "native": "actual_target_credentials_and_object_operation_enforce_the_semantic_requirement_including_direct_supported_bypass_surfaces",
+    "gateway": "mandatory_external_reference_enforcement_with_native_property_not_claimed_and_no_in_scope_bypass",
+    "unrepresentable": "verified_no_faithful_projection_in_this_adapter_arm_safe_rejection_required_and_not_a_security_failure",
+    "unverified": "missing_credible_probe_or_transport_auth_server_null_failure_cannot_be_called_allow_or_deny"
+  },
+  "projection_matrix": [
+    {
+      "requirement_id": "user_binding",
+      "probe_ids": [
+        "P01",
+        "P02"
+      ],
+      "targets": {
+        "open_webui": {
+          "native_correct_projection": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          },
+          "complete_gateway_current_acl_cache": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          }
+        },
+        "cognee": {
+          "native_correct_projection": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          },
+          "complete_gateway_current_acl_cache": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          }
+        }
+      }
+    },
+    {
+      "requirement_id": "agent_binding",
+      "probe_ids": [
+        "P01",
+        "P03"
+      ],
+      "targets": {
+        "open_webui": {
+          "native_correct_projection": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          },
+          "complete_gateway_current_acl_cache": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          }
+        },
+        "cognee": {
+          "native_correct_projection": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          },
+          "complete_gateway_current_acl_cache": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          }
+        }
+      }
+    },
+    {
+      "requirement_id": "read_not_share_export_delegate",
+      "probe_ids": [
+        "P04",
+        "P05",
+        "P06"
+      ],
+      "targets": {
+        "open_webui": {
+          "native_correct_projection": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          },
+          "complete_gateway_current_acl_cache": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          }
+        },
+        "cognee": {
+          "native_correct_projection": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          },
+          "complete_gateway_current_acl_cache": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          }
+        }
+      }
+    },
+    {
+      "requirement_id": "share_recipient_and_created_read",
+      "probe_ids": [
+        "P07",
+        "P08",
+        "P13"
+      ],
+      "targets": {
+        "open_webui": {
+          "native_correct_projection": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          },
+          "complete_gateway_current_acl_cache": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          }
+        },
+        "cognee": {
+          "native_correct_projection": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          },
+          "complete_gateway_current_acl_cache": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          }
+        }
+      }
+    },
+    {
+      "requirement_id": "managed_export_destination",
+      "probe_ids": [
+        "P09",
+        "P10"
+      ],
+      "targets": {
+        "open_webui": {
+          "native_correct_projection": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          },
+          "complete_gateway_current_acl_cache": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          }
+        },
+        "cognee": {
+          "native_correct_projection": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          },
+          "complete_gateway_current_acl_cache": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          }
+        }
+      }
+    },
+    {
+      "requirement_id": "delegation_attenuation",
+      "probe_ids": [
+        "P11",
+        "P12",
+        "P14",
+        "P15",
+        "P16"
+      ],
+      "targets": {
+        "open_webui": {
+          "native_correct_projection": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          },
+          "complete_gateway_current_acl_cache": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          }
+        },
+        "cognee": {
+          "native_correct_projection": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          },
+          "complete_gateway_current_acl_cache": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          }
+        }
+      }
+    },
+    {
+      "requirement_id": "half_open_expiry",
+      "probe_ids": [
+        "P14",
+        "P17"
+      ],
+      "targets": {
+        "open_webui": {
+          "native_correct_projection": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          },
+          "complete_gateway_current_acl_cache": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          }
+        },
+        "cognee": {
+          "native_correct_projection": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          },
+          "complete_gateway_current_acl_cache": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          }
+        }
+      }
+    },
+    {
+      "requirement_id": "revoked_parent_and_independent_grant",
+      "probe_ids": [
+        "P18",
+        "P19",
+        "P20",
+        "P21",
+        "P24"
+      ],
+      "targets": {
+        "open_webui": {
+          "native_correct_projection": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          },
+          "complete_gateway_current_acl_cache": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          }
+        },
+        "cognee": {
+          "native_correct_projection": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          },
+          "complete_gateway_current_acl_cache": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          }
+        }
+      }
+    },
+    {
+      "requirement_id": "replay_current_authorization_and_integrity",
+      "probe_ids": [
+        "P22",
+        "P23",
+        "P25"
+      ],
+      "targets": {
+        "open_webui": {
+          "native_correct_projection": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          },
+          "complete_gateway_current_acl_cache": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          }
+        },
+        "cognee": {
+          "native_correct_projection": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          },
+          "complete_gateway_current_acl_cache": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          }
+        }
+      }
+    },
+    {
+      "requirement_id": "object_get_search_list_bypass",
+      "probe_ids": [
+        "P01",
+        "P02",
+        "P03",
+        "P19",
+        "P21"
+      ],
+      "targets": {
+        "open_webui": {
+          "native_correct_projection": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          },
+          "complete_gateway_current_acl_cache": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          }
+        },
+        "cognee": {
+          "native_correct_projection": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          },
+          "complete_gateway_current_acl_cache": {
+            "classification": "unverified",
+            "representation": null,
+            "evidence_refs": [],
+            "reason_code": "not_executed"
+          }
+        }
+      }
+    }
+  ],
+  "target_profiles": {
+    "open_webui": {
+      "version": null,
+      "build_digest": null,
+      "actual_native_subject_kind": null,
+      "user_agent_mapping": null,
+      "credential_handles": [],
+      "object_representation": null,
+      "object_mapping": [],
+      "endpoint_manifest": null,
+      "supported_bypass_surfaces": null,
+      "mandatory_gateway_routing_evidence": null,
+      "migration_approval_ref": null,
+      "safe_cleanup_plan": null,
+      "readiness": "unverified_no_operations"
+    },
+    "cognee": {
+      "version": null,
+      "build_digest": null,
+      "actual_native_subject_kind": null,
+      "user_agent_mapping": null,
+      "credential_handles": [],
+      "object_representation": null,
+      "object_mapping": [],
+      "endpoint_manifest": null,
+      "supported_bypass_surfaces": null,
+      "mandatory_gateway_routing_evidence": null,
+      "migration_approval_ref": null,
+      "safe_cleanup_plan": null,
+      "readiness": "unverified_no_operations"
+    }
+  },
+  "arms": [
+    {
+      "arm_id": "native_correct_projection",
+      "policy": "faithful_native_mapping_or_explicit_safe_rejection",
+      "allowed_normal_mechanisms": [
+        "one_to_many_object_mapping",
+        "recipient_copies",
+        "per_grant_objects",
+        "declared_composite_principal_accounts",
+        "normal_index_and_cache_invalidation"
+      ],
+      "not_allowed": [
+        "silently_drop_constraints",
+        "reuse_admin_credentials_as_all_users",
+        "count_body_actor_id_as_authenticated_identity"
+      ]
+    },
+    {
+      "arm_id": "complete_gateway_current_acl_cache",
+      "policy": "all_grants_current_ancestors_time_recipient_operation_destination_and_payload_integrity_recomputed_or_complete_valid_cache",
+      "native_claim": false,
+      "required_controls": [
+        "ordinary_correct_cache",
+        "read_share_export_delegate_routes_all_gated",
+        "in_scope_direct_native_bypass_prevented_or_classified_unrepresentable",
+        "independent_grant_retained",
+        "old_replay_cannot_reactivate_revoked_grants"
+      ]
+    }
+  ],
+  "evidence_contract": {
+    "per_physical_request": [
+      "request_id",
+      "case_id_or_setup_cleanup",
+      "target",
+      "arm",
+      "authenticated_credential_handle",
+      "actual_endpoint_and_method",
+      "policy_revision",
+      "time",
+      "request_body_sha256",
+      "response_body_sha256",
+      "http_status",
+      "fixed_error_class",
+      "delivered_registered_fact_ids",
+      "request_started_completed_at"
+    ],
+    "never_public": [
+      "credential_values",
+      "authorization_headers",
+      "real_private_memory",
+      "restoration_map",
+      "raw_account_data"
+    ],
+    "receipt_orthogonality": [
+      "classification",
+      "expected_source_decision",
+      "actual_content_delivery",
+      "actual_operation_side_effect",
+      "transport_outcome",
+      "reference_state_freshness",
+      "evidence_refs"
+    ],
+    "http200_null": "unverified_or_measured_unavailability_not_automatic_denial_or_success",
+    "denied_read_evidence": "authorized_owner_control_first_then_same_target_object_independent_request_identity_and_raw_response_no_registered_value",
+    "search_list": "all_reachable_registered_fact_ids_per_response_not_only_top_selected_hit"
+  },
+  "scoring": {
+    "unit": "one_fixed_source_policy_projection_per_target_arm_semantic_assertion",
+    "independent_story_count": 1,
+    "fact_count": 2,
+    "source_predicates": 25,
+    "capability_rows": 10,
+    "not_independent_samples": [
+      "repeated_requests",
+      "same_story_principal_pairs",
+      "engineered_tests",
+      "projection_matrix_cells"
+    ],
+    "separate_outputs": [
+      "unauthorized_deliveries",
+      "unauthorized_managed_side_effects",
+      "legal_operation_successes",
+      "safe_unsupported_rejections",
+      "unverified_transport_or_auth_failures",
+      "independent_grant_retention",
+      "lifecycle_replay_effect",
+      "native_vs_gateway_realizability",
+      "total_setup_steady_state_cleanup_requests_and_latency"
+    ],
+    "safe_rejection": "security_preserved_but_legal_utility_or_realizability_not_success",
+    "model_utility": "not_measured_in_this_phase"
+  },
+  "freeze_gates": [
+    "human_review_source_semantics_and_scope",
+    "pure_reference_evaluator_and_independent_expected_truth_validation_before_any_native_request",
+    "target_versions_and_real_principal_mapping",
+    "endpoint_and_bypass_manifest",
+    "fixed_physical_request_cap_including_setup_cleanup_retries",
+    "snapshot_source_grants_states_and_case_hashes",
+    "two_full_strong_arms_not_weakened",
+    "all_unknowns_remaining_explicit",
+    "no_model_calls"
+  ],
+  "stop_conditions": [
+    "only_documented_unsupported_features_reconfirmed_without_new_measurable_interaction",
+    "no_real_native_identity_or_api_evidence",
+    "safe_mapping_and_complete_gateway_trivially_solve_all_cases_without_useful_measured_tradeoff",
+    "transport_or_empty_response_is_only_difference",
+    "proposed_advantage_depends_on_weakened_baseline",
+    "need_claim_full_interoperability_from_static_AGENTS_or_one_synthetic_story"
+  ],
+  "reviewed_current_file_sha256": {
+    "memory_migration_study/native_agent_protocol.py": "38fd8e3673ef9eba3df17c643d02f1d8f763c48b826c99e928ea745aecf0f770",
+    "memory_migration_study/native_privacy_gateway.py": "d578da090f60f2f187874d13b06b25ea9552299f15b455550c9067356a7a4f09",
+    "memory_migration_study/memory_labels.py": "68a129089dda79067b24bc266093c48f0efa9a91e909a0a4eb48b970833477ba"
+  }
+}
