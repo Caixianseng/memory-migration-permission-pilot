@@ -7,6 +7,11 @@ memory_migration_study/candidate_decision_detection.py -text whitespace=cr-at-eo
 examples/native_cognee_probe_assets/scripts/cognee_local_migration_probe.py -text whitespace=cr-at-eol
 # Native qualification binds the original contract bytes, including CRLF.
 docs/proposals/source_policy_projection_contract_v1_20261026.json -text whitespace=cr-at-eol
+# Keep frozen experiment implementations byte-identical to their receipts.
+scripts/native_webui_projection_worker.py whitespace=-blank-at-eof
+scripts/policy_projection_gateway_http.py whitespace=-blank-at-eof
+# This existing module was executed/frozen with CRLF; reproduce it on checkout.
+memory_migration_study/memory_labels.py text eol=crlf whitespace=cr-at-eol
 # Frozen corpus manifests include raw-byte hashes; preserve their original bytes.
 examples/privacy_eval/*.json -text whitespace=cr-at-eol
 examples/privacy_eval_v2/*.json -text whitespace=cr-at-eol

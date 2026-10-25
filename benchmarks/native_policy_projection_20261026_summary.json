@@ -1,0 +1,335 @@
+{
+  "schema": "native_policy_projection_paired_summary_v1",
+  "date": "2026-10-26",
+  "status": "qualified_with_declared_limits",
+  "study_version": "native_read_projection_and_authenticated_gateway_v1",
+  "source": {
+    "kind": "trusted_reference_gateway",
+    "vendor_native_source_IAM": false,
+    "material_origin": "trusted_controller_loaded_synthetic_exact_facts",
+    "native_source_IAM_export_claimed": false
+  },
+  "experimental_units": {
+    "synthetic_stories": 1,
+    "synthetic_facts": 2,
+    "new_independent_stories": 0,
+    "logical_cases_per_target": 25,
+    "targets": 2,
+    "arms_per_target": 2,
+    "matrix_cells_and_engineering_checks_are_not_independent_samples": true
+  },
+  "arms": {
+    "native_projection": {
+      "description": "Complete current source-read rules reconciled by controller to native read ACL at serial barriers; actual reads then use native credentials directly.",
+      "full_source_semantics_passed": false,
+      "native_TTL_or_delegation_chain_engine_claimed": false
+    },
+    "gateway_storage": {
+      "description": "Independent authenticated HTTP gateway checks current complete rules and performs controlled effects over separate owner-only native storage.",
+      "native_equivalent_full_protocol_claimed": false,
+      "all_product_egress_surfaces_qualified": false
+    }
+  },
+  "targets": {
+    "cognee": {
+      "vendor_version": "1.6.5",
+      "run_directory": "results/policy_projection_cognee_20261026_v2",
+      "source_decision_matches": {
+        "matched": 25,
+        "total": 25
+      },
+      "gateway_decision_and_effect_matches": {
+        "matched": 25,
+        "total": 25
+      },
+      "native_read_matches": {
+        "matched": 11,
+        "supported_read_cases": 11,
+        "allow_cases": 4,
+        "deny_cases": 7
+      },
+      "native_nonread_unrepresentable": {
+        "count": 14,
+        "counted_as_success": false,
+        "scope": "Only this declared limited mapping, not all product capabilities.",
+        "operations": {
+          "share": 3,
+          "export": 4,
+          "delegate": 4,
+          "import_replay": 3
+        }
+      },
+      "identity_representation": {
+        "ordinary_native_users_per_arm": 5,
+        "composite_user_agent_principal_accounts_per_arm": 4,
+        "additional_ordinary_owner_per_arm": 1,
+        "native_independent_agent_IAM_claimed": false,
+        "native_child_agents_used": 0,
+        "bootstrap_admin_per_arm": 0
+      },
+      "native_storage_representation": "one_native_dataset_per_exact_fact",
+      "source_barriers": {
+        "states": [
+          "initial",
+          "with_children",
+          "delegation_expired",
+          "root_revoked",
+          "all_managed_revoked"
+        ],
+        "barriers": 5,
+        "read_relationships_per_barrier": 8,
+        "matched_read_relationships": 40,
+        "serial_controlled_ACL_reconciliation": true,
+        "native_independent_clock": false,
+        "concurrent_revoke_measured": false
+      },
+      "managed_gateway_effects": {
+        "share_grant_registered": true,
+        "delegate_grant_registered": true,
+        "post_registration_recipient_reads_confirmed": true,
+        "source_and_gateway_export_files": 2,
+        "export_file_bytes_each": 19,
+        "export_content_sha256": "3f527081e0b9b412610d0b46717ec28b65a2c91fd9a6692d48768e52f7e58008",
+        "dependent_replay_rejected": true,
+        "independent_current_job_read_retained": true,
+        "changed_body_replay_conflict": true
+      },
+      "native_http_entries": {
+        "native_projection": 148,
+        "gateway_storage": 74,
+        "total": 222,
+        "cap_per_arm": 200,
+        "both_caps_satisfied": true,
+        "packet_capture_claimed": false
+      },
+      "local_reference_HTTP_receipts_separate_from_native": {
+        "source_instances": 32,
+        "gateway_instances": 34
+      },
+      "observed_inference": {
+        "generation_attempts": 0,
+        "embedding_attempts": 0,
+        "scope": "Observed guarded Python entries, not hardware attestation."
+      },
+      "declared_bypass_observations": {
+        "count": 100,
+        "surface_counts": {
+          "native_projection/container_list": 20,
+          "native_projection/object_list": 40,
+          "gateway_storage/container_list": 8,
+          "gateway_storage/object_list": 16,
+          "gateway_storage/raw": 16
+        },
+        "full_get_search_list_bypass_qualified": false,
+        "qualified_search_vector_measured": false
+      },
+      "postflight": {
+        "code_status": "passed",
+        "registered_code_files": 83,
+        "code_differences": 0,
+        "proposal_identical": true
+      },
+      "independent_audit": {
+        "status": "passed",
+        "checks": 5514,
+        "passed": 5514,
+        "verifier_sha256": "b24d17a12123cb63cfb08af895bb508137e86e5b617dcd4ec13a9b7bba1b0ef3",
+        "new_vendor_calls": 0,
+        "new_model_calls": 0,
+        "new_network_calls": 0,
+        "scope": "Saved synthetic original evidence only; no vendor/client/model/network execution or auth-store reads."
+      },
+      "artifact_sha256": {
+        "report.json": "dddc48d2f3caf40a9521ad67df5913c6198ccf8ea3525b2876b280779ac07218",
+        "plan.json": "c751cf2d4e05cfd106c864ae341b92c7bdfe7263bce0671baa3d03651ea2ec9e",
+        "source_contract.json": "918e6c4cc0c82e1c51bd43659d100b41c8b0393f4db8a4880c7862036a73ca6f",
+        "events.json": "2d4bddc6b3225cb237fd9ebb749515c5659e744f2913a6a91a95407bfa81f80b",
+        "unscored_rows.json": "9f922841f44e69b45b30f36b65dcf8ca8676b929542e58d64928544d61112db5",
+        "prediction_phase_closed.json": "59453978a10b69688dcfc1caa8fc746ce24576673dea5c5a942b74be5abdaf74",
+        "barriers.json": "ffc074460b60da2995937fee59ce7e49e0ae03ba0df6e26f5260c6eb2a995a08",
+        "bypass.json": "415d5274018ac08ccf1616e0eb02c8f82e1872989fb851ecaceca87fac9dac06",
+        "sink_events.json": "485870d4ce9a735dd625e9c829deb4a6cf16afd3e6ff5061d726f5ecf2465c18",
+        "independent_projection_audit_v1.json": "02e202c3ce5b7cb782cc9b52530caf1f7cb56fa0c0ac2fbeb6026c6a75d62b33"
+      }
+    },
+    "open_webui": {
+      "vendor_version": "0.12.3",
+      "run_directory": "results/policy_projection_webui_20261026_v1",
+      "source_decision_matches": {
+        "matched": 25,
+        "total": 25
+      },
+      "gateway_decision_and_effect_matches": {
+        "matched": 25,
+        "total": 25
+      },
+      "native_read_matches": {
+        "matched": 11,
+        "supported_read_cases": 11,
+        "allow_cases": 4,
+        "deny_cases": 7
+      },
+      "native_nonread_unrepresentable": {
+        "count": 14,
+        "counted_as_success": false,
+        "scope": "Only this declared limited mapping, not all product capabilities.",
+        "operations": {
+          "share": 3,
+          "export": 4,
+          "delegate": 4,
+          "import_replay": 3
+        }
+      },
+      "identity_representation": {
+        "ordinary_native_users_per_arm": 5,
+        "composite_user_agent_principal_accounts_per_arm": 4,
+        "additional_ordinary_owner_per_arm": 1,
+        "native_independent_agent_IAM_claimed": false,
+        "native_child_agents_used": 0,
+        "bootstrap_admin_per_arm": 1
+      },
+      "native_storage_representation": "one_owner_file_and_note_read_ACL_container_per_exact_fact",
+      "source_barriers": {
+        "states": [
+          "initial",
+          "with_children",
+          "delegation_expired",
+          "root_revoked",
+          "all_managed_revoked"
+        ],
+        "barriers": 5,
+        "read_relationships_per_barrier": 8,
+        "matched_read_relationships": 40,
+        "serial_controlled_ACL_reconciliation": true,
+        "native_independent_clock": false,
+        "concurrent_revoke_measured": false
+      },
+      "managed_gateway_effects": {
+        "share_grant_registered": true,
+        "delegate_grant_registered": true,
+        "post_registration_recipient_reads_confirmed": true,
+        "source_and_gateway_export_files": 2,
+        "export_file_bytes_each": 19,
+        "export_content_sha256": "3f527081e0b9b412610d0b46717ec28b65a2c91fd9a6692d48768e52f7e58008",
+        "dependent_replay_rejected": true,
+        "independent_current_job_read_retained": true,
+        "changed_body_replay_conflict": true
+      },
+      "native_http_entries": {
+        "native_projection": 148,
+        "gateway_storage": 74,
+        "total": 222,
+        "cap_per_arm": 200,
+        "both_caps_satisfied": true,
+        "packet_capture_claimed": false
+      },
+      "local_reference_HTTP_receipts_separate_from_native": {
+        "source_instances": 32,
+        "gateway_instances": 34
+      },
+      "observed_inference": {
+        "generation_attempts": 0,
+        "embedding_attempts": 0,
+        "scope": "Observed guarded Python entries, not hardware attestation."
+      },
+      "declared_bypass_observations": {
+        "count": 100,
+        "surface_counts": {
+          "native_projection/container_list": 20,
+          "native_projection/object_list": 40,
+          "gateway_storage/container_list": 8,
+          "gateway_storage/object_list": 16,
+          "gateway_storage/raw": 16
+        },
+        "full_get_search_list_bypass_qualified": false,
+        "qualified_search_vector_measured": false
+      },
+      "postflight": {
+        "code_status": "passed",
+        "registered_code_files": 82,
+        "code_differences": 0,
+        "proposal_identical": true
+      },
+      "independent_audit": {
+        "status": "passed",
+        "checks": 5455,
+        "passed": 5455,
+        "verifier_sha256": "b24d17a12123cb63cfb08af895bb508137e86e5b617dcd4ec13a9b7bba1b0ef3",
+        "new_vendor_calls": 0,
+        "new_model_calls": 0,
+        "new_network_calls": 0,
+        "scope": "Saved synthetic original evidence only; no vendor/client/model/network execution or auth-store reads."
+      },
+      "artifact_sha256": {
+        "report.json": "3994423cf2c1ab900bb0610a94068bfe26d25a9188faa311178cb757ea57fe6d",
+        "plan.json": "c57c3adc05793d394b320dd22d8f9263fb400dde72a9f3ff96d4bb911df55e3c",
+        "source_contract.json": "918e6c4cc0c82e1c51bd43659d100b41c8b0393f4db8a4880c7862036a73ca6f",
+        "events.json": "d54e52da9f2f955ede6bda06725af03b599c0c6c3b0d1fe7efae655c3b83e909",
+        "unscored_rows.json": "5bd6747c4a2d084eaace18b5ddb561c5760fd9f2513af7772191c85311e15bd5",
+        "prediction_phase_closed.json": "b2b925e0ca774a33e9f250076a7572648e29c332c3e3a23dcb0ad519fa50928d",
+        "barriers.json": "ffc074460b60da2995937fee59ce7e49e0ae03ba0df6e26f5260c6eb2a995a08",
+        "bypass.json": "415d5274018ac08ccf1616e0eb02c8f82e1872989fb851ecaceca87fac9dac06",
+        "sink_events.json": "485870d4ce9a735dd625e9c829deb4a6cf16afd3e6ff5061d726f5ecf2465c18",
+        "independent_projection_audit_v1.json": "5408541b54fb474c5b6ca6bddac7c20c8fd0e18c615ea48cd1e9469ba98828de"
+      }
+    }
+  },
+  "novel_algorithm_advantage_established": false,
+  "paper_novelty_established": false,
+  "full_get_search_list_bypass_qualified": false,
+  "search_vector_measured": false,
+  "concurrent_revoke_measured": false,
+  "new_paid_model_api_calls_this_projection_study": 0,
+  "open_requirements": [
+    "original_120_detection_precision_recall_acceptance",
+    "cloud64",
+    "fresh64_independent_materials",
+    "four_earlier_WebUI_vector_null_results",
+    "qualified_search_vector_and_remaining_file_read_bypasses",
+    "all_tool_and_sharing_egress_surfaces",
+    "generalization_beyond_one_synthetic_story",
+    "complete_publication_evidence"
+  ],
+  "scope": "Native read projection and complete current-rule gateway on one fixed synthetic contract; standard strong baselines pass, not evidence of a new superior algorithm.",
+  "native_http_entries_total": 444,
+  "local_reference_HTTP_receipts_total_separate_from_native": 132,
+  "common_source_contract": {
+    "original_proposal_snapshot_sha256": "918e6c4cc0c82e1c51bd43659d100b41c8b0393f4db8a4880c7862036a73ca6f",
+    "validated_runtime_contract_sha256": "e5406ffe175570d70a452277340e63f173956ba15f76374e851abdc799a2a691",
+    "runtime_execution_budget_and_sources_bound_by_each_run_plan": true,
+    "same_contract_on_both_targets": true
+  },
+  "engineering_regression": {
+    "scope": "full offline unittest discovery; engineering only, not native/model efficacy",
+    "tests_run": 1435,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 244.747,
+    "registered_source_files": 289,
+    "source_files_changed_during_tests": 0,
+    "report_sha256": "547153caa3e67e052810b4b8e6ebc03daadb3ac2fdae868297d44244deab9371",
+    "subsequent_verifier_unit_tests": 8,
+    "subsequent_tests_included_in_1435": false,
+    "engineering_tests_not_independent_experimental_samples": true
+  },
+  "preserved_preflight_attempt": {
+    "path": "results/policy_projection_cognee_20261026_v1/preflight_failure.json",
+    "sha256": "8ed7ac201b2ac0e93e18e17b5fcd87505bf2e43eee868b50bdfd7865172171ec",
+    "status": "blocked_before_native_execution",
+    "fixed_error": "matching_frozen_plan_required",
+    "native_http_requests": 0,
+    "cause": "JSON tuple/list representation comparison in frozen-plan preflight",
+    "policy_facts_and_tasks_changed_by_fix": false,
+    "natural_method_failure": false
+  },
+  "limits": [
+    "Controlled exact facts loaded by trusted controller, no vendor-native source IAM export.",
+    "One story and two facts reused on both targets; repeated relationships are not independent samples.",
+    "Native clock, source grant-chain execution, managed nonread routes and automatic cross-backend revocation not claimed for N.",
+    "Four user/Agent pairs are separate ordinary native accounts, not independent native Agent authentication.",
+    "G raw/list bypass checks cover the declared paths only; qualified search/vector, all tool egress and other sharing paths remain open.",
+    "Native request count alone omits local reference HTTP and coordination cost; it establishes no speed/cost advantage.",
+    "Checksums and replay prove saved-evidence consistency, not resistance to coordinated historical forgery."
+  ]
+}

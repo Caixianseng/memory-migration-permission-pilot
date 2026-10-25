@@ -1,0 +1,15 @@
+{
+  "scope": "full offline unittest discovery; engineering only, not native/model efficacy",
+  "tests_run": 1435,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_seconds": 244.747,
+  "changed_during_tests": [],
+  "status": "passed",
+  "report_sha256": "547153caa3e67e052810b4b8e6ebc03daadb3ac2fdae868297d44244deab9371",
+  "model_efficacy": false,
+  "native_acceptance": false,
+  "paper_novelty_established": false,
+  "independent_verifier_tests_added_after_discovery": 8
+}

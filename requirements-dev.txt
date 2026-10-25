@@ -1,2 +1,6 @@
-# Optional dependency for the full offline JSON Schema contract test suite.
-jsonschema==4.23.0
+# Offline test dependencies. Use a separate test environment; native backend
+# experiments retain their own isolated, versioned environments.
+jsonschema==4.26.0
+fastapi==0.136.3
+httpx==0.28.1
+starlette==1.9.0
