@@ -146,7 +146,7 @@ def render(source: Path, output: Path) -> dict:
 <nav class="toc-box" aria-label="汇报目录"><h2>阅读目录</h2>{converter.toc}</nav>
 {''.join(relocate.parts)}</main>
 <footer class="provenance">本页由本地 Markdown 生成，不加载远程脚本、字体或模型。<br>
-源文档：<a href="{html.escape(source_url, quote=True)}">{html.escape(source.name)}</a><br>源文档 SHA-256：{digest}</footer>
+源文档：<a href="{html.escape(source_url, quote=True)}">{html.escape(title)}</a><br>源文档 SHA-256：{digest}</footer>
 </div></body></html>'''
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(page, encoding="utf-8")

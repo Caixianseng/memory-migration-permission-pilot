@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src &#x27;none&#x27;; img-src &#x27;self&#x27; file: data:; style-src &#x27;unsafe-inline&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;">
-<title>DeepSeek 使用情况与日志清理：图文汇报</title><style>
+<title>Agent 记忆安全迁移：项目流程与 DeepSeek 分工</title><style>
 :root{color-scheme:light;--ink:#17263b;--muted:#56667b;--line:#dce4ee;--accent:#155c89}
 *{box-sizing:border-box}body{margin:0;background:#edf2f7;color:var(--ink);font:16px/1.8 'Segoe UI','Microsoft YaHei',sans-serif}
 .shell{max-width:1320px;margin:32px auto;background:#fff;box-shadow:0 8px 32px #132d4612;border:1px solid var(--line);border-radius:18px;overflow:hidden}
@@ -17,19 +17,18 @@ ul,ol{padding-left:1.65em}li{margin:5px 0}figure{margin:18px 0 24px;padding:18px
 <main>
 <nav class="toc-box" aria-label="汇报目录"><h2>阅读目录</h2><div class="toc">
 <ul>
-<li><a href="#deepseek">DeepSeek 使用情况与日志清理：图文汇报</a><ul>
+<li><a href="#agent-deepseek">Agent 记忆安全迁移：项目流程与 DeepSeek 分工</a><ul>
 <li><a href="#1-deepseek">1. 已经使用 DeepSeek 模拟迁移了吗</a></li>
 <li><a href="#2-deepseek">2. DeepSeek 具体跑了什么</a></li>
 <li><a href="#3">3. 整个项目当前的流程</a></li>
 <li><a href="#4">4. 已有成果与未完成项</a></li>
-<li><a href="#5">5. 日志清理范围与实际结果</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </nav>
-<h1 id="deepseek">DeepSeek 使用情况与日志清理：图文汇报</h1>
-<p>日期：2026-10-25。本汇报补充说明模型在项目中的实际角色，并记录用户要求的日志清理。未追加模型、付费 API 或迁移效果实验。</p>
+<h1 id="agent-deepseek">Agent 记忆安全迁移：项目流程与 DeepSeek 分工</h1>
+<p>日期：2026-10-25。本汇报说明项目流程、模型的实际分工、已有成果与当前研究边界。</p>
 <h2 id="1-deepseek">1. 已经使用 DeepSeek 模拟迁移了吗</h2>
 <p><strong>已经使用真实 DeepSeek API，测试了迁移后记忆能否被正确使用。</strong> 更准确的名称是“程序控制的记忆迁移＋DeepSeek 下游问答评估”。</p>
 <p>迁移的动作由本地程序执行：检查权限，按合法读者创建副本，通过真实 Open WebUI 接口保存和读取记忆，再冻结模型允许看到的上下文。DeepSeek 收到问题和记忆后回答，程序在本地核对结果。</p>
@@ -148,24 +147,7 @@ ul,ol{padding-left:1.65em}li{margin:5px 0}figure{margin:18px 0 24px;padding:18px
 </tr>
 </tbody>
 </table>
-<p>详细证据、负结果及后续任务见 <a href="https://github.com/Caixianseng/memory-migration-permission-pilot/blob/main/docs/%E9%A1%B9%E7%9B%AE%E9%98%B6%E6%AE%B5%E6%94%B6%E5%B0%BE%E4%B8%8E%E4%BB%BB%E5%8A%A1%E6%B1%87%E6%8A%A5_2026-10-25.md">项目阶段收尾报告</a>。</p>
-<h2 id="5">5. 日志清理范围与实际结果</h2>
-<p>按本次“清除所有日志”的请求，清理范围为本项目的运行和调试日志：<code>results/</code> 中的 <code>.log</code> / <code>.log.*</code>、项目根级同类日志，以及核实的本地安装/服务日志。清理脚本只逐个处理已验证位于仓库范围内的文件，不递归删除目录，不跟随符号链接或目录联接，不停止无关服务。</p>
-<p>实际清理结果：<strong>90 个日志全部删除，0 个失败、0 个仅清空保留</strong>；清理前合计 95,880,223 字节，约 91.4 MiB。清理后重新运行同范围扫描，日志候选 0 个、字节数 0。20 份关键实验结果、逐请求评测数据及费用账本均存在，内容哈希全部保持不变。</p>
-<p>清理回执：<span class="local-evidence">逐文件处理摘要（本机研究记录，未公开）</span>、<span class="local-evidence">清理后复查（本机研究记录，未公开）</span>、<span class="local-evidence">20 份研究结果完整性复核（本机研究记录，未公开）</span>。公开版只提供 <a href="https://github.com/Caixianseng/memory-migration-permission-pilot/blob/main/benchmarks/deepseek_role_and_log_cleanup_20261025_summary.json">聚合指标</a>，不上传本机逐文件清单或日志原文。</p>
-<p>保留实验结果、失败结论、原始模型结果 JSON、逐请求评测数据、费用账本、模型资产、代码、数据集及 <code>.git</code> 历史。它们不是本次运行日志清理的对象。清理不表示历史失败消失，也不构成新的效果验收。</p>
-<p>完整回归的控制台日志会随本次清理移除；1,028 项通过的结构化回执继续保留。报告不再宣称被删除的日志仍可打开，后续核对以现存结果与结构化记录为准。</p>
-<p>新增 <code>scripts/clear_project_logs.ps1</code>，默认只列清单；显式 <code>-Mode Clear</code> 才执行清理。仓库增加日志忽略规则，减少后续误提交。</p>
-<pre><code class="language-powershell"># 查看清理候选，不删除
-powershell -NoProfile -ExecutionPolicy Bypass -File scripts/clear_project_logs.ps1 -Mode Inventory
-
-# 按明确范围清理项目日志，保留结构化清理回执
-powershell -NoProfile -ExecutionPolicy Bypass -File scripts/clear_project_logs.ps1 -Mode Clear
-
-# 生成本图文报告，不调用模型
-python -B -X utf8 scripts/render_project_closeout.py --input docs/DeepSeek使用与日志清理_图文汇报_2026-10-25.md --output results/deepseek_role_and_cleanup_20261025/index.html
-</code></pre>
-<p>本轮新增模型请求、收费 API 请求和 API 费用均为 0。GitHub 发布仅包含代码、自编说明、图示和去原文聚合信息；本机实验输出不上传。</p></main>
+<p>详细证据、负结果及后续任务见 <a href="https://github.com/Caixianseng/memory-migration-permission-pilot/blob/main/docs/%E9%A1%B9%E7%9B%AE%E9%98%B6%E6%AE%B5%E6%94%B6%E5%B0%BE%E4%B8%8E%E4%BB%BB%E5%8A%A1%E6%B1%87%E6%8A%A5_2026-10-25.md">项目阶段收尾报告</a>。</p></main>
 <footer class="provenance">公开 HTML：图片内嵌；本机研究记录未上传，不加载远程脚本、字体或模型。<br>
-源文档：<a href="https://github.com/Caixianseng/memory-migration-permission-pilot/blob/main/docs/DeepSeek%E4%BD%BF%E7%94%A8%E4%B8%8E%E6%97%A5%E5%BF%97%E6%B8%85%E7%90%86_%E5%9B%BE%E6%96%87%E6%B1%87%E6%8A%A5_2026-10-25.md">DeepSeek使用与日志清理_图文汇报_2026-10-25.md</a><br>源文档 SHA-256：4a81ce70e3efd49d2cdb983057411d580725c6ac339aed8f808e9cfcad6bdc60</footer>
+源文档：<a href="https://github.com/Caixianseng/memory-migration-permission-pilot/blob/main/docs/DeepSeek%E4%BD%BF%E7%94%A8%E4%B8%8E%E6%97%A5%E5%BF%97%E6%B8%85%E7%90%86_%E5%9B%BE%E6%96%87%E6%B1%87%E6%8A%A5_2026-10-25.md">Agent 记忆安全迁移：项目流程与 DeepSeek 分工</a><br>源文档 SHA-256：76f0a8ab8354292fd59d5520485e2c4ef40283b50f3567cb45ce74102f435c67</footer>
 </div></body></html>
