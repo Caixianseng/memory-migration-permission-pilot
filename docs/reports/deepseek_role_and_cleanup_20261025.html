@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src &#x27;none&#x27;; img-src &#x27;self&#x27; file: data:; style-src &#x27;unsafe-inline&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;">
+<title>DeepSeek 使用情况与日志清理：图文汇报</title><style>
+:root{color-scheme:light;--ink:#17263b;--muted:#56667b;--line:#dce4ee;--accent:#155c89}
+*{box-sizing:border-box}body{margin:0;background:#edf2f7;color:var(--ink);font:16px/1.8 'Segoe UI','Microsoft YaHei',sans-serif}
+.shell{max-width:1320px;margin:32px auto;background:#fff;box-shadow:0 8px 32px #132d4612;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.banner{padding:26px 48px 20px;background:#173c56;color:#fff}.eyebrow{font-size:13px;letter-spacing:.12em;color:#bde1f3}.banner p{margin:5px 0;color:#d7e7f0}
+main{padding:18px 48px 48px}h1{font-size:30px;line-height:1.45;margin:20px 0}h2{font-size:24px;margin:42px 0 14px;padding-top:14px;border-top:2px solid var(--line);scroll-margin-top:20px}h3{font-size:19px;margin:26px 0 10px}p{margin:12px 0}a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px;overflow-wrap:anywhere}
+strong{color:#173c56}blockquote{margin:18px 0;padding:10px 20px;background:#f2f7fb;border-left:4px solid #4b8bac}blockquote p{margin:5px 0}
+table{border-collapse:collapse;width:100%;display:block;overflow:auto;font-size:14px;margin:18px 0}th,td{border:1px solid var(--line);padding:10px 13px;vertical-align:top}th{background:#eaf2f8;text-align:left}tr:nth-child(even){background:#fafcfe}code{font-family:Consolas,'Microsoft YaHei',monospace;font-size:.9em;background:#eef3f7;padding:2px 4px;border-radius:3px;overflow-wrap:anywhere}pre{background:#f2f5f9;padding:18px;overflow:auto;border:1px solid var(--line);border-radius:8px;line-height:1.55}pre code{padding:0;background:none;font-size:13px;white-space:pre-wrap;word-break:break-word}
+ul,ol{padding-left:1.65em}li{margin:5px 0}figure{margin:18px 0 24px;padding:18px;background:#f8fbfd;border:1px solid var(--line);border-radius:12px}figure img{width:100%;height:auto;display:block}figcaption{font-size:13px;color:var(--muted);margin-top:10px}details{margin:16px 0;border:1px solid var(--line);border-radius:8px;padding:12px 16px}summary{cursor:pointer;color:var(--accent);font-weight:600}.toc-box{background:#f8fafc;padding:18px 24px;border:1px solid var(--line);border-radius:10px;margin:18px 0}.toc-box h2{font-size:17px;border:0;padding:0;margin:0 0 8px}.toc-box ul{margin:4px 0}.toc-box .toc{font-size:14px}.provenance{padding:18px 48px;background:#f5f8fb;font-size:12px;color:var(--muted);border-top:1px solid var(--line);overflow-wrap:anywhere}
+@media(max-width:760px){.shell{margin:0;border:0;border-radius:0}.banner,main,.provenance{padding-left:20px;padding-right:20px}h1{font-size:25px}h2{font-size:21px}figure{padding:4px}}
+@media print{@page{size:A4;margin:16mm}body{background:#fff;font-size:10pt}.shell{margin:0;max-width:none;border:0;box-shadow:none}.banner{background:#fff;color:#173c56;padding:0 0 8px}.banner p,.eyebrow{color:#56667b}main{padding:0}.toc-box{display:none}h2{font-size:16pt;break-after:avoid}h3{font-size:12pt;break-after:avoid}table{display:table;font-size:8pt}tr,figure{break-inside:avoid}a{color:#173c56}pre{font-size:8pt}.provenance{padding:10px 0}details{break-inside:avoid}}
+</style></head><body><div class="shell">
+<header class="banner"><div class="eyebrow">AGENT MEMORY · PROJECT CLOSEOUT</div><p>项目结构 · 实际成果 · 完整流程 · 待完成事项</p></header>
+<main>
+<nav class="toc-box" aria-label="汇报目录"><h2>阅读目录</h2><div class="toc">
+<ul>
+<li><a href="#deepseek">DeepSeek 使用情况与日志清理：图文汇报</a><ul>
+<li><a href="#1-deepseek">1. 已经使用 DeepSeek 模拟迁移了吗</a></li>
+<li><a href="#2-deepseek">2. DeepSeek 具体跑了什么</a></li>
+<li><a href="#3">3. 整个项目当前的流程</a></li>
+<li><a href="#4">4. 已有成果与未完成项</a></li>
+<li><a href="#5">5. 日志清理范围与实际结果</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<h1 id="deepseek">DeepSeek 使用情况与日志清理：图文汇报</h1>
+<p>日期：2026-10-25。本汇报补充说明模型在项目中的实际角色，并记录用户要求的日志清理。未追加模型、付费 API 或迁移效果实验。</p>
+<h2 id="1-deepseek">1. 已经使用 DeepSeek 模拟迁移了吗</h2>
+<p><strong>已经使用真实 DeepSeek API，测试了迁移后记忆能否被正确使用。</strong> 更准确的名称是“程序控制的记忆迁移＋DeepSeek 下游问答评估”。</p>
+<p>迁移的动作由本地程序执行：检查权限，按合法读者创建副本，通过真实 Open WebUI 接口保存和读取记忆，再冻结模型允许看到的上下文。DeepSeek 收到问题和记忆后回答，程序在本地核对结果。</p>
+<p>当前没有实现“两个自主 DeepSeek Agent 在线协商、自己决定并搬运记忆”的完整系统。DeepSeek 也不负责决定用户权限，不能依据记忆里的文字给自己授权。</p>
+<p><img alt="DeepSeek与本地模型的实际分工；85是模型请求数，迁移与核权由程序执行" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDgwIiBoZWlnaHQ9IjkxMCIgdmlld0JveD0iMCAwIDE0ODAgOTEwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0iZGVlcHNlZWstdGl0bGUgZGVlcHNlZWstZGVzYyI+CiAgPHRpdGxlIGlkPSJkZWVwc2Vlay10aXRsZSI+RGVlcFNlZWsg5Zyo6aG555uu5Lit55qE5a6e6ZmF5L2N572uPC90aXRsZT4KICA8ZGVzYyBpZD0iZGVlcHNlZWstZGVzYyI+5Y6G5Y+y5LqR56uv6Lev5b6E55Sx56iL5bqP6L+B56e75bm257uP5Y6f55Sf5o6l5Y+j6K+75Y+W77yM5Ya757uT5bey5o6I5p2D6K6w5b+G77yM5YaN55SxIERlZXBTZWVrIEZsYXNoIOWbnuetlO+8jOacgOWQjuacrOWcsOivhOWIhuS4juaguOadg+aBouWkjeOAgjIx5qyh5LiJ57uE5a+554Wn5YqgNjTmrKHpmpDnp4Hlr7nnhaflhbE4NeasoeaooeWei+ivt+axgu+8jOS4jeaYrzg15qyh6L+B56e744CC6L+R5pyf5pys5Zyw6Lev5b6E5L2/55SoUXdlbuS6i+WunuaehOW7uuWSjOaVj+aEn+agh+azqO+8jOeoi+W6j+aguOadg+WPiuetvuWQjUpTT07kuqTmjqXvvIzmnKzlnLBRd2Vu5Zue562U5ZKMR0xpTkVS5qOA5rWL77yM5YaN54us56uL6K+E5Lyw44CC55yf5a6eTWVtMOWIsE9wZW4gV2ViVUnmoaXmjqXkuI3lkKvnlJ/miJDlvI/mqKHlnovvvIzkuZ/mnKrkuI7kupHnq6/lkIjmiJDnu5/kuIDnq6/liLDnq6/pqozmlLbjgII8L2Rlc2M+CiAgPGRlZnM+CiAgICA8bWFya2VyIGlkPSJhcnJvdy1jbG91ZCIgbWFya2VyV2lkdGg9IjEwIiBtYXJrZXJIZWlnaHQ9IjEwIiByZWZYPSI4IiByZWZZPSI1IiBvcmllbnQ9ImF1dG8iPjxwYXRoIGQ9Ik0wIDBMMTAgNUwwIDEwWiIgZmlsbD0iIzM1NmQ5NCIvPjwvbWFya2VyPgogICAgPG1hcmtlciBpZD0iYXJyb3ctbG9jYWwiIG1hcmtlcldpZHRoPSIxMCIgbWFya2VySGVpZ2h0PSIxMCIgcmVmWD0iOCIgcmVmWT0iNSIgb3JpZW50PSJhdXRvIj48cGF0aCBkPSJNMCAwTDEwIDVMMCAxMFoiIGZpbGw9IiM0MjgyNzMiLz48L21hcmtlcj4KICAgIDxzdHlsZT4KICAgICAgdGV4dHtmb250LWZhbWlseTonTWljcm9zb2Z0IFlhSGVpJywnU2Vnb2UgVUknLHNhbnMtc2VyaWY7ZmlsbDojMjAzNTRhfQogICAgICAudGl0bGV7Zm9udC1zaXplOjM0cHg7Zm9udC13ZWlnaHQ6NzAwfS5zdWJ0aXRsZXtmb250LXNpemU6MjBweDtmaWxsOiM1ODZkODB9CiAgICAgIC5zZWN0aW9ue2ZvbnQtc2l6ZToyNHB4O2ZvbnQtd2VpZ2h0OjcwMH0uc3RlcHtmb250LXNpemU6MjJweDtmb250LXdlaWdodDo2MDB9CiAgICAgIC5kZXRhaWx7Zm9udC1zaXplOjE4cHg7ZmlsbDojNTI2OTdkfS5ub3Rle2ZvbnQtc2l6ZToyMHB4O2ZpbGw6IzM4NTM2Y30KICAgICAgLmNsb3VkLWNhcmR7ZmlsbDojZmZmO3N0cm9rZTojYjNjZWRlO3N0cm9rZS13aWR0aDoxLjZ9LmxvY2FsLWNhcmR7ZmlsbDojZmZmO3N0cm9rZTojYjRkMmM5O3N0cm9rZS13aWR0aDoxLjZ9CiAgICAgIC5jbG91ZC1saW5le2ZpbGw6bm9uZTtzdHJva2U6IzM1NmQ5NDtzdHJva2Utd2lkdGg6Mi42O21hcmtlci1lbmQ6dXJsKCNhcnJvdy1jbG91ZCl9CiAgICAgIC5sb2NhbC1saW5le2ZpbGw6bm9uZTtzdHJva2U6IzQyODI3MztzdHJva2Utd2lkdGg6Mi42O21hcmtlci1lbmQ6dXJsKCNhcnJvdy1sb2NhbCl9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTQ4MCIgaGVpZ2h0PSI5MTAiIGZpbGw9IiNmZmZmZmYiLz4KICA8dGV4dCB4PSI0OCIgeT0iNjIiIGNsYXNzPSJ0aXRsZSI+RGVlcFNlZWsg5Zyo6aG555uu5Lit55qE5a6e6ZmF5L2N572uPC90ZXh0PgogIDx0ZXh0IHg9IjQ4IiB5PSIxMDAiIGNsYXNzPSJzdWJ0aXRsZSI+6aG555uu5LuN5Zu057uV6K6w5b+G6L+B56e75LiO5p2D6ZmQ5L+d5oyB77yb5qih5Z6L6LSf6LSj5Y+X5o6n5Lu75Yqh5Lit55qE5p6E5bu644CB6K+G5Yir5oiW5Zue562UPC90ZXh0PgoKICA8cmVjdCB4PSIzMiIgeT0iMTM4IiB3aWR0aD0iMTQxNiIgaGVpZ2h0PSIyNzYiIHJ4PSIxOCIgZmlsbD0iI2VkZjVmYiIvPgogIDx0ZXh0IHg9IjU2IiB5PSIxODAiIGNsYXNzPSJzZWN0aW9uIj7ljoblj7LkupHnq6/ot6/lvoQ8L3RleHQ+CiAgPHRleHQgeD0iMzYwIiB5PSIxNzgiIGNsYXNzPSJkZXRhaWwiPuecn+WuniBBUEkg6K6w5b+G6L6T5YWlIOKGkiDlhrvnu5Plv6vnhacg4oaSIOS6keerr+WbnuetlOivhOS8sDwvdGV4dD4KCiAgPHJlY3QgeD0iNTYiIHk9IjIxMCIgd2lkdGg9IjI5NiIgaGVpZ2h0PSIxMzAiIHJ4PSIxMiIgY2xhc3M9ImNsb3VkLWNhcmQiLz4KICA8dGV4dCB4PSIyMDQiIHk9IjI0OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InN0ZXAiPueoi+W6j+aMieadg+mZkOi/geenuzwvdGV4dD4KICA8dGV4dCB4PSIyMDQiIHk9IjI4MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImRldGFpbCI+5Y6f55SfIEFQSSDor7vlj5bojrflh4borrDlv4Y8L3RleHQ+CiAgPHRleHQgeD0iMjA0IiB5PSIzMDkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJkZXRhaWwiPui/geenu+S4juaOiOadg+eUseeoi+W6j+aJp+ihjDwvdGV4dD4KICA8cGF0aCBkPSJNMzU2IDI3NUgzOTQiIGNsYXNzPSJjbG91ZC1saW5lIi8+CgogIDxyZWN0IHg9IjQwMiIgeT0iMjEwIiB3aWR0aD0iMjk2IiBoZWlnaHQ9IjEzMCIgcng9IjEyIiBjbGFzcz0iY2xvdWQtY2FyZCIvPgogIDx0ZXh0IHg9IjU1MCIgeT0iMjQ4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ic3RlcCI+5Ya757uT5bey5o6I5p2D6K6w5b+GPC90ZXh0PgogIDx0ZXh0IHg9IjU1MCIgeT0iMjgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0iZGV0YWlsIj7pmpDnp4Hlr7nnhafmjInmnaHku7blkIzmraXlgYflkI3ljJY8L3RleHQ+CiAgPHRleHQgeD0iNTUwIiB5PSIzMDkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJkZXRhaWwiPumXrumimOWSjOiusOW/huWFseWQjOWHhuWkhzwvdGV4dD4KICA8cGF0aCBkPSJNNzAyIDI3NUg3NDAiIGNsYXNzPSJjbG91ZC1saW5lIi8+CgogIDxyZWN0IHg9Ijc0OCIgeT0iMjEwIiB3aWR0aD0iMjk2IiBoZWlnaHQ9IjEzMCIgcng9IjEyIiBjbGFzcz0iY2xvdWQtY2FyZCIvPgogIDx0ZXh0IHg9Ijg5NiIgeT0iMjQ4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ic3RlcCI+RGVlcFNlZWsgRmxhc2gg5Zue562UPC90ZXh0PgogIDx0ZXh0IHg9Ijg5NiIgeT0iMjgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0iZGV0YWlsIj7mlLbliLDpl67popjkuI7lh4blpIflpb3nmoTorrDlv4Y8L3RleHQ+CiAgPHRleHQgeD0iODk2IiB5PSIzMDkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJkZXRhaWwiPui+k+WHuuS6i+WunuWAvOaIliBVTktOT1dOPC90ZXh0PgogIDxwYXRoIGQ9Ik0xMDQ4IDI3NUgxMDg2IiBjbGFzcz0iY2xvdWQtbGluZSIvPgoKICA8cmVjdCB4PSIxMDk0IiB5PSIyMTAiIHdpZHRoPSIzMzAiIGhlaWdodD0iMTMwIiByeD0iMTIiIGNsYXNzPSJjbG91ZC1jYXJkIi8+CiAgPHRleHQgeD0iMTI1OSIgeT0iMjQ4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ic3RlcCI+5pys5Zyw6K+E5YiG5LiO5qC45p2D5oGi5aSNPC90ZXh0PgogIDx0ZXh0IHg9IjEyNTkiIHk9IjI4MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImRldGFpbCI+5Y6f5paH5p2h5Lu255u05o6l6K+E5YiGPC90ZXh0PgogIDx0ZXh0IHg9IjEyNTkiIHk9IjMwOSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImRldGFpbCI+5Luj5Y+35p2h5Lu25YWI5qC45p2D77yM5YaN5oGi5aSNPC90ZXh0PgoKICA8dGV4dCB4PSI1NiIgeT0iMzgyIiBjbGFzcz0ibm90ZSI+MjEg5qyh5LiJ57uE5a+554WnIO+8iyA2NCDmrKHpmpDnp4Hlr7nnhacg77ydIDg1IOasoeaooeWei+ivt+axgu+8m+S4jeaYr+i/geenu+asoeaVsO+8jOS5n+S4jeaYr+eLrOeri+WcuuaZr+aVsDwvdGV4dD4KCiAgPHJlY3QgeD0iMzIiIHk9IjQ0MCIgd2lkdGg9IjE0MTYiIGhlaWdodD0iMjU2IiByeD0iMTgiIGZpbGw9IiNlZmY3ZjMiLz4KICA8dGV4dCB4PSI1NiIgeT0iNDgyIiBjbGFzcz0ic2VjdGlvbiI+6L+R5pyf5pys5Zyw6Lev5b6EPC90ZXh0PgogIDx0ZXh0IHg9IjM2MCIgeT0iNDgwIiBjbGFzcz0iZGV0YWlsIj7lj5fmjqfop5LoibLkuI7nrb7lkI0gSlNPTiDkuqTmjqXlrp7pqozvvJvnlJ/miJDmqKHlnovkvb/nlKjmnKzmnLogUXdlbjwvdGV4dD4KCiAgPHJlY3QgeD0iNTYiIHk9IjUxNCIgd2lkdGg9IjI5NiIgaGVpZ2h0PSIxMzAiIHJ4PSIxMiIgY2xhc3M9ImxvY2FsLWNhcmQiLz4KICA8dGV4dCB4PSIyMDQiIHk9IjU1MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InN0ZXAiPlF3ZW4g5LqL5a6e5p6E5bu6PC90ZXh0PgogIDx0ZXh0IHg9IjIwNCIgeT0iNTg0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0iZGV0YWlsIj7mlY/mhJ/moIfms6jkuI7mnaXmupDkvY3nva7moLjlr7k8L3RleHQ+CiAgPHRleHQgeD0iMjA0IiB5PSI2MTMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJkZXRhaWwiPuS4jeS7juaWh+acrOWjsOaYjuS6p+eUn+aOiOadgzwvdGV4dD4KICA8cGF0aCBkPSJNMzU2IDU3OUgzOTQiIGNsYXNzPSJsb2NhbC1saW5lIi8+CgogIDxyZWN0IHg9IjQwMiIgeT0iNTE0IiB3aWR0aD0iMjk2IiBoZWlnaHQ9IjEzMCIgcng9IjEyIiBjbGFzcz0ibG9jYWwtY2FyZCIvPgogIDx0ZXh0IHg9IjU1MCIgeT0iNTUyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ic3RlcCI+56iL5bqP5qC45p2D5bm25Lqk5o6lPC90ZXh0PgogIDx0ZXh0IHg9IjU1MCIgeT0iNTg0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0iZGV0YWlsIj7orqTor4Hkuovlrp7jgIHmoIfnrb7lj4rkuLvkvZM8L3RleHQ+CiAgPHRleHQgeD0iNTUwIiB5PSI2MTMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJkZXRhaWwiPumAmui/h+etvuWQjSBKU09OIOS8oOmAkuiusOW/hjwvdGV4dD4KICA8cGF0aCBkPSJNNzAyIDU3OUg3NDAiIGNsYXNzPSJsb2NhbC1saW5lIi8+CgogIDxyZWN0IHg9Ijc0OCIgeT0iNTE0IiB3aWR0aD0iMjk2IiBoZWlnaHQ9IjEzMCIgcng9IjEyIiBjbGFzcz0ibG9jYWwtY2FyZCIvPgogIDx0ZXh0IHg9Ijg5NiIgeT0iNTUyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ic3RlcCI+5pys5Zyw5qih5Z6L5aSE55CGPC90ZXh0PgogIDx0ZXh0IHg9Ijg5NiIgeT0iNTg0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0iZGV0YWlsIj5Rd2VuIOWbnuetlCAvIEdMaU5FUiDmo4DmtYs8L3RleHQ+CiAgPHRleHQgeD0iODk2IiB5PSI2MTMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJkZXRhaWwiPuWBh+WQjeWMluOAgeWkluWPkeS4juaBouWkjemXqOaOpzwvdGV4dD4KICA8cGF0aCBkPSJNMTA0OCA1NzlIMTA4NiIgY2xhc3M9ImxvY2FsLWxpbmUiLz4KCiAgPHJlY3QgeD0iMTA5NCIgeT0iNTE0IiB3aWR0aD0iMzMwIiBoZWlnaHQ9IjEzMCIgcng9IjEyIiBjbGFzcz0ibG9jYWwtY2FyZCIvPgogIDx0ZXh0IHg9IjEyNTkiIHk9IjU1MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InN0ZXAiPueLrOeri+ivhOS8sDwvdGV4dD4KICA8dGV4dCB4PSIxMjU5IiB5PSI1ODQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJkZXRhaWwiPuWbnuetlOato+ehruOAgeaOiOadg+WPiumBruiUveWIhuWIq+iuoeWIhjwvdGV4dD4KICA8dGV4dCB4PSIxMjU5IiB5PSI2MTMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJkZXRhaWwiPuS/neeVmeW+heWuoeOAgeWksei0peWSjOi0n+e7k+aenDwvdGV4dD4KCiAgPHJlY3QgeD0iMzIiIHk9IjcyMiIgd2lkdGg9IjE0MTYiIGhlaWdodD0iMTUwIiByeD0iMTYiIGZpbGw9IiNmNGY2ZjkiIHN0cm9rZT0iI2Q2ZGZlOCIvPgogIDx0ZXh0IHg9IjU2IiB5PSI3NjEiIGNsYXNzPSJzZWN0aW9uIj7ljp/nlJ/moaXmjqXlj6booYzpqozor4HvvJpNZW0wIOKGkiBPcGVuIFdlYlVJPC90ZXh0PgogIDx0ZXh0IHg9IjU2IiB5PSI3OTkiIGNsYXNzPSJub3RlIj7nnJ/lrp7lrZjlgqjkuI7mnKzlnLDltYzlhaXvvIzkuI3lkKvnlJ/miJDlvI/mqKHlnovvvJvlsJrmnKrkuI7kupHnq6/lm57nrZTlkIjkuLrnu5/kuIDnmoTnq6/liLDnq6/pqozmlLbjgII8L3RleHQ+CiAgPHRleHQgeD0iNTYiIHk9IjgzNyIgY2xhc3M9Im5vdGUiPuS4jeaYr+S4pOS4qiBEZWVwU2VlayBBZ2VudCDoh6rkuLvljY/llYbov4Hnp7vvvJvmnKzlm77or7TmmI7lrp7pmYXliIblt6XvvIzkuI3ku6PooajmlbTkvZPmlYjmnpzlt7LpgJrov4fjgII8L3RleHQ+Cjwvc3ZnPgo="></p>
+<table>
+<thead>
+<tr>
+<th>环节</th>
+<th>实际执行者</th>
+<th>当前证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>决定谁能读、是否能迁出/复制</td>
+<td>本地授权程序与研究 ACL 网关</td>
+<td>受控策略、签名及权限检查</td>
+</tr>
+<tr>
+<td>搬运记忆并写入目标</td>
+<td>迁移程序、目标账号和真实记忆 API</td>
+<td><code>reader_copies</code> 等明确迁移策略</td>
+</tr>
+<tr>
+<td>历史两轮的云端回答</td>
+<td><code>deepseek-flash</code></td>
+<td>实际费用账本共 85 条调用、2 个运行</td>
+</tr>
+<tr>
+<td>近期记忆构建、标注及本地回答</td>
+<td>本地 Qwen3 4B；GLiNER 提供实体检测</td>
+<td>最近的 160 / 144 / 96 格开发实验</td>
+</tr>
+<tr>
+<td>最新 Mem0→Open WebUI 桥接</td>
+<td>程序、原生存储与本地嵌入模型</td>
+<td>没有生成式模型调用，单独验收</td>
+</tr>
+</tbody>
+</table>
+<p>“冻结上下文”指把当时已经取回、核验过的记忆保存下来，再以相同输入开展问答比较；它不等于实时在线迁移。Agent A/B 在模型实验中主要是受控程序角色，不能直接理解为两个已部署的自主产品。</p>
+<h2 id="2-deepseek">2. DeepSeek 具体跑了什么</h2>
+<table>
+<thead>
+<tr>
+<th>实验</th>
+<th>调用组成</th>
+<th>实测结果与限制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>首轮迁移上下文问答</td>
+<td>7 题 × 授权参照 / 迁移后 / 无记忆，共 21 次</td>
+<td>每组 4 道合法题，分别答对 1 / 0 / 0；每组 3 道应拒题均 <code>UNKNOWN</code>。两组有记忆输入相同，不能把输出差异归因于迁移丢失</td>
+</tr>
+<tr>
+<td>提示与脱敏四条件对照</td>
+<td>原/修正提示 × 原文/假名化，56 次；另 8 次无记忆控制，共 64 次</td>
+<td>修正提示＋假名化合法题 7/8；但该条件 14/14 输入仍残留注册项目名，隐私验收未通过</td>
+</tr>
+</tbody>
+</table>
+<p>85 是<strong>模型请求数</strong>，不是 85 次独立迁移，也不是 85 个独立场景。两轮均为有限受控材料，不能得出通用 Agent 系统已经稳定成功的结论。历史两轮按 usage 估算费用合计约 0.03714944 元，不是精确账单或当前账户余额。</p>
+<p>依据：<a href="https://github.com/Caixianseng/memory-migration-permission-pilot/blob/main/docs/%E7%9C%9F%E5%AE%9E%E5%A4%A7%E6%A8%A1%E5%9E%8B%E9%A6%96%E8%BD%AE%E5%AE%9E%E9%AA%8C%E4%B8%8E%E8%BF%90%E8%A1%8C%E8%AF%B4%E6%98%8E_2026-10-22.md">首轮真实模型说明</a>、<a href="https://github.com/Caixianseng/memory-migration-permission-pilot/blob/main/docs/%E6%9C%AC%E5%9C%B0Agent%E9%9A%90%E7%A7%81%E5%A4%84%E7%90%86%E5%AE%9E%E7%8E%B0%E4%B8%8E%E5%AE%9E%E9%AA%8C_2026-10-23.md">64 次对照说明</a>、本机 <span class="local-evidence">费用账本（本机研究记录，未公开）</span>、<span class="local-evidence">首轮结果（本机研究记录，未公开）</span> 和 <span class="local-evidence">四条件结果（本机研究记录，未公开）</span>。</p>
+<h2 id="3">3. 整个项目当前的流程</h2>
+<p><img alt="项目整体流程：记忆构建、标注、核权交接、假名化使用与恢复" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDQwIiBoZWlnaHQ9IjkyMCIgdmlld0JveD0iMCAwIDE0NDAgOTIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0iZmxvdy10aXRsZSBmbG93LWRlc2MiPgogIDx0aXRsZSBpZD0iZmxvdy10aXRsZSI+QWdlbnQg5a6J5YWo6K6w5b+G5p2D6ZmQ6L+B56e756CU56m25rWB56iLPC90aXRsZT4KICA8ZGVzYyBpZD0iZmxvdy1kZXNjIj7nrKzkuIDlsYLku47mnKzlnLDljp/lp4vmlofmnKzmnoTlu7rmnInmnaXmupDkvY3nva7nmoTkuovlrp7vvIzorqTor4HmlY/mhJ/moIfnrb7vvIzmoLjlr7nnnJ/lrp7kuLvkvZPjgIHlvZPliY3mnYPpmZDlkozov4Hlh7rlpI3liLbotYTmoLzlkI7kv53lrZjnm67moIforrDlv4bjgILnrKzkuozlsYLmjojmnYPmo4DntKLlkI7lkIzmraXmm7/mjaLpl67popjlkozorrDlv4bkuK3nmoTmlY/mhJ/lgLzvvIzmqKHlnovlm57nrZTlkI7lho3mrKHmoLjmnYPlubblnKjmnKzlnLDmgaLlpI3jgILnrKzkuInlsYLljZXni6zmoLjpqozmkqTmnYPjgIHnm67moIfmuIXnkIblkozml6fku7vliqHph43mlL7jgILmqKHlnovku7vliqHpk77kuI7ljp/nlJ/lkI7nq6/lrp7pqozliIblvIDpqozmlLbjgII8L2Rlc2M+CiAgPGRlZnM+CiAgICA8bWFya2VyIGlkPSJhcnJvdyIgbWFya2VyV2lkdGg9IjEwIiBtYXJrZXJIZWlnaHQ9IjEwIiByZWZYPSI4IiByZWZZPSI1IiBvcmllbnQ9ImF1dG8iPjxwYXRoIGQ9Ik0wIDBMMTAgNUwwIDEwWiIgZmlsbD0iIzM5NjU4MSIvPjwvbWFya2VyPgogICAgPG1hcmtlciBpZD0id2Fybi1hcnJvdyIgbWFya2VyV2lkdGg9IjEwIiBtYXJrZXJIZWlnaHQ9IjEwIiByZWZYPSI4IiByZWZZPSI1IiBvcmllbnQ9ImF1dG8iPjxwYXRoIGQ9Ik0wIDBMMTAgNUwwIDEwWiIgZmlsbD0iI2E0NmIyMiIvPjwvbWFya2VyPgogICAgPHN0eWxlPgogICAgICB0ZXh0e2ZvbnQtZmFtaWx5OidTZWdvZSBVSScsJ01pY3Jvc29mdCBZYUhlaScsc2Fucy1zZXJpZjtmaWxsOiMxYjMzNDh9IC50aXRsZXtmb250LXNpemU6MzBweDtmb250LXdlaWdodDo3MDB9LnN1YnRpdGxle2ZvbnQtc2l6ZToxN3B4O2ZpbGw6IzUyNmI3Zn0ucGhhc2V7Zm9udC1zaXplOjIwcHg7Zm9udC13ZWlnaHQ6NzAwfS5sYWJlbHtmb250LXNpemU6MTlweDtmb250LXdlaWdodDo2MDB9LnNtYWxse2ZvbnQtc2l6ZToxNXB4O2ZpbGw6IzUyNmI3Zn0ubm9kZXtmaWxsOiNmZmY7c3Ryb2tlOiNhN2M1ZDg7c3Ryb2tlLXdpZHRoOjEuNX0ubGluZXtmaWxsOm5vbmU7c3Ryb2tlOiMzOTY1ODE7c3Ryb2tlLXdpZHRoOjIuNTttYXJrZXItZW5kOnVybCgjYXJyb3cpfS53YXJue2ZpbGw6bm9uZTtzdHJva2U6I2E0NmIyMjtzdHJva2Utd2lkdGg6Mi4zO3N0cm9rZS1kYXNoYXJyYXk6NyA1O21hcmtlci1lbmQ6dXJsKCN3YXJuLWFycm93KX0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxNDQwIiBoZWlnaHQ9IjkyMCIgZmlsbD0iI2ZmZiIvPgogIDx0ZXh0IHg9IjQ4IiB5PSI1NCIgY2xhc3M9InRpdGxlIj5BZ2VudCDlronlhajorrDlv4bmnYPpmZDov4Hnp7sgwrcg5qih5Z2X6KGU5o6l5oC76KeIPC90ZXh0PgogIDx0ZXh0IHg9IjQ4IiB5PSI4NiIgY2xhc3M9InN1YnRpdGxlIj7noJTnqbbljp/lnovvvJvmqKHlnovku7vliqHpk77kuI7ljp/nlJ/lkI7nq6/lrp7pqozliIblvIDpqozmlLY8L3RleHQ+CgogIDxyZWN0IHg9IjI4IiB5PSIxMjAiIHdpZHRoPSIxMzgwIiBoZWlnaHQ9IjI1MCIgcng9IjE2IiBmaWxsPSIjZWZmNmZiIi8+CiAgPHRleHQgeD0iNTAiIHk9IjE1NyIgY2xhc3M9InBoYXNlIj7kuIDjgIHnlJ/miJDjgIHmoIfms6jkuI7moLjmnYPov4Hnp7s8L3RleHQ+CiAgPHJlY3QgeD0iNTAiIHk9IjE5NCIgd2lkdGg9IjIzMCIgaGVpZ2h0PSIxMTgiIHJ4PSIxMiIgY2xhc3M9Im5vZGUiLz4KICA8dGV4dCB4PSIxNjUiIHk9IjIzMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImxhYmVsIj4xICDmnKzlnLDmupDmlofmnKw8L3RleHQ+CiAgPHRleHQgeD0iMTY1IiB5PSIyNjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJzbWFsbCI+5YWs5byAIC8g5ZCI5oiQ5Y+X5o6n5p2Q5paZPC90ZXh0PgogIDx0ZXh0IHg9IjE2NSIgeT0iMjg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ic21hbGwiPuadpea6kOWOn+aWh+S4juaVj+aEn+etlueVpTwvdGV4dD4KICA8cmVjdCB4PSIzMjUiIHk9IjE5NCIgd2lkdGg9IjIzMCIgaGVpZ2h0PSIxMTgiIHJ4PSIxMiIgY2xhc3M9Im5vZGUiLz4KICA8dGV4dCB4PSI0NDAiIHk9IjIzMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImxhYmVsIj4yICDmnoTlu7rkuovlrp7orrDlv4Y8L3RleHQ+CiAgPHRleHQgeD0iNDQwIiB5PSIyNjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJzbWFsbCI+57uR5a6a5Y6f5paH5L2N572u5ZKM5YaF5a655ZOI5biMPC90ZXh0PgogIDx0ZXh0IHg9IjQ0MCIgeT0iMjg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ic21hbGwiPueUn+aIkOS4jeetieS6juiHquWKqOaOiOadgzwvdGV4dD4KICA8cmVjdCB4PSI2MDAiIHk9IjE5NCIgd2lkdGg9IjIzMCIgaGVpZ2h0PSIxMTgiIHJ4PSIxMiIgY2xhc3M9Im5vZGUiLz4KICA8dGV4dCB4PSI3MTUiIHk9IjIzMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImxhYmVsIj4zICDmlY/mhJ/moIfnrb7orqTor4E8L3RleHQ+CiAgPHRleHQgeD0iNzE1IiB5PSIyNjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJzbWFsbCI+6KeE5YiZIC8g5pys5Zyw5qih5Z6L5qOA5rWLPC90ZXh0PgogIDx0ZXh0IHg9IjcxNSIgeT0iMjg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ic21hbGwiPkhNQUMg57uR5a6a5YaF5a655LiO562W55WlPC90ZXh0PgogIDxyZWN0IHg9Ijg3NSIgeT0iMTk0IiB3aWR0aD0iMjMwIiBoZWlnaHQ9IjExOCIgcng9IjEyIiBjbGFzcz0ibm9kZSIvPgogIDx0ZXh0IHg9Ijk5MCIgeT0iMjMyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ibGFiZWwiPjQgIOaguOadg+S4jui/geenu+iuoeWIkjwvdGV4dD4KICA8dGV4dCB4PSI5OTAiIHk9IjI2NCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InNtYWxsIj7nnJ/lrp7nlKjmiLfjgIFBZ2VudOOAgeW9k+WJjeadg+mZkDwvdGV4dD4KICA8dGV4dCB4PSI5OTAiIHk9IjI4OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InNtYWxsIj7ov4Hlh7ogLyDlpI3liLYgLyDmjqXmlLbojIPlm7Q8L3RleHQ+CiAgPHJlY3QgeD0iMTE1MCIgeT0iMTk0IiB3aWR0aD0iMjMwIiBoZWlnaHQ9IjExOCIgcng9IjEyIiBjbGFzcz0ibm9kZSIvPgogIDx0ZXh0IHg9IjEyNjUiIHk9IjIzMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImxhYmVsIj41ICDnm67moIforrDlv4Y8L3RleHQ+CiAgPHRleHQgeD0iMTI2NSIgeT0iMjY0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ic21hbGwiPuaMieWQiOagvOaOpeaUtuiAheWGmeWFpTwvdGV4dD4KICA8dGV4dCB4PSIxMjY1IiB5PSIyODgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJzbWFsbCI+5L+d55WZ5p2l5rqQ5Y+K5a+56LGh5pig5bCEPC90ZXh0PgogIDxwYXRoIGQ9Ik0yODAgMjUzSDMxNyIgY2xhc3M9ImxpbmUiLz48cGF0aCBkPSJNNTU1IDI1M0g1OTIiIGNsYXNzPSJsaW5lIi8+PHBhdGggZD0iTTgzMCAyNTNIODY3IiBjbGFzcz0ibGluZSIvPjxwYXRoIGQ9Ik0xMTA1IDI1M0gxMTQyIiBjbGFzcz0ibGluZSIvPgogIDx0ZXh0IHg9IjUwIiB5PSIzNDUiIGNsYXNzPSJzbWFsbCI+5LiN5pSv5oyB55qE57qm5p2f44CB6K6k6K+B5aSx6LSl5oiW5YaF5a655Y+Y5YyW5bqU6Zi75pat77yb5qCH562+5LiN6IO95o+Q5Y2H6K+75Y+W44CB5YWx5Lqr5oiW6L+B5Ye65p2D6ZmQ44CCPC90ZXh0PgoKICA8cmVjdCB4PSIyOCIgeT0iNDE4IiB3aWR0aD0iMTM4MCIgaGVpZ2h0PSIyNDgiIHJ4PSIxNiIgZmlsbD0iI2YxZjhmNSIvPgogIDxwYXRoIGQ9Ik0xMjY1IDMxMlYzOTFIMTRWNTQ5SDQyIiBjbGFzcz0ibGluZSIvPgogIDx0ZXh0IHg9IjUwIiB5PSI0NTUiIGNsYXNzPSJwaGFzZSI+5LqM44CB5o6I5p2D5L2/55So5LiO6ZqQ56eB5oGi5aSNPC90ZXh0PgogIDxyZWN0IHg9IjUwIiB5PSI0OTAiIHdpZHRoPSIyOTAiIGhlaWdodD0iMTE4IiByeD0iMTIiIGNsYXNzPSJub2RlIi8+CiAgPHRleHQgeD0iMTk1IiB5PSI1MjgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJsYWJlbCI+NiAg5oyJ5b2T5YmN5p2D6ZmQ5qOA57SiPC90ZXh0PgogIDx0ZXh0IHg9IjE5NSIgeT0iNTYwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ic21hbGwiPuWPquaPkOS+m+acieadg+ivu+WPlueahOiusOW/hjwvdGV4dD4KICA8dGV4dCB4PSIxOTUiIHk9IjU4NCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InNtYWxsIj7nlKjmiLflkowgQWdlbnQg6Lqr5Lu95YiG5Yir5qC45a+5PC90ZXh0PgogIDxyZWN0IHg9IjM5NSIgeT0iNDkwIiB3aWR0aD0iMjkwIiBoZWlnaHQ9IjExOCIgcng9IjEyIiBjbGFzcz0ibm9kZSIvPgogIDx0ZXh0IHg9IjU0MCIgeT0iNTI4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ibGFiZWwiPjcgIOWQjOatpeWBh+WQjeWMluS4juWHuuWPo+agoemqjDwvdGV4dD4KICA8dGV4dCB4PSI1NDAiIHk9IjU2MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InNtYWxsIj7pl67popjkuI7orrDlv4bkvb/nlKjlkIzkuIDor7fmsYLku6Plj7c8L3RleHQ+CiAgPHRleHQgeD0iNTQwIiB5PSI1ODQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJzbWFsbCI+5oGi5aSN5pig5bCE5L+d55WZ5Zyo5pys5Zyw5YaF5a2YPC90ZXh0PgogIDxyZWN0IHg9Ijc0MCIgeT0iNDkwIiB3aWR0aD0iMjkwIiBoZWlnaHQ9IjExOCIgcng9IjEyIiBjbGFzcz0ibm9kZSIvPgogIDx0ZXh0IHg9Ijg4NSIgeT0iNTI4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ibGFiZWwiPjggIOaooeWei+S+neaNruiusOW/huWbnuetlDwvdGV4dD4KICA8dGV4dCB4PSI4ODUiIHk9IjU2MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InNtYWxsIj7lj6rmjqXmlLbpl67popjkuI7lhYHorrjnmoTorrDlv4Y8L3RleHQ+CiAgPHRleHQgeD0iODg1IiB5PSI1ODQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJzbWFsbCI+6K6w5b2V5Y6f5aeL5Zue562U5LiO5aSx6LSl6Zi25q61PC90ZXh0PgogIDxyZWN0IHg9IjEwODUiIHk9IjQ5MCIgd2lkdGg9IjI5NSIgaGVpZ2h0PSIxMTgiIHJ4PSIxMiIgY2xhc3M9Im5vZGUiLz4KICA8dGV4dCB4PSIxMjMyIiB5PSI1MjgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJsYWJlbCI+OSAg5YaN5qC45p2D5ZCO5pys5Zyw5oGi5aSNPC90ZXh0PgogIDx0ZXh0IHg9IjEyMzIiIHk9IjU2MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InNtYWxsIj7pqozor4Hku6Plj7fjgIHmnaXmupDjgIHkuLvkvZPlkoznrZbnlaU8L3RleHQ+CiAgPHRleHQgeD0iMTIzMiIgeT0iNTg0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ic21hbGwiPuaBouWkjeWQiOazleWOn+WAvOaIluaYjuehrumYu+aWrTwvdGV4dD4KICA8cGF0aCBkPSJNMzQwIDU0OUgzODciIGNsYXNzPSJsaW5lIi8+PHBhdGggZD0iTTY4NSA1NDlINzMyIiBjbGFzcz0ibGluZSIvPjxwYXRoIGQ9Ik0xMDMwIDU0OUgxMDc3IiBjbGFzcz0ibGluZSIvPgogIDx0ZXh0IHg9IjUwIiB5PSI2NDAiIGNsYXNzPSJzbWFsbCI+5YGH5ZCN5YyW5ZCO5LuN57un5om/5Y6f5p2D6ZmQ77yb5qOA5rWL5b6F5a6h44CB5qih5Z6LIFVOS05PV07jgIHosIPnlKjplJnor6/lj4rmgaLlpI3lpLHotKXliIbliKvorqHmlbDjgII8L3RleHQ+CgogIDxyZWN0IHg9IjI4IiB5PSI3MTQiIHdpZHRoPSIxMzgwIiBoZWlnaHQ9IjE0MiIgcng9IjE2IiBmaWxsPSIjZmZmN2U5Ii8+CiAgPHRleHQgeD0iNTAiIHk9Ijc1MSIgY2xhc3M9InBoYXNlIj7kuInjgIHnlJ/lkb3lkajmnJ/kuI7lj4zovajor4TkvLA8L3RleHQ+CiAgPHRleHQgeD0iNTAiIHk9Ijc4NSIgY2xhc3M9ImxhYmVsIj4xMCAg5pKk5p2DIOKGkiDmuIXnkIbnm67moIflia/mnKwg4oaSIOaLkue7neaXp+S7u+WKoemHjeaUviDihpIg5L+d55WZ54us56uL5ZCI5rOV5o6I5p2DPC90ZXh0PgogIDx0ZXh0IHg9IjUwIiB5PSI4MTkiIGNsYXNzPSJzbWFsbCI+55u05o6l6K+E5Lyw77ya5YaF5a6544CB5p2D6ZmQ44CB5pKk5p2D5Y+K6YeN5pS+IO+9nCDpl7TmjqXor4TkvLDvvJrlkIjms5Xlm57nrZTjgIHms4TpnLLjgIHmi5LnrZTjgIHotLnnlKjlj4rlpLHotKXliIbmr408L3RleHQ+CiAgPHBhdGggZD0iTTEyMzIgNjA4VjcwNCIgY2xhc3M9Indhcm4iLz4KICA8dGV4dCB4PSI0OCIgeT0iODk0IiBjbGFzcz0ic3VidGl0bGUiPui/meaYr+eglOeptuaooeWdl+e7k+aehOWbvu+8m+acquWwhuaciemZkOWcuuaZr+mAmui/h+OAgeW8gOWPkembhumrmOWIhuaIluW3peeoi+a1i+ivleaVsOihqOi/sOS4uuaZrumBjeWuieWFqOS4juiuuuaWh+WIm+aWsOOAgjwvdGV4dD4KPC9zdmc+Cg=="></p>
+<ol>
+<li><strong>准备原文和业务规则。</strong> 原文提供事实，服务端规则决定谁能读以及哪些内容需要保护。</li>
+<li><strong>生成记忆并检查来源。</strong> 本地模型摘录或选择事实，程序核对原文位置和内容；当前不等于通用语义摘要。</li>
+<li><strong>进行敏感标注并认证。</strong> 找出受保护片段，将标签、具体事实、来源和主体绑定；认证标签不证明检测没有漏报。</li>
+<li><strong>核权迁移。</strong> 检查用户、执行 Agent、源限制、接收范围以及目标限制，建立获准副本及映射。</li>
+<li><strong>检索并同步假名化。</strong> 同一次请求中，问题和记忆里的敏感值使用一致代号，本地保留恢复表。</li>
+<li><strong>请求回答模型。</strong> 历史云端对照使用 DeepSeek；近期开发对照主要使用本地 Qwen。模型不获得评分答案。</li>
+<li><strong>再次核权恢复。</strong> 验证代号、证据来源和当前权限后，将允许展示的原值交给用户。</li>
+<li><strong>分开评测。</strong> 底层权限正确与模型答对分别计分，撤权、清理和旧任务重放单独核验。</li>
+</ol>
+<p>上述是可组合研究组件的流程。原生跨后端实验与真实生成式问答实验还没有完成同一条端到端联合验收。</p>
+<h2 id="4">4. 已有成果与未完成项</h2>
+<table>
+<thead>
+<tr>
+<th>内容</th>
+<th>当前状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>工程原型</td>
+<td>已实现来源认证、隐私标注、迁移校验、同步假名化及核权恢复</td>
+</tr>
+<tr>
+<td>最近一次完整离线回归</td>
+<td>1,028 项通过；本轮不重复运行效果实验，不把历史测试写为新测</td>
+</tr>
+<tr>
+<td>无模型演示</td>
+<td>参考迁移与假名化恢复两个演示已在收尾时实际通过</td>
+</tr>
+<tr>
+<td>最新 32 道开发合法题</td>
+<td>默认严格 26/32；同输出格式兼容后 30/32，尚非新独立验收</td>
+</tr>
+<tr>
+<td>原生桥接</td>
+<td>保留 v3 的 25/29 失败；后续同序诊断 29/29，未证明根因修复和稳定性</td>
+</tr>
+<tr>
+<td>原检测目标与新独立 64 题目标</td>
+<td>尚未通过；后者尚未执行独立验收</td>
+</tr>
+<tr>
+<td>论文创新与强基线优势</td>
+<td>尚未成立</td>
+</tr>
+</tbody>
+</table>
+<p>详细证据、负结果及后续任务见 <a href="https://github.com/Caixianseng/memory-migration-permission-pilot/blob/main/docs/%E9%A1%B9%E7%9B%AE%E9%98%B6%E6%AE%B5%E6%94%B6%E5%B0%BE%E4%B8%8E%E4%BB%BB%E5%8A%A1%E6%B1%87%E6%8A%A5_2026-10-25.md">项目阶段收尾报告</a>。</p>
+<h2 id="5">5. 日志清理范围与实际结果</h2>
+<p>按本次“清除所有日志”的请求，清理范围为本项目的运行和调试日志：<code>results/</code> 中的 <code>.log</code> / <code>.log.*</code>、项目根级同类日志，以及核实的本地安装/服务日志。清理脚本只逐个处理已验证位于仓库范围内的文件，不递归删除目录，不跟随符号链接或目录联接，不停止无关服务。</p>
+<p>实际清理结果：<strong>90 个日志全部删除，0 个失败、0 个仅清空保留</strong>；清理前合计 95,880,223 字节，约 91.4 MiB。清理后重新运行同范围扫描，日志候选 0 个、字节数 0。20 份关键实验结果、逐请求评测数据及费用账本均存在，内容哈希全部保持不变。</p>
+<p>清理回执：<span class="local-evidence">逐文件处理摘要（本机研究记录，未公开）</span>、<span class="local-evidence">清理后复查（本机研究记录，未公开）</span>、<span class="local-evidence">20 份研究结果完整性复核（本机研究记录，未公开）</span>。公开版只提供 <a href="https://github.com/Caixianseng/memory-migration-permission-pilot/blob/main/benchmarks/deepseek_role_and_log_cleanup_20261025_summary.json">聚合指标</a>，不上传本机逐文件清单或日志原文。</p>
+<p>保留实验结果、失败结论、原始模型结果 JSON、逐请求评测数据、费用账本、模型资产、代码、数据集及 <code>.git</code> 历史。它们不是本次运行日志清理的对象。清理不表示历史失败消失，也不构成新的效果验收。</p>
+<p>完整回归的控制台日志会随本次清理移除；1,028 项通过的结构化回执继续保留。报告不再宣称被删除的日志仍可打开，后续核对以现存结果与结构化记录为准。</p>
+<p>新增 <code>scripts/clear_project_logs.ps1</code>，默认只列清单；显式 <code>-Mode Clear</code> 才执行清理。仓库增加日志忽略规则，减少后续误提交。</p>
+<pre><code class="language-powershell"># 查看清理候选，不删除
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/clear_project_logs.ps1 -Mode Inventory
+
+# 按明确范围清理项目日志，保留结构化清理回执
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/clear_project_logs.ps1 -Mode Clear
+
+# 生成本图文报告，不调用模型
+python -B -X utf8 scripts/render_project_closeout.py --input docs/DeepSeek使用与日志清理_图文汇报_2026-10-25.md --output results/deepseek_role_and_cleanup_20261025/index.html
+</code></pre>
+<p>本轮新增模型请求、收费 API 请求和 API 费用均为 0。GitHub 发布仅包含代码、自编说明、图示和去原文聚合信息；本机实验输出不上传。</p></main>
+<footer class="provenance">公开 HTML：图片内嵌；本机研究记录未上传，不加载远程脚本、字体或模型。<br>
+源文档：<a href="https://github.com/Caixianseng/memory-migration-permission-pilot/blob/main/docs/DeepSeek%E4%BD%BF%E7%94%A8%E4%B8%8E%E6%97%A5%E5%BF%97%E6%B8%85%E7%90%86_%E5%9B%BE%E6%96%87%E6%B1%87%E6%8A%A5_2026-10-25.md">DeepSeek使用与日志清理_图文汇报_2026-10-25.md</a><br>源文档 SHA-256：4a81ce70e3efd49d2cdb983057411d580725c6ac339aed8f808e9cfcad6bdc60</footer>
+</div></body></html>
