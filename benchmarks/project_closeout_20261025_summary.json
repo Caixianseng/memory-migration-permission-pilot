@@ -88,5 +88,12 @@
     "A later diagnostic pass does not repair or erase the original native failure.",
     "Source role v2 code remains an unexecuted research draft.",
     "Raw local results, downloaded assets, credentials and environments are excluded from GitHub."
-  ]
+  ],
+  "subsequent_user_requested_log_cleanup": {
+    "summary": "benchmarks/deepseek_role_and_log_cleanup_20261025_summary.json",
+    "console_logs_deleted": 90,
+    "previous_console_log_available": false,
+    "structured_results_preserved": true,
+    "historical_regression_status_unchanged": true
+  }
 }

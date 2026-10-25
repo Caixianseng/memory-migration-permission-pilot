@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1480" height="910" viewBox="0 0 1480 910" role="img" aria-labelledby="deepseek-title deepseek-desc">
+  <title id="deepseek-title">DeepSeek 在项目中的实际位置</title>
+  <desc id="deepseek-desc">历史云端路径由程序迁移并经原生接口读取，冻结已授权记忆，再由 DeepSeek Flash 回答，最后本地评分与核权恢复。21次三组对照加64次隐私对照共85次模型请求，不是85次迁移。近期本地路径使用Qwen事实构建和敏感标注，程序核权及签名JSON交接，本地Qwen回答和GLiNER检测，再独立评估。真实Mem0到Open WebUI桥接不含生成式模型，也未与云端合成统一端到端验收。</desc>
+  <defs>
+    <marker id="arrow-cloud" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#356d94"/></marker>
+    <marker id="arrow-local" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#428273"/></marker>
+    <style>
+      text{font-family:'Microsoft YaHei','Segoe UI',sans-serif;fill:#20354a}
+      .title{font-size:34px;font-weight:700}.subtitle{font-size:20px;fill:#586d80}
+      .section{font-size:24px;font-weight:700}.step{font-size:22px;font-weight:600}
+      .detail{font-size:18px;fill:#52697d}.note{font-size:20px;fill:#38536c}
+      .cloud-card{fill:#fff;stroke:#b3cede;stroke-width:1.6}.local-card{fill:#fff;stroke:#b4d2c9;stroke-width:1.6}
+      .cloud-line{fill:none;stroke:#356d94;stroke-width:2.6;marker-end:url(#arrow-cloud)}
+      .local-line{fill:none;stroke:#428273;stroke-width:2.6;marker-end:url(#arrow-local)}
+    </style>
+  </defs>
+  <rect width="1480" height="910" fill="#ffffff"/>
+  <text x="48" y="62" class="title">DeepSeek 在项目中的实际位置</text>
+  <text x="48" y="100" class="subtitle">项目仍围绕记忆迁移与权限保持；模型负责受控任务中的构建、识别或回答</text>
+
+  <rect x="32" y="138" width="1416" height="276" rx="18" fill="#edf5fb"/>
+  <text x="56" y="180" class="section">历史云端路径</text>
+  <text x="360" y="178" class="detail">真实 API 记忆输入 → 冻结快照 → 云端回答评估</text>
+
+  <rect x="56" y="210" width="296" height="130" rx="12" class="cloud-card"/>
+  <text x="204" y="248" text-anchor="middle" class="step">程序按权限迁移</text>
+  <text x="204" y="280" text-anchor="middle" class="detail">原生 API 读取获准记忆</text>
+  <text x="204" y="309" text-anchor="middle" class="detail">迁移与授权由程序执行</text>
+  <path d="M356 275H394" class="cloud-line"/>
+
+  <rect x="402" y="210" width="296" height="130" rx="12" class="cloud-card"/>
+  <text x="550" y="248" text-anchor="middle" class="step">冻结已授权记忆</text>
+  <text x="550" y="280" text-anchor="middle" class="detail">隐私对照按条件同步假名化</text>
+  <text x="550" y="309" text-anchor="middle" class="detail">问题和记忆共同准备</text>
+  <path d="M702 275H740" class="cloud-line"/>
+
+  <rect x="748" y="210" width="296" height="130" rx="12" class="cloud-card"/>
+  <text x="896" y="248" text-anchor="middle" class="step">DeepSeek Flash 回答</text>
+  <text x="896" y="280" text-anchor="middle" class="detail">收到问题与准备好的记忆</text>
+  <text x="896" y="309" text-anchor="middle" class="detail">输出事实值或 UNKNOWN</text>
+  <path d="M1048 275H1086" class="cloud-line"/>
+
+  <rect x="1094" y="210" width="330" height="130" rx="12" class="cloud-card"/>
+  <text x="1259" y="248" text-anchor="middle" class="step">本地评分与核权恢复</text>
+  <text x="1259" y="280" text-anchor="middle" class="detail">原文条件直接评分</text>
+  <text x="1259" y="309" text-anchor="middle" class="detail">代号条件先核权，再恢复</text>
+
+  <text x="56" y="382" class="note">21 次三组对照 ＋ 64 次隐私对照 ＝ 85 次模型请求；不是迁移次数，也不是独立场景数</text>
+
+  <rect x="32" y="440" width="1416" height="256" rx="18" fill="#eff7f3"/>
+  <text x="56" y="482" class="section">近期本地路径</text>
+  <text x="360" y="480" class="detail">受控角色与签名 JSON 交接实验；生成模型使用本机 Qwen</text>
+
+  <rect x="56" y="514" width="296" height="130" rx="12" class="local-card"/>
+  <text x="204" y="552" text-anchor="middle" class="step">Qwen 事实构建</text>
+  <text x="204" y="584" text-anchor="middle" class="detail">敏感标注与来源位置核对</text>
+  <text x="204" y="613" text-anchor="middle" class="detail">不从文本声明产生授权</text>
+  <path d="M356 579H394" class="local-line"/>
+
+  <rect x="402" y="514" width="296" height="130" rx="12" class="local-card"/>
+  <text x="550" y="552" text-anchor="middle" class="step">程序核权并交接</text>
+  <text x="550" y="584" text-anchor="middle" class="detail">认证事实、标签及主体</text>
+  <text x="550" y="613" text-anchor="middle" class="detail">通过签名 JSON 传递记忆</text>
+  <path d="M702 579H740" class="local-line"/>
+
+  <rect x="748" y="514" width="296" height="130" rx="12" class="local-card"/>
+  <text x="896" y="552" text-anchor="middle" class="step">本地模型处理</text>
+  <text x="896" y="584" text-anchor="middle" class="detail">Qwen 回答 / GLiNER 检测</text>
+  <text x="896" y="613" text-anchor="middle" class="detail">假名化、外发与恢复门控</text>
+  <path d="M1048 579H1086" class="local-line"/>
+
+  <rect x="1094" y="514" width="330" height="130" rx="12" class="local-card"/>
+  <text x="1259" y="552" text-anchor="middle" class="step">独立评估</text>
+  <text x="1259" y="584" text-anchor="middle" class="detail">回答正确、授权及遮蔽分别计分</text>
+  <text x="1259" y="613" text-anchor="middle" class="detail">保留待审、失败和负结果</text>
+
+  <rect x="32" y="722" width="1416" height="150" rx="16" fill="#f4f6f9" stroke="#d6dfe8"/>
+  <text x="56" y="761" class="section">原生桥接另行验证：Mem0 → Open WebUI</text>
+  <text x="56" y="799" class="note">真实存储与本地嵌入，不含生成式模型；尚未与云端回答合为统一的端到端验收。</text>
+  <text x="56" y="837" class="note">不是两个 DeepSeek Agent 自主协商迁移；本图说明实际分工，不代表整体效果已通过。</text>
+</svg>

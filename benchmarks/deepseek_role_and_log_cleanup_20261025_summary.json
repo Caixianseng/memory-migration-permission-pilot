@@ -1,0 +1,57 @@
+{
+  "version": "deepseek_role_and_bounded_log_cleanup_v1",
+  "date": "2026-10-25",
+  "report": "docs/DeepSeek使用与日志清理_图文汇报_2026-10-25.md",
+  "deepseek_historical_usage": {
+    "model": "deepseek-flash",
+    "runs": 2,
+    "migration_context_answer_calls": 21,
+    "prompt_privacy_comparison_calls": 64,
+    "total_calls": 85,
+    "role": "Answering questions over program-authorized, frozen memory contexts; not deciding authorization or autonomously executing migration.",
+    "autonomous_deepseek_to_deepseek_migration_demonstrated": false,
+    "usage_based_cost_estimate_cny": 0.03714944,
+    "supplier_bill_verified": false,
+    "calls_are_independent_migrations_or_stories": false
+  },
+  "current_model_roles": {
+    "recent_generative_development_experiments": "local Qwen3 4B",
+    "entity_detection": "local Qwen and/or GLiNER according to the frozen experiment arm",
+    "native_exact_fact_bridge_generative_calls": 0,
+    "migration_and_authorization": "local program, research ACL gateway and native backend APIs"
+  },
+  "log_cleanup": {
+    "status": "passed",
+    "scope": "Root-level and results/ .log/.log.* files, excluding protected directories and reparse points; four explicitly named project runtime logs.",
+    "candidate_count_before": 90,
+    "deleted_count": 90,
+    "truncated_count": 0,
+    "failed_count": 0,
+    "bytes_before": 95880223,
+    "bytes_after": 0,
+    "candidate_count_after": 0,
+    "protected_artifacts_checked": 20,
+    "protected_artifacts_missing": 0,
+    "protected_artifacts_changed": 0,
+    "protected_request_transport_jsonl_files": 7,
+    "protected_authorization_event_json_files": 5,
+    "research_results_and_failures_preserved": true,
+    "git_history_preserved": true,
+    "services_terminated": 0,
+    "local_receipt": "results/log_cleanup_20261025/cleanup_receipt.json",
+    "local_post_inventory": "results/log_cleanup_20261025/post_cleanup_inventory.json",
+    "local_preservation_receipt": "results/log_cleanup_20261025/protected_artifacts_verification.json"
+  },
+  "validation": {
+    "cleanup_script_inventory_verified_with_windows_powershell": true,
+    "cleanup_script_inventory_verified_with_powershell_7": true,
+    "historical_offline_regression_tests": 1028,
+    "full_python_regression_rerun_this_change": false,
+    "model_effectiveness_rerun_this_change": false,
+    "scope": "Documentation, bounded cleanup and rendering verification; no new efficacy claim."
+  },
+  "this_change_new_model_calls": 0,
+  "this_change_new_paid_api_calls": 0,
+  "this_change_new_api_cost_cny": 0,
+  "overall_research_acceptance_passed": false
+}

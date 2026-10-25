@@ -1,5 +1,7 @@
 # Agent 记忆迁移权限保持本地测试程序
 
+2026-10-25 补充交付：[DeepSeek 实际角色与日志清理图文汇报](docs/DeepSeek使用与日志清理_图文汇报_2026-10-25.md)。历史 DeepSeek Flash 共 **85 次真实问答请求（21＋64）**；迁移与授权由程序执行，近期开发实验主要使用本地 Qwen/GLiNER。日志清理保留研究结果、逐请求评测数据与费用账本。可先运行 `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/clear_project_logs.ps1 -Mode Inventory` 查看候选；显式 `-Mode Clear` 才删除范围内的运行日志。
+
 2026-10-25 阶段收尾：[完整任务汇报、模块结构与总流程图](docs/项目阶段收尾与任务汇报_2026-10-25.md)。当前工作区 **1,028 项离线工程测试通过**，两个无需模型的演示通过；收尾无新增模型/API调用。当前是可复查的研究原型，整体效果、原生稳定性与论文创新尚未验收，原始失败保留。默认方案不变，源角色v2为未执行草稿；公开收尾摘要见 [聚合记录](benchmarks/project_closeout_20261025_summary.json)。本机离线阅读版可运行 `python -B -X utf8 scripts/render_project_closeout.py` 生成。
 
 2026-10-25 问题实体模式对照：[真实效用负结果](docs/问题实体模式_真实效用负结果_2026-10-25.md)。96格、106次真实本地生成已独立核验；配对随机代号后，默认A严格26/32、次要30/32，具名客户模式B严格24/32、次要28/32。B修复一题泛称误遮，却新增两题角色词误遮；另一次同输入输出波动不归因schema。**未启用B为默认，整体效果未验收。** [聚合](benchmarks/query_schema_transfer_development_20261025_summary.json)。新增[共享记忆与可撤销委托近邻核验](docs/新增近邻_共享记忆与可撤销委托_2026-10-25.md)，避免把已有的双层访问、写入分类或独立授权保持当作新贡献。
