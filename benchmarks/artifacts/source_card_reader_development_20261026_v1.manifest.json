@@ -1,0 +1,790 @@
+{
+  "version": "source_card_synthetic_artifact_export_v1",
+  "scope": "One exposed eight-story hand-authored synthetic development run; linkable, not anonymized.",
+  "model_calls_during_export": 0,
+  "credentials_read": false,
+  "raw_restore_map_exported": false,
+  "HMAC_secret_exported": false,
+  "original_HMAC_signatures_offline_reverifiable": false,
+  "original_map_object_identity_offline_reverifiable": false,
+  "qualification": "Exact public corpus bytes, pinned run hashes, exact source spans, frozen 50 source bytes, successful zero-model saved-evidence verifier receipt. Not protection against coordinated artifact forgery.",
+  "omitted": [
+    "arbitrary results tree",
+    "index.html",
+    "service logs",
+    "private maps/tables/keys",
+    "credentials",
+    "runtime downloads",
+    "transport audit host executable/version"
+  ],
+  "provenance": {
+    "run/annotations.json": {
+      "source": "registered_run/annotations.json",
+      "original_sha256": "d0ecb19a96125da6c5d4cff41b893678674937e151cdec1c228b912a8d044f1b",
+      "exported_sha256": "d0ecb19a96125da6c5d4cff41b893678674937e151cdec1c228b912a8d044f1b",
+      "transformation": "byte_exact"
+    },
+    "run/auth_events.json": {
+      "source": "registered_run/auth_events.json",
+      "original_sha256": "90d4fdc04e2e387b5037a9be6992852514582dc4e772928ce13dbbd5cb09bfca",
+      "exported_sha256": "90d4fdc04e2e387b5037a9be6992852514582dc4e772928ce13dbbd5cb09bfca",
+      "transformation": "byte_exact"
+    },
+    "run/builds.json": {
+      "source": "registered_run/builds.json",
+      "original_sha256": "a426c3eb6bf7ded314dbb5c97d6199a06e3b9b217dc62cbdce3ca46fece7804a",
+      "exported_sha256": "a426c3eb6bf7ded314dbb5c97d6199a06e3b9b217dc62cbdce3ca46fece7804a",
+      "transformation": "byte_exact"
+    },
+    "run/config.json": {
+      "source": "registered_run/config.json",
+      "original_sha256": "590c204ab3960569aead29d308557085d9a13973f2bdc13965d6cba68a61fd21",
+      "exported_sha256": "590c204ab3960569aead29d308557085d9a13973f2bdc13965d6cba68a61fd21",
+      "transformation": "byte_exact"
+    },
+    "run/evaluation.json": {
+      "source": "registered_run/evaluation.json",
+      "original_sha256": "ac82c3d995e44401b336c25861f44222a4ff09c0a2394dbef6823a8ee974978e",
+      "exported_sha256": "ac82c3d995e44401b336c25861f44222a4ff09c0a2394dbef6823a8ee974978e",
+      "transformation": "byte_exact"
+    },
+    "run/network_audit.json": {
+      "source": "registered_run/network_audit.json",
+      "original_sha256": "342e5a55f41e557dceadb48b464d429b4359187b636578cac75474bc6263b2ef",
+      "exported_sha256": "342e5a55f41e557dceadb48b464d429b4359187b636578cac75474bc6263b2ef",
+      "transformation": "byte_exact"
+    },
+    "run/plan.json": {
+      "source": "registered_run/plan.json",
+      "original_sha256": "1fa38089b5fc7d0542aee51e8d1839e98565f583207074a2ab4d71e6358a18b8",
+      "exported_sha256": "1fa38089b5fc7d0542aee51e8d1839e98565f583207074a2ab4d71e6358a18b8",
+      "transformation": "byte_exact"
+    },
+    "run/pools.json": {
+      "source": "registered_run/pools.json",
+      "original_sha256": "af574d7d5942893072da8dbf67a0c5c62e65c05617a0a901eb32c677ea925757",
+      "exported_sha256": "af574d7d5942893072da8dbf67a0c5c62e65c05617a0a901eb32c677ea925757",
+      "transformation": "byte_exact"
+    },
+    "run/query_encoder_events.json": {
+      "source": "registered_run/query_encoder_events.json",
+      "original_sha256": "d75a1541c709cfeab9f7b6b22a8e66d8cf82df41764a09c0a00e8985b5747814",
+      "exported_sha256": "d75a1541c709cfeab9f7b6b22a8e66d8cf82df41764a09c0a00e8985b5747814",
+      "transformation": "byte_exact"
+    },
+    "run/record_store.json": {
+      "source": "registered_run/record_store.json",
+      "original_sha256": "006bf8496fda8bf6d9f4c7bb9b147ff1e6018149b904eb9f601150f1a07d43a4",
+      "exported_sha256": "006bf8496fda8bf6d9f4c7bb9b147ff1e6018149b904eb9f601150f1a07d43a4",
+      "transformation": "byte_exact"
+    },
+    "run/report.json": {
+      "source": "registered_run/report.json",
+      "original_sha256": "0562977c9d2c249c798c86294f99def94054eff54dd5b7a2b1006118871590f5",
+      "exported_sha256": "0562977c9d2c249c798c86294f99def94054eff54dd5b7a2b1006118871590f5",
+      "transformation": "byte_exact"
+    },
+    "run/request_transport.jsonl": {
+      "source": "registered_run/request_transport.jsonl",
+      "original_sha256": "59a9cbcdd8b476ef7ca4393e47da9cbf6713dc611c8028413de1d9b3843c9be1",
+      "exported_sha256": "59a9cbcdd8b476ef7ca4393e47da9cbf6713dc611c8028413de1d9b3843c9be1",
+      "transformation": "byte_exact"
+    },
+    "run/rows.json": {
+      "source": "registered_run/rows.json",
+      "original_sha256": "7aa979683031bd87c0d24136c3b6d276a2f4f526111d81cb3676ddc8e4382198",
+      "exported_sha256": "7aa979683031bd87c0d24136c3b6d276a2f4f526111d81cb3676ddc8e4382198",
+      "transformation": "byte_exact"
+    },
+    "run/runtime.json": {
+      "source": "registered_run/runtime.json",
+      "original_sha256": "f95e8f462fbf4e0256163d672665256b6983c69c5780e21e3262b74a42d253db",
+      "exported_sha256": "f95e8f462fbf4e0256163d672665256b6983c69c5780e21e3262b74a42d253db",
+      "transformation": "byte_exact"
+    },
+    "run/runtime_identity.json": {
+      "source": "registered_run/runtime_identity.json",
+      "original_sha256": "64a78281448039aa70dab2ff446a887b5928f91ee36bbcf7a52e865a02614629",
+      "exported_sha256": "64a78281448039aa70dab2ff446a887b5928f91ee36bbcf7a52e865a02614629",
+      "transformation": "byte_exact"
+    },
+    "run/shared_contexts.json": {
+      "source": "registered_run/shared_contexts.json",
+      "original_sha256": "6d4630ffc9b7e1022326dfad691b607243285fd021bd91383071f6f738e43dcc",
+      "exported_sha256": "6d4630ffc9b7e1022326dfad691b607243285fd021bd91383071f6f738e43dcc",
+      "transformation": "byte_exact"
+    },
+    "run/source_card_sets.json": {
+      "source": "registered_run/source_card_sets.json",
+      "original_sha256": "16f543a809cd9bda83c70734c8733c28c283672486330c4e380f23aa4d79be5e",
+      "exported_sha256": "16f543a809cd9bda83c70734c8733c28c283672486330c4e380f23aa4d79be5e",
+      "transformation": "byte_exact"
+    },
+    "run/transport_audit.json": {
+      "source": "registered_run/transport_audit.json",
+      "original_sha256": "40fd47489911373bb6a8975170a2015e1a6996276fc76e920d8016cded9a73b5",
+      "exported_sha256": "77c78731f0f2c12eabd12867b36035e4d97b7c517da613a24b460aa872705b95",
+      "transformation": "remove_python_executable_and_python_version"
+    },
+    "run/independent_source_card_verification_v1.json": {
+      "source": "registered_run/independent_source_card_verification_v1.json",
+      "original_sha256": "aec000a09f51965ed6c1a060580be0f6dbee7ee857c3266ad594db4e2d533534",
+      "exported_sha256": "aec000a09f51965ed6c1a060580be0f6dbee7ee857c3266ad594db4e2d533534",
+      "transformation": "byte_exact"
+    },
+    "run/independent_source_card_verification_v2.json": {
+      "source": "registered_run/independent_source_card_verification_v2.json",
+      "original_sha256": "5cdd99f5d536f029171ad4693b3a0f2219c15a184a6b59f18f335a33c1e05fed",
+      "exported_sha256": "5cdd99f5d536f029171ad4693b3a0f2219c15a184a6b59f18f335a33c1e05fed",
+      "transformation": "byte_exact"
+    },
+    "run/independent_source_card_verification_v3.json": {
+      "source": "registered_run/independent_source_card_verification_v3.json",
+      "original_sha256": "34bd1db6debd2e2ca81474fc1df9a6b3f6c9876d19cceeb39d3c96f8c0e5dd03",
+      "exported_sha256": "34bd1db6debd2e2ca81474fc1df9a6b3f6c9876d19cceeb39d3c96f8c0e5dd03",
+      "transformation": "byte_exact"
+    },
+    "source/examples/privacy_semantics_v1/README.md": {
+      "source": "public_repository/examples/privacy_semantics_v1/README.md",
+      "original_sha256": "03adc28434b5449a7466629705a5bb153ab5068b6aa8162b8b567e48c9326b97",
+      "exported_sha256": "03adc28434b5449a7466629705a5bb153ab5068b6aa8162b8b567e48c9326b97",
+      "transformation": "byte_exact"
+    },
+    "source/examples/privacy_semantics_v1/development/runtime.json": {
+      "source": "public_repository/examples/privacy_semantics_v1/development/runtime.json",
+      "original_sha256": "22647d2e6e813ee094fe94609d6eb0804308d887059fb64e2331c9195e6e15f4",
+      "exported_sha256": "22647d2e6e813ee094fe94609d6eb0804308d887059fb64e2331c9195e6e15f4",
+      "transformation": "byte_exact"
+    },
+    "source/examples/privacy_semantics_v1/development/evaluation.json": {
+      "source": "public_repository/examples/privacy_semantics_v1/development/evaluation.json",
+      "original_sha256": "acb8b84664876f14cd6b788bfb32ad7600060cda3377d0681d6c305f4b23a98c",
+      "exported_sha256": "acb8b84664876f14cd6b788bfb32ad7600060cda3377d0681d6c305f4b23a98c",
+      "transformation": "byte_exact"
+    },
+    "source/configs/local_privacy_detector.json": {
+      "source": "public_repository/configs/local_privacy_detector.json",
+      "original_sha256": "840715dc542f7acde4f0afca87b20df6b55aef78dccc0efc613cf1a969bd27a1",
+      "exported_sha256": "840715dc542f7acde4f0afca87b20df6b55aef78dccc0efc613cf1a969bd27a1",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/__init__.py": {
+      "source": "executed_archive/memory_migration_study/__init__.py",
+      "original_sha256": "5db86bb3981ca95dc7f630734f01a45d6beaca68e4b566709a7bf60caa6150e5",
+      "exported_sha256": "5db86bb3981ca95dc7f630734f01a45d6beaca68e4b566709a7bf60caa6150e5",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/amount_candidates.py": {
+      "source": "executed_archive/memory_migration_study/amount_candidates.py",
+      "original_sha256": "bf5d5b71300da1f6dbe92c79f79690389779738d7a29241e574dc551063d9640",
+      "exported_sha256": "bf5d5b71300da1f6dbe92c79f79690389779738d7a29241e574dc551063d9640",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/answer_evidence.py": {
+      "source": "executed_archive/memory_migration_study/answer_evidence.py",
+      "original_sha256": "d3d151da9318ed5b6e993a27cf215e1165be37d884493de25664d98cd432266a",
+      "exported_sha256": "d3d151da9318ed5b6e993a27cf215e1165be37d884493de25664d98cd432266a",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/answer_serialization.py": {
+      "source": "executed_archive/memory_migration_study/answer_serialization.py",
+      "original_sha256": "973a6a3387e44289a28765c3ffffc0bc7a2c162e7f37cf5c3b8c19705878a13f",
+      "exported_sha256": "973a6a3387e44289a28765c3ffffc0bc7a2c162e7f37cf5c3b8c19705878a13f",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/backend.py": {
+      "source": "executed_archive/memory_migration_study/backend.py",
+      "original_sha256": "3d9628990206884c5a14a5b050acdbdfea5f35adab8949afa84fa5b05778b450",
+      "exported_sha256": "3d9628990206884c5a14a5b050acdbdfea5f35adab8949afa84fa5b05778b450",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/boundary_detector.py": {
+      "source": "executed_archive/memory_migration_study/boundary_detector.py",
+      "original_sha256": "6bd9e1527d6eb772a05b89925c3db1cf160088a1fe73ee6b378affc1200cfd4d",
+      "exported_sha256": "6bd9e1527d6eb772a05b89925c3db1cf160088a1fe73ee6b378affc1200cfd4d",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/boundary_preparation.py": {
+      "source": "executed_archive/memory_migration_study/boundary_preparation.py",
+      "original_sha256": "e4e8094bfae1a7b76954f7c576c4f53d0366104379b69e34000d901fe81275c8",
+      "exported_sha256": "e4e8094bfae1a7b76954f7c576c4f53d0366104379b69e34000d901fe81275c8",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/boundary_reconciliation.py": {
+      "source": "executed_archive/memory_migration_study/boundary_reconciliation.py",
+      "original_sha256": "63ee4781ed1d784710ef64c2ba1e81654e5d5596a7e1d45d597eadd2a3786e57",
+      "exported_sha256": "63ee4781ed1d784710ef64c2ba1e81654e5d5596a7e1d45d597eadd2a3786e57",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/budget.py": {
+      "source": "executed_archive/memory_migration_study/budget.py",
+      "original_sha256": "7678cb0d652e5a57505e15a9958916d2564d812ff4dfa02dbd91f771fcf3e7a2",
+      "exported_sha256": "7678cb0d652e5a57505e15a9958916d2564d812ff4dfa02dbd91f771fcf3e7a2",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/candidate_adjudicator.py": {
+      "source": "executed_archive/memory_migration_study/candidate_adjudicator.py",
+      "original_sha256": "9124421e79051fa0cceea7c3a9dbfa3eceaf9fe5f46d3ca5e9e62913df7e8bf2",
+      "exported_sha256": "9124421e79051fa0cceea7c3a9dbfa3eceaf9fe5f46d3ca5e9e62913df7e8bf2",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/candidate_proposals.py": {
+      "source": "executed_archive/memory_migration_study/candidate_proposals.py",
+      "original_sha256": "32be4b9a305f43e8f9701c3b50c822f0a98b13411c2d12dd57a2692dc4b9e323",
+      "exported_sha256": "32be4b9a305f43e8f9701c3b50c822f0a98b13411c2d12dd57a2692dc4b9e323",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/coverage_memory.py": {
+      "source": "executed_archive/memory_migration_study/coverage_memory.py",
+      "original_sha256": "4280d0ffbe381e602f9e6547ee18d3d760cda909216fd0bde14129593e25260b",
+      "exported_sha256": "4280d0ffbe381e602f9e6547ee18d3d760cda909216fd0bde14129593e25260b",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/detection_cache.py": {
+      "source": "executed_archive/memory_migration_study/detection_cache.py",
+      "original_sha256": "55403bfea4844e142a6000e062868d3235bee6febd1c66b4c836a7590b6e64ba",
+      "exported_sha256": "55403bfea4844e142a6000e062868d3235bee6febd1c66b4c836a7590b6e64ba",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/evidence.py": {
+      "source": "executed_archive/memory_migration_study/evidence.py",
+      "original_sha256": "ff7af54c2babe30d3270c4b227560ee6c7669e8b1b40aec90e6ead369235faf4",
+      "exported_sha256": "ff7af54c2babe30d3270c4b227560ee6c7669e8b1b40aec90e6ead369235faf4",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/local_detector.py": {
+      "source": "executed_archive/memory_migration_study/local_detector.py",
+      "original_sha256": "1ee3b486fde6ca8533a26035910fa1913a2889cec28f408e25129662493d84d5",
+      "exported_sha256": "1ee3b486fde6ca8533a26035910fa1913a2889cec28f408e25129662493d84d5",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/memory_builder.py": {
+      "source": "executed_archive/memory_migration_study/memory_builder.py",
+      "original_sha256": "481926a33f8deedfdb36f1a025e3578660894818700048ae78c1bc0e84da6140",
+      "exported_sha256": "481926a33f8deedfdb36f1a025e3578660894818700048ae78c1bc0e84da6140",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/memory_generation_experiment.py": {
+      "source": "executed_archive/memory_migration_study/memory_generation_experiment.py",
+      "original_sha256": "283bdced55cf95a7837038d54075d2a065dc3133b0874692e33f095f1b256179",
+      "exported_sha256": "283bdced55cf95a7837038d54075d2a065dc3133b0874692e33f095f1b256179",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/memory_labels.py": {
+      "source": "executed_archive/memory_migration_study/memory_labels.py",
+      "original_sha256": "68a129089dda79067b24bc266093c48f0efa9a91e909a0a4eb48b970833477ba",
+      "exported_sha256": "68a129089dda79067b24bc266093c48f0efa9a91e909a0a4eb48b970833477ba",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/ner_detector.py": {
+      "source": "executed_archive/memory_migration_study/ner_detector.py",
+      "original_sha256": "89b3485c6a6a7759b99b5a5234665c024870b7b78de59661d19420109185615d",
+      "exported_sha256": "89b3485c6a6a7759b99b5a5234665c024870b7b78de59661d19420109185615d",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/plan_verifier.py": {
+      "source": "executed_archive/memory_migration_study/plan_verifier.py",
+      "original_sha256": "25cb3d579bd7df2df32fcb567408077363cd59eb5996925899a01a09faf53fc5",
+      "exported_sha256": "25cb3d579bd7df2df32fcb567408077363cd59eb5996925899a01a09faf53fc5",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/policy.py": {
+      "source": "executed_archive/memory_migration_study/policy.py",
+      "original_sha256": "9798a2dc2642e55d9a3335209c5f13c57aae29acedab97b014a48a4fb4b9a75e",
+      "exported_sha256": "9798a2dc2642e55d9a3335209c5f13c57aae29acedab97b014a48a4fb4b9a75e",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/policy_semantics.py": {
+      "source": "executed_archive/memory_migration_study/policy_semantics.py",
+      "original_sha256": "bbd891394c09f419d3a9eb20467f8a1e9d1f7ccb2d77ec39c8d1805445caffe9",
+      "exported_sha256": "bbd891394c09f419d3a9eb20467f8a1e9d1f7ccb2d77ec39c8d1805445caffe9",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/privacy.py": {
+      "source": "executed_archive/memory_migration_study/privacy.py",
+      "original_sha256": "c6db0bb46c983c6f42d35a3fe028f35309905e5c447e5de9260d927e10dac7e9",
+      "exported_sha256": "c6db0bb46c983c6f42d35a3fe028f35309905e5c447e5de9260d927e10dac7e9",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/privacy_corpus.py": {
+      "source": "executed_archive/memory_migration_study/privacy_corpus.py",
+      "original_sha256": "9dd7b74b3fc4a578e9727a695f88e3a4a2477045582fdf7196d8c46c452eabe9",
+      "exported_sha256": "9dd7b74b3fc4a578e9727a695f88e3a4a2477045582fdf7196d8c46c452eabe9",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/privacy_egress.py": {
+      "source": "executed_archive/memory_migration_study/privacy_egress.py",
+      "original_sha256": "239a138cbbe5497355462657122a3feca9bdefabbcf25f2b90550e12d5c1fe93",
+      "exported_sha256": "239a138cbbe5497355462657122a3feca9bdefabbcf25f2b90550e12d5c1fe93",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/privacy_payload_eval.py": {
+      "source": "executed_archive/memory_migration_study/privacy_payload_eval.py",
+      "original_sha256": "c37ca56b47956cae8b5170ea930efd3b164fb775833b47aaa5f7801befc90d16",
+      "exported_sha256": "c37ca56b47956cae8b5170ea930efd3b164fb775833b47aaa5f7801befc90d16",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/query_intent.py": {
+      "source": "executed_archive/memory_migration_study/query_intent.py",
+      "original_sha256": "ae65d722125ba7004a5143a7b69fc5efaba300795ffa7446fa2b8ebbb2797d3d",
+      "exported_sha256": "ae65d722125ba7004a5143a7b69fc5efaba300795ffa7446fa2b8ebbb2797d3d",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/reference_memory.py": {
+      "source": "executed_archive/memory_migration_study/reference_memory.py",
+      "original_sha256": "ba4f6519a5e31ef62168b4a1e357b4c1f209209c53a14a9924966079c77eb1b9",
+      "exported_sha256": "ba4f6519a5e31ef62168b4a1e357b4c1f209209c53a14a9924966079c77eb1b9",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/request_projection.py": {
+      "source": "executed_archive/memory_migration_study/request_projection.py",
+      "original_sha256": "5204578275937526d4f577eb1289db8150371fd678aad20391661687ad83da10",
+      "exported_sha256": "5204578275937526d4f577eb1289db8150371fd678aad20391661687ad83da10",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/reuse_benchmark.py": {
+      "source": "executed_archive/memory_migration_study/reuse_benchmark.py",
+      "original_sha256": "fe392ab976fc85cdc03e9e1468484c6d44af9935b302d4d3cb64494f6bdfbc21",
+      "exported_sha256": "fe392ab976fc85cdc03e9e1468484c6d44af9935b302d4d3cb64494f6bdfbc21",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/role_cover.py": {
+      "source": "executed_archive/memory_migration_study/role_cover.py",
+      "original_sha256": "7b42c1862835880e8d352325a6f514eb048f5fb16e4c8aca20be62f5d3027cbc",
+      "exported_sha256": "7b42c1862835880e8d352325a6f514eb048f5fb16e4c8aca20be62f5d3027cbc",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/role_query.py": {
+      "source": "executed_archive/memory_migration_study/role_query.py",
+      "original_sha256": "d4b1c22624892ef899242394e33bbc42fc9c3848cf50e6d520d7c51e0c9a48aa",
+      "exported_sha256": "d4b1c22624892ef899242394e33bbc42fc9c3848cf50e6d520d7c51e0c9a48aa",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/semantic_memory_benchmark.py": {
+      "source": "executed_archive/memory_migration_study/semantic_memory_benchmark.py",
+      "original_sha256": "7a8560fb251ee21c8f91280668e8a50c5881dd3f12a18513efe9fc2c5ff6aeca",
+      "exported_sha256": "7a8560fb251ee21c8f91280668e8a50c5881dd3f12a18513efe9fc2c5ff6aeca",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/semantic_refinement.py": {
+      "source": "executed_archive/memory_migration_study/semantic_refinement.py",
+      "original_sha256": "7c5eea539a0577b76f227bf53efb2776efeae3acf1e3feab9c3110360d211e3d",
+      "exported_sha256": "7c5eea539a0577b76f227bf53efb2776efeae3acf1e3feab9c3110360d211e3d",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/source_card_reader.py": {
+      "source": "executed_archive/memory_migration_study/source_card_reader.py",
+      "original_sha256": "1455abcf827388063111c42e2d52267a71c713fbe7161603856b4df8c5cc1914",
+      "exported_sha256": "1455abcf827388063111c42e2d52267a71c713fbe7161603856b4df8c5cc1914",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/source_fact_cards.py": {
+      "source": "executed_archive/memory_migration_study/source_fact_cards.py",
+      "original_sha256": "b8f7474c43da170a1bd2a6c8f9397371091113784af7dcb13f8068e0d6731599",
+      "exported_sha256": "b8f7474c43da170a1bd2a6c8f9397371091113784af7dcb13f8068e0d6731599",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/span_answer_evidence.py": {
+      "source": "executed_archive/memory_migration_study/span_answer_evidence.py",
+      "original_sha256": "13fb799cc0976b5a3fbc078f0aea977b234207c92899cb7485a2dac2c0b34cf9",
+      "exported_sha256": "13fb799cc0976b5a3fbc078f0aea977b234207c92899cb7485a2dac2c0b34cf9",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/span_answerer.py": {
+      "source": "executed_archive/memory_migration_study/span_answerer.py",
+      "original_sha256": "5f433c43a77e78286895d4122f89f32d2c998fcbf8260f5bf123a68d555d0607",
+      "exported_sha256": "5f433c43a77e78286895d4122f89f32d2c998fcbf8260f5bf123a68d555d0607",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/span_completion.py": {
+      "source": "executed_archive/memory_migration_study/span_completion.py",
+      "original_sha256": "24cf30bf3cc6ac77580b8c0dbe789b04bdf101b8f7d60386a15ebb945078940b",
+      "exported_sha256": "24cf30bf3cc6ac77580b8c0dbe789b04bdf101b8f7d60386a15ebb945078940b",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/structured_candidates.py": {
+      "source": "executed_archive/memory_migration_study/structured_candidates.py",
+      "original_sha256": "f460c12e838d1fc029da71fbe593cc835c4a8c082d6fb4aba0c499e6b1bcc22d",
+      "exported_sha256": "f460c12e838d1fc029da71fbe593cc835c4a8c082d6fb4aba0c499e6b1bcc22d",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/tasks.py": {
+      "source": "executed_archive/memory_migration_study/tasks.py",
+      "original_sha256": "f174194e6ab57558350a1349ce90521d5909813036c3ccf9c50d2d79d047cd2c",
+      "exported_sha256": "f174194e6ab57558350a1349ce90521d5909813036c3ccf9c50d2d79d047cd2c",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/memory_migration_study/union_detector.py": {
+      "source": "executed_archive/memory_migration_study/union_detector.py",
+      "original_sha256": "5090b1127e883ae39a3286b776f3037b892144697798aa919085b64ff9dfe921",
+      "exported_sha256": "5090b1127e883ae39a3286b776f3037b892144697798aa919085b64ff9dfe921",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/scripts/run_boundary_transfer_diagnostic.py": {
+      "source": "executed_archive/scripts/run_boundary_transfer_diagnostic.py",
+      "original_sha256": "ecddafb775ca9f4ca06d96e0c4c2f217d08e2cf6fdd3db9b00c21f2d9ba4a793",
+      "exported_sha256": "ecddafb775ca9f4ca06d96e0c4c2f217d08e2cf6fdd3db9b00c21f2d9ba4a793",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/scripts/run_customer_schema_probe.py": {
+      "source": "executed_archive/scripts/run_customer_schema_probe.py",
+      "original_sha256": "5c11fed8ee7b9e76153bea7155c90500e623705a00ba685903a4499d81f0de5b",
+      "exported_sha256": "5c11fed8ee7b9e76153bea7155c90500e623705a00ba685903a4499d81f0de5b",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/scripts/run_generation_union_transfer.py": {
+      "source": "executed_archive/scripts/run_generation_union_transfer.py",
+      "original_sha256": "aab7b7d2d8c449dce6a266282ae95e5da59b0bbb1a51faa95a2f3ef0e7190dec",
+      "exported_sha256": "aab7b7d2d8c449dce6a266282ae95e5da59b0bbb1a51faa95a2f3ef0e7190dec",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/scripts/run_policy_semantic_study.py": {
+      "source": "executed_archive/scripts/run_policy_semantic_study.py",
+      "original_sha256": "7fb293479b1d5e8e744b461421f4538aa76bd870ebff124aea4073a28e500b3c",
+      "exported_sha256": "7fb293479b1d5e8e744b461421f4538aa76bd870ebff124aea4073a28e500b3c",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/scripts/run_query_schema_transfer.py": {
+      "source": "executed_archive/scripts/run_query_schema_transfer.py",
+      "original_sha256": "9bff5cfed6838cd3170a469d96dfb5f23f5f409ab3b3764e33a4adbb2cf4b0ce",
+      "exported_sha256": "9bff5cfed6838cd3170a469d96dfb5f23f5f409ab3b3764e33a4adbb2cf4b0ce",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/scripts/run_reference_memory_study.py": {
+      "source": "executed_archive/scripts/run_reference_memory_study.py",
+      "original_sha256": "ff797496e19372c946a07d68668ac6236b57916e0aa85aa6cfa2eec0400057e3",
+      "exported_sha256": "ff797496e19372c946a07d68668ac6236b57916e0aa85aa6cfa2eec0400057e3",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/scripts/run_source_card_reader.py": {
+      "source": "executed_archive/scripts/run_source_card_reader.py",
+      "original_sha256": "d2fc262660630b4765256690ba49f894d3c68897af8189315a65c3b40e93c370",
+      "exported_sha256": "d2fc262660630b4765256690ba49f894d3c68897af8189315a65c3b40e93c370",
+      "transformation": "byte_exact"
+    },
+    "run/implementation/scripts/run_span_answer_transfer.py": {
+      "source": "executed_archive/scripts/run_span_answer_transfer.py",
+      "original_sha256": "1d69a1e37972f036680ace29a6d3defb2cfdfcaf9920e54a4535a09d98673ae1",
+      "exported_sha256": "1d69a1e37972f036680ace29a6d3defb2cfdfcaf9920e54a4535a09d98673ae1",
+      "transformation": "byte_exact"
+    }
+  },
+  "files": {
+    "README.md": {
+      "sha256": "3218469f7013c7df478a56191e48325c9bca7febc5939e13b1de4ee69f8c5164",
+      "bytes": 2039
+    },
+    "approved-plan.json": {
+      "sha256": "1fa38089b5fc7d0542aee51e8d1839e98565f583207074a2ab4d71e6358a18b8",
+      "bytes": 11007
+    },
+    "run/annotations.json": {
+      "sha256": "d0ecb19a96125da6c5d4cff41b893678674937e151cdec1c228b912a8d044f1b",
+      "bytes": 56047
+    },
+    "run/auth_events.json": {
+      "sha256": "90d4fdc04e2e387b5037a9be6992852514582dc4e772928ce13dbbd5cb09bfca",
+      "bytes": 780260
+    },
+    "run/builds.json": {
+      "sha256": "a426c3eb6bf7ded314dbb5c97d6199a06e3b9b217dc62cbdce3ca46fece7804a",
+      "bytes": 45582
+    },
+    "run/config.json": {
+      "sha256": "590c204ab3960569aead29d308557085d9a13973f2bdc13965d6cba68a61fd21",
+      "bytes": 233
+    },
+    "run/evaluation.json": {
+      "sha256": "ac82c3d995e44401b336c25861f44222a4ff09c0a2394dbef6823a8ee974978e",
+      "bytes": 6848
+    },
+    "run/implementation/memory_migration_study/__init__.py": {
+      "sha256": "5db86bb3981ca95dc7f630734f01a45d6beaca68e4b566709a7bf60caa6150e5",
+      "bytes": 106
+    },
+    "run/implementation/memory_migration_study/amount_candidates.py": {
+      "sha256": "bf5d5b71300da1f6dbe92c79f79690389779738d7a29241e574dc551063d9640",
+      "bytes": 8812
+    },
+    "run/implementation/memory_migration_study/answer_evidence.py": {
+      "sha256": "d3d151da9318ed5b6e993a27cf215e1165be37d884493de25664d98cd432266a",
+      "bytes": 11052
+    },
+    "run/implementation/memory_migration_study/answer_serialization.py": {
+      "sha256": "973a6a3387e44289a28765c3ffffc0bc7a2c162e7f37cf5c3b8c19705878a13f",
+      "bytes": 1795
+    },
+    "run/implementation/memory_migration_study/backend.py": {
+      "sha256": "3d9628990206884c5a14a5b050acdbdfea5f35adab8949afa84fa5b05778b450",
+      "bytes": 9941
+    },
+    "run/implementation/memory_migration_study/boundary_detector.py": {
+      "sha256": "6bd9e1527d6eb772a05b89925c3db1cf160088a1fe73ee6b378affc1200cfd4d",
+      "bytes": 6152
+    },
+    "run/implementation/memory_migration_study/boundary_preparation.py": {
+      "sha256": "e4e8094bfae1a7b76954f7c576c4f53d0366104379b69e34000d901fe81275c8",
+      "bytes": 9582
+    },
+    "run/implementation/memory_migration_study/boundary_reconciliation.py": {
+      "sha256": "63ee4781ed1d784710ef64c2ba1e81654e5d5596a7e1d45d597eadd2a3786e57",
+      "bytes": 16842
+    },
+    "run/implementation/memory_migration_study/budget.py": {
+      "sha256": "7678cb0d652e5a57505e15a9958916d2564d812ff4dfa02dbd91f771fcf3e7a2",
+      "bytes": 18707
+    },
+    "run/implementation/memory_migration_study/candidate_adjudicator.py": {
+      "sha256": "9124421e79051fa0cceea7c3a9dbfa3eceaf9fe5f46d3ca5e9e62913df7e8bf2",
+      "bytes": 18238
+    },
+    "run/implementation/memory_migration_study/candidate_proposals.py": {
+      "sha256": "32be4b9a305f43e8f9701c3b50c822f0a98b13411c2d12dd57a2692dc4b9e323",
+      "bytes": 16082
+    },
+    "run/implementation/memory_migration_study/coverage_memory.py": {
+      "sha256": "4280d0ffbe381e602f9e6547ee18d3d760cda909216fd0bde14129593e25260b",
+      "bytes": 10610
+    },
+    "run/implementation/memory_migration_study/detection_cache.py": {
+      "sha256": "55403bfea4844e142a6000e062868d3235bee6febd1c66b4c836a7590b6e64ba",
+      "bytes": 6357
+    },
+    "run/implementation/memory_migration_study/evidence.py": {
+      "sha256": "ff7af54c2babe30d3270c4b227560ee6c7669e8b1b40aec90e6ead369235faf4",
+      "bytes": 19563
+    },
+    "run/implementation/memory_migration_study/local_detector.py": {
+      "sha256": "1ee3b486fde6ca8533a26035910fa1913a2889cec28f408e25129662493d84d5",
+      "bytes": 17231
+    },
+    "run/implementation/memory_migration_study/memory_builder.py": {
+      "sha256": "481926a33f8deedfdb36f1a025e3578660894818700048ae78c1bc0e84da6140",
+      "bytes": 12394
+    },
+    "run/implementation/memory_migration_study/memory_generation_experiment.py": {
+      "sha256": "283bdced55cf95a7837038d54075d2a065dc3133b0874692e33f095f1b256179",
+      "bytes": 21906
+    },
+    "run/implementation/memory_migration_study/memory_labels.py": {
+      "sha256": "68a129089dda79067b24bc266093c48f0efa9a91e909a0a4eb48b970833477ba",
+      "bytes": 41908
+    },
+    "run/implementation/memory_migration_study/ner_detector.py": {
+      "sha256": "89b3485c6a6a7759b99b5a5234665c024870b7b78de59661d19420109185615d",
+      "bytes": 10453
+    },
+    "run/implementation/memory_migration_study/plan_verifier.py": {
+      "sha256": "25cb3d579bd7df2df32fcb567408077363cd59eb5996925899a01a09faf53fc5",
+      "bytes": 5110
+    },
+    "run/implementation/memory_migration_study/policy.py": {
+      "sha256": "9798a2dc2642e55d9a3335209c5f13c57aae29acedab97b014a48a4fb4b9a75e",
+      "bytes": 6383
+    },
+    "run/implementation/memory_migration_study/policy_semantics.py": {
+      "sha256": "bbd891394c09f419d3a9eb20467f8a1e9d1f7ccb2d77ec39c8d1805445caffe9",
+      "bytes": 32250
+    },
+    "run/implementation/memory_migration_study/privacy.py": {
+      "sha256": "c6db0bb46c983c6f42d35a3fe028f35309905e5c447e5de9260d927e10dac7e9",
+      "bytes": 41019
+    },
+    "run/implementation/memory_migration_study/privacy_corpus.py": {
+      "sha256": "9dd7b74b3fc4a578e9727a695f88e3a4a2477045582fdf7196d8c46c452eabe9",
+      "bytes": 21891
+    },
+    "run/implementation/memory_migration_study/privacy_egress.py": {
+      "sha256": "239a138cbbe5497355462657122a3feca9bdefabbcf25f2b90550e12d5c1fe93",
+      "bytes": 4654
+    },
+    "run/implementation/memory_migration_study/privacy_payload_eval.py": {
+      "sha256": "c37ca56b47956cae8b5170ea930efd3b164fb775833b47aaa5f7801befc90d16",
+      "bytes": 6303
+    },
+    "run/implementation/memory_migration_study/query_intent.py": {
+      "sha256": "ae65d722125ba7004a5143a7b69fc5efaba300795ffa7446fa2b8ebbb2797d3d",
+      "bytes": 14054
+    },
+    "run/implementation/memory_migration_study/reference_memory.py": {
+      "sha256": "ba4f6519a5e31ef62168b4a1e357b4c1f209209c53a14a9924966079c77eb1b9",
+      "bytes": 20835
+    },
+    "run/implementation/memory_migration_study/request_projection.py": {
+      "sha256": "5204578275937526d4f577eb1289db8150371fd678aad20391661687ad83da10",
+      "bytes": 18552
+    },
+    "run/implementation/memory_migration_study/reuse_benchmark.py": {
+      "sha256": "fe392ab976fc85cdc03e9e1468484c6d44af9935b302d4d3cb64494f6bdfbc21",
+      "bytes": 22661
+    },
+    "run/implementation/memory_migration_study/role_cover.py": {
+      "sha256": "7b42c1862835880e8d352325a6f514eb048f5fb16e4c8aca20be62f5d3027cbc",
+      "bytes": 10415
+    },
+    "run/implementation/memory_migration_study/role_query.py": {
+      "sha256": "d4b1c22624892ef899242394e33bbc42fc9c3848cf50e6d520d7c51e0c9a48aa",
+      "bytes": 21787
+    },
+    "run/implementation/memory_migration_study/semantic_memory_benchmark.py": {
+      "sha256": "7a8560fb251ee21c8f91280668e8a50c5881dd3f12a18513efe9fc2c5ff6aeca",
+      "bytes": 28194
+    },
+    "run/implementation/memory_migration_study/semantic_refinement.py": {
+      "sha256": "7c5eea539a0577b76f227bf53efb2776efeae3acf1e3feab9c3110360d211e3d",
+      "bytes": 13690
+    },
+    "run/implementation/memory_migration_study/source_card_reader.py": {
+      "sha256": "1455abcf827388063111c42e2d52267a71c713fbe7161603856b4df8c5cc1914",
+      "bytes": 6539
+    },
+    "run/implementation/memory_migration_study/source_fact_cards.py": {
+      "sha256": "b8f7474c43da170a1bd2a6c8f9397371091113784af7dcb13f8068e0d6731599",
+      "bytes": 7637
+    },
+    "run/implementation/memory_migration_study/span_answer_evidence.py": {
+      "sha256": "13fb799cc0976b5a3fbc078f0aea977b234207c92899cb7485a2dac2c0b34cf9",
+      "bytes": 17891
+    },
+    "run/implementation/memory_migration_study/span_answerer.py": {
+      "sha256": "5f433c43a77e78286895d4122f89f32d2c998fcbf8260f5bf123a68d555d0607",
+      "bytes": 9817
+    },
+    "run/implementation/memory_migration_study/span_completion.py": {
+      "sha256": "24cf30bf3cc6ac77580b8c0dbe789b04bdf101b8f7d60386a15ebb945078940b",
+      "bytes": 19278
+    },
+    "run/implementation/memory_migration_study/structured_candidates.py": {
+      "sha256": "f460c12e838d1fc029da71fbe593cc835c4a8c082d6fb4aba0c499e6b1bcc22d",
+      "bytes": 17977
+    },
+    "run/implementation/memory_migration_study/tasks.py": {
+      "sha256": "f174194e6ab57558350a1349ce90521d5909813036c3ccf9c50d2d79d047cd2c",
+      "bytes": 10503
+    },
+    "run/implementation/memory_migration_study/union_detector.py": {
+      "sha256": "5090b1127e883ae39a3286b776f3037b892144697798aa919085b64ff9dfe921",
+      "bytes": 8511
+    },
+    "run/implementation/scripts/run_boundary_transfer_diagnostic.py": {
+      "sha256": "ecddafb775ca9f4ca06d96e0c4c2f217d08e2cf6fdd3db9b00c21f2d9ba4a793",
+      "bytes": 7312
+    },
+    "run/implementation/scripts/run_customer_schema_probe.py": {
+      "sha256": "5c11fed8ee7b9e76153bea7155c90500e623705a00ba685903a4499d81f0de5b",
+      "bytes": 18506
+    },
+    "run/implementation/scripts/run_generation_union_transfer.py": {
+      "sha256": "aab7b7d2d8c449dce6a266282ae95e5da59b0bbb1a51faa95a2f3ef0e7190dec",
+      "bytes": 26611
+    },
+    "run/implementation/scripts/run_policy_semantic_study.py": {
+      "sha256": "7fb293479b1d5e8e744b461421f4538aa76bd870ebff124aea4073a28e500b3c",
+      "bytes": 22099
+    },
+    "run/implementation/scripts/run_query_schema_transfer.py": {
+      "sha256": "9bff5cfed6838cd3170a469d96dfb5f23f5f409ab3b3764e33a4adbb2cf4b0ce",
+      "bytes": 25216
+    },
+    "run/implementation/scripts/run_reference_memory_study.py": {
+      "sha256": "ff797496e19372c946a07d68668ac6236b57916e0aa85aa6cfa2eec0400057e3",
+      "bytes": 20645
+    },
+    "run/implementation/scripts/run_source_card_reader.py": {
+      "sha256": "d2fc262660630b4765256690ba49f894d3c68897af8189315a65c3b40e93c370",
+      "bytes": 33573
+    },
+    "run/implementation/scripts/run_span_answer_transfer.py": {
+      "sha256": "1d69a1e37972f036680ace29a6d3defb2cfdfcaf9920e54a4535a09d98673ae1",
+      "bytes": 30869
+    },
+    "run/independent_source_card_verification_v1.json": {
+      "sha256": "aec000a09f51965ed6c1a060580be0f6dbee7ee857c3266ad594db4e2d533534",
+      "bytes": 127840
+    },
+    "run/independent_source_card_verification_v2.json": {
+      "sha256": "5cdd99f5d536f029171ad4693b3a0f2219c15a184a6b59f18f335a33c1e05fed",
+      "bytes": 127800
+    },
+    "run/independent_source_card_verification_v3.json": {
+      "sha256": "34bd1db6debd2e2ca81474fc1df9a6b3f6c9876d19cceeb39d3c96f8c0e5dd03",
+      "bytes": 127892
+    },
+    "run/network_audit.json": {
+      "sha256": "342e5a55f41e557dceadb48b464d429b4359187b636578cac75474bc6263b2ef",
+      "bytes": 67
+    },
+    "run/plan.json": {
+      "sha256": "1fa38089b5fc7d0542aee51e8d1839e98565f583207074a2ab4d71e6358a18b8",
+      "bytes": 11007
+    },
+    "run/pools.json": {
+      "sha256": "af574d7d5942893072da8dbf67a0c5c62e65c05617a0a901eb32c677ea925757",
+      "bytes": 13698
+    },
+    "run/query_encoder_events.json": {
+      "sha256": "d75a1541c709cfeab9f7b6b22a8e66d8cf82df41764a09c0a00e8985b5747814",
+      "bytes": 63703
+    },
+    "run/record_store.json": {
+      "sha256": "006bf8496fda8bf6d9f4c7bb9b147ff1e6018149b904eb9f601150f1a07d43a4",
+      "bytes": 46787
+    },
+    "run/report.json": {
+      "sha256": "0562977c9d2c249c798c86294f99def94054eff54dd5b7a2b1006118871590f5",
+      "bytes": 5076
+    },
+    "run/request_transport.jsonl": {
+      "sha256": "59a9cbcdd8b476ef7ca4393e47da9cbf6713dc611c8028413de1d9b3843c9be1",
+      "bytes": 444499
+    },
+    "run/rows.json": {
+      "sha256": "7aa979683031bd87c0d24136c3b6d276a2f4f526111d81cb3676ddc8e4382198",
+      "bytes": 368624
+    },
+    "run/runtime.json": {
+      "sha256": "f95e8f462fbf4e0256163d672665256b6983c69c5780e21e3262b74a42d253db",
+      "bytes": 13328
+    },
+    "run/runtime_identity.json": {
+      "sha256": "64a78281448039aa70dab2ff446a887b5928f91ee36bbcf7a52e865a02614629",
+      "bytes": 6961
+    },
+    "run/shared_contexts.json": {
+      "sha256": "6d4630ffc9b7e1022326dfad691b607243285fd021bd91383071f6f738e43dcc",
+      "bytes": 343768
+    },
+    "run/source_card_sets.json": {
+      "sha256": "16f543a809cd9bda83c70734c8733c28c283672486330c4e380f23aa4d79be5e",
+      "bytes": 4370
+    },
+    "run/transport_audit.json": {
+      "sha256": "77c78731f0f2c12eabd12867b36035e4d97b7c517da613a24b460aa872705b95",
+      "bytes": 635
+    },
+    "source/configs/local_privacy_detector.json": {
+      "sha256": "840715dc542f7acde4f0afca87b20df6b55aef78dccc0efc613cf1a969bd27a1",
+      "bytes": 234
+    },
+    "source/examples/privacy_semantics_v1/README.md": {
+      "sha256": "03adc28434b5449a7466629705a5bb153ab5068b6aa8162b8b567e48c9326b97",
+      "bytes": 4190
+    },
+    "source/examples/privacy_semantics_v1/development/evaluation.json": {
+      "sha256": "acb8b84664876f14cd6b788bfb32ad7600060cda3377d0681d6c305f4b23a98c",
+      "bytes": 6849
+    },
+    "source/examples/privacy_semantics_v1/development/runtime.json": {
+      "sha256": "22647d2e6e813ee094fe94609d6eb0804308d887059fb64e2331c9195e6e15f4",
+      "bytes": 13329
+    },
+    "verification/exporter.py": {
+      "sha256": "3fc749944e74a923ed8c87d759fb756d2daaa13a9b13a6a15641188b47fd7507",
+      "bytes": 16426
+    },
+    "verification/verifier.py": {
+      "sha256": "d92892dd656df0d9f2a33bbbce19ec546bff7507ef12bd7496a5c165f153b9b2",
+      "bytes": 50747
+    }
+  }
+}

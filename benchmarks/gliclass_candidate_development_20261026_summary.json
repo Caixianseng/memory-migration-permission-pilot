@@ -1,0 +1,221 @@
+{
+  "schema": "gliclass-candidate-exposed-regression-summary-v1",
+  "date": "2026-10-26",
+  "status": "completed_negative_result",
+  "scope": "80 exposed development + 40 exposed regression materials, not fresh independent acceptance",
+  "primary": "gliclass_candidate",
+  "default_changed": false,
+  "paper_novelty_established": false,
+  "joint_precision90_recall95_met": {
+    "development": false,
+    "exposed_regression": false
+  },
+  "independent_verification": {
+    "status": "passed",
+    "check_count": 1117,
+    "verification_model_calls": 0,
+    "verification_network_attempts": 0,
+    "result_path": "results/gliclass_candidate_detection_20261026_v1/independent_gliclass_verification_v2.json",
+    "result_sha256": "01dfa93ff0054ab6284d10a8dae538c2d28f0d5dd3b4a383c77f9853c3ba17c5",
+    "scope": "saved token/logit, host output and score consistency; no retokenization, forward or independent method acceptance"
+  },
+  "materials": 120,
+  "comparison_rows": 360,
+  "summary": {
+    "development": {
+      "standard_boundary_ner": {
+        "materials": 80,
+        "accepted": {
+          "tp": 57,
+          "fp": 8,
+          "fn": 1,
+          "precision": 0.8769230769230769,
+          "recall": 0.9827586206896551
+        },
+        "ok": 80,
+        "errors": {}
+      },
+      "recorded_flat_primary": {
+        "materials": 80,
+        "accepted": {
+          "tp": 33,
+          "fp": 0,
+          "fn": 25,
+          "precision": 1.0,
+          "recall": 0.5689655172413793
+        },
+        "ok": 53,
+        "errors": {
+          "context_typing_needs_review": 27
+        }
+      },
+      "gliclass_candidate": {
+        "materials": 80,
+        "accepted": {
+          "tp": 47,
+          "fp": 12,
+          "fn": 11,
+          "precision": 0.7966101694915254,
+          "recall": 0.8103448275862069
+        },
+        "ok": 77,
+        "errors": {
+          "gliclass_typing_needs_review": 3
+        }
+      }
+    },
+    "heldout": {
+      "standard_boundary_ner": {
+        "materials": 40,
+        "accepted": {
+          "tp": 18,
+          "fp": 2,
+          "fn": 2,
+          "precision": 0.9,
+          "recall": 0.9
+        },
+        "ok": 40,
+        "errors": {}
+      },
+      "recorded_flat_primary": {
+        "materials": 40,
+        "accepted": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 14,
+          "precision": 1.0,
+          "recall": 0.3
+        },
+        "ok": 25,
+        "errors": {
+          "context_typing_needs_review": 15
+        }
+      },
+      "gliclass_candidate": {
+        "materials": 40,
+        "accepted": {
+          "tp": 19,
+          "fp": 13,
+          "fn": 1,
+          "precision": 0.59375,
+          "recall": 0.95
+        },
+        "ok": 40,
+        "errors": {}
+      }
+    }
+  },
+  "new_inference": {
+    "root_forward_hooks": 111,
+    "encoder_forward_hooks": 111,
+    "evaluated_candidates": 111,
+    "encoder_input_tokens": 25565,
+    "qwen_generations": 0,
+    "cloud_calls": 0,
+    "new_api_cost_cny": 0
+  },
+  "historical_reused_evidence": {
+    "ner_encoder_calls": 168,
+    "flat_parent_all_conditions_generations": 324,
+    "recorded_flat_primary_generations": 81,
+    "primary_is_subset_of_parent_count": true,
+    "counting_note": "Reused history is not new inference; do not add the 81-call subset to its 324-call parent."
+  },
+  "typing_statuses": {
+    "typing_only": 117,
+    "needs_review": 3
+  },
+  "typing_errors": {
+    "gliclass_semantic_uncertainty": 3
+  },
+  "qualification": {
+    "materials_executable": 120,
+    "max_encoder_tokens_including_labels_prompt_special_tokens": 242,
+    "encoder_limit": 512,
+    "silent_truncation": false,
+    "candidate_pool_count": 111
+  },
+  "runtime": {
+    "device": "cpu",
+    "dtype": "float32",
+    "threads": 4,
+    "batch_size": 1,
+    "model_id": "knowledgator/gliclass-multilang-mini",
+    "model_revision": "0bd888b6c3ef9fca5f0a9d407bddfbbc7623486b",
+    "code_revision": "6a00f8067648f25aa0f4f477d167c5f391cb4165",
+    "model_license": "Apache-2.0",
+    "code_license": "Apache-2.0",
+    "actual_checkpoint_parameters": 283736834,
+    "model_safetensors_bytes": 567503348,
+    "model_safetensors_sha256": "440d8f17603d3e6f7d13a4fe7ffa7e9ef2c5a2581cceccb2f643334b92c8aea8",
+    "asset_files": 25,
+    "asset_bytes": 588469350,
+    "new_package_installs": 0
+  },
+  "network": {
+    "blocked_connection_attempts": 0,
+    "remote_model_calls": 0,
+    "qwen_calls": 0
+  },
+  "implementation_unchanged_producer": true,
+  "reference": {
+    "source_archive": "benchmarks\\artifacts\\context_candidate_detection_20261026_v2.zip",
+    "source_archive_sha256": "330d31c9e70980631dd3b67dc8a059512af77693e39870c2b8570b696effce43",
+    "recorded_flat": {
+      "result_dir": "results\\flat_candidate_detection_20261026_v1",
+      "primary_arm": "primary_boundary_full_no_prior",
+      "sha256": {
+        "plan.json": "7cf83502eeae090d61fc420fb1406cf9bae7bc3b729d2fc36cc23a31a9142447",
+        "materials.json": "ce58db8a59503a968d933418e0ae6eca4ece9ea44fb335cb3104eca755ade60a",
+        "unscored_rows.json": "16221dfbd82ed275538ee21b25b31d4d791b9cf459a8cfd60f83961fe6229ec9",
+        "model_phase_closed.json": "f428400efb018a3f07145a434796ffa9c26224cb3bc8a22ae81f0afb669c4f35"
+      },
+      "scope": "recorded same-source failed flat reference, not an achieved P90/R95 method"
+    }
+  },
+  "source_result_dir": "results/gliclass_candidate_detection_20261026_v1",
+  "source_sha256": {
+    "plan.json": "c27c31f8dee9137e7ef72e57f706e6f4f061c8ec92294b447c7f9c182bf56cb2",
+    "report.json": "49dca989ceb35f7ba17fd5179225f41b551bda42223c6aefbbc3cb692e1214ed",
+    "model_phase_closed.json": "910ac24ed187e7fdefda215262bbdf1c97f26d9f6fb7ad7582bd13f9d2ae09d4",
+    "rows.json": "3e17c30f3bb0f13bbda781af6b5ad595d54941cdb8b831f30bb890c3a9ee330b"
+  },
+  "implementation_sha256": {
+    "memory_migration_study/gliclass_candidate.py": "cc9815616f3287d202e7a936d88b90263f75a3f76d0d8e91d4813b0b8e847de8",
+    "tests/test_gliclass_candidate.py": "1972e20c9b8e41afc6720e2425530419951f6d9d563e075286365f8645ce6871",
+    "scripts/run_gliclass_candidate_diagnostic.py": "1d3119ebe67089d59b9711c81f0fbb272db6dddac8d42147f9c9e1664befd21b"
+  },
+  "limitations": [
+    "Known exposed materials remain development diagnostics.",
+    "A generic sequence classifier is not a validated interpreter of arbitrary business policy.",
+    "UNCERTAIN is an ordinary decision label and softmax is not calibrated privacy probability.",
+    "No paired controlled timing comparison with Qwen was performed; no speed advantage claim.",
+    "Current precision/recall do not justify changing the default detector or memory permission controls."
+  ],
+  "public_artifact": {
+    "archive": "benchmarks/artifacts/candidate_classifier_diagnostics_20261026_v1.zip",
+    "sha256": "93a6ab37dd4bd00bbc88892b8fb9078efbbfd1df1a0964cfbda00ed23d0716cb",
+    "bytes": 2550134,
+    "entries": 72,
+    "manifest": "benchmarks/artifacts/candidate_classifier_diagnostics_20261026_v1.manifest.json",
+    "manifest_sha256": "8045ee3dbc2617e9c864424308e76bf2961212e1ed6b6d255024512137c65fe4",
+    "models_or_credentials_or_restoration_maps": false,
+    "unpacked_verification": {
+      "flat": {
+        "status": "passed",
+        "checks": 2557,
+        "receipt": "results/candidate_classifier_artifact_recheck_20261026_v1/flat/unpacked_independent_decision_verification_v1.json",
+        "sha256": "f578d39e46c46ae360c08a6fe5e74e022debdae82f08753f89be149da1fdaf9d",
+        "model_calls": 0
+      },
+      "gliclass": {
+        "status": "passed",
+        "checks": 1117,
+        "receipt": "results/candidate_classifier_artifact_recheck_20261026_v1/gliclass/unpacked_independent_gliclass_verification_v1.json",
+        "sha256": "01dfa93ff0054ab6284d10a8dae538c2d28f0d5dd3b4a383c77f9853c3ba17c5",
+        "model_calls": 0
+      }
+    },
+    "source_archive_external_dependency_sha256": "330d31c9e70980631dd3b67dc8a059512af77693e39870c2b8570b696effce43"
+  }
+}

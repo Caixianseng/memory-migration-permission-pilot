@@ -1,0 +1,22 @@
+{
+  "scope": "complete offline fake unittest discovery; no efficacy claim",
+  "tests_run": 1272,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_seconds": 234.397,
+  "status": "passed",
+  "changed_during_tests": [],
+  "report_sha256": "74a65ded1833df086c9be19f51a57dbd64f89288d3b3ebbbf28f3514bfa4ba05",
+  "model_efficacy": false,
+  "independent_acceptance": false,
+  "additional_export_boundary_tests": {
+    "tests_run": 10,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 0.108,
+    "status": "passed",
+    "scope": "targeted tests added after the full 1272-test run; zero model calls"
+  }
+}

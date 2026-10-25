@@ -1,0 +1,212 @@
+{
+  "version": "source_card_reader_development_summary_v1",
+  "date": "2026-10-26",
+  "registered_protocol": "full_context_source_fact_reader_development_v1",
+  "report": "docs/源事实卡_完整上下文三条件实验说明_2026-10-26.md",
+  "source_stories": 8,
+  "material_status": "Previously exposed bilingual hand-authored synthetic development stories; not fresh64. One execution with request-random PVT and card IDs.",
+  "registered_rows": 144,
+  "recorded_rows": 144,
+  "registered_tasks": 48,
+  "legal_tasks_per_arm": 32,
+  "missing_tasks_per_arm": 8,
+  "outsider_tasks_per_arm": 8,
+  "shared_contexts": 48,
+  "source_exact_fact_records": 18,
+  "source_fact_cards": 20,
+  "arms": {
+    "F": {
+      "legal_correct": 28,
+      "legal_joint_correct_no_registered_masking_gap": 28,
+      "strict_raw_output_correct": 24,
+      "model_chose_unknown_legal": 2,
+      "restoration_failures_legal": 2,
+      "missing_genuine_model_unknown": 8,
+      "outsider_pre_model_blocked": 8,
+      "unauthorized_output": 0,
+      "answer_generation_calls": 40
+    },
+    "Flat-ID": {
+      "legal_correct": 31,
+      "legal_joint_correct_no_registered_masking_gap": 31,
+      "strict_raw_output_correct": null,
+      "model_chose_unknown_legal": 1,
+      "restoration_failures_legal": 0,
+      "missing_genuine_model_unknown": 8,
+      "outsider_pre_model_blocked": 8,
+      "unauthorized_output": 0,
+      "answer_generation_calls": 40
+    },
+    "Source-ID": {
+      "legal_correct": 32,
+      "legal_joint_correct_no_registered_masking_gap": 32,
+      "strict_raw_output_correct": null,
+      "model_chose_unknown_legal": 0,
+      "restoration_failures_legal": 0,
+      "missing_genuine_model_unknown": 8,
+      "outsider_pre_model_blocked": 8,
+      "unauthorized_output": 0,
+      "answer_generation_calls": 40
+    }
+  },
+  "paired_Source_ID_vs_Flat_ID": {
+    "fixes_Flat_ID_failures": 1,
+    "regresses_Flat_ID_successes": 0,
+    "net_correct_change": 1,
+    "gain_stories": 1,
+    "gain_contexts": [
+      "dev_en_02:paraphrase"
+    ],
+    "statistical_or_robust_advantage_established": false,
+    "interpretation": "Only one task in one story separates the structured-reader baseline and source-role extension."
+  },
+  "registered_literal_masking_legal_per_arm": {
+    "ready": 32,
+    "partial": 0,
+    "unmasked": 0,
+    "extra_masked_characters_summed_across_requests": 304,
+    "scope": "Registered literal source/query values only; neither universal sensitivity recall nor semantic privacy."
+  },
+  "common_build_failures": 0,
+  "source_card_set_failures": 0,
+  "union_label_set_failures": 0,
+  "generation_calls_observed": 146,
+  "generation_limits": {
+    "total": 264,
+    "build": 16,
+    "write_annotation": 128,
+    "answer": 120
+  },
+  "generation_calls_by_stage": {
+    "build": 8,
+    "write_annotation": 18,
+    "answer": 120
+  },
+  "encoder_calls": {
+    "build": 18,
+    "write_annotation": 18,
+    "shared_query_prepare": 40,
+    "total": 76
+  },
+  "physical_costs": [
+    {
+      "stage": "build",
+      "arm": "common",
+      "physical_calls": 8,
+      "prompt_tokens": 1442,
+      "output_tokens": 188,
+      "request_json_utf8_bytes": 11100
+    },
+    {
+      "stage": "write_annotation",
+      "arm": "union_labels",
+      "physical_calls": 18,
+      "prompt_tokens": 5396,
+      "output_tokens": 502,
+      "request_json_utf8_bytes": 38944
+    },
+    {
+      "stage": "answer",
+      "arm": "Flat-ID",
+      "physical_calls": 40,
+      "prompt_tokens": 19189,
+      "output_tokens": 588,
+      "request_json_utf8_bytes": 74317
+    },
+    {
+      "stage": "answer",
+      "arm": "F",
+      "physical_calls": 40,
+      "prompt_tokens": 10207,
+      "output_tokens": 507,
+      "request_json_utf8_bytes": 43442
+    },
+    {
+      "stage": "answer",
+      "arm": "Source-ID",
+      "physical_calls": 40,
+      "prompt_tokens": 22071,
+      "output_tokens": 599,
+      "request_json_utf8_bytes": 82661
+    }
+  ],
+  "network": {
+    "loopback_connections": 200,
+    "external_attempts_blocked": 0
+  },
+  "cloud_calls": 0,
+  "new_api_cost_cny": 0,
+  "closed_phase_attempts": 0,
+  "implementation_dependency_files": 50,
+  "implementation_unchanged_observed": true,
+  "independent_verification": {
+    "status": "passed",
+    "verification_model_calls": 0,
+    "local_receipt": "results/source_card_reader_development_20261026_v1/independent_source_card_verification_v2.json",
+    "receipt_sha256": "5cdd99f5d536f029171ad4693b3a0f2219c15a184a6b59f18f335a33c1e05fed",
+    "limitation": "Original HMAC keys and RestorationMap deliberately not persisted; offline source/range/projection/hash reconstruction cannot independently reverify original process HMAC signatures.",
+    "checks": 892,
+    "first_failed_receipt_preserved": {
+      "path": "results/source_card_reader_development_20261026_v1/independent_source_card_verification_v1.json",
+      "sha256": "aec000a09f51965ed6c1a060580be0f6dbee7ee857c3266ad594db4e2d533534",
+      "reason": "Verifier metadata interpretation corrected; original experiment artifacts unchanged."
+    },
+    "package_capable_followup": {
+      "receipt": "results/source_card_reader_development_20261026_v1/independent_source_card_verification_v3.json",
+      "sha256": "34bd1db6debd2e2ca81474fc1df9a6b3f6c9876d19cceeb39d3c96f8c0e5dd03",
+      "status": "passed",
+      "checks": 893,
+      "difference": "Pure helper inlining, package input-root support, and archived-module import-origin check; not another model run."
+    }
+  },
+  "artifact_sha256": {
+    "plan.json": "1fa38089b5fc7d0542aee51e8d1839e98565f583207074a2ab4d71e6358a18b8",
+    "runtime.json": "f95e8f462fbf4e0256163d672665256b6983c69c5780e21e3262b74a42d253db",
+    "evaluation.json": "ac82c3d995e44401b336c25861f44222a4ff09c0a2394dbef6823a8ee974978e",
+    "config.json": "590c204ab3960569aead29d308557085d9a13973f2bdc13965d6cba68a61fd21",
+    "report.json": "0562977c9d2c249c798c86294f99def94054eff54dd5b7a2b1006118871590f5",
+    "rows.json": "7aa979683031bd87c0d24136c3b6d276a2f4f526111d81cb3676ddc8e4382198",
+    "shared_contexts.json": "6d4630ffc9b7e1022326dfad691b607243285fd021bd91383071f6f738e43dcc",
+    "source_card_sets.json": "16f543a809cd9bda83c70734c8733c28c283672486330c4e380f23aa4d79be5e",
+    "request_transport.jsonl": "59a9cbcdd8b476ef7ca4393e47da9cbf6713dc611c8028413de1d9b3843c9be1",
+    "transport_audit.json": "40fd47489911373bb6a8975170a2015e1a6996276fc76e920d8016cded9a73b5",
+    "network_audit.json": "342e5a55f41e557dceadb48b464d429b4359187b636578cac75474bc6263b2ef"
+  },
+  "acceptance": {
+    "source_role_extension_stable_advantage_established": false,
+    "default_changed": false,
+    "new_independent_64_task_acceptance_passed": false,
+    "original_detection_acceptance_passed": false,
+    "native_interoperability_tested_this_run": false,
+    "semantic_privacy_established": false,
+    "paper_novelty_established": false,
+    "overall_research_goal_achieved": false
+  },
+  "comparison_limitations": [
+    "F uses the preexisting canonical main result; strict raw F is separate.",
+    "F 28/32 belongs to this run; historical F 30/32 is not this paired baseline.",
+    "Flat-ID and Source-ID share full masked context, IDs, pool, prompt, schema and model; role/support are their sole input difference.",
+    "F versus ID arms also changes output format and candidate representation.",
+    "No holdout stories were opened."
+  ],
+  "public_synthetic_artifact": {
+    "directory": "results/source_card_artifact_export_20261026_v1",
+    "zip": "benchmarks/artifacts/source_card_reader_development_20261026_v1.zip",
+    "zip_sha256": "c320c5ed5104cdeff4a449b0777036f49c376be666d993187aeb2bc029171145",
+    "manifest_sha256": "845729e6c473862bebfce556c9950298c89f0ef7d5e4bb38efb623deef486c22",
+    "file_count": 80,
+    "material_status": "Hand-authored synthetic and linkable, not anonymized private memory.",
+    "original_HMAC_secret_or_RestorationMap_included": false,
+    "transport_audit_transformation": "Only python_executable and python_version removed; original/exported SHA256 retained in provenance.",
+    "offline_new_unpack_verification": {
+      "status": "passed",
+      "checks": 893,
+      "model_calls": 0,
+      "receipt": "results/source_card_artifact_unpack_20261026_v1/offline_receipt.json",
+      "receipt_sha256": "34bd1db6debd2e2ca81474fc1df9a6b3f6c9876d19cceeb39d3c96f8c0e5dd03",
+      "original_HMAC_signatures_independently_verified": false
+    },
+    "directory_publicly_published": false,
+    "sidecar_manifest": "benchmarks/artifacts/source_card_reader_development_20261026_v1.manifest.json"
+  }
+}

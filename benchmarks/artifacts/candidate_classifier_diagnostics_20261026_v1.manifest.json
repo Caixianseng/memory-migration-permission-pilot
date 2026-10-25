@@ -1,0 +1,28 @@
+{
+  "schema": "synthetic-candidate-classifier-artifact-v1",
+  "path": "benchmarks\\artifacts\\candidate_classifier_diagnostics_20261026_v1.zip",
+  "bytes": 2550134,
+  "sha256": "93a6ab37dd4bd00bbc88892b8fb9078efbbfd1df1a0964cfbda00ed23d0716cb",
+  "entries": 72,
+  "manifest_sha256": "f96ba7241c6309f9fb133f59604bfb1996a8a44f4b33728b09c128d6f08d6347",
+  "source_archive_sha256": "330d31c9e70980631dd3b67dc8a059512af77693e39870c2b8570b696effce43",
+  "verification": {
+    "flat": {
+      "receipt": "flat/independent_decision_verification_v1.json",
+      "status": "passed",
+      "checks": 2557,
+      "sha256": "f578d39e46c46ae360c08a6fe5e74e022debdae82f08753f89be149da1fdaf9d",
+      "scope": "saved-observation consistency, not method acceptance"
+    },
+    "gliclass": {
+      "receipt": "gliclass/independent_gliclass_verification_v2.json",
+      "status": "passed",
+      "checks": 1117,
+      "sha256": "01dfa93ff0054ab6284d10a8dae538c2d28f0d5dd3b4a383c77f9853c3ba17c5",
+      "scope": "saved-observation consistency, not method acceptance"
+    }
+  },
+  "explicit_allowlist": true,
+  "model_calls": 0,
+  "models_or_credentials_or_restoration_maps": false
+}
