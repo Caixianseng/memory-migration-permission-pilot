@@ -1,0 +1,146 @@
+{
+  "version": "native_private_handoff_public_summary_v1",
+  "date": "2026-10-26",
+  "run": "results/native_private_handoff_20261026_v1",
+  "status": "completed_bounded_single_value_integration",
+  "task_material": "Two explicitly registered synthetic exact values; does not attest all implicit native/cloud context.",
+  "native_client_attempts": 2,
+  "native_responses_ok": 2,
+  "exact_pseudonym_answers": 2,
+  "restored_value_hash_matches": 2,
+  "recorded_host_controls": {
+    "passed": 6,
+    "total": 6,
+    "per_direction": [
+      "wrong_recipient_before_client",
+      "revoked_before_client",
+      "consumed_response_replay"
+    ],
+    "additional_native_negative_calls": 0,
+    "evidence": "Recorded fixed errors plus frozen host call order; original in-memory capabilities were not replayed by the verifier."
+  },
+  "native_clients": {
+    "qoder": {
+      "version": "1.1.77",
+      "configured_model": "DeepSeek-Flash",
+      "reported_model_ids": [
+        "dfmodel"
+      ],
+      "attempts": 1,
+      "output_token_limit_configured": 64,
+      "max_turns": 1,
+      "max_model_request_retries": 0,
+      "tools_enabled": false,
+      "memory_bytes": 41,
+      "agents_md_sha256": "033fef46350885559186afc6aa422105c5550f48155f1e269aa12d2071d1b001",
+      "native_load_evidence": "Wrapper file hash plus exact unique-token answer; no independent native baseline event was exported.",
+      "reported_usage": {
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "cli_reported_cost": {
+        "total_cost_usd": 0,
+        "total_credits": 0
+      },
+      "account_cost_verified": false,
+      "managed_plugin_absence_established": false
+    },
+    "harness": {
+      "version": "0.2.1-rc.3",
+      "configured_model": "deepseek-flash",
+      "attempts": 1,
+      "output_token_limit_configured": 64,
+      "allowed_stream_count": 1,
+      "tools_enabled": false,
+      "memory_bytes": 41,
+      "agents_md_sha256": "204fb330e34bf7e0072866eedd2ed0b8d18749e737b18dfe22c5e3580ea1931f",
+      "native_load_evidence": "Filtered native agent-instructions baseline with AGENTS SHA1 digest and exact token; full rendered baseline remains hash-only.",
+      "reported_usage": {
+        "inputTokens": 282,
+        "outputTokens": 23,
+        "totalTokens": 305
+      },
+      "guard_bytes_scope": "harness_request_json_without_signal",
+      "physical_model_http_requests": null,
+      "account_cost_verified": false,
+      "temporary_credentials_removed_reported": true
+    }
+  },
+  "privacy_scope": {
+    "enforcement": "external_gated",
+    "native_memory_kind": "native_workspace_instructions",
+    "constructed_AGENTS_and_question_registered_values_absent": true,
+    "final_answer_registered_values_absent": true,
+    "source_question_and_memory_both_pseudonymized": true,
+    "source_identifiers_pseudonymized": true,
+    "full_cloud_request_content_inspected": false,
+    "original_mapping_object_persisted": false,
+    "original_HMAC_key_persisted": false,
+    "independent_original_HMAC_or_map_reexecution": false,
+    "detector": "rules_with_explicit_synthetic_registry",
+    "detector_model_calls": 0
+  },
+  "cost": {
+    "native_account_cost": null,
+    "physical_model_http_requests": null,
+    "new_raw_deepseek_api_calls": 0,
+    "cli_reported_zero_is_verified_free_service": false
+  },
+  "independent_verification": {
+    "receipt": "results/native_private_handoff_20261026_v1/independent_audit_v2.json",
+    "status": "passed",
+    "checks": 95,
+    "passed": 95,
+    "failed": 0,
+    "receipt_sha256": "c0938105c0f3607239329c48fc2217e82030d94bfd1ce48c11e456c736c71134",
+    "verifier": "scripts/verify_native_private_handoff.py",
+    "verifier_sha256": "4adb658684a65bd8e47809b233b4b635f83d4e4b994eb179579f2e4f8773c1af",
+    "producer_scorer_imported": false,
+    "credential_content_read": false,
+    "new_native_calls": 0,
+    "new_model_calls": 0,
+    "first_receipt_retained": true,
+    "first_receipt_status": "failed_93_of_95",
+    "correction": "Verifier initially retained original source_id; frozen privacy.py uses m_<request_nonce>_1. Producer, native results and scoring unchanged."
+  },
+  "artifact_sha256": {
+    "plan.json": "d1a82257eba3a5958da52981a9adb9c428c5c2368d51830cb5b1fe4608e416cd",
+    "execution_started.json": "1bd43804775b424bb14a0cdb0bef176d2bf13b6474f0117b8c76e61c732a6401",
+    "qoder_result.json": "1816c32937e10f3eb2e685428d274da5b95c572ad2d5cf461af8820a443825f9",
+    "harness_result.json": "daf9c187cd10d3124994092cb40b856dec60f80897f799bc055ce2bcc555d514",
+    "summary.json": "69f8b1a6bde11e9fcbe6b1400727a361ded81b269f30ad618be00e65c8f7f526",
+    "independent_audit.json": "0b2462c28d63f055da58b2ebfc9e78f7fc310f691aee93dea0265fb56ab003d8",
+    "independent_audit_v2.json": "c0938105c0f3607239329c48fc2217e82030d94bfd1ce48c11e456c736c71134",
+    "qoder_private_target/AGENTS.md": "033fef46350885559186afc6aa422105c5550f48155f1e269aa12d2071d1b001",
+    "harness_private_target/AGENTS.md": "204fb330e34bf7e0072866eedd2ed0b8d18749e737b18dfe22c5e3580ea1931f"
+  },
+  "registered_implementation_sha256": {
+    "memory_migration_study/deepseek_native.py": "f1e058557aa6f91e160499513b70fed861a729a8a2ae61ce8d9e90a9a6ff9d9a",
+    "memory_migration_study/deepseek_sdk.py": "c631f0f07436d2a55445d79ac605740dc0983c07dc4838a3c829d4b4fa7e5ec9",
+    "memory_migration_study/native_agent_protocol.py": "38fd8e3673ef9eba3df17c643d02f1d8f763c48b826c99e928ea745aecf0f770",
+    "memory_migration_study/native_privacy_gateway.py": "d578da090f60f2f187874d13b06b25ea9552299f15b455550c9067356a7a4f09",
+    "memory_migration_study/policy.py": "9798a2dc2642e55d9a3335209c5f13c57aae29acedab97b014a48a4fb4b9a75e",
+    "memory_migration_study/privacy.py": "c6db0bb46c983c6f42d35a3fe028f35309905e5c447e5de9260d927e10dac7e9",
+    "memory_migration_study/privacy_egress.py": "239a138cbbe5497355462657122a3feca9bdefabbcf25f2b90550e12d5c1fe93",
+    "memory_migration_study/qoder_native.py": "b16202cc5f7557263b5807581f89f68da33e2de592d0fa7e152b4d036cf99ce0",
+    "results/native_agent_probe_20261026/dsh_single_request_guard.mjs": "dba2d87024b342ebc9fa54a91a2bb195223f6029d578ef12f2a91acad272f8ed",
+    "results/native_agent_probe_20261026/qoder_capabilities.json": "ed1927e0128a7b45661eef3d6c064a476b04a634c4cd7cb540cd5962eccdedec",
+    "results/native_agent_probe_20261026/sdk_guard_metadata.patch.yml": "84d40c69533080ceb8b143e447cf7a16de0c3278f8905e07b8f641c5993cca82",
+    "scripts/run_native_private_handoff.py": "7115e9160e848efd331b82edd918ae496fab073b26e14ee74c680b5964c6e1e9"
+  },
+  "boundaries": {
+    "autonomous_sender_memory_generation_measured": false,
+    "native_per_record_acl_established": false,
+    "native_online_revocation_established": false,
+    "semantic_detector_quality_established": false,
+    "fresh64_acceptance_established": false,
+    "new_independent_stories": 0,
+    "controlled_single_value_cases": 2,
+    "old_native_vector_four_nulls_closed": false,
+    "paper_novelty_established": false,
+    "native_credentials_or_private_auth_stores_publishable": false
+  },
+  "documentation": "docs/原生客户端隐私交接_双端单值实测_2026-10-26.md"
+}

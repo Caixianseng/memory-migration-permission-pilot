@@ -1,0 +1,15 @@
+{
+  "scope": "complete offline unittest discovery; separate from native/model effectiveness",
+  "tests_run": 1498,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_seconds": 274.433,
+  "source_files": 312,
+  "source_unchanged": true,
+  "raw_console_log_saved": false,
+  "schema": "project-regression-native-private-nli-v3-summary",
+  "report": "results/project_regression_20261026_native_private_v3/report.json",
+  "report_sha256": "64a46894850b94340d8c7f236c7cacef27dc04afa92b5d595c1438e011a7b851",
+  "model_effectiveness_or_innovation": false
+}

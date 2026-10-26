@@ -1,0 +1,81 @@
+{
+  "schema": "native_vector_metadata_only_diagnostic_summary_v1",
+  "date": "2026-10-26",
+  "run": "results/native_vector_metadata_only_20261026_v1",
+  "arm": "A",
+  "scope": "one fixed complete target-only lifecycle with a single except-handler metadata observer; no line tracing",
+  "status": "instrumentation_complete",
+  "interpretation": "not_reproduced_in_one_fixed_complete_lifecycle",
+  "original_v3_failure_closed": false,
+  "original_null_http_events_retained": 4,
+  "native_versions": {
+    "open_webui": "0.12.3",
+    "chromadb": "1.5.9"
+  },
+  "frozen_inputs": {
+    "source_files": 83,
+    "source_snapshots": 83,
+    "asset_entries": 15,
+    "exact_writes": 6,
+    "original_text_path_resident_nonces_retained": true,
+    "original_rpc_minimum_gaps_retained": true,
+    "historical_cpu_scheduling_reproduced": false,
+    "query_k": 100,
+    "threshold_changed": false
+  },
+  "actual_counts": {
+    "native_http": 164,
+    "rpc_commands": 15,
+    "snapshots": 6,
+    "writes": 6,
+    "deletions": 2,
+    "vector_http_queries": 18,
+    "prewrite_empty_404": 3,
+    "backend_search_calls": 15,
+    "backend_search_result_responses": 15,
+    "embedding_function_invocations": 21,
+    "generation_calls": 0,
+    "cloud_calls": 0,
+    "null_http_events": 0,
+    "captured_exception_events": 0,
+    "raw_safe_response_files_checked": 153,
+    "auth_response_bodies_omitted": 11
+  },
+  "observer": {
+    "added_statements": 1,
+    "scope": "except Exception as e before the original return None",
+    "inverse_ast_matches_original": true,
+    "vendor_file_written": false,
+    "variant_calls_per_backend_search": 1,
+    "literal_original_function_calls_per_backend_search": 0,
+    "sys_settrace_used": false,
+    "extra_native_reads": 0
+  },
+  "independent_audit": {
+    "status": "passed",
+    "checks_passed": 1456,
+    "checks_total": 1456,
+    "audit_native_calls": 0,
+    "audit_model_calls": 0,
+    "sha256": "963beeed8a3d853f746e8baf31c2a5b04ed732e9d6ed2bd749d3086657d15fe5"
+  },
+  "artifact_sha256": {
+    "plan.json": "d424357bd55a8bcbe394b1082b03ce6368f9f2d61808bc16b3923301fe5bb4d0",
+    "fixture.json": "28946af5c6c0144e9000b23f7c6448ec2c0f4525348bb1220ed71d48737d3d21",
+    "rpc_receipts.json": "02b47f4c2330d3a6f3060b77759a881a1832363d611a7f6adcbf0c2992442ed3",
+    "report.json": "408d3eb6794174f9c71fda33a73d6dbe56a91dff07ed25dd5dcd9de7557b31b7"
+  },
+  "claims_not_established": {
+    "original_null_root_cause": false,
+    "original_v3_failure_resolved": false,
+    "source_sdk_started": false,
+    "source_export_disable_revoke_or_job_replay_executed": false,
+    "full_native_migration_acceptance": false,
+    "general_vector_stability": false,
+    "privacy_effectiveness": false,
+    "legal_answer_improvement": false,
+    "paper_novelty": false
+  },
+  "additional_arm_automatically_run": false,
+  "doc": "docs/原生向量旧序列_无逐行追踪诊断结果_2026-10-26.md"
+}

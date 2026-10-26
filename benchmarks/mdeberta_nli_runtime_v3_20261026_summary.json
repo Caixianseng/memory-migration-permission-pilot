@@ -1,0 +1,117 @@
+{
+  "schema": "mdeberta-runtime-v3-public-summary",
+  "date": "2026-10-26",
+  "model_id": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+  "revision": "8adb042d524ecd5c26d3e3ba0e3fbcf7e2d0864c",
+  "runs": {
+    "v1": {
+      "path": "results/mdeberta_nli_runtime_20261026_v1",
+      "files_sha256": {
+        "plan.json": "3a64c68ca0bd914796e8f211c86484330e8fea53adb11676240e94b3c177478a",
+        "worker_predictions.json": "4480fe7c26f90d264b802945455b8dc648e26369995366c32d1609c113bf0963",
+        "report.json": "1aab09927ff5571fba753388c993188e4b0c92d71f1dd4370ef6bd5ce74f7aae",
+        "prediction_phase_closed.json": "6cb83e3f5d0ca8f58c4fb8d92a5c875da5e4e036b98314777e05d544dd8cf14e",
+        "process_receipt.json": "20fde4c57e1840cfb985a422716f034089dccf86ee80bbc51c92c9853db1ff37"
+      },
+      "runtime_qualified": false,
+      "actual_top_classifier_forwards": 3,
+      "smoke_correct": 2,
+      "smoke_denominator": 3,
+      "guard_blocked": 25,
+      "guard_network_denials": 0,
+      "stdlib_zip_read_only_probes": 0,
+      "weight_loading": null
+    },
+    "v2": {
+      "path": "results/mdeberta_nli_runtime_20261026_v2",
+      "files_sha256": {
+        "plan.json": "0497219fb81df5ed8e92be9af834124e707d7cab3afcffd642e1b81489092e09",
+        "worker_predictions.json": "116ae263bfac5c3d04c014173592ecb6a98f0bcf9d919e9f2f3d7b1d57346b23",
+        "report.json": "f88af3e0adbf4ce0f50d33d11fc2fb0e11919d63d9f2afe86e78d9c803dc73f2",
+        "prediction_phase_closed.json": "85c84f583eb6688bac0463c01a214f22095f265acc7f122262426889e44d5ae5",
+        "process_receipt.json": "715991ce253159c6ef443cddf0f110aa980dfb4324c55a9e12481aebd2388c53"
+      },
+      "runtime_qualified": false,
+      "actual_top_classifier_forwards": 0,
+      "smoke_correct": null,
+      "smoke_denominator": 3,
+      "guard_blocked": 0,
+      "guard_network_denials": 0,
+      "stdlib_zip_read_only_probes": 25,
+      "weight_loading": {
+        "accepted": false,
+        "error_msgs_count": 0,
+        "loading_info_received": true,
+        "mismatched_keys": null,
+        "missing_keys": null,
+        "unexpected_keys": null,
+        "validation_error": "loading_info_fields_invalid"
+      }
+    },
+    "v3": {
+      "path": "results/mdeberta_nli_runtime_20261026_v3",
+      "files_sha256": {
+        "plan.json": "7e8a181e63fd7472c94dc061aac3ecad6e8f33d069c386fdfef5acd99fbf2afb",
+        "worker_predictions.json": "9d6b44c4ba8b25011d85e8b72bd86454b89d3019a39c4cc360b30b5018d22d1c",
+        "report.json": "9c868806f234e158ea28c0b07d0cd22a94c4df1f63f4e0cd2636258d6f703946",
+        "prediction_phase_closed.json": "0a78258fb5870e33153624613231d88abe4d533f50c69be22cda961ca52c3e21",
+        "process_receipt.json": "fdd325af78fa75da6e01bcc308ff7d9bd33d48e82d7d8a08dce4c78ece669ad0"
+      },
+      "runtime_qualified": true,
+      "actual_top_classifier_forwards": 3,
+      "smoke_correct": 2,
+      "smoke_denominator": 3,
+      "guard_blocked": 0,
+      "guard_network_denials": 0,
+      "stdlib_zip_read_only_probes": 25,
+      "weight_loading": {
+        "accepted": true,
+        "additional_loading_info_fields": [],
+        "container_normalization_only": true,
+        "error_msgs_count": 0,
+        "mismatched_keys": [],
+        "missing_keys": [],
+        "source_container_types": {
+          "error_msgs": "list",
+          "mismatched_keys": "set",
+          "missing_keys": "set",
+          "unexpected_keys": "set"
+        },
+        "unexpected_keys": [
+          "deberta.embeddings.position_ids"
+        ],
+        "verified_nonpersistent_buffer": {
+          "device": "cpu",
+          "dtype": "int64",
+          "key": "deberta.embeddings.position_ids",
+          "persistent": false,
+          "position_biased_input": false,
+          "shape": [
+            1,
+            512
+          ],
+          "values": "arange(512)"
+        }
+      }
+    }
+  },
+  "this_turn_actual_top_classifier_forwards": 3,
+  "historical_v1_forward_count": 3,
+  "all_three_runs_forward_count": 6,
+  "new_generation_calls": 0,
+  "new_cloud_calls": 0,
+  "default_changed": false,
+  "privacy_precision": null,
+  "privacy_recall": null,
+  "old120_read_for_effectiveness": false,
+  "fresh64_read": false,
+  "paper_innovation_established": false,
+  "independent_v3_audit": {
+    "path": "results/mdeberta_nli_runtime_20261026_v3/independent_v3_audit.json",
+    "checks_passed": 102,
+    "checks_total": 102,
+    "sha256": "9f237037b4682440e43497be2eb52e3754941ede97c356a2f30901042847a278",
+    "new_model_calls": 0
+  },
+  "scope": "Runtime qualification only; the original public neutral-pair error remains. No privacy acceptance."
+}
