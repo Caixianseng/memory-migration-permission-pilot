@@ -2,6 +2,7 @@
 *.py text eol=lf
 *.md text eol=lf
 *.json text eol=lf
+docs/reports/project_closeout_20261026.html text eol=lf
 # This new diagnostic was frozen with CRLF before its real experiment.
 memory_migration_study/candidate_decision_detection.py -text whitespace=cr-at-eol
 examples/native_cognee_probe_assets/scripts/cognee_local_migration_probe.py -text whitespace=cr-at-eol

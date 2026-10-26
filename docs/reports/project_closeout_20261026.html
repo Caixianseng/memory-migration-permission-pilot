@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' file: data:; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>Agent 记忆安全迁移与权限保持研究原型：阶段收尾与任务汇报</title><style>
+:root{color-scheme:light;--ink:#17263b;--muted:#56667b;--line:#dce4ee;--accent:#155c89}
+*{box-sizing:border-box}body{margin:0;background:#edf2f7;color:var(--ink);font:16px/1.8 'Segoe UI','Microsoft YaHei',sans-serif}
+.shell{max-width:1320px;margin:32px auto;background:#fff;box-shadow:0 8px 32px #132d4612;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.banner{padding:26px 48px 20px;background:#173c56;color:#fff}.eyebrow{font-size:13px;letter-spacing:.12em;color:#bde1f3}.banner p{margin:5px 0;color:#d7e7f0}
+main{padding:18px 48px 48px}h1{font-size:30px;line-height:1.45;margin:20px 0}h2{font-size:24px;margin:42px 0 14px;padding-top:14px;border-top:2px solid var(--line);scroll-margin-top:20px}h3{font-size:19px;margin:26px 0 10px}p{margin:12px 0}a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px;overflow-wrap:anywhere}
+strong{color:#173c56}blockquote{margin:18px 0;padding:10px 20px;background:#f2f7fb;border-left:4px solid #4b8bac}blockquote p{margin:5px 0}
+table{border-collapse:collapse;width:100%;display:block;overflow:auto;font-size:14px;margin:18px 0}th,td{border:1px solid var(--line);padding:10px 13px;vertical-align:top}th{background:#eaf2f8;text-align:left}tr:nth-child(even){background:#fafcfe}code{font-family:Consolas,'Microsoft YaHei',monospace;font-size:.9em;background:#eef3f7;padding:2px 4px;border-radius:3px;overflow-wrap:anywhere}pre{background:#f2f5f9;padding:18px;overflow:auto;border:1px solid var(--line);border-radius:8px;line-height:1.55}pre code{padding:0;background:none;font-size:13px;white-space:pre-wrap;word-break:break-word}
+ul,ol{padding-left:1.65em}li{margin:5px 0}figure{margin:18px 0 24px;padding:18px;background:#f8fbfd;border:1px solid var(--line);border-radius:12px}figure img{width:100%;height:auto;display:block}figcaption{font-size:13px;color:var(--muted);margin-top:10px}details{margin:16px 0;border:1px solid var(--line);border-radius:8px;padding:12px 16px}summary{cursor:pointer;color:var(--accent);font-weight:600}.toc-box{background:#f8fafc;padding:18px 24px;border:1px solid var(--line);border-radius:10px;margin:18px 0}.toc-box h2{font-size:17px;border:0;padding:0;margin:0 0 8px}.toc-box ul{margin:4px 0}.toc-box .toc{font-size:14px}.provenance{padding:18px 48px;background:#f5f8fb;font-size:12px;color:var(--muted);border-top:1px solid var(--line);overflow-wrap:anywhere}
+@media(max-width:760px){.shell{margin:0;border:0;border-radius:0}.banner,main,.provenance{padding-left:20px;padding-right:20px}h1{font-size:25px}h2{font-size:21px}figure{padding:4px}}
+@media print{@page{size:A4;margin:16mm}body{background:#fff;font-size:10pt}.shell{margin:0;max-width:none;border:0;box-shadow:none}.banner{background:#fff;color:#173c56;padding:0 0 8px}.banner p,.eyebrow{color:#56667b}main{padding:0}.toc-box{display:none}h2{font-size:16pt;break-after:avoid}h3{font-size:12pt;break-after:avoid}table{display:table;font-size:8pt}tr,figure{break-inside:avoid}a{color:#173c56}pre{font-size:8pt}.provenance{padding:10px 0}details{break-inside:avoid}}
+</style></head><body><div class="shell">
+<header class="banner"><div class="eyebrow">AGENT MEMORY · PROJECT CLOSEOUT</div><p>项目结构 · 实际成果 · 完整流程 · 待完成事项</p></header>
+<main>
+<nav class="toc-box" aria-label="汇报目录"><h2>阅读目录</h2><div class="toc">
+<ul>
+<li><a href="#agent">Agent 记忆安全迁移与权限保持研究原型：阶段收尾与任务汇报</a><ul>
+<li><a href="#1">1. 项目在解决什么问题</a></li>
+<li><a href="#2">2. 任务结构与代码分工</a></li>
+<li><a href="#3">3. 整体流程与各阶段作用</a><ul>
+<li><a href="#31-agent">3.1 不同Agent能否使用同一协议</a></li>
+<li><a href="#32">3.2 两种评测分别回答什么</a></li>
+</ul>
+</li>
+<li><a href="#4">4. 截至收尾的实际成果</a><ul>
+<li><a href="#41">4.1 原生源迁移具体验证了什么</a></li>
+<li><a href="#42">4.2 原向量失败仍需保留</a></li>
+</ul>
+</li>
+<li><a href="#5">5. 敏感检测与合法任务：哪些仍未达标</a></li>
+<li><a href="#6">6. 模型各自负责什么、费用怎样解释</a></li>
+<li><a href="#7">7. 本次冻结与论文结论</a></li>
+<li><a href="#8">8. 交付与复查入口</a></li>
+<li><a href="#9">9. 暂停后的交接待办</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<h1 id="agent">Agent 记忆安全迁移与权限保持研究原型：阶段收尾与任务汇报</h1>
+<p>更新日期：2026-10-26。面向项目负责人、导师及后续接手者。为保持既有 GitHub 链接，文件名沿用 <code>2026-10-25</code>。</p>
+<p>本阶段交付了可运行的研究原型、真实客户端互通、有限原生后端迁移和可复核实验。<strong>工程组件已形成，整体效果验收、原生稳定性和论文创新尚未通过。</strong> 用户已要求暂停自动研究，保留后续待办；本次只整理交付，不新增模型或原生实验，不更改默认方法。</p>
+<p><a href="project_closeout_20261026.html">离线图文阅读版</a> · <a href="../../benchmarks/project_closeout_20261026_summary.json">机器可读收尾摘要</a> · <a href="../%E8%AE%BA%E6%96%87%E7%9B%AE%E6%A0%87_%E4%B8%BB%E7%BA%BF%E9%AA%8C%E6%94%B6%E4%B8%8E%E7%AB%9E%E5%93%81%E6%A0%B8%E9%AA%8C_2026-10-25.md">完整验收与竞品裁决</a></p>
+<h2 id="1">1. 项目在解决什么问题</h2>
+<p>主线仍是 <strong>Agent 记忆的安全交接与权限保持</strong>。Agent 是能读取信息、调用工具并完成任务的智能助手；这里的记忆是外部记录，不是模型参数。</p>
+<p>我们关心：助手A把记忆交给助手B，或将记忆从一种后端迁入另一种后端时，允许的人是否还能使用，不允许的人是否拿不到，源端撤权后旧包是否会把权限恢复。敏感检测、生成时标注与脱敏用于保护内容，不能代替权限检查。</p>
+<p>例如，一条客户记忆允许Alice的读取助手使用，但不允许其他用户或执行助手读取。迁移不能因换了存储格式而变成公开。能读取也不自动意味着能迁出、共享、复制或继续转授权。</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>通俗解释</th>
+<th>本项目的用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ACL / 权限表</td>
+<td>谁可以对哪个对象做什么</td>
+<td>核验读、列举、迁出、复制等操作</td>
+</tr>
+<tr>
+<td>来源与血缘</td>
+<td>事实来自哪份原文、哪一段及哪个副本</td>
+<td>防止拿同一来源的另一段冒充获准事实</td>
+</tr>
+<tr>
+<td>隐私标签</td>
+<td>需要保护的文字、位置、类别和策略版本</td>
+<td>在生成与迁移阶段复用保护结果</td>
+</tr>
+<tr>
+<td>HMAC</td>
+<td>用本地密钥认证数据是否被改动</td>
+<td>绑定事实、授权与标签；不是加密，也不证明语义判断正确</td>
+</tr>
+<tr>
+<td>假名化</td>
+<td>原值换成代号，本地保留恢复能力</td>
+<td>模型处理代号，核权后向合法用户恢复原值</td>
+</tr>
+<tr>
+<td>NER</td>
+<td>命名实体识别</td>
+<td>找人名、组织、项目等候选，仍需业务策略判断是否敏感</td>
+</tr>
+<tr>
+<td>NLI</td>
+<td>文本蕴含判断</td>
+<td>判断上下文是否支持某个类别或角色断言；不产生权限</td>
+</tr>
+<tr>
+<td>强基线</td>
+<td>已有、完整且合理的简单方法</td>
+<td>检查新增方法是否真的更安全、更有用或更省成本</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2">2. 任务结构与代码分工</h2>
+<p>当前由多个受控实验入口组成，组件可以组合，但不是任意Agent都能直接安装使用的通用产品，也不是所有环节已经连成同一条验收链。</p>
+<table>
+<thead>
+<tr>
+<th>层次</th>
+<th>当前实现</th>
+<th>代表文件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>统一授权与迁移规划</td>
+<td>检查源读者、接收者、目标约束及迁出/复制资格，规划容器与副本</td>
+<td><a href="../../memory_migration_study/policy.py">policy.py</a>、<a href="../../memory_migration_study/plan_verifier.py">plan_verifier.py</a></td>
+</tr>
+<tr>
+<td>事实构建与认证</td>
+<td>原文摘录或候选选择，绑定内容哈希、位置、主体与生命周期</td>
+<td><a href="../../memory_migration_study/memory_builder.py">memory_builder.py</a>、<a href="../../memory_migration_study/memory_labels.py">memory_labels.py</a></td>
+</tr>
+<tr>
+<td>敏感识别与保护</td>
+<td>格式规则、本地Qwen、GLiNER、并集与边界处理；GLiClass/NLI为可选研究分支</td>
+<td><a href="../../memory_migration_study/privacy.py">privacy.py</a>、<a href="../../memory_migration_study/ner_detector.py">ner_detector.py</a>、<a href="../../memory_migration_study/nli_candidate.py">nli_candidate.py</a></td>
+</tr>
+<tr>
+<td>记忆使用与恢复</td>
+<td>问题和记忆同步换代号，检查外发输入，回答后再次核权恢复</td>
+<td><a href="../../memory_migration_study/privacy_egress.py">privacy_egress.py</a>、<a href="../../memory_migration_study/llm_worker.py">llm_worker.py</a></td>
+</tr>
+<tr>
+<td>真实客户端交接</td>
+<td>统一JSON交接包、Qoder CLI与Harness SDK适配、原生AGENTS.md上下文</td>
+<td><a href="../../memory_migration_study/native_agent_protocol.py">native_agent_protocol.py</a>、<a href="../../scripts/run_native_agent_handoff.py">run_native_agent_handoff.py</a></td>
+</tr>
+<tr>
+<td>客户端隐私集成</td>
+<td>把单值假名化与本地恢复接到两个真实客户端</td>
+<td><a href="../../memory_migration_study/native_privacy_gateway.py">native_privacy_gateway.py</a>、<a href="../../scripts/run_native_private_handoff.py">run_native_private_handoff.py</a></td>
+</tr>
+<tr>
+<td>原生后端适配</td>
+<td>Mem0研究网关、Open WebUI、Cognee；源API原文与ACL到目标的有限映射</td>
+<td><a href="../../scripts/run_native_api_read_handoff.py">run_native_api_read_handoff.py</a>、<a href="../../scripts/run_native_exact_fact_bridge.py">run_native_exact_fact_bridge.py</a></td>
+</tr>
+<tr>
+<td>评测与复核</td>
+<td>直接授权检查、模型任务对照、源码/资产冻结、费用记录和独立重算</td>
+<td><a href="../../tests">tests</a>、<a href="../../benchmarks">benchmarks</a>、<a href="../../scripts">scripts</a></td>
+</tr>
+</tbody>
+</table>
+<p><code>examples/</code>保存自编材料与示例；<code>benchmarks/</code>保存可公开汇总；<code>docs/</code>保存方案、结果与裁决；<code>results/</code>保存本机原始响应和逐项证据。模型、虚拟环境、凭据、数据库及用户原始交接包不随仓库分发。</p>
+<h2 id="3">3. 整体流程与各阶段作用</h2>
+<p><img alt="记忆构建、核权迁移、同步假名化、模型回答和再次核权恢复" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDQwIiBoZWlnaHQ9IjkyMCIgdmlld0JveD0iMCAwIDE0NDAgOTIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0iZmxvdy10aXRsZSBmbG93LWRlc2MiPgogIDx0aXRsZSBpZD0iZmxvdy10aXRsZSI+QWdlbnQg5a6J5YWo6K6w5b+G5p2D6ZmQ6L+B56e756CU56m25rWB56iLPC90aXRsZT4KICA8ZGVzYyBpZD0iZmxvdy1kZXNjIj7nrKzkuIDlsYLku47mnKzlnLDljp/lp4vmlofmnKzmnoTlu7rmnInmnaXmupDkvY3nva7nmoTkuovlrp7vvIzorqTor4HmlY/mhJ/moIfnrb7vvIzmoLjlr7nnnJ/lrp7kuLvkvZPjgIHlvZPliY3mnYPpmZDlkozov4Hlh7rlpI3liLbotYTmoLzlkI7kv53lrZjnm67moIforrDlv4bjgILnrKzkuozlsYLmjojmnYPmo4DntKLlkI7lkIzmraXmm7/mjaLpl67popjlkozorrDlv4bkuK3nmoTmlY/mhJ/lgLzvvIzmqKHlnovlm57nrZTlkI7lho3mrKHmoLjmnYPlubblnKjmnKzlnLDmgaLlpI3jgILnrKzkuInlsYLljZXni6zmoLjpqozmkqTmnYPjgIHnm67moIfmuIXnkIblkozml6fku7vliqHph43mlL7jgILmqKHlnovku7vliqHpk77kuI7ljp/nlJ/lkI7nq6/lrp7pqozliIblvIDpqozmlLbjgII8L2Rlc2M+CiAgPGRlZnM+CiAgICA8bWFya2VyIGlkPSJhcnJvdyIgbWFya2VyV2lkdGg9IjEwIiBtYXJrZXJIZWlnaHQ9IjEwIiByZWZYPSI4IiByZWZZPSI1IiBvcmllbnQ9ImF1dG8iPjxwYXRoIGQ9Ik0wIDBMMTAgNUwwIDEwWiIgZmlsbD0iIzM5NjU4MSIvPjwvbWFya2VyPgogICAgPG1hcmtlciBpZD0id2Fybi1hcnJvdyIgbWFya2VyV2lkdGg9IjEwIiBtYXJrZXJIZWlnaHQ9IjEwIiByZWZYPSI4IiByZWZZPSI1IiBvcmllbnQ9ImF1dG8iPjxwYXRoIGQ9Ik0wIDBMMTAgNUwwIDEwWiIgZmlsbD0iI2E0NmIyMiIvPjwvbWFya2VyPgogICAgPHN0eWxlPgogICAgICB0ZXh0e2ZvbnQtZmFtaWx5OidTZWdvZSBVSScsJ01pY3Jvc29mdCBZYUhlaScsc2Fucy1zZXJpZjtmaWxsOiMxYjMzNDh9IC50aXRsZXtmb250LXNpemU6MzBweDtmb250LXdlaWdodDo3MDB9LnN1YnRpdGxle2ZvbnQtc2l6ZToxN3B4O2ZpbGw6IzUyNmI3Zn0ucGhhc2V7Zm9udC1zaXplOjIwcHg7Zm9udC13ZWlnaHQ6NzAwfS5sYWJlbHtmb250LXNpemU6MTlweDtmb250LXdlaWdodDo2MDB9LnNtYWxse2ZvbnQtc2l6ZToxNXB4O2ZpbGw6IzUyNmI3Zn0ubm9kZXtmaWxsOiNmZmY7c3Ryb2tlOiNhN2M1ZDg7c3Ryb2tlLXdpZHRoOjEuNX0ubGluZXtmaWxsOm5vbmU7c3Ryb2tlOiMzOTY1ODE7c3Ryb2tlLXdpZHRoOjIuNTttYXJrZXItZW5kOnVybCgjYXJyb3cpfS53YXJue2ZpbGw6bm9uZTtzdHJva2U6I2E0NmIyMjtzdHJva2Utd2lkdGg6Mi4zO3N0cm9rZS1kYXNoYXJyYXk6NyA1O21hcmtlci1lbmQ6dXJsKCN3YXJuLWFycm93KX0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxNDQwIiBoZWlnaHQ9IjkyMCIgZmlsbD0iI2ZmZiIvPgogIDx0ZXh0IHg9IjQ4IiB5PSI1NCIgY2xhc3M9InRpdGxlIj5BZ2VudCDlronlhajorrDlv4bmnYPpmZDov4Hnp7sgwrcg5qih5Z2X6KGU5o6l5oC76KeIPC90ZXh0PgogIDx0ZXh0IHg9IjQ4IiB5PSI4NiIgY2xhc3M9InN1YnRpdGxlIj7noJTnqbbljp/lnovvvJvmqKHlnovku7vliqHpk77kuI7ljp/nlJ/lkI7nq6/lrp7pqozliIblvIDpqozmlLY8L3RleHQ+CgogIDxyZWN0IHg9IjI4IiB5PSIxMjAiIHdpZHRoPSIxMzgwIiBoZWlnaHQ9IjI1MCIgcng9IjE2IiBmaWxsPSIjZWZmNmZiIi8+CiAgPHRleHQgeD0iNTAiIHk9IjE1NyIgY2xhc3M9InBoYXNlIj7kuIDjgIHnlJ/miJDjgIHmoIfms6jkuI7moLjmnYPov4Hnp7s8L3RleHQ+CiAgPHJlY3QgeD0iNTAiIHk9IjE5NCIgd2lkdGg9IjIzMCIgaGVpZ2h0PSIxMTgiIHJ4PSIxMiIgY2xhc3M9Im5vZGUiLz4KICA8dGV4dCB4PSIxNjUiIHk9IjIzMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImxhYmVsIj4xICDmnKzlnLDmupDmlofmnKw8L3RleHQ+CiAgPHRleHQgeD0iMTY1IiB5PSIyNjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJzbWFsbCI+5YWs5byAIC8g5ZCI5oiQ5Y+X5o6n5p2Q5paZPC90ZXh0PgogIDx0ZXh0IHg9IjE2NSIgeT0iMjg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ic21hbGwiPuadpea6kOWOn+aWh+S4juaVj+aEn+etlueVpTwvdGV4dD4KICA8cmVjdCB4PSIzMjUiIHk9IjE5NCIgd2lkdGg9IjIzMCIgaGVpZ2h0PSIxMTgiIHJ4PSIxMiIgY2xhc3M9Im5vZGUiLz4KICA8dGV4dCB4PSI0NDAiIHk9IjIzMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImxhYmVsIj4yICDmnoTlu7rkuovlrp7orrDlv4Y8L3RleHQ+CiAgPHRleHQgeD0iNDQwIiB5PSIyNjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJzbWFsbCI+57uR5a6a5Y6f5paH5L2N572u5ZKM5YaF5a655ZOI5biMPC90ZXh0PgogIDx0ZXh0IHg9IjQ0MCIgeT0iMjg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ic21hbGwiPueUn+aIkOS4jeetieS6juiHquWKqOaOiOadgzwvdGV4dD4KICA8cmVjdCB4PSI2MDAiIHk9IjE5NCIgd2lkdGg9IjIzMCIgaGVpZ2h0PSIxMTgiIHJ4PSIxMiIgY2xhc3M9Im5vZGUiLz4KICA8dGV4dCB4PSI3MTUiIHk9IjIzMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImxhYmVsIj4zICDmlY/mhJ/moIfnrb7orqTor4E8L3RleHQ+CiAgPHRleHQgeD0iNzE1IiB5PSIyNjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJzbWFsbCI+6KeE5YiZIC8g5pys5Zyw5qih5Z6L5qOA5rWLPC90ZXh0PgogIDx0ZXh0IHg9IjcxNSIgeT0iMjg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ic21hbGwiPkhNQUMg57uR5a6a5YaF5a655LiO562W55WlPC90ZXh0PgogIDxyZWN0IHg9Ijg3NSIgeT0iMTk0IiB3aWR0aD0iMjMwIiBoZWlnaHQ9IjExOCIgcng9IjEyIiBjbGFzcz0ibm9kZSIvPgogIDx0ZXh0IHg9Ijk5MCIgeT0iMjMyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ibGFiZWwiPjQgIOaguOadg+S4jui/geenu+iuoeWIkjwvdGV4dD4KICA8dGV4dCB4PSI5OTAiIHk9IjI2NCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InNtYWxsIj7nnJ/lrp7nlKjmiLfjgIFBZ2VudOOAgeW9k+WJjeadg+mZkDwvdGV4dD4KICA8dGV4dCB4PSI5OTAiIHk9IjI4OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InNtYWxsIj7ov4Hlh7ogLyDlpI3liLYgLyDmjqXmlLbojIPlm7Q8L3RleHQ+CiAgPHJlY3QgeD0iMTE1MCIgeT0iMTk0IiB3aWR0aD0iMjMwIiBoZWlnaHQ9IjExOCIgcng9IjEyIiBjbGFzcz0ibm9kZSIvPgogIDx0ZXh0IHg9IjEyNjUiIHk9IjIzMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImxhYmVsIj41ICDnm67moIforrDlv4Y8L3RleHQ+CiAgPHRleHQgeD0iMTI2NSIgeT0iMjY0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ic21hbGwiPuaMieWQiOagvOaOpeaUtuiAheWGmeWFpTwvdGV4dD4KICA8dGV4dCB4PSIxMjY1IiB5PSIyODgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJzbWFsbCI+5L+d55WZ5p2l5rqQ5Y+K5a+56LGh5pig5bCEPC90ZXh0PgogIDxwYXRoIGQ9Ik0yODAgMjUzSDMxNyIgY2xhc3M9ImxpbmUiLz48cGF0aCBkPSJNNTU1IDI1M0g1OTIiIGNsYXNzPSJsaW5lIi8+PHBhdGggZD0iTTgzMCAyNTNIODY3IiBjbGFzcz0ibGluZSIvPjxwYXRoIGQ9Ik0xMTA1IDI1M0gxMTQyIiBjbGFzcz0ibGluZSIvPgogIDx0ZXh0IHg9IjUwIiB5PSIzNDUiIGNsYXNzPSJzbWFsbCI+5LiN5pSv5oyB55qE57qm5p2f44CB6K6k6K+B5aSx6LSl5oiW5YaF5a655Y+Y5YyW5bqU6Zi75pat77yb5qCH562+5LiN6IO95o+Q5Y2H6K+75Y+W44CB5YWx5Lqr5oiW6L+B5Ye65p2D6ZmQ44CCPC90ZXh0PgoKICA8cmVjdCB4PSIyOCIgeT0iNDE4IiB3aWR0aD0iMTM4MCIgaGVpZ2h0PSIyNDgiIHJ4PSIxNiIgZmlsbD0iI2YxZjhmNSIvPgogIDxwYXRoIGQ9Ik0xMjY1IDMxMlYzOTFIMTRWNTQ5SDQyIiBjbGFzcz0ibGluZSIvPgogIDx0ZXh0IHg9IjUwIiB5PSI0NTUiIGNsYXNzPSJwaGFzZSI+5LqM44CB5o6I5p2D5L2/55So5LiO6ZqQ56eB5oGi5aSNPC90ZXh0PgogIDxyZWN0IHg9IjUwIiB5PSI0OTAiIHdpZHRoPSIyOTAiIGhlaWdodD0iMTE4IiByeD0iMTIiIGNsYXNzPSJub2RlIi8+CiAgPHRleHQgeD0iMTk1IiB5PSI1MjgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJsYWJlbCI+NiAg5oyJ5b2T5YmN5p2D6ZmQ5qOA57SiPC90ZXh0PgogIDx0ZXh0IHg9IjE5NSIgeT0iNTYwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ic21hbGwiPuWPquaPkOS+m+acieadg+ivu+WPlueahOiusOW/hjwvdGV4dD4KICA8dGV4dCB4PSIxOTUiIHk9IjU4NCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InNtYWxsIj7nlKjmiLflkowgQWdlbnQg6Lqr5Lu95YiG5Yir5qC45a+5PC90ZXh0PgogIDxyZWN0IHg9IjM5NSIgeT0iNDkwIiB3aWR0aD0iMjkwIiBoZWlnaHQ9IjExOCIgcng9IjEyIiBjbGFzcz0ibm9kZSIvPgogIDx0ZXh0IHg9IjU0MCIgeT0iNTI4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ibGFiZWwiPjcgIOWQjOatpeWBh+WQjeWMluS4juWHuuWPo+agoemqjDwvdGV4dD4KICA8dGV4dCB4PSI1NDAiIHk9IjU2MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InNtYWxsIj7pl67popjkuI7orrDlv4bkvb/nlKjlkIzkuIDor7fmsYLku6Plj7c8L3RleHQ+CiAgPHRleHQgeD0iNTQwIiB5PSI1ODQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJzbWFsbCI+5oGi5aSN5pig5bCE5L+d55WZ5Zyo5pys5Zyw5YaF5a2YPC90ZXh0PgogIDxyZWN0IHg9Ijc0MCIgeT0iNDkwIiB3aWR0aD0iMjkwIiBoZWlnaHQ9IjExOCIgcng9IjEyIiBjbGFzcz0ibm9kZSIvPgogIDx0ZXh0IHg9Ijg4NSIgeT0iNTI4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ibGFiZWwiPjggIOaooeWei+S+neaNruiusOW/huWbnuetlDwvdGV4dD4KICA8dGV4dCB4PSI4ODUiIHk9IjU2MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InNtYWxsIj7lj6rmjqXmlLbpl67popjkuI7lhYHorrjnmoTorrDlv4Y8L3RleHQ+CiAgPHRleHQgeD0iODg1IiB5PSI1ODQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJzbWFsbCI+6K6w5b2V5Y6f5aeL5Zue562U5LiO5aSx6LSl6Zi25q61PC90ZXh0PgogIDxyZWN0IHg9IjEwODUiIHk9IjQ5MCIgd2lkdGg9IjI5NSIgaGVpZ2h0PSIxMTgiIHJ4PSIxMiIgY2xhc3M9Im5vZGUiLz4KICA8dGV4dCB4PSIxMjMyIiB5PSI1MjgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJsYWJlbCI+OSAg5YaN5qC45p2D5ZCO5pys5Zyw5oGi5aSNPC90ZXh0PgogIDx0ZXh0IHg9IjEyMzIiIHk9IjU2MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InNtYWxsIj7pqozor4Hku6Plj7fjgIHmnaXmupDjgIHkuLvkvZPlkoznrZbnlaU8L3RleHQ+CiAgPHRleHQgeD0iMTIzMiIgeT0iNTg0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ic21hbGwiPuaBouWkjeWQiOazleWOn+WAvOaIluaYjuehrumYu+aWrTwvdGV4dD4KICA8cGF0aCBkPSJNMzQwIDU0OUgzODciIGNsYXNzPSJsaW5lIi8+PHBhdGggZD0iTTY4NSA1NDlINzMyIiBjbGFzcz0ibGluZSIvPjxwYXRoIGQ9Ik0xMDMwIDU0OUgxMDc3IiBjbGFzcz0ibGluZSIvPgogIDx0ZXh0IHg9IjUwIiB5PSI2NDAiIGNsYXNzPSJzbWFsbCI+5YGH5ZCN5YyW5ZCO5LuN57un5om/5Y6f5p2D6ZmQ77yb5qOA5rWL5b6F5a6h44CB5qih5Z6LIFVOS05PV07jgIHosIPnlKjplJnor6/lj4rmgaLlpI3lpLHotKXliIbliKvorqHmlbDjgII8L3RleHQ+CgogIDxyZWN0IHg9IjI4IiB5PSI3MTQiIHdpZHRoPSIxMzgwIiBoZWlnaHQ9IjE0MiIgcng9IjE2IiBmaWxsPSIjZmZmN2U5Ii8+CiAgPHRleHQgeD0iNTAiIHk9Ijc1MSIgY2xhc3M9InBoYXNlIj7kuInjgIHnlJ/lkb3lkajmnJ/kuI7lj4zovajor4TkvLA8L3RleHQ+CiAgPHRleHQgeD0iNTAiIHk9Ijc4NSIgY2xhc3M9ImxhYmVsIj4xMCAg5pKk5p2DIOKGkiDmuIXnkIbnm67moIflia/mnKwg4oaSIOaLkue7neaXp+S7u+WKoemHjeaUviDihpIg5L+d55WZ54us56uL5ZCI5rOV5o6I5p2DPC90ZXh0PgogIDx0ZXh0IHg9IjUwIiB5PSI4MTkiIGNsYXNzPSJzbWFsbCI+55u05o6l6K+E5Lyw77ya5YaF5a6544CB5p2D6ZmQ44CB5pKk5p2D5Y+K6YeN5pS+IO+9nCDpl7TmjqXor4TkvLDvvJrlkIjms5Xlm57nrZTjgIHms4TpnLLjgIHmi5LnrZTjgIHotLnnlKjlj4rlpLHotKXliIbmr408L3RleHQ+CiAgPHBhdGggZD0iTTEyMzIgNjA4VjcwNCIgY2xhc3M9Indhcm4iLz4KICA8dGV4dCB4PSI0OCIgeT0iODk0IiBjbGFzcz0ic3VidGl0bGUiPui/meaYr+eglOeptuaooeWdl+e7k+aehOWbvu+8m+acquWwhuaciemZkOWcuuaZr+mAmui/h+OAgeW8gOWPkembhumrmOWIhuaIluW3peeoi+a1i+ivleaVsOihqOi/sOS4uuaZrumBjeWuieWFqOS4juiuuuaWh+WIm+aWsOOAgjwvdGV4dD4KPC9zdmc+Cg=="></p>
+<p>图中是可组合组件的设计顺序，不表示已完成一套通用生产系统。实际客户端互通、后端迁移和模型效果按第4节的不同实验分别验收。</p>
+<ol>
+<li><strong>准备事实与规则。</strong> 原文是数据；其中的“我是管理员”“此信息公开”不能修改服务端授权。</li>
+<li><strong>构建记忆。</strong> 当前以原文摘录和候选选择为主，核对内容、起止位置及哈希；任意自然语言摘要的完整权限继承尚未实现。</li>
+<li><strong>标注隐私。</strong> 在原始上下文中找敏感位置，记录策略与检测器版本。签名只证明绑定和完整性，不能证明没有漏标。</li>
+<li><strong>核验迁移资格。</strong> 分别检查真实主体、当前读权、迁出/复制资格、接收范围和目标能力；未知约束不自动放行。</li>
+<li><strong>建立目标副本。</strong> 只交付获准事实并保存对象映射。目标无法表达的约束必须明确不支持，不能静默丢弃。</li>
+<li><strong>授权后使用。</strong> 同步替换问题和记忆中的敏感原值，请求级代号不跨用户或会话复用；恢复映射留在本机内存。</li>
+<li><strong>回答后再核权。</strong> 检查代号、来源、主体、请求及当前策略，再恢复允许展示的内容。问题中自带的值不能变成记忆证据。</li>
+<li><strong>处理生命周期。</strong> 对后续新访问检查撤权，按合同显式同步ACL或清理副本，并验证旧包重放；已交付明文不能通过撤权让接收者遗忘。</li>
+</ol>
+<h3 id="31-agent">3.1 不同Agent能否使用同一协议</h3>
+<p>可以共用记忆交接的数据格式，再由各自适配器读入。已经测试的统一格式为<code>agent_memory_handoff_v1</code>，包含事实、来源、接收者、期限与授权引用；Qoder和Harness本次都通过原生<code>AGENTS.md</code>接收上下文。</p>
+<p>客户端调用方式仍然不同：Qoder使用CLI，Harness使用SDK/JSON-RPC。<strong>统一数据包不等于两款产品原生共用一套权限执行机制。</strong> 本轮由可信主机核验后导入，文件交付后没有原生逐条ACL或即时撤权。详见<a href="../%E5%8F%8C%E5%8E%9F%E7%94%9FAgent%E7%BB%9F%E4%B8%80%E8%AE%B0%E5%BF%86%E5%8D%8F%E8%AE%AE_%E5%AE%9E%E6%B5%8B%E6%8A%A5%E5%91%8A_2026-10-26.md">双客户端报告</a>。</p>
+<h3 id="32">3.2 两种评测分别回答什么</h3>
+<table>
+<thead>
+<tr>
+<th>轨道</th>
+<th>核心问题</th>
+<th>已有范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>直接安全</td>
+<td>API实际交付了什么、权限和生命周期是否保持</td>
+<td>原文/对象可见性、迁出与复制资格、撤权、旧包重放及部分原生路径</td>
+</tr>
+<tr>
+<td>间接任务</td>
+<td>Agent拿到记忆后是否正确、安全地完成任务</td>
+<td>本地模型任务对照、历史DeepSeek问答及两个原生客户端的单值集成</td>
+</tr>
+</tbody>
+</table>
+<p>后端交付了受限内容，即使模型没复述，也不能算底层安全；后端核权正确，也不保证回答正确。字段、主体、故事、API请求、模型前向、任务位置与工程测试数使用不同分母，不能相加成“成功率”。</p>
+<h2 id="4">4. 截至收尾的实际成果</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>已验证结果</th>
+<th>范围与限制</th>
+<th>证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>完整离线工程回归</td>
+<td>1524项通过，0失败/错误/跳过；274.7秒，318份受检源码前后未变</td>
+<td>是该次源码快照的工程证据，不是模型或论文验收；本次文档整理不重复该运行</td>
+<td><a href="../../benchmarks/project_regression_20261026_nli_api_read_summary.json">回归汇总</a></td>
+</tr>
+<tr>
+<td>Qoder与Harness静态互通</td>
+<td>双向4个任务位置符合，主机迁入检查22/22</td>
+<td>共8次进程尝试取得4份可评分回答，另有零放行dry-run；不是4个独立大样本</td>
+<td><a href="../%E5%8F%8C%E5%8E%9F%E7%94%9FAgent%E7%BB%9F%E4%B8%80%E8%AE%B0%E5%BF%86%E5%8D%8F%E8%AE%AE_%E5%AE%9E%E6%B5%8B%E6%8A%A5%E5%91%8A_2026-10-26.md">实测报告</a></td>
+</tr>
+<tr>
+<td>双客户端单值隐私链</td>
+<td>另行2次真实问答，2/2代号与本地恢复正确，6项主机控制阻断</td>
+<td>已知合成单值；未检查完整云端请求，也不是通用原生在线撤权</td>
+<td><a href="../%E5%8E%9F%E7%94%9F%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%9A%90%E7%A7%81%E4%BA%A4%E6%8E%A5_%E5%8F%8C%E7%AB%AF%E5%8D%95%E5%80%BC%E5%AE%9E%E6%B5%8B_2026-10-26.md">隐私集成报告</a></td>
+</tr>
+<tr>
+<td>共同源权限投影</td>
+<td>Cognee、WebUI各25项网关检查符合；各11项原生读取一致，14项操作在本轮受限适配中未支持</td>
+<td>444次原生请求；未支持项没有计为通过，不代表产品普遍无此能力，仍有未测检索出口</td>
+<td><a href="../../benchmarks/native_policy_projection_20261026_summary.json">投影汇总</a></td>
+</tr>
+<tr>
+<td>原生源API→异构目标</td>
+<td>WebUI实际原文和Note读取ACL→Cognee，169次原生ASGI请求、48原文关系、48枚举符合</td>
+<td>同机隔离进程及数据库，以TestClient调用真实路由，不是物理网络往返；只测单方向正确N映射</td>
+<td><a href="../%E5%8E%9F%E7%94%9FAPI%E5%AF%BC%E5%87%BA%E8%BF%81%E7%A7%BB_WebUI%E5%88%B0Cognee%E5%AE%9E%E6%B5%8B_2026-10-26.md">图文报告</a></td>
+</tr>
+<tr>
+<td>生命周期保持</td>
+<td>21项受控见证通过；给定完整事实和依赖时，标准重算与普通缓存98格也通过</td>
+<td>支持完整标准防护可解决已测情况，未形成新算法优势</td>
+<td><a href="../%E5%AE%8C%E6%95%B4%E4%BA%8B%E5%AE%9E%E9%87%8D%E7%AE%97%E4%B8%8E%E6%99%AE%E9%80%9A%E7%BC%93%E5%AD%98_%E6%8E%A2%E7%B4%A2%E6%80%A7%E5%90%A6%E5%AE%9A%E5%AE%A1%E8%AE%A1_2026-10-26.md">强基线审计</a></td>
+</tr>
+<tr>
+<td>WebUI额外读取面</td>
+<td>379请求；186条合格观察符合，104条不适用或无正文不评分</td>
+<td>默认write搜索与显式read搜索不同；不是模型拒答或新漏洞</td>
+<td><a href="../WebUI%E6%97%81%E8%B7%AF%E5%AE%9E%E6%B5%8B_%E8%AF%BB%E5%8F%96%E4%B8%8E%E6%90%9C%E7%B4%A2%E6%9D%83%E9%99%90%E5%B7%AE%E5%BC%82_2026-10-26.md">读取面报告</a></td>
+</tr>
+<tr>
+<td>来源事实卡回答</td>
+<td>8个已暴露故事中，普通短编号31/32、来源卡32/32；原自由回答严格24/32、兼容28/32</td>
+<td>相对强基线只多1题；没有完成新独立64题验收</td>
+<td><a href="../%E6%BA%90%E4%BA%8B%E5%AE%9E%E5%8D%A1_%E5%AE%8C%E6%95%B4%E4%B8%8A%E4%B8%8B%E6%96%87%E4%B8%89%E6%9D%A1%E4%BB%B6%E5%AE%9E%E9%AA%8C%E8%AF%B4%E6%98%8E_2026-10-26.md">回答对照</a></td>
+</tr>
+<tr>
+<td>生成时强标注</td>
+<td>一批8故事中修复4道任务的注册名称漏遮</td>
+<td>不等于修复原120条全部漏检，也不是全面语义隐私</td>
+<td><a href="../%E7%94%9F%E6%88%90%E9%98%B6%E6%AE%B5%E5%BC%BA%E6%A0%87%E6%B3%A8_%E7%9C%9F%E5%AE%9E%E7%BB%93%E6%9E%9C%E4%B8%8E%E5%89%A9%E4%BD%99%E5%9B%9E%E7%AD%94%E9%97%AE%E9%A2%98_2026-10-25.md">生成阶段结果</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="41">4.1 原生源迁移具体验证了什么</h3>
+<p>WebUI源端官方API返回实际Note的<code>access_grants</code>、文件关联和原文字节；目标写入来自这些响应，不从计划中的事实文本回填。首次迁入后只撤销Alice对第一事实的read，Alice和Bob对第二事实的合法读取均保留；初始旧包重放前重新读取当前源状态，最终为no-op，没有恢复已撤权限。</p>
+<p>这是一个合成故事、两个19字节事实和四个预声明组合主体。组合主体各对应普通平台账户，不是产品第一类Agent IAM。原生export/share授权和完整策略导出仍未核实，复制依据单独的受控研究操作者许可；只读权本身不能充当迁出许可。正确强基线通过，未比较N/G优势，也未测反向或跨机原子撤权。</p>
+<h3 id="42">4.2 原向量失败仍需保留</h3>
+<p>Mem0 SDK→WebUI原生向量桥接v3为25/29，四次返回HTTP 200但正文为<code>null</code>。后续固定向量配对及固定旧完整序列的无逐行追踪诊断均未复现；后者164请求、15次后端search、21次本地嵌入。它们没有取得原异常或证明针对性修复，因此旧四次失败仍未关闭。新的WebUI→Cognee文件/ACL路径不能覆盖这个向量问题。<a href="../%E5%8E%9F%E7%94%9F%E5%90%91%E9%87%8F%E6%97%A7%E5%BA%8F%E5%88%97_%E6%97%A0%E9%80%90%E8%A1%8C%E8%BF%BD%E8%B8%AA%E8%AF%8A%E6%96%AD%E7%BB%93%E6%9E%9C_2026-10-26.md">诊断结果</a></p>
+<h2 id="5">5. 敏感检测与合法任务：哪些仍未达标</h2>
+<p>原检测目标为精确率至少90%、召回率至少95%。精确率衡量“标为敏感的有多少正确”，召回率衡量“真正敏感的有多少被找全”。旧80＋40条材料已多次查看，现在只作开发/回归，不是新的独立保留集。</p>
+<table>
+<thead>
+<tr>
+<th>已暴露材料</th>
+<th>条件</th>
+<th>TP / FP / FN</th>
+<th style="text-align: right;">精确率</th>
+<th style="text-align: right;">召回率</th>
+<th style="text-align: right;">可继续处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>开发80</td>
+<td>标准边界检测</td>
+<td>57 / 8 / 1</td>
+<td style="text-align: right;">87.69%</td>
+<td style="text-align: right;">98.28%</td>
+<td style="text-align: right;">80/80</td>
+</tr>
+<tr>
+<td>开发80</td>
+<td>NLI仅原候选</td>
+<td>44 / 1 / 14</td>
+<td style="text-align: right;">97.78%</td>
+<td style="text-align: right;">75.86%</td>
+<td style="text-align: right;">67/80</td>
+</tr>
+<tr>
+<td>开发80</td>
+<td>NLI完整候选池</td>
+<td>44 / 3 / 14</td>
+<td style="text-align: right;">93.62%</td>
+<td style="text-align: right;">75.86%</td>
+<td style="text-align: right;">67/80</td>
+</tr>
+<tr>
+<td>旧回归40</td>
+<td>标准边界检测</td>
+<td>18 / 2 / 2</td>
+<td style="text-align: right;">90.00%</td>
+<td style="text-align: right;">90.00%</td>
+<td style="text-align: right;">40/40</td>
+</tr>
+<tr>
+<td>旧回归40</td>
+<td>NLI仅原候选</td>
+<td>16 / 0 / 4</td>
+<td style="text-align: right;">100.00%</td>
+<td style="text-align: right;">80.00%</td>
+<td style="text-align: right;">37/40</td>
+</tr>
+<tr>
+<td>旧回归40</td>
+<td>NLI完整候选池</td>
+<td>16 / 4 / 4</td>
+<td style="text-align: right;">80.00%</td>
+<td style="text-align: right;">80.00%</td>
+<td style="text-align: right;">35/40</td>
+</tr>
+</tbody>
+</table>
+<p>TP是真阳性，FP是误报，FN是漏检。NLI完成111个候选、390次实际分类前向；390次encoder入口是同一批调用的内层观测，不能相加为780次。精确率提高伴随召回及处理覆盖下降，默认方法未切换。<a href="../NLI%E5%80%99%E9%80%89%E8%AF%AD%E4%B9%89_%E4%B8%89%E8%87%82%E7%9C%9F%E5%AE%9E%E7%BB%93%E6%9E%9C%E4%B8%8E%E8%A3%81%E5%86%B3_2026-10-26.md">完整结果</a></p>
+<p>独立重算表明，NLI新增的原TP损失均来自整材料待审，正常完成分支没有错误删除原TP。另存的事后零模型探索，把待审existing材料退回原敏感保护后，开发得到57/6/1，旧40仍18/2/2，与旧40基线相同。这不是预注册成绩、新独立验收或已上线优化；可处理材料增加也不等于实际Agent拒答率下降。</p>
+<p>合法任务还需同时满足回答正确、权限正确、注册敏感值未非法外发。新独立64题至少63题联合成功的目标尚未执行。原始DeepSeek提示/脱敏对照保留了漏遮，来源卡32/32也只来自已暴露开发故事，均不能替代这项验收。</p>
+<h2 id="6">6. 模型各自负责什么、费用怎样解释</h2>
+<table>
+<thead>
+<tr>
+<th>模型或客户端</th>
+<th>实际职责</th>
+<th>不能据此声称的能力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>历史DeepSeek Flash API</td>
+<td>21＋64＝85次真实问答，使用程序准备的上下文</td>
+<td>不等于85次独立迁移，或两个自主Agent在线协商搬运</td>
+</tr>
+<tr>
+<td>本地Qwen3 4B</td>
+<td>事实构建、候选/隐私判断及回答开发实验</td>
+<td>不是可靠的权限签发者，不保证语义识别完整</td>
+</tr>
+<tr>
+<td>GLiNER、GLiClass、mDeBERTa NLI</td>
+<td>实体候选与分类强基线</td>
+<td>分类分数不是读取/共享授权；NLI是已有技术，不是本项目新模型</td>
+</tr>
+<tr>
+<td>Qoder CLI与Harness SDK</td>
+<td>真实原生上下文加载和受控问答</td>
+<td>静态AGENTS.md不提供原生逐条ACL或即时撤权</td>
+</tr>
+<tr>
+<td>迁移和权限程序</td>
+<td>当前核权、来源校验、目标写入、撤权同步及恢复</td>
+<td>未证明任意后端、任意并发下的通用安全性</td>
+</tr>
+</tbody>
+</table>
+<p>85次历史API请求不包含后续原生客户端计数；两者使用不同口径。历史价格估算不是实时账单。Qoder报告的零用量/费用也不能当实际免费，原生账户费用仍未核对。本次收尾整理新增模型、原生实验和收费API调用均为0。</p>
+<h2 id="7">7. 本次冻结与论文结论</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>收尾裁决</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>研究原型、受控互通与实验记录</td>
+<td>本阶段交付并归档</td>
+</tr>
+<tr>
+<td>原120条敏感检测联合目标</td>
+<td>未通过</td>
+</tr>
+<tr>
+<td>新独立64题至少63题联合成功</td>
+<td>尚未执行</td>
+</tr>
+<tr>
+<td>两个原生客户端单值隐私链</td>
+<td>有限集成已验证，完整任务链未验收</td>
+</tr>
+<tr>
+<td>异构后端权限与稳定性</td>
+<td>单向有限API读取链通过；完整检索、逆向、并发及旧向量稳定性未完成</td>
+</tr>
+<tr>
+<td>自由摘要、多源派生的完整权限继承</td>
+<td>未完成通用方案</td>
+</tr>
+<tr>
+<td>全面语义隐私、任意业务工具与Agent互通</td>
+<td>未完成</td>
+</tr>
+<tr>
+<td>超过完整强基线的算法优势、论文创新</td>
+<td>未成立</td>
+</tr>
+<tr>
+<td>自动继续研究</td>
+<td>用户已要求暂停，保留待办</td>
+</tr>
+</tbody>
+</table>
+<p>当前可以向导师汇报一套有实际互通、原生API证据和负结果的研究原型；还不能作为“通用迁移成功率接近100%”“全面防泄漏”或“创新已确定”的成果。</p>
+<p>PAM/SAMEP已有迁移协议，AMSB已有多后端原生/辅助能力归因，Signed Projection Records已有来源与策略快照等直接近邻。因此统一格式、签名、写入标注、权限交集、普通缓存或增加一个模型不能单独认领首次。<a href="../%E6%9D%83%E9%99%90%E6%8A%95%E5%BD%B1%E6%B5%8B%E9%87%8F_%E5%AE%9A%E5%90%91%E8%BF%91%E9%82%BB%E8%A1%A5%E6%A0%B8_2026-10-26_v2.md">定向近邻核验</a></p>
+<p>保留当前默认行为；未证明收益的语义分类、问题模式和位置指针不切默认。历史失败、真值和分母不覆盖，旧本地结果保留。本次报告与渲染检查不重新标记已有1524项回归为一次新测试。</p>
+<h2 id="8">8. 交付与复查入口</h2>
+<ul>
+<li>本报告：项目定位、模块分工、流程、最新结果与未完成项。</li>
+<li><a href="project_closeout_20261026.html">离线图文HTML</a>：内嵌总流程图，可单文件下载阅读；外部证据链接仍需仓库或网络。</li>
+<li><a href="../../benchmarks/project_closeout_20261026_summary.json">最新收尾摘要</a>：主要结论与证据路径。</li>
+<li><a href="../../README.md">仓库README</a>：当前项目入口；<a href="../../benchmarks">benchmarks</a>与<a href="../%E8%AE%BA%E6%96%87%E7%9B%AE%E6%A0%87_%E4%B8%BB%E7%BA%BF%E9%AA%8C%E6%94%B6%E4%B8%8E%E7%AB%9E%E5%93%81%E6%A0%B8%E9%AA%8C_2026-10-25.md">验收裁决</a>保留细分证据。</li>
+</ul>
+<p>本机工作目录为<code>F:\项目\agent安全</code>。以下示例无需收费模型，输出目录须尚未存在；此处给出复查命令，不表示本次又运行了实验：</p>
+<pre><code class="language-powershell">python -B -X utf8 -m memory_migration_study demo --output results/my_closeout_demo
+python -B -X utf8 examples/privacy_roundtrip_demo.py
+python -B -X utf8 -m unittest discover -s tests -q
+
+# 从当前Markdown重新生成内嵌总流程图的阅读版
+python -B -X utf8 scripts/render_project_closeout.py --embed-flow --output results/my_closeout_report/index.html
+</code></pre>
+<p>真实模型、原生入口及完整测试中的资产/版本核对需要相应本地环境，不能用零模型示例替代。本次仅增加内嵌现有SVG的文档渲染选项并单独烟测，未改变授权、检测或迁移算法。普通日志已按既有清理规则处理；结构化研究记录继续保留在本机<code>results/</code>，不与账号、模型权重或数据库一起上传。仅克隆仓库时，本机逐条证据链接可能不可用，应先查看公开汇总及对应复现条件。</p>
+<h2 id="9">9. 暂停后的交接待办</h2>
+<p>以下均为保留事项，本阶段不自动执行：</p>
+<ol>
+<li>研究候选级保护性回退：不确定的原候选保留原敏感标记，避免整条阻断；与完整强基线比较。当前只有设计与事后分析，未新增实测，不把未知内容当公开。</li>
+<li>资格核对Cognee语义/图检索等剩余出口。必须先有owner可检出的原文阳性，再评价其他主体；空索引不能算防护成功。目前未执行新检索实验。</li>
+<li>仅在有新机制证据时复现原向量四次null，取得异常后再修复，保留原失败；不重复运行直至偶然全绿。</li>
+<li>冻结方法后建立真正未见过的检测材料及64道合法任务，保留所有失败、待审与阻断分母。</li>
+<li>将原生后端迁移、内容保护及真实Agent任务接入同一受控链，分开计直接安全、合法效用与成本。</li>
+<li>只有独立效果、稳定性及实质强基线差异成立后再组织论文主张；若没有差异，调整研究问题，不把组件组合包装为创新。</li>
+</ol>
+<p>本阶段完成的是工程与研究记录交付；持续研究目标已暂停，整体科研目标未宣告完成。</p></main>
+<footer class="provenance">本页由本地 Markdown 生成，不加载远程脚本、字体或模型。<br>
+源文档：<a href="../%E9%A1%B9%E7%9B%AE%E9%98%B6%E6%AE%B5%E6%94%B6%E5%B0%BE%E4%B8%8E%E4%BB%BB%E5%8A%A1%E6%B1%87%E6%8A%A5_2026-10-25.md">Agent 记忆安全迁移与权限保持研究原型：阶段收尾与任务汇报</a><br>源文档 SHA-256：e4ad6549644d86be4e989f218e53ae5973540872a48b7df10071b06c702384fc</footer>
+</div></body></html>

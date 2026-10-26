@@ -6,6 +6,7 @@ documented architectural illustration, not an experiment or a result chart.
 from __future__ import annotations
 
 import argparse
+import base64
 import hashlib
 import html
 from html.parser import HTMLParser
@@ -17,7 +18,7 @@ from urllib.parse import quote, unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_INPUT = ROOT / "docs" / "项目阶段收尾与任务汇报_2026-10-25.md"
-DEFAULT_OUTPUT = ROOT / "results" / "project_closeout_20261025" / "index.html"
+DEFAULT_OUTPUT = ROOT / "results" / "project_closeout_20261026" / "index.html"
 FLOW = ROOT / "docs" / "assets" / "project_closeout_flow_20261025.svg"
 
 
@@ -101,7 +102,7 @@ ul,ol{padding-left:1.65em}li{margin:5px 0}figure{margin:18px 0 24px;padding:18px
 """
 
 
-def render(source: Path, output: Path) -> dict:
+def render(source: Path, output: Path, *, embed_flow: bool = False) -> dict:
     try:
         import markdown
     except ImportError as error:
@@ -148,20 +149,27 @@ def render(source: Path, output: Path) -> dict:
 <footer class="provenance">本页由本地 Markdown 生成，不加载远程脚本、字体或模型。<br>
 源文档：<a href="{html.escape(source_url, quote=True)}">{html.escape(title)}</a><br>源文档 SHA-256：{digest}</footer>
 </div></body></html>'''
+    if embed_flow:
+        # Stable bytes across Windows/Linux checkout line-ending settings.
+        image = base64.b64encode(FLOW.read_text(encoding="utf-8").encode("utf-8")).decode("ascii")
+        original = 'src="' + html.escape(svg_url, quote=True) + '"'
+        replacement = 'src="data:image/svg+xml;base64,' + image + '"'
+        page = page.replace(original, replacement)
     output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(page, encoding="utf-8")
+    output.write_text(page, encoding="utf-8", newline="\n")
     return {"output": str(output), "source_sha256": digest, "mermaid_sources_preserved": mermaid_count,
-            "remote_assets": 0, "javascript": False}
+            "remote_assets": 0, "javascript": False, "flow_embedded": bool(embed_flow)}
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input", type=Path, default=DEFAULT_INPUT)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
+    parser.add_argument("--embed-flow", action="store_true", help="内嵌现有本地SVG，生成可单文件阅读的HTML。")
     args = parser.parse_args()
     import json
     try:
-        result = render(args.input, args.output)
+        result = render(args.input, args.output, embed_flow=args.embed_flow)
     except (OSError, UnicodeError, ValueError, RuntimeError) as error:
         parser.exit(1, f"无法生成本地收尾报告：{error}\n")
     print(json.dumps(result, ensure_ascii=False, indent=2))

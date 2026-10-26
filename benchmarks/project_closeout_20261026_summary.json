@@ -1,0 +1,186 @@
+{
+  "version": "project_stage_closeout_v2",
+  "date": "2026-10-26",
+  "project": "Agent 记忆安全迁移与权限保持研究原型",
+  "research_goal_status": "paused_by_explicit_user_request",
+  "overall_publication_goal_achieved": false,
+  "report": "docs/项目阶段收尾与任务汇报_2026-10-25.md",
+  "report_sha256": "e4ad6549644d86be4e989f218e53ae5973540872a48b7df10071b06c702384fc",
+  "flow_sha256": "4dbe59458722d9cb603fc3b64adbee5379fc2c8c65fbe817496552158a421471",
+  "evidence_code_base_commit": "a488a09c50b0c5fc7cbed8b20ced7215195e3700",
+  "offline_regression": {
+    "scope": "complete offline unittest discovery; not native/model effectiveness or novelty acceptance",
+    "tests_run": 1524,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 274.7,
+    "source_files": 318,
+    "source_unchanged": true,
+    "raw_console_log_saved": false,
+    "schema": "project-regression-nli-api-read-v1",
+    "report": "results/project_regression_20261026_nli_api_read/report.json",
+    "report_sha256": "2b1d2ec1b20df996a1548c5e91b91ddb92e93b533b2b9a73110143bb4a2f2953",
+    "model_effectiveness_or_novelty": false,
+    "executed_again_for_closeout": false
+  },
+  "native_client_handoff": {
+    "task_positions_matching": 4,
+    "process_attempts_in_registered_experiments": 8,
+    "scorable_answers": 4,
+    "additional_zero_forward_dry_run": 1,
+    "source": "benchmarks/native_agent_handoff_20261026_summary.json",
+    "native_per_read_acl_or_live_revocation": false
+  },
+  "native_private_handoff": {
+    "new_client_calls_in_that_experiment": 2,
+    "exact_token_and_restored_correct": 2,
+    "host_controls": 6,
+    "complete_cloud_request_inspected": false,
+    "account_cost_verified": false,
+    "source": "benchmarks/native_private_handoff_20261026_summary.json"
+  },
+  "native_source_api_handoff": {
+    "direction": "WebUI_to_Cognee",
+    "source_requests": 91,
+    "target_requests": 78,
+    "read_relations_checked": 48,
+    "enumeration_observations": 48,
+    "transport": "FastAPI TestClient ASGI in isolated local processes, not physical TCP roundtrips",
+    "complete_native_policy_exported": false,
+    "native_export_share_authority_verified": false,
+    "algorithm_advantage": false,
+    "source": "benchmarks/native_api_read_handoff_20261026_summary.json"
+  },
+  "nli_candidate_diagnostic": {
+    "runtime_counts": {
+      "blocked_forward_entries": 0,
+      "classifier_attempts": 390,
+      "classifier_forward_calls": 390,
+      "encoder_attempts": 390,
+      "encoder_forward_calls": 390,
+      "model_load_attempts": 1,
+      "model_loads": 1
+    },
+    "summary": {
+      "development": {
+        "nli_existing": {
+          "accepted": {
+            "fn": 14,
+            "fp": 1,
+            "precision": 0.9777777777777777,
+            "recall": 0.7586206896551724,
+            "tp": 44
+          },
+          "complete_exact": 66,
+          "materials": 80,
+          "ok": 67
+        },
+        "nli_full_pool": {
+          "accepted": {
+            "fn": 14,
+            "fp": 3,
+            "precision": 0.9361702127659575,
+            "recall": 0.7586206896551724,
+            "tp": 44
+          },
+          "complete_exact": 64,
+          "materials": 80,
+          "ok": 67
+        },
+        "standard_boundary": {
+          "accepted": {
+            "fn": 1,
+            "fp": 8,
+            "precision": 0.8769230769230769,
+            "recall": 0.9827586206896551,
+            "tp": 57
+          },
+          "complete_exact": 72,
+          "materials": 80,
+          "ok": 80
+        }
+      },
+      "heldout": {
+        "nli_existing": {
+          "accepted": {
+            "fn": 4,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 0.8,
+            "tp": 16
+          },
+          "complete_exact": 35,
+          "materials": 40,
+          "ok": 37
+        },
+        "nli_full_pool": {
+          "accepted": {
+            "fn": 4,
+            "fp": 4,
+            "precision": 0.8,
+            "recall": 0.8,
+            "tp": 16
+          },
+          "complete_exact": 31,
+          "materials": 40,
+          "ok": 35
+        },
+        "standard_boundary": {
+          "accepted": {
+            "fn": 2,
+            "fp": 2,
+            "precision": 0.9,
+            "recall": 0.9,
+            "tp": 18
+          },
+          "complete_exact": 36,
+          "materials": 40,
+          "ok": 40
+        }
+      }
+    },
+    "default_changed": false,
+    "independent_acceptance": false,
+    "source": "benchmarks/nli_candidate_detection_20261026_summary.json"
+  },
+  "acceptance_status": {
+    "detection_P90_R95": false,
+    "new_independent_64_tasks_run": false,
+    "new_independent_joint_63_of_64": false,
+    "original_four_vector_nulls_closed": false,
+    "full_search_bypass_qualification": false,
+    "generic_derived_memory_permission_inheritance": false,
+    "complete_native_and_model_task_chain": false,
+    "algorithm_advantage_over_complete_strong_baselines": false,
+    "paper_novelty_established": false
+  },
+  "closeout_new_model_calls": 0,
+  "closeout_new_native_experiment_calls": 0,
+  "closeout_new_paid_api_calls": 0,
+  "defaults_changed": false,
+  "unfinished_research_branches": {
+    "candidate_level_protective_fallback": "design only, no new run",
+    "cognee_semantic_search_qualification": "read-only investigation only, no new run"
+  },
+  "historic_closeout_preserved": "benchmarks/project_closeout_20261025_summary.json",
+  "limits": [
+    "Engineering checks are separate from effect or novelty acceptance.",
+    "Exposed materials are not new independent acceptance.",
+    "Native account charges remain unverified.",
+    "Paused research is not a completed publication goal."
+  ],
+  "documentation_verification": {
+    "receipt": "results/project_closeout_20261026/document_render_verification.json",
+    "receipt_sha256": "2f131500700ecaf5bce0294352d4742aa81083222b99789cbee94d55739d927f",
+    "renderer_sha256": "227727f6854a1dd1826611539ad8a5ff39b2aac96fab381e1468fea5cbf1b552",
+    "public_html": "docs/reports/project_closeout_20261026.html",
+    "public_html_sha256": "70987a119aad87c896655825b7e3a1d51d551124b7faa6d1e23da362018d1330",
+    "render_modes_checked": 3,
+    "flow_embedded_in_public_html": true,
+    "python_markdown_version": "3.4.1",
+    "counts_as_new_full_regression": false,
+    "historic_20261025_html_unchanged": true
+  },
+  "flow_hash_scope": "UTF-8 SVG with LF line endings, same as embedded bytes"
+}
