@@ -1,0 +1,104 @@
+{
+  "version": "mdeberta_nli_runtime_and_guard_diagnostic_summary_v1",
+  "date": "2026-10-26",
+  "model_id": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+  "revision": "8adb042d524ecd5c26d3e3ba0e3fbcf7e2d0864c",
+  "assets_verified": true,
+  "runtime_qualified": false,
+  "runtime_status": "error",
+  "public_smoke": {
+    "correct": 2,
+    "total": 3,
+    "rows": [
+      {
+        "correct": true,
+        "expected": "entailment",
+        "pair_id": "P1",
+        "predicted": "entailment"
+      },
+      {
+        "correct": true,
+        "expected": "contradiction",
+        "pair_id": "P2",
+        "predicted": "contradiction"
+      },
+      {
+        "correct": false,
+        "expected": "neutral",
+        "pair_id": "P3",
+        "predicted": "contradiction"
+      }
+    ],
+    "is_privacy_effectiveness": false
+  },
+  "qualification": {
+    "model_loads": 1,
+    "actual_top_classifier_forwards": 3,
+    "scope_denials": 25,
+    "network_denials": 0,
+    "default_changed": false
+  },
+  "diagnostic": {
+    "status": "diagnostic_finished_zero_forward",
+    "actual_top_classifier_forwards": 0,
+    "blocked_classifier_entries": 1,
+    "denied_open_count": 25,
+    "single_standard_library_archive_probe": "python312.zip",
+    "observed_stage": "imports",
+    "archive_exists_in_current_environment": false,
+    "loading_info": {
+      "additional_info_fields": [],
+      "error_msgs_count": 0,
+      "mismatched_keys": {
+        "count": 0,
+        "keys": []
+      },
+      "missing_keys": {
+        "count": 0,
+        "keys": []
+      },
+      "unexpected_keys": {
+        "count": 1,
+        "keys": [
+          "deberta.embeddings.position_ids"
+        ]
+      }
+    },
+    "runtime_qualified": false,
+    "scope": "Zero-forward separate replay. Original v1 did not record paths, so these paths do not retroactively authenticate each original event."
+  },
+  "model_forwards_total_new_experiments": 3,
+  "native_vendor_calls": 0,
+  "cloud_model_calls": 0,
+  "fresh64_read": false,
+  "privacy_precision": null,
+  "privacy_recall": null,
+  "paper_novelty_established": false,
+  "runtime_fix_applied": false,
+  "evidence": [
+    {
+      "path": "results/mdeberta_nli_runtime_20261026_v1/plan.json",
+      "sha256": "3a64c68ca0bd914796e8f211c86484330e8fea53adb11676240e94b3c177478a"
+    },
+    {
+      "path": "results/mdeberta_nli_runtime_20261026_v1/worker_predictions.json",
+      "sha256": "4480fe7c26f90d264b802945455b8dc648e26369995366c32d1609c113bf0963"
+    },
+    {
+      "path": "results/mdeberta_nli_runtime_20261026_v1/prediction_phase_closed.json",
+      "sha256": "6cb83e3f5d0ca8f58c4fb8d92a5c875da5e4e036b98314777e05d544dd8cf14e"
+    },
+    {
+      "path": "results/mdeberta_nli_runtime_20261026_v1/report.json",
+      "sha256": "1aab09927ff5571fba753388c993188e4b0c92d71f1dd4370ef6bd5ce74f7aae"
+    },
+    {
+      "path": "results/mdeberta_guard_io_diag_20261026_v1/diagnostic_plan.json",
+      "sha256": "664d287a04bc8a0ee39b0dbf32fd0b486d9d3c436bc08618e4403347e1ee0b62"
+    },
+    {
+      "path": "results/mdeberta_guard_io_diag_20261026_v1/child_home/guard_io_diagnostic.json",
+      "sha256": "db0f411bed48c1b5f0dbe9e7388d1af63b599045a05a4035489f7b75f18174c8"
+    }
+  ]
+}

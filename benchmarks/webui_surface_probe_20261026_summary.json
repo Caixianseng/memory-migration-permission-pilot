@@ -1,0 +1,164 @@
+{
+  "version": "webui_native_surface_public_summary_v1",
+  "date": "2026-10-26",
+  "target": "Open WebUI",
+  "target_version": "0.12.3",
+  "status": "completed_with_declared_surface_limits",
+  "execution_backend": "native_vendor_cli_child_process",
+  "run": "results/webui_projection_surface_20261026_v1",
+  "unit": {
+    "synthetic_stories": 1,
+    "exact_synthetic_facts": 2,
+    "new_independent_stories": 0,
+    "autonomous_llm_agents_run": 0
+  },
+  "protocol": {
+    "native_states": 2,
+    "ordinary_accounts_per_state": 5,
+    "bootstrap_admin_per_state": 1,
+    "http_cap_per_state": 200,
+    "original_surface_operations": [
+      "file_metadata",
+      "file_data_content",
+      "file_content_html",
+      "file_content_named",
+      "file_list",
+      "file_search",
+      "note_search"
+    ],
+    "added_variant": "note_search_read uses the official permission=read query parameter",
+    "surface_observations_per_arm": 145,
+    "surface_observations_total": 290,
+    "raw_read_relations_per_arm": 16,
+    "raw_read_relations_total": 32,
+    "http_by_arm": {
+      "native_projection": 192,
+      "gateway_storage": 187
+    },
+    "http_total": 379,
+    "native_acl_mutations_N": 5,
+    "native_acl_mutations_G": 0,
+    "G_scope": "Fresh owner-only native storage confinement only; the external gateway was not rerun.",
+    "G_source_read_allowed_objects_field_means": "Empty native direct-access set, not universal denial by the abstract source authorization policy.",
+    "abstract_source_authorizations_all_denied": false,
+    "read_control_stage": "Alice reader has readonly+managed read; Bob reader has independent managed read.",
+    "revocation_stage": "Controller explicitly revokes Alice readonly+managed read and preserves Bob independent managed read."
+  },
+  "results": {
+    "classification_counts": {
+      "qualified_owner_positive": 16,
+      "not_qualified_no_extracted_content": 4,
+      "unsupported_owner_not_admin": 4,
+      "qualified_native_view": 170,
+      "not_qualified_owner_interface_unavailable": 96
+    },
+    "eligible_observations": 186,
+    "ineligible_or_unsupported_observations": 104,
+    "qualified_safety_false": 0,
+    "unexpected_qualification_gaps": 0,
+    "read_search_pair": {
+      "phase": "current_read_grants",
+      "actor": "alice_reader",
+      "default_write_search": {
+        "http_status": 200,
+        "notes": 0
+      },
+      "explicit_read_search": {
+        "http_status": 200,
+        "notes": 2
+      },
+      "interpretation": "Official write versus read query filters; not a model refusal or vulnerability."
+    },
+    "after_alice_revocation_read_search": {
+      "alice_reader_notes": 0,
+      "bob_reader_managed_notes": 1
+    },
+    "N_raw_read_relationships": {
+      "current_read_grants": {
+        "allowed": 3,
+        "denied": 5
+      },
+      "alice_read_revoked": {
+        "allowed": 1,
+        "denied": 7
+      }
+    },
+    "G_raw_read_relationships": {
+      "current_read_grants": {
+        "allowed": 0,
+        "denied": 8
+      },
+      "alice_read_revoked": {
+        "allowed": 0,
+        "denied": 8
+      }
+    },
+    "file_list_and_file_search_scope": "Owned uploads only; shared Note read does not require enumeration in these routes.",
+    "owner_HTML": "unsupported_owner_not_admin",
+    "owner_data_content": "not_qualified_no_extracted_content",
+    "all_eight_surface_variants_qualified": false,
+    "all_seven_original_surfaces_privacy_proven": false,
+    "full_get_search_list_bypass_qualified": false,
+    "qualified_observations_by_surface": {
+      "file_content_named_read_or_denial": 52,
+      "file_metadata_id": 52,
+      "file_list_and_note_id": 82
+    },
+    "qualified_186_are_not_all_raw_value_privacy_trials": true
+  },
+  "instrumentation": {
+    "observed_generation_attempts": 0,
+    "observed_embedding_attempts": 0,
+    "network_guard_clear": true,
+    "all_http_caps_satisfied": true,
+    "postflight": "passed",
+    "nli_asset_download_included_as_model_effect": false,
+    "scope": "Observed Python inference entries and network guard, not hardware attestation."
+  },
+  "independent_verification": {
+    "status": "passed",
+    "checks": 3217,
+    "failed": 0,
+    "receipt": "results/webui_projection_surface_20261026_v1/independent_surface_audit_v2.json",
+    "receipt_sha256": "c9dabbbc2396f1b700a20a79b18993482bd50e2371469557d0d107c24826206f",
+    "new_native_calls": 0,
+    "new_model_calls": 0,
+    "auth_store_read": false,
+    "scorer_imported": false,
+    "verifier_sha256": "eb98f9fd0cec1504d4a85c401555e092c0ddd2effbac3e3aecd47eed95ac7516",
+    "previous_v1_retained": true,
+    "additional_v2_scope": [
+      "actual multipart upload metadata",
+      "actual Note attachment JSON",
+      "all native event/RPC membership"
+    ]
+  },
+  "artifact_sha256": {
+    "report.json": "3016883984fcc99d880ca009e93edebee5444ff9b4c4bce09c971756bbba524e",
+    "plan.json": "adbe2878718c8dcdbf7bb2a1cbf2c5986902a3f811e13a5746eadde15f077869",
+    "observations.json": "9512b22f57862cc19227c724a84a5088ee4b005fdefb86bb76eae7a26409a424",
+    "barriers.json": "231dc9a41c504d1c6626822b52d4010973f4bb2abfa04085f418b8a775b941ef",
+    "prediction_phase_closed.json": "8e6815e30032532d7f39596cf274cc3ddfcf4d6ea41f6b9cdfd8bcfba3d07ea9",
+    "native_summaries.json": "ef88a60c330f0ba69321296b7f646be49389d01bd8a3da5a22f4266f60445450",
+    "rpc_receipts.json": "c7e97fcc4148f2ce636549bf97393b0b2bf0187c284562da18eba2865f45f61d",
+    "independent_surface_audit_v1.json": "06431421da83303a3b3e0554fc5901666de5c0546dccbbbdaf77258a6f0018d7",
+    "independent_surface_audit_v2.json": "c9dabbbc2396f1b700a20a79b18993482bd50e2371469557d0d107c24826206f"
+  },
+  "boundaries": {
+    "paper_novelty_established": false,
+    "production_native_agent_iam_established": false,
+    "native_online_source_revocation_established": false,
+    "downstream_llm_question_answering_measured": false,
+    "full_get_search_list_coverage_established": false,
+    "native_auth_store_publishable": false,
+    "unmeasured": [
+      "HTML with an applicable positive control",
+      "extracted content with real text",
+      "other WebUI routes",
+      "other Cognee interfaces",
+      "semantic/vector search over a qualified index",
+      "concurrent revocation"
+    ]
+  },
+  "documentation": "docs/WebUI旁路实测_读取与搜索权限差异_2026-10-26.md"
+}

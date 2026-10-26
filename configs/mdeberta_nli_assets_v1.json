@@ -1,0 +1,23 @@
+{
+  "schema": "pinned_multilingual_nli_assets_v1",
+  "model_id": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+  "revision": "8adb042d524ecd5c26d3e3ba0e3fbcf7e2d0864c",
+  "license_as_declared_by_author": "mit",
+  "inference_qualified": false,
+  "task_effectiveness_measured": false,
+  "total_bytes_including_model_card": 578297612,
+  "files": [
+    {"name": "config.json", "size": 1066, "sha256": "4e4430c95100d613df80fa01276f231931e1b535557cf62fbb3cc50323e50cca"},
+    {"name": "tokenizer_config.json", "size": 1256, "sha256": "df9fd3a4482cc4a866788244824573fab8e74dadd1609d4f0e5997f9e96921dc"},
+    {"name": "special_tokens_map.json", "size": 286, "sha256": "9463f61e1b109a8eb4688b829260d7c6b1e6dff04c98ff7269bb89e2b92369b9"},
+    {"name": "added_tokens.json", "size": 23, "sha256": "fb697283833d25e2c711f1bc37730ecd8b20f4bd5f015db1d84aefe0adc9155a"},
+    {"name": "spm.model", "size": 4305025, "sha256": "13c8d666d62a7bc4ac8f040aab68e942c861f93303156cc28f5c7e885d86d6e3"},
+    {"name": "tokenizer.json", "size": 16331396, "sha256": "3aca3ce69a0a35aeb144a52c4f1d41c4246b8785f8f398315cc8fb6b24057810"},
+    {"name": "model.safetensors", "size": 557652046, "sha256": "65af59b1ff4450b09ecbf13ca35c840dbf038b26ff8e10e5ea89ca724828ed1e"},
+    {"name": "README.md", "size": 6514, "sha256": "c6cc8ca44d55e6ff3dd75672c8fcc41c22ca18b551aa52fb5d611d720a5f966b"}
+  ],
+  "declared_label2id": {"entailment": 0, "neutral": 1, "contradiction": 2},
+  "declared_max_positions": 512,
+  "planned_runtime": "Separate offline child, CPU float32, local_files_only, trust_remote_code=false. Runtime not yet qualified.",
+  "scope": "Public assets only. No model loading, forward, protected texts, gold labels, or native backend operations."
+}
