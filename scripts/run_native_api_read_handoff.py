@@ -91,7 +91,7 @@ def build_plan(*, approved=None):
         ROOT / "examples/native_cognee_probe_assets/scripts/cognee_local_migration_probe.py"]
     # Exact transitive project imports of WorkerRPC, not unrelated experiments.
     files += [ROOT / "memory_migration_study" / (n + ".py") for n in
-        ("__init__", "memory_labels", "privacy", "privacy_egress", "policy")]
+        ("__init__", "memory_labels", "principal_scope", "privacy", "privacy_egress", "policy")]
     wheel = ROOT / ".runtime/native_cognee_wheel/cognee-1.6.5-py3-none-any.whl"
     require(file_sha(wheel) == WHEEL_SHA256, "qualified_cognee_wheel_changed")
     assets = {str(wheel.resolve()): WHEEL_SHA256}

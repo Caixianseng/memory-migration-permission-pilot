@@ -41,6 +41,7 @@ from scripts.run_reference_memory_study import TypedCountingDetector, file_sha
 from scripts.run_span_answer_transfer import AnswerTransport, _construct, _tasks, _current_access, CONTROL_ID, CONTROL_QUERIES
 
 VERSION = "full_context_source_fact_reader_development_v1"
+DEPENDENCY_CONTRACT_VERSION = "source_card_dependencies_v2"
 ARMS = ("F", "Flat-ID", "Source-ID")
 SEED = 2026102604
 LIMITS = {"build": 16, "write_annotation": 128, "answer": 120}
@@ -68,6 +69,7 @@ REGISTERED_DEPENDENCIES = (
     "memory_migration_study/plan_verifier.py",
     "memory_migration_study/policy.py",
     "memory_migration_study/policy_semantics.py",
+    "memory_migration_study/principal_scope.py",
     "memory_migration_study/privacy.py",
     "memory_migration_study/privacy_corpus.py",
     "memory_migration_study/privacy_egress.py",
@@ -208,6 +210,7 @@ def protocol(corpus, config):
     audit_dependency_closure()
     hashes = {p.relative_to(ROOT).as_posix(): file_sha(p) for p in implementation_files()}
     plan = {"version": VERSION, "arms": list(ARMS), "source_stories": 8, "registered_tasks": 48,
+        "dependency_contract_version": DEPENDENCY_CONTRACT_VERSION,
         "expected_rows": 144, "legal_per_arm": 32, "missing_per_arm": 8, "outsider_per_arm": 8,
         "runtime_sha256": hashlib.sha256(raw).hexdigest(), "evaluation_sha256": hashlib.sha256(evaluation_bytes).hexdigest(),
         "config_sha256": _digest(config), "implementation_sha256": hashes, "ordering_seed": SEED,

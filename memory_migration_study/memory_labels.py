@@ -15,10 +15,13 @@ import re
 import secrets
 from typing import Callable
 
-from .privacy import (QUERY_SOURCE, _close_and_propagate,
+from .privacy import (QUERY_SOURCE, RestorationMap, _close_and_propagate,
                       _digest, _policy, _sources, detect_sensitive,
                       prepare_private_payload, restore_answer)
 from .privacy_egress import validate_outbound
+from .principal_scope import (EXACT_PRINCIPAL_SCOPE_VERSION, grant_allows_principal,
+                              normalize_principal, normalize_principal_pairs,
+                              principal_scope_version)
 
 LABEL_VERSION = "local_memory_labels_v1"
 SCHEMA = "local_labeled_memory_v1"
@@ -50,7 +53,12 @@ class MemoryLabelAuthority:
     Reload a persisted authority with BOTH the same protected key and its latest
     state. Restarting without state would discard revocations and is not safe.
     HMAC provides trust only inside this shared-key local prototype.
+    This default contract validates the supplied local snapshot. Its signature
+    does not independently prove that a restored snapshot is the latest state.
     """
+
+    verification_mode = "offline_snapshot"
+    contract_version = "offline_signed_snapshot_v1"
 
     def __init__(self, secret: bytes, *, state: dict | None = None):
         if not isinstance(secret, bytes) or len(secret) < 32:
@@ -109,8 +117,9 @@ class MemoryLabelAuthority:
         self._revoked_sources.add(source_id)
 
     def build_record(self, source: dict, fact: dict, policy: dict, *, owner_id: str,
-                     readers: list[str], agent_id: str, builder_version: str,
+                     readers: list[str] | None = None, agent_id: str, builder_version: str,
                      allowed_agent_ids: list[str] | None = None,
+                     allowed_principals: list[dict] | None = None,
                      detector_version: str | None = None) -> dict:
         """Sign an exact single-source extracted fact using trusted server ACLs.
 
@@ -119,6 +128,10 @@ class MemoryLabelAuthority:
         The access grant binds this exact content and source occurrence. Any
         later content/range change needs a new trusted authorization; a label
         rescan may repair sensitivity metadata, never the granted fact scope.
+        allowed_principals selects exact user/Agent pairs and is incompatible
+        with the old independent lists. The owner is not automatically added
+        to an exact pair scope. Old list-based grants keep their cartesian
+        meaning and byte-compatible fields for historical replay.
         """
         normalized = _policy(policy)
         if (not isinstance(source, dict) or not _identifier(source.get("source_id"))
@@ -127,10 +140,19 @@ class MemoryLabelAuthority:
         if (not _identifier(owner_id) or not _identifier(agent_id)
                 or not _version(builder_version) or not _version(detector_version or builder_version)):
             raise ValueError("invalid_trusted_metadata")
-        read_ids = sorted(set(_principals(readers)) | {owner_id})
-        agents = _principals(allowed_agent_ids if allowed_agent_ids is not None else [agent_id])
-        if not agents:
-            raise ValueError("empty_agent_scope")
+        if allowed_principals is not None:
+            if readers is not None or allowed_agent_ids is not None:
+                raise ValueError("mixed_principal_scope")
+            subject_scope = {"principal_scope": {"version": EXACT_PRINCIPAL_SCOPE_VERSION,
+                             "principals": normalize_principal_pairs(allowed_principals)}}
+            execution_scope = {}
+        else:
+            read_ids = sorted(set(_principals(readers)) | {owner_id})
+            agents = _principals(allowed_agent_ids if allowed_agent_ids is not None else [agent_id])
+            if not agents:
+                raise ValueError("empty_agent_scope")
+            subject_scope = {"readers": read_ids}
+            execution_scope = {"allowed_agent_ids": agents}
         if not isinstance(fact, dict) or fact.get("status", "ok") != "ok":
             raise ValueError("fact_requires_review")
         start, end, text = fact.get("source_start"), fact.get("source_end"), fact.get("text")
@@ -151,8 +173,8 @@ class MemoryLabelAuthority:
                          sorted({(f["start"], f["end"], f["category"]) for f in safe_findings})]
         record_id = "memory_" + secrets.token_hex(16)
         source_hash = _text_hash(source["text"])
-        grant = {"record_id": record_id, "owner_id": owner_id, "readers": read_ids,
-                 "origin_agent_id": agent_id, "allowed_agent_ids": agents,
+        grant = {"record_id": record_id, "owner_id": owner_id, **subject_scope,
+                 "origin_agent_id": agent_id, **execution_scope,
                  "source_id": source["source_id"], "source_sha256": source_hash, "epoch": self._epoch,
                  "scope_version": ACCESS_SCOPE_VERSION, "content_sha256": _text_hash(text),
                  "source_start": start, "source_end": end}
@@ -199,7 +221,7 @@ class MemoryLabelAuthority:
                 return "lifecycle_epoch_changed"
             if rid in self._revoked_records or grant["source_id"] in self._revoked_sources:
                 return "grant_revoked"
-            if actor_id not in grant["readers"] or agent_id not in grant["allowed_agent_ids"]:
+            if not grant_allows_principal(grant, user_id=actor_id, agent_id=agent_id):
                 return "principal_not_authorized"
             source = record["source"]
             if (source["source_id"] != grant["source_id"] or not isinstance(source["text"], str)
@@ -266,6 +288,25 @@ class MemoryLabelAuthority:
 def build_record(source, fact, policy, *, authority, **kwargs):
     """Convenience wrapper; only the trusted host supplies authority and ACLs."""
     return authority.build_record(source, fact, policy, **kwargs)
+
+
+def _exact_restoration_binding(prepared, records, normalized, *, actor_id, agent_id, request_id):
+    """Bind an exact-mode in-memory recovery capability to its executing Agent.
+
+    None of these fields grants access or serializes the map. The keyed
+    signature also covers its unique nonce digest, so swapping another map or
+    editing public metadata does not transfer a capability between Agents.
+    """
+    mapping = prepared["mapping"]
+    if not isinstance(mapping, RestorationMap):
+        raise ValueError("invalid_restoration_mapping_binding")
+    return {"version": "exact_principal_restoration_v1",
+            "principal": normalize_principal({"user_id": actor_id, "agent_id": agent_id}).to_dict(),
+            "request_id": request_id, "policy_sha256": _digest(normalized),
+            "record_access_sha256": _digest({record["record_id"]: record["access"] for record in records}),
+            "source_payload_sha256": mapping._source_payload_sha256,
+            "outbound_payload_sha256": _digest(prepared["payload"]),
+            "mapping_nonce_sha256": _text_hash(mapping._nonce)}
 
 
 def _blocked(code, *, checks=None, original_payload=None):
@@ -643,6 +684,12 @@ def prepare_labeled_transfer(records, query, policy, *, authority: MemoryLabelAu
             semantic_local_counts=copy.deepcopy(detection["semantic_local_counts"]),
             local_counts_complete=detection.get("local_counts_complete") is True,
             semantic_classification_is_not_authorization=True)
+    if prepared["status"] == "ok" and any(
+            principal_scope_version(record["access"]) == EXACT_PRINCIPAL_SCOPE_VERSION for record in records):
+        binding = _exact_restoration_binding(prepared, records, normalized,
+            actor_id=actor_id, agent_id=agent_id, request_id=request_id)
+        prepared["principal_binding"] = {"binding": binding,
+            "signature": authority._sign("exact_principal_restoration", binding)}
     return prepared
 
 
@@ -664,6 +711,17 @@ def restore_labeled_answer(answer, prepared, records, policy, *, authority, acto
         mapping = prepared.get("mapping")
         if getattr(mapping, "_memories", None) != memories:
             return block("restoration_records_changed")
+        if ("principal_binding" in prepared or any(
+                principal_scope_version(record["access"]) == EXACT_PRINCIPAL_SCOPE_VERSION for record in records)):
+            envelope = prepared.get("principal_binding")
+            if (not isinstance(envelope, dict) or set(envelope) != {"binding", "signature"}
+                    or not authority._valid_signature("exact_principal_restoration",
+                                                     envelope["binding"], envelope["signature"])):
+                return block("restoration_principal_binding_invalid")
+            expected = _exact_restoration_binding(prepared, records, normalized,
+                actor_id=actor_id, agent_id=agent_id, request_id=request_id)
+            if envelope["binding"] != expected:
+                return block("restoration_principal_binding_mismatch")
         for record in records:
             reason = authority.validate_access(record, actor_id=actor_id, agent_id=agent_id,
                                                 authorizer=authorizer, policy_version=normalized["version"])

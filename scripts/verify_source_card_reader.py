@@ -24,8 +24,67 @@ from unittest.mock import patch
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-VERSION = "independent_source_card_reader_verification_v1"
+VERSION = "independent_source_card_reader_verification_v2"
 STUDY_VERSION = "full_context_source_fact_reader_development_v1"
+LEGACY_DEPENDENCY_CONTRACT_VERSION = "source_card_dependencies_v1"
+# Fixed membership extracted from the reader at d6ec88d. Never infer an old
+# contract from current source or accept a manifest merely by its cardinality.
+LEGACY_REGISTERED_DEPENDENCIES = (
+    "memory_migration_study/__init__.py",
+    "memory_migration_study/amount_candidates.py",
+    "memory_migration_study/answer_evidence.py",
+    "memory_migration_study/answer_serialization.py",
+    "memory_migration_study/backend.py",
+    "memory_migration_study/boundary_detector.py",
+    "memory_migration_study/boundary_preparation.py",
+    "memory_migration_study/boundary_reconciliation.py",
+    "memory_migration_study/budget.py",
+    "memory_migration_study/candidate_adjudicator.py",
+    "memory_migration_study/candidate_proposals.py",
+    "memory_migration_study/coverage_memory.py",
+    "memory_migration_study/detection_cache.py",
+    "memory_migration_study/evidence.py",
+    "memory_migration_study/local_detector.py",
+    "memory_migration_study/memory_builder.py",
+    "memory_migration_study/memory_generation_experiment.py",
+    "memory_migration_study/memory_labels.py",
+    "memory_migration_study/ner_detector.py",
+    "memory_migration_study/plan_verifier.py",
+    "memory_migration_study/policy.py",
+    "memory_migration_study/policy_semantics.py",
+    "memory_migration_study/privacy.py",
+    "memory_migration_study/privacy_corpus.py",
+    "memory_migration_study/privacy_egress.py",
+    "memory_migration_study/privacy_payload_eval.py",
+    "memory_migration_study/query_intent.py",
+    "memory_migration_study/reference_memory.py",
+    "memory_migration_study/request_projection.py",
+    "memory_migration_study/reuse_benchmark.py",
+    "memory_migration_study/role_cover.py",
+    "memory_migration_study/role_query.py",
+    "memory_migration_study/semantic_memory_benchmark.py",
+    "memory_migration_study/semantic_refinement.py",
+    "memory_migration_study/source_card_reader.py",
+    "memory_migration_study/source_fact_cards.py",
+    "memory_migration_study/span_answer_evidence.py",
+    "memory_migration_study/span_answerer.py",
+    "memory_migration_study/span_completion.py",
+    "memory_migration_study/structured_candidates.py",
+    "memory_migration_study/tasks.py",
+    "memory_migration_study/union_detector.py",
+    "scripts/run_boundary_transfer_diagnostic.py",
+    "scripts/run_customer_schema_probe.py",
+    "scripts/run_generation_union_transfer.py",
+    "scripts/run_policy_semantic_study.py",
+    "scripts/run_query_schema_transfer.py",
+    "scripts/run_reference_memory_study.py",
+    "scripts/run_source_card_reader.py",
+    "scripts/run_span_answer_transfer.py",
+)
+DEPENDENCY_CONTRACTS = {
+    LEGACY_DEPENDENCY_CONTRACT_VERSION: frozenset(LEGACY_REGISTERED_DEPENDENCIES),
+    "source_card_dependencies_v2": frozenset(LEGACY_REGISTERED_DEPENDENCIES) | {"memory_migration_study/principal_scope.py"},
+}
 ARMS = ("F", "Flat-ID", "Source-ID")
 SEED = 2026102604
 LIMITS = {"build": 16, "write_annotation": 128, "answer": 120}
@@ -98,10 +157,69 @@ def _phase_order(source):
     return len(closes) == len(gold) == 1 and bool(scoring) and closes[0] < gold[0] < min(scoring)
 
 
+_MISSING = object()
+
+
+def _literal_declaration(tree, name, default=_MISSING):
+    values = []
+    for node in tree.body:
+        targets = node.targets if isinstance(node, ast.Assign) else [node.target] if isinstance(node, ast.AnnAssign) else []
+        if any(isinstance(target, ast.Name) and target.id == name for target in targets):
+            values.append(node.value)
+    if not values and default is not _MISSING:
+        return default
+    if len(values) != 1:
+        raise ValueError("dependency_source_declaration_invalid")
+    return ast.literal_eval(values[0])
+
+
 def _declaration(source):
-    tree = ast.parse(source)
-    return next(ast.literal_eval(node.value) for node in tree.body if isinstance(node, ast.Assign)
-        and any(isinstance(target, ast.Name) and target.id == "REGISTERED_DEPENDENCIES" for target in node.targets))
+    return _literal_declaration(ast.parse(source), "REGISTERED_DEPENDENCIES")
+
+
+def verify_dependency_contract(plan, *, source_root, archive_root):
+    """Read-only exact membership/hash verification; never execute saved code.
+
+    A missing version is the original 50-member v1 contract, independently on
+    the source and plan sides. A new source cannot claim v2 while using an old
+    plan (or the reverse). Historical bundles can use their archived source as
+    source_root; changed working files are never treated as matching history.
+    """
+    source_root, archive_root = Path(source_root).resolve(), Path(archive_root).resolve()
+    def data(root, name):
+        path = root / name
+        if path.is_symlink() or not path.is_file() or not path.resolve().is_relative_to(root):
+            raise ValueError("dependency_file_missing_or_linked")
+        return path.read_bytes()
+    source = data(archive_root, "scripts/run_source_card_reader.py").decode("utf-8-sig")
+    try:
+        tree = ast.parse(source)
+    except SyntaxError as error:
+        raise ValueError("dependency_source_syntax_invalid") from error
+    source_version = _literal_declaration(tree, "DEPENDENCY_CONTRACT_VERSION", LEGACY_DEPENDENCY_CONTRACT_VERSION)
+    plan_version = plan.get("dependency_contract_version", LEGACY_DEPENDENCY_CONTRACT_VERSION)
+    if not isinstance(source_version, str) or source_version not in DEPENDENCY_CONTRACTS:
+        raise ValueError("dependency_source_version_unknown")
+    if not isinstance(plan_version, str) or plan_version not in DEPENDENCY_CONTRACTS:
+        raise ValueError("dependency_plan_version_unknown")
+    if source_version != plan_version:
+        raise ValueError("dependency_contract_version_mismatch")
+    expected = DEPENDENCY_CONTRACTS[source_version]
+    declared = _literal_declaration(tree, "REGISTERED_DEPENDENCIES")
+    if (not isinstance(declared, (tuple, list)) or not all(isinstance(name, str) for name in declared)
+            or len(declared) != len(expected) or set(declared) != expected):
+        raise ValueError("dependency_source_membership_invalid")
+    hashes = plan.get("implementation_sha256")
+    if (not isinstance(hashes, dict) or set(hashes) != expected
+            or any(not isinstance(value, str) or re.fullmatch(r"[a-f0-9]{64}", value) is None for value in hashes.values())):
+        raise ValueError("dependency_manifest_invalid")
+    if {path.relative_to(archive_root).as_posix() for path in archive_root.rglob("*.py")} != expected:
+        raise ValueError("dependency_archive_membership_invalid")
+    for name, digest_value in hashes.items():
+        if sha(data(source_root, name)) != digest_value or sha(data(archive_root, name)) != digest_value:
+            raise ValueError("dependency_source_or_archive_hash_mismatch")
+    return {"version": source_version, "member_count": len(expected), "exact_known_membership": True,
+            "current_and_archive_hashes_checked": True, "saved_code_executed": False}
 
 
 def _record_copy(record, authority):
@@ -217,7 +335,7 @@ def verify(run, *, approved_plan=None, corpus=None, config_source=None, source_r
     approved_plan = Path(approved_plan) if approved_plan else ROOT / "results/source_card_reader_plan_20261026_v4/plan.json"
     corpus = Path(corpus) if corpus else ROOT / "examples/privacy_semantics_v1"
     config_source = Path(config_source) if config_source else ROOT / "configs/local_privacy_detector.json"
-    checks, phase = [], "saved_evidence"
+    checks, phase, dependency_contract = [], "saved_evidence", None
     def check(name, predicate):
         try:
             passed = bool(predicate() if callable(predicate) else predicate)
@@ -227,6 +345,7 @@ def verify(run, *, approved_plan=None, corpus=None, config_source=None, source_r
         return passed
     def finish(status=None, **extra):
         return {"version": VERSION, "status": status or ("passed" if all(item["passed"] for item in checks) else "failed"),
+            "dependency_contract": dependency_contract,
             "checks": checks, "phase": phase, "verification_model_calls": 0, "privacy_or_utility_acceptance": False,
             "original_HMAC_signatures_independently_verified": False, "original_python_mapping_identity_verified": False,
             "scope": "Saved-evidence consistency plus equivalent-map pure replay on exposed development data.",
@@ -256,13 +375,14 @@ def verify(run, *, approved_plan=None, corpus=None, config_source=None, source_r
             and sha((corpus / "development/evaluation.json").read_bytes()) == plan["evaluation_sha256"]
             and digest(config) == plan["config_sha256"] and same(config, read(config_source)))
         source = (run / "implementation/scripts/run_source_card_reader.py").read_text(encoding="utf-8")
-        declared = set(_declaration(source))
         hashes = plan["implementation_sha256"]
-        source_ok = check("all_50_current_and_archived_frozen_dependencies", lambda:
-            len(declared) == 50 and declared == set(hashes)
-            and {path.relative_to(run / "implementation").as_posix() for path in (run / "implementation").rglob("*.py")} == declared
-            and all(not Path(name).is_absolute() and ".." not in Path(name).parts
-                and sha((source_root / name).read_bytes()) == expected == sha((run / "implementation" / name).read_bytes()) for name, expected in hashes.items()))
+        def contract_check():
+            nonlocal dependency_contract
+            dependency_contract = verify_dependency_contract(plan, source_root=source_root, archive_root=run / "implementation")
+            return True
+        source_ok = check("known_version_exact_current_and_archived_frozen_dependencies", contract_check)
+        if not source_ok:
+            return finish(execution_complete=False, note="Dependency contract invalid; no mechanism replay accepted.")
         check("AST_gold_parse_and_scoring_follow_observer_close", lambda: _phase_order(source))
         rows, contexts, stores, builds, annotations, pools, source_sets, query_events, journal, report, identities, network = [read(run / name) for name in (
             "rows.json", "shared_contexts.json", "record_store.json", "builds.json", "annotations.json", "pools.json", "source_card_sets.json",
