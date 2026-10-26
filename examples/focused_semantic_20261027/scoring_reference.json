@@ -1,0 +1,17 @@
+{
+  "version": "focused_semantic_scoring_reference_20261027_v1",
+  "rows": [
+    {"story_id": "dev_zh_roles", "question_id": "Q1", "expected_id": "F2", "kind": "legal"},
+    {"story_id": "dev_zh_roles", "question_id": "Q2", "expected_id": "F3", "kind": "legal"},
+    {"story_id": "dev_zh_roles", "question_id": "Q3", "expected_id": "UNKNOWN", "kind": "missing"},
+    {"story_id": "dev_en_time", "question_id": "Q1", "expected_id": "F1", "kind": "legal"},
+    {"story_id": "dev_en_time", "question_id": "Q2", "expected_id": "F4", "kind": "legal"},
+    {"story_id": "dev_en_time", "question_id": "Q3", "expected_id": "UNKNOWN", "kind": "missing"},
+    {"story_id": "dev_zh_negation", "question_id": "Q1", "expected_id": "F2", "kind": "legal"},
+    {"story_id": "dev_zh_negation", "question_id": "Q2", "expected_id": "F4", "kind": "legal"},
+    {"story_id": "dev_zh_negation", "question_id": "Q3", "expected_id": "UNKNOWN", "kind": "missing"},
+    {"story_id": "dev_en_paraphrase", "question_id": "Q1", "expected_id": "F1", "kind": "legal"},
+    {"story_id": "dev_en_paraphrase", "question_id": "Q2", "expected_id": "F3", "kind": "legal"},
+    {"story_id": "dev_en_paraphrase", "question_id": "Q3", "expected_id": "UNKNOWN", "kind": "missing"}
+  ]
+}

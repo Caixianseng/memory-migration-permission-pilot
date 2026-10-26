@@ -1,0 +1,93 @@
+{
+  "version": "focused_semantic_development_20261027_v1",
+  "stories": [
+    {
+      "id": "dev_zh_roles",
+      "language": "zh",
+      "source_backend": "webui",
+      "target_backend": "cognee",
+      "objects": [
+        {"key": "readonly", "text": "雾岚计划的客户是栖蓝社。\n雾岚计划的承运方是岚舟社。"},
+        {"key": "managed", "text": "溪桥计划的客户是岚舟社。\n溪桥计划的承运方是栖蓝社。"}
+      ],
+      "facts": [
+        {"id": "F1", "object_key": "readonly", "line_index": 0, "value": "栖蓝社"},
+        {"id": "F2", "object_key": "readonly", "line_index": 1, "value": "岚舟社"},
+        {"id": "F3", "object_key": "managed", "line_index": 0, "value": "岚舟社"},
+        {"id": "F4", "object_key": "managed", "line_index": 1, "value": "栖蓝社"}
+      ],
+      "questions": [
+        {"id": "Q1", "text": "雾岚计划由哪家组织负责承运？"},
+        {"id": "Q2", "text": "溪桥计划是为哪家客户开展的？"},
+        {"id": "Q3", "text": "雾岚计划的审计机构是哪家？"}
+      ],
+      "sensitive_values": ["雾岚计划", "溪桥计划", "栖蓝社", "岚舟社"]
+    },
+    {
+      "id": "dev_en_time",
+      "language": "en",
+      "source_backend": "webui",
+      "target_backend": "cognee",
+      "objects": [
+        {"key": "readonly", "text": "In 2024, Mira Dalen was the support lead for Alder Reach.\nSince January 2026, Kellan Voss has been the current support lead for Alder Reach."},
+        {"key": "managed", "text": "In 2024, Kellan Voss was the support lead for Cedar Quay.\nSince January 2026, Mira Dalen has been the current support lead for Cedar Quay."}
+      ],
+      "facts": [
+        {"id": "F1", "object_key": "readonly", "line_index": 0, "value": "Mira Dalen"},
+        {"id": "F2", "object_key": "readonly", "line_index": 1, "value": "Kellan Voss"},
+        {"id": "F3", "object_key": "managed", "line_index": 0, "value": "Kellan Voss"},
+        {"id": "F4", "object_key": "managed", "line_index": 1, "value": "Mira Dalen"}
+      ],
+      "questions": [
+        {"id": "Q1", "text": "Who held the support lead role for Alder Reach in 2024?"},
+        {"id": "Q2", "text": "Who is the current support lead for Cedar Quay?"},
+        {"id": "Q3", "text": "Who is the finance lead for Alder Reach?"}
+      ],
+      "sensitive_values": ["Mira Dalen", "Kellan Voss", "Alder Reach", "Cedar Quay"]
+    },
+    {
+      "id": "dev_zh_negation",
+      "language": "zh",
+      "source_backend": "cognee",
+      "target_backend": "webui",
+      "objects": [
+        {"key": "readonly", "text": "松汐项目的签约供应商不是青棠社。\n松汐项目的签约供应商是禾帆社。"},
+        {"key": "managed", "text": "竹湾项目的签约供应商不是禾帆社。\n竹湾项目的签约供应商是青棠社。"}
+      ],
+      "facts": [
+        {"id": "F1", "object_key": "readonly", "line_index": 0, "value": "青棠社"},
+        {"id": "F2", "object_key": "readonly", "line_index": 1, "value": "禾帆社"},
+        {"id": "F3", "object_key": "managed", "line_index": 0, "value": "禾帆社"},
+        {"id": "F4", "object_key": "managed", "line_index": 1, "value": "青棠社"}
+      ],
+      "questions": [
+        {"id": "Q1", "text": "松汐项目实际与哪家供应商签约？"},
+        {"id": "Q2", "text": "竹湾项目的签约供应商是哪家？"},
+        {"id": "Q3", "text": "竹湾项目的监理机构是哪家？"}
+      ],
+      "sensitive_values": ["松汐项目", "竹湾项目", "青棠社", "禾帆社"]
+    },
+    {
+      "id": "dev_en_paraphrase",
+      "language": "en",
+      "source_backend": "cognee",
+      "target_backend": "webui",
+      "objects": [
+        {"key": "readonly", "text": "Orin Bell owns final approval for Juniper Field.\nSela Venn is the backup approver for Juniper Field."},
+        {"key": "managed", "text": "Sela Venn is the main point of contact for Maple Haven.\nOrin Bell covers that contact role for Maple Haven only when the main contact is absent."}
+      ],
+      "facts": [
+        {"id": "F1", "object_key": "readonly", "line_index": 0, "value": "Orin Bell"},
+        {"id": "F2", "object_key": "readonly", "line_index": 1, "value": "Sela Venn"},
+        {"id": "F3", "object_key": "managed", "line_index": 0, "value": "Sela Venn"},
+        {"id": "F4", "object_key": "managed", "line_index": 1, "value": "Orin Bell"}
+      ],
+      "questions": [
+        {"id": "Q1", "text": "Who has the final say when Juniper Field needs sign-off?"},
+        {"id": "Q2", "text": "Whom should someone normally approach first about Maple Haven?"},
+        {"id": "Q3", "text": "Who manages the budget for Juniper Field?"}
+      ],
+      "sensitive_values": ["Orin Bell", "Sela Venn", "Juniper Field", "Maple Haven"]
+    }
+  ]
+}
