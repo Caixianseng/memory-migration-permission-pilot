@@ -17,6 +17,8 @@ from scripts import run_native_exact_fact_bridge as bridge
 from scripts.native_exact_fact_common import NetworkGuard
 from scripts.native_exact_fact_source import MutableResearchACL, TrustedMigrationControl
 from scripts.native_exact_fact_target import MODEL_DISCOVERY_OFF, configure_native_application
+from tests.fixtures import legacy_acl_contract
+from tests.fixtures.native_archive_layout import archive_only_legacy, archive_only_webui_python
 
 
 class FakeSource:
@@ -437,26 +439,19 @@ class NativeExactFactTests(unittest.TestCase):
         self.assertNotIn("after_cleanup", before_cleanup["snapshots"])
 
     def test_acl_updates_use_existing_frozen_record_acl_contract(self):
-        import importlib.util
-        import sys
-        from pathlib import Path
-        scripts = Path(__file__).resolve().parents[1]/"memory_migration_permission_149tests_20261021/memory_migration_permission_pilot/scripts"
-        original = list(sys.path)
-        try:
-            sys.path.insert(0, str(scripts))
-            spec = importlib.util.spec_from_file_location("native_test_gateway", scripts/"qualify_migration.py")
-            module = importlib.util.module_from_spec(spec)
-            sys.modules[spec.name] = module
-            spec.loader.exec_module(module)
-            principal = module.Principal("owner", "storage", "", "")
-            acl = MutableResearchACL(module.RecordACL, {"main": ["owner"], "control": ["owner"]}, ["owner"])
-            self.assertTrue(acl.allows(principal, "main"))
-            acl.revoke("main")
-            self.assertFalse(acl.allows(principal, "main"))
-            self.assertTrue(acl.allows(principal, "control"))
-        finally:
-            sys.path[:] = original
-            sys.modules.pop("native_test_gateway", None)
+        fixture_path = Path(legacy_acl_contract.__file__)
+        metadata = json.loads(fixture_path.with_suffix(".provenance.json").read_text(encoding="utf-8"))
+        excerpt = fixture_path.read_text(encoding="utf-8").split("# BEGIN FROZEN ACL EXCERPT\n", 1)[1]
+        excerpt = excerpt.split("# END FROZEN ACL EXCERPT\n", 1)[0]
+        self.assertEqual(hashlib.sha256(excerpt.encode("utf-8")).hexdigest(), metadata["excerpt_sha256"])
+        self.assertEqual(metadata["source_sha256"], "280b4d5697e484912b667b5077b931a882895161063c9567123537e736046803")
+        principal = legacy_acl_contract.Principal("owner", "storage", "", "")
+        acl = MutableResearchACL(legacy_acl_contract.RecordACL,
+                                 {"main": ["owner"], "control": ["owner"]}, ["owner"])
+        self.assertTrue(acl.allows(principal, "main"))
+        acl.revoke("main")
+        self.assertFalse(acl.allows(principal, "main"))
+        self.assertTrue(acl.allows(principal, "control"))
 
     def test_project_relative_archive_keeps_exact_eight_sources_after_later_edits(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -546,8 +541,11 @@ class NativeExactFactTests(unittest.TestCase):
                 self.assertEqual(bridge.verify_sdk_inventory(root)["status"], "failed")
 
     def test_bad_sdk_inventory_prevents_either_native_worker_from_starting(self):
-        with tempfile.TemporaryDirectory() as directory:
-            root = Path(directory)
+        (bridge.PROJECT / "results").mkdir(exist_ok=True)
+        with tempfile.TemporaryDirectory(dir=bridge.PROJECT / "results", prefix="bridge_inventory_fake_") as directory:
+            root = Path(directory).resolve()
+            legacy = archive_only_legacy(root / "legacy")
+            python = archive_only_webui_python(root / "webui_runtime")
             sdk = root/"sdk"
             target, _ = self.sdk_fixture(sdk)
             (target/"mem0/native.pyd").write_bytes(b"modified")
@@ -556,8 +554,7 @@ class NativeExactFactTests(unittest.TestCase):
             def avoid_reading_real_weights(path):
                 return "0"*64 if Path(path).suffix == ".safetensors" else original_hash(path)
             with patch.object(bridge, "file_sha256", side_effect=avoid_reading_real_weights), patch.object(bridge, "WorkerRPC") as workers:
-                result = bridge.run(root/"out", python=bridge.PROJECT/".venv-native-webui/Scripts/python.exe", sdk_root=sdk,
-                    legacy_project=bridge.PROJECT/"memory_migration_permission_149tests_20261021/memory_migration_permission_pilot")
+                result = bridge.run(root/"out", python=python, sdk_root=sdk, legacy_project=legacy)
             workers.assert_not_called()
             self.assertEqual(result["status"], "failed")
             self.assertEqual(result["sdk_inventory_preflight"]["status"], "failed")

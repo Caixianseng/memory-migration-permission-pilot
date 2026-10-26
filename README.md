@@ -27,7 +27,8 @@
 
 | 内容 | 当前证据 | 主要边界 |
 |---|---|---|
-| 工程回归 | 最新既有完整离线运行1524项通过，0失败/错误/跳过 | 274.7秒、318份受检源码快照；不代表模型或论文验收，本次文档整理未重复该运行 |
+| 本机完整材料回归 | 既有完整离线运行1524项通过，0失败/错误/跳过 | 274.7秒、318份受检源码快照；不代表模型或论文验收，保留原运行记录 |
+| 仓库干净环境回归 | 本轮新环境发现1524项，1510通过、14项可选检查跳过，0失败/错误 | 仅安装测试依赖，无旧工程、历史结果或模型；[说明与复查](docs/CI自动测试说明_2026-10-26.md) |
 | Qoder↔Harness | 统一JSON交接格式、各端适配器、原生AGENTS.md，双向4个任务位置符合 | 外部主机迁入核权；没有原生逐次ACL或即时撤权 |
 | 双客户端隐私集成 | 另行2次单值问答，2/2代号与本地恢复正确、6项主机控制通过 | 已知合成词表；完整云端请求、真实多租户及通用任务未验收 |
 | 原生API迁移 | WebUI实际原文和Note read ACL→Cognee，169次原生ASGI请求、48条读取关系符合 | 同机隔离应用、正确N单臂、1故事2事实；不是跨机网络或完整政策迁移 |
@@ -57,6 +58,15 @@ cd memory-migration-permission-pilot
 python -B -X utf8 -m memory_migration_study demo --output results/my_demo
 python -B -X utf8 examples/privacy_roundtrip_demo.py
 ```
+
+GitHub自动测试在Ubuntu和Windows的Python 3.12上执行。复查仓库自带的离线测试，先安装固定测试依赖；无需下载模型或设置API密钥：
+
+```powershell
+python -m pip install -r requirements-dev.txt
+python -B -X utf8 -m unittest discover -s tests -v
+```
+
+本机旧工程、原始公开数据及固定官方wheel的14项可选检查，在未提供对应文件时明确显示为`skipped`，不计为通过。测试环境和此前连续红叉的原因见[CI自动测试说明](docs/CI自动测试说明_2026-10-26.md)。
 
 完整测试和原生/模型入口含本机资产及版本核对，不能把仅克隆仓库视为全部依赖已就绪。文档阅读版需要现有Python-Markdown，脚本不会自动安装或联网：
 

@@ -14,7 +14,9 @@ class AssetDownloadTest(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
-        self.root = Path(self.tmp.name)
+        # Windows runners may expose TEMP using its 8.3 spelling. The fixture
+        # must use the real canonical root, just as the production asset root.
+        self.root = Path(self.tmp.name).resolve()
         self.patcher = patch.object(assets, "ASSETS", self.root)
         self.patcher.start(); self.addCleanup(self.patcher.stop)
 

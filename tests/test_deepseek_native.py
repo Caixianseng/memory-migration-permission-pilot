@@ -329,7 +329,9 @@ class SDKContractTests(unittest.TestCase):
                 return {}
         process = Process()
         with tempfile.TemporaryDirectory() as tmp:
-            guard_receipt = Path(tmp) / 'counts.json'
+            # Keep the strict production no-link check; canonicalize the fake
+            # Windows TEMP root (which can be supplied as RUNNER~1 by CI).
+            guard_receipt = Path(tmp).resolve() / 'counts.json'
             guard_receipt.write_text(json.dumps({'agent_attempt_count': 0,
                 'stream_attempt_count': 0, 'allowed_stream_count': 0, 'requests': [],
                 'reject_code': None, 'shape': None, 'dry_run': False}))

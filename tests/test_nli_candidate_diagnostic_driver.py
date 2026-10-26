@@ -2,6 +2,7 @@
 import importlib.util
 import json
 from pathlib import Path
+import sys
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -13,6 +14,9 @@ spec.loader.exec_module(driver)
 
 
 class NLICandidateDriverTests(unittest.TestCase):
+    def setUp(self):
+        (ROOT / "results").mkdir(exist_ok=True)
+
     def test_runtime_inputs_reject_even_unused_answer_metadata(self):
         rows = [{"case_id": str(i), "payload": {}, "policy": {}, "pool": {}} for i in range(120)]
         driver.validate_inputs(rows)
@@ -45,10 +49,18 @@ class NLICandidateDriverTests(unittest.TestCase):
 
     def test_inherited_guard_denies_gold_and_reference_archive(self):
         q = driver.qualifier()
-        q.build_plan(ROOT / "results/nli_guard_fake_unused")
         with tempfile.TemporaryDirectory(dir=ROOT / "results", prefix="nli_driver_fake_") as folder:
             out = Path(folder)
-            guard = q.WorkerGuard(q.load_common(), out / "worker_job.json", out)
+            # This is a file-scope unit test, not a model/runtime qualification.
+            # Build the real inherited guard state with a fixed test-only
+            # interpreter identity; no model assets or interpreter probe needed.
+            guard = object.__new__(q.WorkerGuard)
+            base = next(cls for cls in q.WorkerGuard.__mro__ if cls.__name__ == "WorkerGuard")
+            base.__init__(guard, q.load_common(), out / "worker_job.json", out)
+            guard.zip = (Path(sys.base_prefix) / "test_only_stdlib.zip").resolve()
+            guard.probes = []
+            guard("open", (str(out / "worker_job.json"), "rb", 0))
+            self.assertEqual(guard.accounting()["blocked_attempts"], 0)
             for target in (out.parent / "heldout/evaluation.json", ROOT / "benchmarks/artifacts/context_candidate_detection_20261026_v2.zip"):
                 with self.subTest(target=target), self.assertRaises(PermissionError):
                     guard("open", (str(target), "rb", 0))

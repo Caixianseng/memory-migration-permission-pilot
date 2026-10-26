@@ -12,6 +12,8 @@ from scripts import export_candidate_classifier_artifact as module
 class CandidateClassifierArtifactTests(unittest.TestCase):
     @contextmanager
     def workspace(self):
+        # A clean checkout has no ignored results directory yet.
+        (module.ROOT / "results").mkdir(exist_ok=True)
         with tempfile.TemporaryDirectory(prefix="candidate_export_fake_", dir=module.ROOT / "results") as directory:
             path = Path(directory).resolve()
             self.assertTrue(path.is_relative_to((module.ROOT / "results").resolve()))

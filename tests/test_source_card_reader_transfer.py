@@ -89,7 +89,7 @@ def run_fixture(root, *, annotation_failure=False, revoke=False):
 class DriverTests(unittest.TestCase):
     def test_explicit_dependency_closure_allows_unrelated_parallel_modules(self):
         with tempfile.TemporaryDirectory() as root:
-            clone = Path(root)
+            clone = Path(root).resolve()
             for name in harness.REGISTERED_DEPENDENCIES:
                 target = clone/name; target.parent.mkdir(parents=True, exist_ok=True)
                 target.write_bytes((harness.ROOT/name).read_bytes())

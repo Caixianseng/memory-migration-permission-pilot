@@ -92,15 +92,23 @@ class PrivateHandoffDriverTests(unittest.TestCase):
     def test_approved_plan_does_not_allow_extra_client_or_workspace_escape(self):
         for change in ("budget", "workspace"):
             with self.subTest(change=change):
-                out = self.base / ("plan_" + change)
-                plan = driver.plan_only(out)
-                if change == "budget":
-                    plan["max_native_client_attempts"] = 3
-                else:
-                    plan["cases"][0]["workspace"] = "../other-workspace"
-                (out / "plan.json").write_bytes(driver.encoded(plan))
-                with self.assertRaisesRegex(ValueError, "plan_budget_invalid|fixture_contract_changed"):
-                    driver.approved(out / "plan.json")
+                # Exercise real snapshot/hash approval against test-only files,
+                # without requiring private capability probes from a prior run.
+                project = (self.base / ("project_" + change)).resolve()
+                (project / "results").mkdir(parents=True)
+                source = project / "test_only_source.txt"
+                source.write_text("synthetic driver manifest fixture\n", encoding="utf-8")
+                out = project / "results" / "plan"
+                with patch.object(driver, "ROOT", project), patch.object(driver, "SOURCES", (source.name,)):
+                    plan = driver.plan_only(out)
+                    self.assertEqual(driver.approved(out / "plan.json"), plan)
+                    if change == "budget":
+                        plan["max_native_client_attempts"] = 3
+                    else:
+                        plan["cases"][0]["workspace"] = "../other-workspace"
+                    (out / "plan.json").write_bytes(driver.encoded(plan))
+                    with self.assertRaisesRegex(ValueError, "plan_budget_invalid|fixture_contract_changed"):
+                        driver.approved(out / "plan.json")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,23 @@
+{
+  "schema": "legacy_research_acl_contract_fixture_v1",
+  "source_path": "memory_migration_permission_149tests_20261021/memory_migration_permission_pilot/scripts/qualify_migration.py",
+  "source_sha256": "280b4d5697e484912b667b5077b931a882895161063c9567123537e736046803",
+  "source_bytes": 25344,
+  "class_locations": [
+    {
+      "name": "Principal",
+      "start_line": 94,
+      "end_line": 99,
+      "original_segment_sha256": "09177e2e48d2f49868214ca8842d783f52ca1c8abe69c456ccac9b3c3b650fc1"
+    },
+    {
+      "name": "RecordACL",
+      "start_line": 117,
+      "end_line": 138,
+      "original_segment_sha256": "47ed2b6fc0eff26f99b573240e387b758141e9c6bf844ba3b5c8e2ca73288b96"
+    }
+  ],
+  "excerpt_sha256": "42d09c25d05705bc7fdc8e688986a9b81035b89d33311738719f620ebcf6727c",
+  "excerpt_hash_scope": "UTF-8 exact class definitions including decorators, line endings normalized to LF; two blank lines between definitions",
+  "scope": "Frozen controlled research-application ACL, not native Mem0 ACL; no network, SDK, model, credentials or backend implementation copied."
+}

@@ -9,6 +9,7 @@ from unittest.mock import patch
 
 from scripts import native_vector_trace_only_worker as worker
 from scripts import run_native_vector_trace_only as launcher
+from tests.fixtures.native_archive_layout import archive_only_legacy
 
 
 class FakeBackend:
@@ -88,7 +89,9 @@ class NativeVectorTraceOnlyContracts(unittest.TestCase):
 
     def test_launcher_plan_and_extra_archive_precede_scoped_target_only_spawn(self):
         with tempfile.TemporaryDirectory() as directory:
-            output = Path(directory)/"new-run"
+            root = Path(directory).resolve()
+            output = root/"new-run"
+            legacy = archive_only_legacy(root / "legacy")
             constructed = []
             def fake_factory(python, script, args, *, timeout=300):
                 plan = json.loads((output/"trace_plan.json").read_text(encoding="utf-8"))
@@ -113,7 +116,7 @@ class NativeVectorTraceOnlyContracts(unittest.TestCase):
             with (patch.object(launcher.bridge, "WorkerRPC", side_effect=fake_factory) as original,
                     patch.object(launcher.bridge, "run", side_effect=fake_run)):
                 result = launcher.run(output, python=Path("fake-python"), sdk_root=Path("fake-sdk"),
-                    legacy_project=launcher.PROJECT/"memory_migration_permission_149tests_20261021/memory_migration_permission_pilot")
+                    legacy_project=legacy)
                 self.assertIs(launcher.bridge.WorkerRPC, original)
             self.assertEqual(Path(constructed[0][0]).name, "native_exact_fact_source.py")
             self.assertEqual(Path(constructed[1][0]).name, "native_vector_trace_only_worker.py")

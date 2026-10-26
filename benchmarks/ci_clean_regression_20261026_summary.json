@@ -1,0 +1,109 @@
+{
+  "scope": "clean repository files plus test-only frozen fixtures, fresh venv, full unittest discovery",
+  "tests_run": 1524,
+  "passed": 1510,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 14,
+  "skips": [
+    {
+      "test": "test_native_cognee_policy_worker.CogneePolicyWorkerTests.test_fixed_official_allow_root_functions_accept_inside_and_reject_outside",
+      "reason": "Optional fixed official wheel not downloaded; no network/download in tests"
+    },
+    {
+      "test": "test_study_legacy.SuppliedLegacyModuleTests.test_real_module_detects_ablation_extra_grant",
+      "reason": "optional user-supplied 149-test project is absent"
+    },
+    {
+      "test": "test_study_legacy.SuppliedLegacyModuleTests.test_real_module_multicopy_deny_and_reject_all",
+      "reason": "optional user-supplied 149-test project is absent"
+    },
+    {
+      "test": "test_study_public_fixture.PublicFixtureTests.test_all_source_artifact_hashes_are_checked",
+      "reason": "optional user-supplied public source execution is absent"
+    },
+    {
+      "test": "test_study_public_fixture.PublicFixtureTests.test_changed_original_rejected_even_with_updated_artifact_and_text_hash",
+      "reason": "optional user-supplied public source execution is absent"
+    },
+    {
+      "test": "test_study_public_fixture.PublicFixtureTests.test_changed_text_hash_and_marker_are_rejected",
+      "reason": "optional user-supplied public source execution is absent"
+    },
+    {
+      "test": "test_study_public_fixture.PublicFixtureTests.test_denied_source_response_content_is_rejected",
+      "reason": "optional user-supplied public source execution is absent"
+    },
+    {
+      "test": "test_study_public_fixture.PublicFixtureTests.test_denied_source_response_json_key_content_is_rejected",
+      "reason": "optional user-supplied public source execution is absent"
+    },
+    {
+      "test": "test_study_public_fixture.PublicFixtureTests.test_exact_episode_source_content_actors_and_seven_tasks",
+      "reason": "optional user-supplied public source execution is absent"
+    },
+    {
+      "test": "test_study_public_fixture.PublicFixtureTests.test_fact_offsets_hashes_and_output_manifest_are_mechanically_reproducible",
+      "reason": "optional user-supplied public source execution is absent"
+    },
+    {
+      "test": "test_study_public_fixture.PublicFixtureTests.test_future_turns_and_hidden_labels_do_not_enter_runtime",
+      "reason": "optional user-supplied public source execution is absent"
+    },
+    {
+      "test": "test_study_public_fixture.PublicFixtureTests.test_output_must_be_new_and_source_archive_stays_unchanged",
+      "reason": "optional user-supplied public source execution is absent"
+    },
+    {
+      "test": "test_study_public_fixture.PublicFixtureTests.test_source_response_body_mismatch_rejected_despite_pass_flags",
+      "reason": "optional user-supplied public source execution is absent"
+    },
+    {
+      "test": "test_study_public_fixture.PublicFixtureTests.test_span_answerer_uses_only_supplied_context_and_returns_unknown_without_fact",
+      "reason": "optional user-supplied public source execution is absent"
+    }
+  ],
+  "failed_tests": [],
+  "elapsed_seconds": 265.063,
+  "dependencies": {
+    "jsonschema": "4.26.0",
+    "fastapi": "0.136.3",
+    "httpx": "0.28.1",
+    "starlette": "1.9.0"
+  },
+  "heavy_libraries_installed": {
+    "torch": false,
+    "transformers": false,
+    "cognee": false,
+    "open_webui": false
+  },
+  "new_real_model_calls": 0,
+  "new_paid_api_calls": 0,
+  "schema": "ci-portability-clean-regression-v1",
+  "date": "2026-10-26",
+  "platform": "Windows",
+  "python_version": "3.12.7",
+  "tests_are_engineering_checks_not_research_effectiveness": true,
+  "raw_receipt_sha256": "58b3cad018aaa19a1e648729c1bd0ef06c093a542947784572775085b1bff7ec",
+  "base_commit": "3606980ede3f82d991f33eca09af80b806903638",
+  "historical_results_overwritten": false,
+  "new_skip_conditions_added": false,
+  "source_hash_scope": "UTF-8 source with LF-normalized newlines",
+  "research_goal_status": "paused",
+  "tested_source_sha256": {
+    ".github/workflows/tests.yml": "d71e574960a577b541c48b923d7a310b417e1786c167e63161f343d0e15ca58e",
+    "requirements-dev.txt": "0fe9aecb2aa6503f51270995b528bc3841b1012a34c5b80a7d6f0b0554220f13",
+    "tests/test_candidate_classifier_artifact.py": "58c6e07f0a455af9713a56c3120c5602a235e995727203735937b6074fc19334",
+    "tests/test_deepseek_native.py": "75f4089e3950cbeb642ca735369c07650251961127bfdb3bc7cb9fc3b8322203",
+    "tests/test_evidence_diagnostic.py": "d4f20c5cb9b9f94031d6168c88f361a268f83c8d954e2f3a0db3e32f813fd8ff",
+    "tests/test_native_exact_fact_bridge.py": "136b282a1e0b8334eba9912ffcd45bae525b8482d5c0f8f733816f6fd2093840",
+    "tests/test_native_private_handoff_driver.py": "c201c53b8759f74d23bbab821961a8718ffc9c98a5c3f0c793b7910713b6ced6",
+    "tests/test_native_vector_trace_only.py": "b09a70380779e25b567251dd6f666ef30de9754c7ae75529e8c3de89e7743d79",
+    "tests/test_nli_candidate_diagnostic_driver.py": "c352f5c20f65463e224500a53d3c4dd1e53d7a0606c677b8e0fb4270feb4e38f",
+    "tests/test_setup_mdeberta_nli_assets.py": "7153bca9a43161221ed16f539e00efc2acd3479875090731ba8d8c87565432fa",
+    "tests/test_source_card_reader_transfer.py": "022a00822c0a73d8b01b0578664589cad3deb4fac5863266e35d965cd5a822ef",
+    "tests/fixtures/legacy_acl_contract.py": "45c940a249c02d2a555c1d7d55235eb021a0f997e7c714dd4fbd17d08aab17c1",
+    "tests/fixtures/legacy_acl_contract.provenance.json": "92699757329c07a68ce714b2a6d218f20468bb890a13c8c6fc69545a2dd8dde1",
+    "tests/fixtures/native_archive_layout.py": "a39360cf7ad34a501dc36b4e2d6b2cf9758977e98296984f3e8fbda5cc0fb3a7"
+  }
+}
