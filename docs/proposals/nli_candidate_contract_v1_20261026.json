@@ -1,0 +1,118 @@
+{
+  "schema": "nli_candidate_semantics_contract_v1",
+  "date": "2026-10-26",
+  "status": "frozen_design_for_standard_baseline_not_effectiveness_acceptance",
+  "model": {
+    "id": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "revision": "8adb042d524ecd5c26d3e3ba0e3fbcf7e2d0864c",
+    "label2id": {"entailment": 0, "neutral": 1, "contradiction": 2},
+    "runtime_qualification": "results/mdeberta_nli_runtime_20261026_v3"
+  },
+  "semantic_categories": ["PERSON", "ADDRESS", "CUSTOMER", "PROJECT"],
+  "input": {
+    "source_view": "one_complete_original_source_per_candidate",
+    "premise_template": "Text:\n{prefix}[[TARGET]]{quote}[[/TARGET]]{suffix}",
+    "target_start": "[[TARGET]]",
+    "target_end": "[[/TARGET]]",
+    "offset_convention": "Python character offsets on unmodified original source; start inclusive, end exclusive",
+    "require_quote_equals_source_slice": true,
+    "require_payload_policy_pool_source_hash_bindings": true,
+    "reject_marker_or_reserved_token_collision": true,
+    "query_and_memory_sources_kept_separate": true,
+    "proposed_category_visible_to_model": false,
+    "source_ids_or_cids_visible_to_model": false,
+    "registry_values_visible_to_model": false,
+    "gold_or_evaluation_fields_visible_to_model": false,
+    "policy_mode": "host-approved type-policy only; arbitrary business-policy inference unsupported",
+    "allowed_category_assertions": "policy.protected_categories intersect semantic_categories, ordered as semantic_categories",
+    "actual_hypothesis_language": "English_only",
+    "chinese_gloss_used_for_inference": false
+  },
+  "hypotheses": {
+    "roles": {
+      "value": "In this text, the marked occurrence is a specific entity value.",
+      "field_label": "In this text, the marked occurrence serves as a field label or heading.",
+      "generic_role": "In this text, the marked occurrence refers to an unnamed generic role or a dictionary concept."
+    },
+    "categories": {
+      "PERSON": "In this text, the marked occurrence gives the name of a particular person.",
+      "ADDRESS": "In this text, the marked occurrence gives a particular postal or physical address.",
+      "CUSTOMER": "In this text, the marked occurrence gives the name of a particular customer or organization.",
+      "PROJECT": "In this text, the marked occurrence gives the name, code, or identifier of a particular project."
+    }
+  },
+  "score_contract": {
+    "normalization": "stable_softmax_over_all_three_NLI_logits_independently_for_each_hypothesis",
+    "tau": 0.8,
+    "E": "p(entailment) >= tau",
+    "C": "p(contradiction) >= tau",
+    "U": "neither E nor C; includes neutral and insufficient confidence",
+    "cross_hypothesis_normalization": false,
+    "forced_role_argmax": false,
+    "forced_category_argmax": false,
+    "drop_neutral_before_softmax": false,
+    "calibrated_privacy_guarantee": false
+  },
+  "decision_contract": {
+    "applies_to": "mutable, unauthenticated semantic candidates only; hard protections are preserved by host composition",
+    "entailing_categories": "allowed category assertions whose status is E",
+    "ordered_rules": [
+      {"if": "more than one entailing category", "decision": "needs_review", "reason": "multiple_category_entailments"},
+      {"if": "exactly one entailing category and value status is C", "decision": "needs_review", "reason": "category_value_contradiction"},
+      {"if": "exactly one entailing category and typed prior is non-null and differs from that category", "decision": "needs_review", "reason": "typed_category_changed"},
+      {"if": "exactly one entailing category and value status is not C", "decision": "protect_in_that_category", "reason": "unique_policy_category_entailment"},
+      {"if": "no entailing category and (all tested categories are C or (value is C and (field_label is E or generic_role is E)))", "decision": "nonvalue_under_this_policy", "reason": "negative_type_or_nonvalue_evidence"},
+      {"if": "otherwise", "decision": "needs_review", "reason": "insufficient_or_unresolved_evidence"}
+    ],
+    "unique_category_positive_not_vetoed_by": ["other category U", "field_label E", "field_label U", "generic_role E", "generic_role U", "value U"],
+    "nonvalue_does_not_mean_globally_public": true,
+    "customer_bucket_meaning": "specific customer or organization name; not a claim that an arbitrary organization has a customer relationship",
+    "empty_allowed_semantic_categories": "no semantic category is protected by this type-policy; the all-tested-C branch is explicit policy scope, not global publicness",
+    "review_handling": "selected unresolved candidates cause a processing-needs-review result retained in the full material denominator; never silently passed as safe"
+  },
+  "composition": {
+    "immutable": ["non-semantic hard-format category findings", "registry findings", "authenticated labels and registered positive protection spans"],
+    "mutable": "unauthenticated PERSON/ADDRESS/CUSTOMER/PROJECT NER or weak-rule candidates",
+    "typed_category_must_not_change": true,
+    "untyped_promotion_requires_category_entailment": true,
+    "preserve_existing_boundary_and_repetition_closure": true,
+    "closure_reintroduced_findings_reported": true,
+    "sensitivity_is_not_authorization": true,
+    "source_permissions_or_grants_changed": false,
+    "query_text_creates_memory_fact_evidence": false,
+    "default_changed": false,
+    "authenticated_label_chain_integrated_in_this_experiment": false
+  },
+  "execution": {
+    "all_roles_and_all_allowed_categories_for_every_scored_cid": true,
+    "early_exit_based_on_initial_scores": false,
+    "max_forwards_per_candidate": 7,
+    "exact_required_forwards": "sum over scored candidates of (3 + number of policy-allowed semantic categories)",
+    "global_forward_cap": "must be a frozen integer in the approved run plan, checked before any forward",
+    "full_material_preflight_before_any_forward": true,
+    "max_pair_tokens_including_special_tokens": 512,
+    "truncation": false,
+    "window_fallback": false,
+    "overflow_action": "needs_review, zero forwards for that material, retained denominator",
+    "model_error_action": "preserve failure and executed count; no automatic retry",
+    "generation_calls": 0,
+    "cloud_calls": 0,
+    "native_calls": 0,
+    "language_or_template_retry": false,
+    "threshold_tuning_after_results": false
+  },
+  "comparison": {
+    "arms": ["standard_boundary", "NLI-only-existing", "NLI-full-pool"],
+    "same_baseline_and_proposal_pool": true,
+    "same_prediction_cache": true,
+    "existing_arm_uses_only_original_baseline_candidate_keys": true,
+    "full_pool_arm_may_promote_untyped_candidates": true,
+    "one_observed_physical_forward_count_separate_from_per_arm_attribution": true,
+    "old80_old40_status": "fully exposed development/regression materials, not new independent acceptance"
+  },
+  "sources": [
+    "https://aclanthology.org/D19-1404/",
+    "https://huggingface.co/docs/transformers/main_classes/pipelines#transformers.ZeroShotClassificationPipeline",
+    "https://huggingface.co/MoritzLaurer/mDeBERTa-v3-base-mnli-xnli"
+  ]
+}

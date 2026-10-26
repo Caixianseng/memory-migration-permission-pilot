@@ -1,0 +1,15 @@
+{
+  "scope": "complete offline unittest discovery; not native/model effectiveness or novelty acceptance",
+  "tests_run": 1524,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_seconds": 274.7,
+  "source_files": 318,
+  "source_unchanged": true,
+  "raw_console_log_saved": false,
+  "schema": "project-regression-nli-api-read-v1",
+  "report": "results/project_regression_20261026_nli_api_read/report.json",
+  "report_sha256": "2b1d2ec1b20df996a1548c5e91b91ddb92e93b533b2b9a73110143bb4a2f2953",
+  "model_effectiveness_or_novelty": false
+}

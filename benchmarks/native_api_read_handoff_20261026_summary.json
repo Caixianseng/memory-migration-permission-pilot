@@ -1,0 +1,235 @@
+{
+  "version": "native_api_read_handoff_public_summary_v1",
+  "date": "2026-10-26",
+  "run": "results/native_api_read_handoff_20261026_v1",
+  "status": "qualified_finite_native_api_read_handoff",
+  "execution_backend": "actual_native_worker_cli",
+  "direction": "WebUI_to_Cognee",
+  "profile": "closed_world_native_user_read_snapshot_v1",
+  "fixture": {
+    "synthetic_stories": 1,
+    "exact_facts": 2,
+    "exact_fact_bytes": [
+      19,
+      19
+    ],
+    "new_independent_stories": 0,
+    "four_user_agent_combinations": 4,
+    "source_and_target_subjects": "Five distinct ordinary users per backend including owner; source bootstrap administrator excluded from finite reader matrix.",
+    "native_first_class_agent_identity": false
+  },
+  "source_evidence": {
+    "kind": "official_API_read_export_adapter",
+    "native_full_export_endpoint_used": false,
+    "owner_inventory": "GET /api/v1/notes/",
+    "explicit_acl_and_file_link": "GET /api/v1/notes/{id}",
+    "exact_raw_bytes": "GET /api/v1/files/{id}/content",
+    "acl_profile": "Only user/read entries whose principal IDs map to four declared ordinary subjects; unknown/group/role/public/unmapped -> unverified stop.",
+    "target_content_from_actual_source_API_bytes": true,
+    "fixture_text_fallback": false,
+    "initial_raw_native_indices": [
+      31,
+      33
+    ],
+    "initial_policy_native_indices": [
+      30,
+      32
+    ],
+    "current_source_views": 3,
+    "current_source_owner_raw_reads": 6,
+    "current_source_owner_note_policy_reads": 6,
+    "native_export_share_authority_verified": false,
+    "complete_native_policy_exported": false
+  },
+  "operator_consent": {
+    "kind": "explicit_research_operator_consent",
+    "approved_for_controlled_synthetic_copy": true,
+    "scope": "two_registered_public_synthetic_exact_facts_and_four_subject_read_projection",
+    "native_export_permission_verified": false,
+    "native_share_permission_claimed": false
+  },
+  "results": {
+    "source_read_sets": {
+      "initial": {
+        "alice_reader": [
+          "fact.readonly",
+          "fact.managed"
+        ],
+        "alice_worker": [],
+        "bob_reader": [
+          "fact.managed"
+        ],
+        "bob_worker": []
+      },
+      "alice_first_read_revoked": {
+        "alice_reader": [
+          "fact.managed"
+        ],
+        "alice_worker": [],
+        "bob_reader": [
+          "fact.managed"
+        ],
+        "bob_worker": []
+      },
+      "old_packet_replay": {
+        "alice_reader": [
+          "fact.managed"
+        ],
+        "alice_worker": [],
+        "bob_reader": [
+          "fact.managed"
+        ],
+        "bob_worker": []
+      }
+    },
+    "target_read_sets": {
+      "initial": {
+        "alice_reader": [
+          "fact.readonly",
+          "fact.managed"
+        ],
+        "alice_worker": [],
+        "bob_reader": [
+          "fact.managed"
+        ],
+        "bob_worker": []
+      },
+      "alice_first_read_revoked": {
+        "alice_reader": [
+          "fact.managed"
+        ],
+        "alice_worker": [],
+        "bob_reader": [
+          "fact.managed"
+        ],
+        "bob_worker": []
+      },
+      "old_packet_replay": {
+        "alice_reader": [
+          "fact.managed"
+        ],
+        "alice_worker": [],
+        "bob_reader": [
+          "fact.managed"
+        ],
+        "bob_worker": []
+      }
+    },
+    "source_read_observations": 24,
+    "target_read_observations": 24,
+    "total_read_relationship_observations": 48,
+    "enumeration_observations": 48,
+    "source_to_target_fact_mappings": 2,
+    "target_acl_mutation_counts": {
+      "initial": 3,
+      "alice_first_read_revoked": 1,
+      "old_packet_replay": 0
+    },
+    "old_packet_body_sha256": "e2ef0f93b097e8848fd5670593e354b8004862c4934eb2b51077aa87164ef0f2",
+    "old_packet_replay": "current_source_revalidated_noop",
+    "old_packet_replay_requires_total_packet_rejection": false,
+    "old_packet_restores_revoked_alice_first_read": false,
+    "alice_second_read_preserved": true,
+    "bob_independent_second_read_preserved": true
+  },
+  "instrumentation": {
+    "source_http": 91,
+    "target_http": 78,
+    "total_http": 169,
+    "source_hard_cap": 100,
+    "target_hard_cap": 90,
+    "generation_attempts": 0,
+    "embedding_attempts": 0,
+    "blocked_network_events": 0,
+    "postflight": "passed",
+    "scope": "Python inference-entry and network guard evidence; no hardware attestation."
+  },
+  "independent_verification": {
+    "status": "passed",
+    "checks": 1105,
+    "passed": 1105,
+    "failed": 0,
+    "receipt": "results/native_api_read_handoff_20261026_v1/independent_audit.json",
+    "receipt_sha256": "ffc16c625d0bd54c4a6507da5e66f3dab8476a028c7652edf09fc343cea0d206",
+    "new_native_calls": 0,
+    "new_model_calls": 0,
+    "auth_or_database_read": false,
+    "current_source_files": 12,
+    "archived_source_files": 12,
+    "fixed_assets": 25,
+    "safe_response_bin_files": 142,
+    "credential_response_bodies_omitted": 27,
+    "safe_bins_by_side": {
+      "source": 74,
+      "target": 68
+    },
+    "omitted_auth_by_side": {
+      "source": 17,
+      "target": 10
+    },
+    "qualified_raw_read_matrix": {
+      "exact_19_byte_allowed_reads": 14,
+      "denied_without_registered_material": 34
+    },
+    "actual_source_bytes_packet_target_raw_data_and_mapping_match": true,
+    "no_fixture_text_fallback_confirmed": true,
+    "approved_plan_original_bytes_match": true,
+    "scope": "Independent recomputation of saved evidence; not independent execution attestation."
+  },
+  "artifact_sha256": {
+    "plan.json": "3d6947d2146e1e150cb19fce084f8462085d78f1b26086bd2d73bb39a509baa9",
+    "report.json": "817afd530ff78f51902104f3c3b8d9a997e67c9e479c30bb6ff001ca36fde35c",
+    "source_snapshots.json": "c8bccf74795fbb70cab040fa8f100595921c663ad3cc7ef5f2317e76fb8f4607",
+    "target_snapshots.json": "ec8608d1f70deb6146519c054f095ac0a4d656271f5c56c86e9195751d4ccb5b",
+    "packets.json": "6477218047436f1ef93ae30c46bf774babe31b90dda9e3fff2a7f252792eba5b",
+    "barriers.json": "336ec9ed164d2b3dbc471b075f4942bff01fd7442c67215a9d3522504ac538a8",
+    "enumerations.json": "89a2695433d96afbb3089a4d720673745ea4a790f72f27b72d142ed668d2399f",
+    "mappings.json": "1fdb5aba033345b08c380df3176d8294a8178c38d65608e78e0c33e2a689158b",
+    "prediction_phase_closed.json": "4c2ecfac0b2ee055d97ee008200339c03508991a41a834fa7fdb2044471eaa90",
+    "rpc_receipts.json": "684bd56d62a2fd15daa8f86fffb3362bd65f4f52a92ccd464cb107165e04101a",
+    "native_final.json": "4e60c920e103a48518613da4ba6d55dbf4076b84b5d06f24f6cf6def3000e898",
+    "events.json": "b93e652142f998dd82df3d461204693f9515a8ecbd6aa5945bad5e6a2c0a39d1",
+    "independent_audit.json": "ffc16c625d0bd54c4a6507da5e66f3dab8476a028c7652edf09fc343cea0d206"
+  },
+  "registered_implementation_sha256": {
+    "scripts/run_native_api_read_handoff.py": "0d7d9af38a23743f4b7ca473c04fced355ad202984d0aedf31dee94cd932677b",
+    "scripts/native_webui_projection_worker.py": "222718f0ac5f5d424ce5ff20793fe3a9fca4ea380218ed4d10096f39c5473ed7",
+    "scripts/native_cognee_projection_worker.py": "973745b9613a8e498c1cac6ff84f9ad6d99a93618a2132eb6cc5b2b6ad0c1431",
+    "scripts/native_cognee_policy_worker.py": "54a26ac96b840c3e3aaaebf185a3bfc54d7a17885578bb3167f2f96b52d8fabc",
+    "scripts/native_exact_fact_common.py": "a36d2c6abb38337f6dcb7a2cbd4d7226079e401f0cb8b2a20176aba94da4d540",
+    "scripts/run_native_exact_fact_bridge.py": "5e607b8614f1e7d0d2d8632eac3b66bff8eb9eb8a97f49c0b500ac4bca20218b",
+    "examples/native_cognee_probe_assets/scripts/cognee_local_migration_probe.py": "11f295bf655690b33c9051a48b650bbb8592e5d83bfb78beba57ee5694de6aad",
+    "memory_migration_study/__init__.py": "5db86bb3981ca95dc7f630734f01a45d6beaca68e4b566709a7bf60caa6150e5",
+    "memory_migration_study/memory_labels.py": "68a129089dda79067b24bc266093c48f0efa9a91e909a0a4eb48b970833477ba",
+    "memory_migration_study/privacy.py": "c6db0bb46c983c6f42d35a3fe028f35309905e5c447e5de9260d927e10dac7e9",
+    "memory_migration_study/privacy_egress.py": "239a138cbbe5497355462657122a3feca9bdefabbcf25f2b90550e12d5c1fe93",
+    "memory_migration_study/policy.py": "9798a2dc2642e55d9a3335209c5f13c57aae29acedab97b014a48a4fb4b9a75e"
+  },
+  "boundaries": {
+    "correct_complete_current_source_recheck_plus_native_acl_baseline_passed": true,
+    "N_vs_G_advantage_measured": false,
+    "reverse_direction_measured": false,
+    "full_get_search_list_bypass_qualified": false,
+    "native_atomic_or_live_source_revocation": false,
+    "original_plaintext_recipients_forget_after_revoke": false,
+    "new_algorithm_advantage_established": false,
+    "paper_novelty_established": false,
+    "unmeasured": [
+      "full native effective/export/share/delegation/TTL policy",
+      "reverse native API direction",
+      "concurrent cross-backend updates",
+      "complete bypass and semantic search",
+      "downstream Agent utility",
+      "independent detection/task gates"
+    ],
+    "old_native_vector_four_nulls_closed": false
+  },
+  "documentation": "docs/原生API导出迁移_WebUI到Cognee实测_2026-10-26.md",
+  "transport": {
+    "kind": "FastAPI TestClient native ASGI routes in two isolated local child processes",
+    "responses_are_native_not_stubbed": true,
+    "TCP_or_HTTPS_services_deployed": false,
+    "http_counter_scope": "169 ASGI requests; report physical_http is not a physical-network-roundtrip count",
+    "cross_host_performance_measured": false
+  }
+}

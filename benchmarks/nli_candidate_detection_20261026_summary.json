@@ -1,0 +1,405 @@
+{
+  "schema": "nli-candidate-public-summary-v1",
+  "date": "2026-10-26",
+  "scope": "80 exposed development and 40 exposed regression, not independent acceptance",
+  "run": "results/nli_candidate_20261026_v1",
+  "model": {
+    "id": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "label2id": {
+      "contradiction": 2,
+      "entailment": 0,
+      "neutral": 1
+    },
+    "revision": "8adb042d524ecd5c26d3e3ba0e3fbcf7e2d0864c",
+    "runtime_qualification": "results/mdeberta_nli_runtime_20261026_v3"
+  },
+  "contract_sha256": "7eae94ddf1e0995e36fa3d6f0303673ad2551496a6c4c51e0bb99d9560a9a29b",
+  "primary_arm": "nli_full_pool",
+  "summary": {
+    "development": {
+      "nli_existing": {
+        "accepted": {
+          "fn": 14,
+          "fp": 1,
+          "precision": 0.9777777777777777,
+          "recall": 0.7586206896551724,
+          "tp": 44
+        },
+        "complete_exact": 66,
+        "materials": 80,
+        "ok": 67
+      },
+      "nli_full_pool": {
+        "accepted": {
+          "fn": 14,
+          "fp": 3,
+          "precision": 0.9361702127659575,
+          "recall": 0.7586206896551724,
+          "tp": 44
+        },
+        "complete_exact": 64,
+        "materials": 80,
+        "ok": 67
+      },
+      "standard_boundary": {
+        "accepted": {
+          "fn": 1,
+          "fp": 8,
+          "precision": 0.8769230769230769,
+          "recall": 0.9827586206896551,
+          "tp": 57
+        },
+        "complete_exact": 72,
+        "materials": 80,
+        "ok": 80
+      }
+    },
+    "heldout": {
+      "nli_existing": {
+        "accepted": {
+          "fn": 4,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.8,
+          "tp": 16
+        },
+        "complete_exact": 35,
+        "materials": 40,
+        "ok": 37
+      },
+      "nli_full_pool": {
+        "accepted": {
+          "fn": 4,
+          "fp": 4,
+          "precision": 0.8,
+          "recall": 0.8,
+          "tp": 16
+        },
+        "complete_exact": 31,
+        "materials": 40,
+        "ok": 35
+      },
+      "standard_boundary": {
+        "accepted": {
+          "fn": 2,
+          "fp": 2,
+          "precision": 0.9,
+          "recall": 0.9,
+          "tp": 18
+        },
+        "complete_exact": 36,
+        "materials": 40,
+        "ok": 40
+      }
+    }
+  },
+  "runtime_counts": {
+    "blocked_forward_entries": 0,
+    "classifier_attempts": 390,
+    "classifier_forward_calls": 390,
+    "encoder_attempts": 390,
+    "encoder_forward_calls": 390,
+    "model_load_attempts": 1,
+    "model_loads": 1
+  },
+  "tokenization_runtime_counts": {
+    "blocked_forward_entries": 0,
+    "classifier_attempts": 0,
+    "classifier_forward_calls": 0,
+    "encoder_attempts": 0,
+    "encoder_forward_calls": 0,
+    "model_load_attempts": 0,
+    "model_loads": 0
+  },
+  "candidate_count": 111,
+  "preflight_ready_materials": 120,
+  "processing_complete_materials": 120,
+  "decision_reasons": {
+    "unique_policy_category_entailment": 28,
+    "category_value_contradiction": 2,
+    "insufficient_or_unresolved_evidence": 24,
+    "negative_type_or_nonvalue_evidence": 57
+  },
+  "guard": {
+    "application_network_requests": 0,
+    "blocked_attempts": 0,
+    "internal_socket_events": [
+      {
+        "allowed": true,
+        "event": "socket.bind",
+        "kind": "declared_loopback_or_probe"
+      }
+    ],
+    "network_denials": 0,
+    "scope": "Python audit hooks and offline flags, not an OS sandbox.",
+    "scope_denials": [],
+    "stdlib_zip_read_only_probes": [
+      {
+        "event": "open",
+        "flags": 32896,
+        "mode": "r",
+        "path": "D:\\anaconda\\python312.zip",
+        "read_only": true
+      },
+      {
+        "event": "open",
+        "flags": 32896,
+        "mode": "r",
+        "path": "D:\\anaconda\\python312.zip",
+        "read_only": true
+      },
+      {
+        "event": "open",
+        "flags": 32896,
+        "mode": "r",
+        "path": "D:\\anaconda\\python312.zip",
+        "read_only": true
+      },
+      {
+        "event": "open",
+        "flags": 32896,
+        "mode": "r",
+        "path": "D:\\anaconda\\python312.zip",
+        "read_only": true
+      },
+      {
+        "event": "open",
+        "flags": 32896,
+        "mode": "r",
+        "path": "D:\\anaconda\\python312.zip",
+        "read_only": true
+      },
+      {
+        "event": "open",
+        "flags": 32896,
+        "mode": "r",
+        "path": "D:\\anaconda\\python312.zip",
+        "read_only": true
+      },
+      {
+        "event": "open",
+        "flags": 32896,
+        "mode": "r",
+        "path": "D:\\anaconda\\python312.zip",
+        "read_only": true
+      },
+      {
+        "event": "open",
+        "flags": 32896,
+        "mode": "r",
+        "path": "D:\\anaconda\\python312.zip",
+        "read_only": true
+      },
+      {
+        "event": "open",
+        "flags": 32896,
+        "mode": "r",
+        "path": "D:\\anaconda\\python312.zip",
+        "read_only": true
+      },
+      {
+        "event": "open",
+        "flags": 32896,
+        "mode": "r",
+        "path": "D:\\anaconda\\python312.zip",
+        "read_only": true
+      },
+      {
+        "event": "open",
+        "flags": 32896,
+        "mode": "r",
+        "path": "D:\\anaconda\\python312.zip",
+        "read_only": true
+      },
+      {
+        "event": "open",
+        "flags": 32896,
+        "mode": "r",
+        "path": "D:\\anaconda\\python312.zip",
+        "read_only": true
+      },
+      {
+        "event": "open",
+        "flags": 32896,
+        "mode": "r",
+        "path": "D:\\anaconda\\python312.zip",
+        "read_only": true
+      },
+      {
+        "event": "open",
+        "flags": 32896,
+        "mode": "r",
+        "path": "D:\\anaconda\\python312.zip",
+        "read_only": true
+      },
+      {
+        "event": "open",
+        "flags": 32896,
+        "mode": "r",
+        "path": "D:\\anaconda\\python312.zip",
+        "read_only": true
+      },
+      {
+        "event": "open",
+        "flags": 32896,
+        "mode": "r",
+        "path": "D:\\anaconda\\python312.zip",
+        "read_only": true
+      },
+      {
+        "event": "open",
+        "flags": 32896,
+        "mode": "r",
+        "path": "D:\\anaconda\\python312.zip",
+        "read_only": true
+      },
+      {
+        "event": "open",
+        "flags": 32896,
+        "mode": "r",
+        "path": "D:\\anaconda\\python312.zip",
+        "read_only": true
+      },
+      {
+        "event": "open",
+        "flags": 32896,
+        "mode": "r",
+        "path": "D:\\anaconda\\python312.zip",
+        "read_only": true
+      },
+      {
+        "event": "open",
+        "flags": 32896,
+        "mode": "r",
+        "path": "D:\\anaconda\\python312.zip",
+        "read_only": true
+      },
+      {
+        "event": "open",
+        "flags": 32896,
+        "mode": "r",
+        "path": "D:\\anaconda\\python312.zip",
+        "read_only": true
+      },
+      {
+        "event": "open",
+        "flags": 32896,
+        "mode": "r",
+        "path": "D:\\anaconda\\python312.zip",
+        "read_only": true
+      },
+      {
+        "event": "open",
+        "flags": 32896,
+        "mode": "r",
+        "path": "D:\\anaconda\\python312.zip",
+        "read_only": true
+      },
+      {
+        "event": "open",
+        "flags": 32896,
+        "mode": "r",
+        "path": "D:\\anaconda\\python312.zip",
+        "read_only": true
+      },
+      {
+        "event": "open",
+        "flags": 32896,
+        "mode": "r",
+        "path": "D:\\anaconda\\python312.zip",
+        "read_only": true
+      },
+      {
+        "event": "open",
+        "flags": 32896,
+        "mode": "r",
+        "path": "D:\\anaconda\\python312.zip",
+        "read_only": true
+      },
+      {
+        "event": "open",
+        "flags": 32896,
+        "mode": "r",
+        "path": "D:\\anaconda\\python312.zip",
+        "read_only": true
+      }
+    ]
+  },
+  "model_load_evidence": {
+    "accepted": true,
+    "additional_loading_info_fields": [],
+    "container_normalization_only": true,
+    "error_msgs_count": 0,
+    "mismatched_keys": [],
+    "missing_keys": [],
+    "source_container_types": {
+      "error_msgs": "list",
+      "mismatched_keys": "set",
+      "missing_keys": "set",
+      "unexpected_keys": "set"
+    },
+    "unexpected_keys": [
+      "deberta.embeddings.position_ids"
+    ],
+    "verified_nonpersistent_buffer": {
+      "device": "cpu",
+      "dtype": "int64",
+      "key": "deberta.embeddings.position_ids",
+      "persistent": false,
+      "position_biased_input": false,
+      "shape": [
+        1,
+        512
+      ],
+      "values": "arange(512)"
+    }
+  },
+  "new_generations": 0,
+  "cloud_calls": 0,
+  "new_api_cost_cny": 0,
+  "default_changed": false,
+  "independent_acceptance": false,
+  "privacy_joint_gate_passed": false,
+  "paper_novelty_established": false,
+  "independent_audit": {
+    "path": "results/nli_candidate_20261026_v1/independent_audit.json",
+    "sha256": "af222ad284eef2fb4d53ea23645a887d3b7987e6969c27bb27eb8a1ab59b116a",
+    "checks_passed": 1972,
+    "checks_total": 1972,
+    "new_model_calls": 0
+  },
+  "files_sha256": {
+    "plan.json": "df609b8d5e5feab8dddeeca1b83bf1fce4b19eb79fd7a12808dcd04f0eb83f02",
+    "runtime_inputs.json": "02f70125d40461d3e6b5dff52fafb246aaa0aa2bde76406b3c8c0753c2151464",
+    "materials_input.json": "c89809e624d5f25b06a81b73c9c998f2795ac4e576b6c8d61e074759541f07a4",
+    "tokenization/worker_predictions.json": "3182fe772566dfd076cda41a625aa099b403959fecb47aba7d3f895ad25f3905",
+    "inference/worker_predictions.json": "cb95c9f75e1e2e9554dd85f6fbef32be3cae0ef4857428008f23694527358031",
+    "model_phase_closed.json": "36ca0ecfda8eaf1344b4cd22e6fce45cfb3f526e6967ebe9fceb81fefe2cec6f",
+    "rows.json": "862ca1950627012d27ef06bc6d93f9061d7ab67b15d5bf56a83096b34746a16e",
+    "report.json": "5dedee9d33e623bbdc829edac65d813b5b460a8fbf7eac5b20097af21e1a26f2"
+  },
+  "posthoc_existing_baseline_fallback": {
+    "path": "results/nli_candidate_20261026_v1/posthoc_existing_baseline_fallback_v1.json",
+    "sha256": "200b962ae272c435797ede1b9ec4988ed2320b4f6eaeaacad812f551314608d1",
+    "preregistered": false,
+    "original_results_changed": false,
+    "new_model_calls": 0,
+    "development": {
+      "tp": 57,
+      "fp": 6,
+      "fn": 1,
+      "precision": 0.9047619047619048,
+      "recall": 0.9827586206896551,
+      "ready_materials": 80
+    },
+    "exposed_regression40": {
+      "tp": 18,
+      "fp": 2,
+      "fn": 2,
+      "precision": 0.9,
+      "recall": 0.9,
+      "ready_materials": 40
+    },
+    "scope": "Exploratory whole-material fallback to existing protection only; not declassification or independent acceptance."
+  }
+}
