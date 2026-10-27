@@ -1,0 +1,122 @@
+{
+  "schema": "project_closeout_20261027_v1",
+  "date": "2026-10-27",
+  "status": "stage_closed_research_paused",
+  "goal_status": "paused",
+  "goal_achieved": false,
+  "user_requested_pause": true,
+  "source_code_commit": "ff49beab15b3e2fbb873b3c0a897e4652a9d680e",
+  "delivery_scope": "Documentation and handoff only; no new models or native experiments; default algorithms unchanged.",
+  "native_clients": {
+    "calls": 24,
+    "qoder": 12,
+    "harness": 12,
+    "legal_correct": 16,
+    "legal_total": 16,
+    "missing_correct": 8,
+    "missing_total": 8,
+    "host_controls_passed": 156,
+    "host_controls_total": 156,
+    "exposed_stories": 1,
+    "unique_questions": 3,
+    "model_selected_by_both": "DeepSeek Flash",
+    "scope": "Trusted local host bridge; not vendor-native ACL or universal success."
+  },
+  "relation_probe": {
+    "texts": 12,
+    "opportunities": 72,
+    "counts": {
+      "encoder": {
+        "classification_extract_invocations": 14,
+        "proposal_infer_invocations": 12
+      },
+      "ner_and_classification_events": 26,
+      "nli": {
+        "blocked_forward_entries": 0,
+        "classifier_attempts": 56,
+        "classifier_forward_calls": 56,
+        "encoder_attempts": 56,
+        "encoder_forward_calls": 56,
+        "model_load_attempts": 1,
+        "model_loads": 1
+      },
+      "nli_capture_events": 56,
+      "qwen_posts": 28
+    },
+    "status": "negative",
+    "precision_recall_gate_passed": false,
+    "algorithm_advantage": false,
+    "default_changed": false,
+    "raw_value_residue_payload_cells": 4,
+    "unique_residue_texts": 2,
+    "actual_cloud_disclosures": 0,
+    "summary_path": "benchmarks/relation_occurrence_probe_20261027_summary.json"
+  },
+  "test_call_correction": {
+    "confirmed_unplanned_local_posts_lower_bound": 100,
+    "exact_total": null,
+    "full1851_local_regression_posts": 25,
+    "cloud_or_paid_api_calls": 0,
+    "fixed_in": "ff49beab15b3e2fbb873b3c0a897e4652a9d680e",
+    "old_zero_call_claim_incorrect": true,
+    "original_receipts_preserved": true
+  },
+  "code_ci": {
+    "url": "https://github.com/Caixianseng/memory-migration-permission-pilot/actions/runs/40467338343",
+    "run_id": 40467338343,
+    "head": "ff49beab15b3e2fbb873b3c0a897e4652a9d680e",
+    "os": [
+      "ubuntu-latest",
+      "windows-latest"
+    ],
+    "tests_per_os": 1852,
+    "passed_per_os": 1838,
+    "skipped_per_os": 14,
+    "failures_per_os": 0,
+    "errors_per_os": 0
+  },
+  "remaining_requirements": [
+    {
+      "id": "detector_joint_gate",
+      "state": "not_achieved",
+      "target": "precision>=0.90 and recall>=0.95"
+    },
+    {
+      "id": "independent64",
+      "state": "not_run",
+      "target": "at least63/64 joint success"
+    },
+    {
+      "id": "historical_vector_null",
+      "state": "unresolved",
+      "failures": 4
+    },
+    {
+      "id": "strong_baseline_advantage_and_novelty",
+      "state": "not_established"
+    },
+    {
+      "id": "general_derived_memory_and_online_revocation",
+      "state": "incomplete"
+    }
+  ],
+  "retained_next_steps": [
+    "Evaluate existing GLiNER entity_attributes before claiming a new relational method.",
+    "Reuse current bound candidate IDs; measure complete-span reachability before any optional inward/outward boundary candidate extension.",
+    "Implement at most original prefix0..71 vector trace with72 HTTP,8 vector requests,6add,0delete; no automatic reruns or additional diagnostic queries.",
+    "Freeze method before new independent detection/64-task acceptance; preserve all denominators.",
+    "Integrate migration, protection and real client tasks before paper-level claims."
+  ],
+  "closeout_activity": {
+    "new_model_calls": 0,
+    "new_native_calls": 0,
+    "new_paid_api_calls": 0,
+    "code_changes": false,
+    "local_sync": "pending: command startup/approval timeout; GitHub connector publication",
+    "html_visual_browser_check": false
+  },
+  "paths": {
+    "report": "docs/项目阶段收尾与任务汇报_2026-10-25.md",
+    "html": "docs/reports/project_closeout_20261027.html"
+  }
+}
