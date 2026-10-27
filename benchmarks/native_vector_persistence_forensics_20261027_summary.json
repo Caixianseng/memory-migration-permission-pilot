@@ -1,0 +1,95 @@
+{
+  "version": "native_vector_persistence_forensics_public_summary_v1",
+  "date": "2026-10-27",
+  "historical_run": "native_exact_fact_bridge_20261025_v3",
+  "historical_status": "failed_25_of_29",
+  "historical_http_200_null_count": 4,
+  "historical_report_sha256": "d0879b96e57580e5f74fb2b5a8a3d072e33d3dab93fe6accfce39a2786cece52",
+  "historical_vector_sqlite_sha256": "9aec321e7f90782177a0ad7902b880f53e7f4f0521f3e6769eebe5b618798faf",
+  "historical_four_nulls_closed": false,
+  "historical_specific_exception_captured": false,
+  "persistence_audit": {
+    "sqlite_integrity": "ok",
+    "stored_upserts": 6,
+    "stored_deletes": 2,
+    "recovered_historical_vectors": 6,
+    "vector_dimensions": 384,
+    "vector_encoding": "FLOAT32",
+    "all_vectors_finite": true,
+    "all_vector_norms_within_1e_6_of_one": true,
+    "distinct_vector_payloads": 5,
+    "final_live_records": 4,
+    "empty_hnsw_segment_directories": 3,
+    "hnsw_index_files": 0,
+    "original_database_and_report_unchanged": true
+  },
+  "native_persistence_queries": {
+    "declared_query_maximum": 3,
+    "actual_query_attempts": 3,
+    "budget_exhausted": true,
+    "query_inputs": "one historical resident stored vector per account",
+    "query_k": 100,
+    "state": "byte-copied final historical vector DB, native restoration permitted",
+    "normal_native_returns": 3,
+    "native_exceptions": 0,
+    "native_null_returns": 0,
+    "complete_expected_live_record_sets": 3,
+    "same_historical_query_embedding_replays": 0,
+    "historical_four_null_reproductions": 0,
+    "manual_reindex": false,
+    "original_transient_index_state_reconstructed": false
+  },
+  "diagnostic_preparation_failure": {
+    "count": 1,
+    "native_queries": 0,
+    "cause": "entry-list predicate omitted three existing empty HNSW segment directories",
+    "evidence_retained": true,
+    "historical_root_cause": false
+  },
+  "initial_offline_ast_conversion": {
+    "nulls": 3,
+    "native_backend_nulls": 0,
+    "cause": "diagnostic compile inherited future annotations absent from fixed vendor module; isolated SearchResult was incomplete",
+    "captured_exception": "pydantic.errors.PydanticUserError",
+    "historical_root_cause": false,
+    "original_execution_script_plan_and_report_retained": true
+  },
+  "corrected_saved_result_conversion": {
+    "inputs": "three already saved native QueryResult values",
+    "correction": "compile isolated vendor definitions with dont_inherit=True",
+    "successful_conversions": 3,
+    "nulls": 0,
+    "additional_native_queries": 0,
+    "additional_embedding_calls": 0
+  },
+  "total_actual_usage": {
+    "native_vector_queries": 3,
+    "http_requests": 0,
+    "native_count_get_calls": 0,
+    "explicit_upserts_deletes": 0,
+    "embedding_calls": 0,
+    "generation_calls": 0,
+    "paid_calls": 0,
+    "query_retries": 0,
+    "observed_network_events": 0
+  },
+  "integrity": {
+    "native_source_files_bound_and_unchanged": 8,
+    "query_control_source_files_bound_and_unchanged": 3,
+    "independent_artifact_checks_passed": 63,
+    "independent_artifact_checks_total": 63,
+    "independent_audit_native_or_model_calls": 0,
+    "os_level_execution_proof": false
+  },
+  "artifact_sha256": {
+    "persistence_audit": "134c08aff383ae4876d4beb2c8d75b3ba557feb5b2d9f5047723c83eb51b756d",
+    "frozen_stored_vectors": "af6c147a407e135388c4e15faeeaffb76fbe6dff3c71cc720bdb4851d18be7dd",
+    "preparation_failure": "3faf1d91756668aaa44f35849a7a81400be41ec0bf6634ffade7291c37a7e49c",
+    "three_query_plan": "b907ad28aee8dbf482ee8483506b816fe90f107d9a4f73231df1b20a3b6efd5e",
+    "three_query_report": "916b8ce75d4a41c1fb8bc26c53f9748065c77a16c40564ed0578e6d926a5bc48",
+    "offline_conversion_check": "ddf9aee7450bd33707f71d11102ef4589e9cfb6e4d6cc3caddae18689a29cedb",
+    "independent_audit": "237945081cf38f10cc432e41e3825d5257774e949095b92908fdadf0441199e7"
+  },
+  "conclusion": "Historical stored vectors and final persisted records are intact and queryable through one native restore path. The historical query embedding and transient index state were not recovered, and the four historical HTTP200 nulls remain unexplained.",
+  "public_payload": "aggregates and artifact hashes only; no databases, vectors, raw responses or logs"
+}

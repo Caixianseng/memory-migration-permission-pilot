@@ -1,0 +1,54 @@
+{
+  "version": "detector_category_contract_readonly_audit_v1",
+  "date": "2026-10-27",
+  "result_kind": "static_contract_audit_not_a_fix_or_accuracy_evaluation",
+  "new_model_calls": 0,
+  "new_encoder_forwards": 0,
+  "new_native_client_calls": 0,
+  "new_paid_calls": 0,
+  "tests_executed": 0,
+  "fresh64_read": false,
+  "production_modified": false,
+  "old_gold_modified": false,
+  "old_outputs_modified": false,
+  "finding": "The CUSTOMER key is reused for a customer-relation organization ontology and a broader specific-organization ontology. Approved policy hashes bind identity, not semantic equivalence.",
+  "legitimate_distinct_policy_semantics": {
+    "customer_relation_organization": "A specific organization name plus visible evidence of the predefined customer, buyer or receiver relationship within the policy scope.",
+    "any_specific_organization": "The full name of a particular organization; a customer relationship is not required; generic roles, definitions and status words are not names."
+  },
+  "components": [
+    {"path": "memory_migration_study/ner_detector.py", "line": 26, "customer_definition": "organization", "contract_scope": "any_specific_organization", "policy_instructions_sent_to_model": false},
+    {"path": "memory_migration_study/local_detector.py", "line": 25, "customer_definition": "full customer organization", "contract_scope": "customer_relation_organization_textual_intent_not_accuracy_claim"},
+    {"path": "memory_migration_study/candidate_decision.py", "line": 41, "customer_definition": "customer/organization name", "contract_scope": "any_specific_organization"},
+    {"path": "memory_migration_study/gliclass_candidate.py", "line": 45, "customer_definition": "specific customer or organization name", "contract_scope": "any_specific_organization"},
+    {"path": "docs/proposals/nli_candidate_contract_v1_20261026.json", "line": 40, "customer_definition": "the name of a particular customer or organization", "contract_scope": "any_specific_organization"}
+  ],
+  "source_sha256": {
+    "memory_migration_study/ner_detector.py": "89b3485c6a6a7759b99b5a5234665c024870b7b78de59661d19420109185615d",
+    "memory_migration_study/local_detector.py": "1ee3b486fde6ca8533a26035910fa1913a2889cec28f408e25129662493d84d5",
+    "memory_migration_study/candidate_decision.py": "28efdb67d05ab40624de331d6a2ad99d4a3a54e7943f42c339348b3ca946cc09",
+    "memory_migration_study/gliclass_candidate.py": "cc9815616f3287d202e7a936d88b90263f75a3f76d0d8e91d4813b0b8e847de8",
+    "docs/proposals/nli_candidate_contract_v1_20261026.json": "7eae94ddf1e0995e36fa3d6f0303673ad2551496a6c4c51e0bb99d9560a9a29b"
+  },
+  "test_review": {
+    "policy_hash_change_gate": "tests/test_study_ner_detector.py:51",
+    "fixed_labels_without_policy_instructions": "tests/test_study_ner_detector.py:35",
+    "fake_contract_tests_do_not_establish_semantic_equivalence": ["tests/test_candidate_decision.py:70", "tests/test_gliclass_candidate.py:75", "tests/test_nli_candidate.py:106"]
+  },
+  "comparison_scope": {
+    "same_key_is_insufficient_for_strict_customer_algorithm_ranking": "scripts/run_semantic_detection_benchmark.py:340",
+    "existing_eight_story_policy_explicitly_allows_conservative_other_organization_masking": "memory_migration_study/ner_benchmark.py:39",
+    "historical_frozen_scores_preserved": true,
+    "all_prior_experiments_invalid_claim": false,
+    "specific_score_differences_causally_explained": false
+  },
+  "legacy_residual_input_review": {
+    "project_code_fn_has_visible_type_and_value_evidence": true,
+    "generic_registered_name_has_visible_organization_but_no_customer_relation": true,
+    "generic_registered_name_gold_valid_under_declared_broad_ontology": true,
+    "six_entityhood_fp_negatives_have_sufficient_visible_evidence": true,
+    "confirmed_reason_to_change_old_gold": false
+  },
+  "next_independent_evaluation_prerequisite": "Freeze one shared ontology and bind its definitions to policy, actual prompts/labels/hypotheses, adapter/model identity and gold version; mark unsupported and conservative-approximation backends separately before new independent evaluation.",
+  "report": "docs/敏感类别合同一致性审查_2026-10-27.md"
+}

@@ -1,0 +1,30 @@
+{
+  "version": "representation_factor_manual_oracle_entities_20261027_v1",
+  "provenance": "Manually authored from the explicit synthetic entity-generation structure of four exposed development stories; oracle entity types, not automatic extraction or relation annotations.",
+  "stories": {
+    "dev_zh_roles": [
+      {"value": "雾岚计划", "type": "PROJECT", "pseudonym": "星澜计划"},
+      {"value": "溪桥计划", "type": "PROJECT", "pseudonym": "云浦计划"},
+      {"value": "栖蓝社", "type": "ORG", "pseudonym": "榆川社"},
+      {"value": "岚舟社", "type": "ORG", "pseudonym": "沐岳社"}
+    ],
+    "dev_en_time": [
+      {"value": "Mira Dalen", "type": "PERSON", "pseudonym": "Nila Roven"},
+      {"value": "Kellan Voss", "type": "PERSON", "pseudonym": "Darien Vale"},
+      {"value": "Alder Reach", "type": "PROJECT", "pseudonym": "Birch Grove"},
+      {"value": "Cedar Quay", "type": "PROJECT", "pseudonym": "Hazel Cove"}
+    ],
+    "dev_zh_negation": [
+      {"value": "松汐项目", "type": "PROJECT", "pseudonym": "枫屿项目"},
+      {"value": "竹湾项目", "type": "PROJECT", "pseudonym": "柳汀项目"},
+      {"value": "青棠社", "type": "ORG", "pseudonym": "白榕社"},
+      {"value": "禾帆社", "type": "ORG", "pseudonym": "锦杉社"}
+    ],
+    "dev_en_paraphrase": [
+      {"value": "Orin Bell", "type": "PERSON", "pseudonym": "Taro Lane"},
+      {"value": "Sela Venn", "type": "PERSON", "pseudonym": "Niko Fenn"},
+      {"value": "Juniper Field", "type": "PROJECT", "pseudonym": "Cypress Shore"},
+      {"value": "Maple Haven", "type": "PROJECT", "pseudonym": "Rowan Crest"}
+    ]
+  }
+}
