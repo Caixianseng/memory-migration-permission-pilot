@@ -70,11 +70,22 @@ python -B -X utf8 -m memory_migration_study demo --output results/my_demo
 python -B -X utf8 examples/privacy_roundtrip_demo.py
 ```
 
-GitHub自动测试在Ubuntu和Windows的Python 3.12上执行。复查仓库自带的离线测试，先安装固定测试依赖；无需下载模型或设置API密钥：
+GitHub自动测试在Ubuntu和Windows的Python 3.12上执行。复查仓库自带的离线测试时，建议使用独立的虚拟环境安装固定测试依赖，以免影响其他项目；无需下载模型或设置API密钥。下面的命令在项目根目录运行，不需要激活虚拟环境。
+
+Windows（PowerShell 或命令提示符）：
 
 ```powershell
-python -m pip install -r requirements-dev.txt
-python -B -X utf8 -m unittest discover -s tests -v
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements-dev.txt
+.\.venv\Scripts\python.exe -B -X utf8 -m unittest discover -s tests -v
+```
+
+macOS / Linux：
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements-dev.txt
+.venv/bin/python -B -X utf8 -m unittest discover -s tests -v
 ```
 
 本机旧工程、原始公开数据及固定官方wheel的14项可选检查，在未提供对应文件时明确显示为`skipped`，不计为通过。测试环境和此前连续红叉的原因见[CI自动测试说明](docs/CI自动测试说明_2026-10-26.md)。
