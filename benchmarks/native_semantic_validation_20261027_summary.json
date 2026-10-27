@@ -460,6 +460,29 @@
     "sum_main_run_wall_seconds": 200.173
   },
   "validation": {
+    "ci_portability_fix": {
+      "additional_client_calls": 0,
+      "cause": "Noncanonical tempfile fixture ROOT fails unchanged strict scope; actual Windows junction reproduces representative errors. Exact CI shortname/junction form not established.",
+      "first_ci_head": "9e370d242c56b4e3dc2fd13039ada249a0cc5512",
+      "first_ci_run_id": 40440090188,
+      "first_native_failure_and_all_original_results_preserved": true,
+      "production_scope_unchanged": true,
+      "targeted": {
+        "elapsed_seconds": 52.25,
+        "errors": 0,
+        "failures": 0,
+        "production_scope_unchanged": true,
+        "public_guard_checkout_manifest_matches": {
+          "core.autocrlf=false": true,
+          "core.autocrlf=true": true
+        },
+        "real_windows_junction_tests": 37,
+        "skipped": 0
+      },
+      "ubuntu": "success",
+      "windows": "failure",
+      "windows_errors": 31
+    },
     "direct_dependency_regression_passed_before_continuation": 104,
     "final_clean_regression": {
       "clean_dir": "F:\\项目\\agent安全\\results\\native_semantic_release_clean_20261027T102911",
@@ -491,6 +514,7 @@
       "tests_run": 1731
     },
     "final_clean_regression_receipt_sha256": "e8d7d2a22a787593eb09ada5e8c1abbc9df7b7b9a124e7458e102ebc1d4fa525",
+    "final_clean_regression_scope": "Recorded local full regression before test-only canonical-temp-path and public asset LF fixes; immutable receipt retained. See CI of corrected commit for current full checkout validation.",
     "final_regression_expected_receipt": "results/native_semantic_release_regression_summary.json",
     "frozen_continuation_offline_tests": 13,
     "frozen_original_driver_offline_tests": 24,
