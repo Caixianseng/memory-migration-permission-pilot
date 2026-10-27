@@ -251,6 +251,9 @@ class RelationOccurrenceProbeTests(unittest.TestCase):
                 class LocalFixture(original_qwen):
                     def __init__(self):
                         super().__init__(transport=backend)
+                    def _transport(self, method, path, body=None):
+                        # execute wraps this method, not the constructor's transport.
+                        return backend(method, path, body)
                     def __call__(self, **kwargs):
                         response = super().__call__(**kwargs)
                         response["local_calls"] += int(mismatch)
@@ -280,6 +283,8 @@ class RelationOccurrenceProbeTests(unittest.TestCase):
                                              set_num_interop_threads=Mock(), manual_seed=Mock())
                 close = Mock(return_value={"status": "offline-test-complete"})
                 with patch.object(probe, "verify", return_value=(plan, texts)), \
+                     patch("socket.create_connection", side_effect=AssertionError("offline test network forbidden")) as connect, \
+                     patch("socket.socket.connect", side_effect=AssertionError("offline test socket forbidden")) as socket_connect, \
                      patch.object(probe.common, "checked_assets", return_value=plan["assets"]), \
                      patch.object(probe.common, "install_network_guard"), \
                      patch.object(probe, "PinnedNLIRuntime", return_value=nli), \
@@ -310,6 +315,10 @@ class RelationOccurrenceProbeTests(unittest.TestCase):
                     self.assertEqual(close.call_count, 1)
                     self.assertEqual(len(close.call_args.args[2]), 72)
                 nli_predict.assert_not_called()
+                connect.assert_not_called()
+                socket_connect.assert_not_called()
+                self.assertEqual(sum(call.args[0] == "POST" for call in backend.call_args_list),
+                                 1 if mismatch else 24)
 
 
 if __name__ == "__main__":

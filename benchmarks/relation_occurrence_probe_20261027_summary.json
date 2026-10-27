@@ -4,6 +4,7 @@
     "http_transport_capture.json": "228cfbd1eb9c9f253b39506da1f5ccd020e83c664cd0d17a6db5e13e3eabae5a",
     "independent_verification.json": "98602cea629a5653aac6c18cfe8f318bffb1a1fe944f33bb54856a139227a964",
     "nli_capture.json": "1824ee46d7bc1e7eae84bf813526543312db8e788156d64c271d78b9fa0ff91d",
+    "offline_network_correction.json": "8ebf65b7b8bdf8a7582e770bbfa98d2c62b3ccfdf9d0ce231610486d4349cdbe",
     "offline_verification.json": "2381c08069fd24f2a748fa35346d4129cfb1cd047328f796f7ad3acbd4146a1b",
     "plan.json": "849ab4ca2cf2e4e21692b5532252f6f13c79ae0f92e320675bb2ea7286f4b8e2",
     "prediction_phase_closed.json": "77afb0f74fc0342cefcd03293be816c98f1088266a467dcee07e6f32a0f62cea",
@@ -317,6 +318,14 @@
   "offline_regression": {
     "changed_files": [],
     "ci": "Fresh commit CI must be checked separately; no old green result reused.",
+    "ci_failure_344d672": {
+      "errors": 2,
+      "fix": "Only test transport overridden and sockets prohibited; no production/experiment results changed.",
+      "reason": "Offline test real local transport was not replaced; CI lacks local Ollama.",
+      "run_id": 40465308249,
+      "skipped": 14,
+      "ubuntu_tests": 1852
+    },
     "default_system_temp": true,
     "errors": 7,
     "exit_code": 1,
@@ -325,9 +334,12 @@
     "fix": "Test-only explicit original 87-member list plus dependency isolation regression; production guard and old archives unchanged.",
     "fixture_sha256": "b608bf5ff8339c054c3c68999f0409f7008099d8b45d45d47b92d977fb95a525",
     "log_sha256": "5e01710211b2209255d84e973e290e92e237fd648a6d149cf494a98f08afc90f",
-    "new_model_calls": 0,
+    "new_model_calls": 25,
     "new_native_calls": 0,
+    "original_receipt_is_corrected_by": "unplanned_test_model_activity",
+    "original_receipt_new_model_calls": 0,
     "passed": 1844,
+    "post_fix_targeted_tests": 67,
     "repair_targeted_status": "passed",
     "repair_targeted_tests": 28,
     "skipped": 0,
@@ -391,6 +403,50 @@
     "ok": 15
   },
   "texts": 12,
+  "unplanned_test_model_activity": {
+    "activity_basis": "Passed fake-success path requires24 completed POSTs and mismatched path1; real inherited _transport was wrapped. No discarded temporary HTTP captures are claimed available.",
+    "actual_local_posts_per_completed_test": 25,
+    "affected_test": "tests/test_relation_occurrence_probe.py::test_execute_counts_actual_same_cell_posts_and_stops_on_a_mismatched_receipt",
+    "cause": "The driver wraps local._transport; the test injected only constructor transport, leaving real LocalSensitivityAgent._transport reachable. Local service availability masked the leak.",
+    "cloud_or_paid_api_calls": 0,
+    "confirmed_unplanned_local_posts_lower_bound": 100,
+    "disclosure": "The original effect experiment remains sealed. The release differs from frozen experiment only in test maintenance; no model outputs/gold/thresholds were edited.",
+    "exact_all_test_run_total": null,
+    "experiment_original_files_modified": false,
+    "experiment_run_posts": 28,
+    "fix": "Override the test fixture _transport itself; prohibit socket.create_connection and socket.socket.connect and assert neither used; count mocked POSTs. Production driver unchanged.",
+    "fixed_test_sha256": "aed4f6d8338d92a2b4d3dcff95517e62906237d7c7f04a56a048cc2a6f6e5d14",
+    "frozen_test_sha256": "a4f6307ece2637e1806649cdf6f855dad77299b5374d085dc946a7a128e906a1",
+    "full1851_regression_actual_local_posts": 25,
+    "known_completed_pre_fix_runs": [
+      {
+        "runner": "root",
+        "tests": 52,
+        "tool_chunk": "d8bb4d"
+      },
+      {
+        "runner": "root",
+        "tests": 55,
+        "tool_chunk": "a692c3"
+      },
+      {
+        "runner": "root",
+        "tests": 1851,
+        "tool_chunk": "ca5f72"
+      },
+      {
+        "evidence": "Agent completed run report; further run inventory being verified.",
+        "runner": "ontology_contract_review",
+        "tests": 51
+      }
+    ],
+    "original_claim_correct": false,
+    "original_offline_verification_claim_new_model_calls": 0,
+    "post_fix_status": "passed",
+    "post_fix_targeted_tests": 67,
+    "schema": "offline_test_network_correction_v1",
+    "service": "127.0.0.1:11435 local Qwen; fixed synthetic statements only"
+  },
   "version": "relation_occurrence_probe_v1",
   "wall_seconds": 81.75
 }
