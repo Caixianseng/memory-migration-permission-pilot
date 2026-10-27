@@ -214,5 +214,17 @@
     "sha256": "33accda456b013a9b0f6f21c9d84c21a302c4d1c375af8c4201e3bba085aebe1",
     "new_model_calls": 0,
     "scope": "Independent replay of host validation and re-computation of all 96 scores, source/artifact bindings, actual call counts and full denominators; no inference rerun."
+  },
+  "post_execution_test_only_fix": {
+    "file": "tests/test_ontology_contract_probe.py",
+    "frozen_test_sha256": "3d681b00d80477b2c973c43f0c0cb021729d082deddd41ff591ae6ea657134e6",
+    "fixed_test_sha256": "c10cde9ad3d9e0a3b845086242e57815b4eea5db1188a5964764b39773a1e11e",
+    "cause": "Test observer compared unresolved temporary path with production-resolved path; real path alias reproduces missing observation.",
+    "original_closure_and_tamper_assertions_retained": true,
+    "target_tests_passed": 27,
+    "production_changed": false,
+    "frozen_evidence_changed": false,
+    "new_model_calls": 0,
+    "fix_evidence_sha256": "5abd01fa4c34e92917c810335b6f2f8c1e3607bf755c23d2af190268504400ae"
   }
 }

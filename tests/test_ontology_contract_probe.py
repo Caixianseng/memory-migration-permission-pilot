@@ -118,9 +118,15 @@ class OntologyProbeTests(unittest.TestCase):
                         probe.verify_implementation_archive(root, sources)
                 (archive / "extra.py").unlink(missing_ok=True)
 
-    def execute_snapshot_fixture(self, *, tamper=False):
+    def execute_snapshot_fixture(self, *, tamper=False, aliased_output=False):
         with tempfile.TemporaryDirectory() as directory:
-            output = Path(directory)
+            invocation_output = Path(directory)
+            if aliased_output:
+                (invocation_output / "existing-alias-component").mkdir()
+                invocation_output = invocation_output / "existing-alias-component" / ".."
+                self.assertNotEqual(invocation_output, invocation_output.resolve())
+            # Production resolves its input; observe the same canonical files.
+            output = invocation_output.resolve()
             (output / "implementation").mkdir()
             fixture = output / "implementation/fixture.py"
             fixture.write_text("# frozen offline fixture\n", encoding="utf-8")
@@ -177,9 +183,9 @@ class OntologyProbeTests(unittest.TestCase):
                  patch.object(probe, "score_rows", side_effect=score):
                 if tamper:
                     with self.assertRaisesRegex(ValueError, "probe_closed_evidence_changed"):
-                        probe.execute(output, "offline-test-plan")
+                        probe.execute(invocation_output, "offline-test-plan")
                 else:
-                    result = probe.execute(output, "offline-test-plan")
+                    result = probe.execute(invocation_output, "offline-test-plan")
             if tamper:
                 self.assertFalse((output / "report.json").exists())
                 self.assertFalse((output / "scored_rows.json").exists())
@@ -202,6 +208,11 @@ class OntologyProbeTests(unittest.TestCase):
 
     def test_scoring_tamper_of_closed_snapshot_stops_without_complete_report(self):
         self.execute_snapshot_fixture(tamper=True)
+
+    def test_snapshot_and_tamper_checks_survive_an_aliased_output_path(self):
+        for tamper in (False, True):
+            with self.subTest(tamper=tamper):
+                self.execute_snapshot_fixture(tamper=tamper, aliased_output=True)
 
     def test_status_keeps_semantic_review_unsupported_and_engineering_errors_distinct(self):
         review = {"status": "needs_review", "errors": ["semantic_uncertainty"], "findings": [], "local_calls": 1}
