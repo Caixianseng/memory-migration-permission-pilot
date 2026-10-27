@@ -1,0 +1,10 @@
+{
+  "status": "method_frozen_before_material_authoring",
+  "files": {
+    "memory_migration_study/occurrence_routing.py": "ac292aae19c090f1e30b5605582c92650e7ad5e74c1b7b488edc86934b1d1521",
+    "memory_migration_study/candidate_context_batch.py": "01455583d5c3cf901251fd50f4cd7927b88ad860d8a2d5a8140c0a99d1478581",
+    "docs/新材料条件标记_前瞻检验预注册_2026-10-27.md": "6523954b55a6efc539f13126276aeaae7a824f602227b8e11da63c8f99d16c0f"
+  },
+  "new_material_files_exist": false,
+  "new_model_calls": 0
+}

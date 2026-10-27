@@ -1,0 +1,864 @@
+{
+  "schema_version": "relation_occurrence_probe_evaluation_v1",
+  "runtime_sha256": "f5d5bffc15d4761c602b7f07b2271892707116bf266e54098db556c194efc916",
+  "profile_contract_sha256": {
+    "strict_customer_relation": "4eedf04950e28a3d069e6bd10fc533814f61da90a9c580413f95ffc7728b96a1",
+    "any_specific_organization": "e68c8f6c20e25d9386f8b82d00c8f2c0b06045960312aac698fc558d0836afcf"
+  },
+  "cases": [
+    {
+      "text_index": 0,
+      "text_sha256": "6b27e58d5176998a9ade0a6d5de6ad75e48fa6c6689d8e4da4125bc43892c14d",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 47,
+              "end": 72,
+              "text": "Velquince Instruments Ltd"
+            }
+          ],
+          "must_mask_values": [
+            "Velquince Instruments Ltd"
+          ]
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 47,
+              "end": 72,
+              "text": "Velquince Instruments Ltd"
+            }
+          ],
+          "must_mask_values": [
+            "Velquince Instruments Ltd"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "allowed_fact_00",
+        "match": "exact_substring",
+        "text": "The loading-bay door is blue.",
+        "start": 119,
+        "end": 148
+      }
+    },
+    {
+      "text_index": 1,
+      "text_sha256": "6d9870f30306cebddf35ad5ef4f9faa25f3b72c9179c9d6939274934cde3a80d",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 127,
+              "end": 147,
+              "text": "Yewlark Survey Works"
+            }
+          ],
+          "must_mask_values": [
+            "Yewlark Survey Works"
+          ]
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 5,
+              "end": 34,
+              "text": "Ardrill Packaging Cooperative"
+            },
+            {
+              "category": "CUSTOMER",
+              "start": 127,
+              "end": 147,
+              "text": "Yewlark Survey Works"
+            }
+          ],
+          "must_mask_values": [
+            "Ardrill Packaging Cooperative",
+            "Yewlark Survey Works"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "allowed_fact_01",
+        "match": "exact_substring",
+        "text": "The workshop clock shows 08:40.",
+        "start": 201,
+        "end": 232
+      }
+    },
+    {
+      "text_index": 2,
+      "text_sha256": "edd542c2672d3a9d99edd3c84038dad3b3228f968ae74174eafec5303306deb9",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 0,
+              "end": 19,
+              "text": "Pelthren Glassworks"
+            }
+          ],
+          "must_mask_values": [
+            "Pelthren Glassworks"
+          ]
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 0,
+              "end": 19,
+              "text": "Pelthren Glassworks"
+            }
+          ],
+          "must_mask_values": [
+            "Pelthren Glassworks"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "allowed_fact_02",
+        "match": "exact_substring",
+        "text": "The archive uses green folders.",
+        "start": 145,
+        "end": 176
+      }
+    },
+    {
+      "text_index": 3,
+      "text_sha256": "14dc022008f8cdf9928d9c7071012c73c6265ea3880b9fc654cbcfb432e353c9",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 30,
+              "end": 59,
+              "text": "Orrivane Orchard Services Ltd"
+            }
+          ],
+          "must_mask_values": [
+            "Orrivane Orchard Services Ltd"
+          ]
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 30,
+              "end": 59,
+              "text": "Orrivane Orchard Services Ltd"
+            }
+          ],
+          "must_mask_values": [
+            "Orrivane Orchard Services Ltd"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "allowed_fact_03",
+        "match": "exact_substring",
+        "text": "A spare key hangs beside the door.",
+        "start": 149,
+        "end": 183
+      }
+    },
+    {
+      "text_index": 4,
+      "text_sha256": "c2965fa6b8b85c4fffde5256147ae4775326ba5d30cb74119f4e099101ec8891",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "not_sensitive",
+          "spans": [],
+          "must_mask_values": []
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 27,
+              "end": 54,
+              "text": "Brindlequay Cartography Ltd"
+            }
+          ],
+          "must_mask_values": [
+            "Brindlequay Cartography Ltd"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "allowed_fact_04",
+        "match": "exact_substring",
+        "text": "The display shelf has four levels.",
+        "start": 138,
+        "end": 172
+      }
+    },
+    {
+      "text_index": 5,
+      "text_sha256": "1a8d352955ee8e5663eb4093377578bda85dc1912a2147ec7766a8bd11ca5f4e",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "not_sensitive",
+          "spans": [],
+          "must_mask_values": []
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 52,
+              "end": 82,
+              "text": "Kestrelune Ceramic Cooperative"
+            }
+          ],
+          "must_mask_values": [
+            "Kestrelune Ceramic Cooperative"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "allowed_fact_05",
+        "match": "exact_substring",
+        "text": "The demonstration starts at 14:20.",
+        "start": 133,
+        "end": 167
+      }
+    },
+    {
+      "text_index": 6,
+      "text_sha256": "6ccb943812af5bd44ea3cd055afa3be73695cb9b71c23e01e9738a6f5e1135fa",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "needs_review",
+          "spans": [],
+          "must_mask_values": []
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 40,
+              "end": 60,
+              "text": "Nimbrel Arc Labs Ltd"
+            }
+          ],
+          "must_mask_values": [
+            "Nimbrel Arc Labs Ltd"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "allowed_fact_06",
+        "match": "exact_substring",
+        "text": "The desk lamp has a white shade.",
+        "start": 147,
+        "end": 179
+      }
+    },
+    {
+      "text_index": 7,
+      "text_sha256": "96cba7693b89cf1d1f4cca4032b4987a3873f6c542257a1eeb94ad428f749b5f",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "needs_review",
+          "spans": [],
+          "must_mask_values": []
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 54,
+              "end": 79,
+              "text": "Wexor Lantern Association"
+            }
+          ],
+          "must_mask_values": [
+            "Wexor Lantern Association"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "allowed_fact_07",
+        "match": "exact_substring",
+        "text": "The photograph is stored in drawer three.",
+        "start": 166,
+        "end": 207
+      }
+    },
+    {
+      "text_index": 8,
+      "text_sha256": "044ae74c9627dfa3086522bb7336ec37c4af641f10b223e422448e4107976489",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "not_sensitive",
+          "spans": [],
+          "must_mask_values": []
+        },
+        "any_specific_organization": {
+          "decision": "not_sensitive",
+          "spans": [],
+          "must_mask_values": []
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "allowed_fact_08",
+        "match": "exact_substring",
+        "text": "The handbook has a yellow cover.",
+        "start": 171,
+        "end": 203
+      }
+    },
+    {
+      "text_index": 9,
+      "text_sha256": "c7dee4d26fcada8aa9c17f9fd6e318b44e02a1ca162d3ddccaab3aba8c7e03a3",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "not_sensitive",
+          "spans": [],
+          "must_mask_values": []
+        },
+        "any_specific_organization": {
+          "decision": "not_sensitive",
+          "spans": [],
+          "must_mask_values": []
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "allowed_fact_09",
+        "match": "exact_substring",
+        "text": "The training room opens at 09:15.",
+        "start": 186,
+        "end": 219
+      }
+    },
+    {
+      "text_index": 10,
+      "text_sha256": "5eca6368f7ab4848eeb5b12d2650d377004aa148d7e616a6889a046e706501fa",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 86,
+              "end": 92,
+              "text": "quiver"
+            }
+          ],
+          "must_mask_values": [
+            "quiver"
+          ]
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 86,
+              "end": 92,
+              "text": "quiver"
+            }
+          ],
+          "must_mask_values": [
+            "quiver"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "allowed_fact_10",
+        "match": "exact_substring",
+        "text": "The exercise is printed on one sheet.",
+        "start": 181,
+        "end": 218
+      }
+    },
+    {
+      "text_index": 11,
+      "text_sha256": "4733bbf316a7d3b76b82d0bb014e3704bba4a504a0c171f0277c0c792fe3c27b",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 78,
+              "end": 82,
+              "text": "hush"
+            }
+          ],
+          "must_mask_values": [
+            "hush"
+          ]
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 78,
+              "end": 82,
+              "text": "hush"
+            }
+          ],
+          "must_mask_values": [
+            "hush"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "allowed_fact_11",
+        "match": "exact_substring",
+        "text": "The margin is two centimetres wide.",
+        "start": 189,
+        "end": 224
+      }
+    },
+    {
+      "text_index": 12,
+      "text_sha256": "623af557f8a9f658129ede12b6bafbdc6f525ebc638c36250c6ee97ef25a2154",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 4,
+              "end": 14,
+              "text": "澄砾测绘器材有限公司"
+            }
+          ],
+          "must_mask_values": [
+            "澄砾测绘器材有限公司"
+          ]
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 4,
+              "end": 14,
+              "text": "澄砾测绘器材有限公司"
+            }
+          ],
+          "must_mask_values": [
+            "澄砾测绘器材有限公司"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "allowed_fact_12",
+        "match": "exact_substring",
+        "text": "库房东侧有一扇圆窗。",
+        "start": 39,
+        "end": 49
+      }
+    },
+    {
+      "text_index": 13,
+      "text_sha256": "71f7c05c4955b4ae30e80ebfe53687d4864b32d75e1c184f700db5ae17459e33",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 39,
+              "end": 47,
+              "text": "栖铆观测科技公司"
+            }
+          ],
+          "must_mask_values": [
+            "栖铆观测科技公司"
+          ]
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 0,
+              "end": 7,
+              "text": "峦萤包装合作社"
+            },
+            {
+              "category": "CUSTOMER",
+              "start": 39,
+              "end": 47,
+              "text": "栖铆观测科技公司"
+            }
+          ],
+          "must_mask_values": [
+            "峦萤包装合作社",
+            "栖铆观测科技公司"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "allowed_fact_13",
+        "match": "exact_substring",
+        "text": "接待室的时钟停在十点十分。",
+        "start": 50,
+        "end": 63
+      }
+    },
+    {
+      "text_index": 14,
+      "text_sha256": "360bfb43171cb50b08afd30db01076e5393a71e0c8fb763c96a9ecd2315927cc",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 0,
+              "end": 10,
+              "text": "朔岚温室设备有限公司"
+            }
+          ],
+          "must_mask_values": [
+            "朔岚温室设备有限公司"
+          ]
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 0,
+              "end": 10,
+              "text": "朔岚温室设备有限公司"
+            }
+          ],
+          "must_mask_values": [
+            "朔岚温室设备有限公司"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "allowed_fact_14",
+        "match": "exact_substring",
+        "text": "档案袋采用牛皮纸。",
+        "start": 58,
+        "end": 67
+      }
+    },
+    {
+      "text_index": 15,
+      "text_sha256": "79e80c7c7476fd8cc9f6d7601a24b370b83b948409ce48bd087e918e96a03d65",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 6,
+              "end": 13,
+              "text": "穗隙工坊合作社"
+            }
+          ],
+          "must_mask_values": [
+            "穗隙工坊合作社"
+          ]
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 6,
+              "end": 13,
+              "text": "穗隙工坊合作社"
+            }
+          ],
+          "must_mask_values": [
+            "穗隙工坊合作社"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "allowed_fact_15",
+        "match": "exact_substring",
+        "text": "备用遥控器放在上层抽屉。",
+        "start": 52,
+        "end": 64
+      }
+    },
+    {
+      "text_index": 16,
+      "text_sha256": "c9059291ffa7a80890f73ae14ea5db139e26030d0bbcc65debc67ad451e8d220",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "not_sensitive",
+          "spans": [],
+          "must_mask_values": []
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 0,
+              "end": 8,
+              "text": "澜苔音像器材公司"
+            }
+          ],
+          "must_mask_values": [
+            "澜苔音像器材公司"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "allowed_fact_16",
+        "match": "exact_substring",
+        "text": "白板旁边挂着一把直尺。",
+        "start": 44,
+        "end": 55
+      }
+    },
+    {
+      "text_index": 17,
+      "text_sha256": "d5fcedc80c2e79da80037c50695e76caaca6dfd8ebf9787eade2cabc6315f71e",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "not_sensitive",
+          "spans": [],
+          "must_mask_values": []
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 17,
+              "end": 24,
+              "text": "砚穹石材合作社"
+            }
+          ],
+          "must_mask_values": [
+            "砚穹石材合作社"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "allowed_fact_17",
+        "match": "exact_substring",
+        "text": "说明会安排在周四上午。",
+        "start": 47,
+        "end": 58
+      }
+    },
+    {
+      "text_index": 18,
+      "text_sha256": "4eb37d5af65170ebcbc13a32ded8dad92732b3c5102323c4f3288d0a98f3043a",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "needs_review",
+          "spans": [],
+          "must_mask_values": []
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 9,
+              "end": 19,
+              "text": "汀栾水文技术有限公司"
+            }
+          ],
+          "must_mask_values": [
+            "汀栾水文技术有限公司"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "allowed_fact_18",
+        "match": "exact_substring",
+        "text": "值班室的墙面是浅灰色。",
+        "start": 43,
+        "end": 54
+      }
+    },
+    {
+      "text_index": 19,
+      "text_sha256": "21d8320b7d076ac3dbc1b9a31ab00294abf66dfda1d9e12b872c6558582f5fb3",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "needs_review",
+          "spans": [],
+          "must_mask_values": []
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 10,
+              "end": 16,
+              "text": "棠隅园艺协会"
+            }
+          ],
+          "must_mask_values": [
+            "棠隅园艺协会"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "allowed_fact_19",
+        "match": "exact_substring",
+        "text": "海报右下角画着三颗星。",
+        "start": 44,
+        "end": 55
+      }
+    },
+    {
+      "text_index": 20,
+      "text_sha256": "083040d717ff0cfb09da16baac08179848d542df98449d621f6ee1f7bc63d15e",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "not_sensitive",
+          "spans": [],
+          "must_mask_values": []
+        },
+        "any_specific_organization": {
+          "decision": "not_sensitive",
+          "spans": [],
+          "must_mask_values": []
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "allowed_fact_20",
+        "match": "exact_substring",
+        "text": "教材第八页是一张流程图。",
+        "start": 45,
+        "end": 57
+      }
+    },
+    {
+      "text_index": 21,
+      "text_sha256": "ee499d9a241474cb27ba22b00372af6ef71cfffea2cc1b72b3341e629233ffb8",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "not_sensitive",
+          "spans": [],
+          "must_mask_values": []
+        },
+        "any_specific_organization": {
+          "decision": "not_sensitive",
+          "spans": [],
+          "must_mask_values": []
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "allowed_fact_21",
+        "match": "exact_substring",
+        "text": "空表使用横向版式。",
+        "start": 50,
+        "end": 59
+      }
+    },
+    {
+      "text_index": 22,
+      "text_sha256": "411bcb7892e8a2945b3acfb531e908ad6acdbcedab3b7ab755b150afcbe777a2",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 24,
+              "end": 26,
+              "text": "苔藓"
+            }
+          ],
+          "must_mask_values": [
+            "苔藓"
+          ]
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 24,
+              "end": 26,
+              "text": "苔藓"
+            }
+          ],
+          "must_mask_values": [
+            "苔藓"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "allowed_fact_22",
+        "match": "exact_substring",
+        "text": "笔记封面上有两个圆点。",
+        "start": 55,
+        "end": 66
+      }
+    },
+    {
+      "text_index": 23,
+      "text_sha256": "1d75ce3d3a94d6178c4105c98356b29d509be5b259ee03cc2120176870cf4596",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 25,
+              "end": 27,
+              "text": "涟漪"
+            }
+          ],
+          "must_mask_values": [
+            "涟漪"
+          ]
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "category": "CUSTOMER",
+              "start": 25,
+              "end": 27,
+              "text": "涟漪"
+            }
+          ],
+          "must_mask_values": [
+            "涟漪"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "allowed_fact_23",
+        "match": "exact_substring",
+        "text": "教室门牌是白底黑字。",
+        "start": 61,
+        "end": 71
+      }
+    }
+  ]
+}

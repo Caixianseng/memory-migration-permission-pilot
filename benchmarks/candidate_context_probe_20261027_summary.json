@@ -1,0 +1,96 @@
+{
+  "by_arm": {
+    "marked": {
+      "allowed_fact_retained": 8,
+      "cells": 12,
+      "fn": 0,
+      "fp": 0,
+      "fully_masked_spans": 6,
+      "known": 10,
+      "known_exact": 8,
+      "known_prepared": 8,
+      "precision": 1.0,
+      "prepared": 8,
+      "prepared_incomplete_spans": 0,
+      "recall": 1.0,
+      "reference_spans": 6,
+      "statuses": {
+        "needs_review": 4,
+        "ok": 8
+      },
+      "tp": 6,
+      "unknown": 2,
+      "unknown_negative": 0,
+      "unknown_review": 2
+    },
+    "plain": {
+      "allowed_fact_retained": 9,
+      "cells": 12,
+      "fn": 1,
+      "fp": 0,
+      "fully_masked_spans": 5,
+      "known": 10,
+      "known_exact": 9,
+      "known_prepared": 9,
+      "precision": 1.0,
+      "prepared": 9,
+      "prepared_incomplete_spans": 0,
+      "recall": 0.8333333333333334,
+      "reference_spans": 6,
+      "statuses": {
+        "needs_review": 3,
+        "ok": 9
+      },
+      "tp": 5,
+      "unknown": 2,
+      "unknown_negative": 0,
+      "unknown_review": 2
+    }
+  },
+  "closure_sha256": "302addbac4b163bdac625bacb0d4021c0665d7afebb3f8862cbc5e7256a138c7",
+  "cloud_calls": 0,
+  "generation_posts": 24,
+  "native_calls": 0,
+  "network": {
+    "blocked_connects": 0,
+    "loopback_connects": 28
+  },
+  "plan_sha256": "c4db2ee1a00360c4534f037581348c6c2d133d1c20daddab8eed35f585bb12fd",
+  "repairs": 0,
+  "scope": "Exposed development diagnosis; no independent acceptance, downstream task or novelty claim.",
+  "status": "complete",
+  "unique_development_texts": 12,
+  "version": "candidate_context_probe_v1",
+  "artifacts_sha256": {
+    "plan.json": "c4db2ee1a00360c4534f037581348c6c2d133d1c20daddab8eed35f585bb12fd",
+    "predictions.json": "bf478b491b09a78b1f39aa8631074dd58491f13793f83f1f5729261c8266669a",
+    "prediction_phase_closed.json": "302addbac4b163bdac625bacb0d4021c0665d7afebb3f8862cbc5e7256a138c7",
+    "report.json": "fd443d5b808e7f09f81493d6d82a5114a0601852614dd03fcf76b9c9defa9c64"
+  },
+  "tests": {
+    "passed": 76,
+    "elapsed_seconds": 0.931,
+    "full_suite": false
+  },
+  "marked_advance_gate_passed": false,
+  "default_changed": false,
+  "actual_model_tokens": {
+    "plain": {
+      "input": 4823,
+      "output": 274
+    },
+    "marked": {
+      "input": 5163,
+      "output": 274
+    }
+  },
+  "independent_review": {
+    "hashes": "matched",
+    "raw_decode": "matched",
+    "actual_mask_replay": "matched",
+    "rescoring": "matched",
+    "plain_marker_roundtrip_and_full_inventory": "matched",
+    "new_model_calls": 0,
+    "new_network_calls": 0
+  }
+}

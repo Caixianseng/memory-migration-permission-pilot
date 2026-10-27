@@ -1,0 +1,195 @@
+{
+  "by_profile_arm": {
+    "any_specific_organization/native_span_attributes": {
+      "acl_exercised": 10,
+      "acl_not_exercised": 2,
+      "acl_rejected": 10,
+      "cells": 12,
+      "coverage_review": 2,
+      "determinate_allowed_fact_retained_cells": 10,
+      "determinate_cells": 12,
+      "determinate_exact_matches": 5,
+      "determinate_processable_cells": 10,
+      "engineering_error": 0,
+      "fn": 4,
+      "fp": 6,
+      "invalid": 0,
+      "model_output_invalid": 0,
+      "needs_review": 0,
+      "ok": 10,
+      "payload_sent_cells": 10,
+      "precision": 0.5714285714285714,
+      "recall": 0.6666666666666666,
+      "required_raw_leak_cells": 0,
+      "required_raw_leak_rate_all": 0.0,
+      "required_raw_leak_rate_sent": 0.0,
+      "tp": 8,
+      "unknown_cells": 0,
+      "unknown_clean_negative_cells": 0,
+      "unknown_review_matches": 0,
+      "unsupported": 0
+    },
+    "strict_customer_relation/native_span_attributes": {
+      "acl_exercised": 0,
+      "acl_not_exercised": 12,
+      "acl_rejected": 0,
+      "cells": 12,
+      "coverage_review": 2,
+      "determinate_allowed_fact_retained_cells": 0,
+      "determinate_cells": 10,
+      "determinate_exact_matches": 0,
+      "determinate_processable_cells": 0,
+      "engineering_error": 0,
+      "fn": 6,
+      "fp": 0,
+      "invalid": 0,
+      "model_output_invalid": 0,
+      "needs_review": 10,
+      "ok": 0,
+      "payload_sent_cells": 0,
+      "precision": null,
+      "recall": 0.0,
+      "required_raw_leak_cells": 0,
+      "required_raw_leak_rate_all": 0.0,
+      "required_raw_leak_rate_sent": null,
+      "tp": 0,
+      "unknown_cells": 2,
+      "unknown_clean_negative_cells": 0,
+      "unknown_review_matches": 2,
+      "unsupported": 0
+    }
+  },
+  "closure_sha256": "bebcefc64cb08d65fecfde915e845d02f2ed088659a152145c94372596441670",
+  "cloud_calls": 0,
+  "counts": {
+    "attribute_attach_entries": 12,
+    "encoder_forward_entries": 12,
+    "explicit_span_score_entries": 12,
+    "extract_invocations": 12
+  },
+  "default_changed": false,
+  "native_product_calls": 0,
+  "network_attempts": 0,
+  "nli_calls": 0,
+  "opportunities": 24,
+  "plan_sha256": "aba68b46136b8078c23b5a07d861328903f009f143b8775a7e59667f5eaff0fe",
+  "predictions_sha256": "6b5908a9ced865b1ca20276e553616498f8e3fab46f59c0229ee80f30c75e09d",
+  "qwen_calls": 0,
+  "schema": "native_span_attribute_result_v1",
+  "scope": "Existing API strong baseline on exposed development data; no innovation or holdout claim.",
+  "status": "complete",
+  "texts": 12,
+  "wall_seconds": 40.20300000000134,
+  "report_sha256": "6a1f75e2f8b1435689ff44a179d8fdf5bf04be5916048cf193a29fe68f8a8e1f",
+  "source_evidence": "results/native_span_attribute_probe_20261027_run_01",
+  "verified_asset_files": 99,
+  "prior_results": {
+    "strict_customer_relation/occurrence_qwen": {
+      "determinate_cells": 10,
+      "determinate_exact_matches": 2,
+      "determinate_processable_cells": 3,
+      "payload_sent_cells": 3,
+      "required_raw_leak_cells": 1,
+      "unknown_cells": 2,
+      "unknown_review_matches": 2
+    },
+    "strict_customer_relation/gliner_relation": {
+      "determinate_cells": 10,
+      "determinate_exact_matches": 0,
+      "determinate_processable_cells": 0,
+      "payload_sent_cells": 1,
+      "required_raw_leak_cells": 0,
+      "unknown_cells": 2,
+      "unknown_review_matches": 1
+    },
+    "strict_customer_relation/nli_relation": {
+      "determinate_cells": 10,
+      "determinate_exact_matches": 0,
+      "determinate_processable_cells": 0,
+      "payload_sent_cells": 0,
+      "required_raw_leak_cells": 0,
+      "unknown_cells": 2,
+      "unknown_review_matches": 2
+    },
+    "any_specific_organization/occurrence_qwen": {
+      "determinate_cells": 12,
+      "determinate_exact_matches": 7,
+      "determinate_processable_cells": 10,
+      "payload_sent_cells": 10,
+      "required_raw_leak_cells": 2,
+      "unknown_cells": 0,
+      "unknown_review_matches": 0
+    },
+    "any_specific_organization/gliner_relation": {
+      "determinate_cells": 12,
+      "determinate_exact_matches": 0,
+      "determinate_processable_cells": 1,
+      "payload_sent_cells": 1,
+      "required_raw_leak_cells": 1,
+      "unknown_cells": 0,
+      "unknown_review_matches": 0
+    },
+    "any_specific_organization/nli_relation": {
+      "determinate_cells": 12,
+      "determinate_exact_matches": 0,
+      "determinate_processable_cells": 0,
+      "payload_sent_cells": 0,
+      "required_raw_leak_cells": 0,
+      "unknown_cells": 0,
+      "unknown_review_matches": 0
+    }
+  },
+  "offline_scorer_differential": {
+    "arms": 3,
+    "rows": 72,
+    "matching_common_aggregates": 162,
+    "new_model_calls": 0
+  },
+  "decision": "Do not adopt; preregistered progression criterion failed.",
+  "partial_redaction_witnesses": [
+    {
+      "text_index": 8,
+      "unmasked_fragment": "具有限公司",
+      "meaning": "Full raw name absent but source-name suffix remains."
+    },
+    {
+      "text_index": 9,
+      "unmasked_fragment": "雾稞仪表",
+      "meaning": "Full raw name absent but distinctive source-name prefix remains."
+    }
+  ],
+  "partial_residual_audit": "Post hoc observed witnesses, not a complete semantic leakage metric.",
+  "independent_holdout": false,
+  "paper_innovation_established": false,
+  "goal_complete": false,
+  "local_regression": {
+    "tests": 1911,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "connections": {
+      "fixture_loopback": 862,
+      "forbidden": 0
+    },
+    "dependencies": {
+      "jsonschema": "4.26.0",
+      "fastapi": "0.136.3",
+      "httpx": "0.28.1",
+      "starlette": "1.9.0"
+    },
+    "python": "F:\\项目\\agent安全\\.runtime\\ci-test-venv\\Scripts\\python.exe",
+    "wall_seconds": 383.9689999999973,
+    "successful": true,
+    "source_sha256": "d5f823070dfa8cbf90e852133fa480d072d11f9cd1eda8fd3c56ff2f65af204a"
+  },
+  "first_regression_attempt": {
+    "source": "results/native_span_attribute_validation_20261027.json",
+    "tests": 1911,
+    "failures": 19,
+    "errors": 42,
+    "blocked_connections": 61,
+    "valid_full_regression": false,
+    "cause": "Overbroad network guard blocked owned fixture HTTP; default Anaconda lacked pinned FastAPI/Starlette dependencies."
+  },
+  "github_ci_for_this_change": "not_run"
+}

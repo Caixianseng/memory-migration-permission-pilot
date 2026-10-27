@@ -156,7 +156,7 @@ def execute(path,*,factory=bridge.WorkerRPC):
     post={"code":bridge.verify_sha_table(plan["code_sha256"]),"assets":bridge.verify_sha_table(plan["asset_sha256"])}
     instrumentation=(error is None and len(result.get("snapshots",{}))==6 and len(result.get("deletions",[]))==2
         and len(final.get("native_requests",[]))==164 and final.get("native_embedding_function_invocations")==21
-        and observed.get("snapshot_calls")==6 and observed.get("search_calls")==len(rows)==15 and not observed.get("observer_errors")
+        and observed.get("snapshot_calls")==6 and observed.get("search_calls")==len(rows)==15 and not observed.get("observer_errors") and observed.get("observer_failure") is False
         and all(r.get("variant_calls")==1 and r.get("literal_original_function_calls")==0
             and r.get("trace_disabled_before") and r.get("trace_disabled_after") for r in rows)
         and final.get("generation_attempts")==0 and all(e.get("allowed") is True for e in final.get("network_events",[]))

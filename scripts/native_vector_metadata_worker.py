@@ -75,7 +75,7 @@ def instrument_search(source,filename,namespace,observer,expected_sha):
 
 class MetadataSearch:
     def __init__(self,original,identities,stage_provider,*,source=None,filename=None,expected_sha=CHROMA_SHA):
-        self.calls=[];self.observer_errors=[];self.local=threading.local();self.stage=stage_provider
+        self.calls=[];self.observer_errors=[];self.observer_failure=False;self.local=threading.local();self.stage=stage_provider
         self.actors={"user-memory-"+identifier:actor for actor,identifier in identities.items()};self.signature=inspect.signature(original)
         path=Path(filename or original.__code__.co_filename)
         raw=path.read_bytes() if source is None else source.encode("utf-8")
@@ -83,10 +83,15 @@ class MetadataSearch:
         function,self.receipt=instrument_search(raw.decode("utf-8"),str(path),original.__func__.__globals__,self.observe,expected_sha)
         require(original.__func__.__closure__ is None and original.__code__.co_firstlineno==self.receipt["original_first_line"],"chroma_original_function_changed")
         self.observed=types.MethodType(function,original.__self__)
+    def observer_failed(self,code):
+        # Evidence failure disqualifies the diagnostic without changing backend behavior.
+        self.observer_failure=True;self.observer_errors.append(code)
+        row=getattr(self.local,"row",None)
+        if row is not None:row["observer_failure"]=True
     def observe(self,error):
         try:self.local.row["exception_events"].append(exception_metadata(error))
         except BaseException:
-            self.observer_errors.append("metadata_observer_failed");raise RuntimeError("metadata_observer_failed") from None
+            self.observer_failed("metadata_observer_failed")
     def __call__(self,*args,**kwargs):
         require(sys.gettrace() is None,"trace_must_be_disabled")
         require(len(self.calls)<15,"search_budget_exceeded")
@@ -94,15 +99,18 @@ class MetadataSearch:
         actor=self.actors.get(params["collection_name"])
         require(actor is not None and params["limit"]==100 and params["filter"] is None,"search_scope_changed")
         row={"stage":deepcopy(self.stage()),"actor":actor,"collection_name":params["collection_name"],"started_ns":time.perf_counter_ns(),
-            "exception_events":[],"variant_calls":1,"literal_original_function_calls":0,"trace_disabled_before":True}
+            "exception_events":[],"observer_failure":False,"variant_calls":1,"literal_original_function_calls":0,"trace_disabled_before":True}
         self.local.row=row
         try:
             value=self.observed(*args,**kwargs)
             row["return_kind"]="none" if value is None else type(value).__name__
-            row["none_reason"]=("caught_exception" if row["exception_events"] else "non_exception_branch") if value is None else None
+            row["none_reason"]=("observation_failed" if row["observer_failure"] else
+                "caught_exception" if row["exception_events"] else "non_exception_branch") if value is None else None
             return value
         except BaseException as error:
-            row["outward_exception"]=exception_metadata(error);raise
+            try:row["outward_exception"]=exception_metadata(error)
+            except BaseException:self.observer_failed("outward_exception_observer_failed")
+            raise
         finally:
             row["finished_ns"]=time.perf_counter_ns();row["trace_disabled_after"]=sys.gettrace() is None
             self.calls.append(row);del self.local.row
@@ -150,6 +158,7 @@ class MetadataTargetWorker(TargetWorker):
         if hasattr(self,"metadata_search"):
             result["metadata_only"]={"snapshot_calls":self.snapshot_ordinal,"search_calls":len(self.metadata_search.calls),
                 "observations":deepcopy(self.metadata_search.calls),"observer_errors":list(self.metadata_search.observer_errors),
+                "observer_failure":self.metadata_search.observer_failure,
                 "implementation":deepcopy(self.metadata_search.receipt),"extra_native_reads":0,"sys_settrace_used":False}
         return result
 

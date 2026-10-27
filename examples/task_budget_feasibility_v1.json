@@ -1,0 +1,473 @@
+{
+  "schema": "task_budget_feasibility_fixtures_v1",
+  "purpose": "Synthetic mechanism checks, not independent tasks or native product evidence.",
+  "cases": [
+    {
+      "schema_version": 1,
+      "case_id": "single_principal_merges_all",
+      "data_origin": "synthetic_development",
+      "actors": [
+        "a"
+      ],
+      "records": [
+        {
+          "source_id": "m1",
+          "readers": [
+            "a"
+          ],
+          "export_allowed": true,
+          "max_target_copies": 2,
+          "preserve_all_readers": false
+        },
+        {
+          "source_id": "m2",
+          "readers": [
+            "a"
+          ],
+          "export_allowed": true,
+          "max_target_copies": 2,
+          "preserve_all_readers": false
+        },
+        {
+          "source_id": "m3",
+          "readers": [
+            "a"
+          ],
+          "export_allowed": true,
+          "max_target_copies": 2,
+          "preserve_all_readers": false
+        },
+        {
+          "source_id": "m4",
+          "readers": [
+            "a"
+          ],
+          "export_allowed": true,
+          "max_target_copies": 2,
+          "preserve_all_readers": false
+        }
+      ],
+      "target": {
+        "max_groups": 1,
+        "implicit_readers": [],
+        "allowed_reader_sets": null,
+        "constraint_origin": "synthetic"
+      },
+      "tasks": [
+        {
+          "task_id": "all",
+          "actor_id": "a",
+          "required_sets": [
+            [
+              "m1",
+              "m2",
+              "m3",
+              "m4"
+            ]
+          ],
+          "weight": 1,
+          "requirement_origin": "synthetic_predeclared"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "case_id": "binding_budget_complementarity",
+      "data_origin": "synthetic_development",
+      "actors": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "records": [
+        {
+          "source_id": "m1",
+          "readers": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "export_allowed": true,
+          "max_target_copies": 2,
+          "preserve_all_readers": false
+        },
+        {
+          "source_id": "m2",
+          "readers": [
+            "a"
+          ],
+          "export_allowed": true,
+          "max_target_copies": 2,
+          "preserve_all_readers": false
+        }
+      ],
+      "target": {
+        "max_groups": 1,
+        "implicit_readers": [],
+        "allowed_reader_sets": null,
+        "constraint_origin": "synthetic"
+      },
+      "tasks": [
+        {
+          "task_id": "joint",
+          "actor_id": "a",
+          "required_sets": [
+            [
+              "m1",
+              "m2"
+            ]
+          ],
+          "weight": 1,
+          "requirement_origin": "synthetic_predeclared"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "case_id": "same_matrix_budget_relaxed",
+      "data_origin": "synthetic_development",
+      "actors": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "records": [
+        {
+          "source_id": "m1",
+          "readers": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "export_allowed": true,
+          "max_target_copies": 2,
+          "preserve_all_readers": false
+        },
+        {
+          "source_id": "m2",
+          "readers": [
+            "a"
+          ],
+          "export_allowed": true,
+          "max_target_copies": 2,
+          "preserve_all_readers": false
+        }
+      ],
+      "target": {
+        "max_groups": 2,
+        "implicit_readers": [],
+        "allowed_reader_sets": null,
+        "constraint_origin": "synthetic"
+      },
+      "tasks": [
+        {
+          "task_id": "joint",
+          "actor_id": "a",
+          "required_sets": [
+            [
+              "m1",
+              "m2"
+            ]
+          ],
+          "weight": 1,
+          "requirement_origin": "synthetic_predeclared"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "case_id": "one_copy_partial_audience",
+      "data_origin": "synthetic_development",
+      "actors": [
+        "a",
+        "b"
+      ],
+      "records": [
+        {
+          "source_id": "m",
+          "readers": [
+            "a",
+            "b"
+          ],
+          "export_allowed": true,
+          "max_target_copies": 1,
+          "preserve_all_readers": false
+        }
+      ],
+      "target": {
+        "max_groups": 1,
+        "implicit_readers": [],
+        "allowed_reader_sets": [
+          [
+            "a"
+          ],
+          [
+            "b"
+          ]
+        ],
+        "constraint_origin": "synthetic"
+      },
+      "tasks": [
+        {
+          "task_id": "read",
+          "actor_id": "a",
+          "required_sets": [
+            [
+              "m"
+            ]
+          ],
+          "weight": 1,
+          "requirement_origin": "synthetic_predeclared"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "case_id": "one_copy_preserve_audience",
+      "data_origin": "synthetic_development",
+      "actors": [
+        "a",
+        "b"
+      ],
+      "records": [
+        {
+          "source_id": "m",
+          "readers": [
+            "a",
+            "b"
+          ],
+          "export_allowed": true,
+          "max_target_copies": 1,
+          "preserve_all_readers": true
+        }
+      ],
+      "target": {
+        "max_groups": 1,
+        "implicit_readers": [],
+        "allowed_reader_sets": [
+          [
+            "a"
+          ],
+          [
+            "b"
+          ]
+        ],
+        "constraint_origin": "synthetic"
+      },
+      "tasks": [
+        {
+          "task_id": "read",
+          "actor_id": "a",
+          "required_sets": [
+            [
+              "m"
+            ]
+          ],
+          "weight": 1,
+          "requirement_origin": "synthetic_predeclared"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "case_id": "export_and_unknown_denominators",
+      "data_origin": "synthetic_development",
+      "actors": [
+        "a"
+      ],
+      "records": [
+        {
+          "source_id": "m1",
+          "readers": [
+            "a"
+          ],
+          "export_allowed": true,
+          "max_target_copies": 2,
+          "preserve_all_readers": false
+        },
+        {
+          "source_id": "m2",
+          "readers": [
+            "a"
+          ],
+          "export_allowed": false,
+          "max_target_copies": 2,
+          "preserve_all_readers": false
+        },
+        {
+          "source_id": "m3",
+          "readers": [
+            "a"
+          ],
+          "export_allowed": null,
+          "max_target_copies": 2,
+          "preserve_all_readers": false
+        },
+        {
+          "source_id": "m4",
+          "readers": null,
+          "export_allowed": true,
+          "max_target_copies": 2,
+          "preserve_all_readers": false
+        }
+      ],
+      "target": {
+        "max_groups": 1,
+        "implicit_readers": [],
+        "allowed_reader_sets": null,
+        "constraint_origin": "synthetic"
+      },
+      "tasks": [
+        {
+          "task_id": "known",
+          "actor_id": "a",
+          "required_sets": [
+            [
+              "m1"
+            ]
+          ],
+          "weight": 1,
+          "requirement_origin": "synthetic_predeclared"
+        },
+        {
+          "task_id": "forbidden_export",
+          "actor_id": "a",
+          "required_sets": [
+            [
+              "m2"
+            ]
+          ],
+          "weight": 1,
+          "requirement_origin": "synthetic_predeclared"
+        },
+        {
+          "task_id": "unknown_export",
+          "actor_id": "a",
+          "required_sets": [
+            [
+              "m3"
+            ]
+          ],
+          "weight": 1,
+          "requirement_origin": "synthetic_predeclared"
+        },
+        {
+          "task_id": "unknown_read",
+          "actor_id": "a",
+          "required_sets": [
+            [
+              "m4"
+            ]
+          ],
+          "weight": 1,
+          "requirement_origin": "synthetic_predeclared"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "case_id": "implicit_reader_blocks_placement",
+      "data_origin": "synthetic_development",
+      "actors": [
+        "a",
+        "admin"
+      ],
+      "records": [
+        {
+          "source_id": "m",
+          "readers": [
+            "a"
+          ],
+          "export_allowed": true,
+          "max_target_copies": 2,
+          "preserve_all_readers": false
+        }
+      ],
+      "target": {
+        "max_groups": 1,
+        "implicit_readers": [
+          "admin"
+        ],
+        "allowed_reader_sets": null,
+        "constraint_origin": "synthetic"
+      },
+      "tasks": [
+        {
+          "task_id": "read",
+          "actor_id": "a",
+          "required_sets": [
+            [
+              "m"
+            ]
+          ],
+          "weight": 1,
+          "requirement_origin": "synthetic_predeclared"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "case_id": "alternative_sufficient_information",
+      "data_origin": "synthetic_development",
+      "actors": [
+        "a"
+      ],
+      "records": [
+        {
+          "source_id": "m1",
+          "readers": [
+            "a"
+          ],
+          "export_allowed": true,
+          "max_target_copies": 2,
+          "preserve_all_readers": false
+        },
+        {
+          "source_id": "m2",
+          "readers": [
+            "a"
+          ],
+          "export_allowed": true,
+          "max_target_copies": 2,
+          "preserve_all_readers": false
+        },
+        {
+          "source_id": "m3",
+          "readers": [
+            "a"
+          ],
+          "export_allowed": true,
+          "max_target_copies": 2,
+          "preserve_all_readers": false
+        }
+      ],
+      "target": {
+        "max_groups": 1,
+        "implicit_readers": [],
+        "allowed_reader_sets": null,
+        "constraint_origin": "synthetic"
+      },
+      "tasks": [
+        {
+          "task_id": "either_path",
+          "actor_id": "a",
+          "required_sets": [
+            [
+              "m1",
+              "m2"
+            ],
+            [
+              "m3"
+            ]
+          ],
+          "weight": 1,
+          "requirement_origin": "synthetic_predeclared"
+        }
+      ]
+    }
+  ]
+}

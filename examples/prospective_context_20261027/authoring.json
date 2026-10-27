@@ -1,0 +1,163 @@
+{
+  "schema_version": "prospective_context_synthetic_authoring_v1",
+  "dataset_id": "prospective_context_20261027_fresh_diagnostic_24",
+  "created_date": "2026-10-27",
+  "synthetic_provenance": {
+    "origin": "New agent-authored controlled synthetic texts written specifically for this diagnostic.",
+    "real_records_used": false,
+    "external_corpus_used": false,
+    "external_human_validation": false,
+    "final_independent_64_case_acceptance_set": false,
+    "fictional_organization_note": "Names denote fictional organizations within the synthetic stories; accidental real-world name collisions have not been researched.",
+    "previous_examples_results_reports_or_predictions_read": false,
+    "method_implementation_read": false,
+    "detector_or_external_model_runs_during_authoring": false,
+    "network_used": false,
+    "allowed_technical_inputs": [
+      "memory_migration_study/sensitivity_contract.py",
+      "scripts/relation_probe_scoring.py: _validate_reference, _runtime_hash, _hash, _text_hash, _spans, PROFILES",
+      "memory_migration_study/relation_occurrence.py: BUSINESS_SCOPE literal only"
+    ],
+    "freeze_gate": "method_freeze.json existence verified before writing; its contents and referenced files were not read."
+  },
+  "annotation_method": "Human-readable task contracts were applied during authorship. Deterministic local Python selected explicitly authored occurrences and executed only schema/hash helpers for structural validation. No learned inference or semantic scoring was run.",
+  "offset_unit": "Python Unicode code-point index; start inclusive, end exclusive",
+  "runtime_sha256": "f5d5bffc15d4761c602b7f07b2271892707116bf266e54098db556c194efc916",
+  "evaluation_sha256": "e2e309bcff70b9fa8ebb5e0446410c4ffa3f0377c7fde6e94cda90706067fc87",
+  "text_count": 24,
+  "language_counts": {
+    "en": 12,
+    "zh": 12
+  },
+  "strata_per_language": 6,
+  "cases_per_language_stratum": 2,
+  "structural_validation": {
+    "existing_validate_reference": "passed",
+    "exact_spans_and_unique_facts": "passed",
+    "balanced_counts": "passed",
+    "runtime_byte_binding": "passed",
+    "validation_scope": "structure, exact offsets, declared counts, and cryptographic binding only; not external semantic or human validation"
+  },
+  "cases": [
+    {
+      "text_index": 0,
+      "language": "en",
+      "stratum": "current_customer_buyer_seller_direction"
+    },
+    {
+      "text_index": 1,
+      "language": "en",
+      "stratum": "current_customer_buyer_seller_direction"
+    },
+    {
+      "text_index": 2,
+      "language": "en",
+      "stratum": "former_customer_terminated_current_negative"
+    },
+    {
+      "text_index": 3,
+      "language": "en",
+      "stratum": "former_customer_terminated_current_negative"
+    },
+    {
+      "text_index": 4,
+      "language": "en",
+      "stratum": "explicit_not_never_customer"
+    },
+    {
+      "text_index": 5,
+      "language": "en",
+      "stratum": "explicit_not_never_customer"
+    },
+    {
+      "text_index": 6,
+      "language": "en",
+      "stratum": "named_organization_absent_unknown_relationship"
+    },
+    {
+      "text_index": 7,
+      "language": "en",
+      "stratum": "named_organization_absent_unknown_relationship"
+    },
+    {
+      "text_index": 8,
+      "language": "en",
+      "stratum": "generic_roles_types_without_named_organization"
+    },
+    {
+      "text_index": 9,
+      "language": "en",
+      "stratum": "generic_roles_types_without_named_organization"
+    },
+    {
+      "text_index": 10,
+      "language": "en",
+      "stratum": "same_surface_ordinary_word_and_organization"
+    },
+    {
+      "text_index": 11,
+      "language": "en",
+      "stratum": "same_surface_ordinary_word_and_organization"
+    },
+    {
+      "text_index": 12,
+      "language": "zh",
+      "stratum": "current_customer_buyer_seller_direction"
+    },
+    {
+      "text_index": 13,
+      "language": "zh",
+      "stratum": "current_customer_buyer_seller_direction"
+    },
+    {
+      "text_index": 14,
+      "language": "zh",
+      "stratum": "former_customer_terminated_current_negative"
+    },
+    {
+      "text_index": 15,
+      "language": "zh",
+      "stratum": "former_customer_terminated_current_negative"
+    },
+    {
+      "text_index": 16,
+      "language": "zh",
+      "stratum": "explicit_not_never_customer"
+    },
+    {
+      "text_index": 17,
+      "language": "zh",
+      "stratum": "explicit_not_never_customer"
+    },
+    {
+      "text_index": 18,
+      "language": "zh",
+      "stratum": "named_organization_absent_unknown_relationship"
+    },
+    {
+      "text_index": 19,
+      "language": "zh",
+      "stratum": "named_organization_absent_unknown_relationship"
+    },
+    {
+      "text_index": 20,
+      "language": "zh",
+      "stratum": "generic_roles_types_without_named_organization"
+    },
+    {
+      "text_index": 21,
+      "language": "zh",
+      "stratum": "generic_roles_types_without_named_organization"
+    },
+    {
+      "text_index": 22,
+      "language": "zh",
+      "stratum": "same_surface_ordinary_word_and_organization"
+    },
+    {
+      "text_index": 23,
+      "language": "zh",
+      "stratum": "same_surface_ordinary_word_and_organization"
+    }
+  ]
+}

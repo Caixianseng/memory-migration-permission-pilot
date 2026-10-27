@@ -1,0 +1,104 @@
+{
+  "advance_gate_passed": false,
+  "by_arm": {
+    "conditional": {
+      "allowed_fact_retained": 18,
+      "cells": 24,
+      "fn": 1,
+      "fp": 2,
+      "fully_masked_spans": 11,
+      "known": 20,
+      "known_exact": 15,
+      "known_prepared": 18,
+      "partially_masked_spans": 0,
+      "precision": 0.8461538461538461,
+      "prepared": 18,
+      "prepared_incomplete_spans": 1,
+      "recall": 0.9166666666666666,
+      "reference_spans": 12,
+      "statuses": {
+        "needs_review": 6,
+        "ok": 18
+      },
+      "tp": 11,
+      "unknown": 4,
+      "unknown_negative": 0,
+      "unknown_review": 4
+    },
+    "plain": {
+      "allowed_fact_retained": 18,
+      "cells": 24,
+      "fn": 3,
+      "fp": 5,
+      "fully_masked_spans": 11,
+      "known": 20,
+      "known_exact": 12,
+      "known_prepared": 18,
+      "partially_masked_spans": 0,
+      "precision": 0.6428571428571429,
+      "prepared": 18,
+      "prepared_incomplete_spans": 1,
+      "recall": 0.75,
+      "reference_spans": 12,
+      "statuses": {
+        "needs_review": 6,
+        "ok": 18
+      },
+      "tp": 9,
+      "unknown": 4,
+      "unknown_negative": 0,
+      "unknown_review": 4
+    }
+  },
+  "closure_sha256": "0878349785d3cfbe72df9d83ea567d590888d809f89b899e09c318ad3158e17e",
+  "cloud_calls": 0,
+  "generation_posts": 29,
+  "native_writes": 0,
+  "ner_counts": {
+    "classification_extract_invocations": 0,
+    "proposal_infer_invocations": 24
+  },
+  "network": {
+    "blocked_connects": 0,
+    "loopback_connects": 33
+  },
+  "physical_output_tokens": 663,
+  "physical_prompt_tokens": 12000,
+  "plan_sha256": "dc333d148dfc1cfb34cd779dcab9c1de102130b06641682c1f8ca557a957239c",
+  "repairs": 0,
+  "route_marked_documents": 5,
+  "rows": 48,
+  "scope": "24 newly authored synthetic texts; not real-world holdout or independent human annotation.",
+  "shared_plain_rows": 19,
+  "status": "complete",
+  "unique_synthetic_texts": 24,
+  "version": "prospective_context_probe_v1",
+  "artifacts_sha256": {
+    "plan.json": "dc333d148dfc1cfb34cd779dcab9c1de102130b06641682c1f8ca557a957239c",
+    "predictions.json": "1dd4ab18afff76b0091f1a56f53ee470cf2b4abf3763499c10c3b4eb572a1226",
+    "prediction_phase_closed.json": "0878349785d3cfbe72df9d83ea567d590888d809f89b899e09c318ad3158e17e",
+    "report.json": "1bf1d3a07e2d662cf8999064f07f3430008ca48658ba07288b107a20a7093dd4"
+  },
+  "tests": {
+    "passed": 55,
+    "seconds": 0.97,
+    "full_suite": false
+  },
+  "default_changed": false,
+  "independent_review": {
+    "counts_and_hashes": "matched",
+    "raw_decode_and_actual_mask": "matched_with_original_candidate_field_order",
+    "rescoring": "matched",
+    "new_model_calls": 0,
+    "new_network_calls": 0,
+    "serialization_limitation": "Reloading a sorted-key pool changes embedded request JSON byte order; generic canonical request serialization remains pending."
+  },
+  "failure_diagnosis": {
+    "unmasked_case": 22,
+    "cause": "NER returned empty organization candidates; closed-candidate classification accepted empty result",
+    "relation_false_positive_cases": [
+      1,
+      17
+    ]
+  }
+}

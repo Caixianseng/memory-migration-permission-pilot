@@ -1,0 +1,153 @@
+{
+  "by_arm": {
+    "direct_relation": {
+      "allowed_fact_retained": 7,
+      "cells": 12,
+      "complete_sensitive_span_coverage": 0.6666666666666666,
+      "complete_sensitive_span_coverage_prepared": 1.0,
+      "determinate_cells": 10,
+      "determinate_exact": 7,
+      "fn": 2,
+      "fp": 0,
+      "fully_covered_sensitive_spans": 4,
+      "gold_sensitive_spans": 6,
+      "known_processable": 7,
+      "partially_covered_sensitive_spans": 0,
+      "precision": 1.0,
+      "prepared_gold_sensitive_spans": 4,
+      "prepared_incomplete_sensitive_cells": 0,
+      "prepared_incomplete_sensitive_spans": 0,
+      "processable": 7,
+      "recall": 0.6666666666666666,
+      "registered_full_string_present": 0,
+      "statuses": {
+        "coverage_review": 2,
+        "needs_review": 3,
+        "ok": 7
+      },
+      "tp": 4,
+      "unknown_cells": 2,
+      "unknown_negative": 0,
+      "unknown_review_matches": 2
+    },
+    "event_composition": {
+      "allowed_fact_retained": 4,
+      "cells": 12,
+      "complete_sensitive_span_coverage": 0.0,
+      "complete_sensitive_span_coverage_prepared": null,
+      "determinate_cells": 10,
+      "determinate_exact": 3,
+      "fn": 6,
+      "fp": 0,
+      "fully_covered_sensitive_spans": 0,
+      "gold_sensitive_spans": 6,
+      "known_processable": 3,
+      "partially_covered_sensitive_spans": 0,
+      "precision": null,
+      "prepared_gold_sensitive_spans": 0,
+      "prepared_incomplete_sensitive_cells": 0,
+      "prepared_incomplete_sensitive_spans": 0,
+      "processable": 4,
+      "recall": 0.0,
+      "registered_full_string_present": 0,
+      "statuses": {
+        "coverage_review": 2,
+        "model_output_invalid": 6,
+        "ok": 4
+      },
+      "tp": 0,
+      "unknown_cells": 2,
+      "unknown_negative": 1,
+      "unknown_review_matches": 0
+    },
+    "fixed_relation_rules": {
+      "allowed_fact_retained": 2,
+      "cells": 12,
+      "complete_sensitive_span_coverage": 0.16666666666666666,
+      "complete_sensitive_span_coverage_prepared": 1.0,
+      "determinate_cells": 10,
+      "determinate_exact": 2,
+      "fn": 5,
+      "fp": 0,
+      "fully_covered_sensitive_spans": 1,
+      "gold_sensitive_spans": 6,
+      "known_processable": 2,
+      "partially_covered_sensitive_spans": 0,
+      "precision": 1.0,
+      "prepared_gold_sensitive_spans": 1,
+      "prepared_incomplete_sensitive_cells": 0,
+      "prepared_incomplete_sensitive_spans": 0,
+      "processable": 2,
+      "recall": 0.16666666666666666,
+      "registered_full_string_present": 0,
+      "statuses": {
+        "coverage_review": 2,
+        "needs_review": 8,
+        "ok": 2
+      },
+      "tp": 1,
+      "unknown_cells": 2,
+      "unknown_negative": 0,
+      "unknown_review_matches": 2
+    }
+  },
+  "closure_sha256": "71c7a9a6ce48588bcc8c03dccf692861c81687e50c12622587daf59a665d6eda",
+  "cloud_calls": 0,
+  "generation_posts": 20,
+  "native_calls": 0,
+  "network": {
+    "blocked_connects": 0,
+    "loopback_connects": 24
+  },
+  "plan_sha256": "ecae19653b59678d9bb9864c611d901739b3d2552325914b46848eea690f6b6f",
+  "repairs": 0,
+  "rows": 36,
+  "scope": "Development diagnostic; actual prepared mask coverage is separate from full-string presence. Blocked spans remain in all-reference denominator, not counted as disclosures; no general privacy or novelty claim.",
+  "status": "complete",
+  "unique_exposed_texts": 12,
+  "version": "relation_event_probe_v1",
+  "artifacts_sha256": {
+    "plan.json": "ecae19653b59678d9bb9864c611d901739b3d2552325914b46848eea690f6b6f",
+    "predictions.json": "7563ac50c012dbf3363441168b4db39564e01bc738b37c5123faf0d9f5ac4cf2",
+    "prediction_phase_closed.json": "71c7a9a6ce48588bcc8c03dccf692861c81687e50c12622587daf59a665d6eda",
+    "report.json": "78dd40b0a6fe351b2bfa8fb7970e27f1b7d14fbcb830040264fc7f382967e929"
+  },
+  "tests": {
+    "passed": 85,
+    "elapsed_seconds": 0.633,
+    "full_suite": false
+  },
+  "advance_gate_passed": false,
+  "default_changed": false,
+  "actual_model_tokens": {
+    "direct_relation": {
+      "prompt": 3439,
+      "output": 199
+    },
+    "event_composition": {
+      "prompt": 5029,
+      "output": 2196
+    }
+  },
+  "posthoc_diagnosis": {
+    "new_model_calls": 0,
+    "first_error_counts": {
+      "invalid_event_participants": 4,
+      "invalid_evidence_span": 2,
+      "json_syntax": 0,
+      "truncated": 0
+    },
+    "unknown_false_negative_text_index": 9,
+    "unknown_false_negative_cause": "Partial automatic candidate plus not_specific entity judgement; source-position validity does not establish semantics.",
+    "accepted_nonempty_event_predictions": 0,
+    "event_ok_all_not_specific_empty_events": 4
+  },
+  "independent_review": {
+    "mode": "read_only_replay",
+    "new_model_calls": 0,
+    "new_network_calls": 0,
+    "hashes_and_raw_response_replay": "matched",
+    "actual_mask_replay": "matched",
+    "rescoring": "matched"
+  }
+}

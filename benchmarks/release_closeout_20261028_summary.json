@@ -1,0 +1,53 @@
+{
+  "schema_version": "release_closeout_v1",
+  "date": "2026-10-28",
+  "scope": "Stage closeout and publication validation; no new research experiments",
+  "research_acceptance_passed": false,
+  "default_method_changed": false,
+  "new_research_model_calls": 0,
+  "local_clean_export_validation": {
+    "tests_run": 2022,
+    "passed": 2008,
+    "skipped": 14,
+    "failures": 0,
+    "errors": 0,
+    "wall_seconds": 434.734,
+    "successful": true,
+    "skipped_reason": "14 optional checks require local legacy data or pinned official wheels not shipped in the repository",
+    "dependencies": {
+      "jsonschema": "4.26.0",
+      "fastapi": "0.136.3",
+      "httpx": "0.28.1",
+      "starlette": "1.9.0"
+    },
+    "network_guard": {
+      "fixture_loopback": 862,
+      "forbidden": 0
+    },
+    "python_sources_unchanged": 428,
+    "source_manifest_sha256": "60412f9e6d0e29745c21a95771d03c4d341ee9811721219d1a9f29e5e7ab677e"
+  },
+  "publication_integrity": {
+    "method_receipt_and_bound_sources": "verified byte-for-byte in clean export",
+    "synthetic_runtime_evaluation_authoring": "verified against original hashes",
+    "private_assets": "results, models, databases, credentials, unrelated notebook and user flow files excluded",
+    "negative_results_preserved": true
+  },
+  "github_ci": {
+    "status_at_manifest_creation": "verify_after_push",
+    "workflow": "Offline tests",
+    "platforms": [
+      "ubuntu-latest",
+      "windows-latest"
+    ],
+    "note": "This manifest records the local check. Check GitHub Actions for the exact published commit; do not reuse historical green status."
+  },
+  "open_items": [
+    "Candidate coverage and empty-candidate semantic gap",
+    "Relation direction and negation errors",
+    "Canonical request serialization in a new version",
+    "Historical four HTTP 200/null cases",
+    "Independent P90/R95 and 63/64 joint task acceptance",
+    "True downstream Agent evaluation and stronger-baseline innovation evidence"
+  ]
+}

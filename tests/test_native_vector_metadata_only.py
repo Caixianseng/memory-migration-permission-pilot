@@ -2,7 +2,9 @@
 from copy import deepcopy
 import hashlib
 import json
+from pathlib import Path
 import sys
+import tempfile
 import types
 import unittest
 from unittest.mock import patch
@@ -96,6 +98,73 @@ class MetadataOnlyTests(unittest.TestCase):
         self.assertEqual(search.calls[0]["exception_events"][0]["class"],"builtins.TypeError")
         search,_,_=observed("false_collection");self.assertIsNone(search("user-memory-native-owner",[[0]],None,100))
         self.assertEqual(search.calls[0]["none_reason"],"non_exception_branch");self.assertEqual(search.calls[0]["exception_events"],[])
+
+    def test_catch_observer_failure_preserves_none_and_marks_evidence_unusable(self):
+        search,backend,_=observed("query")
+        with patch.object(worker,"exception_metadata",side_effect=ValueError("observer formatting failed")):
+            self.assertIsNone(search("user-memory-native-owner",[[0]],None,100))
+        self.assertEqual((backend.client.get_calls,backend.client.query_calls),(1,1))
+        self.assertTrue(search.observer_failure);self.assertEqual(search.observer_errors,["metadata_observer_failed"])
+        row=search.calls[0];self.assertTrue(row["observer_failure"])
+        self.assertEqual(row["none_reason"],"observation_failed");self.assertEqual(row["exception_events"],[])
+        self.assertNotIn("outward_exception",row)
+        target=worker.MetadataTargetWorker.__new__(worker.MetadataTargetWorker)
+        target.metadata_search=search;target.snapshot_ordinal=2
+        with patch.object(worker.TargetWorker,"summary",return_value={}):summary=target.summary()["metadata_only"]
+        self.assertTrue(summary["observer_failure"]);self.assertEqual(summary["observer_errors"],search.observer_errors)
+
+    def test_unused_failing_observer_keeps_success_and_nonexception_none(self):
+        for phase in (None,"false_collection"):
+            search,backend,result=observed(phase)
+            with patch.object(worker,"exception_metadata",side_effect=ValueError("must not run")) as metadata:
+                actual=search("user-memory-native-owner",[[0]],None,100)
+            self.assertIs(actual,result if phase is None else None);metadata.assert_not_called()
+            self.assertFalse(search.observer_failure);self.assertEqual(search.observer_errors,[])
+            self.assertFalse(search.calls[0]["observer_failure"])
+            self.assertEqual((backend.client.get_calls,backend.client.query_calls),(1,1 if phase is None else 0))
+
+    def test_outward_backend_exception_identity_survives_observer_failure(self):
+        class BackendSignal(BaseException):pass
+        original_error=BackendSignal("original backend signal")
+        search,backend,_=observed()
+        with patch.object(backend.client,"query",side_effect=original_error) as query,patch.object(
+                worker,"exception_metadata",side_effect=ValueError("observer formatting failed")):
+            with self.assertRaises(BackendSignal) as caught:search("user-memory-native-owner",[[0]],None,100)
+        self.assertIs(caught.exception,original_error);query.assert_called_once();self.assertEqual(backend.client.get_calls,1)
+        self.assertTrue(search.observer_failure);self.assertTrue(search.calls[0]["observer_failure"])
+        self.assertEqual(search.observer_errors,["outward_exception_observer_failed"])
+        self.assertNotIn("return_kind",search.calls[0]);self.assertNotIn("outward_exception",search.calls[0])
+
+    def test_execute_rejects_failed_or_missing_observer_status_even_with_complete_counts(self):
+        final={"native_requests":[{} for _ in range(164)],"native_embedding_function_invocations":21,
+            "generation_attempts":0,"network_events":[],"metadata_only":{"snapshot_calls":6,"search_calls":15,
+                "observer_errors":[],"observer_failure":False,"observations":[{"variant_calls":1,
+                    "literal_original_function_calls":0,"trace_disabled_before":True,"trace_disabled_after":True,
+                    "observer_failure":False,"exception_events":[]} for _ in range(15)]}}
+        class Target:
+            def __init__(self):self.calls=[{"command":"close"}];self.terminated=False
+            def terminate(self):self.terminated=True
+        cases=(("healthy",False,[],True),("failed",True,[],False),
+            ("missing",None,[],False),("error_list",False,["metadata_observer_failed"],False))
+        with tempfile.TemporaryDirectory(prefix="metadata-offline-") as folder:
+            root=Path(folder);(root/"fixture.json").write_text("{}",encoding="utf-8")
+            plan={"output":str(root),"python":"unused-python","legacy":"unused-legacy",
+                "fixture_sha256":"unused","code_sha256":{},"asset_sha256":{}}
+            for name,status,errors,accepted in cases:
+                current=deepcopy(final);observations=current["metadata_only"];observations["observer_errors"]=errors
+                if status is None:del observations["observer_failure"]
+                else:observations["observer_failure"]=status
+                complete={"final":current,"snapshots":{str(i):{"rows":[]} for i in range(6)},
+                    "deletions":[{},{}],"checks":[{"passed":True} for _ in range(6)]}
+                target=Target();saved=[]
+                with self.subTest(case=name),patch.object(driver,"validate_plan",return_value=plan),patch.object(
+                        driver.bridge,"file_sha256",return_value="offline"),patch.object(driver.bridge,"verify_sha_table",
+                        return_value={"status":"passed"}),patch.object(driver,"save",side_effect=lambda path,data:saved.append((path,deepcopy(data)))),patch.object(
+                        driver,"replay",return_value=complete):
+                    report=driver.execute(root/"unused-plan.json",factory=lambda *args,**kwargs:target)
+                self.assertIs(report["instrumentation_complete"],accepted);self.assertTrue(target.terminated)
+                self.assertEqual(report["interpretation"],"not_reproduced_in_one_fixed_complete_lifecycle" if accepted else "failure_observed_or_run_incomplete")
+                self.assertFalse(report["original_v3_failure_closed"]);self.assertEqual(saved[-1][1],report)
 
     def test_source_shape_and_existing_tracer_fail_closed(self):
         with self.assertRaises(ValueError):worker.instrument_search(SOURCE,"fake",{},lambda e:None,"0"*64)

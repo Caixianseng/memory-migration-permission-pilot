@@ -1,0 +1,419 @@
+{
+  "schema": "pisas_source_qualification_summary_v1",
+  "revision": "8a1ba30ba210d4a430bbd25cf4a3500d0e22c5b9",
+  "scope": "Nine first scenarios only; external development qualification, not a full benchmark or independent final acceptance.",
+  "samples": 9,
+  "source_objects": 93,
+  "actor_views": 74,
+  "reference_attributes": 200,
+  "carrier_assessed_attributes": 199,
+  "nonliteral_reference_values": 33,
+  "literal_initial_visibility_conflict_edges": 14,
+  "new_model_calls": 0,
+  "migration_runs": 0,
+  "privacy_performance": null,
+  "tests": {
+    "passed": 16,
+    "scope": "tests.test_pisas_source and tests.test_pisas_qualification",
+    "full_suite": false
+  },
+  "artifacts": {
+    "plan.json": "e289648e781abda5c8b4381dc5381788b4afe04cb1c267bb9b0daf02f474b265",
+    "runtime_phase_closed.json": "71276b4712566081cefab4ad13a91621fb32b921986e3c8b8db37263b7314653",
+    "report.json": "f403a77c9822285c3dbb00fae5d57cda30e02c18ac2b73e4f6259ac6527dcadd"
+  },
+  "scenarios": [
+    {
+      "task": "JIRA_allocation",
+      "status": "source_projected",
+      "qualification": {
+        "attribute_visibility_inferred": false,
+        "evaluation_used": false,
+        "native_current_authorization_verified": false,
+        "sensitivity_assessed": false,
+        "source_acl_scope": "initial_document_visibility_declared_in_scenario",
+        "source_object_count": 8,
+        "status": "needs_task_description",
+        "task_description_present": false
+      },
+      "actors": 6,
+      "object_count": 8,
+      "reference_audit": {
+        "attribute_ids_agree": true,
+        "attributes": 30,
+        "attributes_without_declared_carriers": [
+          "a22n"
+        ],
+        "carrier_basis": "timeline.attributes; utility.source consistency is audited separately",
+        "declared_assessed_attributes": 29,
+        "declared_initial_visibility_conflict_edges": 22,
+        "interpretation": "Bounded to cast actors and declared carriers. Source-artifact access and scoring visibility disagree for these incidences; no migration/model has run. Zero literal matches does not establish absence of semantic exposure. Missing carriers are unassessed, not safe.",
+        "label_counts": {
+          "appropriate": 24,
+          "inappropriate": 6,
+          "nonliteral_reference_values": 13,
+          "other_label": 0
+        },
+        "literal_assessed_attributes": 29,
+        "literal_conflict_attribute_ids": [
+          "a1"
+        ],
+        "literal_initial_visibility_conflict_edges": 4,
+        "reference_problems": [
+          "reference_not_carried_by_source:a22n"
+        ],
+        "unmapped_reference_principals": {
+          "a10": [
+            "task_system"
+          ],
+          "a11": [
+            "task_system"
+          ],
+          "a12": [
+            "task_system"
+          ],
+          "a13": [
+            "task_system"
+          ],
+          "a14": [
+            "task_system"
+          ],
+          "a15": [
+            "task_system"
+          ],
+          "a16": [
+            "task_system"
+          ],
+          "a17": [
+            "task_system"
+          ],
+          "a18": [
+            "task_system"
+          ],
+          "a6": [
+            "task_system"
+          ],
+          "a7": [
+            "task_system"
+          ],
+          "a8": [
+            "task_system"
+          ],
+          "a9": [
+            "task_system"
+          ]
+        }
+      }
+    },
+    {
+      "task": "meeting_allocation",
+      "status": "source_projected",
+      "qualification": {
+        "attribute_visibility_inferred": false,
+        "evaluation_used": false,
+        "native_current_authorization_verified": false,
+        "sensitivity_assessed": false,
+        "source_acl_scope": "initial_document_visibility_declared_in_scenario",
+        "source_object_count": 8,
+        "status": "needs_task_description",
+        "task_description_present": false
+      },
+      "actors": 6,
+      "object_count": 8,
+      "reference_audit": {
+        "attribute_ids_agree": true,
+        "attributes": 22,
+        "attributes_without_declared_carriers": [],
+        "carrier_basis": "timeline.attributes; utility.source consistency is audited separately",
+        "declared_assessed_attributes": 22,
+        "declared_initial_visibility_conflict_edges": 10,
+        "interpretation": "Bounded to cast actors and declared carriers. Source-artifact access and scoring visibility disagree for these incidences; no migration/model has run. Zero literal matches does not establish absence of semantic exposure. Missing carriers are unassessed, not safe.",
+        "label_counts": {
+          "appropriate": 9,
+          "inappropriate": 13,
+          "nonliteral_reference_values": 3,
+          "other_label": 0
+        },
+        "literal_assessed_attributes": 22,
+        "literal_conflict_attribute_ids": [
+          "a4",
+          "a5",
+          "a6"
+        ],
+        "literal_initial_visibility_conflict_edges": 10,
+        "reference_problems": [],
+        "unmapped_reference_principals": {}
+      }
+    },
+    {
+      "task": "severity_classification",
+      "status": "source_projected",
+      "qualification": {
+        "attribute_visibility_inferred": false,
+        "evaluation_used": false,
+        "native_current_authorization_verified": false,
+        "sensitivity_assessed": false,
+        "source_acl_scope": "initial_document_visibility_declared_in_scenario",
+        "source_object_count": 19,
+        "status": "qualified",
+        "task_description_present": true
+      },
+      "actors": 10,
+      "object_count": 19,
+      "reference_audit": {
+        "attribute_ids_agree": true,
+        "attributes": 17,
+        "attributes_without_declared_carriers": [],
+        "carrier_basis": "timeline.attributes; utility.source consistency is audited separately",
+        "declared_assessed_attributes": 17,
+        "declared_initial_visibility_conflict_edges": 0,
+        "interpretation": "Bounded to cast actors and declared carriers. Source-artifact access and scoring visibility disagree for these incidences; no migration/model has run. Zero literal matches does not establish absence of semantic exposure. Missing carriers are unassessed, not safe.",
+        "label_counts": {
+          "appropriate": 3,
+          "inappropriate": 14,
+          "nonliteral_reference_values": 0,
+          "other_label": 0
+        },
+        "literal_assessed_attributes": 17,
+        "literal_conflict_attribute_ids": [],
+        "literal_initial_visibility_conflict_edges": 0,
+        "reference_problems": [
+          "invalid_reference_source:a1",
+          "invalid_reference_source:a10",
+          "invalid_reference_source:a11",
+          "invalid_reference_source:a12",
+          "invalid_reference_source:a13",
+          "invalid_reference_source:a14",
+          "invalid_reference_source:a15",
+          "invalid_reference_source:a16",
+          "invalid_reference_source:a17",
+          "invalid_reference_source:a2",
+          "invalid_reference_source:a3",
+          "invalid_reference_source:a4",
+          "invalid_reference_source:a5",
+          "invalid_reference_source:a6",
+          "invalid_reference_source:a7",
+          "invalid_reference_source:a8",
+          "invalid_reference_source:a9"
+        ],
+        "unmapped_reference_principals": {}
+      }
+    },
+    {
+      "task": "inpatient_discharge",
+      "status": "source_projected",
+      "qualification": {
+        "attribute_visibility_inferred": false,
+        "evaluation_used": false,
+        "native_current_authorization_verified": false,
+        "sensitivity_assessed": false,
+        "source_acl_scope": "initial_document_visibility_declared_in_scenario",
+        "source_object_count": 11,
+        "status": "qualified",
+        "task_description_present": true
+      },
+      "actors": 11,
+      "object_count": 11,
+      "reference_audit": {
+        "attribute_ids_agree": true,
+        "attributes": 23,
+        "attributes_without_declared_carriers": [],
+        "carrier_basis": "timeline.attributes; utility.source consistency is audited separately",
+        "declared_assessed_attributes": 23,
+        "declared_initial_visibility_conflict_edges": 0,
+        "interpretation": "Bounded to cast actors and declared carriers. Source-artifact access and scoring visibility disagree for these incidences; no migration/model has run. Zero literal matches does not establish absence of semantic exposure. Missing carriers are unassessed, not safe.",
+        "label_counts": {
+          "appropriate": 2,
+          "inappropriate": 21,
+          "nonliteral_reference_values": 5,
+          "other_label": 0
+        },
+        "literal_assessed_attributes": 23,
+        "literal_conflict_attribute_ids": [],
+        "literal_initial_visibility_conflict_edges": 0,
+        "reference_problems": [],
+        "unmapped_reference_principals": {}
+      }
+    },
+    {
+      "task": "thesis_readiness",
+      "status": "source_projected",
+      "qualification": {
+        "attribute_visibility_inferred": false,
+        "evaluation_used": false,
+        "native_current_authorization_verified": false,
+        "sensitivity_assessed": false,
+        "source_acl_scope": "initial_document_visibility_declared_in_scenario",
+        "source_object_count": 10,
+        "status": "qualified",
+        "task_description_present": true
+      },
+      "actors": 9,
+      "object_count": 10,
+      "reference_audit": {
+        "attribute_ids_agree": true,
+        "attributes": 24,
+        "attributes_without_declared_carriers": [],
+        "carrier_basis": "timeline.attributes; utility.source consistency is audited separately",
+        "declared_assessed_attributes": 24,
+        "declared_initial_visibility_conflict_edges": 0,
+        "interpretation": "Bounded to cast actors and declared carriers. Source-artifact access and scoring visibility disagree for these incidences; no migration/model has run. Zero literal matches does not establish absence of semantic exposure. Missing carriers are unassessed, not safe.",
+        "label_counts": {
+          "appropriate": 5,
+          "inappropriate": 19,
+          "nonliteral_reference_values": 8,
+          "other_label": 0
+        },
+        "literal_assessed_attributes": 24,
+        "literal_conflict_attribute_ids": [],
+        "literal_initial_visibility_conflict_edges": 0,
+        "reference_problems": [],
+        "unmapped_reference_principals": {}
+      }
+    },
+    {
+      "task": "manuscript_submission",
+      "status": "source_projected",
+      "qualification": {
+        "attribute_visibility_inferred": false,
+        "evaluation_used": false,
+        "native_current_authorization_verified": false,
+        "sensitivity_assessed": false,
+        "source_acl_scope": "initial_document_visibility_declared_in_scenario",
+        "source_object_count": 9,
+        "status": "qualified",
+        "task_description_present": true
+      },
+      "actors": 8,
+      "object_count": 9,
+      "reference_audit": {
+        "attribute_ids_agree": true,
+        "attributes": 22,
+        "attributes_without_declared_carriers": [],
+        "carrier_basis": "timeline.attributes; utility.source consistency is audited separately",
+        "declared_assessed_attributes": 22,
+        "declared_initial_visibility_conflict_edges": 0,
+        "interpretation": "Bounded to cast actors and declared carriers. Source-artifact access and scoring visibility disagree for these incidences; no migration/model has run. Zero literal matches does not establish absence of semantic exposure. Missing carriers are unassessed, not safe.",
+        "label_counts": {
+          "appropriate": 1,
+          "inappropriate": 21,
+          "nonliteral_reference_values": 1,
+          "other_label": 0
+        },
+        "literal_assessed_attributes": 22,
+        "literal_conflict_attribute_ids": [],
+        "literal_initial_visibility_conflict_edges": 0,
+        "reference_problems": [],
+        "unmapped_reference_principals": {}
+      }
+    },
+    {
+      "task": "uas_flight_readiness",
+      "status": "source_projected",
+      "qualification": {
+        "attribute_visibility_inferred": false,
+        "evaluation_used": false,
+        "native_current_authorization_verified": false,
+        "sensitivity_assessed": false,
+        "source_acl_scope": "initial_document_visibility_declared_in_scenario",
+        "source_object_count": 10,
+        "status": "qualified",
+        "task_description_present": true
+      },
+      "actors": 8,
+      "object_count": 10,
+      "reference_audit": {
+        "attribute_ids_agree": true,
+        "attributes": 21,
+        "attributes_without_declared_carriers": [],
+        "carrier_basis": "timeline.attributes; utility.source consistency is audited separately",
+        "declared_assessed_attributes": 21,
+        "declared_initial_visibility_conflict_edges": 0,
+        "interpretation": "Bounded to cast actors and declared carriers. Source-artifact access and scoring visibility disagree for these incidences; no migration/model has run. Zero literal matches does not establish absence of semantic exposure. Missing carriers are unassessed, not safe.",
+        "label_counts": {
+          "appropriate": 1,
+          "inappropriate": 20,
+          "nonliteral_reference_values": 1,
+          "other_label": 0
+        },
+        "literal_assessed_attributes": 21,
+        "literal_conflict_attribute_ids": [],
+        "literal_initial_visibility_conflict_edges": 0,
+        "reference_problems": [],
+        "unmapped_reference_principals": {}
+      }
+    },
+    {
+      "task": "outgoing_museum_loan",
+      "status": "source_projected",
+      "qualification": {
+        "attribute_visibility_inferred": false,
+        "evaluation_used": false,
+        "native_current_authorization_verified": false,
+        "sensitivity_assessed": false,
+        "source_acl_scope": "initial_document_visibility_declared_in_scenario",
+        "source_object_count": 9,
+        "status": "qualified",
+        "task_description_present": true
+      },
+      "actors": 8,
+      "object_count": 9,
+      "reference_audit": {
+        "attribute_ids_agree": true,
+        "attributes": 22,
+        "attributes_without_declared_carriers": [],
+        "carrier_basis": "timeline.attributes; utility.source consistency is audited separately",
+        "declared_assessed_attributes": 22,
+        "declared_initial_visibility_conflict_edges": 0,
+        "interpretation": "Bounded to cast actors and declared carriers. Source-artifact access and scoring visibility disagree for these incidences; no migration/model has run. Zero literal matches does not establish absence of semantic exposure. Missing carriers are unassessed, not safe.",
+        "label_counts": {
+          "appropriate": 1,
+          "inappropriate": 21,
+          "nonliteral_reference_values": 1,
+          "other_label": 0
+        },
+        "literal_assessed_attributes": 22,
+        "literal_conflict_attribute_ids": [],
+        "literal_initial_visibility_conflict_edges": 0,
+        "reference_problems": [],
+        "unmapped_reference_principals": {}
+      }
+    },
+    {
+      "task": "special_event_permit_readiness",
+      "status": "source_projected",
+      "qualification": {
+        "attribute_visibility_inferred": false,
+        "evaluation_used": false,
+        "native_current_authorization_verified": false,
+        "sensitivity_assessed": false,
+        "source_acl_scope": "initial_document_visibility_declared_in_scenario",
+        "source_object_count": 9,
+        "status": "qualified",
+        "task_description_present": true
+      },
+      "actors": 8,
+      "object_count": 9,
+      "reference_audit": {
+        "attribute_ids_agree": true,
+        "attributes": 19,
+        "attributes_without_declared_carriers": [],
+        "carrier_basis": "timeline.attributes; utility.source consistency is audited separately",
+        "declared_assessed_attributes": 19,
+        "declared_initial_visibility_conflict_edges": 0,
+        "interpretation": "Bounded to cast actors and declared carriers. Source-artifact access and scoring visibility disagree for these incidences; no migration/model has run. Zero literal matches does not establish absence of semantic exposure. Missing carriers are unassessed, not safe.",
+        "label_counts": {
+          "appropriate": 1,
+          "inappropriate": 18,
+          "nonliteral_reference_values": 1,
+          "other_label": 0
+        },
+        "literal_assessed_attributes": 19,
+        "literal_conflict_attribute_ids": [],
+        "literal_initial_visibility_conflict_edges": 0,
+        "reference_problems": [],
+        "unmapped_reference_principals": {}
+      }
+    }
+  ]
+}
