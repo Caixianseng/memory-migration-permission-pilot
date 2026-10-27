@@ -1,5 +1,6 @@
 """Offline continuation evidence, total-cap, classification and scoring tests."""
 from collections import Counter
+import ast
 import copy
 import hashlib
 import json
@@ -11,6 +12,107 @@ from unittest.mock import Mock, patch
 
 from scripts import run_ontology_contract_probe as base
 from scripts import run_ontology_contract_probe_continuation as continuation
+
+
+# Fixed membership copied from the original 87-file run_01 plan, whose SHA256
+# is continuation.PARENT_PLAN_SHA256 (8d9efb...1478). This is a synthetic test
+# environment for that closed experiment, not the current package inventory.
+# Later occurrence_qwen/relation_occurrence experiments are separate modules.
+# No results directory or model assets are needed to construct this fixture.
+HISTORICAL_SOURCE_FILES = (
+    "memory_migration_study/__init__.py",
+    "memory_migration_study/__main__.py",
+    "memory_migration_study/amount_candidates.py",
+    "memory_migration_study/answer_evidence.py",
+    "memory_migration_study/answer_serialization.py",
+    "memory_migration_study/authority_freshness.py",
+    "memory_migration_study/backend.py",
+    "memory_migration_study/boundary_detector.py",
+    "memory_migration_study/boundary_preparation.py",
+    "memory_migration_study/boundary_reconciliation.py",
+    "memory_migration_study/budget.py",
+    "memory_migration_study/candidate_adjudicator.py",
+    "memory_migration_study/candidate_decision.py",
+    "memory_migration_study/candidate_decision_detection.py",
+    "memory_migration_study/candidate_proposals.py",
+    "memory_migration_study/cli.py",
+    "memory_migration_study/context_candidate_typing.py",
+    "memory_migration_study/context_typed_detection.py",
+    "memory_migration_study/coverage_memory.py",
+    "memory_migration_study/current_authority.py",
+    "memory_migration_study/deepseek_native.py",
+    "memory_migration_study/deepseek_sdk.py",
+    "memory_migration_study/detection_cache.py",
+    "memory_migration_study/evidence.py",
+    "memory_migration_study/evidence_answerer.py",
+    "memory_migration_study/focused_semantic_reader.py",
+    "memory_migration_study/focused_semantic_scoring.py",
+    "memory_migration_study/gliclass_candidate.py",
+    "memory_migration_study/legacy.py",
+    "memory_migration_study/llm_worker.py",
+    "memory_migration_study/local_detector.py",
+    "memory_migration_study/memory_builder.py",
+    "memory_migration_study/memory_generation_corpus.py",
+    "memory_migration_study/memory_generation_experiment.py",
+    "memory_migration_study/memory_labels.py",
+    "memory_migration_study/native_agent_protocol.py",
+    "memory_migration_study/native_privacy_gateway.py",
+    "memory_migration_study/native_webui.py",
+    "memory_migration_study/ner_benchmark.py",
+    "memory_migration_study/ner_detector.py",
+    "memory_migration_study/nli_candidate.py",
+    "memory_migration_study/open_container_candidates.py",
+    "memory_migration_study/paired_task_metrics.py",
+    "memory_migration_study/plan_verifier.py",
+    "memory_migration_study/policy.py",
+    "memory_migration_study/policy_projection_gateway.py",
+    "memory_migration_study/policy_projection_reference.py",
+    "memory_migration_study/policy_semantics.py",
+    "memory_migration_study/prepare.py",
+    "memory_migration_study/principal_scope.py",
+    "memory_migration_study/privacy.py",
+    "memory_migration_study/privacy_corpus.py",
+    "memory_migration_study/privacy_corpus_v2.py",
+    "memory_migration_study/privacy_corpus_v3.py",
+    "memory_migration_study/privacy_corpus_v3_final.py",
+    "memory_migration_study/privacy_egress.py",
+    "memory_migration_study/privacy_experiment.py",
+    "memory_migration_study/privacy_local.py",
+    "memory_migration_study/privacy_payload_eval.py",
+    "memory_migration_study/private_request_boundary.py",
+    "memory_migration_study/provider_preflight.py",
+    "memory_migration_study/public_fixture.py",
+    "memory_migration_study/public_runner.py",
+    "memory_migration_study/qoder_native.py",
+    "memory_migration_study/query_intent.py",
+    "memory_migration_study/reference_memory.py",
+    "memory_migration_study/representation_factor_probe.py",
+    "memory_migration_study/request_projection.py",
+    "memory_migration_study/reuse_benchmark.py",
+    "memory_migration_study/review_read_consumer.py",
+    "memory_migration_study/role_cover.py",
+    "memory_migration_study/role_query.py",
+    "memory_migration_study/runner.py",
+    "memory_migration_study/semantic_memory_benchmark.py",
+    "memory_migration_study/semantic_refinement.py",
+    "memory_migration_study/sensitivity_contract.py",
+    "memory_migration_study/snapshots.py",
+    "memory_migration_study/source_card_reader.py",
+    "memory_migration_study/source_fact_cards.py",
+    "memory_migration_study/span_answer_evidence.py",
+    "memory_migration_study/span_answerer.py",
+    "memory_migration_study/span_completion.py",
+    "memory_migration_study/structured_candidates.py",
+    "memory_migration_study/tasks.py",
+    "memory_migration_study/union_detector.py",
+    "memory_migration_study/value_validation.py",
+    "scripts/run_ontology_contract_probe.py",
+)
+
+
+def historical_fixture_hashes():
+    """Hash current fixture bytes for fixed historical members, without globbing."""
+    return {name: base.sha(base.ROOT / name) for name in HISTORICAL_SOURCE_FILES}
 
 
 def response(status="ok", *, failure=False):
@@ -104,7 +206,7 @@ class ContinuationTests(unittest.TestCase):
         rows, posts, infers = self.make_prefix()
         parent = self.root / "parent"
         parent.mkdir()
-        parent_plan = {"source_sha256": base.source_hashes(), "qwen": {"timeout_seconds": 120},
+        parent_plan = {"source_sha256": historical_fixture_hashes(), "qwen": {"timeout_seconds": 120},
                        "assets": {"root": "unused-test-model"}, "gliner": {"threads": 4, "splitter": "cjk_aware", "threshold": .5}}
         parent_hash = "fixture-parent-plan"
         for name in continuation.PARENT_FILES:
@@ -145,6 +247,32 @@ class ContinuationTests(unittest.TestCase):
         self.assertEqual(original[-1]["status"], "engineering_error")
         self.assertNotIn("origin", original[-1])
         self.assertEqual(evidence["projected"][-1]["original_row_sha256"], base._digest(original[-1]))
+
+    def test_historical_fixture_isolated_from_later_modules_without_hiding_imports(self):
+        self.assertEqual(len(HISTORICAL_SOURCE_FILES), 87)
+        self.assertEqual(len(set(HISTORICAL_SOURCE_FILES)), 87)
+        later_modules = {"memory_migration_study.occurrence_qwen", "memory_migration_study.relation_occurrence"}
+        for name in HISTORICAL_SOURCE_FILES:
+            package = list(Path(name).parts[:-1])
+            for node in ast.walk(ast.parse((base.ROOT / name).read_text(encoding="utf-8-sig"))):
+                imported = []
+                if isinstance(node, ast.Import):
+                    imported = [alias.name for alias in node.names]
+                elif isinstance(node, ast.ImportFrom):
+                    parts = (package[:len(package) - node.level + 1] if node.level else []) + (
+                        node.module.split(".") if node.module else [])
+                    imported = [".".join(parts)] + [".".join(parts + [alias.name]) for alias in node.names]
+                elif (isinstance(node, ast.Call) and node.args and isinstance(node.args[0], ast.Constant)
+                      and isinstance(node.args[0].value, str)
+                      and ((isinstance(node.func, ast.Attribute) and node.func.attr == "import_module")
+                           or (isinstance(node.func, ast.Name) and node.func.id == "__import__"))):
+                    imported = [node.args[0].value]
+                for module in imported:
+                    self.assertFalse(any(module == later or module.startswith(later + ".") for later in later_modules),
+                                     name + " now imports a later experiment; do not hide it in the historical fixture")
+        with patch.object(base, "source_hashes", side_effect=AssertionError("current inventory is not historical")):
+            evidence, _, _ = self.evidence()
+        self.assertEqual(set(evidence["plan"]["source_sha256"]), set(HISTORICAL_SOURCE_FILES))
 
     def test_parent_capture_or_prefix_tamper_is_rejected(self):
         evidence, parent_hash, closure_hash = self.evidence()
@@ -223,11 +351,15 @@ class ContinuationTests(unittest.TestCase):
         self.assertEqual(plan["cap"]["remaining_post_cap"], 106)
         self.assertEqual(plan["cap"]["remaining_infer_cap"], 10)
         self.assertEqual(plan["cap"]["remaining_gliner_strict_gates"], 11)
-        continuation.verify_current(output, plan, check_parent=False)
+        # This test models execution in the original 87-member environment.
+        # Production still scans/checks every current member without filtering.
+        with patch.object(base, "source_hashes", return_value=evidence["plan"]["source_sha256"]):
+            continuation.verify_current(output, plan, check_parent=False)
         cap = continuation.read_json(output / "continuation_cap.json")
         cap["remaining_post_cap"] = 128
         base.save(output / "continuation_cap.json", cap)
-        with self.assertRaisesRegex(ValueError, "frozen_sidecar_changed"):
+        with patch.object(base, "source_hashes", return_value=evidence["plan"]["source_sha256"]), \
+             self.assertRaisesRegex(ValueError, "frozen_sidecar_changed"):
             continuation.verify_current(output, plan, check_parent=False)
 
     def reference_fixture(self):

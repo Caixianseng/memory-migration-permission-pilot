@@ -1,0 +1,537 @@
+{
+  "schema_version": "relation_occurrence_probe_evaluation_v1",
+  "probe_id": "relation_occurrence_probe_20261027",
+  "purpose": "small_development_mechanism_probe_only",
+  "runtime_file": "runtime.json",
+  "runtime_sha256": "14852a5454d1947a6da34843b9b01e3e22a77b14bb82807945939fd1e417ae3c",
+  "offset_convention": "Unicode code-point indices, zero-based, half-open [start,end)",
+  "category_contract_version": "customer_category_contract_v1",
+  "profile_contract_sha256": {
+    "strict_customer_relation": "4eedf04950e28a3d069e6bd10fc533814f61da90a9c580413f95ffc7728b96a1",
+    "any_specific_organization": "e68c8f6c20e25d9386f8b82d00c8f2c0b06045960312aac698fc558d0836afcf"
+  },
+  "required_trusted_policy_scope": "The business scope is the writer's company, referred to as we/us/our company or 我们/本公司. Protect only CUSTOMER and keep other instructions identical between profiles.",
+  "annotation_method": "manual_visible_text_only_under_previously_frozen_contract",
+  "is_formal_independent_64_acceptance": false,
+  "counts": {
+    "independent_texts": 12,
+    "english_texts": 6,
+    "chinese_texts": 6,
+    "profiles": 2,
+    "cells_per_arm": 24,
+    "determinate_cells_per_arm": 22,
+    "needs_review_cells_per_arm": 2,
+    "allowed_fact_slots": 12,
+    "maximum_true_specific_organizations_per_text": 2
+  },
+  "scoring_boundary": {
+    "runtime_fields": [
+      "schema_version",
+      "texts"
+    ],
+    "detector_inputs": [
+      "text",
+      "trusted_policy",
+      "system_generated_candidates_only_when_required_by_arm"
+    ],
+    "scorer_only_file": "evaluation.json",
+    "forbidden_detector_inputs": [
+      "text_index",
+      "language",
+      "phenomenon",
+      "relation_evidence",
+      "expected",
+      "reference_spans",
+      "must_mask_values",
+      "allowed_fact",
+      "text_sha256"
+    ],
+    "parse_reference_only_after_predictions_closed": true,
+    "needs_review_is_not_clean_negative": true,
+    "not_sensitive_does_not_mean_public": true,
+    "reference_review_is_not_accepted_output_or_utility_success": true
+  },
+  "exit_scoring": {
+    "principal": "authorized_local_reader",
+    "model_recipient": "token_only_under_privacy_policy",
+    "client_or_cloud_calls_required": false,
+    "must_mask_values_are_reference_only_not_runtime_registry": true,
+    "mask_known_values_at_all_equal_surface_occurrences_under_existing_propagation": true,
+    "ordinary_use_span_is_not_an_exemption_from_known_value_export_protection": true,
+    "unknown_clean_release_is_reported_separately_from_known_sensitive_raw_value_leak": true,
+    "check_allowed_fact_on_actual_sendable_payload_only": true,
+    "zero_sendable_payloads_have_no_conditional_retention_rate": true
+  },
+  "cases": [
+    {
+      "text_index": 0,
+      "text_sha256": "b21e6dfc4de6cfd34fd1bc5a85476ef7025cda5b9b720e156ac6395536dad01a",
+      "language": "en",
+      "phenomenon": "affirmed_customer_and_explicit_noncustomer",
+      "relation_evidence": "affirmed_current_and_never",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "start": 61,
+              "end": 80,
+              "text": "Fablemesh Gauge Ltd",
+              "category": "CUSTOMER"
+            }
+          ],
+          "must_mask_values": [
+            "Fablemesh Gauge Ltd"
+          ]
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "start": 61,
+              "end": 80,
+              "text": "Fablemesh Gauge Ltd",
+              "category": "CUSTOMER"
+            },
+            {
+              "start": 108,
+              "end": 137,
+              "text": "Umberwisp Milling Cooperative",
+              "category": "CUSTOMER"
+            }
+          ],
+          "must_mask_values": [
+            "Fablemesh Gauge Ltd",
+            "Umberwisp Milling Cooperative"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "formatting_fact",
+        "text": "The folder tab is turquoise.",
+        "start": 197,
+        "end": 225,
+        "match": "exact_substring"
+      }
+    },
+    {
+      "text_index": 1,
+      "text_sha256": "25a7a6f4bcb556ca65d79e170dd8e8cc28dc364ae648b5021eb66d9050d6348d",
+      "language": "en",
+      "phenomenon": "historical_customer_current_noncustomer",
+      "relation_evidence": "affirmed_historical_current_negated",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "start": 0,
+              "end": 23,
+              "text": "Tamarisk Chisel Society",
+              "category": "CUSTOMER"
+            }
+          ],
+          "must_mask_values": [
+            "Tamarisk Chisel Society"
+          ]
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "start": 0,
+              "end": 23,
+              "text": "Tamarisk Chisel Society",
+              "category": "CUSTOMER"
+            }
+          ],
+          "must_mask_values": [
+            "Tamarisk Chisel Society"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "formatting_fact",
+        "text": "The drawer liner is cream.",
+        "start": 180,
+        "end": 206,
+        "match": "exact_substring"
+      }
+    },
+    {
+      "text_index": 2,
+      "text_sha256": "325e1d0d8f748326b2c8a4a9e6b30f00bc5a16ee7ad882abd3873c6ab3142ce8",
+      "language": "en",
+      "phenomenon": "explicit_never_customer",
+      "relation_evidence": "explicit_never",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "not_sensitive",
+          "spans": [],
+          "must_mask_values": []
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "start": 0,
+              "end": 21,
+              "text": "Bracken Loomworks PLC",
+              "category": "CUSTOMER"
+            }
+          ],
+          "must_mask_values": [
+            "Bracken Loomworks PLC"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "formatting_fact",
+        "text": "The hinge cover is matte.",
+        "start": 125,
+        "end": 150,
+        "match": "exact_substring"
+      }
+    },
+    {
+      "text_index": 3,
+      "text_sha256": "925b40f77735ba87fcccc6c797909c3b88b2a8bbd5085a03617fb69a2e8f0faa",
+      "language": "en",
+      "phenomenon": "organization_relation_unknown",
+      "relation_evidence": "unknown",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "needs_review",
+          "spans": [],
+          "must_mask_values": []
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "start": 0,
+              "end": 28,
+              "text": "Hollowfen Beacon Association",
+              "category": "CUSTOMER"
+            }
+          ],
+          "must_mask_values": [
+            "Hollowfen Beacon Association"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "formatting_fact",
+        "text": "The binding thread is white.",
+        "start": 176,
+        "end": 204,
+        "match": "exact_substring"
+      }
+    },
+    {
+      "text_index": 4,
+      "text_sha256": "eb8d22bba24b21e8bd2355e0ff46925168e118f25e7d65694e61b27db8ca8140",
+      "language": "en",
+      "phenomenon": "generic_roles_only",
+      "relation_evidence": "no_specific_organization",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "not_sensitive",
+          "spans": [],
+          "must_mask_values": []
+        },
+        "any_specific_organization": {
+          "decision": "not_sensitive",
+          "spans": [],
+          "must_mask_values": []
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "formatting_fact",
+        "text": "The chart background is ivory.",
+        "start": 121,
+        "end": 151,
+        "match": "exact_substring"
+      }
+    },
+    {
+      "text_index": 5,
+      "text_sha256": "b1a06ebfb05579f175a8f616d47f6a44602c358466eddcb3dcd1813f18ea43a1",
+      "language": "en",
+      "phenomenon": "ordinary_word_before_registered_name",
+      "relation_evidence": "affirmed_current",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "start": 98,
+              "end": 104,
+              "text": "splice",
+              "category": "CUSTOMER"
+            }
+          ],
+          "must_mask_values": [
+            "splice"
+          ]
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "start": 98,
+              "end": 104,
+              "text": "splice",
+              "category": "CUSTOMER"
+            }
+          ],
+          "must_mask_values": [
+            "splice"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "formatting_fact",
+        "text": "The border line is dotted.",
+        "start": 135,
+        "end": 161,
+        "match": "exact_substring"
+      }
+    },
+    {
+      "text_index": 6,
+      "text_sha256": "413ea58d51ec1c7bb4c2d93b46c1671bd63fbd0aa9adea56e2ada5c70236e41f",
+      "language": "zh",
+      "phenomenon": "affirmed_customer_and_explicit_noncustomer",
+      "relation_evidence": "affirmed_current_and_never",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "start": 0,
+              "end": 7,
+              "text": "苍梭检衡合作社",
+              "category": "CUSTOMER"
+            }
+          ],
+          "must_mask_values": [
+            "苍梭检衡合作社"
+          ]
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "start": 0,
+              "end": 7,
+              "text": "苍梭检衡合作社",
+              "category": "CUSTOMER"
+            },
+            {
+              "start": 31,
+              "end": 36,
+              "text": "萤垣织材厂",
+              "category": "CUSTOMER"
+            }
+          ],
+          "must_mask_values": [
+            "苍梭检衡合作社",
+            "萤垣织材厂"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "formatting_fact",
+        "text": "封面底色为浅蓝色。",
+        "start": 58,
+        "end": 67,
+        "match": "exact_substring"
+      }
+    },
+    {
+      "text_index": 7,
+      "text_sha256": "f222db9f166f4be48d9b4d1dc1d8e5d8f9d9c1d7b4f9aaf8227c56c92f2da794",
+      "language": "zh",
+      "phenomenon": "historical_customer_current_noncustomer",
+      "relation_evidence": "affirmed_historical_current_negated",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "start": 4,
+              "end": 9,
+              "text": "汐砧工模社",
+              "category": "CUSTOMER"
+            }
+          ],
+          "must_mask_values": [
+            "汐砧工模社"
+          ]
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "start": 4,
+              "end": 9,
+              "text": "汐砧工模社",
+              "category": "CUSTOMER"
+            }
+          ],
+          "must_mask_values": [
+            "汐砧工模社"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "formatting_fact",
+        "text": "资料袋采用横向开口。",
+        "start": 51,
+        "end": 61,
+        "match": "exact_substring"
+      }
+    },
+    {
+      "text_index": 8,
+      "text_sha256": "ac37add3e4634235514f73a7b2d1db0a099b363a667f2ac46ad1eb20b4392def",
+      "language": "zh",
+      "phenomenon": "explicit_never_customer",
+      "relation_evidence": "explicit_never",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "not_sensitive",
+          "spans": [],
+          "must_mask_values": []
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "start": 0,
+              "end": 8,
+              "text": "琥籽筛具有限公司",
+              "category": "CUSTOMER"
+            }
+          ],
+          "must_mask_values": [
+            "琥籽筛具有限公司"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "formatting_fact",
+        "text": "托盘表面为磨砂质地。",
+        "start": 51,
+        "end": 61,
+        "match": "exact_substring"
+      }
+    },
+    {
+      "text_index": 9,
+      "text_sha256": "8a1e2a08c0904d14d5df15146dd49a0ce4504f898f37f3a73a1d43e5059e476e",
+      "language": "zh",
+      "phenomenon": "organization_relation_unknown",
+      "relation_evidence": "unknown",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "needs_review",
+          "spans": [],
+          "must_mask_values": []
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "start": 5,
+              "end": 11,
+              "text": "雾稞仪表联盟",
+              "category": "CUSTOMER"
+            }
+          ],
+          "must_mask_values": [
+            "雾稞仪表联盟"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "formatting_fact",
+        "text": "目录采用单栏排版。",
+        "start": 46,
+        "end": 55,
+        "match": "exact_substring"
+      }
+    },
+    {
+      "text_index": 10,
+      "text_sha256": "7a967fde1c3aded33547df3bbe6cf76e2d86b7aed0e16c03bffd7c5ea7b7a48d",
+      "language": "zh",
+      "phenomenon": "generic_roles_only",
+      "relation_evidence": "no_specific_organization",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "not_sensitive",
+          "spans": [],
+          "must_mask_values": []
+        },
+        "any_specific_organization": {
+          "decision": "not_sensitive",
+          "spans": [],
+          "must_mask_values": []
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "formatting_fact",
+        "text": "附页使用圆角边框。",
+        "start": 37,
+        "end": 46,
+        "match": "exact_substring"
+      }
+    },
+    {
+      "text_index": 11,
+      "text_sha256": "1d8eda95b45c29f75b73f5cc210944950ed53a28154c1ea5bb2e4ef844c4673d",
+      "language": "zh",
+      "phenomenon": "registered_name_before_ordinary_word",
+      "relation_evidence": "affirmed_current",
+      "expected": {
+        "strict_customer_relation": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "start": 1,
+              "end": 3,
+              "text": "捻线",
+              "category": "CUSTOMER"
+            }
+          ],
+          "must_mask_values": [
+            "捻线"
+          ]
+        },
+        "any_specific_organization": {
+          "decision": "sensitive",
+          "spans": [
+            {
+              "start": 1,
+              "end": 3,
+              "text": "捻线",
+              "category": "CUSTOMER"
+            }
+          ],
+          "must_mask_values": [
+            "捻线"
+          ]
+        }
+      },
+      "allowed_fact": {
+        "slot_id": "formatting_fact",
+        "text": "页面留有宽边距。",
+        "start": 61,
+        "end": 69,
+        "match": "exact_substring"
+      }
+    }
+  ]
+}

@@ -23,4 +23,5 @@ examples/privacy_eval_v3_final/*.json -text whitespace=cr-at-eol
 examples/privacy_semantics_v1/**/*.json -text whitespace=cr-at-eol
 # Contract probe references bind runtime/reference bytes before model execution.
 examples/ontology_contract_probe_20261027/*.json -text whitespace=cr-at-eol
+examples/relation_occurrence_probe_20261027/*.json -text whitespace=cr-at-eol
 *.cmd text eol=crlf
