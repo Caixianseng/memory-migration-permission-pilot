@@ -17,6 +17,7 @@ import threading
 import time
 
 from .privacy import _digest, _policy
+from .sensitivity_contract import STRICT_CUSTOMER_RELATION, category_contract_identity
 
 CODE_REVISION = "ca4f68235b50fe4c3ecf3876851d748fe4b15c6c"
 MODEL_REVISION = "cf5593a5d45e3bbf204b9df621b13b1c0cf25ee3"
@@ -136,24 +137,36 @@ class GlinerEntityAgent:
     def cache_identity(self):
         return {"runtime": self.runtime.identity, "splitter": self.splitter, "threshold": self.threshold,
                 "policy_contracts": sorted(self.approved), "labels": LABELS, "schema_version": SCHEMA_VERSION,
+                "category_contracts": category_contract_identity(),
                 "adapter_sha256": file_sha(__file__)}
 
     def __call__(self, *, text, source_id, policy, rule_findings):
         started, calls = time.monotonic(), 0
+        schema_version = SCHEMA_VERSION
         def finish(status, findings, code=None):
             return {"status": status, "findings": findings, "errors": [code] if code else [],
                     "local_calls": calls, "elapsed_seconds": round(time.monotonic() - started, 6),
                     "model": MODEL_ID, "digest": self.runtime.identity.get("weights_sha256", MODEL_REVISION),
-                    "prompt_version": SCHEMA_VERSION, "inference_kind": "local_encoder",
+                    "prompt_version": schema_version, "inference_kind": "local_encoder",
                     "diagnostics": []}
         try:
             normalized = _policy(policy)
             if (not isinstance(text, str) or not isinstance(source_id, str) or not source_id or rule_findings != []
                     or len(text) > normalized["max_text_chars"] or _digest(normalized) not in self.approved):
                 return finish("needs_review", [], "invalid_input_or_policy")
+            contract = normalized.get("category_contract")
+            if contract is not None:
+                schema_version += "/" + contract["ontology_id"] + "/" + contract["version"]
+                if ("CUSTOMER" in normalized["protected_categories"]
+                        and contract["ontology_id"] == STRICT_CUSTOMER_RELATION):
+                    # This backend extracts organization types, not customer
+                    # relations. Approval cannot manufacture that capability.
+                    return finish("needs_review", [], "unsupported_category_contract")
             if not text.strip() or not normalized["protected_categories"]:
                 return finish("ok", [])
             labels = {LABELS[cat][0]: LABELS[cat][1] for cat in normalized["protected_categories"]}
+            if contract is not None and "CUSTOMER" in normalized["protected_categories"]:
+                labels[LABELS["CUSTOMER"][0]] = contract["definitions"]["CUSTOMER"]
             reverse = {LABELS[cat][0]: cat for cat in normalized["protected_categories"]}
             # One encoder forward is counted separately from LLM generations by
             # the caller's experiment manifest; never calls a cloud service.
@@ -177,6 +190,8 @@ class GlinerEntityAgent:
                     findings.append({"start": a, "end": b, "quote": quote, "category": reverse[label]})
             return finish("ok", findings)
         except Exception as exc:
+            if type(exc) is ValueError and exc.args == ("invalid_category_contract",):
+                return finish("needs_review", [], "invalid_category_contract")
             if type(exc) is ValueError and exc.args == ("input_budget_exceeded",):
                 calls = 0
                 return finish("needs_review", [], "input_budget_exceeded")

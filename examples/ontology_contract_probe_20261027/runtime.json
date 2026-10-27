@@ -1,0 +1,21 @@
+{
+  "schema_version": "ontology_contract_probe_runtime_v1",
+  "texts": [
+    "Our customer Vellum Ferryworks has renewed its support agreement with us; the agreement identifies that company as the buyer of our service.",
+    "For the equipment we are selling, the buyer is Cress Harbor Instruments. Nacre Lantern Cooperative supplies our packing materials and has never been our customer.",
+    "The company Brindle Reed Systems is solely our supplier. It has never purchased anything from us and is not our client.",
+    "Contrary to the draft note, Garnet Loam Association has never been our customer; the final record explicitly marks the organization as a non-customer.",
+    "In this glossary, 'client', 'buyer', and 'customer organization' describe business roles. The examples name no particular organization.",
+    "A sheaf is a bundle of cut stalks. A company whose registered name is sheaf is our current client.",
+    "We finished our last paid assignment for Juniper Trestle Bureau several years ago. That organization was our customer then, although it is no longer our customer today.",
+    "Pumice Thread Alliance, an incorporated organization, released a handbook. This note provides no information about whether that organization is or ever was a customer of ours.",
+    "我们正在为霁岸测绘社提供付费运维，双方合同明确写明该组织是本公司的客户。",
+    "本公司销售的这批仪器由砾舟检具合作社购买，它是本单买方；泊榆纸品厂只向我们供货，从未成为我们的客户。",
+    "青穗陶轮有限公司只承担我们的原料供应，合同还明确注明它不是本公司的客户。",
+    "纪要中曾误写岚坞装配协会是我们的客户，核定结论是否定的：该组织从来不是我们的客户。",
+    "这里的“客户单位”“供应商”“买方”都是角色类别，不是在给某家机构命名；整段没有写出具体组织名称。",
+    "登记记录写明，一家组织的实际名称就是“折页”，它是我们的现有客户；随后工艺说明中的“折页”只指纸张加工步骤。",
+    "藏芦线缆社曾购买过本公司的检测服务，是我们过去的客户；双方后来终止合作，目前已经没有客户关系。",
+    "羽汀纹样会作为一个组织在展览目录中被介绍，目录只讲它的作品，没有交代它是否与本公司存在过客户关系。"
+  ]
+}

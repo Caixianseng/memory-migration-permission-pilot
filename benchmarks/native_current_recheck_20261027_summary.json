@@ -1,0 +1,372 @@
+{
+  "artifacts_sha256": {
+    "batch_authorization.json": "8b4b25cc6e5fed20319d92998e4175af7374aaf09d9579cfccd0ea3a955823b2",
+    "independent_verification.json": "384af5793a3ad905a858fb53cf979ace4b15a97f3c485da2092469030583f57a",
+    "plan.json": "ed7877248b8e6d4870cadb17c5443258a23d0cf5fd205eb05e6bd44fc1af8dfc",
+    "prediction_phase_closed.json": "32fd7f2132f88fc4872f0792c2861ba4cb1f1e6bf9fd04e43c62dd54061eaa7f",
+    "predictions.json": "209950b4725c8120b660985f81bb9c730fbe66f8e839ae0b0f15629811e9edab",
+    "summary.json": "b24624deb31e8c987ef2750b7402416be9162c7e52de70652292d2e61f94e7b1"
+  },
+  "attempts": {
+    "automatic_retries": 0,
+    "new_batch": 24,
+    "new_batch_cap": 24,
+    "new_detector_generations": 0,
+    "new_raw_api_calls": 0,
+    "prior_closed_batch": 24,
+    "superseded_preflight": 0,
+    "two_batches_combined": 48
+  },
+  "baseline_git_head": "c8254d9bcba124dd68e841cc41855e93c68c3f7e",
+  "clients": {
+    "harness": {
+      "attempts": 12,
+      "model_selector": "deepseek-flash",
+      "version": "0.2.1-rc.3"
+    },
+    "qoder": {
+      "attempts": 12,
+      "model_selector": "DeepSeek-Flash",
+      "version": "1.1.77"
+    }
+  },
+  "cost": {
+    "account_charge": null,
+    "physical_http_requests": null,
+    "zero_usage_fields_do_not_mean_free": true
+  },
+  "harness_allowed_sdk_streams": 12,
+  "host_controls": {
+    "enforcement_scope": "controlled-local-host, not vendor native ACL",
+    "passed": 156,
+    "total": 156
+  },
+  "independent_audit": {
+    "checks_passed": 30,
+    "checks_total": 30,
+    "sha256": "384af5793a3ad905a858fb53cf979ace4b15a97f3c485da2092469030583f57a",
+    "status": "passed"
+  },
+  "legal_correct": 16,
+  "legal_denominator": 16,
+  "metrics": {
+    "causal_scope": "Host input comparison only; native hidden context/provider deployment and session variation remain confounded.",
+    "cells": {
+      "harness/source/private": {
+        "categories": {
+          "correct": 3
+        },
+        "denominator": 3,
+        "legal_correct": 2,
+        "legal_denominator": 2,
+        "missing_correct": 1,
+        "missing_denominator": 1
+      },
+      "harness/source/raw": {
+        "categories": {
+          "correct": 3
+        },
+        "denominator": 3,
+        "legal_correct": 2,
+        "legal_denominator": 2,
+        "missing_correct": 1,
+        "missing_denominator": 1
+      },
+      "harness/target/private": {
+        "categories": {
+          "correct": 3
+        },
+        "denominator": 3,
+        "legal_correct": 2,
+        "legal_denominator": 2,
+        "missing_correct": 1,
+        "missing_denominator": 1
+      },
+      "harness/target/raw": {
+        "categories": {
+          "correct": 3
+        },
+        "denominator": 3,
+        "legal_correct": 2,
+        "legal_denominator": 2,
+        "missing_correct": 1,
+        "missing_denominator": 1
+      },
+      "qoder/source/private": {
+        "categories": {
+          "correct": 3
+        },
+        "denominator": 3,
+        "legal_correct": 2,
+        "legal_denominator": 2,
+        "missing_correct": 1,
+        "missing_denominator": 1
+      },
+      "qoder/source/raw": {
+        "categories": {
+          "correct": 3
+        },
+        "denominator": 3,
+        "legal_correct": 2,
+        "legal_denominator": 2,
+        "missing_correct": 1,
+        "missing_denominator": 1
+      },
+      "qoder/target/private": {
+        "categories": {
+          "correct": 3
+        },
+        "denominator": 3,
+        "legal_correct": 2,
+        "legal_denominator": 2,
+        "missing_correct": 1,
+        "missing_denominator": 1
+      },
+      "qoder/target/raw": {
+        "categories": {
+          "correct": 3
+        },
+        "denominator": 3,
+        "legal_correct": 2,
+        "legal_denominator": 2,
+        "missing_correct": 1,
+        "missing_denominator": 1
+      }
+    },
+    "classifications": {
+      "correct": 24
+    },
+    "denominator": 24,
+    "direction_source_target_cross_client_pairs": [
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "host_inputs_equal": true,
+        "pair_id": "harness_to_qoder_Q1_private"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "host_inputs_equal": true,
+        "pair_id": "harness_to_qoder_Q1_raw"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "host_inputs_equal": true,
+        "pair_id": "harness_to_qoder_Q2_private"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "host_inputs_equal": true,
+        "pair_id": "harness_to_qoder_Q2_raw"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "host_inputs_equal": true,
+        "pair_id": "harness_to_qoder_Q3_private"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "host_inputs_equal": true,
+        "pair_id": "harness_to_qoder_Q3_raw"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "host_inputs_equal": true,
+        "pair_id": "qoder_to_harness_Q1_private"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "host_inputs_equal": true,
+        "pair_id": "qoder_to_harness_Q1_raw"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "host_inputs_equal": true,
+        "pair_id": "qoder_to_harness_Q2_private"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "host_inputs_equal": true,
+        "pair_id": "qoder_to_harness_Q2_raw"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "host_inputs_equal": true,
+        "pair_id": "qoder_to_harness_Q3_private"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "host_inputs_equal": true,
+        "pair_id": "qoder_to_harness_Q3_raw"
+      }
+    ],
+    "same_client_source_target_pairs": [
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "client": "qoder",
+        "host_inputs_equal": true,
+        "question_id": "Q1",
+        "view": "raw"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "client": "qoder",
+        "host_inputs_equal": true,
+        "question_id": "Q2",
+        "view": "raw"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "client": "qoder",
+        "host_inputs_equal": true,
+        "question_id": "Q3",
+        "view": "raw"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "client": "qoder",
+        "host_inputs_equal": true,
+        "question_id": "Q1",
+        "view": "private"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "client": "qoder",
+        "host_inputs_equal": true,
+        "question_id": "Q2",
+        "view": "private"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "client": "qoder",
+        "host_inputs_equal": true,
+        "question_id": "Q3",
+        "view": "private"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "client": "harness",
+        "host_inputs_equal": true,
+        "question_id": "Q1",
+        "view": "raw"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "client": "harness",
+        "host_inputs_equal": true,
+        "question_id": "Q2",
+        "view": "raw"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "client": "harness",
+        "host_inputs_equal": true,
+        "question_id": "Q3",
+        "view": "raw"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "client": "harness",
+        "host_inputs_equal": true,
+        "question_id": "Q1",
+        "view": "private"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "client": "harness",
+        "host_inputs_equal": true,
+        "question_id": "Q2",
+        "view": "private"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "client": "harness",
+        "host_inputs_equal": true,
+        "question_id": "Q3",
+        "view": "private"
+      }
+    ]
+  },
+  "missing_correct": 8,
+  "missing_denominator": 8,
+  "native_elapsed_seconds": 192.0619999999999,
+  "native_run": "results/native_semantic_current_recheck_20261027_run_02",
+  "offline_prior_failures_preserved": {
+    "invalid_test_temp_environment": {
+      "cause": "Runner redirected system temp to non-ASCII project path; existing workers require ASCII temp state.",
+      "default_temp_targeted_tests_passed": 59,
+      "errors": 14,
+      "failures": 2,
+      "product_or_test_guards_changed": false,
+      "tests": 1780
+    },
+    "missing_dependency_contract": {
+      "errors": 4,
+      "failures": 0,
+      "fix": "new dependency contract v3, historical v1/v2 unchanged",
+      "tests": 1775
+    }
+  },
+  "offline_regression": {
+    "changed_files": [],
+    "default_ascii_temp": true,
+    "elapsed_test_seconds": 359.782,
+    "errors": 0,
+    "exit_code": 0,
+    "failures": 0,
+    "new_model_calls": 0,
+    "new_native_calls": 0,
+    "passed": 1780,
+    "skipped": 0,
+    "source_files": 387,
+    "source_unchanged": true,
+    "status": "passed",
+    "test_log_sha256": "a5dc485258c5c9d7a3781c5148e98210492c485fb0de12f90179de3c9b4697fb",
+    "tests_run": 1780,
+    "wall_seconds": 361.3909999999996
+  },
+  "private_registered_value_scan": {
+    "constructed_inputs": 12,
+    "full_cloud_request_inspected": false,
+    "observable_responses": 12,
+    "observed_response_disclosures": 0
+  },
+  "purpose": "User-requested new regression using real installed Qoder and DeepSeek Harness; not independent acceptance.",
+  "schema": "native_current_recheck_20261027_public_summary_v1",
+  "scope": {
+    "cross_machine_network": false,
+    "detector_precision_recall_acceptance": null,
+    "fresh64_acceptance": null,
+    "native_live_revocation": false,
+    "paper_novelty_established": false,
+    "source_agent_generated_memory": false,
+    "strict_category_contract_exercised": false,
+    "unique_exposed_stories": 1,
+    "unique_logical_questions": 3
+  },
+  "status": "completed",
+  "working_tree_version_bound_by_plan": true
+}

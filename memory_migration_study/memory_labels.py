@@ -19,6 +19,7 @@ from .privacy import (QUERY_SOURCE, RestorationMap, _close_and_propagate,
                       _digest, _policy, _sources, detect_sensitive,
                       prepare_private_payload, restore_answer)
 from .privacy_egress import validate_outbound
+from .sensitivity_contract import STRICT_CUSTOMER_RELATION
 from .principal_scope import (EXACT_PRINCIPAL_SCOPE_VERSION, grant_allows_principal,
                               normalize_principal, normalize_principal_pairs,
                               principal_scope_version)
@@ -475,6 +476,8 @@ def prepare_labeled_transfer(records, query, policy, *, authority: MemoryLabelAu
     The opt-in semantic hook receives only selected memory text, the question,
     normalized sensitivity policy and non-capability cache-domain hashes. Role
     decisions classify candidates; they cannot change any access grant.
+    An explicit strict CUSTOMER contract requires complete current semantic
+    coverage in all modes: signed labels prove positive protection, not absence.
     """
     if mode not in {"migration", "generation", "two_stage"}:
         return _blocked("invalid_transfer_mode")
@@ -540,11 +543,21 @@ def prepare_labeled_transfer(records, query, policy, *, authority: MemoryLabelAu
     # Start with a real rules result: it binds payload and full normalized policy
     # and enforces format, reserved-token and size checks in all three arms.
     base = detect_sensitive(payload, normalized, mode="rules")
-    if mode in {"migration", "two_stage"}:
+    strict_customer = ("CUSTOMER" in normalized["protected_categories"] and
+        normalized.get("category_contract", {}).get("ontology_id") == STRICT_CUSTOMER_RELATION)
+    if mode in {"migration", "two_stage"} or strict_customer:
         semantic_payload = payload
     else:
         semantic_payload = {"query": query, "memories": fallback}
     semantic = detect_sensitive(semantic_payload, normalized, agent=agent, mode="combined")
+    base_errors = base["errors"]
+    if (strict_customer and semantic_payload == payload and semantic.get("status") == "ok"
+            and semantic.get("errors") == [] and semantic.get("local_calls_complete") is True
+            and semantic.get("payload_sha256") == base.get("payload_sha256") == _digest(payload)
+            and semantic.get("policy_sha256") == base.get("policy_sha256") == _digest(normalized)):
+        # The complete, bound semantic pass fills only the rules' strict-CUSTOMER
+        # coverage gap. Retain all actual safety errors and protective findings.
+        base_errors = [error for error in base_errors if error != "unsupported_category_contract"]
     detection = copy.deepcopy(base)
     detection["mode"] = mode
     detection["strategy"] = LABEL_VERSION + ":" + mode
@@ -552,7 +565,7 @@ def prepare_labeled_transfer(records, query, policy, *, authority: MemoryLabelAu
     detection["local_calls_complete"] = semantic["local_calls_complete"]
     detection["agent_elapsed_seconds"] = semantic["agent_elapsed_seconds"]
     detection["agent_observations"] = copy.deepcopy(semantic["agent_observations"])
-    detection["errors"] = sorted(set(base["errors"] + semantic["errors"]))
+    detection["errors"] = sorted(set(base_errors + semantic["errors"]))
     findings = base["findings"] + semantic["findings"]
     signed_label_findings = []
     if mode in {"generation", "two_stage"}:

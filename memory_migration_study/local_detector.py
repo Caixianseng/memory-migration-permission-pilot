@@ -12,6 +12,8 @@ import time
 from copy import deepcopy
 from pathlib import Path
 
+from .sensitivity_contract import category_contract_identity, normalize_category_contract
+
 MODEL = "qwen3:4b-instruct-2507-q4_K_M"
 VERSION = "0.40.8"
 DIGEST = "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0"
@@ -30,6 +32,11 @@ SYSTEM_PROMPT = (
     "needs_review ONLY for uncertain span/category extraction. Do not judge truth, "
     "provisional/future status or privacy permissions."
 )
+REPAIR_PROMPT = (
+    "Return the required JSON schema. Copy exact text substrings without added "
+    "quote marks. Use only protected_categories from the system policy; "
+    "omit out-of-scope categories. Use [] if none occur. Do not infer missing values."
+)
 # All diagnostics are fixed codes. Never persist exception messages, model output,
 # source text, repair quotes or source identifiers in a failure record.
 DIAGNOSTIC_STAGES = frozenset({"input", "budget", "health", "transport", "envelope", "output", "semantic"})
@@ -42,6 +49,7 @@ DIAGNOSTIC_CODES = frozenset({
     "local_response_invalid", "unexpected_model_behavior", "json_syntax_invalid",
     "duplicate_key", "invalid_schema", "invalid_span", "invalid_category",
     "format_or_span_invalid", "semantic_uncertainty", "local_failure",
+    "invalid_category_contract",
 })
 SCHEMA = {
     "type": "object", "additionalProperties": False,
@@ -151,6 +159,7 @@ class LocalSensitivityAgent:
                 "model": MODEL, "digest": DIGEST, "runtime": VERSION,
                 "prompt_version": PROMPT_VERSION,
                 "prompt_sha256": hashlib.sha256(SYSTEM_PROMPT.encode()).hexdigest(),
+                "category_contracts": category_contract_identity(),
                 "config": deepcopy(self.config),
                 "options": {"num_ctx": 4096, "num_predict": 1024, "temperature": 0, "seed": 42}}
 
@@ -194,6 +203,7 @@ class LocalSensitivityAgent:
         instructions = policy.get("instructions", "")
         if not isinstance(instructions, str) or len(instructions) > 2000:
             raise ValueError("invalid_policy")
+        contract = normalize_category_contract(policy)
         if not isinstance(rule_findings, list):
             raise ValueError("invalid_candidates")
         candidates = []
@@ -206,9 +216,11 @@ class LocalSensitivityAgent:
             if item.get("category") not in CATEGORIES or item.get("source_id", source_id) != source_id:
                 raise ValueError("invalid_candidates")
             candidates.append({"quote": text[start:end], "category": item["category"]})
-        return ({"text": text, "local_candidates": candidates},
-                {"version": policy["version"], "protected_categories": categories,
-                 "instructions": instructions})
+        trusted = {"version": policy["version"], "protected_categories": categories,
+                   "instructions": instructions}
+        if contract is not None:
+            trusted["category_contract"] = contract
+        return {"text": text, "local_candidates": candidates}, trusted
 
     @staticmethod
     def _validate_output(result, text, categories):
@@ -238,6 +250,25 @@ class LocalSensitivityAgent:
         return {"status": result["status"], "findings": findings,
                 "quote_wrapper_repairs": wrapper_repairs}
 
+    @staticmethod
+    def _prepare_messages(data, trusted_policy):
+        """Pure production request assembly, also used for offline budget freezing."""
+        content = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
+        prompt, prompt_version = SYSTEM_PROMPT, PROMPT_VERSION
+        contract = trusted_policy.get("category_contract")
+        if contract is not None:
+            # Remove the legacy gloss, so competing definitions never coexist.
+            prompt = prompt.replace("CUSTOMER=full customer organization", "CUSTOMER=trusted policy.category_contract.definitions.CUSTOMER")
+            prompt_version += "/" + contract["ontology_id"] + "/" + contract["version"]
+        system = prompt + "\n\nTrusted sensitivity policy JSON:\n" + json.dumps(
+            trusted_policy, ensure_ascii=False, separators=(",", ":"))
+        return [{"role": "system", "content": system}, {"role": "user", "content": content}], prompt_version
+
+    @staticmethod
+    def _request_budget(messages, *, repair=False):
+        """Same conservative byte bound as the actual fixed-context request."""
+        return sum(len(message["content"].encode("utf-8")) for message in messages) + (320 if repair else 256) + 1024
+
     def __call__(self, *, text, source_id, policy, rule_findings):
         started, calls, diagnostics, wrapper_repairs = time.monotonic(), 0, [], 0
         metadata = {"model": MODEL, "digest": DIGEST, "prompt_version": PROMPT_VERSION}
@@ -255,13 +286,12 @@ class LocalSensitivityAgent:
             data, trusted_policy = self._validate_inputs(text, source_id, policy, rule_findings)
         except (ValueError, TypeError) as exc:
             diagnose("input", _safe_error_code(exc, "invalid_input_or_policy"))
-            return finish("needs_review", [], ["invalid_input_or_policy"])
-        content = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
-        system = SYSTEM_PROMPT + "\n\nTrusted sensitivity policy JSON:\n" + json.dumps(
-            trusted_policy, ensure_ascii=False, separators=(",", ":"))
+            code = _safe_error_code(exc, "invalid_input_or_policy")
+            return finish("needs_review", [], [code if code == "invalid_category_contract" else "invalid_input_or_policy"])
+        messages, metadata["prompt_version"] = self._prepare_messages(data, trusted_policy)
         # UTF-8 bytes are a conservative upper bound for byte-level BPE tokens;
         # reserve 256 tokens for template and 1024 output tokens in 4096 context.
-        if len(system.encode("utf-8")) + len(content.encode("utf-8")) + 256 + 1024 > 4096:
+        if self._request_budget(messages) > 4096:
             diagnose("budget", "input_budget_exceeded")
             return finish("needs_review", [], ["input_budget_exceeded"])
         try:
@@ -269,7 +299,6 @@ class LocalSensitivityAgent:
         except Exception as exc:
             diagnose("health", _safe_error_code(exc, "local_health_failed"))
             return finish("needs_review", [], ["local_health_failed"])
-        messages = [{"role": "system", "content": system}, {"role": "user", "content": content}]
         for attempt in range(2):
             request = {"model": MODEL, "messages": messages,
                        "format": _policy_schema(trusted_policy["protected_categories"]),
@@ -302,13 +331,11 @@ class LocalSensitivityAgent:
                 if attempt == 1:
                     return finish("needs_review", [], ["format_or_span_invalid"])
                 # No previous response or task answer is sent as feedback.
-                repair = ("Return the required JSON schema. Copy exact text substrings without added "
-                          "quote marks. Use only protected_categories from the system policy; "
-                          "omit out-of-scope categories. Use [] if none occur. Do not infer missing values.")
-                if len(system.encode()) + len(content.encode()) + len(repair.encode()) + 320 + 1024 > 4096:
+                repaired_messages = [*messages, {"role": "user", "content": REPAIR_PROMPT}]
+                if self._request_budget(repaired_messages, repair=True) > 4096:
                     diagnose("budget", "repair_budget_exceeded")
                     return finish("needs_review", [], ["repair_budget_exceeded"])
-                messages = [*messages, {"role": "user", "content": repair}]
+                messages = repaired_messages
                 continue
             wrapper_repairs = result["quote_wrapper_repairs"]
             errors = ["semantic_uncertainty"] if result["status"] == "needs_review" else []

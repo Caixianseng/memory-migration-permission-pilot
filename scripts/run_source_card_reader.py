@@ -41,7 +41,7 @@ from scripts.run_reference_memory_study import TypedCountingDetector, file_sha
 from scripts.run_span_answer_transfer import AnswerTransport, _construct, _tasks, _current_access, CONTROL_ID, CONTROL_QUERIES
 
 VERSION = "full_context_source_fact_reader_development_v1"
-DEPENDENCY_CONTRACT_VERSION = "source_card_dependencies_v2"
+DEPENDENCY_CONTRACT_VERSION = "source_card_dependencies_v3"
 ARMS = ("F", "Flat-ID", "Source-ID")
 SEED = 2026102604
 LIMITS = {"build": 16, "write_annotation": 128, "answer": 120}
@@ -82,6 +82,7 @@ REGISTERED_DEPENDENCIES = (
     "memory_migration_study/role_query.py",
     "memory_migration_study/semantic_memory_benchmark.py",
     "memory_migration_study/semantic_refinement.py",
+    "memory_migration_study/sensitivity_contract.py",
     "memory_migration_study/source_card_reader.py",
     "memory_migration_study/source_fact_cards.py",
     "memory_migration_study/span_answer_evidence.py",

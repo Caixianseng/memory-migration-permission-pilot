@@ -14,6 +14,7 @@ from scripts import verify_source_card_reader as verifier
 
 V1 = "source_card_dependencies_v1"
 V2 = "source_card_dependencies_v2"
+V3 = "source_card_dependencies_v3"
 _MISSING = object()
 READER = "scripts/run_source_card_reader.py"
 
@@ -69,8 +70,17 @@ class SourceCardDependencyContractTests(unittest.TestCase):
         self.assertEqual(receipt["member_count"], 51)
         self.assertTrue(receipt["current_and_archive_hashes_checked"])
 
+    def test_new_v3_is_exactly_v2_plus_sensitivity_contract(self):
+        self.assertEqual(verifier.DEPENDENCY_CONTRACTS[V3] - verifier.DEPENDENCY_CONTRACTS[V2],
+                         {"memory_migration_study/sensitivity_contract.py"})
+        self.assertEqual(verifier.DEPENDENCY_CONTRACTS[V2] - verifier.DEPENDENCY_CONTRACTS[V3], set())
+        receipt = self.verify(self.fixture(source_version=V3, plan_version=V3))
+        self.assertEqual(receipt["version"], V3)
+        self.assertEqual(receipt["member_count"], 52)
+        self.assertTrue(receipt["current_and_archive_hashes_checked"])
+
     def test_missing_extra_and_same_count_replacement_in_source_are_rejected(self):
-        for version in (V1, V2):
+        for version in (V1, V2, V3):
             original = tuple(sorted(verifier.DEPENDENCY_CONTRACTS[version]))
             removable = next(name for name in original if name != READER)
             for variant in ("missing", "extra", "same_count_replacement", "duplicate"):
@@ -102,7 +112,9 @@ class SourceCardDependencyContractTests(unittest.TestCase):
                 self.verify(self.fixture(source_version=source, plan_version=plan))
 
     def test_source_plan_version_mixing_including_omitted_old_default_is_rejected(self):
-        for source, plan in ((V1, V2), (V2, V1), (_MISSING, V2), (V2, _MISSING)):
+        pairs = [(source, plan) for source in (V1, V2, V3) for plan in (V1, V2, V3) if source != plan]
+        pairs.extend([(_MISSING, V2), (V2, _MISSING), (_MISSING, V3), (V3, _MISSING)])
+        for source, plan in pairs:
             with self.subTest(source=source, plan=plan), self.assertRaisesRegex(ValueError, "dependency_contract_version_mismatch"):
                 self.verify(self.fixture(source_version=source, plan_version=plan))
 
@@ -152,7 +164,20 @@ class SourceCardDependencyContractTests(unittest.TestCase):
             with self.subTest(variant=variant), self.assertRaises(ValueError):
                 self.verify(fixture)
 
-    def test_current_protocol_pins_v2_and_exact_real_ast_import_closure(self):
+    def test_v3_new_contract_module_cannot_be_omitted_or_changed(self):
+        for variant in ("manifest_missing", "source_changed", "archive_changed"):
+            fixture = self.fixture(source_version=V3, plan_version=V3)
+            plan, current, archive = fixture
+            name = "memory_migration_study/sensitivity_contract.py"
+            if variant == "manifest_missing":
+                del plan["implementation_sha256"][name]
+            else:
+                ((current if variant == "source_changed" else archive) / name).write_text("# changed definition\n", encoding="utf-8")
+            with self.subTest(variant=variant), self.assertRaisesRegex(
+                    ValueError, "dependency_manifest_invalid|dependency_source_or_archive_hash_mismatch"):
+                self.verify(fixture)
+
+    def test_current_protocol_pins_v3_and_exact_real_ast_import_closure(self):
         corpus = self.root / "synthetic-corpus"
         (corpus / "development").mkdir(parents=True)
         runtime = [{"story_id": "synthetic-" + str(i), "language": "en" if i < 4 else "zh",
@@ -164,10 +189,10 @@ class SourceCardDependencyContractTests(unittest.TestCase):
         with patch.object(reader, "LocalSourceCardReader", return_value=SimpleNamespace(cache_identity=lambda: {"test": "no-model"})):
             plan, observed, _ = reader.protocol(corpus, {})
         self.assertEqual(observed, runtime)
-        self.assertEqual(reader.DEPENDENCY_CONTRACT_VERSION, V2)
-        self.assertEqual(plan["dependency_contract_version"], V2)
-        self.assertEqual(set(plan["implementation_sha256"]), verifier.DEPENDENCY_CONTRACTS[V2])
-        self.assertEqual(set(verifier._declaration(Path(reader.__file__).read_text(encoding="utf-8"))), verifier.DEPENDENCY_CONTRACTS[V2])
+        self.assertEqual(reader.DEPENDENCY_CONTRACT_VERSION, V3)
+        self.assertEqual(plan["dependency_contract_version"], V3)
+        self.assertEqual(set(plan["implementation_sha256"]), verifier.DEPENDENCY_CONTRACTS[V3])
+        self.assertEqual(set(verifier._declaration(Path(reader.__file__).read_text(encoding="utf-8"))), verifier.DEPENDENCY_CONTRACTS[V3])
 
 
 if __name__ == "__main__":

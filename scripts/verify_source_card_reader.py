@@ -24,7 +24,7 @@ from unittest.mock import patch
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-VERSION = "independent_source_card_reader_verification_v2"
+VERSION = "independent_source_card_reader_verification_v3"
 STUDY_VERSION = "full_context_source_fact_reader_development_v1"
 LEGACY_DEPENDENCY_CONTRACT_VERSION = "source_card_dependencies_v1"
 # Fixed membership extracted from the reader at d6ec88d. Never infer an old
@@ -84,6 +84,8 @@ LEGACY_REGISTERED_DEPENDENCIES = (
 DEPENDENCY_CONTRACTS = {
     LEGACY_DEPENDENCY_CONTRACT_VERSION: frozenset(LEGACY_REGISTERED_DEPENDENCIES),
     "source_card_dependencies_v2": frozenset(LEGACY_REGISTERED_DEPENDENCIES) | {"memory_migration_study/principal_scope.py"},
+    "source_card_dependencies_v3": frozenset(LEGACY_REGISTERED_DEPENDENCIES) | {
+        "memory_migration_study/principal_scope.py", "memory_migration_study/sensitivity_contract.py"},
 }
 ARMS = ("F", "Flat-ID", "Source-ID")
 SEED = 2026102604
@@ -181,7 +183,7 @@ def verify_dependency_contract(plan, *, source_root, archive_root):
     """Read-only exact membership/hash verification; never execute saved code.
 
     A missing version is the original 50-member v1 contract, independently on
-    the source and plan sides. A new source cannot claim v2 while using an old
+    the source and plan sides. A new source cannot claim a newer version with an old
     plan (or the reverse). Historical bundles can use their archived source as
     source_root; changed working files are never treated as matching history.
     """

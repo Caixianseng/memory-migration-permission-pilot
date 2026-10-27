@@ -15,6 +15,8 @@ import secrets
 from typing import Callable
 import unicodedata
 
+from .sensitivity_contract import STRICT_CUSTOMER_RELATION, normalize_category_contract
+
 CATEGORIES = frozenset("EMAIL PHONE ID PERSON ADDRESS CUSTOMER PROJECT AMOUNT DATE".split())
 QUERY_SOURCE = "__query__"
 _TOKEN = re.compile(r"\[PVT_[A-F0-9]{24}_[A-Z]+_\d+\]")
@@ -26,6 +28,7 @@ _AGENT_ERROR_CODES = frozenset({
     "local_transport_failed", "local_response_model_mismatch", "local_generation_incomplete",
     "local_response_invalid", "unexpected_model_behavior", "format_or_span_invalid",
     "repair_budget_exceeded", "semantic_uncertainty", "local_failure",
+    "invalid_category_contract", "unsupported_category_contract",
 })
 _AGENT_DIAGNOSTIC_STAGES = frozenset({"input", "budget", "health", "transport", "envelope", "output", "semantic"})
 _AGENT_DIAGNOSTIC_CODES = _AGENT_ERROR_CODES | frozenset({
@@ -87,11 +90,15 @@ def _policy(policy: dict) -> dict:
         if total_chars > 6000:
             raise ValueError("invalid_policy_entity_registry")
         entries.add((item["category"], item["value"]))
+    contract = normalize_category_contract(policy)
     # Explicit allowlist prevents accidental forwarding of gold labels or extra context.
-    return {"version": policy["version"], "protected_categories": list(dict.fromkeys(cats)),
+    normalized = {"version": policy["version"], "protected_categories": list(dict.fromkeys(cats)),
             "policy_id": policy.get("policy_id", policy["version"]), "max_text_chars": maximum,
             "instructions": policy.get("instructions", ""),
             "entity_registry": [{"category": category, "value": value} for category, value in sorted(entries)]}
+    if contract is not None:
+        normalized["category_contract"] = contract
+    return normalized
 
 
 def _occurrences(text: str, quote: str):
@@ -327,6 +334,10 @@ def _rule_findings(text: str, source_id: str, policy: dict) -> list[dict]:
               "CUSTOMER": r"customer|client|客户(?:名称)?",
               "PROJECT": r"project(?:\s+(?:name|code))?|项目(?:名称|代号)?",
               "ID": r"ID(?:\s+(?:number|card))?|passport|证件号|身份证号|护照号"}
+    if policy.get("category_contract", {}).get("ontology_id") == STRICT_CUSTOMER_RELATION:
+        # A field key alone cannot establish an affirmative customer relation.
+        # Independent trusted registry declarations below retain their protection.
+        labels.pop("CUSTOMER")
     for category, start, end in _labeled_field_spans(text, labels):
         add(category, start, end)
     # Simple standalone project references, including the current public-memory style.
@@ -378,6 +389,11 @@ def detect_sensitive(payload: dict, sensitivity_policy: dict, *, agent=None, mod
         rules = _rule_findings(text, source_id, policy)
         if mode in {"rules", "combined"}:
             all_findings.extend(rules)
+        if (mode == "rules" and text.strip() and "CUSTOMER" in policy["protected_categories"]
+                and policy.get("category_contract", {}).get("ontology_id") == STRICT_CUSTOMER_RELATION):
+            # Rules still preserve known positive declarations and other types,
+            # but cannot certify the absence of a semantic customer relation.
+            result["errors"].append("unsupported_category_contract")
         if not text.strip() or not policy["protected_categories"] or mode == "rules":
             continue
         if agent is None:
