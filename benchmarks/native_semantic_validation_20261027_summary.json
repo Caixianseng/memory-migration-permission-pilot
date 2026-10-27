@@ -1,0 +1,531 @@
+{
+  "attempts": {
+    "automatic_retries": 0,
+    "by_client": {
+      "harness": 12,
+      "qoder": 12
+    },
+    "cap": 24,
+    "cumulative": 24,
+    "new_raw_api_calls": 0,
+    "repeated_started_positions": 0,
+    "run01": 2,
+    "run02_new": 22
+  },
+  "base_commit": "8af5e9eb32c5eb80d0f904f59c9d942110951a89",
+  "design": {
+    "authoring_reference_exposure": "Implementation author inspected existing reference before this run; development story already exposed.",
+    "directions": [
+      "qoder_to_harness",
+      "harness_to_qoder"
+    ],
+    "distinct_logical_questions": 3,
+    "exposed_synthetic_story_count": 1,
+    "legal_questions": 2,
+    "missing_question": 1,
+    "original_inputs_reused_for_continuation": true,
+    "planned_slots": 24,
+    "runtime_reference_parse_after_output_closure": true,
+    "stages": [
+      "source",
+      "target"
+    ],
+    "views": [
+      "raw",
+      "private"
+    ]
+  },
+  "engineering_results": {
+    "native_interface_failures": 0,
+    "new_run02_denominator": 22,
+    "new_run02_pipeline_successes": 22,
+    "old_receipts_zero_model_posthoc_revalidated": 2,
+    "original_call_time_denominator": 24,
+    "original_call_time_pipeline_successes": 23,
+    "parent_driver_hash_algorithm_mismatch_failures": 1,
+    "parent_original_evidence_preserved": true,
+    "posthoc_restoration_scope": "Fresh run02 controlled host capabilities; not original call-time restoration.",
+    "run01_original_classifications": {
+      "correct": 1,
+      "engineering": 1,
+      "not_run": 22
+    },
+    "run01_original_planned_denominator": 24,
+    "run01_original_status": "engineering_failed"
+  },
+  "frozen_evidence": {
+    "artifacts_sha256": {
+      "results/native_semantic_independent_verification.json": "f168d55cf158b4cd9fb9813694d45553995fdf63125b479864f568c2e28cf92c",
+      "results/native_semantic_release_patch.json": "aa9df05569a46f562350c1c9431db7b9963216eff84ace4cdd3736d9817c22c0",
+      "results/native_semantic_validation_20261027_run_01/plan.json": "ae9a1568fd285c62d77a5eafe3426d5658a7252007e5b550b8bb92c826208dc0",
+      "results/native_semantic_validation_20261027_run_01/prediction_phase_closed.json": "e7c4c587d0553707bf2f533c386bc8e9858d077226c0e34f5003ea4cd6b1af40",
+      "results/native_semantic_validation_20261027_run_01/predictions.json": "b305bdcfbe16bce9fc65e622e2aebf7bff0bb7f0eb69ebc05ebe682ac19bb2ac",
+      "results/native_semantic_validation_20261027_run_01/readonly_diagnosis.json": "f737fd58784a2f692e56dbc3893cf5a7da5e2eeec051e6c9fe66b54339f6285d",
+      "results/native_semantic_validation_20261027_run_01/summary.json": "f7d683c3d541f16a05d4b6ea93f7ad8ebb903a3e319c1df5bd340c98fb9e6ffa",
+      "results/native_semantic_validation_20261027_run_02/engineering_controls.json": "1a7069326c189a79e875c124f492aeb830ed189850f220ca489797ab11bfbc3a",
+      "results/native_semantic_validation_20261027_run_02/metrics.json": "050a5b342d19ae587e9aed59a56ab6548967acb4afca22d5bb1b99c5373c64f5",
+      "results/native_semantic_validation_20261027_run_02/plan.json": "708197f98329bf6bf0e071aae1bcabc6917cef67243bf87a8ac554121ec0fdfd",
+      "results/native_semantic_validation_20261027_run_02/postrun_verification.json": "2798eb34bc5b51f56a58aa9d4c694922929df704e702e53793793c1cb6549323",
+      "results/native_semantic_validation_20261027_run_02/prediction_phase_closed.json": "5ec0e308af8211a639b0fdcb9468e3a3c255045d94f48a4ec1fa619241ece164",
+      "results/native_semantic_validation_20261027_run_02/predictions.json": "d40c06e699094192052bc9dbc9b3f90d65b6ecd2aca136154a0ad2dfa8357a85",
+      "results/native_semantic_validation_20261027_run_02/qualifications.json": "699cba6d78c98a8eef7f2ce2db3fcc4e4c2f4c7bdafbc8e42d2e17c942adfd83",
+      "results/native_semantic_validation_20261027_run_02/summary.json": "3072e433d1c469d8168671e7f7628a9295e97bed89ed7af959ecc0ab717e46f8"
+    },
+    "budget_sha256": "0d2b31f5cc8f7ae9f73ef7040d625f815a4409d775de2d9764c9ef30311c4beb",
+    "native_inputs_sha256": "8a8be69f5c759ea65190d4f20f1268c4f8e57063ff6ed1afbde7b80fb1ff5bfb",
+    "parent_artifact_set_sha256": "060e8d66bbd65e69d480d401a04e59923cf68d01b894124bda0bdcfb6abf6b91",
+    "run01_source_count": 92,
+    "run02_source_count": 94,
+    "slot_order_sha256": "9a1d45013d29266b169bf5c4cbc9dd9db5f20c08a70acc0451f23f07d68c5332"
+  },
+  "host_controls": {
+    "model_calls": 0,
+    "run01_passed": 156,
+    "run01_total": 156,
+    "run02_passed": 156,
+    "run02_total": 156,
+    "scope": "Controlled local host reference, not native IAM/read ACL/live revocation or distributed atomicity."
+  },
+  "native_evidence": {
+    "harness_allowed_sdk_streams_cumulative": 12,
+    "harness_credentials_source_unchanged_and_temporary_removed_all": true,
+    "harness_model_selector": "deepseek-flash",
+    "harness_native_loading_baselines": 12,
+    "harness_provider": "deepseek-account",
+    "harness_sha1_instruction_digests_and_sha256_file_bindings_verified": true,
+    "harness_version": "0.2.1-rc.3",
+    "independent_models_claimed": false,
+    "native_hidden_context_and_provider_deployment_confounding": true,
+    "qoder_model_selector": "DeepSeek-Flash",
+    "qoder_scope": "File before/after SHA256, constrained installed CLI/configuration and final response; no equivalent native baseline loading event.",
+    "qoder_version": "1.1.77"
+  },
+  "pairings": {
+    "direction_source_target_cross_client_pairs": [
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "host_inputs_equal": true,
+        "pair_id": "harness_to_qoder_Q1_private"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "host_inputs_equal": true,
+        "pair_id": "harness_to_qoder_Q1_raw"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "host_inputs_equal": true,
+        "pair_id": "harness_to_qoder_Q2_private"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "host_inputs_equal": true,
+        "pair_id": "harness_to_qoder_Q2_raw"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "host_inputs_equal": true,
+        "pair_id": "harness_to_qoder_Q3_private"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "host_inputs_equal": true,
+        "pair_id": "harness_to_qoder_Q3_raw"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "host_inputs_equal": true,
+        "pair_id": "qoder_to_harness_Q1_private"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "host_inputs_equal": true,
+        "pair_id": "qoder_to_harness_Q1_raw"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "host_inputs_equal": true,
+        "pair_id": "qoder_to_harness_Q2_private"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "host_inputs_equal": true,
+        "pair_id": "qoder_to_harness_Q2_raw"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "host_inputs_equal": true,
+        "pair_id": "qoder_to_harness_Q3_private"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "host_inputs_equal": true,
+        "pair_id": "qoder_to_harness_Q3_raw"
+      }
+    ],
+    "same_client_source_target_pairs": [
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "client": "qoder",
+        "host_inputs_equal": true,
+        "question_id": "Q1",
+        "view": "raw"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "client": "qoder",
+        "host_inputs_equal": true,
+        "question_id": "Q2",
+        "view": "raw"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "client": "qoder",
+        "host_inputs_equal": true,
+        "question_id": "Q3",
+        "view": "raw"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "client": "qoder",
+        "host_inputs_equal": true,
+        "question_id": "Q1",
+        "view": "private"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "client": "qoder",
+        "host_inputs_equal": true,
+        "question_id": "Q2",
+        "view": "private"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "client": "qoder",
+        "host_inputs_equal": true,
+        "question_id": "Q3",
+        "view": "private"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "client": "harness",
+        "host_inputs_equal": true,
+        "question_id": "Q1",
+        "view": "raw"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "client": "harness",
+        "host_inputs_equal": true,
+        "question_id": "Q2",
+        "view": "raw"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "client": "harness",
+        "host_inputs_equal": true,
+        "question_id": "Q3",
+        "view": "raw"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "client": "harness",
+        "host_inputs_equal": true,
+        "question_id": "Q1",
+        "view": "private"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "client": "harness",
+        "host_inputs_equal": true,
+        "question_id": "Q2",
+        "view": "private"
+      },
+      {
+        "answer_disagreement": false,
+        "both_usable": true,
+        "client": "harness",
+        "host_inputs_equal": true,
+        "question_id": "Q3",
+        "view": "private"
+      }
+    ]
+  },
+  "privacy": {
+    "detector_precision_recall_established": false,
+    "full_cloud_request_content_inspected": false,
+    "labels": "Complete synthetic registry; all protected entities use CUSTOMER category.",
+    "private_constructed_inputs_scanned": 12,
+    "private_observed_responses_scanned": 12,
+    "recovery_map_persisted": false,
+    "registered_raw_disclosures": 0,
+    "source_only_scope": "Host ancillary record excluded from final model memory."
+  },
+  "publication_release": {
+    "files": {
+      "scripts/run_native_semantic_validation.py": {
+        "before": "844af0a074ad0f234e50360fd90690f7b5eae72559117f11f21864f3d1795404",
+        "release": "17572e7041d4b75e338d61a7754ef4baf0409b17e95a9c7970cbe50efb732f9d"
+      },
+      "tests/test_native_semantic_validation_continuation.py": {
+        "before": "13aab0f2551c348f765b214b3c9c1c7c038c40be02a9c29983fb014015fc5aa3",
+        "release": "71df9ba5dba45b8f49635f20f3cf6d435243691349ce2d39b7de87cdcd1856c7"
+      }
+    },
+    "frozen_run01_and_run02_sources_unchanged": true,
+    "no_new_client_calls": true,
+    "release_patch_applied_after_run02_closed": true
+  },
+  "revalidated_parent_rows": [
+    {
+      "client": "qoder",
+      "current_phase_model_calls": 0,
+      "evidence_origin": "run01_native_receipt_zero_model_posthoc_revalidation",
+      "index": 0,
+      "original_failure_class": null,
+      "original_restoration_status": "ok",
+      "original_status": "ok",
+      "restoration_scope": "fresh_run02_controlled_host_capability; not original call-time restoration",
+      "restoration_status": "ok",
+      "stage": "source",
+      "status": "ok",
+      "view": "raw"
+    },
+    {
+      "client": "harness",
+      "current_phase_model_calls": 0,
+      "evidence_origin": "run01_native_receipt_zero_model_posthoc_revalidation",
+      "index": 1,
+      "original_failure_class": "engineering",
+      "original_restoration_status": null,
+      "original_status": "error",
+      "restoration_scope": "fresh_run02_controlled_host_capability; not original call-time restoration",
+      "restoration_status": "ok",
+      "stage": "target",
+      "status": "ok",
+      "view": "raw"
+    }
+  ],
+  "schema": "native-semantic-validation-public-summary-20261027-v1",
+  "scope_limits": {
+    "cross_machine_network_measured": false,
+    "detection_pr_acceptance": false,
+    "exact_replay_of_original_qwen_wire": false,
+    "innovation_acceptance": false,
+    "native_iam_acceptance": false,
+    "native_live_revocation_acceptance": false,
+    "new_fresh64_acceptance": false,
+    "one_exposed_story_only": true,
+    "source_agent_autonomous_fact_generation": false
+  },
+  "semantic_results_after_disclosed_revalidation": {
+    "cells": {
+      "harness/source/private": {
+        "categories": {
+          "correct": 3
+        },
+        "denominator": 3,
+        "legal_correct": 2,
+        "legal_denominator": 2,
+        "missing_correct": 1,
+        "missing_denominator": 1
+      },
+      "harness/source/raw": {
+        "categories": {
+          "correct": 3
+        },
+        "denominator": 3,
+        "legal_correct": 2,
+        "legal_denominator": 2,
+        "missing_correct": 1,
+        "missing_denominator": 1
+      },
+      "harness/target/private": {
+        "categories": {
+          "correct": 3
+        },
+        "denominator": 3,
+        "legal_correct": 2,
+        "legal_denominator": 2,
+        "missing_correct": 1,
+        "missing_denominator": 1
+      },
+      "harness/target/raw": {
+        "categories": {
+          "correct": 3
+        },
+        "denominator": 3,
+        "legal_correct": 2,
+        "legal_denominator": 2,
+        "missing_correct": 1,
+        "missing_denominator": 1
+      },
+      "qoder/source/private": {
+        "categories": {
+          "correct": 3
+        },
+        "denominator": 3,
+        "legal_correct": 2,
+        "legal_denominator": 2,
+        "missing_correct": 1,
+        "missing_denominator": 1
+      },
+      "qoder/source/raw": {
+        "categories": {
+          "correct": 3
+        },
+        "denominator": 3,
+        "legal_correct": 2,
+        "legal_denominator": 2,
+        "missing_correct": 1,
+        "missing_denominator": 1
+      },
+      "qoder/target/private": {
+        "categories": {
+          "correct": 3
+        },
+        "denominator": 3,
+        "legal_correct": 2,
+        "legal_denominator": 2,
+        "missing_correct": 1,
+        "missing_denominator": 1
+      },
+      "qoder/target/raw": {
+        "categories": {
+          "correct": 3
+        },
+        "denominator": 3,
+        "legal_correct": 2,
+        "legal_denominator": 2,
+        "missing_correct": 1,
+        "missing_denominator": 1
+      }
+    },
+    "correct": 24,
+    "denominator": 24,
+    "legal_correct": 16,
+    "legal_denominator": 16,
+    "legal_unknown": 0,
+    "missing_correct": 8,
+    "missing_denominator": 8,
+    "missing_information_hallucinations": 0,
+    "wrong_facts": 0
+  },
+  "status": "completed_with_disclosed_parent_engineering_failure",
+  "usage_and_cost": {
+    "account_cost": null,
+    "client_elapsed_seconds": {
+      "harness": 32.111,
+      "qoder": 159.265
+    },
+    "harness_counter_limitation": "Native totalTokens differs from inputTokens + outputTokens; accounting basis not independently reconciled.",
+    "harness_max_reported_output": 7,
+    "harness_native_fields_total": {
+      "inputTokens": 5384,
+      "outputTokens": 84,
+      "totalTokens": 7004
+    },
+    "output_cap_each": 64,
+    "physical_http_requests": null,
+    "qoder_reported_usage_fields_total": {
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    "qoder_zero_usage_does_not_mean_free": true,
+    "run01_wall_seconds": 23.266000000000076,
+    "run02_wall_seconds": 176.90700000000015,
+    "sum_main_run_wall_seconds": 200.173
+  },
+  "validation": {
+    "direct_dependency_regression_passed_before_continuation": 104,
+    "final_clean_regression": {
+      "clean_dir": "F:\\项目\\agent安全\\results\\native_semantic_release_clean_20261027T102911",
+      "current_release_source_matches_tested": true,
+      "elapsed_seconds": 374.297,
+      "errors": 0,
+      "failure_names": [],
+      "failures": 0,
+      "passed": 1717,
+      "skip_reasons": [
+        "Optional fixed official wheel not downloaded; no network/download in tests",
+        "optional user-supplied 149-test project is absent",
+        "optional user-supplied 149-test project is absent",
+        "optional user-supplied public source execution is absent",
+        "optional user-supplied public source execution is absent",
+        "optional user-supplied public source execution is absent",
+        "optional user-supplied public source execution is absent",
+        "optional user-supplied public source execution is absent",
+        "optional user-supplied public source execution is absent",
+        "optional user-supplied public source execution is absent",
+        "optional user-supplied public source execution is absent",
+        "optional user-supplied public source execution is absent",
+        "optional user-supplied public source execution is absent",
+        "optional user-supplied public source execution is absent"
+      ],
+      "skipped": 14,
+      "source_files": 379,
+      "source_unchanged": true,
+      "tests_run": 1731
+    },
+    "final_clean_regression_receipt_sha256": "e8d7d2a22a787593eb09ada5e8c1abbc9df7b7b9a124e7458e102ebc1d4fa525",
+    "final_regression_expected_receipt": "results/native_semantic_release_regression_summary.json",
+    "frozen_continuation_offline_tests": 13,
+    "frozen_original_driver_offline_tests": 24,
+    "postrun_verification_all_recorded_checks_true": true,
+    "publication_fix_and_final_regression": "Publication fix applied only after run02 closure; 37 related tests and final clean full regression pass; tested release matches current Python source bytes.",
+    "publication_related_tests_passed": 37,
+    "release_validator_saved_real_receipts": {
+      "additional_native_calls": 0,
+      "harness": 12,
+      "qoder": 12,
+      "release_validator_real_receipts_passed": 24,
+      "scope": "post-run offline validation of saved real native receipts; no replay to client and no claim of original call-time restoration",
+      "source_sha256": "17572e7041d4b75e338d61a7754ef4baf0409b17e95a9c7970cbe50efb732f9d"
+    },
+    "release_validator_saved_real_receipts_sha256": "d9f781d86277ee82a5aac1e5d7c1f894c860900ecc47a4bb95584d28a8767b81",
+    "root_independent_verification": {
+      "all24_memory_bindings": true,
+      "all_frozen_inputs_unchanged": true,
+      "closed24_capabilities": true,
+      "closure_prediction_hash": true,
+      "harness12_credential_cleanup": true,
+      "harness12_native_sha1_binding": true,
+      "harness12_single_sdk_stream": true,
+      "inherited_attempts": 2,
+      "native_attempts_cumulative": 24,
+      "new_attempts": 22,
+      "original_failure_preserved": true,
+      "parent_evidence_unchanged": true,
+      "per_client": {
+        "harness": 12,
+        "qoder": 12
+      },
+      "private12_observed_response_clean": true,
+      "qoder12_native_identity": true,
+      "semantic_score_scope": "two legal and one missing question in one exposed development story; 24 repeated client slots"
+    }
+  }
+}
