@@ -185,16 +185,19 @@ def prepare_selective_private_payload(payload, policy, agent, *, actor_id, reque
         detail["source_outcomes"].append(record)
         try:
             _require(detail["local_calls"] <= max_local_calls, "total_call_budget_exceeded")
-            _require(detected["payload_sha256"] == privacy._digest(single)
-                     and detected["policy_sha256"] == detail["policy_sha256"]
-                     and detected["local_calls_complete"] is True, "source_detection_binding_or_accounting_failed")
             requires_agent = bool(text.strip()) and bool(normalized["protected_categories"])
-            _require(len(captured) == int(requires_agent), "source_agent_capture_mismatch")
-            if requires_agent:
+            if requires_agent and len(captured) == 1:
                 raw = captured[0]
                 if isinstance(raw, dict) and raw.get("local_calls_complete", True) is not True:
                     detail["local_calls_complete"] = record["local_calls_complete"] = False
+                # Preserve the adapter's precise failure before the aggregate
+                # gate; host detection binding/accounting is still mandatory.
                 _response_valid(raw, sid, text, normalized, single, call_limit)
+            _require(detected["payload_sha256"] == privacy._digest(single)
+                     and detected["policy_sha256"] == detail["policy_sha256"]
+                     and detected["local_calls_complete"] is True, "source_detection_binding_or_accounting_failed")
+            _require(len(captured) == int(requires_agent), "source_agent_capture_mismatch")
+            if requires_agent:
                 record["relation_errors"] = deepcopy(raw.get("relation_errors", []))
                 if raw["status"] == "needs_review" and raw["errors"] in (["semantic_uncertainty"], ["input_budget_exceeded"]):
                     expected_errors = sorted({"local_agent_needs_review", *raw["errors"]})

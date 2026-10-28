@@ -167,6 +167,46 @@ class SelectiveMemoryIsolationTests(unittest.TestCase):
         self.assertEqual(result["error"], "invalid_input_or_policy")
         self.assertNotIn("private source text", json.dumps(result))
 
+    def test_explicit_non_true_accounting_cannot_be_quarantined_or_replayed(self):
+        for complete in (False, None, 0, 1, "true", 1.0, [], {}):
+            for status in ("ok", "needs_review"):
+                with self.subTest(complete=complete, status=status):
+                    raw = dict(response(status), local_calls_complete=complete)
+                    agent = Agent({"uncertain": raw})
+                    result = self.prepare(agent)
+                    self.assertEqual(result["status"], "needs_review")
+                    self.assertEqual(result["error"], "invalid_agent_accounting")
+                    self.assertIsNone(result["payload"])
+                    self.assertIsNone(result["mapping"])
+                    detail = result["isolation"]
+                    self.assertIs(detail["local_calls_complete"], False)
+                    self.assertEqual(detail["local_calls"], 2)
+                    self.assertEqual(detail["agent_invocations"], 2)
+                    self.assertEqual(detail["cache_replay_invocations"], 0)
+                    self.assertEqual(detail["quarantined_source_ids"], [])
+                    self.assertEqual(detail["source_outcomes"][-1]["failure_kind"], "global")
+                    self.assertEqual([call["source_id"] for call in agent.calls], ["__query__", "uncertain"])
+
+    def test_raw_validation_does_not_replace_host_binding_and_accounting_gate(self):
+        original_detect = privacy.detect_sensitive
+        for field, value in (("payload_sha256", "0" * 64), ("policy_sha256", "0" * 64),
+                             ("local_calls_complete", False)):
+            with self.subTest(field=field):
+                def corrupted(*args, **kwargs):
+                    result = original_detect(*args, **kwargs)
+                    if any(item["source_id"] == "uncertain" for item in args[0]["memories"]):
+                        result[field] = value
+                    return result
+                agent = Agent()
+                with patch.object(privacy, "detect_sensitive", side_effect=corrupted):
+                    result = self.prepare(agent)
+                self.assertEqual(result["error"], "source_detection_binding_or_accounting_failed")
+                self.assertEqual(result["status"], "needs_review")
+                self.assertIsNone(result["payload"])
+                self.assertIsNone(result["mapping"])
+                self.assertEqual(result["isolation"]["source_outcomes"][-1]["failure_kind"], "global")
+                self.assertEqual(result["isolation"]["cache_replay_invocations"], 0)
+
     def test_total_budget_is_checked_before_any_agent_entry(self):
         agent = Agent()
         result = self.prepare(agent, max_local_calls=2)

@@ -1,0 +1,219 @@
+{
+  "acl_negative_controls": {
+    "receiver_only": 36,
+    "receiver_union": 22,
+    "source_label_transfer": 22
+  },
+  "acl_negative_controls_total": 80,
+  "artifact_sha256": {
+    "plan.json": "e93abc7b87e5127214c8a993dafdda678a5d0b29707e19e10ce3d9a6035a933e",
+    "prediction_phase_closed.json": "30f5442632b6ec6fd9c639e3bbeb7cf3bef4c1fd62998b5fb32a8fe2498e9ef0",
+    "predictions.json": "299a5a6212d02f3823240f31b98587d5fda3b4ebe5ec2e120464d5bd2b469046",
+    "report.json": "e062e4a5e1c1b6116605c2b184a7d034f658a4f214f8a9c1074a23e119c20c5e",
+    "scored_rows.json": "4c9c8d9417e48a625e54d92edb5003d8d901e40cb17895264b47b04d7c7806d7",
+    "source_annotations.json": "5defa8b09b233b0bb4a6fa3bb639b8b55f27d7acc9631549f397c8b069f2f1f4"
+  },
+  "audit_model_calls": 0,
+  "audit_network_calls": 0,
+  "audit_result_sha256": "18ed5a5cce105cb13695f33fe29a224053fc341b1c1f59a2df52569230363bf8",
+  "audit_version": "source_annotation_independent_stdlib_v1",
+  "by_arm": {
+    "receiver_only": {
+      "actual_masked_unprotected_chars": 48,
+      "allowed_fact_retained": 18,
+      "allowed_fact_total": 24,
+      "block_reasons": {
+        "detection_not_valid_for_payload": 6,
+        "local_agent_needs_review": 6,
+        "semantic_uncertainty": 6,
+        "unsupported_category_contract": 6
+      },
+      "blocked": 6,
+      "blocked_reference_spans": 0,
+      "fully_masked_spans": 11,
+      "known": 20,
+      "known_exact": 15,
+      "known_prepared": 18,
+      "known_prepared_with_unprotected_masking": 5,
+      "partially_masked_spans": 0,
+      "prepared": 18,
+      "prepared_incomplete_spans": 1,
+      "raw_predicted_protective_fn": 1,
+      "raw_predicted_protective_fp": 5,
+      "raw_predicted_protective_precision": 0.6875,
+      "raw_predicted_protective_recall": 0.9166666666666666,
+      "raw_predicted_protective_tp": 11,
+      "reference_spans": 12,
+      "semantic_unknown_review": 4,
+      "statuses": {
+        "needs_review": 6,
+        "ok": 18
+      },
+      "total": 24,
+      "unknown": 4,
+      "unknown_blocked": 4,
+      "unknown_blocked_without_semantic_uncertainty": 0,
+      "unknown_prepared": 0,
+      "unmasked_spans": 1
+    },
+    "receiver_union": {
+      "actual_masked_unprotected_chars": 61,
+      "allowed_fact_retained": 11,
+      "allowed_fact_total": 24,
+      "block_reasons": {
+        "detection_not_valid_for_payload": 4,
+        "format_or_span_invalid": 3,
+        "local_agent_needs_review": 4,
+        "semantic_uncertainty": 10,
+        "source_agent_reported_errors": 9,
+        "source_agent_requires_review": 9,
+        "source_annotation_requires_review": 9,
+        "unsupported_category_contract": 4
+      },
+      "blocked": 13,
+      "blocked_reference_spans": 3,
+      "fully_masked_spans": 8,
+      "known": 20,
+      "known_exact": 8,
+      "known_prepared": 11,
+      "known_prepared_with_unprotected_masking": 3,
+      "partially_masked_spans": 0,
+      "prepared": 11,
+      "prepared_incomplete_spans": 1,
+      "raw_predicted_protective_fn": 1,
+      "raw_predicted_protective_fp": 7,
+      "raw_predicted_protective_precision": 0.6111111111111112,
+      "raw_predicted_protective_recall": 0.9166666666666666,
+      "raw_predicted_protective_tp": 11,
+      "reference_spans": 12,
+      "semantic_unknown_review": 4,
+      "statuses": {
+        "blocked": 9,
+        "needs_review": 4,
+        "ok": 11
+      },
+      "total": 24,
+      "unknown": 4,
+      "unknown_blocked": 4,
+      "unknown_blocked_without_semantic_uncertainty": 0,
+      "unknown_prepared": 0,
+      "unmasked_spans": 1
+    },
+    "source_label_transfer": {
+      "actual_masked_unprotected_chars": 61,
+      "allowed_fact_retained": 11,
+      "allowed_fact_total": 24,
+      "block_reasons": {
+        "detection_not_valid_for_payload": 4,
+        "format_or_span_invalid": 3,
+        "local_agent_needs_review": 4,
+        "semantic_uncertainty": 10,
+        "source_agent_reported_errors": 9,
+        "source_agent_requires_review": 9,
+        "source_annotation_requires_review": 9,
+        "unsupported_category_contract": 4
+      },
+      "blocked": 13,
+      "blocked_reference_spans": 3,
+      "fully_masked_spans": 8,
+      "known": 20,
+      "known_exact": 8,
+      "known_prepared": 11,
+      "known_prepared_with_unprotected_masking": 3,
+      "partially_masked_spans": 0,
+      "prepared": 11,
+      "prepared_incomplete_spans": 1,
+      "raw_predicted_protective_fn": 1,
+      "raw_predicted_protective_fp": 7,
+      "raw_predicted_protective_precision": 0.6111111111111112,
+      "raw_predicted_protective_recall": 0.9166666666666666,
+      "raw_predicted_protective_tp": 11,
+      "reference_spans": 12,
+      "semantic_unknown_review": 4,
+      "statuses": {
+        "blocked": 9,
+        "needs_review": 4,
+        "ok": 11
+      },
+      "total": 24,
+      "unknown": 4,
+      "unknown_blocked": 4,
+      "unknown_blocked_without_semantic_uncertainty": 0,
+      "unknown_prepared": 0,
+      "unmasked_spans": 1
+    }
+  },
+  "capture_files_checked": 76,
+  "case22": {
+    "actual_footprints": {
+      "receiver_only": [],
+      "receiver_union": [
+        [
+          40,
+          54
+        ]
+      ],
+      "source_label_transfer": [
+        [
+          40,
+          54
+        ]
+      ]
+    },
+    "all_arms_still_miss_reference_span": true,
+    "reference_quote": "苔藓",
+    "reference_span": [
+      24,
+      26
+    ],
+    "source_quote": "该机构正在向本公司购买展示柜",
+    "source_span": [
+      40,
+      54
+    ]
+  },
+  "development_gate_passed": false,
+  "format_failure_indices": [
+    10,
+    11,
+    13
+  ],
+  "frozen_plan_sha256": "e93abc7b87e5127214c8a993dafdda678a5d0b29707e19e10ce3d9a6035a933e",
+  "frozen_source_files_checked": 231,
+  "grid_cells_checked": 72,
+  "health_get_count": 48,
+  "historical_files_checked": 5,
+  "independent_scores_match": true,
+  "limits": [
+    "Independent standard-library recomputation; producer scoring functions were not imported.",
+    "Raw captures, positions, record hashes and recorded runtime signature checks were audited. The ephemeral HMAC key was not persisted, so signatures cannot be independently reverified offline.",
+    "Closure hashes and frozen control flow support the recorded phase order; these are local records, not independently timestamped attestation."
+  ],
+  "paired_equivalent_cases": 24,
+  "physical_post_count": 28,
+  "ready_footprints_checked": 40,
+  "receiver_fp_scope": {
+    "all_known_raw": 5,
+    "blocked_known_raw": 3,
+    "interpretation": "The three blocked raw false positives were absent from the earlier ready-only count; observations were not improved.",
+    "ready_only": 2
+  },
+  "scope": "Independent offline recomputation of one exposed 24-text development experiment; not downstream, independent acceptance, or cryptographic re-verification.",
+  "source_failure_counts": {
+    "format_or_span_invalid": 3,
+    "semantic_uncertainty": 6
+  },
+  "source_failure_indices": [
+    4,
+    5,
+    7,
+    10,
+    11,
+    13,
+    16,
+    17,
+    19
+  ],
+  "status": "passed",
+  "verifier_sha256": "0f4097db3ec72333a586e7b4104e297954befb6fbbbac31f8a1f5f1543d0bbbe"
+}

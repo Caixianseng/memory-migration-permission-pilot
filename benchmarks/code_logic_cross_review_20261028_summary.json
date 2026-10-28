@@ -1,0 +1,70 @@
+{
+  "checked_saved_responses_explicit_false_total": 0,
+  "confirmed_new_unauthorized_or_privacy_leak_exploit": false,
+  "date": "2026-10-28",
+  "evidence_sha256": {
+    "results/code_cross_review_20261028/core/repro_core.py": "b625639a06a4bed99fe9aa334678262cda6de16f0850c10d935f80d1e6420197",
+    "results/code_cross_review_20261028/core/review.md": "40678f58ff7a2db8eb61ce30ac046ccfccc12091e0a7370c3d89c70fd41357b2",
+    "results/code_cross_review_20261028/experiments/experiment_integrity_repros.py": "226e07806ef796a89b67cb2717e09e896863ffe2cb65d608ebbc90a83ae418a7",
+    "results/code_cross_review_20261028/experiments/experiment_integrity_repros_run02/summary.json": "6537911f668210e806e0f87fe5fdb4191df6e5407f7fd7f0a0ef05fec9b4b1a0",
+    "results/code_cross_review_20261028/full/receipt.json": "7f49da8dc579918cb93cb27b730001f3587245364edb8661629a9d5a1141a00f",
+    "results/code_cross_review_20261028/full/snapshot_manifest.json": "3bf2198933387421c679069f360e050f35eb4bb1e0f2be8eef7be0b30b5f1493",
+    "results/code_cross_review_20261028/impact_and_source_immutability.json": "e2c182da8a9a76395ce049f619859e27537d76a994c71e9137d420882d6cdaba"
+  },
+  "existing_formal_run_invalidation_established": false,
+  "findings": [
+    {
+      "code": "explicit_incomplete_accounting_promoted",
+      "effect": "explicit False completeness flag becomes True; strict preparation and cache admit it",
+      "file": "memory_migration_study/privacy.py",
+      "fix_status": "fixed_and_offline_verified",
+      "independently_reproduced": true,
+      "line": 423,
+      "priority": "P2"
+    },
+    {
+      "code": "final_request_deadline_not_enforced",
+      "effect": "last request returning after total deadline can still produce complete; other clients only reject posthoc",
+      "file": "scripts/run_source_annotation_probe.py",
+      "fix_status": "fixed_and_offline_verified",
+      "line": 418,
+      "priority": "P2",
+      "synthetic_completed_seconds": 1805,
+      "synthetic_registered_seconds": 1800
+    }
+  ],
+  "fix_completed_date": "2026-10-29",
+  "fix_report": "docs/两项逻辑问题修复与验证_2026-10-29.md",
+  "fix_summary": "benchmarks/code_logic_fixes_20261029_summary.json",
+  "git_commit_or_push": false,
+  "historical_impact_scope": "Limited to four saved response artifacts; absence here does not prove all historical adapters were unaffected.",
+  "limitations": [
+    "No actual native backend or cloud/model experiment rerun.",
+    "Not every module reviewed line-by-line.",
+    "Passing regression does not refute confirmed uncovered edge cases.",
+    "No proof that all historical adapters are unaffected."
+  ],
+  "new_model_calls": 0,
+  "new_paid_calls": 0,
+  "offline_regression": {
+    "elapsed_seconds": 455.86,
+    "errors": 0,
+    "failures": 0,
+    "network": {
+      "allowed_test_loopback_connects": 862,
+      "blocked_connects": 0,
+      "blocked_dns": 0
+    },
+    "passed": 2144,
+    "platform": "Windows Python 3.12.7",
+    "scope": "Isolated current-code checkout without model/native/credential assets; optional asset tests skipped, no remote CI claim",
+    "skipped": 14,
+    "snapshot_files": 755,
+    "tests_total": 2158
+  },
+  "offline_regression_scope": "Historical pre-fix baseline; final fix regression is in fix_summary.",
+  "production_code_changed": true,
+  "research_goal_status": "paused",
+  "status": "confirmed_findings_fixed_offline_verified",
+  "version": "code_logic_cross_review_v1"
+}

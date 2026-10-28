@@ -1,0 +1,211 @@
+{
+  "by_arm": {
+    "receiver_only": {
+      "actual_masked_unprotected_chars": 48,
+      "allowed_fact_retained": 18,
+      "allowed_fact_total": 24,
+      "block_reasons": {
+        "detection_not_valid_for_payload": 6,
+        "local_agent_needs_review": 6,
+        "semantic_uncertainty": 6,
+        "unsupported_category_contract": 6
+      },
+      "blocked": 6,
+      "blocked_reference_spans": 0,
+      "fully_masked_spans": 11,
+      "known": 20,
+      "known_exact": 15,
+      "known_prepared": 18,
+      "known_prepared_with_unprotected_masking": 5,
+      "partially_masked_spans": 0,
+      "prepared": 18,
+      "prepared_incomplete_spans": 1,
+      "raw_predicted_protective_fn": 1,
+      "raw_predicted_protective_fp": 5,
+      "raw_predicted_protective_precision": 0.6875,
+      "raw_predicted_protective_recall": 0.9166666666666666,
+      "raw_predicted_protective_tp": 11,
+      "reference_spans": 12,
+      "semantic_unknown_review": 4,
+      "statuses": {
+        "needs_review": 6,
+        "ok": 18
+      },
+      "total": 24,
+      "unknown": 4,
+      "unknown_blocked": 4,
+      "unknown_blocked_without_semantic_uncertainty": 0,
+      "unknown_prepared": 0,
+      "unmasked_spans": 1
+    },
+    "receiver_union": {
+      "actual_masked_unprotected_chars": 61,
+      "allowed_fact_retained": 11,
+      "allowed_fact_total": 24,
+      "block_reasons": {
+        "detection_not_valid_for_payload": 4,
+        "format_or_span_invalid": 3,
+        "local_agent_needs_review": 4,
+        "semantic_uncertainty": 10,
+        "source_agent_reported_errors": 9,
+        "source_agent_requires_review": 9,
+        "source_annotation_requires_review": 9,
+        "unsupported_category_contract": 4
+      },
+      "blocked": 13,
+      "blocked_reference_spans": 3,
+      "fully_masked_spans": 8,
+      "known": 20,
+      "known_exact": 8,
+      "known_prepared": 11,
+      "known_prepared_with_unprotected_masking": 3,
+      "partially_masked_spans": 0,
+      "prepared": 11,
+      "prepared_incomplete_spans": 1,
+      "raw_predicted_protective_fn": 1,
+      "raw_predicted_protective_fp": 7,
+      "raw_predicted_protective_precision": 0.6111111111111112,
+      "raw_predicted_protective_recall": 0.9166666666666666,
+      "raw_predicted_protective_tp": 11,
+      "reference_spans": 12,
+      "semantic_unknown_review": 4,
+      "statuses": {
+        "blocked": 9,
+        "needs_review": 4,
+        "ok": 11
+      },
+      "total": 24,
+      "unknown": 4,
+      "unknown_blocked": 4,
+      "unknown_blocked_without_semantic_uncertainty": 0,
+      "unknown_prepared": 0,
+      "unmasked_spans": 1
+    },
+    "source_label_transfer": {
+      "actual_masked_unprotected_chars": 61,
+      "allowed_fact_retained": 11,
+      "allowed_fact_total": 24,
+      "block_reasons": {
+        "detection_not_valid_for_payload": 4,
+        "format_or_span_invalid": 3,
+        "local_agent_needs_review": 4,
+        "semantic_uncertainty": 10,
+        "source_agent_reported_errors": 9,
+        "source_agent_requires_review": 9,
+        "source_annotation_requires_review": 9,
+        "unsupported_category_contract": 4
+      },
+      "blocked": 13,
+      "blocked_reference_spans": 3,
+      "fully_masked_spans": 8,
+      "known": 20,
+      "known_exact": 8,
+      "known_prepared": 11,
+      "known_prepared_with_unprotected_masking": 3,
+      "partially_masked_spans": 0,
+      "prepared": 11,
+      "prepared_incomplete_spans": 1,
+      "raw_predicted_protective_fn": 1,
+      "raw_predicted_protective_fp": 7,
+      "raw_predicted_protective_precision": 0.6111111111111112,
+      "raw_predicted_protective_recall": 0.9166666666666666,
+      "raw_predicted_protective_tp": 11,
+      "reference_spans": 12,
+      "semantic_unknown_review": 4,
+      "statuses": {
+        "blocked": 9,
+        "needs_review": 4,
+        "ok": 11
+      },
+      "total": 24,
+      "unknown": 4,
+      "unknown_blocked": 4,
+      "unknown_blocked_without_semantic_uncertainty": 0,
+      "unknown_prepared": 0,
+      "unmasked_spans": 1
+    }
+  },
+  "closure_sha256": "30f5442632b6ec6fd9c639e3bbeb7cf3bef4c1fd62998b5fb32a8fe2498e9ef0",
+  "cloud_calls": 0,
+  "comparison": "source labels and receiver union use identical observations; extra detection is not migration novelty",
+  "development_gate_passed": false,
+  "interpretation": "Fixed receiver positives cannot be removed by a protective union; no refusal or independent-acceptance claim.",
+  "metric_definitions": {
+    "actual_masked_unprotected_chars": "Known prepared cases only: actual masked character positions outside the reference sensitive-position union, including same-word expansion.",
+    "masking": "Actual original-position footprints from ephemeral restoration entries; blocked rows have no emitted payload.",
+    "raw_predicted_protective_tp_fp_fn": "Raw original protective positions, including blocked rows; not actual emitted protection.",
+    "semantic_unknown_review": "Blocked reference-unknown case with an original detector response explicitly reporting semantic_uncertainty.",
+    "unknown_blocked": "Any blocked reference-unknown case, including engineering or format failures; not semantic correctness."
+  },
+  "native_writes": 0,
+  "network": {
+    "blocked_connects": 0,
+    "loopback_connects": 76
+  },
+  "new_target_posts": 0,
+  "plan_sha256": "e93abc7b87e5127214c8a993dafdda678a5d0b29707e19e10ce3d9a6035a933e",
+  "rows": 72,
+  "scope": "24 already exposed development texts; not independent 64-case acceptance; no downstream task/refusal metric",
+  "source_cost_complete": true,
+  "source_elapsed_seconds": 19.375,
+  "source_generation_posts": 28,
+  "status": "complete",
+  "union_comparison": {
+    "comparison": "exact findings, readiness and actual position footprints",
+    "different_text_indices": [],
+    "equivalent": true
+  },
+  "unique_development_texts": 24,
+  "version": "source_annotation_development_probe_v1",
+  "request_methods": {
+    "GET": 48,
+    "POST": 28
+  },
+  "annotation_states": {
+    "positive": 11,
+    "needs_review": 9,
+    "observed_empty": 4
+  },
+  "source_status": {
+    "ok": 15,
+    "needs_review": 9
+  },
+  "source_errors": {
+    "semantic_uncertainty": 6,
+    "format_or_span_invalid": 3
+  },
+  "prompt_tokens": 13353,
+  "completion_tokens": 1160,
+  "acl_negative_controls": 80,
+  "hashes": {
+    "plan.json": "e93abc7b87e5127214c8a993dafdda678a5d0b29707e19e10ce3d9a6035a933e",
+    "predictions.json": "299a5a6212d02f3823240f31b98587d5fda3b4ebe5ec2e120464d5bd2b469046",
+    "source_annotations.json": "5defa8b09b233b0bb4a6fa3bb639b8b55f27d7acc9631549f397c8b069f2f1f4",
+    "prediction_phase_closed.json": "30f5442632b6ec6fd9c639e3bbeb7cf3bef4c1fd62998b5fb32a8fe2498e9ef0",
+    "report.json": "e062e4a5e1c1b6116605c2b184a7d034f658a4f214f8a9c1074a23e119c20c5e"
+  },
+  "engineering_tests": {
+    "tests": 95,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 0.959,
+    "scope": "source annotation, source probe, existing labels, strict contract, occurrence adapter; not full CI"
+  },
+  "default_changed": false,
+  "case22": {
+    "source_predicted_quote": "该机构正在向本公司购买展示柜",
+    "source_predicted_span": [
+      40,
+      54
+    ],
+    "reference_name_span": [
+      24,
+      26
+    ],
+    "leak_fixed": false,
+    "new_wrongly_masked_characters": 14
+  },
+  "historical_metric_caveat": "Raw predicted protective TP/FP/FN includes blocked known rows; earlier exact accepted predictions excluded blocked rows. Receiver-only FP=5 here does not revise the earlier FP=2 definition.",
+  "wall_seconds": 22.110000000000582
+}

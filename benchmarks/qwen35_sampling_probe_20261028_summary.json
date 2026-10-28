@@ -1,0 +1,381 @@
+{
+  "acl_negative_controls": {
+    "presence_15": 10,
+    "presence_zero": 16,
+    "qwen35_quote": 10,
+    "qwen3_conditional": 16
+  },
+  "acl_negative_controls_total": 52,
+  "artifact_sha256": {
+    "execution_final.json": "dc17d2014a2d87f4578b3ca9d02cb0104aa5d7d771f0a8cd6ba9d916336b3b0d",
+    "plan.json": "57afe9afd48cf158120ba04a1e0650b81ee16af81333eb28f54c496c8daea7f5",
+    "prediction_phase_closed.json": "9bd46ba2812e25ccf6e5135f6537c5f8735afccd4d28b6c43e87613453859129",
+    "report.json": "8f75c1c237f682a25f86bd643e5630dbb71f358007354948d833746da1f970e3",
+    "scored_rows.json": "83720b39c45ef704674d035e36b4d94ee59b9433f4fa8f86a12c0e21ff27196b"
+  },
+  "audit_artifact_sha256": {
+    "audit_failure.json": "d49fbcf8f6cbb353efe15e6a395af346424130fef3eeff5f2ac367645aab1b69",
+    "audit_manifest.json": "b4bca8d1342632938771bbb5f45cf80ad612aa8f0523e081a75069e5abfa13e8",
+    "independent_audit.json": "4b2763ae62cbd1ee7681e8f32b11e0c66c5b83edf47290441b976c4712393f9e",
+    "recalc.py": "18ac7e7cea88e6f814dce5df1e123241bb9aa8e2f5995833a8f7d72d3121defc",
+    "recalc_v2.py": "1403fce236c746e2879f5ac8fc9c9199517c04f7c647c548f32a0ea91913c9c3"
+  },
+  "by_arm": {
+    "presence_15": {
+      "acl_negative_controls": 10,
+      "actual_masked_unprotected_chars": 31,
+      "allowed_fact_retained": 5,
+      "allowed_fact_total": 10,
+      "block_reasons": {
+        "detection_not_valid_for_payload": 5,
+        "format_or_span_invalid": 4,
+        "local_agent_needs_review": 5,
+        "semantic_uncertainty": 1,
+        "unsupported_category_contract": 5
+      },
+      "blocked": 5,
+      "blocked_reference_spans": 4,
+      "format_repair_posts": 4,
+      "format_span_valid": 6,
+      "fully_masked_spans": 1,
+      "initial_format_span_invalid": 4,
+      "initial_format_span_unmeasured": 0,
+      "initial_format_span_valid": 6,
+      "known": 8,
+      "known_exact": 0,
+      "known_prepared": 3,
+      "known_prepared_with_unprotected_masking": 2,
+      "partially_masked_spans": 0,
+      "prepared": 5,
+      "prepared_incomplete_spans": 1,
+      "raw_predicted_protective_fn": 6,
+      "raw_predicted_protective_fp": 3,
+      "raw_predicted_protective_precision": 0.0,
+      "raw_predicted_protective_recall": 0.0,
+      "raw_predicted_protective_tp": 0,
+      "reference_spans": 6,
+      "semantic_unknown_review": 0,
+      "statuses": {
+        "needs_review": 5,
+        "ok": 5
+      },
+      "total": 10,
+      "unknown": 2,
+      "unknown_blocked": 0,
+      "unknown_blocked_without_semantic_uncertainty": 0,
+      "unknown_prepared": 2,
+      "unmasked_spans": 1
+    },
+    "presence_zero": {
+      "acl_negative_controls": 16,
+      "actual_masked_unprotected_chars": 9,
+      "allowed_fact_retained": 8,
+      "allowed_fact_total": 10,
+      "block_reasons": {
+        "detection_not_valid_for_payload": 2,
+        "format_or_span_invalid": 2,
+        "local_agent_needs_review": 2,
+        "unsupported_category_contract": 2
+      },
+      "blocked": 2,
+      "blocked_reference_spans": 2,
+      "format_repair_posts": 3,
+      "format_span_valid": 8,
+      "fully_masked_spans": 2,
+      "initial_format_span_invalid": 3,
+      "initial_format_span_unmeasured": 0,
+      "initial_format_span_valid": 7,
+      "known": 8,
+      "known_exact": 2,
+      "known_prepared": 6,
+      "known_prepared_with_unprotected_masking": 2,
+      "partially_masked_spans": 0,
+      "prepared": 8,
+      "prepared_incomplete_spans": 2,
+      "raw_predicted_protective_fn": 4,
+      "raw_predicted_protective_fp": 3,
+      "raw_predicted_protective_precision": 0.4,
+      "raw_predicted_protective_recall": 0.3333333333333333,
+      "raw_predicted_protective_tp": 2,
+      "reference_spans": 6,
+      "semantic_unknown_review": 0,
+      "statuses": {
+        "needs_review": 2,
+        "ok": 8
+      },
+      "total": 10,
+      "unknown": 2,
+      "unknown_blocked": 0,
+      "unknown_blocked_without_semantic_uncertainty": 0,
+      "unknown_prepared": 2,
+      "unmasked_spans": 2
+    },
+    "qwen35_quote": {
+      "acl_negative_controls": 10,
+      "actual_masked_unprotected_chars": 31,
+      "allowed_fact_retained": 5,
+      "allowed_fact_total": 10,
+      "block_reasons": {
+        "detection_not_valid_for_payload": 5,
+        "format_or_span_invalid": 4,
+        "local_agent_needs_review": 5,
+        "semantic_uncertainty": 1,
+        "unsupported_category_contract": 5
+      },
+      "blocked": 5,
+      "blocked_reference_spans": 4,
+      "format_repair_posts": 4,
+      "format_span_valid": 6,
+      "fully_masked_spans": 1,
+      "initial_format_span_invalid": 4,
+      "initial_format_span_unmeasured": 0,
+      "initial_format_span_valid": 6,
+      "known": 8,
+      "known_exact": 0,
+      "known_prepared": 3,
+      "known_prepared_with_unprotected_masking": 2,
+      "partially_masked_spans": 0,
+      "prepared": 5,
+      "prepared_incomplete_spans": 1,
+      "raw_predicted_protective_fn": 6,
+      "raw_predicted_protective_fp": 3,
+      "raw_predicted_protective_precision": 0.0,
+      "raw_predicted_protective_recall": 0.0,
+      "raw_predicted_protective_tp": 0,
+      "reference_spans": 6,
+      "semantic_unknown_review": 0,
+      "statuses": {
+        "needs_review": 5,
+        "ok": 5
+      },
+      "total": 10,
+      "unknown": 2,
+      "unknown_blocked": 0,
+      "unknown_blocked_without_semantic_uncertainty": 0,
+      "unknown_prepared": 2,
+      "unmasked_spans": 1
+    },
+    "qwen3_conditional": {
+      "acl_negative_controls": 16,
+      "actual_masked_unprotected_chars": 33,
+      "allowed_fact_retained": 8,
+      "allowed_fact_total": 10,
+      "block_reasons": {
+        "detection_not_valid_for_payload": 2,
+        "local_agent_needs_review": 2,
+        "semantic_uncertainty": 2,
+        "unsupported_category_contract": 2
+      },
+      "blocked": 2,
+      "blocked_reference_spans": 0,
+      "format_repair_posts": 0,
+      "format_span_valid": 10,
+      "fully_masked_spans": 5,
+      "initial_format_span_invalid": 0,
+      "initial_format_span_unmeasured": 0,
+      "initial_format_span_valid": 10,
+      "known": 8,
+      "known_exact": 6,
+      "known_prepared": 8,
+      "known_prepared_with_unprotected_masking": 2,
+      "partially_masked_spans": 0,
+      "prepared": 8,
+      "prepared_incomplete_spans": 1,
+      "raw_predicted_protective_fn": 1,
+      "raw_predicted_protective_fp": 1,
+      "raw_predicted_protective_precision": 0.8333333333333334,
+      "raw_predicted_protective_recall": 0.8333333333333334,
+      "raw_predicted_protective_tp": 5,
+      "reference_spans": 6,
+      "semantic_unknown_review": 2,
+      "statuses": {
+        "needs_review": 2,
+        "ok": 8
+      },
+      "total": 10,
+      "unknown": 2,
+      "unknown_blocked": 2,
+      "unknown_blocked_without_semantic_uncertainty": 0,
+      "unknown_prepared": 0,
+      "unmasked_spans": 1
+    }
+  },
+  "call_inventory": {
+    "cloud_calls": 0,
+    "complete_generation_responses": 27,
+    "completed_cells": 20,
+    "health_gets": 40,
+    "native_writes": 0,
+    "new_canary_calls": 0,
+    "new_target_posts": 0,
+    "post_attempts": 27,
+    "predicted_tokens": 1294,
+    "prompt_tokens": 13138,
+    "repair_posts": 7,
+    "token_counts_complete": true
+  },
+  "comparison": {
+    "balanced_first_arm_counts": {
+      "presence_15": 5,
+      "presence_zero": 5
+    },
+    "existing_call_flow_and_one_original_repair_preserved": true,
+    "only_request_difference": "options.presence_penalty explicit 1.5 or 0",
+    "real_arms": [
+      "presence_15",
+      "presence_zero"
+    ],
+    "replays": [
+      "qwen35_quote",
+      "qwen3_conditional"
+    ]
+  },
+  "date": "2026-10-28",
+  "decision": "Do not switch the default or sweep more penalties. Parameter change partially improves formatting but releases extra semantic misses; continue toward the original full gates and qualify the as-yet untested native joint extraction baseline.",
+  "downstream_task_success": null,
+  "effect_gate_components": {
+    "acl_negative_controls": true,
+    "cost_inventory": true,
+    "known_prepared_noninferior": false,
+    "no_prepared_leak": false,
+    "precision": false,
+    "recall": false,
+    "semantic_unknown_review": false
+  },
+  "effect_gate_passed": false,
+  "engineering_tests": {
+    "passed": 19,
+    "run": 19,
+    "scope": "qwen35_sampling module and driver only; not full repository CI"
+  },
+  "findings": {
+    "case16_zero": "correct negative only after original format repair; not single-call semantic proof",
+    "moss_case22": "both arms OK plus empty findings, still unmasked",
+    "new_ready_leak_ids_zero": [
+      13,
+      22
+    ],
+    "ready_leak_ids_presence_15": [
+      22
+    ],
+    "zero_known_exact_ids": [
+      4,
+      16
+    ],
+    "zero_unknown_semantic_reviews": 0
+  },
+  "formal_wall_seconds": 32.719,
+  "format_mechanism": {
+    "presence_15": {
+      "format_repair_posts": 4,
+      "format_span_valid": 6,
+      "initial_format_span_invalid": 4,
+      "initial_format_span_unmeasured": 0,
+      "initial_format_span_valid": 6
+    },
+    "presence_zero": {
+      "format_repair_posts": 3,
+      "format_span_valid": 8,
+      "initial_format_span_invalid": 3,
+      "initial_format_span_unmeasured": 0,
+      "initial_format_span_valid": 7
+    }
+  },
+  "format_mechanism_improvement_observed": true,
+  "independent_acceptance_passed": null,
+  "independent_audit": {
+    "audit_runtime_model_and_backend_http_calls": 0,
+    "binary_source_reproducibility_verified": false,
+    "causal_configuration_qualified": true,
+    "cells": 40,
+    "controlled_chain_difference": {
+      "other_chain_tokens_identical": true,
+      "presence_15": "penalties",
+      "presence_zero": "?penalties"
+    },
+    "effective_sampling_verified": true,
+    "full_reference_cases": 24,
+    "historical_files_checked": 82,
+    "other_numeric_fields_equal_count": 20,
+    "raw_generation_decodes": 27,
+    "receipts_checked": 6,
+    "revision": {
+      "cause": "v1 incorrectly required literal chain equality across an enabled versus neutral penalties intervention",
+      "initial_audit_failure_preserved": "audit_failure.json",
+      "initial_source_preserved": "recalc.py"
+    },
+    "scope": "Frozen same-method requests and effective logged numerical parameters, with the intervention's expected enabled/no-op penalties node; not binary-source equivalence.",
+    "source_basis": {
+      "declared_llama_cpp_version": "b11738",
+      "disabled_predicate": "https://github.com/ggml-org/llama.cpp/blob/b11738/src/llama-sampler.cpp#L2891",
+      "empty_penalties_name": "https://github.com/ggml-org/llama.cpp/blob/b11738/src/llama-sampler.cpp#L3217",
+      "method": "Read-only official GitHub source inspection; actual binary source identity not attested",
+      "ollama_version_file": "https://github.com/ollama/ollama/blob/v0.40.8/LLAMA_CPP_VERSION",
+      "print_sampler_name": "https://github.com/ggml-org/llama.cpp/blob/b11738/common/sampling.cpp#L896",
+      "version_file_git_blob": "6d14fe65abd6f2df9c99dd22db45cf600f4f0bb9"
+    },
+    "source_files_checked": 250,
+    "status": "passed"
+  },
+  "limitations": [
+    "10 exposed selected diagnostics, not independent acceptance or statistical generalization.",
+    "Preparation and retained facts are not downstream success/refusal.",
+    "No new TTL, live revocation or native agent interoperability tested.",
+    "Ephemeral HMAC key not persisted; no offline signature reverification.",
+    "Formal report null post-hoc fields preserved; independent receipt carries bounded effective-parameter qualification."
+  ],
+  "model": {
+    "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+    "name": "qwen3.5:4b-q4_K_M",
+    "num_ctx": 4096,
+    "num_predict": 1024,
+    "runtime": "Ollama 0.40.8",
+    "seed": 42,
+    "temperature": 0,
+    "think": false
+  },
+  "new_downstream_calls": 0,
+  "new_generation_calls": 27,
+  "new_initial_generations": 20,
+  "new_model_downloads": 0,
+  "new_paid_api_calls": 0,
+  "new_qualification_calls": 0,
+  "new_repair_generations": 7,
+  "proceed_full24": false,
+  "publication_novelty_established": false,
+  "refusal_rate": null,
+  "runtime_evidence_sha256": {
+    "runtime_ready.json": "01fb50407d1f4f9129daf63c5563cfc160cd2f67af6f87f3fdafdf54d6125113",
+    "sampler_log_at_formal_end.log": "e5e77aa13299573b2e4297dea6c46400fa0f2a9f992ded516544ce1087a2f080",
+    "service_stopped.json": "bef9cb9331336cee369857ac999f1ff40ec41a0fc597892bf6f1b0d3916e278c"
+  },
+  "scope": {
+    "independent_acceptance": false,
+    "known": 8,
+    "languages": {
+      "en": 5,
+      "zh": 5
+    },
+    "pipeline": "same memory migration preparation with empty source labels",
+    "previously_exposed_hard_diagnostics": true,
+    "raw_sources_responses_maps_included": false,
+    "reference_spans_known": 6,
+    "text_ids": [
+      1,
+      2,
+      4,
+      6,
+      11,
+      13,
+      14,
+      16,
+      19,
+      22
+    ],
+    "texts": 10,
+    "unknown": 2
+  },
+  "service_stopped": true,
+  "status": "format_improved_effect_failed",
+  "version": "qwen35_sampling_causal_diagnostic_public_summary_v1"
+}

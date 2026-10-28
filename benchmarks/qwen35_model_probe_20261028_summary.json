@@ -1,0 +1,263 @@
+{
+  "actual_runtime_snapshot": {
+    "models": [
+      {
+        "context_length": 4096,
+        "details": {
+          "families": [
+            "qwen35"
+          ],
+          "family": "qwen35",
+          "format": "gguf",
+          "parameter_size": "4.2B",
+          "parent_model": "",
+          "quantization_level": "Q4_K_M"
+        },
+        "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+        "expires_at": "2026-10-28T20:41:51.7408407+08:00",
+        "model": "qwen3.5:4b-q4_K_M",
+        "name": "qwen3.5:4b-q4_K_M",
+        "runner": "llamacpp",
+        "size": 3140495604,
+        "size_vram": 3140495604
+      }
+    ]
+  },
+  "by_arm": {
+    "qwen35_fulltext": {
+      "acl_negative_controls": 34,
+      "actual_masked_unprotected_chars": 162,
+      "allowed_fact_retained": 17,
+      "allowed_fact_total": 24,
+      "block_reasons": {
+        "detection_not_valid_for_payload": 7,
+        "format_or_span_invalid": 4,
+        "local_agent_needs_review": 7,
+        "semantic_uncertainty": 3,
+        "unsupported_category_contract": 7
+      },
+      "blocked": 7,
+      "blocked_reference_spans": 4,
+      "fully_masked_spans": 7,
+      "known": 20,
+      "known_exact": 8,
+      "known_prepared": 15,
+      "known_prepared_with_unprotected_masking": 6,
+      "partially_masked_spans": 0,
+      "prepared": 17,
+      "prepared_incomplete_spans": 1,
+      "raw_predicted_protective_fn": 6,
+      "raw_predicted_protective_fp": 7,
+      "raw_predicted_protective_precision": 0.46153846153846156,
+      "raw_predicted_protective_recall": 0.5,
+      "raw_predicted_protective_tp": 6,
+      "reference_spans": 12,
+      "semantic_unknown_review": 2,
+      "statuses": {
+        "needs_review": 7,
+        "ok": 17
+      },
+      "total": 24,
+      "unknown": 4,
+      "unknown_blocked": 2,
+      "unknown_blocked_without_semantic_uncertainty": 0,
+      "unknown_prepared": 2,
+      "unmasked_spans": 1
+    },
+    "qwen3_conditional": {
+      "acl_negative_controls": 36,
+      "actual_masked_unprotected_chars": 48,
+      "allowed_fact_retained": 18,
+      "allowed_fact_total": 24,
+      "block_reasons": {
+        "detection_not_valid_for_payload": 6,
+        "local_agent_needs_review": 6,
+        "semantic_uncertainty": 6,
+        "unsupported_category_contract": 6
+      },
+      "blocked": 6,
+      "blocked_reference_spans": 0,
+      "fully_masked_spans": 11,
+      "known": 20,
+      "known_exact": 15,
+      "known_prepared": 18,
+      "known_prepared_with_unprotected_masking": 5,
+      "partially_masked_spans": 0,
+      "prepared": 18,
+      "prepared_incomplete_spans": 1,
+      "raw_predicted_protective_fn": 1,
+      "raw_predicted_protective_fp": 5,
+      "raw_predicted_protective_precision": 0.6875,
+      "raw_predicted_protective_recall": 0.9166666666666666,
+      "raw_predicted_protective_tp": 11,
+      "reference_spans": 12,
+      "semantic_unknown_review": 4,
+      "statuses": {
+        "needs_review": 6,
+        "ok": 18
+      },
+      "total": 24,
+      "unknown": 4,
+      "unknown_blocked": 4,
+      "unknown_blocked_without_semantic_uncertainty": 0,
+      "unknown_prepared": 0,
+      "unmasked_spans": 1
+    },
+    "qwen3_fulltext": {
+      "acl_negative_controls": 30,
+      "actual_masked_unprotected_chars": 59,
+      "allowed_fact_retained": 15,
+      "allowed_fact_total": 24,
+      "block_reasons": {
+        "detection_not_valid_for_payload": 9,
+        "format_or_span_invalid": 3,
+        "local_agent_needs_review": 9,
+        "semantic_uncertainty": 6,
+        "unsupported_category_contract": 9
+      },
+      "blocked": 9,
+      "blocked_reference_spans": 3,
+      "fully_masked_spans": 7,
+      "known": 20,
+      "known_exact": 10,
+      "known_prepared": 13,
+      "known_prepared_with_unprotected_masking": 3,
+      "partially_masked_spans": 0,
+      "prepared": 15,
+      "prepared_incomplete_spans": 2,
+      "raw_predicted_protective_fn": 6,
+      "raw_predicted_protective_fp": 5,
+      "raw_predicted_protective_precision": 0.5454545454545454,
+      "raw_predicted_protective_recall": 0.5,
+      "raw_predicted_protective_tp": 6,
+      "reference_spans": 12,
+      "semantic_unknown_review": 2,
+      "statuses": {
+        "needs_review": 9,
+        "ok": 15
+      },
+      "total": 24,
+      "unknown": 4,
+      "unknown_blocked": 2,
+      "unknown_blocked_without_semantic_uncertainty": 0,
+      "unknown_prepared": 2,
+      "unmasked_spans": 2
+    }
+  },
+  "case22": {
+    "qwen35_fulltext": {
+      "actual_mask_intervals": [],
+      "findings": [],
+      "prepared_incomplete_spans": 1
+    },
+    "qwen3_conditional": {
+      "actual_mask_intervals": [],
+      "findings": [],
+      "prepared_incomplete_spans": 1
+    },
+    "qwen3_fulltext": {
+      "actual_mask_intervals": [
+        [
+          40,
+          54
+        ]
+      ],
+      "findings": [
+        {
+          "category": "CUSTOMER",
+          "end": 54,
+          "quote": "该机构正在向本公司购买展示柜",
+          "start": 40
+        }
+      ],
+      "prepared_incomplete_spans": 1
+    }
+  },
+  "closure_sha256": "3aadf94ba80f024fac5043e45e41d9a5671998a86a46fffbec1a673571463649",
+  "cloud_calls": 0,
+  "comparison": "Same full-text method for model comparison; historical conditional is a different-method strong baseline; no protective union.",
+  "complete_generation_responses": 28,
+  "cost_complete": true,
+  "development_gate_passed": false,
+  "downstream_task_success": null,
+  "eval_count": 1538,
+  "execution_wall_seconds": 26.53099999999995,
+  "final_span_failures": [
+    1,
+    2,
+    13,
+    14
+  ],
+  "format_failure_note": "All eight original and repair contents parsed as JSON; these were copy/span/occurrence errors, not JSON syntax failures.",
+  "gate_components": {
+    "acl_negative_controls": true,
+    "cost_complete": true,
+    "known_prepared_noninferior": false,
+    "no_prepared_leak": false,
+    "precision": false,
+    "recall": false,
+    "semantic_unknown_review": false
+  },
+  "health_gets": 48,
+  "historical_replay_rows": 48,
+  "independent_acceptance_passed": null,
+  "independent_audit": {
+    "result_sha256": "90274a3e80d21a947e5198977d055457b11b7246ea74bde6afb1fc301e7b0faa",
+    "scope": "Independent recomputation; no offline HMAC re-verification or external timestamp attestation.",
+    "script_sha256": "35ff97be68acebfa3994f3691cf9b78a8d1ad3c8b912596740f597e27d89847b",
+    "status": "passed"
+  },
+  "interpretation": "New model did not meet development gates. No default change, downstream effect, independent acceptance or innovation claim.",
+  "model": "qwen3.5:4b-q4_K_M",
+  "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+  "native_writes": 0,
+  "network": {
+    "blocked_connects": 0,
+    "loopback_connects": 76
+  },
+  "new_generation_posts": 28,
+  "new_target_posts": 0,
+  "offline_tests": {
+    "elapsed_seconds": 2.561999999999898,
+    "errors": 0,
+    "failures": 0,
+    "scope": "Combined offline adapter and driver integration; mocked transport, not model accuracy or full repository CI.",
+    "skipped": 0,
+    "source_sha256": {
+      "memory_migration_study/qwen35_occurrence.py": "65043cf248b2bfaa186e01d57a145e53600b0b439645b32785e05e0c304a610f",
+      "scripts/qualify_qwen35_inference.py": "05e9fbccfdec53d3d3b19b087300c0638354997a5d06f9bf5dd5c57bd35530ec",
+      "scripts/run_qwen35_model_probe.py": "4d2bcdb217d3beb96965a701d39f8b8f82cae6a9e1da0814fdc97f7976671945",
+      "tests/test_qwen35_model_probe.py": "25b9f678455a1f33f924994752afccdcc8666419f918293911f5748519063aa1",
+      "tests/test_qwen35_occurrence.py": "bb7f31fd62522acb3fd17e0a8a1fc9d5fbb630e6c54f197553fe977936c905cc"
+    },
+    "source_unchanged": true,
+    "tests": 45
+  },
+  "plan_sha256": "c347550171f836101fd950bdf954626b1b6e2295a5e8579c26298f23a6c9c0dc",
+  "post_attempts": 28,
+  "prediction_sha256": "08b5b3688b7659a4f925290ed525b317e60c470ed2c2c19ef2097c3fcc429ad4",
+  "prompt_eval_count": 13407,
+  "qualification": {
+    "complete_generation": true,
+    "eval_count": 10,
+    "generation_calls": 1,
+    "json_schema_valid": true,
+    "prompt_eval_count": 441,
+    "status": "qualified",
+    "thinking_disabled": true,
+    "token_counts_valid": true
+  },
+  "qualification_generation_posts": 1,
+  "raw_generation_responses": 28,
+  "refusal_rate": null,
+  "result_sha256": "6d0d8dc3aef4f3b960748431b1851bcaa48ec6c1f4c2eb20489b8b35e5fe991f",
+  "rows": 72,
+  "runtime_version": "0.40.8",
+  "scope": "24 exposed development texts; not independent acceptance; downstream/refusal unmeasured",
+  "source_elapsed_seconds": 23.483,
+  "status": "complete",
+  "token_counts_complete": true,
+  "total_new_generation_posts": 29,
+  "unique_development_texts": 24,
+  "version": "qwen35_fulltext_model_probe_v1"
+}

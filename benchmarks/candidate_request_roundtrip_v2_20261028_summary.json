@@ -1,0 +1,75 @@
+{
+  "version": "candidate_request_roundtrip_v2_summary_v1",
+  "date": "2026-10-28",
+  "kind": "engineering_request_serialization_fix",
+  "v1_reproduction": {
+    "fixture": "tests.test_candidate_context_batch.pool; synthetic Moss text",
+    "pool_equal_after_sorted_json_roundtrip": true,
+    "pool_sha256_equal": true,
+    "messages_equal": false,
+    "request_sha256_equal": false,
+    "before_request_sha256": "7d7f6ba4ba09b6eb2c64948181be68ad341b21328a44462a14140b2b0ac0145c",
+    "after_request_sha256": "40171e7516a1062b54e5e2c108f323300d45f266fd7be4630c36fb44630215ee",
+    "cause": "candidate object insertion order enters actual model user JSON string"
+  },
+  "v2_roundtrip": {
+    "plain": {
+      "entire_request_equal": true,
+      "messages_equal": true,
+      "request_sha256": "38625a47e885217030395d6c44b56f1e61d279b66e5eacf8f9a3576e8b63d5b9",
+      "preflight_equal_to_v1": true
+    },
+    "marked": {
+      "entire_request_equal": true,
+      "messages_equal": true,
+      "request_sha256": "cbb3a829838e16f1eb37173b60df268973080e5518c72c8fd8dab97eee94b2a7",
+      "preflight_equal_to_v1": true
+    }
+  },
+  "contract": {
+    "version": "candidate_context_batch_v2",
+    "serialization_version": "sorted_json_objects_preserved_lists_utf8_v1",
+    "recursive_object_keys_sorted": true,
+    "list_order_preserved": true,
+    "unicode_whitespace_symbols_and_offsets_preserved": true,
+    "rejects_nonfinite_json": true,
+    "decoder_requires_retained_v2_request": true,
+    "decoder_recomputes_strict_json_digest": true,
+    "loose_python_boolean_integer_float_equality_not_sufficient": true,
+    "rfc8785_jcs_implementation": false,
+    "historical_default_changed": false,
+    "actual_transmission_attestation": false
+  },
+  "verification": {
+    "command": ".runtime/ci-test-venv/Scripts/python.exe -B -X utf8 -m unittest tests.test_candidate_context_batch_v2 tests.test_candidate_context_batch tests.test_occurrence_qwen -q",
+    "tests_run": 50,
+    "new_v2_tests": 16,
+    "failures": 0,
+    "errors": 0,
+    "elapsed_seconds": 0.117,
+    "scope": "direct unit and compatibility checks; not full repository CI or model effectiveness",
+    "reused_existing_test_result": true,
+    "tests_rerun_for_this_summary": false,
+    "historical_source_and_tests_diff_exit_code": 0,
+    "historical_diff_paths": [
+      "memory_migration_study/candidate_context_batch.py",
+      "memory_migration_study/occurrence_qwen.py",
+      "memory_migration_study/occurrence_routing.py",
+      "tests/test_candidate_context_batch.py",
+      "tests/test_occurrence_qwen.py"
+    ],
+    "summary_generation": "zero-model static request recalculation and file hashing only",
+    "actual_model_calls": 0,
+    "actual_network_calls": 0,
+    "paid_api_calls": 0
+  },
+  "source_sha256": {
+    "memory_migration_study/candidate_context_batch_v2.py": "092193c08079060909e4239ea3608bf667ecbb04e8748d42eab075676a03ac6b",
+    "tests/test_candidate_context_batch_v2.py": "50c71e5fba67c691b09e750e2900f65c7f25d664331c309d0b9b921bfbcb9834"
+  },
+  "limitations": [
+    "No evidence of improved sensitivity precision, recall, downstream answer quality or paper novelty.",
+    "Historical v1 results and request hashes are preserved; v2 requires new versioned observations.",
+    "Retained request consistency does not prove actual bytes were sent to a model."
+  ]
+}

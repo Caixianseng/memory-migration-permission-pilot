@@ -1,0 +1,426 @@
+{
+  "artifact_sha256": {
+    "executed_verifier": "c82a710d122b8c1bba947b4de16cdc66b1c4b8bf8b8a85cffd422b7e58993770",
+    "execution_final.json": "01f9d1bddeadb3ce7add0f2087f46b3dd8480b59ff2dc31c460e37ccdbf23e9e",
+    "first_audit_failure": "3234ef499998c90e4da90ede936c66e54372fd8d43a4c3a71695c3960a2fdebb",
+    "independent_audit": "8b8e763009ea70af5274e1d08db4786e83c4ac62186e737858f1b1d3327341bf",
+    "model_responses.json": "339ccaf1547c845f246387bc540643046292e6cebf00cc8b6547963197e70e30",
+    "original_frozen_verifier": "9d6b2a33cba6e28c28739194779629236ffd28e44633941379746f9f512fefa6",
+    "plan.json": "a15e7a552060de5e576e84588b775e5369e6fb292267d3fb94bdcdb6dce0ab55",
+    "prediction_phase_closed.json": "967936786720eb9a11b0c7192571f5af30b730eeba27558f8b43a4dfc8792759",
+    "predictions.json": "ed34e5478ad958d640ab0fa24cbd03aaedafa99822c05d84917c1aec2632bf45",
+    "report.json": "ef892e8c9bde95c5ba1c18131f1681b1eec74206abd3f1498e918d5d3f92d9e5",
+    "runtime_qualification": "6da947b7b75b6ce8560b63a0691b3fa81ef5562052b964cdcda8b80f9b4ec797",
+    "scored_rows.json": "939c9655549d4ea6b9f5bb8bf07fe805c13c777053b2befbf164d1f7e97df898",
+    "service_stopped": "c048f6b15427b0d61b59583b03c7ad4804fac37f8ca0c5d8c86941d788c02650"
+  },
+  "by_arm": {
+    "constrained_tag": {
+      "acl_negative_controls": 10,
+      "actual_masked_unprotected_chars": 293,
+      "allowed_fact_retained": 4,
+      "allowed_fact_total": 8,
+      "block_reasons": {
+        "detection_not_valid_for_payload": 3,
+        "local_agent_needs_review": 3,
+        "semantic_uncertainty": 3,
+        "unsupported_category_contract": 3
+      },
+      "blocked": 3,
+      "blocked_reference_spans": 1,
+      "copy_verified": 8,
+      "fully_masked_spans": 2,
+      "known": 6,
+      "known_exact": 0,
+      "known_prepared": 4,
+      "known_prepared_with_unprotected_masking": 3,
+      "partially_masked_spans": 0,
+      "prepared": 5,
+      "prepared_incomplete_spans": 1,
+      "raw_predicted_protective_fn": 2,
+      "raw_predicted_protective_fp": 4,
+      "raw_predicted_protective_precision": 0.3333333333333333,
+      "raw_predicted_protective_recall": 0.5,
+      "raw_predicted_protective_tp": 2,
+      "reference_spans": 4,
+      "semantic_unknown_review": 1,
+      "statuses": {
+        "needs_review": 3,
+        "ok": 5
+      },
+      "total": 8,
+      "unknown": 2,
+      "unknown_blocked": 1,
+      "unknown_blocked_without_semantic_uncertainty": 0,
+      "unknown_prepared": 1,
+      "unmasked_spans": 1
+    },
+    "free_tag": {
+      "acl_negative_controls": 0,
+      "actual_masked_unprotected_chars": 0,
+      "allowed_fact_retained": 0,
+      "allowed_fact_total": 8,
+      "block_reasons": {
+        "detection_not_valid_for_payload": 8,
+        "local_agent_needs_review": 8,
+        "local_agent_unrecognized_error": 8,
+        "source_copy_mismatch": 8,
+        "unsupported_category_contract": 8
+      },
+      "blocked": 8,
+      "blocked_reference_spans": 4,
+      "copy_verified": 0,
+      "fully_masked_spans": 0,
+      "known": 6,
+      "known_exact": 0,
+      "known_prepared": 0,
+      "known_prepared_with_unprotected_masking": 0,
+      "partially_masked_spans": 0,
+      "prepared": 0,
+      "prepared_incomplete_spans": 0,
+      "raw_predicted_protective_fn": 4,
+      "raw_predicted_protective_fp": 0,
+      "raw_predicted_protective_precision": null,
+      "raw_predicted_protective_recall": 0.0,
+      "raw_predicted_protective_tp": 0,
+      "reference_spans": 4,
+      "semantic_unknown_review": 0,
+      "statuses": {
+        "needs_review": 8
+      },
+      "total": 8,
+      "unknown": 2,
+      "unknown_blocked": 2,
+      "unknown_blocked_without_semantic_uncertainty": 2,
+      "unknown_prepared": 0,
+      "unmasked_spans": 0
+    },
+    "qwen35_quote": {
+      "acl_negative_controls": 10,
+      "actual_masked_unprotected_chars": 31,
+      "allowed_fact_retained": 5,
+      "allowed_fact_total": 8,
+      "block_reasons": {
+        "detection_not_valid_for_payload": 3,
+        "format_or_span_invalid": 2,
+        "local_agent_needs_review": 3,
+        "semantic_uncertainty": 1,
+        "unsupported_category_contract": 3
+      },
+      "blocked": 3,
+      "blocked_reference_spans": 2,
+      "copy_verified": 0,
+      "fully_masked_spans": 1,
+      "known": 6,
+      "known_exact": 0,
+      "known_prepared": 3,
+      "known_prepared_with_unprotected_masking": 2,
+      "partially_masked_spans": 0,
+      "prepared": 5,
+      "prepared_incomplete_spans": 1,
+      "raw_predicted_protective_fn": 4,
+      "raw_predicted_protective_fp": 3,
+      "raw_predicted_protective_precision": 0.0,
+      "raw_predicted_protective_recall": 0.0,
+      "raw_predicted_protective_tp": 0,
+      "reference_spans": 4,
+      "semantic_unknown_review": 0,
+      "statuses": {
+        "needs_review": 3,
+        "ok": 5
+      },
+      "total": 8,
+      "unknown": 2,
+      "unknown_blocked": 0,
+      "unknown_blocked_without_semantic_uncertainty": 0,
+      "unknown_prepared": 2,
+      "unmasked_spans": 1
+    },
+    "qwen3_conditional": {
+      "acl_negative_controls": 12,
+      "actual_masked_unprotected_chars": 33,
+      "allowed_fact_retained": 6,
+      "allowed_fact_total": 8,
+      "block_reasons": {
+        "detection_not_valid_for_payload": 2,
+        "local_agent_needs_review": 2,
+        "semantic_uncertainty": 2,
+        "unsupported_category_contract": 2
+      },
+      "blocked": 2,
+      "blocked_reference_spans": 0,
+      "copy_verified": 0,
+      "fully_masked_spans": 3,
+      "known": 6,
+      "known_exact": 4,
+      "known_prepared": 6,
+      "known_prepared_with_unprotected_masking": 2,
+      "partially_masked_spans": 0,
+      "prepared": 6,
+      "prepared_incomplete_spans": 1,
+      "raw_predicted_protective_fn": 1,
+      "raw_predicted_protective_fp": 1,
+      "raw_predicted_protective_precision": 0.75,
+      "raw_predicted_protective_recall": 0.75,
+      "raw_predicted_protective_tp": 3,
+      "reference_spans": 4,
+      "semantic_unknown_review": 2,
+      "statuses": {
+        "needs_review": 2,
+        "ok": 6
+      },
+      "total": 8,
+      "unknown": 2,
+      "unknown_blocked": 2,
+      "unknown_blocked_without_semantic_uncertainty": 0,
+      "unknown_prepared": 0,
+      "unmasked_spans": 1
+    }
+  },
+  "checks": {
+    "independent_audit": {
+      "acl_negative_controls": 32,
+      "cells": 32,
+      "frozen_source_files": 244,
+      "full_reference_cases": 24,
+      "generation_captures": 16,
+      "historical_artifacts": 82,
+      "new_audit_model_calls": 0,
+      "new_audit_network_calls": 0,
+      "offline_hmac_reverification": false,
+      "post_execution_instrument_fix": {
+        "post_execution_fix": true,
+        "producer_or_scoring_changed": false,
+        "reason": "Reconstruct original JSON insertion order; sorted stored JSON is not a wire-byte record."
+      },
+      "status": "passed"
+    },
+    "independent_instrument_self_checks": {
+      "parser": 15,
+      "response_envelope": 7
+    },
+    "offline_unittests": {
+      "passed": 31,
+      "run": 31,
+      "scope": "source_tagging and copy_tag_probe only; not full repository CI"
+    }
+  },
+  "comparison": {
+    "balanced_first_arm_counts": {
+      "constrained_tag": 4,
+      "free_tag": 4
+    },
+    "free_vs_constrained": "same_backend_model_applied_prompt_options_only_grammar_differs",
+    "historical_arms": "different_method_and_runtime_replay_not_grammar_only_causal_controls",
+    "new_arms": [
+      "free_tag",
+      "constrained_tag"
+    ],
+    "replay_arms": [
+      "qwen35_quote",
+      "qwen3_conditional"
+    ]
+  },
+  "date": "2026-10-28",
+  "decision": "Keep existing default; do not expand full24 or claim semantic/privacy/refusal improvement from copy guarantee. Preserve as engineering mechanism/strong-baseline implementation, not novel algorithm.",
+  "downstream_task_success": null,
+  "effect_gate_components": {
+    "acl_negative_controls": true,
+    "cost_inventory": true,
+    "known_prepared_noninferior": false,
+    "no_prepared_leak": false,
+    "precision": false,
+    "recall": false,
+    "semantic_unknown_review": false
+  },
+  "effect_gate_passed": false,
+  "findings": {
+    "hush_case_11": "OK plus no entity; institution occurrence remains unmasked",
+    "legal_task_refusal_rate": null,
+    "moss_case_22": "REVIEW plus no entity; blocked, not successful detection",
+    "negation_and_direction": "false labels persist, including full paragraph masking",
+    "source_copy_constrained": {
+      "success": 8,
+      "total": 8
+    },
+    "source_copy_free": {
+      "failure": "extra JSON wrapper or whitespace, not output limit",
+      "success": 0,
+      "total": 8
+    }
+  },
+  "formal_call_inventory": {
+    "cloud_calls": 0,
+    "complete_generation_responses": 16,
+    "generation_order": [
+      {
+        "arm": "free_tag",
+        "text_index": 1
+      },
+      {
+        "arm": "constrained_tag",
+        "text_index": 1
+      },
+      {
+        "arm": "constrained_tag",
+        "text_index": 4
+      },
+      {
+        "arm": "free_tag",
+        "text_index": 4
+      },
+      {
+        "arm": "free_tag",
+        "text_index": 6
+      },
+      {
+        "arm": "constrained_tag",
+        "text_index": 6
+      },
+      {
+        "arm": "constrained_tag",
+        "text_index": 11
+      },
+      {
+        "arm": "free_tag",
+        "text_index": 11
+      },
+      {
+        "arm": "free_tag",
+        "text_index": 13
+      },
+      {
+        "arm": "constrained_tag",
+        "text_index": 13
+      },
+      {
+        "arm": "constrained_tag",
+        "text_index": 16
+      },
+      {
+        "arm": "free_tag",
+        "text_index": 16
+      },
+      {
+        "arm": "free_tag",
+        "text_index": 19
+      },
+      {
+        "arm": "constrained_tag",
+        "text_index": 19
+      },
+      {
+        "arm": "constrained_tag",
+        "text_index": 22
+      },
+      {
+        "arm": "free_tag",
+        "text_index": 22
+      }
+    ],
+    "native_writes": 0,
+    "new_target_posts": 0,
+    "post_attempts": 16,
+    "predicted_tokens": 802,
+    "prompt_tokens": 7584,
+    "repairs": 0,
+    "token_counts_complete": true
+  },
+  "formal_elapsed_seconds": 12.891,
+  "independent_acceptance_passed": null,
+  "limitations": [
+    "Eight previously exposed hard diagnostics, not independent acceptance or a novel decoding method.",
+    "A complete copied source verifies representation and positions, not sensitivity, negation, ontology or authorization.",
+    "Independent audit arithmetic and cursor decoding reuse only independent stdlib audit helpers, never producer scoring.",
+    "Ephemeral HMAC keys/maps were not persisted; bindings/runtime evidence checked, signatures not reverified offline.",
+    "Runtime/canary receipts and local closure are recorded evidence, not external trusted execution or timestamps.",
+    "Historical replay methods/runtimes differ; only free/constrained new arms hold model, prompt and decoding budget fixed."
+  ],
+  "mechanism_gate": {
+    "constrained_complete_source": 8,
+    "required": 8
+  },
+  "mechanism_gate_passed": true,
+  "native_backend_writes": 0,
+  "new_cloud_calls": 0,
+  "new_downstream_generation_calls": 0,
+  "new_local_generation_calls": {
+    "formal": 16,
+    "qualification": 1,
+    "repair": 0,
+    "total": 17
+  },
+  "new_paid_api_calls": 0,
+  "proceed_full24": false,
+  "publication_novelty_established": false,
+  "references": [
+    {
+      "title": "Constrained Tagging for Span Labeling",
+      "url": "https://arxiv.org/abs/2610.28922v1"
+    },
+    {
+      "title": "SPANIEL",
+      "url": "https://github.com/harshsinghal/SPANIEL"
+    },
+    {
+      "title": "llama.cpp GBNF",
+      "url": "https://github.com/ggml-org/llama.cpp/blob/master/grammars/README.md"
+    }
+  ],
+  "refusal_rate": null,
+  "runtime": {
+    "backend": "bundled llama-server GBNF CUDA",
+    "max_output_tokens": 1024,
+    "model": "Qwen3.5 4B Q4_K_M existing verified asset",
+    "model_gguf_sha256": "a9d0a3e1d8c91732a3812becd31f8d4a8ff57414903f226306069f0437e2ac50",
+    "n_ctx": 4096,
+    "parallel": 1,
+    "prompt_tokens_max": 488,
+    "seed": 42,
+    "service_stopped": true,
+    "temperature": 0,
+    "thinking": false
+  },
+  "scope": {
+    "gold_spans_known": 4,
+    "independent_acceptance": false,
+    "known": 6,
+    "languages": {
+      "en": 4,
+      "zh": 4
+    },
+    "material_origin": "previously_exposed_hard_development_diagnostics",
+    "pipeline": "controlled_memory_migration_preparation_with_empty_source_labels",
+    "raw_texts_responses_and_restoration_maps_included": false,
+    "text_ids": [
+      1,
+      4,
+      6,
+      11,
+      13,
+      16,
+      19,
+      22
+    ],
+    "texts": 8,
+    "unknown": 2
+  },
+  "source_field_qualification": {
+    "files_checked": 10,
+    "new_model_calls": 0,
+    "report": "docs/源工具字段资格核查_2026-10-28.md",
+    "report_sha256": "1da1d83fcdf21a73c6359e561993571f755edc9b9130832bb139922566a23d23",
+    "scope_limit": "Not an assertion that all unread material lacks such fields. Synthetic/scoring labels and model extraction are not native source authority.",
+    "status": "no_qualified_joint_tool_source_in_checked_scope"
+  },
+  "status": "mechanism_passed_effect_failed",
+  "tokens": {
+    "formal_input": 7584,
+    "formal_output": 802,
+    "qualification_input": 441,
+    "qualification_output": 16,
+    "total_input": 8025,
+    "total_output": 818
+  },
+  "version": "copy_tag_diagnostic_public_summary_v1"
+}

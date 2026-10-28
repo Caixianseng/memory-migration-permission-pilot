@@ -425,6 +425,10 @@ def detect_sensitive(payload: dict, sensitivity_policy: dict, *, agent=None, mod
             if type(calls) is int and 0 <= calls <= call_limit:
                 observation["local_calls"] = calls
                 result["local_calls"] += calls
+            # Missing flags retain the legacy scalar-counter contract. Explicit
+            # reports can only reduce completeness, including across sources.
+            if response.get("local_calls_complete", True) is not True:
+                result["local_calls_complete"] = False
             if isinstance(elapsed, (int, float)) and not isinstance(elapsed, bool) and math.isfinite(elapsed) and elapsed >= 0:
                 observation["elapsed_seconds"] = elapsed
                 result["agent_elapsed_seconds"] += elapsed

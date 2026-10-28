@@ -16,7 +16,8 @@ import time
 
 from .privacy import _digest, _policy, detect_sensitive
 
-CACHE_VERSION = "scoped_semantic_cache_v1"
+# v2 requires host validation to preserve explicit accounting incompleteness.
+CACHE_VERSION = "scoped_semantic_cache_v2"
 
 
 def detector_revision(agent):
@@ -89,7 +90,8 @@ class DetectionCache:
                 return {"status": "ok", "errors": [], "diagnostics": [],
                         "findings": [{"quote": text[a:b], "start": a, "end": b, "category": cat}
                                      for a, b, cat in entry["spans"]],
-                        "local_calls": 0, "elapsed_seconds": 0.0, "cache_hit": True,
+                        "local_calls": 0, "local_calls_complete": True,
+                        "elapsed_seconds": 0.0, "cache_hit": True,
                         **entry["metadata"]}
             self.__counts["misses"] += 1
             response = agent(text=text, source_id=source_id, policy=policy, rule_findings=rule_findings)
@@ -103,7 +105,7 @@ class DetectionCache:
                 unchanged = _digest(agent.cache_identity()) == identity_before
             except (AttributeError, TypeError, ValueError):
                 unchanged = False
-            if validation["status"] == "ok" and validation["local_calls_complete"] and unchanged:
+            if validation["status"] == "ok" and validation["local_calls_complete"] is True and unchanged:
                 spans = []
                 for f in response["findings"]:
                     # Validation has checked exact, unique or explicitly indexed
