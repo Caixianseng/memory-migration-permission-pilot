@@ -102,7 +102,7 @@ class Qwen35ModelProbeTests(unittest.TestCase):
 
     def test_freeze_and_verify_never_parse_gold_and_reject_code_drift(self):
         with tempfile.TemporaryDirectory() as temp:
-            root = Path(temp)
+            root = Path(temp).resolve()
             _, _, _, assets = self.project(root)
             original = probe.read_json
             def no_gold(path):
@@ -122,7 +122,7 @@ class Qwen35ModelProbeTests(unittest.TestCase):
 
     def test_archived_or_current_receipt_changes_are_rejected(self):
         with tempfile.TemporaryDirectory() as temp:
-            root = Path(temp)
+            root = Path(temp).resolve()
             _, _, _, assets = self.project(root)
             output, frozen = self.freeze(root, assets)
             (output / "receipts/show.json").write_text("{}", encoding="utf-8")
@@ -264,7 +264,7 @@ class Qwen35ModelProbeTests(unittest.TestCase):
 
     def test_runtime_failure_stops_after_recording_prefix_without_reading_gold(self):
         with tempfile.TemporaryDirectory() as temp:
-            root = Path(temp)
+            root = Path(temp).resolve()
             _, _, _, assets = self.project(root)
             output, frozen = self.freeze(root, assets)
             _, _, _, _, requests = probe.verify(output, frozen)
@@ -310,7 +310,7 @@ class Qwen35ModelProbeTests(unittest.TestCase):
 
     def test_mocked_execute_closes_before_gold_and_never_reinfers_historical_arms(self):
         with tempfile.TemporaryDirectory() as temp:
-            root = Path(temp)
+            root = Path(temp).resolve()
             texts, _, responses, assets = self.project(root)
             output, frozen = self.freeze(root, assets)
             _, _, _, _, requests = probe.verify(output, frozen)
