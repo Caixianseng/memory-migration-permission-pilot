@@ -1,0 +1,1166 @@
+{
+  "schema": "qoder-source-independent-joint-audit-v1",
+  "completed_at_utc": "2026-10-30T11:51:29.888166+00:00",
+  "status": "passed_with_documented_limits",
+  "checks_count": 271,
+  "passed_count": 271,
+  "failures": [],
+  "checks": [
+    {
+      "name": "top_frozen_code:experiments/qoder_source_generation_20261030/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "top_frozen_code:experiments/qoder_source_generation_20261030/guard.py",
+      "passed": true
+    },
+    {
+      "name": "top_frozen_code:experiments/qoder_source_generation_20261030/joint_handoff.py",
+      "passed": true
+    },
+    {
+      "name": "top_frozen_code:experiments/qoder_source_generation_20261030/writer.py",
+      "passed": true
+    },
+    {
+      "name": "top_frozen_code:experiments/submission_acceptance_20261030/pipeline.py",
+      "passed": true
+    },
+    {
+      "name": "top_frozen_code:experiments/submission_acceptance_20261030/reference.py",
+      "passed": true
+    },
+    {
+      "name": "top_frozen_code:memory_migration_study/authority_freshness.py",
+      "passed": true
+    },
+    {
+      "name": "top_frozen_code:memory_migration_study/current_authority.py",
+      "passed": true
+    },
+    {
+      "name": "top_frozen_code:memory_migration_study/deepseek_native.py",
+      "passed": true
+    },
+    {
+      "name": "top_frozen_code:memory_migration_study/memory_labels.py",
+      "passed": true
+    },
+    {
+      "name": "top_frozen_code:memory_migration_study/native_agent_protocol.py",
+      "passed": true
+    },
+    {
+      "name": "top_frozen_code:memory_migration_study/privacy.py",
+      "passed": true
+    },
+    {
+      "name": "source_frozen_file:__init__.py",
+      "passed": true
+    },
+    {
+      "name": "source_frozen_file:guard.py",
+      "passed": true
+    },
+    {
+      "name": "source_frozen_file:joint_handoff.py",
+      "passed": true
+    },
+    {
+      "name": "source_frozen_file:writer.py",
+      "passed": true
+    },
+    {
+      "name": "source_frozen_file:input.json",
+      "passed": true
+    },
+    {
+      "name": "source_frozen_file:settings.json",
+      "passed": true
+    },
+    {
+      "name": "top_input_hash",
+      "passed": true
+    },
+    {
+      "name": "reference_hash",
+      "passed": true
+    },
+    {
+      "name": "predictions_closed_hash",
+      "passed": true
+    },
+    {
+      "name": "source_receipt_closed_hash",
+      "passed": true
+    },
+    {
+      "name": "native_execution_closed_hash",
+      "passed": true
+    },
+    {
+      "name": "source_declared_not_host_written",
+      "passed": true
+    },
+    {
+      "name": "source_plan_runtime_cli_hash",
+      "passed": true
+    },
+    {
+      "name": "source_plan_runtime_node_hash",
+      "passed": true
+    },
+    {
+      "name": "source_actual_bytes_exact_registered_lines",
+      "passed": true
+    },
+    {
+      "name": "source_native_file_hash_all_bindings",
+      "passed": true
+    },
+    {
+      "name": "source_native_path_exact",
+      "passed": true
+    },
+    {
+      "name": "case_text_is_actual_source",
+      "passed": true
+    },
+    {
+      "name": "native_execution_complete",
+      "passed": true
+    },
+    {
+      "name": "native_one_prompt",
+      "passed": true
+    },
+    {
+      "name": "native_init_two_same_qualified_session",
+      "passed": true
+    },
+    {
+      "name": "native_write_one_result_one",
+      "passed": true
+    },
+    {
+      "name": "write_tool_content_bound_to_actual_file",
+      "passed": true
+    },
+    {
+      "name": "native_write_result_same_call_success",
+      "passed": true
+    },
+    {
+      "name": "source_configured_budget_not_metered_zero",
+      "passed": true
+    },
+    {
+      "name": "one_guard_continue_does_not_bypass_native_permissions",
+      "passed": true
+    },
+    {
+      "name": "atomic_write_claim_bound",
+      "passed": true
+    },
+    {
+      "name": "armed_guard_final_session_and_target",
+      "passed": true
+    },
+    {
+      "name": "source_permission_exact_file",
+      "passed": true
+    },
+    {
+      "name": "source_static_kind_no_auto_memory_claim",
+      "passed": true
+    },
+    {
+      "name": "external_acl_origin_explicit",
+      "passed": true
+    },
+    {
+      "name": "source_fact_exact_span:1",
+      "passed": true
+    },
+    {
+      "name": "source_fact_export_contract:1",
+      "passed": true
+    },
+    {
+      "name": "source_fact_exact_span:2",
+      "passed": true
+    },
+    {
+      "name": "source_fact_export_contract:2",
+      "passed": true
+    },
+    {
+      "name": "source_fact_exact_span:3",
+      "passed": true
+    },
+    {
+      "name": "source_fact_export_contract:3",
+      "passed": true
+    },
+    {
+      "name": "source_fact_exact_span:4",
+      "passed": true
+    },
+    {
+      "name": "source_fact_export_contract:4",
+      "passed": true
+    },
+    {
+      "name": "observed_handoff_reference:1",
+      "passed": true
+    },
+    {
+      "name": "observed_handoff_reference:2",
+      "passed": true
+    },
+    {
+      "name": "observed_handoff_reference:3",
+      "passed": true
+    },
+    {
+      "name": "observed_handoff_reference:4",
+      "passed": true
+    },
+    {
+      "name": "inventory_fixed_twelve",
+      "passed": true
+    },
+    {
+      "name": "actual_four_linked_eight",
+      "passed": true
+    },
+    {
+      "name": "source-t1-whole_block:actual_target_hash",
+      "passed": true
+    },
+    {
+      "name": "source-t1-whole_block:target_payload_exact_file",
+      "passed": true
+    },
+    {
+      "name": "source-t1-whole_block:external_acl_only_134",
+      "passed": true
+    },
+    {
+      "name": "source-t1-whole_block:no_sensitive_raw_in_payload",
+      "passed": true
+    },
+    {
+      "name": "source-t1-whole_block:no_forbidden_in_file_raw_final",
+      "passed": true
+    },
+    {
+      "name": "source-t1-whole_block:no_registered_email_raw_reply",
+      "passed": true
+    },
+    {
+      "name": "source-t1-whole_block:final_matches_reference",
+      "passed": true
+    },
+    {
+      "name": "source-t1-whole_block:success_and_restore_recheck",
+      "passed": true
+    },
+    {
+      "name": "source-t1-whole_block:final_legal_value_in_actual_source_fact",
+      "passed": true
+    },
+    {
+      "name": "source-t1-whole_block:receipt_file_hash",
+      "passed": true
+    },
+    {
+      "name": "source-t1-whole_block:receipt_success_and_native_load",
+      "passed": true
+    },
+    {
+      "name": "source-t1-whole_block:native_instruction_event_content",
+      "passed": true
+    },
+    {
+      "name": "source-t1-whole_block:guard_one_stream",
+      "passed": true
+    },
+    {
+      "name": "source-t1-whole_block:guard_request_bytes_tokens_tools",
+      "passed": true
+    },
+    {
+      "name": "source-t1-whole_block:guard_original_receipt_consistent",
+      "passed": true
+    },
+    {
+      "name": "source-t1-whole_block:raw_exact_native_response",
+      "passed": true
+    },
+    {
+      "name": "source-t1-whole_block:temporary_credentials_removed",
+      "passed": true
+    },
+    {
+      "name": "source-t1-whole_block:credential_unchanged_wrapper_receipt",
+      "passed": true
+    },
+    {
+      "name": "source-t1-per_fragment:actual_target_hash",
+      "passed": true
+    },
+    {
+      "name": "source-t1-per_fragment:target_payload_exact_file",
+      "passed": true
+    },
+    {
+      "name": "source-t1-per_fragment:external_acl_only_134",
+      "passed": true
+    },
+    {
+      "name": "source-t1-per_fragment:no_sensitive_raw_in_payload",
+      "passed": true
+    },
+    {
+      "name": "source-t1-per_fragment:no_forbidden_in_file_raw_final",
+      "passed": true
+    },
+    {
+      "name": "source-t1-per_fragment:no_registered_email_raw_reply",
+      "passed": true
+    },
+    {
+      "name": "source-t1-per_fragment:final_matches_reference",
+      "passed": true
+    },
+    {
+      "name": "source-t1-per_fragment:success_and_restore_recheck",
+      "passed": true
+    },
+    {
+      "name": "source-t1-per_fragment:final_legal_value_in_actual_source_fact",
+      "passed": true
+    },
+    {
+      "name": "source-t1-per_fragment:linked_actual_same_task",
+      "passed": true
+    },
+    {
+      "name": "source-t1-per_fragment:linked_equal_complete_input",
+      "passed": true
+    },
+    {
+      "name": "source-t1-per_fragment:equal_token_inventory",
+      "passed": true
+    },
+    {
+      "name": "source-t1-per_fragment:origin_token_registered",
+      "passed": true
+    },
+    {
+      "name": "source-t1-per_fragment:translated_answer_in_same_source_position",
+      "passed": true
+    },
+    {
+      "name": "source-t1-per_fragment:linked_raw_and_final_preserved",
+      "passed": true
+    },
+    {
+      "name": "source-t1-per_fragment:linked_not_native_call",
+      "passed": true
+    },
+    {
+      "name": "source-t1-existing_selective:actual_target_hash",
+      "passed": true
+    },
+    {
+      "name": "source-t1-existing_selective:target_payload_exact_file",
+      "passed": true
+    },
+    {
+      "name": "source-t1-existing_selective:external_acl_only_134",
+      "passed": true
+    },
+    {
+      "name": "source-t1-existing_selective:no_sensitive_raw_in_payload",
+      "passed": true
+    },
+    {
+      "name": "source-t1-existing_selective:no_forbidden_in_file_raw_final",
+      "passed": true
+    },
+    {
+      "name": "source-t1-existing_selective:no_registered_email_raw_reply",
+      "passed": true
+    },
+    {
+      "name": "source-t1-existing_selective:final_matches_reference",
+      "passed": true
+    },
+    {
+      "name": "source-t1-existing_selective:success_and_restore_recheck",
+      "passed": true
+    },
+    {
+      "name": "source-t1-existing_selective:final_legal_value_in_actual_source_fact",
+      "passed": true
+    },
+    {
+      "name": "source-t1-existing_selective:linked_actual_same_task",
+      "passed": true
+    },
+    {
+      "name": "source-t1-existing_selective:linked_equal_complete_input",
+      "passed": true
+    },
+    {
+      "name": "source-t1-existing_selective:equal_token_inventory",
+      "passed": true
+    },
+    {
+      "name": "source-t1-existing_selective:origin_token_registered",
+      "passed": true
+    },
+    {
+      "name": "source-t1-existing_selective:translated_answer_in_same_source_position",
+      "passed": true
+    },
+    {
+      "name": "source-t1-existing_selective:linked_raw_and_final_preserved",
+      "passed": true
+    },
+    {
+      "name": "source-t1-existing_selective:linked_not_native_call",
+      "passed": true
+    },
+    {
+      "name": "source-t2-whole_block:actual_target_hash",
+      "passed": true
+    },
+    {
+      "name": "source-t2-whole_block:target_payload_exact_file",
+      "passed": true
+    },
+    {
+      "name": "source-t2-whole_block:external_acl_only_134",
+      "passed": true
+    },
+    {
+      "name": "source-t2-whole_block:no_sensitive_raw_in_payload",
+      "passed": true
+    },
+    {
+      "name": "source-t2-whole_block:no_forbidden_in_file_raw_final",
+      "passed": true
+    },
+    {
+      "name": "source-t2-whole_block:no_registered_email_raw_reply",
+      "passed": true
+    },
+    {
+      "name": "source-t2-whole_block:final_matches_reference",
+      "passed": true
+    },
+    {
+      "name": "source-t2-whole_block:success_and_restore_recheck",
+      "passed": true
+    },
+    {
+      "name": "source-t2-whole_block:final_legal_value_in_actual_source_fact",
+      "passed": true
+    },
+    {
+      "name": "source-t2-whole_block:receipt_file_hash",
+      "passed": true
+    },
+    {
+      "name": "source-t2-whole_block:receipt_success_and_native_load",
+      "passed": true
+    },
+    {
+      "name": "source-t2-whole_block:native_instruction_event_content",
+      "passed": true
+    },
+    {
+      "name": "source-t2-whole_block:guard_one_stream",
+      "passed": true
+    },
+    {
+      "name": "source-t2-whole_block:guard_request_bytes_tokens_tools",
+      "passed": true
+    },
+    {
+      "name": "source-t2-whole_block:guard_original_receipt_consistent",
+      "passed": true
+    },
+    {
+      "name": "source-t2-whole_block:raw_exact_native_response",
+      "passed": true
+    },
+    {
+      "name": "source-t2-whole_block:temporary_credentials_removed",
+      "passed": true
+    },
+    {
+      "name": "source-t2-whole_block:credential_unchanged_wrapper_receipt",
+      "passed": true
+    },
+    {
+      "name": "source-t2-per_fragment:actual_target_hash",
+      "passed": true
+    },
+    {
+      "name": "source-t2-per_fragment:target_payload_exact_file",
+      "passed": true
+    },
+    {
+      "name": "source-t2-per_fragment:external_acl_only_134",
+      "passed": true
+    },
+    {
+      "name": "source-t2-per_fragment:no_sensitive_raw_in_payload",
+      "passed": true
+    },
+    {
+      "name": "source-t2-per_fragment:no_forbidden_in_file_raw_final",
+      "passed": true
+    },
+    {
+      "name": "source-t2-per_fragment:no_registered_email_raw_reply",
+      "passed": true
+    },
+    {
+      "name": "source-t2-per_fragment:final_matches_reference",
+      "passed": true
+    },
+    {
+      "name": "source-t2-per_fragment:success_and_restore_recheck",
+      "passed": true
+    },
+    {
+      "name": "source-t2-per_fragment:final_legal_value_in_actual_source_fact",
+      "passed": true
+    },
+    {
+      "name": "source-t2-per_fragment:linked_actual_same_task",
+      "passed": true
+    },
+    {
+      "name": "source-t2-per_fragment:linked_equal_complete_input",
+      "passed": true
+    },
+    {
+      "name": "source-t2-per_fragment:equal_token_inventory",
+      "passed": true
+    },
+    {
+      "name": "source-t2-per_fragment:translated_answer_in_same_source_position",
+      "passed": true
+    },
+    {
+      "name": "source-t2-per_fragment:linked_raw_and_final_preserved",
+      "passed": true
+    },
+    {
+      "name": "source-t2-per_fragment:linked_not_native_call",
+      "passed": true
+    },
+    {
+      "name": "source-t2-existing_selective:actual_target_hash",
+      "passed": true
+    },
+    {
+      "name": "source-t2-existing_selective:target_payload_exact_file",
+      "passed": true
+    },
+    {
+      "name": "source-t2-existing_selective:external_acl_only_134",
+      "passed": true
+    },
+    {
+      "name": "source-t2-existing_selective:no_sensitive_raw_in_payload",
+      "passed": true
+    },
+    {
+      "name": "source-t2-existing_selective:no_forbidden_in_file_raw_final",
+      "passed": true
+    },
+    {
+      "name": "source-t2-existing_selective:no_registered_email_raw_reply",
+      "passed": true
+    },
+    {
+      "name": "source-t2-existing_selective:final_matches_reference",
+      "passed": true
+    },
+    {
+      "name": "source-t2-existing_selective:success_and_restore_recheck",
+      "passed": true
+    },
+    {
+      "name": "source-t2-existing_selective:final_legal_value_in_actual_source_fact",
+      "passed": true
+    },
+    {
+      "name": "source-t2-existing_selective:linked_actual_same_task",
+      "passed": true
+    },
+    {
+      "name": "source-t2-existing_selective:linked_equal_complete_input",
+      "passed": true
+    },
+    {
+      "name": "source-t2-existing_selective:equal_token_inventory",
+      "passed": true
+    },
+    {
+      "name": "source-t2-existing_selective:translated_answer_in_same_source_position",
+      "passed": true
+    },
+    {
+      "name": "source-t2-existing_selective:linked_raw_and_final_preserved",
+      "passed": true
+    },
+    {
+      "name": "source-t2-existing_selective:linked_not_native_call",
+      "passed": true
+    },
+    {
+      "name": "source-t3-whole_block:actual_target_hash",
+      "passed": true
+    },
+    {
+      "name": "source-t3-whole_block:target_payload_exact_file",
+      "passed": true
+    },
+    {
+      "name": "source-t3-whole_block:external_acl_only_134",
+      "passed": true
+    },
+    {
+      "name": "source-t3-whole_block:no_sensitive_raw_in_payload",
+      "passed": true
+    },
+    {
+      "name": "source-t3-whole_block:no_forbidden_in_file_raw_final",
+      "passed": true
+    },
+    {
+      "name": "source-t3-whole_block:no_registered_email_raw_reply",
+      "passed": true
+    },
+    {
+      "name": "source-t3-whole_block:final_matches_reference",
+      "passed": true
+    },
+    {
+      "name": "source-t3-whole_block:success_and_restore_recheck",
+      "passed": true
+    },
+    {
+      "name": "source-t3-whole_block:control_is_unknown",
+      "passed": true
+    },
+    {
+      "name": "source-t3-whole_block:receipt_file_hash",
+      "passed": true
+    },
+    {
+      "name": "source-t3-whole_block:receipt_success_and_native_load",
+      "passed": true
+    },
+    {
+      "name": "source-t3-whole_block:native_instruction_event_content",
+      "passed": true
+    },
+    {
+      "name": "source-t3-whole_block:guard_one_stream",
+      "passed": true
+    },
+    {
+      "name": "source-t3-whole_block:guard_request_bytes_tokens_tools",
+      "passed": true
+    },
+    {
+      "name": "source-t3-whole_block:guard_original_receipt_consistent",
+      "passed": true
+    },
+    {
+      "name": "source-t3-whole_block:raw_exact_native_response",
+      "passed": true
+    },
+    {
+      "name": "source-t3-whole_block:temporary_credentials_removed",
+      "passed": true
+    },
+    {
+      "name": "source-t3-whole_block:credential_unchanged_wrapper_receipt",
+      "passed": true
+    },
+    {
+      "name": "source-t3-per_fragment:actual_target_hash",
+      "passed": true
+    },
+    {
+      "name": "source-t3-per_fragment:target_payload_exact_file",
+      "passed": true
+    },
+    {
+      "name": "source-t3-per_fragment:external_acl_only_134",
+      "passed": true
+    },
+    {
+      "name": "source-t3-per_fragment:no_sensitive_raw_in_payload",
+      "passed": true
+    },
+    {
+      "name": "source-t3-per_fragment:no_forbidden_in_file_raw_final",
+      "passed": true
+    },
+    {
+      "name": "source-t3-per_fragment:no_registered_email_raw_reply",
+      "passed": true
+    },
+    {
+      "name": "source-t3-per_fragment:final_matches_reference",
+      "passed": true
+    },
+    {
+      "name": "source-t3-per_fragment:success_and_restore_recheck",
+      "passed": true
+    },
+    {
+      "name": "source-t3-per_fragment:control_is_unknown",
+      "passed": true
+    },
+    {
+      "name": "source-t3-per_fragment:linked_actual_same_task",
+      "passed": true
+    },
+    {
+      "name": "source-t3-per_fragment:linked_equal_complete_input",
+      "passed": true
+    },
+    {
+      "name": "source-t3-per_fragment:equal_token_inventory",
+      "passed": true
+    },
+    {
+      "name": "source-t3-per_fragment:translated_control_unchanged",
+      "passed": true
+    },
+    {
+      "name": "source-t3-per_fragment:linked_raw_and_final_preserved",
+      "passed": true
+    },
+    {
+      "name": "source-t3-per_fragment:linked_not_native_call",
+      "passed": true
+    },
+    {
+      "name": "source-t3-existing_selective:actual_target_hash",
+      "passed": true
+    },
+    {
+      "name": "source-t3-existing_selective:target_payload_exact_file",
+      "passed": true
+    },
+    {
+      "name": "source-t3-existing_selective:external_acl_only_134",
+      "passed": true
+    },
+    {
+      "name": "source-t3-existing_selective:no_sensitive_raw_in_payload",
+      "passed": true
+    },
+    {
+      "name": "source-t3-existing_selective:no_forbidden_in_file_raw_final",
+      "passed": true
+    },
+    {
+      "name": "source-t3-existing_selective:no_registered_email_raw_reply",
+      "passed": true
+    },
+    {
+      "name": "source-t3-existing_selective:final_matches_reference",
+      "passed": true
+    },
+    {
+      "name": "source-t3-existing_selective:success_and_restore_recheck",
+      "passed": true
+    },
+    {
+      "name": "source-t3-existing_selective:control_is_unknown",
+      "passed": true
+    },
+    {
+      "name": "source-t3-existing_selective:linked_actual_same_task",
+      "passed": true
+    },
+    {
+      "name": "source-t3-existing_selective:linked_equal_complete_input",
+      "passed": true
+    },
+    {
+      "name": "source-t3-existing_selective:equal_token_inventory",
+      "passed": true
+    },
+    {
+      "name": "source-t3-existing_selective:translated_control_unchanged",
+      "passed": true
+    },
+    {
+      "name": "source-t3-existing_selective:linked_raw_and_final_preserved",
+      "passed": true
+    },
+    {
+      "name": "source-t3-existing_selective:linked_not_native_call",
+      "passed": true
+    },
+    {
+      "name": "source-t4-whole_block:actual_target_hash",
+      "passed": true
+    },
+    {
+      "name": "source-t4-whole_block:target_payload_exact_file",
+      "passed": true
+    },
+    {
+      "name": "source-t4-whole_block:external_acl_only_134",
+      "passed": true
+    },
+    {
+      "name": "source-t4-whole_block:no_sensitive_raw_in_payload",
+      "passed": true
+    },
+    {
+      "name": "source-t4-whole_block:no_forbidden_in_file_raw_final",
+      "passed": true
+    },
+    {
+      "name": "source-t4-whole_block:no_registered_email_raw_reply",
+      "passed": true
+    },
+    {
+      "name": "source-t4-whole_block:final_matches_reference",
+      "passed": true
+    },
+    {
+      "name": "source-t4-whole_block:success_and_restore_recheck",
+      "passed": true
+    },
+    {
+      "name": "source-t4-whole_block:control_is_unknown",
+      "passed": true
+    },
+    {
+      "name": "source-t4-whole_block:receipt_file_hash",
+      "passed": true
+    },
+    {
+      "name": "source-t4-whole_block:receipt_success_and_native_load",
+      "passed": true
+    },
+    {
+      "name": "source-t4-whole_block:native_instruction_event_content",
+      "passed": true
+    },
+    {
+      "name": "source-t4-whole_block:guard_one_stream",
+      "passed": true
+    },
+    {
+      "name": "source-t4-whole_block:guard_request_bytes_tokens_tools",
+      "passed": true
+    },
+    {
+      "name": "source-t4-whole_block:guard_original_receipt_consistent",
+      "passed": true
+    },
+    {
+      "name": "source-t4-whole_block:raw_exact_native_response",
+      "passed": true
+    },
+    {
+      "name": "source-t4-whole_block:temporary_credentials_removed",
+      "passed": true
+    },
+    {
+      "name": "source-t4-whole_block:credential_unchanged_wrapper_receipt",
+      "passed": true
+    },
+    {
+      "name": "source-t4-per_fragment:actual_target_hash",
+      "passed": true
+    },
+    {
+      "name": "source-t4-per_fragment:target_payload_exact_file",
+      "passed": true
+    },
+    {
+      "name": "source-t4-per_fragment:external_acl_only_134",
+      "passed": true
+    },
+    {
+      "name": "source-t4-per_fragment:no_sensitive_raw_in_payload",
+      "passed": true
+    },
+    {
+      "name": "source-t4-per_fragment:no_forbidden_in_file_raw_final",
+      "passed": true
+    },
+    {
+      "name": "source-t4-per_fragment:no_registered_email_raw_reply",
+      "passed": true
+    },
+    {
+      "name": "source-t4-per_fragment:final_matches_reference",
+      "passed": true
+    },
+    {
+      "name": "source-t4-per_fragment:success_and_restore_recheck",
+      "passed": true
+    },
+    {
+      "name": "source-t4-per_fragment:control_is_unknown",
+      "passed": true
+    },
+    {
+      "name": "source-t4-per_fragment:linked_actual_same_task",
+      "passed": true
+    },
+    {
+      "name": "source-t4-per_fragment:linked_equal_complete_input",
+      "passed": true
+    },
+    {
+      "name": "source-t4-per_fragment:equal_token_inventory",
+      "passed": true
+    },
+    {
+      "name": "source-t4-per_fragment:translated_control_unchanged",
+      "passed": true
+    },
+    {
+      "name": "source-t4-per_fragment:linked_raw_and_final_preserved",
+      "passed": true
+    },
+    {
+      "name": "source-t4-per_fragment:linked_not_native_call",
+      "passed": true
+    },
+    {
+      "name": "source-t4-existing_selective:actual_target_hash",
+      "passed": true
+    },
+    {
+      "name": "source-t4-existing_selective:target_payload_exact_file",
+      "passed": true
+    },
+    {
+      "name": "source-t4-existing_selective:external_acl_only_134",
+      "passed": true
+    },
+    {
+      "name": "source-t4-existing_selective:no_sensitive_raw_in_payload",
+      "passed": true
+    },
+    {
+      "name": "source-t4-existing_selective:no_forbidden_in_file_raw_final",
+      "passed": true
+    },
+    {
+      "name": "source-t4-existing_selective:no_registered_email_raw_reply",
+      "passed": true
+    },
+    {
+      "name": "source-t4-existing_selective:final_matches_reference",
+      "passed": true
+    },
+    {
+      "name": "source-t4-existing_selective:success_and_restore_recheck",
+      "passed": true
+    },
+    {
+      "name": "source-t4-existing_selective:control_is_unknown",
+      "passed": true
+    },
+    {
+      "name": "source-t4-existing_selective:linked_actual_same_task",
+      "passed": true
+    },
+    {
+      "name": "source-t4-existing_selective:linked_equal_complete_input",
+      "passed": true
+    },
+    {
+      "name": "source-t4-existing_selective:equal_token_inventory",
+      "passed": true
+    },
+    {
+      "name": "source-t4-existing_selective:translated_control_unchanged",
+      "passed": true
+    },
+    {
+      "name": "source-t4-existing_selective:linked_raw_and_final_preserved",
+      "passed": true
+    },
+    {
+      "name": "source-t4-existing_selective:linked_not_native_call",
+      "passed": true
+    },
+    {
+      "name": "summary_counts:whole_block",
+      "passed": true
+    },
+    {
+      "name": "summary_counts:per_fragment",
+      "passed": true
+    },
+    {
+      "name": "summary_counts:existing_selective",
+      "passed": true
+    },
+    {
+      "name": "summary_one_story_not_three_attempts",
+      "passed": true
+    },
+    {
+      "name": "historical_prompt_submitted:joint_run01",
+      "passed": true
+    },
+    {
+      "name": "historical_target_count:joint_run01",
+      "passed": true
+    },
+    {
+      "name": "historical_failed_not_success:joint_run01",
+      "passed": true
+    },
+    {
+      "name": "historical_prompt_submitted:joint_run02",
+      "passed": true
+    },
+    {
+      "name": "historical_one_prompt_counter:joint_run02",
+      "passed": true
+    },
+    {
+      "name": "historical_target_count:joint_run02",
+      "passed": true
+    },
+    {
+      "name": "historical_failed_not_success:joint_run02",
+      "passed": true
+    },
+    {
+      "name": "historical_prompt_submitted:joint_run03",
+      "passed": true
+    },
+    {
+      "name": "historical_one_prompt_counter:joint_run03",
+      "passed": true
+    },
+    {
+      "name": "historical_target_count:joint_run03",
+      "passed": true
+    },
+    {
+      "name": "environment_probe_no_model_prompt:run01",
+      "passed": true
+    },
+    {
+      "name": "environment_probe_no_cache_reproduction:run01",
+      "passed": true
+    },
+    {
+      "name": "environment_probe_no_model_prompt:run02",
+      "passed": true
+    },
+    {
+      "name": "environment_probe_no_cache_reproduction:run02",
+      "passed": true
+    },
+    {
+      "name": "environment_probe_no_model_prompt:run03",
+      "passed": true
+    },
+    {
+      "name": "environment_probe_no_cache_reproduction:run03",
+      "passed": true
+    }
+  ],
+  "source_prompts_in_final_run": 1,
+  "historical_supplied_source_prompt_attempts": 3,
+  "historical_attempts": [
+    {
+      "run": "joint_run01",
+      "supplied_source_prompt_observed": true,
+      "explicit_prompt_count": null,
+      "source_qualified": false,
+      "source_qualification_error": "native_execution_not_complete",
+      "execution_error": "duplicate_native_init",
+      "harness_attempts": 0,
+      "independent_story_addition": false
+    },
+    {
+      "run": "joint_run02",
+      "supplied_source_prompt_observed": true,
+      "explicit_prompt_count": 1,
+      "source_qualified": false,
+      "source_qualification_error": "unexpected_source_workspace_file",
+      "execution_error": null,
+      "harness_attempts": 0,
+      "independent_story_addition": false
+    },
+    {
+      "run": "joint_run03",
+      "supplied_source_prompt_observed": true,
+      "explicit_prompt_count": 1,
+      "source_qualified": true,
+      "source_qualification_error": null,
+      "execution_error": null,
+      "harness_attempts": 4,
+      "independent_story_addition": false
+    }
+  ],
+  "final_harness_actual_calls": 4,
+  "linked_replays": 8,
+  "independent_stories": 1,
+  "environment_probes": [
+    {
+      "run": "run01",
+      "model_prompts_sent": 0,
+      "observed_rows": 6,
+      "native_Write_invoked": false,
+      "cache_creation_causally_reproduced": false
+    },
+    {
+      "run": "run02",
+      "model_prompts_sent": 0,
+      "observed_rows": 2,
+      "native_Write_invoked": false,
+      "cache_creation_causally_reproduced": false
+    },
+    {
+      "run": "run03",
+      "model_prompts_sent": 0,
+      "observed_rows": 2,
+      "native_Write_invoked": false,
+      "cache_creation_causally_reproduced": false
+    }
+  ],
+  "scope": "Read-only independent parallel-agent verification, not external human artifact acceptance; no model/account calls or source edits.",
+  "limitations": [
+    "The source is native-tool-generated exact-copy static AGENTS, not Auto-Memory or semantic memory extraction. Trusted-host external grants supply permissions; Qoder native ACL preservation is not established.",
+    "Source native reported output_tokens=0 is retained as reported usage only. Actual tokens/physical provider requests and free usage are not established. Configured source output cap is 2 turns x 128 tokens.",
+    "Historical run01 has prompt_sent=True but no explicit user_prompts_sent counter; the adapter history records a one-prompt job. Three source jobs do not create three independent stories.",
+    "Zero-model Windows environment probes reproduced path expansion behavior but not cache file creation. They did not invoke native Write and do not establish that environment variables caused the earlier cache files.",
+    "Linked rows retain original raw replies and restored outputs but not the translated answer argument. This audit independently checked positional token equivalence and same-source answer support; historical invocation arguments and volatile restoration maps cannot be replayed.",
+    "Native merged instruction full-content hashes cannot be recomputed from the filtered AGENTS-only events. File SHA256, retained event content and change SHA1 were independently verified.",
+    "Target credential historical equality is a wrapper receipt, not an independent before/after credential hash comparison; this audit read no credentials and directly observed absence of temporary credential files.",
+    "Guard evidence retains request shape/hash/size but no full provider request or bill. Metadata/guard success is not a general privacy proof.",
+    "All values and policies are one controlled synthetic story; independent human annotation review, generalization and new-method superiority are not established."
+  ]
+}

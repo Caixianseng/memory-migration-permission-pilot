@@ -1,0 +1,56 @@
+{
+  "failures": [
+    {
+      "client_status_counts": {
+        "not_run": 12
+      },
+      "error": "native_execution_not_complete",
+      "execution_error": "duplicate_native_init",
+      "execution_evidence_sha256": "98c17ec2601a59b0a05ba28bea76aa7d416c9845f5d0b73011e7f90900907ebf",
+      "extra_literal_SystemDrive_db_count": 0,
+      "harness_model_calls": 0,
+      "predictions_sha256": "e6fcd1e9b615e558f9b6e731dbf73955b8432092371a521856dd0a3768068930",
+      "prompt_count_evidence": "legacy_explicit_prompt_sent_boolean_under_single_prompt_contract",
+      "registered_rows": 12,
+      "run": "joint_run01",
+      "scope": "Failed source qualification; names of accidental cache files counted without reading/copying database content. No account, runtime, state or claim copied.",
+      "source_actual_http_requests": null,
+      "source_file_present": false,
+      "source_file_sha256": null,
+      "source_generation_sha256": "b94d8a1c4ee29968d8725d733e99fc120a92bff119ba346d6cf06450a67c057c",
+      "source_user_prompts": 1,
+      "status": "failed",
+      "successful_tool_results": 0,
+      "used_as_success": false,
+      "write_events": 0
+    },
+    {
+      "client_status_counts": {
+        "not_run": 12
+      },
+      "error": "unexpected_source_workspace_file",
+      "execution_error": null,
+      "execution_evidence_sha256": "cd2fd082fef45824b42b50a683d347630cc0e2d07f89f3deab02da29e90fd831",
+      "extra_literal_SystemDrive_db_count": 4,
+      "harness_model_calls": 0,
+      "predictions_sha256": "e6fcd1e9b615e558f9b6e731dbf73955b8432092371a521856dd0a3768068930",
+      "prompt_count_evidence": "explicit_prompt_sent_events",
+      "registered_rows": 12,
+      "run": "joint_run02",
+      "scope": "Failed source qualification; names of accidental cache files counted without reading/copying database content. No account, runtime, state or claim copied.",
+      "source_actual_http_requests": null,
+      "source_file_present": true,
+      "source_file_sha256": "a7cb5bd91c0fcbd756ffbc40953547fa9f4efacee5b934ded5de7983355a4871",
+      "source_generation_sha256": "3226823daed3731b1dcea8a72065009cb70d2038bbb09bc4f42581e1626ee34e",
+      "source_user_prompts": 1,
+      "status": "failed",
+      "successful_tool_results": 1,
+      "used_as_success": false,
+      "write_events": 1
+    }
+  ],
+  "schema": "qoder_source_failed_runs_v1",
+  "source_actual_http_requests": null,
+  "source_prompts_total_including_final": 3,
+  "source_stories": 1
+}

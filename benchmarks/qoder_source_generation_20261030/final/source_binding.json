@@ -1,0 +1,7 @@
+{
+  "native_generation_verified": true,
+  "permissions_origin": "independent trusted synthetic grant table, not native Qoder ACL",
+  "source_file_sha256": "a7cb5bd91c0fcbd756ffbc40953547fa9f4efacee5b934ded5de7983355a4871",
+  "source_kind": "qoder_native_Write_static_AGENTS",
+  "source_text_sha256": "a7cb5bd91c0fcbd756ffbc40953547fa9f4efacee5b934ded5de7983355a4871"
+}

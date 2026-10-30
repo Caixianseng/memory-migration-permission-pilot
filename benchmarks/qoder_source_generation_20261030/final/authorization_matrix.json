@@ -1,0 +1,163 @@
+[
+  {
+    "fact_id": "source-f1",
+    "observed": {
+      "code": null,
+      "decision": "allow",
+      "response": {
+        "adapter_kind": "native_workspace_instructions",
+        "audience": {
+          "agent_id": "harness",
+          "user_id": "alice",
+          "workspace_id": "target"
+        },
+        "body_sha256": "98ac151fb0369f127b5cea9deea47ea69875548ae356a28a0866cd1271e33a9f",
+        "enforcement_scope": "trusted_host_before_import",
+        "idempotent_same_body": true,
+        "mode": "content_interop",
+        "record_ids": [
+          "memory_7e473070bcd1c826a9a373556bdfdc9b"
+        ],
+        "required_constraints": [
+          "before_import",
+          "fresh_session",
+          "source_integrity"
+        ],
+        "schema": "agent_memory_handoff_v1",
+        "status": "ok",
+        "transfer_id": "matrix-source-f1"
+      }
+    },
+    "reference": {
+      "decision": "Permit",
+      "deliver": true,
+      "reason": "all_contract_requirements_satisfied"
+    },
+    "request": {
+      "agent_id": "harness",
+      "audience": "harness",
+      "model_recipient": "harness-model-provider",
+      "now": 100,
+      "operation": "handoff",
+      "policy_version": "journal-v1",
+      "resource_id": "source-f1",
+      "source_id": "native-qoder-AGENTS",
+      "user_id": "alice"
+    }
+  },
+  {
+    "fact_id": "source-f2",
+    "observed": {
+      "code": null,
+      "decision": "allow",
+      "response": {
+        "adapter_kind": "native_workspace_instructions",
+        "audience": {
+          "agent_id": "harness",
+          "user_id": "alice",
+          "workspace_id": "target"
+        },
+        "body_sha256": "4aedd29604cc0606a3acbbd30c495648d47d87f996a5f6b390e3f5288663ce02",
+        "enforcement_scope": "trusted_host_before_import",
+        "idempotent_same_body": true,
+        "mode": "content_interop",
+        "record_ids": [
+          "memory_f1c792a3af3465decf131ac7bb595121"
+        ],
+        "required_constraints": [
+          "before_import",
+          "fresh_session",
+          "source_integrity"
+        ],
+        "schema": "agent_memory_handoff_v1",
+        "status": "ok",
+        "transfer_id": "matrix-source-f2"
+      }
+    },
+    "reference": {
+      "decision": "Permit",
+      "deliver": true,
+      "reason": "all_contract_requirements_satisfied"
+    },
+    "request": {
+      "agent_id": "harness",
+      "audience": "harness",
+      "model_recipient": "harness-model-provider",
+      "now": 100,
+      "operation": "handoff",
+      "policy_version": "journal-v1",
+      "resource_id": "source-f2",
+      "source_id": "native-qoder-AGENTS",
+      "user_id": "alice"
+    }
+  },
+  {
+    "fact_id": "source-f3",
+    "observed": {
+      "code": "explicit_operation_denied",
+      "decision": "deny"
+    },
+    "reference": {
+      "decision": "Deny",
+      "deliver": false,
+      "reason": "not_granted:export_allowed"
+    },
+    "request": {
+      "agent_id": "harness",
+      "audience": "harness",
+      "model_recipient": "harness-model-provider",
+      "now": 100,
+      "operation": "handoff",
+      "policy_version": "journal-v1",
+      "resource_id": "source-f3",
+      "source_id": "native-qoder-AGENTS",
+      "user_id": "alice"
+    }
+  },
+  {
+    "fact_id": "source-f4",
+    "observed": {
+      "code": null,
+      "decision": "allow",
+      "response": {
+        "adapter_kind": "native_workspace_instructions",
+        "audience": {
+          "agent_id": "harness",
+          "user_id": "alice",
+          "workspace_id": "target"
+        },
+        "body_sha256": "a9b5e1351c0f9c428c3cded255f18ea82a8d14f6113f9d15c659b6d20872b609",
+        "enforcement_scope": "trusted_host_before_import",
+        "idempotent_same_body": true,
+        "mode": "content_interop",
+        "record_ids": [
+          "memory_fd043ec7d4f8f15faa746b677b89a519"
+        ],
+        "required_constraints": [
+          "before_import",
+          "fresh_session",
+          "source_integrity"
+        ],
+        "schema": "agent_memory_handoff_v1",
+        "status": "ok",
+        "transfer_id": "matrix-source-f4"
+      }
+    },
+    "reference": {
+      "decision": "Permit",
+      "deliver": true,
+      "reason": "all_contract_requirements_satisfied"
+    },
+    "request": {
+      "agent_id": "harness",
+      "audience": "harness",
+      "model_recipient": "harness-model-provider",
+      "now": 100,
+      "operation": "handoff",
+      "policy_version": "journal-v1",
+      "resource_id": "source-f4",
+      "source_id": "native-qoder-AGENTS",
+      "user_id": "alice"
+    }
+  }
+]

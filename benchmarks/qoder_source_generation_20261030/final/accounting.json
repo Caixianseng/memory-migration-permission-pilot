@@ -1,0 +1,9 @@
+{
+  "automatic_retries": 0,
+  "harness_attempts": 4,
+  "harness_limit_cny": 0.5,
+  "observed_wallet_delta_cny": "0E-16",
+  "source_generation_qualified": true,
+  "stopped": null,
+  "supplier_bill_verified": false
+}

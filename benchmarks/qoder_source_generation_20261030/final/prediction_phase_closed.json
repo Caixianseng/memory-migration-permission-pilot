@@ -1,0 +1,8 @@
+{
+  "all_slots_closed": true,
+  "elapsed_seconds": 28.859,
+  "predictions_sha256": "f7d21d0e6313b903836c89bfcfa6fc855c221859d2556a589cfb51d4bf6e60eb",
+  "references_sha256": "df64aa0e8f949d3997c292f899e3b534d6e21dcd060e6384a5cf6a89ffc7cbab",
+  "scoring_reference_opened": false,
+  "source_generation_sha256": "e9ae29af14407c0a0d858443b48b051db847a31b634619a79cefb26b3784cee3"
+}

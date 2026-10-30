@@ -1,0 +1,33 @@
+{
+  "files": [
+    {
+      "current_sha256": "caaeb38f8e6393cabccc932da490be12b9cfd8a457a3c046d9d0fd77bdff7c6d",
+      "expected_sha256": "caaeb38f8e6393cabccc932da490be12b9cfd8a457a3c046d9d0fd77bdff7c6d",
+      "matches_frozen_plan": true,
+      "original_path": "F:\\项目\\agent安全\\experiments\\qoder_source_generation_20261030\\__init__.py",
+      "snapshot": "results\\qoder_source_generation_20261030\\joint_run01\\source\\frozen_source\\__init__.py"
+    },
+    {
+      "current_sha256": "e93e9c8087d5df37e325f6e2bef66535c65b115e3db91c26a86e393c7874a0ca",
+      "expected_sha256": "e93e9c8087d5df37e325f6e2bef66535c65b115e3db91c26a86e393c7874a0ca",
+      "matches_frozen_plan": true,
+      "original_path": "F:\\项目\\agent安全\\experiments\\qoder_source_generation_20261030\\guard.py",
+      "snapshot": "results\\qoder_source_generation_20261030\\joint_run01\\source\\frozen_source\\guard.py"
+    },
+    {
+      "current_sha256": "a3f0966d3605588740e6e2e7a248b4679a74b10f37aa263e50cbc37fa5feecab",
+      "expected_sha256": "a3f0966d3605588740e6e2e7a248b4679a74b10f37aa263e50cbc37fa5feecab",
+      "matches_frozen_plan": true,
+      "original_path": "F:\\项目\\agent安全\\experiments\\qoder_source_generation_20261030\\joint_handoff.py",
+      "snapshot": "results\\qoder_source_generation_20261030\\joint_run01\\source\\frozen_source\\joint_handoff.py"
+    },
+    {
+      "current_sha256": "bfebb64a6f6e2f499b942491f45e439daa41154b7d9d203eff21bc464c6e6223",
+      "expected_sha256": "bfebb64a6f6e2f499b942491f45e439daa41154b7d9d203eff21bc464c6e6223",
+      "matches_frozen_plan": true,
+      "original_path": "F:\\项目\\agent安全\\experiments\\qoder_source_generation_20261030\\writer.py",
+      "snapshot": "results\\qoder_source_generation_20261030\\joint_run01\\source\\frozen_source\\writer.py"
+    }
+  ],
+  "scope": "Exact matching original frozen source only; mismatched current sources are not represented as old code. Existing plan/results unchanged."
+}

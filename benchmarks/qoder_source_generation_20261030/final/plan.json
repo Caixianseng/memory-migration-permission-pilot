@@ -1,0 +1,98 @@
+{
+  "git_base": "975cb2c46f3b061e3332a81405e65553f1876977",
+  "guard_sha256": "abea8f7d1ed6f5443e00469251b473953871bcacee5db450408bb9944c58fb97",
+  "implementation_sha256": {
+    "experiments/qoder_source_generation_20261030/__init__.py": "caaeb38f8e6393cabccc932da490be12b9cfd8a457a3c046d9d0fd77bdff7c6d",
+    "experiments/qoder_source_generation_20261030/guard.py": "e93e9c8087d5df37e325f6e2bef66535c65b115e3db91c26a86e393c7874a0ca",
+    "experiments/qoder_source_generation_20261030/joint_handoff.py": "a35b2c7dc5f67789d4efc5fb535040be3c469e09f89ea61acd7c011438d2b6fd",
+    "experiments/qoder_source_generation_20261030/writer.py": "4de7793edcc60358b3038643e641430d54420be1b61cc5da1201861483c39e07",
+    "experiments/submission_acceptance_20261030/pipeline.py": "25a63da360ce008b878aa58c3521e050dc57105bf5054c6fa062e5567d2f7ee9",
+    "experiments/submission_acceptance_20261030/reference.py": "9afff33658ff3d75071508a27f46a5ad06467d519d6a968d1bdcc44e87ce0764",
+    "memory_migration_study/authority_freshness.py": "298d5f54510dbe3b716db083aaa4793ca7f6754ce1513e7895e66985c73fe547",
+    "memory_migration_study/current_authority.py": "350c22d9ac343f9c2990c20cd7dff11df29f06564fd384d917ac4e9e356b4221",
+    "memory_migration_study/deepseek_native.py": "f1e058557aa6f91e160499513b70fed861a729a8a2ae61ce8d9e90a9a6ff9d9a",
+    "memory_migration_study/memory_labels.py": "be6df2476c1c0cc215043dafa4fe9051b089e915c65262147aab37ad9e69a387",
+    "memory_migration_study/native_agent_protocol.py": "38fd8e3673ef9eba3df17c643d02f1d8f763c48b826c99e928ea745aecf0f770",
+    "memory_migration_study/privacy.py": "011921e7fae119e5ea1b49c905e5e99e345a18ac8f3f7e643d584c25a87032bc"
+  },
+  "input_sha256": "27e2a86b42eb4b1010128f0ba2be92d66d2f443b93d2a7ac73af94500966c760",
+  "prepared_at_utc": "2026-10-30T11:45:48.153718+00:00",
+  "references_sha256": "df64aa0e8f949d3997c292f899e3b534d6e21dcd060e6384a5cf6a89ffc7cbab",
+  "schema": "native-static-source-joint-v1",
+  "scoring_reference_opened": false,
+  "source_artifact_initially_absent": true,
+  "source_plan": {
+    "argv": [
+      "D:\\nvm\\v20.18.0\\node.exe",
+      "F:\\项目\\多agent协同\\data\\runtime\\qoder\\node_modules\\@qoder-ai\\qodercli\\bundle\\qodercli.js",
+      "--cwd",
+      "F:\\项目\\agent安全\\results\\qoder_source_generation_20261030\\joint_run03\\source\\workspace",
+      "--setting-sources",
+      "project",
+      "--tools",
+      "Write",
+      "--permission-mode",
+      "dont_ask",
+      "--strict-mcp-config",
+      "--mcp-config",
+      "{\"mcpServers\":{}}",
+      "--disable-builtin-skills",
+      "--no-session-persistence",
+      "--max-turns",
+      "2",
+      "--max-output-tokens",
+      "128",
+      "--max-model-request-retries",
+      "0",
+      "--model",
+      "DeepSeek-Flash",
+      "--input-format",
+      "stream-json",
+      "--output-format",
+      "stream-json",
+      "--print"
+    ],
+    "budget": {
+      "automatic_retries": 0,
+      "declared_total_output_tokens_max": 256,
+      "generation_jobs_max": 1,
+      "max_output_tokens_per_model_turn": 128,
+      "max_turns": 2,
+      "supplied_prompt_count_max": 1,
+      "supplier_atomic_money_cap": false
+    },
+    "created_at_utc": "2026-10-30T11:45:48.148717+00:00",
+    "credential_files_read_or_copied_by_adapter": false,
+    "expected_content_sha256": "a7cb5bd91c0fcbd756ffbc40953547fa9f4efacee5b934ded5de7983355a4871",
+    "expected_visible_tools": [
+      "Write"
+    ],
+    "frozen_files": {
+      "F:\\项目\\agent安全\\experiments\\qoder_source_generation_20261030\\__init__.py": "caaeb38f8e6393cabccc932da490be12b9cfd8a457a3c046d9d0fd77bdff7c6d",
+      "F:\\项目\\agent安全\\experiments\\qoder_source_generation_20261030\\guard.py": "e93e9c8087d5df37e325f6e2bef66535c65b115e3db91c26a86e393c7874a0ca",
+      "F:\\项目\\agent安全\\experiments\\qoder_source_generation_20261030\\joint_handoff.py": "a35b2c7dc5f67789d4efc5fb535040be3c469e09f89ea61acd7c011438d2b6fd",
+      "F:\\项目\\agent安全\\experiments\\qoder_source_generation_20261030\\writer.py": "4de7793edcc60358b3038643e641430d54420be1b61cc5da1201861483c39e07",
+      "F:\\项目\\agent安全\\results\\qoder_source_generation_20261030\\joint_run03\\source\\input.json": "3f7983a85d4324e1a738d22fb2b6722c7e4e15ceb38575d01f2371910d1aba47",
+      "F:\\项目\\agent安全\\results\\qoder_source_generation_20261030\\joint_run03\\source\\workspace\\.qoder\\settings.json": "d04bf75b0e49d85a28b23a613ec7b5459306c0fab12028acb8b9645c5eab634d"
+    },
+    "guard_state_initial_sha256": "cba775f278703cf1a11fc218ae7fd5576ed89f50329b0809bfaf696203006f3f",
+    "host_wrote_AGENTS": false,
+    "model_prompts_sent": 0,
+    "runtime": {
+      "cli_entry": "F:\\项目\\多agent协同\\data\\runtime\\qoder\\node_modules\\@qoder-ai\\qodercli\\bundle\\qodercli.js",
+      "cli_sha256": "9a8fb19bb7f2dfe8d9d9933cb356fd21e789544316bacadc4f6c9b760bd41315",
+      "node_executable": "D:\\nvm\\v20.18.0\\node.exe",
+      "node_sha256": "35b7c95a379beb606f5798ed83081690df13190077630b234163c6607aa4cc94",
+      "version": "1.1.77"
+    },
+    "schema": "qoder-native-static-source-v3",
+    "scope": "Explicit exact four-line static-memory Write. Not Auto-Memory, learned fact extraction, native ACL, or OS sandbox.",
+    "settings_sources": [
+      "project"
+    ],
+    "target": "F:\\项目\\agent安全\\results\\qoder_source_generation_20261030\\joint_run03\\source\\workspace\\AGENTS.md",
+    "workspace": "F:\\项目\\agent安全\\results\\qoder_source_generation_20261030\\joint_run03\\source\\workspace"
+  },
+  "target_template_sha256": "55ef5fc1ad626fc346ca2252a2328c278ceb2bc0b52f985d1a0800339b535f78",
+  "test_of_new_algorithm": false
+}

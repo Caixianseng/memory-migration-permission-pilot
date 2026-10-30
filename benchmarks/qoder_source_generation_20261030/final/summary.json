@@ -1,0 +1,63 @@
+{
+  "auto_memory_proven": false,
+  "formal_external_review": false,
+  "groups": [
+    {
+      "actual_native_rows": 4,
+      "forbidden_correct": 1,
+      "forbidden_planned": 1,
+      "legal_correct": 2,
+      "legal_planned": 2,
+      "legal_unknown": 0,
+      "linked_rows": 0,
+      "method": "whole_block",
+      "missing_correct": 1,
+      "missing_planned": 1,
+      "planned": 4,
+      "raw_disclosure_observed_rows": 4,
+      "raw_forbidden_disclosure": 0,
+      "raw_registered_email_disclosure": 0,
+      "unobserved_rows": 0
+    },
+    {
+      "actual_native_rows": 0,
+      "forbidden_correct": 1,
+      "forbidden_planned": 1,
+      "legal_correct": 2,
+      "legal_planned": 2,
+      "legal_unknown": 0,
+      "linked_rows": 4,
+      "method": "per_fragment",
+      "missing_correct": 1,
+      "missing_planned": 1,
+      "planned": 4,
+      "raw_disclosure_observed_rows": 4,
+      "raw_forbidden_disclosure": 0,
+      "raw_registered_email_disclosure": 0,
+      "unobserved_rows": 0
+    },
+    {
+      "actual_native_rows": 0,
+      "forbidden_correct": 1,
+      "forbidden_planned": 1,
+      "legal_correct": 2,
+      "legal_planned": 2,
+      "legal_unknown": 0,
+      "linked_rows": 4,
+      "method": "existing_selective",
+      "missing_correct": 1,
+      "missing_planned": 1,
+      "planned": 4,
+      "raw_disclosure_observed_rows": 4,
+      "raw_forbidden_disclosure": 0,
+      "raw_registered_email_disclosure": 0,
+      "unobserved_rows": 0
+    }
+  ],
+  "method_superiority_established": false,
+  "schema": "native-static-source-joint-v1",
+  "scope": "One exact-copy synthetic source written by native Qoder tool, permissions externally supplied; linked results are not new model samples.",
+  "source_generation_qualified": true,
+  "source_kind": "native_tool_generated_static_AGENTS",
+  "stories": 1
+}

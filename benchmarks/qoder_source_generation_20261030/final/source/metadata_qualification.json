@@ -1,0 +1,35 @@
+{
+  "error": null,
+  "events": [
+    {
+      "accepted": true,
+      "cwd": "F:\\项目\\agent安全\\results\\qoder_source_generation_20261030\\joint_run03\\source\\workspace",
+      "init_sequence": 1,
+      "mcp_servers": [],
+      "model": "DeepSeek-Flash",
+      "permission_mode": "dontAsk",
+      "plugins": [],
+      "qualification": "native_metadata_observed",
+      "session_changed_from_previous_init": false,
+      "session_id": "17598b38-825a-4767-8d2b-41905aba2828",
+      "skills": [],
+      "tools": [
+        "Write"
+      ],
+      "type": "init",
+      "version": "1.1.77"
+    }
+  ],
+  "exit_code": null,
+  "generation_attempts": 0,
+  "metadata_only": true,
+  "model_prompts_sent": 0,
+  "pipe_bytes": {
+    "stderr": 0,
+    "stdout": 1527
+  },
+  "prompt_sent": false,
+  "schema": "qoder-native-static-source-v3",
+  "status": "qualified",
+  "user_prompts_sent": 0
+}

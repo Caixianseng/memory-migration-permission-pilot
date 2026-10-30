@@ -33,3 +33,5 @@ benchmarks/prospective_context_method_freeze_20261027.json -text whitespace=cr-a
 /experiments/journal_methods_20261030/** -text
 /experiments/context_closure_20261030/** -text
 /experiments/algorithm_ports_20261029/** -text
+/experiments/qoder_source_generation_20261030/** -text
+/benchmarks/qoder_source_generation_20261030/** -text

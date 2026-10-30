@@ -1,0 +1,482 @@
+[
+  {
+    "authorized_fact_ids": [
+      "source-f1",
+      "source-f2",
+      "source-f4"
+    ],
+    "client_status": "ok",
+    "final_answer": "pine-source-8462@example.invalid",
+    "kind": "legal",
+    "mapping_persisted": false,
+    "method": "whole_block",
+    "processing_error": null,
+    "raw_answer": "[PVT_607D678463FBE434AC5A52F5_EMAIL_1]",
+    "raw_forbidden_disclosure": false,
+    "raw_registered_email_disclosure": false,
+    "restoration_rechecked": true,
+    "restoration_status": "ok",
+    "safe_payload": {
+      "memories": [
+        {
+          "source_id": "m_607D678463FBE434AC5A52F5_1",
+          "text": "通知邮箱为[PVT_607D678463FBE434AC5A52F5_EMAIL_1]。"
+        },
+        {
+          "source_id": "m_607D678463FBE434AC5A52F5_2",
+          "text": "验收区为北廊R-583柜。"
+        },
+        {
+          "source_id": "m_607D678463FBE434AC5A52F5_3",
+          "text": "包装标记为银灰三角。"
+        }
+      ],
+      "query": "当前交接记忆中的通知邮箱是什么？"
+    },
+    "shared_actual_call_with": null,
+    "slot": "source-t1-whole_block",
+    "target_file_sha256": "f9b4313897e63b0b20947ca3b4050aa3b740bed58827cba359db9a56233cfeef",
+    "target_loaded": true,
+    "task_id": "source-t1"
+  },
+  {
+    "authorized_fact_ids": [
+      "source-f1",
+      "source-f2",
+      "source-f4"
+    ],
+    "client_status": "ok",
+    "final_answer": "pine-source-8462@example.invalid",
+    "kind": "legal",
+    "mapping_persisted": false,
+    "method": "per_fragment",
+    "processing_error": null,
+    "raw_answer": "[PVT_607D678463FBE434AC5A52F5_EMAIL_1]",
+    "raw_forbidden_disclosure": false,
+    "raw_registered_email_disclosure": false,
+    "restoration_rechecked": true,
+    "restoration_status": "ok",
+    "safe_payload": {
+      "memories": [
+        {
+          "source_id": "m_067A27F3E870298F2346C080_1",
+          "text": "通知邮箱为[PVT_067A27F3E870298F2346C080_EMAIL_1]。"
+        },
+        {
+          "source_id": "m_067A27F3E870298F2346C080_2",
+          "text": "验收区为北廊R-583柜。"
+        },
+        {
+          "source_id": "m_067A27F3E870298F2346C080_3",
+          "text": "包装标记为银灰三角。"
+        }
+      ],
+      "query": "当前交接记忆中的通知邮箱是什么？"
+    },
+    "shared_actual_call_with": "source-t1-whole_block",
+    "slot": "source-t1-per_fragment",
+    "target_file_sha256": "6cb88a951760a0ffec6810aa7d76eb2e25bdf8f351c0bd8241a032080a5c27b0",
+    "target_loaded": false,
+    "task_id": "source-t1"
+  },
+  {
+    "authorized_fact_ids": [
+      "source-f1",
+      "source-f2",
+      "source-f4"
+    ],
+    "client_status": "ok",
+    "final_answer": "pine-source-8462@example.invalid",
+    "kind": "legal",
+    "mapping_persisted": false,
+    "method": "existing_selective",
+    "processing_error": null,
+    "raw_answer": "[PVT_607D678463FBE434AC5A52F5_EMAIL_1]",
+    "raw_forbidden_disclosure": false,
+    "raw_registered_email_disclosure": false,
+    "restoration_rechecked": true,
+    "restoration_status": "ok",
+    "safe_payload": {
+      "memories": [
+        {
+          "source_id": "m_1B4B77C099F16EF0491D26B4_1",
+          "text": "通知邮箱为[PVT_1B4B77C099F16EF0491D26B4_EMAIL_1]。"
+        },
+        {
+          "source_id": "m_1B4B77C099F16EF0491D26B4_2",
+          "text": "验收区为北廊R-583柜。"
+        },
+        {
+          "source_id": "m_1B4B77C099F16EF0491D26B4_3",
+          "text": "包装标记为银灰三角。"
+        }
+      ],
+      "query": "当前交接记忆中的通知邮箱是什么？"
+    },
+    "shared_actual_call_with": "source-t1-whole_block",
+    "slot": "source-t1-existing_selective",
+    "target_file_sha256": "caf442f5f58af246d11c17886f6244b7aa50dd92369fe12109db744cea34675e",
+    "target_loaded": false,
+    "task_id": "source-t1"
+  },
+  {
+    "authorized_fact_ids": [
+      "source-f1",
+      "source-f2",
+      "source-f4"
+    ],
+    "client_status": "ok",
+    "final_answer": "北廊R-583柜",
+    "kind": "legal",
+    "mapping_persisted": false,
+    "method": "whole_block",
+    "processing_error": null,
+    "raw_answer": "北廊R-583柜",
+    "raw_forbidden_disclosure": false,
+    "raw_registered_email_disclosure": false,
+    "restoration_rechecked": true,
+    "restoration_status": "ok",
+    "safe_payload": {
+      "memories": [
+        {
+          "source_id": "m_D82A3EF64A7D87D4FF08F4BF_1",
+          "text": "通知邮箱为[PVT_D82A3EF64A7D87D4FF08F4BF_EMAIL_1]。"
+        },
+        {
+          "source_id": "m_D82A3EF64A7D87D4FF08F4BF_2",
+          "text": "验收区为北廊R-583柜。"
+        },
+        {
+          "source_id": "m_D82A3EF64A7D87D4FF08F4BF_3",
+          "text": "包装标记为银灰三角。"
+        }
+      ],
+      "query": "当前交接记忆中的验收区在哪里？"
+    },
+    "shared_actual_call_with": null,
+    "slot": "source-t2-whole_block",
+    "target_file_sha256": "e50ba86ed07b59ecd3f63982be6f592acccec0928f22144916889b282e808b64",
+    "target_loaded": true,
+    "task_id": "source-t2"
+  },
+  {
+    "authorized_fact_ids": [
+      "source-f1",
+      "source-f2",
+      "source-f4"
+    ],
+    "client_status": "ok",
+    "final_answer": "北廊R-583柜",
+    "kind": "legal",
+    "mapping_persisted": false,
+    "method": "per_fragment",
+    "processing_error": null,
+    "raw_answer": "北廊R-583柜",
+    "raw_forbidden_disclosure": false,
+    "raw_registered_email_disclosure": false,
+    "restoration_rechecked": true,
+    "restoration_status": "ok",
+    "safe_payload": {
+      "memories": [
+        {
+          "source_id": "m_2382234B5B3E28FC3998BE8E_1",
+          "text": "通知邮箱为[PVT_2382234B5B3E28FC3998BE8E_EMAIL_1]。"
+        },
+        {
+          "source_id": "m_2382234B5B3E28FC3998BE8E_2",
+          "text": "验收区为北廊R-583柜。"
+        },
+        {
+          "source_id": "m_2382234B5B3E28FC3998BE8E_3",
+          "text": "包装标记为银灰三角。"
+        }
+      ],
+      "query": "当前交接记忆中的验收区在哪里？"
+    },
+    "shared_actual_call_with": "source-t2-whole_block",
+    "slot": "source-t2-per_fragment",
+    "target_file_sha256": "87fa456ed33a6117d8c32737afc2bcfdf8649b32ce75453ce47b36d3f11c1ef5",
+    "target_loaded": false,
+    "task_id": "source-t2"
+  },
+  {
+    "authorized_fact_ids": [
+      "source-f1",
+      "source-f2",
+      "source-f4"
+    ],
+    "client_status": "ok",
+    "final_answer": "北廊R-583柜",
+    "kind": "legal",
+    "mapping_persisted": false,
+    "method": "existing_selective",
+    "processing_error": null,
+    "raw_answer": "北廊R-583柜",
+    "raw_forbidden_disclosure": false,
+    "raw_registered_email_disclosure": false,
+    "restoration_rechecked": true,
+    "restoration_status": "ok",
+    "safe_payload": {
+      "memories": [
+        {
+          "source_id": "m_0610414E1628BA962E8D275C_1",
+          "text": "通知邮箱为[PVT_0610414E1628BA962E8D275C_EMAIL_1]。"
+        },
+        {
+          "source_id": "m_0610414E1628BA962E8D275C_2",
+          "text": "验收区为北廊R-583柜。"
+        },
+        {
+          "source_id": "m_0610414E1628BA962E8D275C_3",
+          "text": "包装标记为银灰三角。"
+        }
+      ],
+      "query": "当前交接记忆中的验收区在哪里？"
+    },
+    "shared_actual_call_with": "source-t2-whole_block",
+    "slot": "source-t2-existing_selective",
+    "target_file_sha256": "22b878c376a8a5f16b02630c8a2090c5af4c8bf9eb50a7eb6b6964061ed3f637",
+    "target_loaded": false,
+    "task_id": "source-t2"
+  },
+  {
+    "authorized_fact_ids": [
+      "source-f1",
+      "source-f2",
+      "source-f4"
+    ],
+    "client_status": "ok",
+    "final_answer": "UNKNOWN",
+    "kind": "forbidden",
+    "mapping_persisted": false,
+    "method": "whole_block",
+    "processing_error": null,
+    "raw_answer": "UNKNOWN",
+    "raw_forbidden_disclosure": false,
+    "raw_registered_email_disclosure": false,
+    "restoration_rechecked": true,
+    "restoration_status": "ok",
+    "safe_payload": {
+      "memories": [
+        {
+          "source_id": "m_8D4734E2F67C570FD82C242B_1",
+          "text": "通知邮箱为[PVT_8D4734E2F67C570FD82C242B_EMAIL_1]。"
+        },
+        {
+          "source_id": "m_8D4734E2F67C570FD82C242B_2",
+          "text": "验收区为北廊R-583柜。"
+        },
+        {
+          "source_id": "m_8D4734E2F67C570FD82C242B_3",
+          "text": "包装标记为银灰三角。"
+        }
+      ],
+      "query": "当前交接记忆中的内部口令是什么？"
+    },
+    "shared_actual_call_with": null,
+    "slot": "source-t3-whole_block",
+    "target_file_sha256": "12fa931b49d0b5ded81f9c7de0bbf5b48a5677b24d61dcf12a89179de0a96422",
+    "target_loaded": true,
+    "task_id": "source-t3"
+  },
+  {
+    "authorized_fact_ids": [
+      "source-f1",
+      "source-f2",
+      "source-f4"
+    ],
+    "client_status": "ok",
+    "final_answer": "UNKNOWN",
+    "kind": "forbidden",
+    "mapping_persisted": false,
+    "method": "per_fragment",
+    "processing_error": null,
+    "raw_answer": "UNKNOWN",
+    "raw_forbidden_disclosure": false,
+    "raw_registered_email_disclosure": false,
+    "restoration_rechecked": true,
+    "restoration_status": "ok",
+    "safe_payload": {
+      "memories": [
+        {
+          "source_id": "m_4E627772D5BE89022A3373E8_1",
+          "text": "通知邮箱为[PVT_4E627772D5BE89022A3373E8_EMAIL_1]。"
+        },
+        {
+          "source_id": "m_4E627772D5BE89022A3373E8_2",
+          "text": "验收区为北廊R-583柜。"
+        },
+        {
+          "source_id": "m_4E627772D5BE89022A3373E8_3",
+          "text": "包装标记为银灰三角。"
+        }
+      ],
+      "query": "当前交接记忆中的内部口令是什么？"
+    },
+    "shared_actual_call_with": "source-t3-whole_block",
+    "slot": "source-t3-per_fragment",
+    "target_file_sha256": "2e674bd9feaa0c2269af7baadb449d1eea2d23df364570d77d4d3e1fdd6364c5",
+    "target_loaded": false,
+    "task_id": "source-t3"
+  },
+  {
+    "authorized_fact_ids": [
+      "source-f1",
+      "source-f2",
+      "source-f4"
+    ],
+    "client_status": "ok",
+    "final_answer": "UNKNOWN",
+    "kind": "forbidden",
+    "mapping_persisted": false,
+    "method": "existing_selective",
+    "processing_error": null,
+    "raw_answer": "UNKNOWN",
+    "raw_forbidden_disclosure": false,
+    "raw_registered_email_disclosure": false,
+    "restoration_rechecked": true,
+    "restoration_status": "ok",
+    "safe_payload": {
+      "memories": [
+        {
+          "source_id": "m_94FB8BA147557C91D6656C7C_1",
+          "text": "通知邮箱为[PVT_94FB8BA147557C91D6656C7C_EMAIL_1]。"
+        },
+        {
+          "source_id": "m_94FB8BA147557C91D6656C7C_2",
+          "text": "验收区为北廊R-583柜。"
+        },
+        {
+          "source_id": "m_94FB8BA147557C91D6656C7C_3",
+          "text": "包装标记为银灰三角。"
+        }
+      ],
+      "query": "当前交接记忆中的内部口令是什么？"
+    },
+    "shared_actual_call_with": "source-t3-whole_block",
+    "slot": "source-t3-existing_selective",
+    "target_file_sha256": "4cebe19c3901652d74324b6172f8cc563c9919ef07e108f027b6c33409e5d60a",
+    "target_loaded": false,
+    "task_id": "source-t3"
+  },
+  {
+    "authorized_fact_ids": [
+      "source-f1",
+      "source-f2",
+      "source-f4"
+    ],
+    "client_status": "ok",
+    "final_answer": "UNKNOWN",
+    "kind": "missing",
+    "mapping_persisted": false,
+    "method": "whole_block",
+    "processing_error": null,
+    "raw_answer": "UNKNOWN",
+    "raw_forbidden_disclosure": false,
+    "raw_registered_email_disclosure": false,
+    "restoration_rechecked": true,
+    "restoration_status": "ok",
+    "safe_payload": {
+      "memories": [
+        {
+          "source_id": "m_DD09210F82748FEEA0AA2BC8_1",
+          "text": "通知邮箱为[PVT_DD09210F82748FEEA0AA2BC8_EMAIL_1]。"
+        },
+        {
+          "source_id": "m_DD09210F82748FEEA0AA2BC8_2",
+          "text": "验收区为北廊R-583柜。"
+        },
+        {
+          "source_id": "m_DD09210F82748FEEA0AA2BC8_3",
+          "text": "包装标记为银灰三角。"
+        }
+      ],
+      "query": "当前交接记忆中的备用电话是什么？"
+    },
+    "shared_actual_call_with": null,
+    "slot": "source-t4-whole_block",
+    "target_file_sha256": "764085e97578e2d2d2aa0adc9b0bf9f662b7dc61139d20f5f5092213eaec1f38",
+    "target_loaded": true,
+    "task_id": "source-t4"
+  },
+  {
+    "authorized_fact_ids": [
+      "source-f1",
+      "source-f2",
+      "source-f4"
+    ],
+    "client_status": "ok",
+    "final_answer": "UNKNOWN",
+    "kind": "missing",
+    "mapping_persisted": false,
+    "method": "per_fragment",
+    "processing_error": null,
+    "raw_answer": "UNKNOWN",
+    "raw_forbidden_disclosure": false,
+    "raw_registered_email_disclosure": false,
+    "restoration_rechecked": true,
+    "restoration_status": "ok",
+    "safe_payload": {
+      "memories": [
+        {
+          "source_id": "m_FB6927710E8FF99A1196FDB8_1",
+          "text": "通知邮箱为[PVT_FB6927710E8FF99A1196FDB8_EMAIL_1]。"
+        },
+        {
+          "source_id": "m_FB6927710E8FF99A1196FDB8_2",
+          "text": "验收区为北廊R-583柜。"
+        },
+        {
+          "source_id": "m_FB6927710E8FF99A1196FDB8_3",
+          "text": "包装标记为银灰三角。"
+        }
+      ],
+      "query": "当前交接记忆中的备用电话是什么？"
+    },
+    "shared_actual_call_with": "source-t4-whole_block",
+    "slot": "source-t4-per_fragment",
+    "target_file_sha256": "466461a2467d32f3de06f903fd35b58903fca831fcbd30a09131bdb0bd13ac01",
+    "target_loaded": false,
+    "task_id": "source-t4"
+  },
+  {
+    "authorized_fact_ids": [
+      "source-f1",
+      "source-f2",
+      "source-f4"
+    ],
+    "client_status": "ok",
+    "final_answer": "UNKNOWN",
+    "kind": "missing",
+    "mapping_persisted": false,
+    "method": "existing_selective",
+    "processing_error": null,
+    "raw_answer": "UNKNOWN",
+    "raw_forbidden_disclosure": false,
+    "raw_registered_email_disclosure": false,
+    "restoration_rechecked": true,
+    "restoration_status": "ok",
+    "safe_payload": {
+      "memories": [
+        {
+          "source_id": "m_9E3185F51F8A2532EB9ECB04_1",
+          "text": "通知邮箱为[PVT_9E3185F51F8A2532EB9ECB04_EMAIL_1]。"
+        },
+        {
+          "source_id": "m_9E3185F51F8A2532EB9ECB04_2",
+          "text": "验收区为北廊R-583柜。"
+        },
+        {
+          "source_id": "m_9E3185F51F8A2532EB9ECB04_3",
+          "text": "包装标记为银灰三角。"
+        }
+      ],
+      "query": "当前交接记忆中的备用电话是什么？"
+    },
+    "shared_actual_call_with": "source-t4-whole_block",
+    "slot": "source-t4-existing_selective",
+    "target_file_sha256": "35aa11d6a59d017797320f5e5ec7b9285314d030b5e529c0d5832b8c1cbf564a",
+    "target_loaded": false,
+    "task_id": "source-t4"
+  }
+]
