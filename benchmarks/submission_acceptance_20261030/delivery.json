@@ -1,0 +1,18 @@
+{
+  "status": "bounded_acceptance_delivered",
+  "source_freeze_current": true,
+  "bundle_manifest_sha256": "10e20b0b7953c532c683a77508ccddf3f194a7a95dc3821e9f17ce7cd1fb01a0",
+  "archive_sha256": "156211ddff0b8bcc1c532a373f729c33b8cd6b6e02442c3bf7435c0001f4160f",
+  "archive_bytes": 654694,
+  "report_sha256": "76fa4f475e8f4cd3cb4f87d14d693c390de1f3ee2323bae7e4e4be0981f44fcb",
+  "formal_external_person_acceptance": false,
+  "new_algorithm_advantage_established": false,
+  "actual_harness_model_calls": 8,
+  "linked_method_replays": 16,
+  "qualification_failed_batches_model_calls": 0,
+  "offline_stories": 9,
+  "native_stories": 2,
+  "latest_test_count": 53,
+  "old_results_preserved": true,
+  "production_default_changed": false
+}

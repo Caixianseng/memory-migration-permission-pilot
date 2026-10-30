@@ -1,0 +1,35 @@
+[
+  {
+    "id": "joint-dev-token-input",
+    "result": {
+      "agent_elapsed_seconds": 0.0,
+      "agent_observations": [],
+      "errors": [
+        "reserved_token_in_input"
+      ],
+      "findings": [
+        {
+          "category": "EMAIL",
+          "end": 30,
+          "method": "rules",
+          "policy_id": "journal-v1",
+          "source_id": "auxiliary-memory",
+          "start": 5
+        }
+      ],
+      "local_calls": 0,
+      "local_calls_complete": true,
+      "mode": "rules",
+      "payload_sha256": "9c8e4ec215b5d614bed3b05144385328c66905f751bdad788acebc138103a61d",
+      "policy_id": "journal-v1",
+      "policy_sha256": "c30f270b7bd8ec29e84cb7089561e214f04885257e3e6d9e9a5fe6e27336fb0e",
+      "policy_version": "journal-v1",
+      "protected_categories": [
+        "EMAIL"
+      ],
+      "status": "needs_review",
+      "strategy": "rules_boundary_propagation_v3"
+    },
+    "scope": "separate engineering challenge, excluded from task effect"
+  }
+]

@@ -1,0 +1,60 @@
+{
+  "authorization_contract": {
+    "context_authorization_basis": "new trusted synthetic fixture declaration, not inherited from original production ACL",
+    "operation_scope": "source read and controlled outbound synthetic view; explicit fact/context export and copy checks",
+    "prohibited_fact_count": 1,
+    "recipient_principal": {
+      "agent_id": "qoder",
+      "user_id": "alice"
+    },
+    "source_principal": {
+      "agent_id": "qoder",
+      "user_id": "alice"
+    },
+    "title_disclosure_not_implied_by_fact_read": true
+  },
+  "automatic_retries": 0,
+  "calls_executed": 0,
+  "comparison": {
+    "complete_authorized_title_strong_baseline": "canonical-equivalent to context_preserving; share the same call and do not claim algorithm advantage",
+    "context_preserving": "permitted original title plus same permitted fact fragments",
+    "fragment": "same permitted exact candidate facts without source title"
+  },
+  "date": "2026-10-30",
+  "experiment_scope": "controlled source-title-loss qualification; not a natural-language privacy benchmark or proof of general context closure",
+  "facts": 8,
+  "files": {
+    "cases.json": {
+      "bytes": 6835,
+      "sha256": "72b00594b29181d54f9c12fe4098b1382570edde12c00d8567b0f274c1c4555f"
+    },
+    "references.json": {
+      "bytes": 1373,
+      "sha256": "29909ee4d41d0eb4ae7de30a621c195fb9ca4f246647b7dfaa47837615e217a3"
+    }
+  },
+  "holdout_rule": "Execution/development agents must not inspect reference values before their new predictions close; references are separate from runtime cases.",
+  "human_review": null,
+  "human_semantic_metrics": null,
+  "independent_unit": "story",
+  "planned_calls": 16,
+  "protected_spans": 2,
+  "runtime_declared_value_spans": "all facts, independent of task; exact host-registered candidate spans, not answer-selected",
+  "schema": "context_closure_manifest_v1",
+  "source": "AI-authored synthetic qualification controls",
+  "source_documents": 4,
+  "story_count": 2,
+  "subjects_only_in_source_titles": true,
+  "task_answer_values_not_in_questions": true,
+  "task_fact_id_not_in_runtime_tasks": true,
+  "task_kinds": {
+    "forbidden": 1,
+    "legal": 5,
+    "missing": 2
+  },
+  "tasks": 8,
+  "templates": [
+    "inspection_handoff_time_and_location",
+    "exhibition_notice_email_and_stand"
+  ]
+}

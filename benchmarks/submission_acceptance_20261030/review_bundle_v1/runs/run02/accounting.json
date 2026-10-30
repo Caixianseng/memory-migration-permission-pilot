@@ -1,0 +1,10 @@
+{
+  "client_attempts": 8,
+  "limit_cny": 0.5,
+  "no_top_up": true,
+  "observed_wallet_delta_cny": "0E-16",
+  "publication_projection": "explicit_safe_totals_only_not_account_details",
+  "stopped_reason": null,
+  "supplier_atomic_cap": false,
+  "supplier_bill_verified": false
+}

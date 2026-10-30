@@ -1,0 +1,35 @@
+{
+  "client_calls": 0,
+  "formal_independent_third_party_acceptance": false,
+  "manifest_sha256": "10e20b0b7953c532c683a77508ccddf3f194a7a95dc3821e9f17ce7cd1fb01a0",
+  "model_calls": 0,
+  "network_calls": 0,
+  "passed": true,
+  "runs": [
+    {
+      "expected_summary_sha256": "3aa2a8dbac16025085c16a9f98f0be5d116fe7c3c6ee0e0ed2542935e0190282",
+      "groups": 6,
+      "id": "run01",
+      "planned_rows": 108,
+      "recomputed_summary_sha256": "3aa2a8dbac16025085c16a9f98f0be5d116fe7c3c6ee0e0ed2542935e0190282",
+      "stories_seen": 9,
+      "summary_canonical_bytes_equal": true,
+      "summary_file_bytes_equal": true,
+      "summary_json_equal": true
+    },
+    {
+      "expected_summary_sha256": "74f06d8875b7e5f103a3d805ab77b17db361c5bdb893e3a07c49c3988187a573",
+      "groups": 3,
+      "id": "run02",
+      "planned_rows": 24,
+      "recomputed_summary_sha256": "74f06d8875b7e5f103a3d805ab77b17db361c5bdb893e3a07c49c3988187a573",
+      "stories_seen": 2,
+      "summary_canonical_bytes_equal": true,
+      "summary_file_bytes_equal": true,
+      "summary_json_equal": true
+    }
+  ],
+  "schema": "submission_bundle_verification_v1",
+  "scope": "Offline arithmetic rerun of recorded synthetic responses; no live migration, client, semantic privacy or general security proof.",
+  "verified_files": 149
+}

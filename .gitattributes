@@ -27,3 +27,9 @@ examples/relation_occurrence_probe_20261027/*.json -text whitespace=cr-at-eol
 # This method receipt is copied verbatim and its SHA256 is checked by the driver.
 benchmarks/prospective_context_method_freeze_20261027.json -text whitespace=cr-at-eol
 *.cmd text eol=crlf
+# Frozen research artifacts must survive checkout byte-for-byte.
+/benchmarks/submission_acceptance_20261030/** -text
+/experiments/submission_acceptance_20261030/** -text
+/experiments/journal_methods_20261030/** -text
+/experiments/context_closure_20261030/** -text
+/experiments/algorithm_ports_20261029/** -text

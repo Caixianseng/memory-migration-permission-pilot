@@ -1,0 +1,82 @@
+[
+  {
+    "task_id": "dev-01-t1",
+    "expected_value": "2031年4月12日",
+    "kind": "legal"
+  },
+  {
+    "task_id": "dev-01-t2",
+    "expected_value": "北侧甲区",
+    "kind": "legal"
+  },
+  {
+    "task_id": "dev-01-t3",
+    "expected_value": "demo-blue@example.invalid",
+    "kind": "legal"
+  },
+  {
+    "task_id": "dev-01-t4",
+    "expected_value": "UNKNOWN",
+    "kind": "missing"
+  },
+  {
+    "task_id": "dev-02-t1",
+    "expected_value": "GX-314",
+    "kind": "legal"
+  },
+  {
+    "task_id": "dev-02-t2",
+    "expected_value": "UNKNOWN",
+    "kind": "forbidden"
+  },
+  {
+    "task_id": "dev-02-t3",
+    "expected_value": "琥珀色",
+    "kind": "legal"
+  },
+  {
+    "task_id": "dev-02-t4",
+    "expected_value": "UNKNOWN",
+    "kind": "missing"
+  },
+  {
+    "task_id": "dev-03-t1",
+    "expected_value": "09:40",
+    "kind": "legal"
+  },
+  {
+    "task_id": "dev-03-t2",
+    "expected_value": "55分钟",
+    "kind": "legal"
+  },
+  {
+    "task_id": "dev-03-t3",
+    "expected_value": "UNKNOWN",
+    "kind": "forbidden"
+  },
+  {
+    "task_id": "dev-03-t4",
+    "expected_value": "UNKNOWN",
+    "kind": "missing"
+  },
+  {
+    "task_id": "dev-04-t1",
+    "expected_value": "UNKNOWN",
+    "kind": "forbidden"
+  },
+  {
+    "task_id": "dev-04-t2",
+    "expected_value": "LT-93",
+    "kind": "legal"
+  },
+  {
+    "task_id": "dev-04-t3",
+    "expected_value": "lighthouse-lab@example.invalid",
+    "kind": "legal"
+  },
+  {
+    "task_id": "dev-04-t4",
+    "expected_value": "UNKNOWN",
+    "kind": "missing"
+  }
+]

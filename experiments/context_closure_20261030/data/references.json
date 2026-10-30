@@ -1,0 +1,53 @@
+{
+  "references": [
+    {
+      "expected_fact_id": "ctx-v1-f36",
+      "expected_value": "07:16",
+      "kind": "legal",
+      "task_id": "ctx-qualification-01-t1"
+    },
+    {
+      "expected_fact_id": "ctx-v1-f18",
+      "expected_value": "06:43",
+      "kind": "legal",
+      "task_id": "ctx-qualification-01-t2"
+    },
+    {
+      "expected_fact_id": "ctx-v1-f49",
+      "expected_value": "D-830",
+      "kind": "legal",
+      "task_id": "ctx-qualification-01-t3"
+    },
+    {
+      "expected_fact_id": null,
+      "expected_value": "UNKNOWN",
+      "kind": "missing",
+      "task_id": "ctx-qualification-01-t4"
+    },
+    {
+      "expected_fact_id": "ctx-v2-f14",
+      "expected_value": "ops-a47@example.invalid",
+      "kind": "legal",
+      "task_id": "ctx-qualification-02-t1"
+    },
+    {
+      "expected_fact_id": "ctx-v2-f35",
+      "expected_value": "ops-k93@example.invalid",
+      "kind": "legal",
+      "task_id": "ctx-qualification-02-t2"
+    },
+    {
+      "expected_fact_id": "ctx-v2-f28",
+      "expected_value": "UNKNOWN",
+      "kind": "forbidden",
+      "task_id": "ctx-qualification-02-t3"
+    },
+    {
+      "expected_fact_id": null,
+      "expected_value": "UNKNOWN",
+      "kind": "missing",
+      "task_id": "ctx-qualification-02-t4"
+    }
+  ],
+  "schema": "context_closure_references_v1"
+}

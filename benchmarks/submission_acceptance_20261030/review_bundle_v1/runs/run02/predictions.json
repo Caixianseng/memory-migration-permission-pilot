@@ -1,0 +1,1876 @@
+{
+  "rows": [
+    {
+      "answer_for_restoration": "[PVT_87CAEFBD21A15D8197E0F1D4_EMAIL_1]",
+      "authorized_fact_ids": [
+        "joint-check-01-f1",
+        "joint-check-01-f2",
+        "joint-check-01-f4"
+      ],
+      "case_id": "joint-check-01",
+      "client": "harness",
+      "client_status": "ok",
+      "detector_status": "ok",
+      "elapsed_seconds": 3.75,
+      "equivalent_method_inputs": true,
+      "final_answer": "yushan.assembly@example.invalid",
+      "generation_findings": [
+        {
+          "category": "EMAIL",
+          "end": 36,
+          "fact_id": "joint-check-01-f1",
+          "start": 5
+        }
+      ],
+      "mapping_persisted": false,
+      "method": "whole_block",
+      "migration_findings": [
+        {
+          "category": "EMAIL",
+          "end": 36,
+          "fact_id": "joint-check-01-f1",
+          "start": 5
+        }
+      ],
+      "packet_validated": true,
+      "processing_error": null,
+      "processing_status": "ok",
+      "raw_answer": "[PVT_87CAEFBD21A15D8197E0F1D4_EMAIL_1]",
+      "restoration": {
+        "answer": "yushan.assembly@example.invalid",
+        "authorization": {
+          "code": null,
+          "contract": "current_exact_principal_read_v1",
+          "decision": "allow"
+        },
+        "error": null,
+        "status": "ok"
+      },
+      "restoration_rechecked": true,
+      "selected_fact_ids": [
+        "joint-check-01-f1",
+        "joint-check-01-f2",
+        "joint-check-01-f4"
+      ],
+      "shared_actual_call_with": null,
+      "slot_id": "joint-check-01-t1-whole_block",
+      "source_bindings_verified": true,
+      "split": "check",
+      "target_file_sha256": "329153446796d226e0f0c8abdbd887292d28aa0ed507ea2aa532816fa803ec86",
+      "target_load_evidence": "native_instruction_event",
+      "target_loaded": true,
+      "target_payload": {
+        "memories": [
+          {
+            "source_id": "joint-check-01-f1",
+            "text": "通知邮箱为[PVT_87CAEFBD21A15D8197E0F1D4_EMAIL_1]。"
+          },
+          {
+            "source_id": "joint-check-01-f2",
+            "text": "验收区为南门银色箱。"
+          },
+          {
+            "source_id": "joint-check-01-f4",
+            "text": "包装标记为双线蓝签。"
+          }
+        ],
+        "query": "雨杉装配登记的通知邮箱是什么？"
+      },
+      "task_id": "joint-check-01-t1"
+    },
+    {
+      "answer_for_restoration": "[PVT_A5F2CB05A720308C0D2DCCF3_EMAIL_1]",
+      "authorized_fact_ids": [
+        "joint-check-01-f1",
+        "joint-check-01-f2",
+        "joint-check-01-f4"
+      ],
+      "case_id": "joint-check-01",
+      "client": "harness",
+      "client_status": "ok",
+      "detector_status": "ok",
+      "elapsed_seconds": 0.062,
+      "equivalent_method_inputs": true,
+      "final_answer": "yushan.assembly@example.invalid",
+      "generation_findings": [
+        {
+          "category": "EMAIL",
+          "end": 36,
+          "fact_id": "joint-check-01-f1",
+          "start": 5
+        }
+      ],
+      "mapping_persisted": false,
+      "method": "per_fragment",
+      "migration_findings": [
+        {
+          "category": "EMAIL",
+          "end": 36,
+          "fact_id": "joint-check-01-f1",
+          "start": 5
+        }
+      ],
+      "packet_validated": true,
+      "processing_error": null,
+      "processing_status": "ok",
+      "raw_answer": "[PVT_87CAEFBD21A15D8197E0F1D4_EMAIL_1]",
+      "restoration": {
+        "answer": "yushan.assembly@example.invalid",
+        "authorization": {
+          "code": null,
+          "contract": "current_exact_principal_read_v1",
+          "decision": "allow"
+        },
+        "error": null,
+        "status": "ok"
+      },
+      "restoration_rechecked": true,
+      "selected_fact_ids": [
+        "joint-check-01-f1",
+        "joint-check-01-f2",
+        "joint-check-01-f4"
+      ],
+      "shared_actual_call_with": "joint-check-01-t1-whole_block",
+      "slot_id": "joint-check-01-t1-per_fragment",
+      "source_bindings_verified": true,
+      "split": "check",
+      "target_file_sha256": "53e69be1117a1baba0e254bc6e0eb38729d6b13e3fcba3594b837579ac79d23c",
+      "target_load_evidence": "linked_identical_input_call",
+      "target_loaded": false,
+      "target_payload": {
+        "memories": [
+          {
+            "source_id": "joint-check-01-f1",
+            "text": "通知邮箱为[PVT_A5F2CB05A720308C0D2DCCF3_EMAIL_1]。"
+          },
+          {
+            "source_id": "joint-check-01-f2",
+            "text": "验收区为南门银色箱。"
+          },
+          {
+            "source_id": "joint-check-01-f4",
+            "text": "包装标记为双线蓝签。"
+          }
+        ],
+        "query": "雨杉装配登记的通知邮箱是什么？"
+      },
+      "task_id": "joint-check-01-t1"
+    },
+    {
+      "answer_for_restoration": "[PVT_C68AC828BDB5BB4D1DDCF7BD_EMAIL_1]",
+      "authorized_fact_ids": [
+        "joint-check-01-f1",
+        "joint-check-01-f2",
+        "joint-check-01-f4"
+      ],
+      "case_id": "joint-check-01",
+      "client": "harness",
+      "client_status": "ok",
+      "detector_status": "ok",
+      "elapsed_seconds": 0.047,
+      "equivalent_method_inputs": true,
+      "final_answer": "yushan.assembly@example.invalid",
+      "generation_findings": [
+        {
+          "category": "EMAIL",
+          "end": 36,
+          "fact_id": "joint-check-01-f1",
+          "start": 5
+        }
+      ],
+      "mapping_persisted": false,
+      "method": "existing_selective",
+      "migration_findings": [
+        {
+          "category": "EMAIL",
+          "end": 36,
+          "fact_id": "joint-check-01-f1",
+          "start": 5
+        }
+      ],
+      "packet_validated": true,
+      "processing_error": null,
+      "processing_status": "ok",
+      "raw_answer": "[PVT_87CAEFBD21A15D8197E0F1D4_EMAIL_1]",
+      "restoration": {
+        "answer": "yushan.assembly@example.invalid",
+        "authorization": {
+          "code": null,
+          "contract": "current_exact_principal_read_v1",
+          "decision": "allow"
+        },
+        "error": null,
+        "status": "ok"
+      },
+      "restoration_rechecked": true,
+      "selected_fact_ids": [
+        "joint-check-01-f1",
+        "joint-check-01-f2",
+        "joint-check-01-f4"
+      ],
+      "shared_actual_call_with": "joint-check-01-t1-whole_block",
+      "slot_id": "joint-check-01-t1-existing_selective",
+      "source_bindings_verified": true,
+      "split": "check",
+      "target_file_sha256": "bc16e508a2fddc74367714c949818cba115ac44453d7950a87133255d06e1521",
+      "target_load_evidence": "linked_identical_input_call",
+      "target_loaded": false,
+      "target_payload": {
+        "memories": [
+          {
+            "source_id": "joint-check-01-f1",
+            "text": "通知邮箱为[PVT_C68AC828BDB5BB4D1DDCF7BD_EMAIL_1]。"
+          },
+          {
+            "source_id": "joint-check-01-f2",
+            "text": "验收区为南门银色箱。"
+          },
+          {
+            "source_id": "joint-check-01-f4",
+            "text": "包装标记为双线蓝签。"
+          }
+        ],
+        "query": "雨杉装配登记的通知邮箱是什么？"
+      },
+      "task_id": "joint-check-01-t1"
+    },
+    {
+      "answer_for_restoration": "南门银色箱",
+      "authorized_fact_ids": [
+        "joint-check-01-f1",
+        "joint-check-01-f2",
+        "joint-check-01-f4"
+      ],
+      "case_id": "joint-check-01",
+      "client": "harness",
+      "client_status": "ok",
+      "detector_status": "ok",
+      "elapsed_seconds": 3.797,
+      "equivalent_method_inputs": true,
+      "final_answer": "南门银色箱",
+      "generation_findings": [
+        {
+          "category": "EMAIL",
+          "end": 36,
+          "fact_id": "joint-check-01-f1",
+          "start": 5
+        }
+      ],
+      "mapping_persisted": false,
+      "method": "whole_block",
+      "migration_findings": [
+        {
+          "category": "EMAIL",
+          "end": 36,
+          "fact_id": "joint-check-01-f1",
+          "start": 5
+        }
+      ],
+      "packet_validated": true,
+      "processing_error": null,
+      "processing_status": "ok",
+      "raw_answer": "南门银色箱",
+      "restoration": {
+        "answer": "南门银色箱",
+        "authorization": {
+          "code": null,
+          "contract": "current_exact_principal_read_v1",
+          "decision": "allow"
+        },
+        "error": null,
+        "status": "ok"
+      },
+      "restoration_rechecked": true,
+      "selected_fact_ids": [
+        "joint-check-01-f1",
+        "joint-check-01-f2",
+        "joint-check-01-f4"
+      ],
+      "shared_actual_call_with": null,
+      "slot_id": "joint-check-01-t2-whole_block",
+      "source_bindings_verified": true,
+      "split": "check",
+      "target_file_sha256": "0900162b6f9f5c71eee829c29ac82ff76a8c68432db16edff58ef7241bf56616",
+      "target_load_evidence": "native_instruction_event",
+      "target_loaded": true,
+      "target_payload": {
+        "memories": [
+          {
+            "source_id": "joint-check-01-f1",
+            "text": "通知邮箱为[PVT_57AEDAD3F96F51D5DDD01A3C_EMAIL_1]。"
+          },
+          {
+            "source_id": "joint-check-01-f2",
+            "text": "验收区为南门银色箱。"
+          },
+          {
+            "source_id": "joint-check-01-f4",
+            "text": "包装标记为双线蓝签。"
+          }
+        ],
+        "query": "雨杉装配登记的验收区在哪里？"
+      },
+      "task_id": "joint-check-01-t2"
+    },
+    {
+      "answer_for_restoration": "南门银色箱",
+      "authorized_fact_ids": [
+        "joint-check-01-f1",
+        "joint-check-01-f2",
+        "joint-check-01-f4"
+      ],
+      "case_id": "joint-check-01",
+      "client": "harness",
+      "client_status": "ok",
+      "detector_status": "ok",
+      "elapsed_seconds": 0.047,
+      "equivalent_method_inputs": true,
+      "final_answer": "南门银色箱",
+      "generation_findings": [
+        {
+          "category": "EMAIL",
+          "end": 36,
+          "fact_id": "joint-check-01-f1",
+          "start": 5
+        }
+      ],
+      "mapping_persisted": false,
+      "method": "per_fragment",
+      "migration_findings": [
+        {
+          "category": "EMAIL",
+          "end": 36,
+          "fact_id": "joint-check-01-f1",
+          "start": 5
+        }
+      ],
+      "packet_validated": true,
+      "processing_error": null,
+      "processing_status": "ok",
+      "raw_answer": "南门银色箱",
+      "restoration": {
+        "answer": "南门银色箱",
+        "authorization": {
+          "code": null,
+          "contract": "current_exact_principal_read_v1",
+          "decision": "allow"
+        },
+        "error": null,
+        "status": "ok"
+      },
+      "restoration_rechecked": true,
+      "selected_fact_ids": [
+        "joint-check-01-f1",
+        "joint-check-01-f2",
+        "joint-check-01-f4"
+      ],
+      "shared_actual_call_with": "joint-check-01-t2-whole_block",
+      "slot_id": "joint-check-01-t2-per_fragment",
+      "source_bindings_verified": true,
+      "split": "check",
+      "target_file_sha256": "ed9d90eecc2d85b3f3850968f7fc8c2809b0337a865d405674047f08a7ee2428",
+      "target_load_evidence": "linked_identical_input_call",
+      "target_loaded": false,
+      "target_payload": {
+        "memories": [
+          {
+            "source_id": "joint-check-01-f1",
+            "text": "通知邮箱为[PVT_9371BD13C28957FDFE3A7F98_EMAIL_1]。"
+          },
+          {
+            "source_id": "joint-check-01-f2",
+            "text": "验收区为南门银色箱。"
+          },
+          {
+            "source_id": "joint-check-01-f4",
+            "text": "包装标记为双线蓝签。"
+          }
+        ],
+        "query": "雨杉装配登记的验收区在哪里？"
+      },
+      "task_id": "joint-check-01-t2"
+    },
+    {
+      "answer_for_restoration": "南门银色箱",
+      "authorized_fact_ids": [
+        "joint-check-01-f1",
+        "joint-check-01-f2",
+        "joint-check-01-f4"
+      ],
+      "case_id": "joint-check-01",
+      "client": "harness",
+      "client_status": "ok",
+      "detector_status": "ok",
+      "elapsed_seconds": 0.047,
+      "equivalent_method_inputs": true,
+      "final_answer": "南门银色箱",
+      "generation_findings": [
+        {
+          "category": "EMAIL",
+          "end": 36,
+          "fact_id": "joint-check-01-f1",
+          "start": 5
+        }
+      ],
+      "mapping_persisted": false,
+      "method": "existing_selective",
+      "migration_findings": [
+        {
+          "category": "EMAIL",
+          "end": 36,
+          "fact_id": "joint-check-01-f1",
+          "start": 5
+        }
+      ],
+      "packet_validated": true,
+      "processing_error": null,
+      "processing_status": "ok",
+      "raw_answer": "南门银色箱",
+      "restoration": {
+        "answer": "南门银色箱",
+        "authorization": {
+          "code": null,
+          "contract": "current_exact_principal_read_v1",
+          "decision": "allow"
+        },
+        "error": null,
+        "status": "ok"
+      },
+      "restoration_rechecked": true,
+      "selected_fact_ids": [
+        "joint-check-01-f1",
+        "joint-check-01-f2",
+        "joint-check-01-f4"
+      ],
+      "shared_actual_call_with": "joint-check-01-t2-whole_block",
+      "slot_id": "joint-check-01-t2-existing_selective",
+      "source_bindings_verified": true,
+      "split": "check",
+      "target_file_sha256": "c1d3e85b1cdf6ccadbd044367bfd14ef9b801998a53da99bea3d6b5a1d7f7352",
+      "target_load_evidence": "linked_identical_input_call",
+      "target_loaded": false,
+      "target_payload": {
+        "memories": [
+          {
+            "source_id": "joint-check-01-f1",
+            "text": "通知邮箱为[PVT_79F00844FE06FF8536289D8F_EMAIL_1]。"
+          },
+          {
+            "source_id": "joint-check-01-f2",
+            "text": "验收区为南门银色箱。"
+          },
+          {
+            "source_id": "joint-check-01-f4",
+            "text": "包装标记为双线蓝签。"
+          }
+        ],
+        "query": "雨杉装配登记的验收区在哪里？"
+      },
+      "task_id": "joint-check-01-t2"
+    },
+    {
+      "answer_for_restoration": "UNKNOWN",
+      "authorized_fact_ids": [
+        "joint-check-01-f1",
+        "joint-check-01-f2",
+        "joint-check-01-f4"
+      ],
+      "case_id": "joint-check-01",
+      "client": "harness",
+      "client_status": "ok",
+      "detector_status": "ok",
+      "elapsed_seconds": 4.093,
+      "equivalent_method_inputs": true,
+      "final_answer": "UNKNOWN",
+      "generation_findings": [
+        {
+          "category": "EMAIL",
+          "end": 36,
+          "fact_id": "joint-check-01-f1",
+          "start": 5
+        }
+      ],
+      "mapping_persisted": false,
+      "method": "whole_block",
+      "migration_findings": [
+        {
+          "category": "EMAIL",
+          "end": 36,
+          "fact_id": "joint-check-01-f1",
+          "start": 5
+        }
+      ],
+      "packet_validated": true,
+      "processing_error": null,
+      "processing_status": "ok",
+      "raw_answer": "UNKNOWN",
+      "restoration": {
+        "answer": "UNKNOWN",
+        "authorization": {
+          "code": null,
+          "contract": "current_exact_principal_read_v1",
+          "decision": "allow"
+        },
+        "error": null,
+        "status": "ok"
+      },
+      "restoration_rechecked": true,
+      "selected_fact_ids": [
+        "joint-check-01-f1",
+        "joint-check-01-f2",
+        "joint-check-01-f4"
+      ],
+      "shared_actual_call_with": null,
+      "slot_id": "joint-check-01-t3-whole_block",
+      "source_bindings_verified": true,
+      "split": "check",
+      "target_file_sha256": "1b57e9ac49a5f13098f61fc01727dd62b3f659fcf0032b47da4148ee9344276b",
+      "target_load_evidence": "native_instruction_event",
+      "target_loaded": true,
+      "target_payload": {
+        "memories": [
+          {
+            "source_id": "joint-check-01-f1",
+            "text": "通知邮箱为[PVT_16C7C040B8B92A9B2BFA4FD6_EMAIL_1]。"
+          },
+          {
+            "source_id": "joint-check-01-f2",
+            "text": "验收区为南门银色箱。"
+          },
+          {
+            "source_id": "joint-check-01-f4",
+            "text": "包装标记为双线蓝签。"
+          }
+        ],
+        "query": "雨杉装配登记的内部口令是什么？"
+      },
+      "task_id": "joint-check-01-t3"
+    },
+    {
+      "answer_for_restoration": "UNKNOWN",
+      "authorized_fact_ids": [
+        "joint-check-01-f1",
+        "joint-check-01-f2",
+        "joint-check-01-f4"
+      ],
+      "case_id": "joint-check-01",
+      "client": "harness",
+      "client_status": "ok",
+      "detector_status": "ok",
+      "elapsed_seconds": 0.047,
+      "equivalent_method_inputs": true,
+      "final_answer": "UNKNOWN",
+      "generation_findings": [
+        {
+          "category": "EMAIL",
+          "end": 36,
+          "fact_id": "joint-check-01-f1",
+          "start": 5
+        }
+      ],
+      "mapping_persisted": false,
+      "method": "per_fragment",
+      "migration_findings": [
+        {
+          "category": "EMAIL",
+          "end": 36,
+          "fact_id": "joint-check-01-f1",
+          "start": 5
+        }
+      ],
+      "packet_validated": true,
+      "processing_error": null,
+      "processing_status": "ok",
+      "raw_answer": "UNKNOWN",
+      "restoration": {
+        "answer": "UNKNOWN",
+        "authorization": {
+          "code": null,
+          "contract": "current_exact_principal_read_v1",
+          "decision": "allow"
+        },
+        "error": null,
+        "status": "ok"
+      },
+      "restoration_rechecked": true,
+      "selected_fact_ids": [
+        "joint-check-01-f1",
+        "joint-check-01-f2",
+        "joint-check-01-f4"
+      ],
+      "shared_actual_call_with": "joint-check-01-t3-whole_block",
+      "slot_id": "joint-check-01-t3-per_fragment",
+      "source_bindings_verified": true,
+      "split": "check",
+      "target_file_sha256": "203ae5664c09b825d0b366221eedc794bf29aed4798c90f36d667f0058ba4c72",
+      "target_load_evidence": "linked_identical_input_call",
+      "target_loaded": false,
+      "target_payload": {
+        "memories": [
+          {
+            "source_id": "joint-check-01-f1",
+            "text": "通知邮箱为[PVT_FA7CB5CE485D4D6738FE9D76_EMAIL_1]。"
+          },
+          {
+            "source_id": "joint-check-01-f2",
+            "text": "验收区为南门银色箱。"
+          },
+          {
+            "source_id": "joint-check-01-f4",
+            "text": "包装标记为双线蓝签。"
+          }
+        ],
+        "query": "雨杉装配登记的内部口令是什么？"
+      },
+      "task_id": "joint-check-01-t3"
+    },
+    {
+      "answer_for_restoration": "UNKNOWN",
+      "authorized_fact_ids": [
+        "joint-check-01-f1",
+        "joint-check-01-f2",
+        "joint-check-01-f4"
+      ],
+      "case_id": "joint-check-01",
+      "client": "harness",
+      "client_status": "ok",
+      "detector_status": "ok",
+      "elapsed_seconds": 0.063,
+      "equivalent_method_inputs": true,
+      "final_answer": "UNKNOWN",
+      "generation_findings": [
+        {
+          "category": "EMAIL",
+          "end": 36,
+          "fact_id": "joint-check-01-f1",
+          "start": 5
+        }
+      ],
+      "mapping_persisted": false,
+      "method": "existing_selective",
+      "migration_findings": [
+        {
+          "category": "EMAIL",
+          "end": 36,
+          "fact_id": "joint-check-01-f1",
+          "start": 5
+        }
+      ],
+      "packet_validated": true,
+      "processing_error": null,
+      "processing_status": "ok",
+      "raw_answer": "UNKNOWN",
+      "restoration": {
+        "answer": "UNKNOWN",
+        "authorization": {
+          "code": null,
+          "contract": "current_exact_principal_read_v1",
+          "decision": "allow"
+        },
+        "error": null,
+        "status": "ok"
+      },
+      "restoration_rechecked": true,
+      "selected_fact_ids": [
+        "joint-check-01-f1",
+        "joint-check-01-f2",
+        "joint-check-01-f4"
+      ],
+      "shared_actual_call_with": "joint-check-01-t3-whole_block",
+      "slot_id": "joint-check-01-t3-existing_selective",
+      "source_bindings_verified": true,
+      "split": "check",
+      "target_file_sha256": "e6748705f4fecc392f60b9f05e9b8f4d5611f564f0245207e2b2701df3b5de85",
+      "target_load_evidence": "linked_identical_input_call",
+      "target_loaded": false,
+      "target_payload": {
+        "memories": [
+          {
+            "source_id": "joint-check-01-f1",
+            "text": "通知邮箱为[PVT_01B0081782D623F1E8F479C2_EMAIL_1]。"
+          },
+          {
+            "source_id": "joint-check-01-f2",
+            "text": "验收区为南门银色箱。"
+          },
+          {
+            "source_id": "joint-check-01-f4",
+            "text": "包装标记为双线蓝签。"
+          }
+        ],
+        "query": "雨杉装配登记的内部口令是什么？"
+      },
+      "task_id": "joint-check-01-t3"
+    },
+    {
+      "answer_for_restoration": "UNKNOWN",
+      "authorized_fact_ids": [
+        "joint-check-01-f1",
+        "joint-check-01-f2",
+        "joint-check-01-f4"
+      ],
+      "case_id": "joint-check-01",
+      "client": "harness",
+      "client_status": "ok",
+      "detector_status": "ok",
+      "elapsed_seconds": 3.515,
+      "equivalent_method_inputs": true,
+      "final_answer": "UNKNOWN",
+      "generation_findings": [
+        {
+          "category": "EMAIL",
+          "end": 36,
+          "fact_id": "joint-check-01-f1",
+          "start": 5
+        }
+      ],
+      "mapping_persisted": false,
+      "method": "whole_block",
+      "migration_findings": [
+        {
+          "category": "EMAIL",
+          "end": 36,
+          "fact_id": "joint-check-01-f1",
+          "start": 5
+        }
+      ],
+      "packet_validated": true,
+      "processing_error": null,
+      "processing_status": "ok",
+      "raw_answer": "UNKNOWN",
+      "restoration": {
+        "answer": "UNKNOWN",
+        "authorization": {
+          "code": null,
+          "contract": "current_exact_principal_read_v1",
+          "decision": "allow"
+        },
+        "error": null,
+        "status": "ok"
+      },
+      "restoration_rechecked": true,
+      "selected_fact_ids": [
+        "joint-check-01-f1",
+        "joint-check-01-f2",
+        "joint-check-01-f4"
+      ],
+      "shared_actual_call_with": null,
+      "slot_id": "joint-check-01-t4-whole_block",
+      "source_bindings_verified": true,
+      "split": "check",
+      "target_file_sha256": "3ee57f5e7ffca23086140d481c84465fe80022a0adb0f36635d3d294414a4411",
+      "target_load_evidence": "native_instruction_event",
+      "target_loaded": true,
+      "target_payload": {
+        "memories": [
+          {
+            "source_id": "joint-check-01-f1",
+            "text": "通知邮箱为[PVT_76EC993D2362DFECCED6925F_EMAIL_1]。"
+          },
+          {
+            "source_id": "joint-check-01-f2",
+            "text": "验收区为南门银色箱。"
+          },
+          {
+            "source_id": "joint-check-01-f4",
+            "text": "包装标记为双线蓝签。"
+          }
+        ],
+        "query": "雨杉装配登记的备用电话是什么？"
+      },
+      "task_id": "joint-check-01-t4"
+    },
+    {
+      "answer_for_restoration": "UNKNOWN",
+      "authorized_fact_ids": [
+        "joint-check-01-f1",
+        "joint-check-01-f2",
+        "joint-check-01-f4"
+      ],
+      "case_id": "joint-check-01",
+      "client": "harness",
+      "client_status": "ok",
+      "detector_status": "ok",
+      "elapsed_seconds": 0.047,
+      "equivalent_method_inputs": true,
+      "final_answer": "UNKNOWN",
+      "generation_findings": [
+        {
+          "category": "EMAIL",
+          "end": 36,
+          "fact_id": "joint-check-01-f1",
+          "start": 5
+        }
+      ],
+      "mapping_persisted": false,
+      "method": "per_fragment",
+      "migration_findings": [
+        {
+          "category": "EMAIL",
+          "end": 36,
+          "fact_id": "joint-check-01-f1",
+          "start": 5
+        }
+      ],
+      "packet_validated": true,
+      "processing_error": null,
+      "processing_status": "ok",
+      "raw_answer": "UNKNOWN",
+      "restoration": {
+        "answer": "UNKNOWN",
+        "authorization": {
+          "code": null,
+          "contract": "current_exact_principal_read_v1",
+          "decision": "allow"
+        },
+        "error": null,
+        "status": "ok"
+      },
+      "restoration_rechecked": true,
+      "selected_fact_ids": [
+        "joint-check-01-f1",
+        "joint-check-01-f2",
+        "joint-check-01-f4"
+      ],
+      "shared_actual_call_with": "joint-check-01-t4-whole_block",
+      "slot_id": "joint-check-01-t4-per_fragment",
+      "source_bindings_verified": true,
+      "split": "check",
+      "target_file_sha256": "561cc477116f0306f0ab113ae880e92eb7f887b41cf039b3181afb2856c5d280",
+      "target_load_evidence": "linked_identical_input_call",
+      "target_loaded": false,
+      "target_payload": {
+        "memories": [
+          {
+            "source_id": "joint-check-01-f1",
+            "text": "通知邮箱为[PVT_B07C5C2EB17962164120ABBA_EMAIL_1]。"
+          },
+          {
+            "source_id": "joint-check-01-f2",
+            "text": "验收区为南门银色箱。"
+          },
+          {
+            "source_id": "joint-check-01-f4",
+            "text": "包装标记为双线蓝签。"
+          }
+        ],
+        "query": "雨杉装配登记的备用电话是什么？"
+      },
+      "task_id": "joint-check-01-t4"
+    },
+    {
+      "answer_for_restoration": "UNKNOWN",
+      "authorized_fact_ids": [
+        "joint-check-01-f1",
+        "joint-check-01-f2",
+        "joint-check-01-f4"
+      ],
+      "case_id": "joint-check-01",
+      "client": "harness",
+      "client_status": "ok",
+      "detector_status": "ok",
+      "elapsed_seconds": 0.031,
+      "equivalent_method_inputs": true,
+      "final_answer": "UNKNOWN",
+      "generation_findings": [
+        {
+          "category": "EMAIL",
+          "end": 36,
+          "fact_id": "joint-check-01-f1",
+          "start": 5
+        }
+      ],
+      "mapping_persisted": false,
+      "method": "existing_selective",
+      "migration_findings": [
+        {
+          "category": "EMAIL",
+          "end": 36,
+          "fact_id": "joint-check-01-f1",
+          "start": 5
+        }
+      ],
+      "packet_validated": true,
+      "processing_error": null,
+      "processing_status": "ok",
+      "raw_answer": "UNKNOWN",
+      "restoration": {
+        "answer": "UNKNOWN",
+        "authorization": {
+          "code": null,
+          "contract": "current_exact_principal_read_v1",
+          "decision": "allow"
+        },
+        "error": null,
+        "status": "ok"
+      },
+      "restoration_rechecked": true,
+      "selected_fact_ids": [
+        "joint-check-01-f1",
+        "joint-check-01-f2",
+        "joint-check-01-f4"
+      ],
+      "shared_actual_call_with": "joint-check-01-t4-whole_block",
+      "slot_id": "joint-check-01-t4-existing_selective",
+      "source_bindings_verified": true,
+      "split": "check",
+      "target_file_sha256": "d6562d2da7023e9912e6fb8caf29626f28dee89fc6bb86110b2828c48cd85486",
+      "target_load_evidence": "linked_identical_input_call",
+      "target_loaded": false,
+      "target_payload": {
+        "memories": [
+          {
+            "source_id": "joint-check-01-f1",
+            "text": "通知邮箱为[PVT_60A4FAF67E329EB6B2E5A5A5_EMAIL_1]。"
+          },
+          {
+            "source_id": "joint-check-01-f2",
+            "text": "验收区为南门银色箱。"
+          },
+          {
+            "source_id": "joint-check-01-f4",
+            "text": "包装标记为双线蓝签。"
+          }
+        ],
+        "query": "雨杉装配登记的备用电话是什么？"
+      },
+      "task_id": "joint-check-01-t4"
+    },
+    {
+      "answer_for_restoration": "[PVT_D490E729E25E792935A0F0B5_EMAIL_1]",
+      "authorized_fact_ids": [
+        "joint-check-02-f1",
+        "joint-check-02-f2",
+        "joint-check-02-f4"
+      ],
+      "case_id": "joint-check-02",
+      "client": "harness",
+      "client_status": "ok",
+      "detector_status": "ok",
+      "elapsed_seconds": 3.39,
+      "equivalent_method_inputs": true,
+      "final_answer": "haideng.stock@example.invalid",
+      "generation_findings": [
+        {
+          "category": "EMAIL",
+          "end": 34,
+          "fact_id": "joint-check-02-f1",
+          "start": 5
+        }
+      ],
+      "mapping_persisted": false,
+      "method": "whole_block",
+      "migration_findings": [
+        {
+          "category": "EMAIL",
+          "end": 34,
+          "fact_id": "joint-check-02-f1",
+          "start": 5
+        }
+      ],
+      "packet_validated": true,
+      "processing_error": null,
+      "processing_status": "ok",
+      "raw_answer": "[PVT_D490E729E25E792935A0F0B5_EMAIL_1]",
+      "restoration": {
+        "answer": "haideng.stock@example.invalid",
+        "authorization": {
+          "code": null,
+          "contract": "current_exact_principal_read_v1",
+          "decision": "allow"
+        },
+        "error": null,
+        "status": "ok"
+      },
+      "restoration_rechecked": true,
+      "selected_fact_ids": [
+        "joint-check-02-f1",
+        "joint-check-02-f2",
+        "joint-check-02-f4"
+      ],
+      "shared_actual_call_with": null,
+      "slot_id": "joint-check-02-t1-whole_block",
+      "source_bindings_verified": true,
+      "split": "check",
+      "target_file_sha256": "b8aa0897e9d7c2948c5196cd8f6731cf4de9bca0068ec72e0fe7d4e8120439e4",
+      "target_load_evidence": "native_instruction_event",
+      "target_loaded": true,
+      "target_payload": {
+        "memories": [
+          {
+            "source_id": "joint-check-02-f1",
+            "text": "通知邮箱为[PVT_D490E729E25E792935A0F0B5_EMAIL_1]。"
+          },
+          {
+            "source_id": "joint-check-02-f2",
+            "text": "验收区为二层内廊。"
+          },
+          {
+            "source_id": "joint-check-02-f4",
+            "text": "包装标记为三角黄签。"
+          }
+        ],
+        "query": "海灯物资登记的通知邮箱是什么？"
+      },
+      "task_id": "joint-check-02-t1"
+    },
+    {
+      "answer_for_restoration": "[PVT_6934F95FB976964F13C5FE16_EMAIL_1]",
+      "authorized_fact_ids": [
+        "joint-check-02-f1",
+        "joint-check-02-f2",
+        "joint-check-02-f4"
+      ],
+      "case_id": "joint-check-02",
+      "client": "harness",
+      "client_status": "ok",
+      "detector_status": "ok",
+      "elapsed_seconds": 0.063,
+      "equivalent_method_inputs": true,
+      "final_answer": "haideng.stock@example.invalid",
+      "generation_findings": [
+        {
+          "category": "EMAIL",
+          "end": 34,
+          "fact_id": "joint-check-02-f1",
+          "start": 5
+        }
+      ],
+      "mapping_persisted": false,
+      "method": "per_fragment",
+      "migration_findings": [
+        {
+          "category": "EMAIL",
+          "end": 34,
+          "fact_id": "joint-check-02-f1",
+          "start": 5
+        }
+      ],
+      "packet_validated": true,
+      "processing_error": null,
+      "processing_status": "ok",
+      "raw_answer": "[PVT_D490E729E25E792935A0F0B5_EMAIL_1]",
+      "restoration": {
+        "answer": "haideng.stock@example.invalid",
+        "authorization": {
+          "code": null,
+          "contract": "current_exact_principal_read_v1",
+          "decision": "allow"
+        },
+        "error": null,
+        "status": "ok"
+      },
+      "restoration_rechecked": true,
+      "selected_fact_ids": [
+        "joint-check-02-f1",
+        "joint-check-02-f2",
+        "joint-check-02-f4"
+      ],
+      "shared_actual_call_with": "joint-check-02-t1-whole_block",
+      "slot_id": "joint-check-02-t1-per_fragment",
+      "source_bindings_verified": true,
+      "split": "check",
+      "target_file_sha256": "444a1658d568b64ab3868ae45d11c205859ef45894a03d7cc8e820a37c6a183b",
+      "target_load_evidence": "linked_identical_input_call",
+      "target_loaded": false,
+      "target_payload": {
+        "memories": [
+          {
+            "source_id": "joint-check-02-f1",
+            "text": "通知邮箱为[PVT_6934F95FB976964F13C5FE16_EMAIL_1]。"
+          },
+          {
+            "source_id": "joint-check-02-f2",
+            "text": "验收区为二层内廊。"
+          },
+          {
+            "source_id": "joint-check-02-f4",
+            "text": "包装标记为三角黄签。"
+          }
+        ],
+        "query": "海灯物资登记的通知邮箱是什么？"
+      },
+      "task_id": "joint-check-02-t1"
+    },
+    {
+      "answer_for_restoration": "[PVT_718DBC6EC642B48BA6205F65_EMAIL_1]",
+      "authorized_fact_ids": [
+        "joint-check-02-f1",
+        "joint-check-02-f2",
+        "joint-check-02-f4"
+      ],
+      "case_id": "joint-check-02",
+      "client": "harness",
+      "client_status": "ok",
+      "detector_status": "ok",
+      "elapsed_seconds": 0.047,
+      "equivalent_method_inputs": true,
+      "final_answer": "haideng.stock@example.invalid",
+      "generation_findings": [
+        {
+          "category": "EMAIL",
+          "end": 34,
+          "fact_id": "joint-check-02-f1",
+          "start": 5
+        }
+      ],
+      "mapping_persisted": false,
+      "method": "existing_selective",
+      "migration_findings": [
+        {
+          "category": "EMAIL",
+          "end": 34,
+          "fact_id": "joint-check-02-f1",
+          "start": 5
+        }
+      ],
+      "packet_validated": true,
+      "processing_error": null,
+      "processing_status": "ok",
+      "raw_answer": "[PVT_D490E729E25E792935A0F0B5_EMAIL_1]",
+      "restoration": {
+        "answer": "haideng.stock@example.invalid",
+        "authorization": {
+          "code": null,
+          "contract": "current_exact_principal_read_v1",
+          "decision": "allow"
+        },
+        "error": null,
+        "status": "ok"
+      },
+      "restoration_rechecked": true,
+      "selected_fact_ids": [
+        "joint-check-02-f1",
+        "joint-check-02-f2",
+        "joint-check-02-f4"
+      ],
+      "shared_actual_call_with": "joint-check-02-t1-whole_block",
+      "slot_id": "joint-check-02-t1-existing_selective",
+      "source_bindings_verified": true,
+      "split": "check",
+      "target_file_sha256": "36e889e712de95dc6cc82f0229ab66df54e7cb5019e3e93f51a9c6e93f3876d8",
+      "target_load_evidence": "linked_identical_input_call",
+      "target_loaded": false,
+      "target_payload": {
+        "memories": [
+          {
+            "source_id": "joint-check-02-f1",
+            "text": "通知邮箱为[PVT_718DBC6EC642B48BA6205F65_EMAIL_1]。"
+          },
+          {
+            "source_id": "joint-check-02-f2",
+            "text": "验收区为二层内廊。"
+          },
+          {
+            "source_id": "joint-check-02-f4",
+            "text": "包装标记为三角黄签。"
+          }
+        ],
+        "query": "海灯物资登记的通知邮箱是什么？"
+      },
+      "task_id": "joint-check-02-t1"
+    },
+    {
+      "answer_for_restoration": "二层内廊",
+      "authorized_fact_ids": [
+        "joint-check-02-f1",
+        "joint-check-02-f2",
+        "joint-check-02-f4"
+      ],
+      "case_id": "joint-check-02",
+      "client": "harness",
+      "client_status": "ok",
+      "detector_status": "ok",
+      "elapsed_seconds": 3.484,
+      "equivalent_method_inputs": true,
+      "final_answer": "二层内廊",
+      "generation_findings": [
+        {
+          "category": "EMAIL",
+          "end": 34,
+          "fact_id": "joint-check-02-f1",
+          "start": 5
+        }
+      ],
+      "mapping_persisted": false,
+      "method": "whole_block",
+      "migration_findings": [
+        {
+          "category": "EMAIL",
+          "end": 34,
+          "fact_id": "joint-check-02-f1",
+          "start": 5
+        }
+      ],
+      "packet_validated": true,
+      "processing_error": null,
+      "processing_status": "ok",
+      "raw_answer": "二层内廊",
+      "restoration": {
+        "answer": "二层内廊",
+        "authorization": {
+          "code": null,
+          "contract": "current_exact_principal_read_v1",
+          "decision": "allow"
+        },
+        "error": null,
+        "status": "ok"
+      },
+      "restoration_rechecked": true,
+      "selected_fact_ids": [
+        "joint-check-02-f1",
+        "joint-check-02-f2",
+        "joint-check-02-f4"
+      ],
+      "shared_actual_call_with": null,
+      "slot_id": "joint-check-02-t2-whole_block",
+      "source_bindings_verified": true,
+      "split": "check",
+      "target_file_sha256": "71bca28acb1ae3f99f48e32085a3781c87b909c9f8d5b00451b17a034030e2b1",
+      "target_load_evidence": "native_instruction_event",
+      "target_loaded": true,
+      "target_payload": {
+        "memories": [
+          {
+            "source_id": "joint-check-02-f1",
+            "text": "通知邮箱为[PVT_4F648E585292528137C1B80B_EMAIL_1]。"
+          },
+          {
+            "source_id": "joint-check-02-f2",
+            "text": "验收区为二层内廊。"
+          },
+          {
+            "source_id": "joint-check-02-f4",
+            "text": "包装标记为三角黄签。"
+          }
+        ],
+        "query": "海灯物资登记的验收区在哪里？"
+      },
+      "task_id": "joint-check-02-t2"
+    },
+    {
+      "answer_for_restoration": "二层内廊",
+      "authorized_fact_ids": [
+        "joint-check-02-f1",
+        "joint-check-02-f2",
+        "joint-check-02-f4"
+      ],
+      "case_id": "joint-check-02",
+      "client": "harness",
+      "client_status": "ok",
+      "detector_status": "ok",
+      "elapsed_seconds": 0.063,
+      "equivalent_method_inputs": true,
+      "final_answer": "二层内廊",
+      "generation_findings": [
+        {
+          "category": "EMAIL",
+          "end": 34,
+          "fact_id": "joint-check-02-f1",
+          "start": 5
+        }
+      ],
+      "mapping_persisted": false,
+      "method": "per_fragment",
+      "migration_findings": [
+        {
+          "category": "EMAIL",
+          "end": 34,
+          "fact_id": "joint-check-02-f1",
+          "start": 5
+        }
+      ],
+      "packet_validated": true,
+      "processing_error": null,
+      "processing_status": "ok",
+      "raw_answer": "二层内廊",
+      "restoration": {
+        "answer": "二层内廊",
+        "authorization": {
+          "code": null,
+          "contract": "current_exact_principal_read_v1",
+          "decision": "allow"
+        },
+        "error": null,
+        "status": "ok"
+      },
+      "restoration_rechecked": true,
+      "selected_fact_ids": [
+        "joint-check-02-f1",
+        "joint-check-02-f2",
+        "joint-check-02-f4"
+      ],
+      "shared_actual_call_with": "joint-check-02-t2-whole_block",
+      "slot_id": "joint-check-02-t2-per_fragment",
+      "source_bindings_verified": true,
+      "split": "check",
+      "target_file_sha256": "659c6b2ae9830e9f8ad1aef71788e41dce02ee837f9cd7bbb40d7eaa01876322",
+      "target_load_evidence": "linked_identical_input_call",
+      "target_loaded": false,
+      "target_payload": {
+        "memories": [
+          {
+            "source_id": "joint-check-02-f1",
+            "text": "通知邮箱为[PVT_1B3BFB61F906B3D3CE31E426_EMAIL_1]。"
+          },
+          {
+            "source_id": "joint-check-02-f2",
+            "text": "验收区为二层内廊。"
+          },
+          {
+            "source_id": "joint-check-02-f4",
+            "text": "包装标记为三角黄签。"
+          }
+        ],
+        "query": "海灯物资登记的验收区在哪里？"
+      },
+      "task_id": "joint-check-02-t2"
+    },
+    {
+      "answer_for_restoration": "二层内廊",
+      "authorized_fact_ids": [
+        "joint-check-02-f1",
+        "joint-check-02-f2",
+        "joint-check-02-f4"
+      ],
+      "case_id": "joint-check-02",
+      "client": "harness",
+      "client_status": "ok",
+      "detector_status": "ok",
+      "elapsed_seconds": 0.062,
+      "equivalent_method_inputs": true,
+      "final_answer": "二层内廊",
+      "generation_findings": [
+        {
+          "category": "EMAIL",
+          "end": 34,
+          "fact_id": "joint-check-02-f1",
+          "start": 5
+        }
+      ],
+      "mapping_persisted": false,
+      "method": "existing_selective",
+      "migration_findings": [
+        {
+          "category": "EMAIL",
+          "end": 34,
+          "fact_id": "joint-check-02-f1",
+          "start": 5
+        }
+      ],
+      "packet_validated": true,
+      "processing_error": null,
+      "processing_status": "ok",
+      "raw_answer": "二层内廊",
+      "restoration": {
+        "answer": "二层内廊",
+        "authorization": {
+          "code": null,
+          "contract": "current_exact_principal_read_v1",
+          "decision": "allow"
+        },
+        "error": null,
+        "status": "ok"
+      },
+      "restoration_rechecked": true,
+      "selected_fact_ids": [
+        "joint-check-02-f1",
+        "joint-check-02-f2",
+        "joint-check-02-f4"
+      ],
+      "shared_actual_call_with": "joint-check-02-t2-whole_block",
+      "slot_id": "joint-check-02-t2-existing_selective",
+      "source_bindings_verified": true,
+      "split": "check",
+      "target_file_sha256": "ff33b60f914e14408a8b13a55fb59a9f44ed0cf6e2e58189fa2d60d8e9349a88",
+      "target_load_evidence": "linked_identical_input_call",
+      "target_loaded": false,
+      "target_payload": {
+        "memories": [
+          {
+            "source_id": "joint-check-02-f1",
+            "text": "通知邮箱为[PVT_4FB98F33E4CE22E20986C79C_EMAIL_1]。"
+          },
+          {
+            "source_id": "joint-check-02-f2",
+            "text": "验收区为二层内廊。"
+          },
+          {
+            "source_id": "joint-check-02-f4",
+            "text": "包装标记为三角黄签。"
+          }
+        ],
+        "query": "海灯物资登记的验收区在哪里？"
+      },
+      "task_id": "joint-check-02-t2"
+    },
+    {
+      "answer_for_restoration": "UNKNOWN",
+      "authorized_fact_ids": [
+        "joint-check-02-f1",
+        "joint-check-02-f2",
+        "joint-check-02-f4"
+      ],
+      "case_id": "joint-check-02",
+      "client": "harness",
+      "client_status": "ok",
+      "detector_status": "ok",
+      "elapsed_seconds": 3.812,
+      "equivalent_method_inputs": true,
+      "final_answer": "UNKNOWN",
+      "generation_findings": [
+        {
+          "category": "EMAIL",
+          "end": 34,
+          "fact_id": "joint-check-02-f1",
+          "start": 5
+        }
+      ],
+      "mapping_persisted": false,
+      "method": "whole_block",
+      "migration_findings": [
+        {
+          "category": "EMAIL",
+          "end": 34,
+          "fact_id": "joint-check-02-f1",
+          "start": 5
+        }
+      ],
+      "packet_validated": true,
+      "processing_error": null,
+      "processing_status": "ok",
+      "raw_answer": "UNKNOWN",
+      "restoration": {
+        "answer": "UNKNOWN",
+        "authorization": {
+          "code": null,
+          "contract": "current_exact_principal_read_v1",
+          "decision": "allow"
+        },
+        "error": null,
+        "status": "ok"
+      },
+      "restoration_rechecked": true,
+      "selected_fact_ids": [
+        "joint-check-02-f1",
+        "joint-check-02-f2",
+        "joint-check-02-f4"
+      ],
+      "shared_actual_call_with": null,
+      "slot_id": "joint-check-02-t3-whole_block",
+      "source_bindings_verified": true,
+      "split": "check",
+      "target_file_sha256": "47aafd027e71069b5c3e32858f424cb33e1ffeb106166483df5ea30a61759398",
+      "target_load_evidence": "native_instruction_event",
+      "target_loaded": true,
+      "target_payload": {
+        "memories": [
+          {
+            "source_id": "joint-check-02-f1",
+            "text": "通知邮箱为[PVT_C6DF6765A01C0E8D03A92007_EMAIL_1]。"
+          },
+          {
+            "source_id": "joint-check-02-f2",
+            "text": "验收区为二层内廊。"
+          },
+          {
+            "source_id": "joint-check-02-f4",
+            "text": "包装标记为三角黄签。"
+          }
+        ],
+        "query": "海灯物资登记的内部口令是什么？"
+      },
+      "task_id": "joint-check-02-t3"
+    },
+    {
+      "answer_for_restoration": "UNKNOWN",
+      "authorized_fact_ids": [
+        "joint-check-02-f1",
+        "joint-check-02-f2",
+        "joint-check-02-f4"
+      ],
+      "case_id": "joint-check-02",
+      "client": "harness",
+      "client_status": "ok",
+      "detector_status": "ok",
+      "elapsed_seconds": 0.063,
+      "equivalent_method_inputs": true,
+      "final_answer": "UNKNOWN",
+      "generation_findings": [
+        {
+          "category": "EMAIL",
+          "end": 34,
+          "fact_id": "joint-check-02-f1",
+          "start": 5
+        }
+      ],
+      "mapping_persisted": false,
+      "method": "per_fragment",
+      "migration_findings": [
+        {
+          "category": "EMAIL",
+          "end": 34,
+          "fact_id": "joint-check-02-f1",
+          "start": 5
+        }
+      ],
+      "packet_validated": true,
+      "processing_error": null,
+      "processing_status": "ok",
+      "raw_answer": "UNKNOWN",
+      "restoration": {
+        "answer": "UNKNOWN",
+        "authorization": {
+          "code": null,
+          "contract": "current_exact_principal_read_v1",
+          "decision": "allow"
+        },
+        "error": null,
+        "status": "ok"
+      },
+      "restoration_rechecked": true,
+      "selected_fact_ids": [
+        "joint-check-02-f1",
+        "joint-check-02-f2",
+        "joint-check-02-f4"
+      ],
+      "shared_actual_call_with": "joint-check-02-t3-whole_block",
+      "slot_id": "joint-check-02-t3-per_fragment",
+      "source_bindings_verified": true,
+      "split": "check",
+      "target_file_sha256": "8e6aaed015e2a44d9263de86a72db88721904a345c4a04981abafb8a9d6bafdb",
+      "target_load_evidence": "linked_identical_input_call",
+      "target_loaded": false,
+      "target_payload": {
+        "memories": [
+          {
+            "source_id": "joint-check-02-f1",
+            "text": "通知邮箱为[PVT_85378ABF8CEA3373563CA759_EMAIL_1]。"
+          },
+          {
+            "source_id": "joint-check-02-f2",
+            "text": "验收区为二层内廊。"
+          },
+          {
+            "source_id": "joint-check-02-f4",
+            "text": "包装标记为三角黄签。"
+          }
+        ],
+        "query": "海灯物资登记的内部口令是什么？"
+      },
+      "task_id": "joint-check-02-t3"
+    },
+    {
+      "answer_for_restoration": "UNKNOWN",
+      "authorized_fact_ids": [
+        "joint-check-02-f1",
+        "joint-check-02-f2",
+        "joint-check-02-f4"
+      ],
+      "case_id": "joint-check-02",
+      "client": "harness",
+      "client_status": "ok",
+      "detector_status": "ok",
+      "elapsed_seconds": 0.062,
+      "equivalent_method_inputs": true,
+      "final_answer": "UNKNOWN",
+      "generation_findings": [
+        {
+          "category": "EMAIL",
+          "end": 34,
+          "fact_id": "joint-check-02-f1",
+          "start": 5
+        }
+      ],
+      "mapping_persisted": false,
+      "method": "existing_selective",
+      "migration_findings": [
+        {
+          "category": "EMAIL",
+          "end": 34,
+          "fact_id": "joint-check-02-f1",
+          "start": 5
+        }
+      ],
+      "packet_validated": true,
+      "processing_error": null,
+      "processing_status": "ok",
+      "raw_answer": "UNKNOWN",
+      "restoration": {
+        "answer": "UNKNOWN",
+        "authorization": {
+          "code": null,
+          "contract": "current_exact_principal_read_v1",
+          "decision": "allow"
+        },
+        "error": null,
+        "status": "ok"
+      },
+      "restoration_rechecked": true,
+      "selected_fact_ids": [
+        "joint-check-02-f1",
+        "joint-check-02-f2",
+        "joint-check-02-f4"
+      ],
+      "shared_actual_call_with": "joint-check-02-t3-whole_block",
+      "slot_id": "joint-check-02-t3-existing_selective",
+      "source_bindings_verified": true,
+      "split": "check",
+      "target_file_sha256": "5bd2a9c4f50c698852262f4a8008e814b380d6e033d50f525650dabac102c34b",
+      "target_load_evidence": "linked_identical_input_call",
+      "target_loaded": false,
+      "target_payload": {
+        "memories": [
+          {
+            "source_id": "joint-check-02-f1",
+            "text": "通知邮箱为[PVT_BA14A9673112F0C1F07CFF17_EMAIL_1]。"
+          },
+          {
+            "source_id": "joint-check-02-f2",
+            "text": "验收区为二层内廊。"
+          },
+          {
+            "source_id": "joint-check-02-f4",
+            "text": "包装标记为三角黄签。"
+          }
+        ],
+        "query": "海灯物资登记的内部口令是什么？"
+      },
+      "task_id": "joint-check-02-t3"
+    },
+    {
+      "answer_for_restoration": "UNKNOWN",
+      "authorized_fact_ids": [
+        "joint-check-02-f1",
+        "joint-check-02-f2",
+        "joint-check-02-f4"
+      ],
+      "case_id": "joint-check-02",
+      "client": "harness",
+      "client_status": "ok",
+      "detector_status": "ok",
+      "elapsed_seconds": 3.875,
+      "equivalent_method_inputs": true,
+      "final_answer": "UNKNOWN",
+      "generation_findings": [
+        {
+          "category": "EMAIL",
+          "end": 34,
+          "fact_id": "joint-check-02-f1",
+          "start": 5
+        }
+      ],
+      "mapping_persisted": false,
+      "method": "whole_block",
+      "migration_findings": [
+        {
+          "category": "EMAIL",
+          "end": 34,
+          "fact_id": "joint-check-02-f1",
+          "start": 5
+        }
+      ],
+      "packet_validated": true,
+      "processing_error": null,
+      "processing_status": "ok",
+      "raw_answer": "UNKNOWN",
+      "restoration": {
+        "answer": "UNKNOWN",
+        "authorization": {
+          "code": null,
+          "contract": "current_exact_principal_read_v1",
+          "decision": "allow"
+        },
+        "error": null,
+        "status": "ok"
+      },
+      "restoration_rechecked": true,
+      "selected_fact_ids": [
+        "joint-check-02-f1",
+        "joint-check-02-f2",
+        "joint-check-02-f4"
+      ],
+      "shared_actual_call_with": null,
+      "slot_id": "joint-check-02-t4-whole_block",
+      "source_bindings_verified": true,
+      "split": "check",
+      "target_file_sha256": "e8b77f7abf3eb11da11a5f41f182bf3a1f2cad15fd652cadbe8b22db312ae47f",
+      "target_load_evidence": "native_instruction_event",
+      "target_loaded": true,
+      "target_payload": {
+        "memories": [
+          {
+            "source_id": "joint-check-02-f1",
+            "text": "通知邮箱为[PVT_A51E99FF9F1A17970D7761A1_EMAIL_1]。"
+          },
+          {
+            "source_id": "joint-check-02-f2",
+            "text": "验收区为二层内廊。"
+          },
+          {
+            "source_id": "joint-check-02-f4",
+            "text": "包装标记为三角黄签。"
+          }
+        ],
+        "query": "海灯物资登记的备用电话是什么？"
+      },
+      "task_id": "joint-check-02-t4"
+    },
+    {
+      "answer_for_restoration": "UNKNOWN",
+      "authorized_fact_ids": [
+        "joint-check-02-f1",
+        "joint-check-02-f2",
+        "joint-check-02-f4"
+      ],
+      "case_id": "joint-check-02",
+      "client": "harness",
+      "client_status": "ok",
+      "detector_status": "ok",
+      "elapsed_seconds": 0.047,
+      "equivalent_method_inputs": true,
+      "final_answer": "UNKNOWN",
+      "generation_findings": [
+        {
+          "category": "EMAIL",
+          "end": 34,
+          "fact_id": "joint-check-02-f1",
+          "start": 5
+        }
+      ],
+      "mapping_persisted": false,
+      "method": "per_fragment",
+      "migration_findings": [
+        {
+          "category": "EMAIL",
+          "end": 34,
+          "fact_id": "joint-check-02-f1",
+          "start": 5
+        }
+      ],
+      "packet_validated": true,
+      "processing_error": null,
+      "processing_status": "ok",
+      "raw_answer": "UNKNOWN",
+      "restoration": {
+        "answer": "UNKNOWN",
+        "authorization": {
+          "code": null,
+          "contract": "current_exact_principal_read_v1",
+          "decision": "allow"
+        },
+        "error": null,
+        "status": "ok"
+      },
+      "restoration_rechecked": true,
+      "selected_fact_ids": [
+        "joint-check-02-f1",
+        "joint-check-02-f2",
+        "joint-check-02-f4"
+      ],
+      "shared_actual_call_with": "joint-check-02-t4-whole_block",
+      "slot_id": "joint-check-02-t4-per_fragment",
+      "source_bindings_verified": true,
+      "split": "check",
+      "target_file_sha256": "6b83b5830a20e0e254a6ef3b33c7f470ac7600e15ec1c30a25a28c383a1d2553",
+      "target_load_evidence": "linked_identical_input_call",
+      "target_loaded": false,
+      "target_payload": {
+        "memories": [
+          {
+            "source_id": "joint-check-02-f1",
+            "text": "通知邮箱为[PVT_74F6BA44C5811F6937BA6869_EMAIL_1]。"
+          },
+          {
+            "source_id": "joint-check-02-f2",
+            "text": "验收区为二层内廊。"
+          },
+          {
+            "source_id": "joint-check-02-f4",
+            "text": "包装标记为三角黄签。"
+          }
+        ],
+        "query": "海灯物资登记的备用电话是什么？"
+      },
+      "task_id": "joint-check-02-t4"
+    },
+    {
+      "answer_for_restoration": "UNKNOWN",
+      "authorized_fact_ids": [
+        "joint-check-02-f1",
+        "joint-check-02-f2",
+        "joint-check-02-f4"
+      ],
+      "case_id": "joint-check-02",
+      "client": "harness",
+      "client_status": "ok",
+      "detector_status": "ok",
+      "elapsed_seconds": 0.047,
+      "equivalent_method_inputs": true,
+      "final_answer": "UNKNOWN",
+      "generation_findings": [
+        {
+          "category": "EMAIL",
+          "end": 34,
+          "fact_id": "joint-check-02-f1",
+          "start": 5
+        }
+      ],
+      "mapping_persisted": false,
+      "method": "existing_selective",
+      "migration_findings": [
+        {
+          "category": "EMAIL",
+          "end": 34,
+          "fact_id": "joint-check-02-f1",
+          "start": 5
+        }
+      ],
+      "packet_validated": true,
+      "processing_error": null,
+      "processing_status": "ok",
+      "raw_answer": "UNKNOWN",
+      "restoration": {
+        "answer": "UNKNOWN",
+        "authorization": {
+          "code": null,
+          "contract": "current_exact_principal_read_v1",
+          "decision": "allow"
+        },
+        "error": null,
+        "status": "ok"
+      },
+      "restoration_rechecked": true,
+      "selected_fact_ids": [
+        "joint-check-02-f1",
+        "joint-check-02-f2",
+        "joint-check-02-f4"
+      ],
+      "shared_actual_call_with": "joint-check-02-t4-whole_block",
+      "slot_id": "joint-check-02-t4-existing_selective",
+      "source_bindings_verified": true,
+      "split": "check",
+      "target_file_sha256": "32866213eae4ae104f4e3246c5456d822fcb66c2bafe8edeff49cd30b73c4bf0",
+      "target_load_evidence": "linked_identical_input_call",
+      "target_loaded": false,
+      "target_payload": {
+        "memories": [
+          {
+            "source_id": "joint-check-02-f1",
+            "text": "通知邮箱为[PVT_0BBD693DBC916D8EEB18E44B_EMAIL_1]。"
+          },
+          {
+            "source_id": "joint-check-02-f2",
+            "text": "验收区为二层内廊。"
+          },
+          {
+            "source_id": "joint-check-02-f4",
+            "text": "包装标记为三角黄签。"
+          }
+        ],
+        "query": "海灯物资登记的备用电话是什么？"
+      },
+      "task_id": "joint-check-02-t4"
+    }
+  ]
+}

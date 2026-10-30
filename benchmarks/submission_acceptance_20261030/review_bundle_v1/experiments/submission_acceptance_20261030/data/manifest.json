@@ -1,0 +1,46 @@
+{
+  "cases_sha256": "ed9c713fdae1f0170f26d1ec0f10d5734acc5ffab5aeef50d9e2d0ef47a66739",
+  "check_story_ids": [
+    "joint-check-01",
+    "joint-check-02",
+    "joint-check-03",
+    "joint-check-04",
+    "joint-check-05",
+    "joint-check-06"
+  ],
+  "date": "2026-10-30",
+  "development_story_ids": [
+    "joint-dev-01",
+    "joint-dev-02",
+    "joint-dev-03"
+  ],
+  "evaluation_separation": "references.json is scoring-only. Runtime detection must use actual source text, operational sensitivity_policy, and local rules; it must not load references or treat empty privacy_spans as gold negatives.",
+  "expected_scope": "Qoder to Harness through a trusted host; EMAIL pseudonymization and separate finite export rights. No arbitrary semantic categories, hostile host, native static-client ACL, or online forgetting guarantee.",
+  "fact_count": 36,
+  "fixed_seed": null,
+  "frozen_material": true,
+  "human_review": null,
+  "language_story_counts": {
+    "en": 3,
+    "zh": 6
+  },
+  "model_calls": 0,
+  "note": "New material was authored by an AI assistant for this project; unreviewed synthetic controls cannot substitute for expert annotation or representative security benchmarks.",
+  "random_generation": false,
+  "references_sha256": "75805099bb78fa8ba4cbc1030936363acfbabe3c1fe332df1a441a2e568b7793",
+  "schema": "submission_joint_data_manifest_v1",
+  "shared_grammar": "All stories use bounded explicit field-value sentences, even though narrative layouts/template-family names differ across development/check. This is not a claim of unseen natural-language template generalization.",
+  "split_story_counts": {
+    "check": 6,
+    "dev": 3
+  },
+  "story_count": 9,
+  "task_count": 36,
+  "task_kind_counts": {
+    "forbidden": 9,
+    "legal": 18,
+    "missing": 9
+  },
+  "template_family_overlap": [],
+  "units": "Story is the independent analysis unit. Multiple facts, task questions, methods, and repeated calls within one story are correlated."
+}

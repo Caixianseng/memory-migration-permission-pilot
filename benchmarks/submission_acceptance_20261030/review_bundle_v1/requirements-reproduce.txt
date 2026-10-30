@@ -1,0 +1,2 @@
+# Offline recomputation uses Python standard library only.
+# No pip packages required; exact tested interpreter is in runtime.json.

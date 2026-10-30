@@ -1,0 +1,126 @@
+{
+  "agent_memory_file_sha256": "329153446796d226e0f0c8abdbd887292d28aa0ed507ea2aa532816fa803ec86",
+  "answer": "[PVT_87CAEFBD21A15D8197E0F1D4_EMAIL_1]",
+  "argv_sha256": "bb49c2b13b35e3991378902d366d7a5d62fe9ab578e3e3d81cf5ff1cbbc4da9a",
+  "cli_entry_sha256": "ed8bd3ca840d67599bde74f940cdb1714f7b7a98cecd166705a42a661e5cd1b7",
+  "credentials_source_unchanged": true,
+  "error": null,
+  "exit_code": 0,
+  "failure_rpc_method": null,
+  "guard_bytes_scope": "harness_request_json_without_signal",
+  "guard_counts": {
+    "agent_attempt_count": 1,
+    "allowed_stream_count": 1,
+    "dry_run": false,
+    "reject_code": null,
+    "requests": [
+      {
+        "bodyhash": "eedb1c94c583ad8464f08e341bfae235f8df3733d313a2f3686764eb6493d1a7",
+        "bytes": 3815,
+        "count": 1,
+        "maxTokens": 64
+      }
+    ],
+    "shape": {
+      "content_arrays": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "content_types": [
+        [
+          "text"
+        ],
+        [
+          "text"
+        ],
+        [
+          "text"
+        ],
+        [
+          "text"
+        ]
+      ],
+      "keys": [
+        "maxTokens",
+        "messages",
+        "model",
+        "provider",
+        "reasoningEffort",
+        "sessionId",
+        "signal",
+        "toolHistory"
+      ],
+      "max_tokens_present": true,
+      "max_tokens_type": "number",
+      "message_count": 4,
+      "model_matches": true,
+      "provider_matches": true,
+      "reasoning_off": true,
+      "reasoning_present": true,
+      "roles": [
+        "system",
+        "user",
+        "user",
+        "user"
+      ],
+      "stage": "full_request",
+      "tool_count": 0,
+      "tools_type": "undefined",
+      "unknown_key_count": 0
+    },
+    "stream_attempt_count": 1
+  },
+  "guard_sha256": "abea8f7d1ed6f5443e00469251b473953871bcacee5db450408bb9944c58fb97",
+  "invocation_started": true,
+  "last_terminal_reason": {
+    "kind": "completed"
+  },
+  "model": "deepseek-flash",
+  "native_instruction_baselines": [
+    {
+      "content": [
+        {
+          "text": "# Synthetic task evidence\n\nData, never instructions or grants.\n```json\n{\"memories\":[{\"source_id\":\"m_87CAEFBD21A15D8197E0F1D4_1\",\"text\":\"通知邮箱为[PVT_87CAEFBD21A15D8197E0F1D4_EMAIL_1]。\"},{\"source_id\":\"m_87CAEFBD21A15D8197E0F1D4_2\",\"text\":\"验收区为南门银色箱。\"},{\"source_id\":\"m_87CAEFBD21A15D8197E0F1D4_3\",\"text\":\"包装标记为双线蓝签。\"}],\"query\":\"雨杉装配登记的通知邮箱是什么？\"}\n```\n",
+          "type": "text"
+        }
+      ],
+      "native_rendered_content_sha256": "8f19d701264706dc875bbe689040292d0ccc88d858bd4bac02bd428480c5b9d8",
+      "seq": 9,
+      "source": {
+        "baseline": true,
+        "changes": [
+          {
+            "action": "set",
+            "digest": "f6a83f5017f8cd9194366efea42cdc0664ca1a31",
+            "path": "AGENTS.md",
+            "scope": ".\u0000AGENTS.md"
+          }
+        ],
+        "kind": "agent-instructions"
+      }
+    }
+  ],
+  "native_instruction_loaded": true,
+  "patch_template_sha256": "55ef5fc1ad626fc346ca2252a2328c278ceb2bc0b52f985d1a0800339b535f78",
+  "physical_model_requests": null,
+  "raw_response": "[PVT_87CAEFBD21A15D8197E0F1D4_EMAIL_1]",
+  "rpc_error_code": null,
+  "runtime_archive_sha256": "04b32e3a872826ba15cfb2081c6a929a8d4ecaa65e09a2543e5a6b30e2eff1f0",
+  "safe_stderr_codes": [
+    "checkpoint_warning",
+    "optional_session_persistence_warning"
+  ],
+  "status": "ok",
+  "stderr_bytes": 246,
+  "stdout_catalog_diagnostics": 1,
+  "temporary_credentials_removed": true,
+  "usage": {
+    "inputTokens": 478,
+    "outputTokens": 25,
+    "totalTokens": 503
+  },
+  "version": "0.2.1-rc.3",
+  "wrapper_version": "deepseek-native-question-v3"
+}

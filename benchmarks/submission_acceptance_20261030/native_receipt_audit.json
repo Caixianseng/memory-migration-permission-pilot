@@ -1,0 +1,2900 @@
+{
+  "schema": "submission-independent-native-receipt-audit-v1",
+  "completed_at_utc": "2026-10-30T07:59:34.790391+00:00",
+  "status": "passed_with_documented_limits",
+  "scope": "Independent parallel-agent read-only recomputation of retained evidence; not external human acceptance and no new model calls.",
+  "run": "results/submission_acceptance_20261030/native_run03",
+  "checks": [
+    {
+      "name": "predictions_closed_and_hash_matches",
+      "passed": true
+    },
+    {
+      "name": "authorization_hash_matches",
+      "passed": true
+    },
+    {
+      "name": "case_input_hash_matches",
+      "passed": true
+    },
+    {
+      "name": "scoring_reference_hash_matches",
+      "passed": true
+    },
+    {
+      "name": "declared_no_reference_values_before_closure",
+      "passed": true
+    },
+    {
+      "name": "physical_wrapper_attempts_are_eight",
+      "passed": true
+    },
+    {
+      "name": "linked_rows_are_sixteen",
+      "passed": true
+    },
+    {
+      "name": "independent_story_count_is_two",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:target_file_hash",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:target_projection_order",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:target_payload_matches_file",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:only_expected_authorized_facts",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:source_span:joint-check-01-f1",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:source_span:joint-check-01-f2",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:source_span:joint-check-01-f4",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:forbidden_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:forbidden_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:forbidden_absent_from_final",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:registered_sensitive_original_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:registered_sensitive_original_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:final_matches_closed_reference",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:legal_final_is_source_substring",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:raw_answer_has_corresponding_fact_evidence",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:restoration_actual_rechecked",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:mapping_not_persisted_declaration",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:receipt_success",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:receipt_actual_file_sha256",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:native_loaded_flags",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:native_event_exists",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:event_content:0",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:event_kind:0",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:event_change_digest:0",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:guard_single_attempt_and_allowed_stream",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:guard_no_tools_and_full_request",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:guard_tokens_and_bytes",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:raw_guard_file_matches_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:credential_source_unchanged_wrapper_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:temporary_credentials_removal_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:temporary_credential_file_absent",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-whole_block:raw_answer_matches_native_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-per_fragment:target_file_hash",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-per_fragment:target_projection_order",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-per_fragment:target_payload_matches_file",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-per_fragment:only_expected_authorized_facts",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-per_fragment:source_span:joint-check-01-f1",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-per_fragment:source_span:joint-check-01-f2",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-per_fragment:source_span:joint-check-01-f4",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-per_fragment:forbidden_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-per_fragment:forbidden_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-per_fragment:forbidden_absent_from_final",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-per_fragment:registered_sensitive_original_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-per_fragment:registered_sensitive_original_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-per_fragment:final_matches_closed_reference",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-per_fragment:legal_final_is_source_substring",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-per_fragment:raw_answer_has_corresponding_fact_evidence",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-per_fragment:restoration_actual_rechecked",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-per_fragment:mapping_not_persisted_declaration",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-per_fragment:link_targets_actual_same_task",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-per_fragment:linked_file_input_equivalence",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-per_fragment:linked_fact_position_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-per_fragment:token_position_count_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-per_fragment:answer_token_has_origin_position",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-per_fragment:translated_token_answer_exact",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-per_fragment:raw_is_linked_actual_response",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-per_fragment:linked_not_marked_native_loaded",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-per_fragment:no_independent_receipt_for_replay",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-existing_selective:target_file_hash",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-existing_selective:target_projection_order",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-existing_selective:target_payload_matches_file",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-existing_selective:only_expected_authorized_facts",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-existing_selective:source_span:joint-check-01-f1",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-existing_selective:source_span:joint-check-01-f2",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-existing_selective:source_span:joint-check-01-f4",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-existing_selective:forbidden_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-existing_selective:forbidden_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-existing_selective:forbidden_absent_from_final",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-existing_selective:registered_sensitive_original_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-existing_selective:registered_sensitive_original_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-existing_selective:final_matches_closed_reference",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-existing_selective:legal_final_is_source_substring",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-existing_selective:raw_answer_has_corresponding_fact_evidence",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-existing_selective:restoration_actual_rechecked",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-existing_selective:mapping_not_persisted_declaration",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-existing_selective:link_targets_actual_same_task",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-existing_selective:linked_file_input_equivalence",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-existing_selective:linked_fact_position_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-existing_selective:token_position_count_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-existing_selective:answer_token_has_origin_position",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-existing_selective:translated_token_answer_exact",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-existing_selective:raw_is_linked_actual_response",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-existing_selective:linked_not_marked_native_loaded",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t1-existing_selective:no_independent_receipt_for_replay",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:target_file_hash",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:target_projection_order",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:target_payload_matches_file",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:only_expected_authorized_facts",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:source_span:joint-check-01-f1",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:source_span:joint-check-01-f2",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:source_span:joint-check-01-f4",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:forbidden_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:forbidden_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:forbidden_absent_from_final",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:registered_sensitive_original_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:registered_sensitive_original_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:final_matches_closed_reference",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:legal_final_is_source_substring",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:raw_answer_has_corresponding_fact_evidence",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:restoration_actual_rechecked",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:mapping_not_persisted_declaration",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:receipt_success",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:receipt_actual_file_sha256",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:native_loaded_flags",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:native_event_exists",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:event_content:0",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:event_kind:0",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:event_change_digest:0",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:guard_single_attempt_and_allowed_stream",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:guard_no_tools_and_full_request",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:guard_tokens_and_bytes",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:raw_guard_file_matches_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:credential_source_unchanged_wrapper_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:temporary_credentials_removal_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:temporary_credential_file_absent",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-whole_block:raw_answer_matches_native_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-per_fragment:target_file_hash",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-per_fragment:target_projection_order",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-per_fragment:target_payload_matches_file",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-per_fragment:only_expected_authorized_facts",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-per_fragment:source_span:joint-check-01-f1",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-per_fragment:source_span:joint-check-01-f2",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-per_fragment:source_span:joint-check-01-f4",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-per_fragment:forbidden_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-per_fragment:forbidden_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-per_fragment:forbidden_absent_from_final",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-per_fragment:registered_sensitive_original_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-per_fragment:registered_sensitive_original_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-per_fragment:final_matches_closed_reference",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-per_fragment:legal_final_is_source_substring",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-per_fragment:raw_answer_has_corresponding_fact_evidence",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-per_fragment:restoration_actual_rechecked",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-per_fragment:mapping_not_persisted_declaration",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-per_fragment:link_targets_actual_same_task",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-per_fragment:linked_file_input_equivalence",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-per_fragment:linked_fact_position_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-per_fragment:token_position_count_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-per_fragment:translated_token_answer_exact",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-per_fragment:raw_is_linked_actual_response",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-per_fragment:linked_not_marked_native_loaded",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-per_fragment:no_independent_receipt_for_replay",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-existing_selective:target_file_hash",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-existing_selective:target_projection_order",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-existing_selective:target_payload_matches_file",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-existing_selective:only_expected_authorized_facts",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-existing_selective:source_span:joint-check-01-f1",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-existing_selective:source_span:joint-check-01-f2",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-existing_selective:source_span:joint-check-01-f4",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-existing_selective:forbidden_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-existing_selective:forbidden_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-existing_selective:forbidden_absent_from_final",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-existing_selective:registered_sensitive_original_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-existing_selective:registered_sensitive_original_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-existing_selective:final_matches_closed_reference",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-existing_selective:legal_final_is_source_substring",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-existing_selective:raw_answer_has_corresponding_fact_evidence",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-existing_selective:restoration_actual_rechecked",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-existing_selective:mapping_not_persisted_declaration",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-existing_selective:link_targets_actual_same_task",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-existing_selective:linked_file_input_equivalence",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-existing_selective:linked_fact_position_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-existing_selective:token_position_count_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-existing_selective:translated_token_answer_exact",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-existing_selective:raw_is_linked_actual_response",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-existing_selective:linked_not_marked_native_loaded",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t2-existing_selective:no_independent_receipt_for_replay",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:target_file_hash",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:target_projection_order",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:target_payload_matches_file",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:only_expected_authorized_facts",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:source_span:joint-check-01-f1",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:source_span:joint-check-01-f2",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:source_span:joint-check-01-f4",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:forbidden_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:forbidden_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:forbidden_absent_from_final",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:registered_sensitive_original_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:registered_sensitive_original_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:final_matches_closed_reference",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:control_answer_is_unknown",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:restoration_actual_rechecked",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:mapping_not_persisted_declaration",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:receipt_success",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:receipt_actual_file_sha256",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:native_loaded_flags",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:native_event_exists",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:event_content:0",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:event_kind:0",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:event_change_digest:0",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:guard_single_attempt_and_allowed_stream",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:guard_no_tools_and_full_request",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:guard_tokens_and_bytes",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:raw_guard_file_matches_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:credential_source_unchanged_wrapper_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:temporary_credentials_removal_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:temporary_credential_file_absent",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-whole_block:raw_answer_matches_native_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-per_fragment:target_file_hash",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-per_fragment:target_projection_order",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-per_fragment:target_payload_matches_file",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-per_fragment:only_expected_authorized_facts",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-per_fragment:source_span:joint-check-01-f1",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-per_fragment:source_span:joint-check-01-f2",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-per_fragment:source_span:joint-check-01-f4",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-per_fragment:forbidden_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-per_fragment:forbidden_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-per_fragment:forbidden_absent_from_final",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-per_fragment:registered_sensitive_original_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-per_fragment:registered_sensitive_original_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-per_fragment:final_matches_closed_reference",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-per_fragment:control_answer_is_unknown",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-per_fragment:restoration_actual_rechecked",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-per_fragment:mapping_not_persisted_declaration",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-per_fragment:link_targets_actual_same_task",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-per_fragment:linked_file_input_equivalence",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-per_fragment:linked_fact_position_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-per_fragment:token_position_count_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-per_fragment:translated_token_answer_exact",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-per_fragment:raw_is_linked_actual_response",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-per_fragment:linked_not_marked_native_loaded",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-per_fragment:no_independent_receipt_for_replay",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-existing_selective:target_file_hash",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-existing_selective:target_projection_order",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-existing_selective:target_payload_matches_file",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-existing_selective:only_expected_authorized_facts",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-existing_selective:source_span:joint-check-01-f1",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-existing_selective:source_span:joint-check-01-f2",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-existing_selective:source_span:joint-check-01-f4",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-existing_selective:forbidden_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-existing_selective:forbidden_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-existing_selective:forbidden_absent_from_final",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-existing_selective:registered_sensitive_original_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-existing_selective:registered_sensitive_original_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-existing_selective:final_matches_closed_reference",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-existing_selective:control_answer_is_unknown",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-existing_selective:restoration_actual_rechecked",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-existing_selective:mapping_not_persisted_declaration",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-existing_selective:link_targets_actual_same_task",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-existing_selective:linked_file_input_equivalence",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-existing_selective:linked_fact_position_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-existing_selective:token_position_count_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-existing_selective:translated_token_answer_exact",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-existing_selective:raw_is_linked_actual_response",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-existing_selective:linked_not_marked_native_loaded",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t3-existing_selective:no_independent_receipt_for_replay",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:target_file_hash",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:target_projection_order",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:target_payload_matches_file",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:only_expected_authorized_facts",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:source_span:joint-check-01-f1",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:source_span:joint-check-01-f2",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:source_span:joint-check-01-f4",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:forbidden_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:forbidden_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:forbidden_absent_from_final",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:registered_sensitive_original_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:registered_sensitive_original_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:final_matches_closed_reference",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:control_answer_is_unknown",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:restoration_actual_rechecked",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:mapping_not_persisted_declaration",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:receipt_success",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:receipt_actual_file_sha256",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:native_loaded_flags",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:native_event_exists",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:event_content:0",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:event_kind:0",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:event_change_digest:0",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:guard_single_attempt_and_allowed_stream",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:guard_no_tools_and_full_request",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:guard_tokens_and_bytes",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:raw_guard_file_matches_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:credential_source_unchanged_wrapper_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:temporary_credentials_removal_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:temporary_credential_file_absent",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-whole_block:raw_answer_matches_native_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-per_fragment:target_file_hash",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-per_fragment:target_projection_order",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-per_fragment:target_payload_matches_file",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-per_fragment:only_expected_authorized_facts",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-per_fragment:source_span:joint-check-01-f1",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-per_fragment:source_span:joint-check-01-f2",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-per_fragment:source_span:joint-check-01-f4",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-per_fragment:forbidden_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-per_fragment:forbidden_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-per_fragment:forbidden_absent_from_final",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-per_fragment:registered_sensitive_original_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-per_fragment:registered_sensitive_original_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-per_fragment:final_matches_closed_reference",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-per_fragment:control_answer_is_unknown",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-per_fragment:restoration_actual_rechecked",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-per_fragment:mapping_not_persisted_declaration",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-per_fragment:link_targets_actual_same_task",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-per_fragment:linked_file_input_equivalence",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-per_fragment:linked_fact_position_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-per_fragment:token_position_count_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-per_fragment:translated_token_answer_exact",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-per_fragment:raw_is_linked_actual_response",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-per_fragment:linked_not_marked_native_loaded",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-per_fragment:no_independent_receipt_for_replay",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-existing_selective:target_file_hash",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-existing_selective:target_projection_order",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-existing_selective:target_payload_matches_file",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-existing_selective:only_expected_authorized_facts",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-existing_selective:source_span:joint-check-01-f1",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-existing_selective:source_span:joint-check-01-f2",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-existing_selective:source_span:joint-check-01-f4",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-existing_selective:forbidden_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-existing_selective:forbidden_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-existing_selective:forbidden_absent_from_final",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-existing_selective:registered_sensitive_original_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-existing_selective:registered_sensitive_original_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-existing_selective:final_matches_closed_reference",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-existing_selective:control_answer_is_unknown",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-existing_selective:restoration_actual_rechecked",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-existing_selective:mapping_not_persisted_declaration",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-existing_selective:link_targets_actual_same_task",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-existing_selective:linked_file_input_equivalence",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-existing_selective:linked_fact_position_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-existing_selective:token_position_count_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-existing_selective:translated_token_answer_exact",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-existing_selective:raw_is_linked_actual_response",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-existing_selective:linked_not_marked_native_loaded",
+      "passed": true
+    },
+    {
+      "name": "joint-check-01-t4-existing_selective:no_independent_receipt_for_replay",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:target_file_hash",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:target_projection_order",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:target_payload_matches_file",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:only_expected_authorized_facts",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:source_span:joint-check-02-f1",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:source_span:joint-check-02-f2",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:source_span:joint-check-02-f4",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:forbidden_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:forbidden_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:forbidden_absent_from_final",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:registered_sensitive_original_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:registered_sensitive_original_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:final_matches_closed_reference",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:legal_final_is_source_substring",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:raw_answer_has_corresponding_fact_evidence",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:restoration_actual_rechecked",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:mapping_not_persisted_declaration",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:receipt_success",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:receipt_actual_file_sha256",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:native_loaded_flags",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:native_event_exists",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:event_content:0",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:event_kind:0",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:event_change_digest:0",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:guard_single_attempt_and_allowed_stream",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:guard_no_tools_and_full_request",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:guard_tokens_and_bytes",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:raw_guard_file_matches_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:credential_source_unchanged_wrapper_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:temporary_credentials_removal_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:temporary_credential_file_absent",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-whole_block:raw_answer_matches_native_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-per_fragment:target_file_hash",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-per_fragment:target_projection_order",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-per_fragment:target_payload_matches_file",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-per_fragment:only_expected_authorized_facts",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-per_fragment:source_span:joint-check-02-f1",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-per_fragment:source_span:joint-check-02-f2",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-per_fragment:source_span:joint-check-02-f4",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-per_fragment:forbidden_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-per_fragment:forbidden_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-per_fragment:forbidden_absent_from_final",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-per_fragment:registered_sensitive_original_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-per_fragment:registered_sensitive_original_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-per_fragment:final_matches_closed_reference",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-per_fragment:legal_final_is_source_substring",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-per_fragment:raw_answer_has_corresponding_fact_evidence",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-per_fragment:restoration_actual_rechecked",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-per_fragment:mapping_not_persisted_declaration",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-per_fragment:link_targets_actual_same_task",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-per_fragment:linked_file_input_equivalence",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-per_fragment:linked_fact_position_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-per_fragment:token_position_count_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-per_fragment:answer_token_has_origin_position",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-per_fragment:translated_token_answer_exact",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-per_fragment:raw_is_linked_actual_response",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-per_fragment:linked_not_marked_native_loaded",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-per_fragment:no_independent_receipt_for_replay",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-existing_selective:target_file_hash",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-existing_selective:target_projection_order",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-existing_selective:target_payload_matches_file",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-existing_selective:only_expected_authorized_facts",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-existing_selective:source_span:joint-check-02-f1",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-existing_selective:source_span:joint-check-02-f2",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-existing_selective:source_span:joint-check-02-f4",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-existing_selective:forbidden_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-existing_selective:forbidden_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-existing_selective:forbidden_absent_from_final",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-existing_selective:registered_sensitive_original_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-existing_selective:registered_sensitive_original_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-existing_selective:final_matches_closed_reference",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-existing_selective:legal_final_is_source_substring",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-existing_selective:raw_answer_has_corresponding_fact_evidence",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-existing_selective:restoration_actual_rechecked",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-existing_selective:mapping_not_persisted_declaration",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-existing_selective:link_targets_actual_same_task",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-existing_selective:linked_file_input_equivalence",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-existing_selective:linked_fact_position_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-existing_selective:token_position_count_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-existing_selective:answer_token_has_origin_position",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-existing_selective:translated_token_answer_exact",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-existing_selective:raw_is_linked_actual_response",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-existing_selective:linked_not_marked_native_loaded",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t1-existing_selective:no_independent_receipt_for_replay",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:target_file_hash",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:target_projection_order",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:target_payload_matches_file",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:only_expected_authorized_facts",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:source_span:joint-check-02-f1",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:source_span:joint-check-02-f2",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:source_span:joint-check-02-f4",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:forbidden_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:forbidden_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:forbidden_absent_from_final",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:registered_sensitive_original_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:registered_sensitive_original_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:final_matches_closed_reference",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:legal_final_is_source_substring",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:raw_answer_has_corresponding_fact_evidence",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:restoration_actual_rechecked",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:mapping_not_persisted_declaration",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:receipt_success",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:receipt_actual_file_sha256",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:native_loaded_flags",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:native_event_exists",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:event_content:0",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:event_kind:0",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:event_change_digest:0",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:guard_single_attempt_and_allowed_stream",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:guard_no_tools_and_full_request",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:guard_tokens_and_bytes",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:raw_guard_file_matches_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:credential_source_unchanged_wrapper_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:temporary_credentials_removal_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:temporary_credential_file_absent",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-whole_block:raw_answer_matches_native_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-per_fragment:target_file_hash",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-per_fragment:target_projection_order",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-per_fragment:target_payload_matches_file",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-per_fragment:only_expected_authorized_facts",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-per_fragment:source_span:joint-check-02-f1",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-per_fragment:source_span:joint-check-02-f2",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-per_fragment:source_span:joint-check-02-f4",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-per_fragment:forbidden_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-per_fragment:forbidden_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-per_fragment:forbidden_absent_from_final",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-per_fragment:registered_sensitive_original_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-per_fragment:registered_sensitive_original_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-per_fragment:final_matches_closed_reference",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-per_fragment:legal_final_is_source_substring",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-per_fragment:raw_answer_has_corresponding_fact_evidence",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-per_fragment:restoration_actual_rechecked",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-per_fragment:mapping_not_persisted_declaration",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-per_fragment:link_targets_actual_same_task",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-per_fragment:linked_file_input_equivalence",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-per_fragment:linked_fact_position_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-per_fragment:token_position_count_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-per_fragment:translated_token_answer_exact",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-per_fragment:raw_is_linked_actual_response",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-per_fragment:linked_not_marked_native_loaded",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-per_fragment:no_independent_receipt_for_replay",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-existing_selective:target_file_hash",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-existing_selective:target_projection_order",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-existing_selective:target_payload_matches_file",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-existing_selective:only_expected_authorized_facts",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-existing_selective:source_span:joint-check-02-f1",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-existing_selective:source_span:joint-check-02-f2",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-existing_selective:source_span:joint-check-02-f4",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-existing_selective:forbidden_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-existing_selective:forbidden_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-existing_selective:forbidden_absent_from_final",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-existing_selective:registered_sensitive_original_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-existing_selective:registered_sensitive_original_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-existing_selective:final_matches_closed_reference",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-existing_selective:legal_final_is_source_substring",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-existing_selective:raw_answer_has_corresponding_fact_evidence",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-existing_selective:restoration_actual_rechecked",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-existing_selective:mapping_not_persisted_declaration",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-existing_selective:link_targets_actual_same_task",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-existing_selective:linked_file_input_equivalence",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-existing_selective:linked_fact_position_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-existing_selective:token_position_count_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-existing_selective:translated_token_answer_exact",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-existing_selective:raw_is_linked_actual_response",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-existing_selective:linked_not_marked_native_loaded",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t2-existing_selective:no_independent_receipt_for_replay",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:target_file_hash",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:target_projection_order",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:target_payload_matches_file",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:only_expected_authorized_facts",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:source_span:joint-check-02-f1",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:source_span:joint-check-02-f2",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:source_span:joint-check-02-f4",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:forbidden_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:forbidden_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:forbidden_absent_from_final",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:registered_sensitive_original_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:registered_sensitive_original_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:final_matches_closed_reference",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:control_answer_is_unknown",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:restoration_actual_rechecked",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:mapping_not_persisted_declaration",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:receipt_success",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:receipt_actual_file_sha256",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:native_loaded_flags",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:native_event_exists",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:event_content:0",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:event_kind:0",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:event_change_digest:0",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:guard_single_attempt_and_allowed_stream",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:guard_no_tools_and_full_request",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:guard_tokens_and_bytes",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:raw_guard_file_matches_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:credential_source_unchanged_wrapper_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:temporary_credentials_removal_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:temporary_credential_file_absent",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-whole_block:raw_answer_matches_native_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-per_fragment:target_file_hash",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-per_fragment:target_projection_order",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-per_fragment:target_payload_matches_file",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-per_fragment:only_expected_authorized_facts",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-per_fragment:source_span:joint-check-02-f1",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-per_fragment:source_span:joint-check-02-f2",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-per_fragment:source_span:joint-check-02-f4",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-per_fragment:forbidden_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-per_fragment:forbidden_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-per_fragment:forbidden_absent_from_final",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-per_fragment:registered_sensitive_original_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-per_fragment:registered_sensitive_original_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-per_fragment:final_matches_closed_reference",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-per_fragment:control_answer_is_unknown",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-per_fragment:restoration_actual_rechecked",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-per_fragment:mapping_not_persisted_declaration",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-per_fragment:link_targets_actual_same_task",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-per_fragment:linked_file_input_equivalence",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-per_fragment:linked_fact_position_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-per_fragment:token_position_count_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-per_fragment:translated_token_answer_exact",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-per_fragment:raw_is_linked_actual_response",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-per_fragment:linked_not_marked_native_loaded",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-per_fragment:no_independent_receipt_for_replay",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-existing_selective:target_file_hash",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-existing_selective:target_projection_order",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-existing_selective:target_payload_matches_file",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-existing_selective:only_expected_authorized_facts",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-existing_selective:source_span:joint-check-02-f1",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-existing_selective:source_span:joint-check-02-f2",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-existing_selective:source_span:joint-check-02-f4",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-existing_selective:forbidden_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-existing_selective:forbidden_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-existing_selective:forbidden_absent_from_final",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-existing_selective:registered_sensitive_original_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-existing_selective:registered_sensitive_original_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-existing_selective:final_matches_closed_reference",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-existing_selective:control_answer_is_unknown",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-existing_selective:restoration_actual_rechecked",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-existing_selective:mapping_not_persisted_declaration",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-existing_selective:link_targets_actual_same_task",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-existing_selective:linked_file_input_equivalence",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-existing_selective:linked_fact_position_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-existing_selective:token_position_count_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-existing_selective:translated_token_answer_exact",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-existing_selective:raw_is_linked_actual_response",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-existing_selective:linked_not_marked_native_loaded",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t3-existing_selective:no_independent_receipt_for_replay",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:target_file_hash",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:target_projection_order",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:target_payload_matches_file",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:only_expected_authorized_facts",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:source_span:joint-check-02-f1",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:source_span:joint-check-02-f2",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:source_span:joint-check-02-f4",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:forbidden_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:forbidden_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:forbidden_absent_from_final",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:registered_sensitive_original_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:registered_sensitive_original_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:final_matches_closed_reference",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:control_answer_is_unknown",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:restoration_actual_rechecked",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:mapping_not_persisted_declaration",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:receipt_success",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:receipt_actual_file_sha256",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:native_loaded_flags",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:native_event_exists",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:event_content:0",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:event_kind:0",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:event_change_digest:0",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:guard_single_attempt_and_allowed_stream",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:guard_no_tools_and_full_request",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:guard_tokens_and_bytes",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:raw_guard_file_matches_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:credential_source_unchanged_wrapper_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:temporary_credentials_removal_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:temporary_credential_file_absent",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-whole_block:raw_answer_matches_native_receipt",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-per_fragment:target_file_hash",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-per_fragment:target_projection_order",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-per_fragment:target_payload_matches_file",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-per_fragment:only_expected_authorized_facts",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-per_fragment:source_span:joint-check-02-f1",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-per_fragment:source_span:joint-check-02-f2",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-per_fragment:source_span:joint-check-02-f4",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-per_fragment:forbidden_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-per_fragment:forbidden_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-per_fragment:forbidden_absent_from_final",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-per_fragment:registered_sensitive_original_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-per_fragment:registered_sensitive_original_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-per_fragment:final_matches_closed_reference",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-per_fragment:control_answer_is_unknown",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-per_fragment:restoration_actual_rechecked",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-per_fragment:mapping_not_persisted_declaration",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-per_fragment:link_targets_actual_same_task",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-per_fragment:linked_file_input_equivalence",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-per_fragment:linked_fact_position_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-per_fragment:token_position_count_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-per_fragment:translated_token_answer_exact",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-per_fragment:raw_is_linked_actual_response",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-per_fragment:linked_not_marked_native_loaded",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-per_fragment:no_independent_receipt_for_replay",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-existing_selective:target_file_hash",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-existing_selective:target_projection_order",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-existing_selective:target_payload_matches_file",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-existing_selective:only_expected_authorized_facts",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-existing_selective:source_span:joint-check-02-f1",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-existing_selective:source_span:joint-check-02-f2",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-existing_selective:source_span:joint-check-02-f4",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-existing_selective:forbidden_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-existing_selective:forbidden_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-existing_selective:forbidden_absent_from_final",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-existing_selective:registered_sensitive_original_absent_from_target",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-existing_selective:registered_sensitive_original_absent_from_raw",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-existing_selective:final_matches_closed_reference",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-existing_selective:control_answer_is_unknown",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-existing_selective:restoration_actual_rechecked",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-existing_selective:mapping_not_persisted_declaration",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-existing_selective:link_targets_actual_same_task",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-existing_selective:linked_file_input_equivalence",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-existing_selective:linked_fact_position_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-existing_selective:token_position_count_preserved",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-existing_selective:translated_token_answer_exact",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-existing_selective:raw_is_linked_actual_response",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-existing_selective:linked_not_marked_native_loaded",
+      "passed": true
+    },
+    {
+      "name": "joint-check-02-t4-existing_selective:no_independent_receipt_for_replay",
+      "passed": true
+    },
+    {
+      "name": "summary_keeps_actual_and_linked_counts_distinct",
+      "passed": true
+    },
+    {
+      "name": "summary_group:existing_selective:native_and_linked",
+      "passed": true
+    },
+    {
+      "name": "summary_group:existing_selective:story_count",
+      "passed": true
+    },
+    {
+      "name": "summary_group:existing_selective:joint_success_not_inferred_for_linked",
+      "passed": true
+    },
+    {
+      "name": "summary_group:per_fragment:native_and_linked",
+      "passed": true
+    },
+    {
+      "name": "summary_group:per_fragment:story_count",
+      "passed": true
+    },
+    {
+      "name": "summary_group:per_fragment:joint_success_not_inferred_for_linked",
+      "passed": true
+    },
+    {
+      "name": "summary_group:whole_block:native_and_linked",
+      "passed": true
+    },
+    {
+      "name": "summary_group:whole_block:story_count",
+      "passed": true
+    },
+    {
+      "name": "summary_group:whole_block:joint_success_not_inferred_for_linked",
+      "passed": true
+    }
+  ],
+  "checks_count": 666,
+  "passed_count": 666,
+  "failures": [],
+  "actual_receipts": [
+    {
+      "slot_id": "joint-check-01-t1-whole_block",
+      "receipt_sha256": "6a62fb57c798038153ea759a2e58b17229e232027f66168e4ca503a6f4d7ecb9",
+      "agent_memory_sha256": "329153446796d226e0f0c8abdbd887292d28aa0ed507ea2aa532816fa803ec86",
+      "request_bytes": 3815,
+      "maxTokens": 64,
+      "allowed_stream_count": 1,
+      "tool_count": 0,
+      "native_events": 1,
+      "credentials_historical_unchanged_basis": "wrapper_boolean_only",
+      "temporary_credential_current_absence_observed": true
+    },
+    {
+      "slot_id": "joint-check-01-t2-whole_block",
+      "receipt_sha256": "82f7f8e5fb2e133b35d493de29dc9e34bcee7249fcc900a546a09f43adad57b2",
+      "agent_memory_sha256": "0900162b6f9f5c71eee829c29ac82ff76a8c68432db16edff58ef7241bf56616",
+      "request_bytes": 3809,
+      "maxTokens": 64,
+      "allowed_stream_count": 1,
+      "tool_count": 0,
+      "native_events": 1,
+      "credentials_historical_unchanged_basis": "wrapper_boolean_only",
+      "temporary_credential_current_absence_observed": true
+    },
+    {
+      "slot_id": "joint-check-01-t3-whole_block",
+      "receipt_sha256": "e6be95ed5eaface0143f4d8e59e247d0ccabcbfd35e391ba39836515de0e5cb3",
+      "agent_memory_sha256": "1b57e9ac49a5f13098f61fc01727dd62b3f659fcf0032b47da4148ee9344276b",
+      "request_bytes": 3815,
+      "maxTokens": 64,
+      "allowed_stream_count": 1,
+      "tool_count": 0,
+      "native_events": 1,
+      "credentials_historical_unchanged_basis": "wrapper_boolean_only",
+      "temporary_credential_current_absence_observed": true
+    },
+    {
+      "slot_id": "joint-check-01-t4-whole_block",
+      "receipt_sha256": "4095f4c5fc90eb0ed7e92f6cb40596a5a0ea6ec9e131b38cb55ef66be57234c5",
+      "agent_memory_sha256": "3ee57f5e7ffca23086140d481c84465fe80022a0adb0f36635d3d294414a4411",
+      "request_bytes": 3815,
+      "maxTokens": 64,
+      "allowed_stream_count": 1,
+      "tool_count": 0,
+      "native_events": 1,
+      "credentials_historical_unchanged_basis": "wrapper_boolean_only",
+      "temporary_credential_current_absence_observed": true
+    },
+    {
+      "slot_id": "joint-check-02-t1-whole_block",
+      "receipt_sha256": "d738c46b9b7ae1fba89d75452286badf97766a3cd74df027b7eb234f17569e53",
+      "agent_memory_sha256": "b8aa0897e9d7c2948c5196cd8f6731cf4de9bca0068ec72e0fe7d4e8120439e4",
+      "request_bytes": 3812,
+      "maxTokens": 64,
+      "allowed_stream_count": 1,
+      "tool_count": 0,
+      "native_events": 1,
+      "credentials_historical_unchanged_basis": "wrapper_boolean_only",
+      "temporary_credential_current_absence_observed": true
+    },
+    {
+      "slot_id": "joint-check-02-t2-whole_block",
+      "receipt_sha256": "3cad6c6a01bd992255805cbbdbf7e476db2c1289038a5195d97185c50bacab15",
+      "agent_memory_sha256": "71bca28acb1ae3f99f48e32085a3781c87b909c9f8d5b00451b17a034030e2b1",
+      "request_bytes": 3806,
+      "maxTokens": 64,
+      "allowed_stream_count": 1,
+      "tool_count": 0,
+      "native_events": 1,
+      "credentials_historical_unchanged_basis": "wrapper_boolean_only",
+      "temporary_credential_current_absence_observed": true
+    },
+    {
+      "slot_id": "joint-check-02-t3-whole_block",
+      "receipt_sha256": "12d7e7bb5d6e77a4dd9468fc76cf95aa0a29823b296b7703e8d9a38f35f1d136",
+      "agent_memory_sha256": "47aafd027e71069b5c3e32858f424cb33e1ffeb106166483df5ea30a61759398",
+      "request_bytes": 3812,
+      "maxTokens": 64,
+      "allowed_stream_count": 1,
+      "tool_count": 0,
+      "native_events": 1,
+      "credentials_historical_unchanged_basis": "wrapper_boolean_only",
+      "temporary_credential_current_absence_observed": true
+    },
+    {
+      "slot_id": "joint-check-02-t4-whole_block",
+      "receipt_sha256": "68c210f8dd9966605e85cc6e344d30d5f65ae257406f32d7ed50fa685844b640",
+      "agent_memory_sha256": "e8b77f7abf3eb11da11a5f41f182bf3a1f2cad15fd652cadbe8b22db312ae47f",
+      "request_bytes": 3812,
+      "maxTokens": 64,
+      "allowed_stream_count": 1,
+      "tool_count": 0,
+      "native_events": 1,
+      "credentials_historical_unchanged_basis": "wrapper_boolean_only",
+      "temporary_credential_current_absence_observed": true
+    }
+  ],
+  "linked_rows": [
+    {
+      "slot_id": "joint-check-01-t1-per_fragment",
+      "actual_call_slot_id": "joint-check-01-t1-whole_block",
+      "ordered_fact_positions_match": true,
+      "translated_token_answer_matches": true,
+      "independent_client_call": false
+    },
+    {
+      "slot_id": "joint-check-01-t1-existing_selective",
+      "actual_call_slot_id": "joint-check-01-t1-whole_block",
+      "ordered_fact_positions_match": true,
+      "translated_token_answer_matches": true,
+      "independent_client_call": false
+    },
+    {
+      "slot_id": "joint-check-01-t2-per_fragment",
+      "actual_call_slot_id": "joint-check-01-t2-whole_block",
+      "ordered_fact_positions_match": true,
+      "translated_token_answer_matches": true,
+      "independent_client_call": false
+    },
+    {
+      "slot_id": "joint-check-01-t2-existing_selective",
+      "actual_call_slot_id": "joint-check-01-t2-whole_block",
+      "ordered_fact_positions_match": true,
+      "translated_token_answer_matches": true,
+      "independent_client_call": false
+    },
+    {
+      "slot_id": "joint-check-01-t3-per_fragment",
+      "actual_call_slot_id": "joint-check-01-t3-whole_block",
+      "ordered_fact_positions_match": true,
+      "translated_token_answer_matches": true,
+      "independent_client_call": false
+    },
+    {
+      "slot_id": "joint-check-01-t3-existing_selective",
+      "actual_call_slot_id": "joint-check-01-t3-whole_block",
+      "ordered_fact_positions_match": true,
+      "translated_token_answer_matches": true,
+      "independent_client_call": false
+    },
+    {
+      "slot_id": "joint-check-01-t4-per_fragment",
+      "actual_call_slot_id": "joint-check-01-t4-whole_block",
+      "ordered_fact_positions_match": true,
+      "translated_token_answer_matches": true,
+      "independent_client_call": false
+    },
+    {
+      "slot_id": "joint-check-01-t4-existing_selective",
+      "actual_call_slot_id": "joint-check-01-t4-whole_block",
+      "ordered_fact_positions_match": true,
+      "translated_token_answer_matches": true,
+      "independent_client_call": false
+    },
+    {
+      "slot_id": "joint-check-02-t1-per_fragment",
+      "actual_call_slot_id": "joint-check-02-t1-whole_block",
+      "ordered_fact_positions_match": true,
+      "translated_token_answer_matches": true,
+      "independent_client_call": false
+    },
+    {
+      "slot_id": "joint-check-02-t1-existing_selective",
+      "actual_call_slot_id": "joint-check-02-t1-whole_block",
+      "ordered_fact_positions_match": true,
+      "translated_token_answer_matches": true,
+      "independent_client_call": false
+    },
+    {
+      "slot_id": "joint-check-02-t2-per_fragment",
+      "actual_call_slot_id": "joint-check-02-t2-whole_block",
+      "ordered_fact_positions_match": true,
+      "translated_token_answer_matches": true,
+      "independent_client_call": false
+    },
+    {
+      "slot_id": "joint-check-02-t2-existing_selective",
+      "actual_call_slot_id": "joint-check-02-t2-whole_block",
+      "ordered_fact_positions_match": true,
+      "translated_token_answer_matches": true,
+      "independent_client_call": false
+    },
+    {
+      "slot_id": "joint-check-02-t3-per_fragment",
+      "actual_call_slot_id": "joint-check-02-t3-whole_block",
+      "ordered_fact_positions_match": true,
+      "translated_token_answer_matches": true,
+      "independent_client_call": false
+    },
+    {
+      "slot_id": "joint-check-02-t3-existing_selective",
+      "actual_call_slot_id": "joint-check-02-t3-whole_block",
+      "ordered_fact_positions_match": true,
+      "translated_token_answer_matches": true,
+      "independent_client_call": false
+    },
+    {
+      "slot_id": "joint-check-02-t4-per_fragment",
+      "actual_call_slot_id": "joint-check-02-t4-whole_block",
+      "ordered_fact_positions_match": true,
+      "translated_token_answer_matches": true,
+      "independent_client_call": false
+    },
+    {
+      "slot_id": "joint-check-02-t4-existing_selective",
+      "actual_call_slot_id": "joint-check-02-t4-whole_block",
+      "ordered_fact_positions_match": true,
+      "translated_token_answer_matches": true,
+      "independent_client_call": false
+    }
+  ],
+  "independent_stories": 2,
+  "actual_calls": 8,
+  "linked_replays": 16,
+  "limitations": [
+    "Original credentials historical before/after equality is asserted by the runtime wrapper; no credential hashes or bytes are retained for independent historical recomparison. This audit read no credentials.",
+    "Current absence of every temporary .credentials.yaml was observed; this cannot prove no copies ever existed elsewhere.",
+    "native_rendered_content_sha256 hashes the unfiltered original merged event; only AGENTS.md content is retained, so the full merged event digest cannot be independently recomputed. Actual file SHA256, event-content equality and event change SHA1 were independently checked.",
+    "The guard retains request hash, count, shape and bytes but no full provider request body; exact cloud request body reconstruction or provider billing verification is unavailable.",
+    "All source cases are AI-authored synthetic controls, human annotation review is null; exact-value checks do not establish semantic or inferred privacy.",
+    "Linked replay rows reuse an actual response after verified positional pseudonym translation, and are not independent calls or additional stories.",
+    "Restoration maps and temporary signing keys are intentionally not persisted; historical cryptographic authorization cannot be rerun from the retained evidence."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "all_slots_closed": true,
+  "authorization_sha256": "4335e6defdfd6483ea1a23e6afa43aa2b67367b49994e9362ecb5a6c826c1a7f",
+  "cases_sha256": "ed9c713fdae1f0170f26d1ec0f10d5734acc5ffab5aeef50d9e2d0ef47a66739",
+  "client_attempts": 0,
+  "elapsed_seconds": 11.328,
+  "predictions_sha256": "1935f05c370066005bde920a6aaa3afc9eca92a953e4c38ac3a7a3fc43b586d4",
+  "reference_values_opened": false,
+  "references_sha256": "75805099bb78fa8ba4cbc1030936363acfbabe3c1fe332df1a441a2e568b7793",
+  "restoration_maps_persisted": false
+}

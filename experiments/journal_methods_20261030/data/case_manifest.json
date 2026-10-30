@@ -1,0 +1,134 @@
+{
+  "schema": "journal_case_manifest_v1",
+  "created_date": "2026-10-30",
+  "source": "AI-authored synthetic research controls",
+  "human_review": null,
+  "human_semantic_metrics": null,
+  "real_private_memory": false,
+  "purpose": "qualification and feasibility only; not independent natural-language benchmark or publication acceptance",
+  "dev_stories": 4,
+  "check_stories": 8,
+  "facts_per_story": 4,
+  "tasks_per_story": 4,
+  "task_count": 48,
+  "check_task_count": 32,
+  "independent_experimental_unit": "story",
+  "templates_disjoint": true,
+  "dev_template_families": [
+    "development_acceptance_list",
+    "development_shipping_memo",
+    "development_service_change",
+    "development_lab_schedule"
+  ],
+  "check_template_families": [
+    "check_shift_transition",
+    "check_exhibit_layout",
+    "check_river_measurement",
+    "check_program_recording",
+    "check_device_checkout",
+    "check_archive_handover",
+    "check_registration_comparison",
+    "check_teaching_timetable"
+  ],
+  "dev_case_ids": [
+    "dev-01",
+    "dev-02",
+    "dev-03",
+    "dev-04"
+  ],
+  "check_case_ids": [
+    "check-01",
+    "check-02",
+    "check-03",
+    "check-04",
+    "check-05",
+    "check-06",
+    "check-07",
+    "check-08"
+  ],
+  "task_kinds": {
+    "dev": {
+      "legal": 9,
+      "missing": 4,
+      "forbidden": 3
+    },
+    "check": {
+      "legal": 11,
+      "missing": 8,
+      "forbidden": 13
+    }
+  },
+  "policy_contract": {
+    "policy_version": "journal-v1",
+    "exact_principals_only": true,
+    "source_principal": {
+      "user_id": "alice",
+      "agent_id": "qoder"
+    },
+    "target_principal": {
+      "user_id": "alice",
+      "agent_id": "harness"
+    },
+    "target_audience": "harness",
+    "model_recipient": "harness-model-provider",
+    "operations_separate": [
+      "read",
+      "handoff",
+      "restore"
+    ],
+    "export_and_copy_required": true,
+    "only_explicitly_declared_original_spans": true,
+    "pseudonymization_does_not_expand_readers": true,
+    "unknown_or_unsupported_condition": "hold_not_business_deny",
+    "reference_kind": "trusted synthetic declaration, not detector inference",
+    "same_word_origins": "explicit original IDs; equal strings do not prove independence",
+    "privacy_contract": "EMAIL and PERSON synthetic source-span controls, not strict CUSTOMER relationship classifier",
+    "detection_review": "author-declared controlled observations, not measured model uncertainty",
+    "fact_independence": "explicit per-case trusted_independent_facts true; synthetic controller declaration, not inferred from strings or detector",
+    "original_cloud_recipient": "harness-model-provider allowed original and pseudonymized synthetic content, separate from fact transfer and restoration rights"
+  },
+  "reference_access_contract": {
+    "dev_references": "available during development",
+    "check_references": "sealed from developer/executor AIs until code/rules freeze and prediction closure; use separate scoring process",
+    "author_has_seen_check_references": true,
+    "author_does_not_execute_predictions": true,
+    "closure_required_before_scoring": true,
+    "fixture_not_claimed_physically_access_controlled": true
+  },
+  "scenario_context_contract": {
+    "missing_attribute": "check request omits policy_version, reference remains frozen; classify unknown separately",
+    "revocation": "revoke first fact after preparation and before restoration; do not rewrite initial facts",
+    "wrong_agent": "same user and policy-permitted registered harness; request instead executes unregistered-agent, no Cartesian grant",
+    "wrong_audience_operation": "explicit wrong operation and destination in request_context; no silent normalization",
+    "origin_source_binding": "declared_origin_source_id denotes distinct source object ID; all fact offsets still index case.source.text, root constructs same exact full text with that source ID"
+  },
+  "files": {
+    "dev_cases.json": {
+      "sha256": "beaaa9fded42259996f315008da91d160d2ec7740d2bb173ea585c4fe657c0f4",
+      "bytes": 22217
+    },
+    "check_cases.json": {
+      "sha256": "15100c6f7bb90ad652674bfb63e7f635990c9c67203f2e814b586753725a19e5",
+      "bytes": 44867
+    },
+    "dev_references.json": {
+      "sha256": "4f03c2b664011f837c77b13a8870cda68e12d1ef21cfb73882281f22114cefb0",
+      "bytes": 1598
+    },
+    "check_references.json": {
+      "sha256": "d9d1c63f5521d9cb309a1786ae67bf44a658d098c9a2e86edca58094e5c2b777",
+      "bytes": 3219
+    }
+  },
+  "validations": {
+    "exact_source_intervals": true,
+    "relative_sensitive_intervals": true,
+    "all_ids_unique": true,
+    "four_facts_and_four_tasks_per_story": true,
+    "question_does_not_include_expected_value": true,
+    "dev_check_templates_disjoint": true,
+    "at_least_two_non_sensitive_review_stories": true,
+    "read_export_copy_but_no_restore_covered": true
+  },
+  "freeze_status": "authored_data_frozen_before_executor_prediction_and_score_reference_access"
+}

@@ -1,0 +1,736 @@
+{
+  "schema": "journal_cases_v1",
+  "cases": [
+    {
+      "case_id": "dev-01",
+      "split": "dev",
+      "scenario": "normal_handoff",
+      "template_family": "development_acceptance_list",
+      "source": {
+        "source_id": "dev-01-source",
+        "text": "【合成研究材料 synthetic】青帆项目验收清单\n条目1｜交付日为2031年4月12日。\n条目2｜验收区为北侧甲区。\n条目3｜通知邮箱为demo-blue@example.invalid。\n条目4｜包装标记为圆形。\n"
+      },
+      "facts": [
+        {
+          "text": "交付日为2031年4月12日。",
+          "recipient_read": true,
+          "export_allowed": true,
+          "copy_allowed": true,
+          "restore_allowed": true,
+          "fact_id": "dev-01-f1",
+          "start": 31,
+          "end": 46,
+          "privacy_spans": [],
+          "allowed_principals": [
+            {
+              "user_id": "alice",
+              "agent_id": "qoder"
+            },
+            {
+              "user_id": "alice",
+              "agent_id": "harness"
+            }
+          ],
+          "detection_status": "ok"
+        },
+        {
+          "text": "验收区为北侧甲区。",
+          "recipient_read": true,
+          "export_allowed": true,
+          "copy_allowed": true,
+          "restore_allowed": true,
+          "fact_id": "dev-01-f2",
+          "start": 51,
+          "end": 60,
+          "privacy_spans": [],
+          "allowed_principals": [
+            {
+              "user_id": "alice",
+              "agent_id": "qoder"
+            },
+            {
+              "user_id": "alice",
+              "agent_id": "harness"
+            }
+          ],
+          "detection_status": "ok"
+        },
+        {
+          "text": "通知邮箱为demo-blue@example.invalid。",
+          "recipient_read": true,
+          "export_allowed": true,
+          "copy_allowed": true,
+          "restore_allowed": true,
+          "fact_id": "dev-01-f3",
+          "start": 65,
+          "end": 96,
+          "privacy_spans": [
+            {
+              "start": 5,
+              "end": 30,
+              "category": "EMAIL"
+            }
+          ],
+          "allowed_principals": [
+            {
+              "user_id": "alice",
+              "agent_id": "qoder"
+            },
+            {
+              "user_id": "alice",
+              "agent_id": "harness"
+            }
+          ],
+          "detection_status": "ok"
+        },
+        {
+          "text": "包装标记为圆形。",
+          "recipient_read": true,
+          "export_allowed": true,
+          "copy_allowed": true,
+          "restore_allowed": true,
+          "fact_id": "dev-01-f4",
+          "start": 101,
+          "end": 109,
+          "privacy_spans": [],
+          "allowed_principals": [
+            {
+              "user_id": "alice",
+              "agent_id": "qoder"
+            },
+            {
+              "user_id": "alice",
+              "agent_id": "harness"
+            }
+          ],
+          "detection_status": "ok"
+        }
+      ],
+      "tasks": [
+        {
+          "task_id": "dev-01-t1",
+          "question": "青帆项目的交付日是什么？",
+          "fact_id": "dev-01-f1",
+          "kind": "legal"
+        },
+        {
+          "task_id": "dev-01-t2",
+          "question": "青帆项目的验收区在哪里？",
+          "fact_id": "dev-01-f2",
+          "kind": "legal"
+        },
+        {
+          "task_id": "dev-01-t3",
+          "question": "青帆项目的通知邮箱是什么？",
+          "fact_id": "dev-01-f3",
+          "kind": "legal"
+        },
+        {
+          "task_id": "dev-01-t4",
+          "question": "青帆项目的备用站点是什么？",
+          "fact_id": null,
+          "kind": "missing"
+        }
+      ],
+      "request_context": {
+        "user_id": "alice",
+        "agent_id": "harness",
+        "operation": "handoff",
+        "audience": "harness",
+        "policy_version": "journal-v1",
+        "model_recipient": "harness-model-provider"
+      },
+      "lifecycle": {
+        "event": "none",
+        "fact_id": null
+      },
+      "trusted_dependency_partition": [
+        [
+          "dev-01-f1"
+        ],
+        [
+          "dev-01-f2"
+        ],
+        [
+          "dev-01-f3"
+        ],
+        [
+          "dev-01-f4"
+        ]
+      ],
+      "dependency_attestation": "explicit synthetic controller declaration; no text-based independence inference",
+      "raw_recipient_authorization": {
+        "source_user": "alice",
+        "source_agent": "qoder",
+        "source_model_recipient": "qoder-model-provider",
+        "all_source_original_synthetic_content_allowed": true,
+        "real_private_content": false
+      },
+      "protected_view_authorization": {
+        "target_user": "alice",
+        "target_agent": "harness",
+        "model_recipient": "harness-model-provider",
+        "requires_explicit_fact_export_copy": true,
+        "requires_explicit_restore_for_values": true,
+        "pseudonymization_allowed": true,
+        "no_automatic_public_release": true
+      },
+      "trusted_independent_facts": true,
+      "hypothetical_cloud_scope": {
+        "allowed_original": true,
+        "allowed_pseudonymized": true,
+        "recipient": "harness-model-provider",
+        "basis": "synthetic-controller-declaration"
+      }
+    },
+    {
+      "case_id": "dev-02",
+      "split": "dev",
+      "scenario": "read_without_export",
+      "template_family": "development_shipping_memo",
+      "source": {
+        "source_id": "dev-02-source",
+        "text": "【合成研究材料 synthetic】银杏样品装运摘要\n条目1｜公开批次编号是GX-314。\n条目2｜内部渠道编号是HB-862。\n条目3｜密封色为琥珀色。\n条目4｜内部联络邮箱是ginkgo-inner@example.invalid。\n"
+      },
+      "facts": [
+        {
+          "text": "公开批次编号是GX-314。",
+          "recipient_read": true,
+          "export_allowed": true,
+          "copy_allowed": true,
+          "restore_allowed": true,
+          "fact_id": "dev-02-f1",
+          "start": 31,
+          "end": 45,
+          "privacy_spans": [],
+          "allowed_principals": [
+            {
+              "user_id": "alice",
+              "agent_id": "qoder"
+            },
+            {
+              "user_id": "alice",
+              "agent_id": "harness"
+            }
+          ],
+          "detection_status": "ok"
+        },
+        {
+          "text": "内部渠道编号是HB-862。",
+          "recipient_read": true,
+          "export_allowed": false,
+          "copy_allowed": true,
+          "restore_allowed": true,
+          "fact_id": "dev-02-f2",
+          "start": 50,
+          "end": 64,
+          "privacy_spans": [],
+          "allowed_principals": [
+            {
+              "user_id": "alice",
+              "agent_id": "qoder"
+            },
+            {
+              "user_id": "alice",
+              "agent_id": "harness"
+            }
+          ],
+          "detection_status": "ok"
+        },
+        {
+          "text": "密封色为琥珀色。",
+          "recipient_read": true,
+          "export_allowed": true,
+          "copy_allowed": true,
+          "restore_allowed": true,
+          "fact_id": "dev-02-f3",
+          "start": 69,
+          "end": 77,
+          "privacy_spans": [],
+          "allowed_principals": [
+            {
+              "user_id": "alice",
+              "agent_id": "qoder"
+            },
+            {
+              "user_id": "alice",
+              "agent_id": "harness"
+            }
+          ],
+          "detection_status": "ok"
+        },
+        {
+          "text": "内部联络邮箱是ginkgo-inner@example.invalid。",
+          "recipient_read": true,
+          "export_allowed": false,
+          "copy_allowed": true,
+          "restore_allowed": true,
+          "fact_id": "dev-02-f4",
+          "start": 82,
+          "end": 118,
+          "privacy_spans": [
+            {
+              "start": 7,
+              "end": 35,
+              "category": "EMAIL"
+            }
+          ],
+          "allowed_principals": [
+            {
+              "user_id": "alice",
+              "agent_id": "qoder"
+            },
+            {
+              "user_id": "alice",
+              "agent_id": "harness"
+            }
+          ],
+          "detection_status": "ok"
+        }
+      ],
+      "tasks": [
+        {
+          "task_id": "dev-02-t1",
+          "question": "银杏样品的公开批次编号是什么？",
+          "fact_id": "dev-02-f1",
+          "kind": "legal"
+        },
+        {
+          "task_id": "dev-02-t2",
+          "question": "银杏样品的内部渠道编号是什么？",
+          "fact_id": "dev-02-f2",
+          "kind": "forbidden"
+        },
+        {
+          "task_id": "dev-02-t3",
+          "question": "银杏样品的密封色是什么？",
+          "fact_id": "dev-02-f3",
+          "kind": "legal"
+        },
+        {
+          "task_id": "dev-02-t4",
+          "question": "银杏样品的保险编号是什么？",
+          "fact_id": null,
+          "kind": "missing"
+        }
+      ],
+      "request_context": {
+        "user_id": "alice",
+        "agent_id": "harness",
+        "operation": "handoff",
+        "audience": "harness",
+        "policy_version": "journal-v1",
+        "model_recipient": "harness-model-provider"
+      },
+      "lifecycle": {
+        "event": "none",
+        "fact_id": null
+      },
+      "trusted_dependency_partition": [
+        [
+          "dev-02-f1"
+        ],
+        [
+          "dev-02-f2"
+        ],
+        [
+          "dev-02-f3"
+        ],
+        [
+          "dev-02-f4"
+        ]
+      ],
+      "dependency_attestation": "explicit synthetic controller declaration; no text-based independence inference",
+      "raw_recipient_authorization": {
+        "source_user": "alice",
+        "source_agent": "qoder",
+        "source_model_recipient": "qoder-model-provider",
+        "all_source_original_synthetic_content_allowed": true,
+        "real_private_content": false
+      },
+      "protected_view_authorization": {
+        "target_user": "alice",
+        "target_agent": "harness",
+        "model_recipient": "harness-model-provider",
+        "requires_explicit_fact_export_copy": true,
+        "requires_explicit_restore_for_values": true,
+        "pseudonymization_allowed": true,
+        "no_automatic_public_release": true
+      },
+      "trusted_independent_facts": true,
+      "hypothetical_cloud_scope": {
+        "allowed_original": true,
+        "allowed_pseudonymized": true,
+        "recipient": "harness-model-provider",
+        "basis": "synthetic-controller-declaration"
+      }
+    },
+    {
+      "case_id": "dev-03",
+      "split": "dev",
+      "scenario": "mixed_permissions",
+      "template_family": "development_service_change",
+      "source": {
+        "source_id": "dev-03-source",
+        "text": "【合成研究材料 synthetic】石榴服务变更记录\n条目1｜变更窗口从09:40开始。\n条目2｜观察时长为55分钟。\n条目3｜私有联系人为杜澄。\n条目4｜恢复联络邮箱为pomegranate-restore@example.invalid。\n"
+      },
+      "facts": [
+        {
+          "text": "变更窗口从09:40开始。",
+          "recipient_read": true,
+          "export_allowed": true,
+          "copy_allowed": true,
+          "restore_allowed": true,
+          "fact_id": "dev-03-f1",
+          "start": 31,
+          "end": 44,
+          "privacy_spans": [],
+          "allowed_principals": [
+            {
+              "user_id": "alice",
+              "agent_id": "qoder"
+            },
+            {
+              "user_id": "alice",
+              "agent_id": "harness"
+            }
+          ],
+          "detection_status": "ok"
+        },
+        {
+          "text": "观察时长为55分钟。",
+          "recipient_read": true,
+          "export_allowed": true,
+          "copy_allowed": true,
+          "restore_allowed": true,
+          "fact_id": "dev-03-f2",
+          "start": 49,
+          "end": 59,
+          "privacy_spans": [],
+          "allowed_principals": [
+            {
+              "user_id": "alice",
+              "agent_id": "qoder"
+            },
+            {
+              "user_id": "alice",
+              "agent_id": "harness"
+            }
+          ],
+          "detection_status": "needs_review",
+          "review_reason": "semantic_uncertainty"
+        },
+        {
+          "text": "私有联系人为杜澄。",
+          "recipient_read": false,
+          "export_allowed": false,
+          "copy_allowed": false,
+          "restore_allowed": false,
+          "fact_id": "dev-03-f3",
+          "start": 64,
+          "end": 73,
+          "privacy_spans": [
+            {
+              "start": 6,
+              "end": 8,
+              "category": "PERSON"
+            }
+          ],
+          "allowed_principals": [
+            {
+              "user_id": "alice",
+              "agent_id": "qoder"
+            }
+          ],
+          "detection_status": "ok"
+        },
+        {
+          "text": "恢复联络邮箱为pomegranate-restore@example.invalid。",
+          "recipient_read": true,
+          "export_allowed": true,
+          "copy_allowed": true,
+          "restore_allowed": false,
+          "fact_id": "dev-03-f4",
+          "start": 78,
+          "end": 121,
+          "privacy_spans": [
+            {
+              "start": 7,
+              "end": 42,
+              "category": "EMAIL"
+            }
+          ],
+          "allowed_principals": [
+            {
+              "user_id": "alice",
+              "agent_id": "qoder"
+            },
+            {
+              "user_id": "alice",
+              "agent_id": "harness"
+            }
+          ],
+          "detection_status": "ok"
+        }
+      ],
+      "tasks": [
+        {
+          "task_id": "dev-03-t1",
+          "question": "石榴服务的变更窗口何时开始？",
+          "fact_id": "dev-03-f1",
+          "kind": "legal"
+        },
+        {
+          "task_id": "dev-03-t2",
+          "question": "石榴服务的观察时长是多少？",
+          "fact_id": "dev-03-f2",
+          "kind": "legal"
+        },
+        {
+          "task_id": "dev-03-t3",
+          "question": "石榴服务的恢复联络邮箱是什么？",
+          "fact_id": "dev-03-f4",
+          "kind": "forbidden"
+        },
+        {
+          "task_id": "dev-03-t4",
+          "question": "石榴服务的备用区域是什么？",
+          "fact_id": null,
+          "kind": "missing"
+        }
+      ],
+      "request_context": {
+        "user_id": "alice",
+        "agent_id": "harness",
+        "operation": "handoff",
+        "audience": "harness",
+        "policy_version": "journal-v1",
+        "model_recipient": "harness-model-provider"
+      },
+      "lifecycle": {
+        "event": "none",
+        "fact_id": null
+      },
+      "trusted_dependency_partition": [
+        [
+          "dev-03-f1"
+        ],
+        [
+          "dev-03-f2"
+        ],
+        [
+          "dev-03-f3"
+        ],
+        [
+          "dev-03-f4"
+        ]
+      ],
+      "dependency_attestation": "explicit synthetic controller declaration; no text-based independence inference",
+      "raw_recipient_authorization": {
+        "source_user": "alice",
+        "source_agent": "qoder",
+        "source_model_recipient": "qoder-model-provider",
+        "all_source_original_synthetic_content_allowed": true,
+        "real_private_content": false
+      },
+      "protected_view_authorization": {
+        "target_user": "alice",
+        "target_agent": "harness",
+        "model_recipient": "harness-model-provider",
+        "requires_explicit_fact_export_copy": true,
+        "requires_explicit_restore_for_values": true,
+        "pseudonymization_allowed": true,
+        "no_automatic_public_release": true
+      },
+      "trusted_independent_facts": true,
+      "hypothetical_cloud_scope": {
+        "allowed_original": true,
+        "allowed_pseudonymized": true,
+        "recipient": "harness-model-provider",
+        "basis": "synthetic-controller-declaration"
+      }
+    },
+    {
+      "case_id": "dev-04",
+      "split": "dev",
+      "scenario": "prepare_then_revoke",
+      "template_family": "development_lab_schedule",
+      "source": {
+        "source_id": "dev-04-source",
+        "text": "【合成研究材料 synthetic】灯塔实验安排\n条目1｜第一轮测试编号为LT-27。\n条目2｜第二轮测试编号为LT-93。\n条目3｜通知邮箱为lighthouse-lab@example.invalid。\n条目4｜仪器安放在五号台。\n"
+      },
+      "facts": [
+        {
+          "text": "第一轮测试编号为LT-27。",
+          "recipient_read": true,
+          "export_allowed": true,
+          "copy_allowed": true,
+          "restore_allowed": true,
+          "fact_id": "dev-04-f1",
+          "start": 29,
+          "end": 43,
+          "privacy_spans": [],
+          "allowed_principals": [
+            {
+              "user_id": "alice",
+              "agent_id": "qoder"
+            },
+            {
+              "user_id": "alice",
+              "agent_id": "harness"
+            }
+          ],
+          "detection_status": "ok"
+        },
+        {
+          "text": "第二轮测试编号为LT-93。",
+          "recipient_read": true,
+          "export_allowed": true,
+          "copy_allowed": true,
+          "restore_allowed": true,
+          "fact_id": "dev-04-f2",
+          "start": 48,
+          "end": 62,
+          "privacy_spans": [],
+          "allowed_principals": [
+            {
+              "user_id": "alice",
+              "agent_id": "qoder"
+            },
+            {
+              "user_id": "alice",
+              "agent_id": "harness"
+            }
+          ],
+          "detection_status": "ok"
+        },
+        {
+          "text": "通知邮箱为lighthouse-lab@example.invalid。",
+          "recipient_read": true,
+          "export_allowed": true,
+          "copy_allowed": true,
+          "restore_allowed": true,
+          "fact_id": "dev-04-f3",
+          "start": 67,
+          "end": 103,
+          "privacy_spans": [
+            {
+              "start": 5,
+              "end": 35,
+              "category": "EMAIL"
+            }
+          ],
+          "allowed_principals": [
+            {
+              "user_id": "alice",
+              "agent_id": "qoder"
+            },
+            {
+              "user_id": "alice",
+              "agent_id": "harness"
+            }
+          ],
+          "detection_status": "ok"
+        },
+        {
+          "text": "仪器安放在五号台。",
+          "recipient_read": true,
+          "export_allowed": true,
+          "copy_allowed": true,
+          "restore_allowed": true,
+          "fact_id": "dev-04-f4",
+          "start": 108,
+          "end": 117,
+          "privacy_spans": [],
+          "allowed_principals": [
+            {
+              "user_id": "alice",
+              "agent_id": "qoder"
+            },
+            {
+              "user_id": "alice",
+              "agent_id": "harness"
+            }
+          ],
+          "detection_status": "ok"
+        }
+      ],
+      "tasks": [
+        {
+          "task_id": "dev-04-t1",
+          "question": "灯塔实验第一轮测试编号是什么？",
+          "fact_id": "dev-04-f1",
+          "kind": "forbidden"
+        },
+        {
+          "task_id": "dev-04-t2",
+          "question": "灯塔实验第二轮测试编号是什么？",
+          "fact_id": "dev-04-f2",
+          "kind": "legal"
+        },
+        {
+          "task_id": "dev-04-t3",
+          "question": "灯塔实验的通知邮箱是什么？",
+          "fact_id": "dev-04-f3",
+          "kind": "legal"
+        },
+        {
+          "task_id": "dev-04-t4",
+          "question": "灯塔实验的额外审批编号是什么？",
+          "fact_id": null,
+          "kind": "missing"
+        }
+      ],
+      "request_context": {
+        "user_id": "alice",
+        "agent_id": "harness",
+        "operation": "handoff",
+        "audience": "harness",
+        "policy_version": "journal-v1",
+        "model_recipient": "harness-model-provider"
+      },
+      "lifecycle": {
+        "event": "revoke_before_restore",
+        "fact_id": "dev-04-f1"
+      },
+      "trusted_dependency_partition": [
+        [
+          "dev-04-f1"
+        ],
+        [
+          "dev-04-f2"
+        ],
+        [
+          "dev-04-f3"
+        ],
+        [
+          "dev-04-f4"
+        ]
+      ],
+      "dependency_attestation": "explicit synthetic controller declaration; no text-based independence inference",
+      "raw_recipient_authorization": {
+        "source_user": "alice",
+        "source_agent": "qoder",
+        "source_model_recipient": "qoder-model-provider",
+        "all_source_original_synthetic_content_allowed": true,
+        "real_private_content": false
+      },
+      "protected_view_authorization": {
+        "target_user": "alice",
+        "target_agent": "harness",
+        "model_recipient": "harness-model-provider",
+        "requires_explicit_fact_export_copy": true,
+        "requires_explicit_restore_for_values": true,
+        "pseudonymization_allowed": true,
+        "no_automatic_public_release": true
+      },
+      "trusted_independent_facts": true,
+      "hypothetical_cloud_scope": {
+        "allowed_original": true,
+        "allowed_pseudonymized": true,
+        "recipient": "harness-model-provider",
+        "basis": "synthetic-controller-declaration"
+      }
+    }
+  ]
+}

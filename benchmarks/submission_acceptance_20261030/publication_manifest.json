@@ -1,0 +1,783 @@
+{
+  "bundle_preserved_file_count": 150,
+  "client_calls": 0,
+  "copied_source_files": {
+    "delivery.json": {
+      "published_sha256": "eb39a173ba707cc71016e0b3c2827a5f195f03ed4f913bd5c4b25061d2ef85e4",
+      "source_sha256": "eb39a173ba707cc71016e0b3c2827a5f195f03ed4f913bd5c4b25061d2ef85e4"
+    },
+    "native_receipt_audit.json": {
+      "published_sha256": "272c6cd09c2a9be2ce26ca6fc45fb6f2a74453f3fa5754e53366575e18dc384b",
+      "source_sha256": "272c6cd09c2a9be2ce26ca6fc45fb6f2a74453f3fa5754e53366575e18dc384b"
+    },
+    "review_bundle_v1/README.md": {
+      "published_sha256": "d1d55828249a4b0e5bd860366befbfbdedabca44b3ac3793050cfda24d23a62f",
+      "source_sha256": "d1d55828249a4b0e5bd860366befbfbdedabca44b3ac3793050cfda24d23a62f"
+    },
+    "review_bundle_v1/experiments/journal_methods_20261030/__init__.py": {
+      "published_sha256": "9da4dfb206b5fc937e8c555ee3cabaeb7af8cd7402e8f05d29ec333cc16fa241",
+      "source_sha256": "9da4dfb206b5fc937e8c555ee3cabaeb7af8cd7402e8f05d29ec333cc16fa241"
+    },
+    "review_bundle_v1/experiments/journal_methods_20261030/account_budget_probe.py": {
+      "published_sha256": "bc1b5a3830fc4f984e25d23311d9ac27e46821e8885f8ecf0b67f022d5b1b33c",
+      "source_sha256": "bc1b5a3830fc4f984e25d23311d9ac27e46821e8885f8ecf0b67f022d5b1b33c"
+    },
+    "review_bundle_v1/experiments/journal_methods_20261030/client_smoke.py": {
+      "published_sha256": "5b73f5055254645bdbe924dc44aaaed44acf42b837b50835f2cfd7560f811c43",
+      "source_sha256": "5b73f5055254645bdbe924dc44aaaed44acf42b837b50835f2cfd7560f811c43"
+    },
+    "review_bundle_v1/experiments/journal_methods_20261030/client_smoke_score.py": {
+      "published_sha256": "17c0ff3f6d5e6fe26f2066f0adf6822eee55b294a47ae5453d2db25d2492c0a7",
+      "source_sha256": "17c0ff3f6d5e6fe26f2066f0adf6822eee55b294a47ae5453d2db25d2492c0a7"
+    },
+    "review_bundle_v1/experiments/journal_methods_20261030/controlled_host.py": {
+      "published_sha256": "76a1f509d4973e457b947c82f35a6e54785ab61e23a697a9dc9fe290030ddb46",
+      "source_sha256": "76a1f509d4973e457b947c82f35a6e54785ab61e23a697a9dc9fe290030ddb46"
+    },
+    "review_bundle_v1/experiments/journal_methods_20261030/policy_semantics_reference.py": {
+      "published_sha256": "7b6d486824953e077ffa9300138ea7b6478403eb3104649a288a66359bad381b",
+      "source_sha256": "7b6d486824953e077ffa9300138ea7b6478403eb3104649a288a66359bad381b"
+    },
+    "review_bundle_v1/experiments/journal_methods_20261030/reference_contract.py": {
+      "published_sha256": "cd3aff766bcf33d605c1012d30f8fc5049dfa4146c89677e5559fd243232df5b",
+      "source_sha256": "cd3aff766bcf33d605c1012d30f8fc5049dfa4146c89677e5559fd243232df5b"
+    },
+    "review_bundle_v1/experiments/journal_methods_20261030/run_paired_acceptance.py": {
+      "published_sha256": "b5ec57ecdd9d08b1b92675483bd475c5a17a6a1148bed9d1d2410054761427b2",
+      "source_sha256": "b5ec57ecdd9d08b1b92675483bd475c5a17a6a1148bed9d1d2410054761427b2"
+    },
+    "review_bundle_v1/experiments/journal_methods_20261030/summarize.py": {
+      "published_sha256": "72f2c5254511241d189200ae447e6f7471acaf4e3846abee7b8b9a69fdd6efe7",
+      "source_sha256": "72f2c5254511241d189200ae447e6f7471acaf4e3846abee7b8b9a69fdd6efe7"
+    },
+    "review_bundle_v1/experiments/journal_methods_20261030/verify_memory_flow.py": {
+      "published_sha256": "ced3ddcef4d744578c0135b9e3d88af7acf6d24313f11df512811a43ae9e778f",
+      "source_sha256": "ced3ddcef4d744578c0135b9e3d88af7acf6d24313f11df512811a43ae9e778f"
+    },
+    "review_bundle_v1/experiments/submission_acceptance_20261030/CONTRACT.md": {
+      "published_sha256": "b7f97b5090dbe1b26f71367d5851d1594e3011c62706481ac4b7ace802506252",
+      "source_sha256": "b7f97b5090dbe1b26f71367d5851d1594e3011c62706481ac4b7ace802506252"
+    },
+    "review_bundle_v1/experiments/submission_acceptance_20261030/__init__.py": {
+      "published_sha256": "7fc1dd31e4feaf5c8761a81693021551fea23cb35b20dbbb23488f17b0ec5473",
+      "source_sha256": "7fc1dd31e4feaf5c8761a81693021551fea23cb35b20dbbb23488f17b0ec5473"
+    },
+    "review_bundle_v1/experiments/submission_acceptance_20261030/data/cases.json": {
+      "published_sha256": "ed9c713fdae1f0170f26d1ec0f10d5734acc5ffab5aeef50d9e2d0ef47a66739",
+      "source_sha256": "ed9c713fdae1f0170f26d1ec0f10d5734acc5ffab5aeef50d9e2d0ef47a66739"
+    },
+    "review_bundle_v1/experiments/submission_acceptance_20261030/data/manifest.json": {
+      "published_sha256": "6060a6e1bbacbf4e5565009b927ce79a60fbad9cc684cbcb55cf189af7449ece",
+      "source_sha256": "6060a6e1bbacbf4e5565009b927ce79a60fbad9cc684cbcb55cf189af7449ece"
+    },
+    "review_bundle_v1/experiments/submission_acceptance_20261030/data/references.json": {
+      "published_sha256": "75805099bb78fa8ba4cbc1030936363acfbabe3c1fe332df1a441a2e568b7793",
+      "source_sha256": "75805099bb78fa8ba4cbc1030936363acfbabe3c1fe332df1a441a2e568b7793"
+    },
+    "review_bundle_v1/experiments/submission_acceptance_20261030/package.py": {
+      "published_sha256": "dbd90753462eb68e5a735e81a1cae1927e117ce5654c2403fd0435f3fd6d7f9a",
+      "source_sha256": "dbd90753462eb68e5a735e81a1cae1927e117ce5654c2403fd0435f3fd6d7f9a"
+    },
+    "review_bundle_v1/experiments/submission_acceptance_20261030/pipeline.py": {
+      "published_sha256": "25a63da360ce008b878aa58c3521e050dc57105bf5054c6fa062e5567d2f7ee9",
+      "source_sha256": "25a63da360ce008b878aa58c3521e050dc57105bf5054c6fa062e5567d2f7ee9"
+    },
+    "review_bundle_v1/experiments/submission_acceptance_20261030/reference.py": {
+      "published_sha256": "9afff33658ff3d75071508a27f46a5ad06467d519d6a968d1bdcc44e87ce0764",
+      "source_sha256": "9afff33658ff3d75071508a27f46a5ad06467d519d6a968d1bdcc44e87ce0764"
+    },
+    "review_bundle_v1/experiments/submission_acceptance_20261030/run.py": {
+      "published_sha256": "36965d1926055ef26506b1cb92ea927b231114ce35e4d56ee9d0600ea625480e",
+      "source_sha256": "36965d1926055ef26506b1cb92ea927b231114ce35e4d56ee9d0600ea625480e"
+    },
+    "review_bundle_v1/experiments/submission_acceptance_20261030/score.py": {
+      "published_sha256": "6a37bb25c1d32357b18fdc9a6d93ab9f1980b74e0c3c3c07822f8b22b2cae076",
+      "source_sha256": "6a37bb25c1d32357b18fdc9a6d93ab9f1980b74e0c3c3c07822f8b22b2cae076"
+    },
+    "review_bundle_v1/manifest.json": {
+      "published_sha256": "10e20b0b7953c532c683a77508ccddf3f194a7a95dc3821e9f17ce7cd1fb01a0",
+      "source_sha256": "10e20b0b7953c532c683a77508ccddf3f194a7a95dc3821e9f17ce7cd1fb01a0"
+    },
+    "review_bundle_v1/memory_migration_study/__init__.py": {
+      "published_sha256": "5db86bb3981ca95dc7f630734f01a45d6beaca68e4b566709a7bf60caa6150e5",
+      "source_sha256": "5db86bb3981ca95dc7f630734f01a45d6beaca68e4b566709a7bf60caa6150e5"
+    },
+    "review_bundle_v1/memory_migration_study/__main__.py": {
+      "published_sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "source_sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+    },
+    "review_bundle_v1/memory_migration_study/amount_candidates.py": {
+      "published_sha256": "bf5d5b71300da1f6dbe92c79f79690389779738d7a29241e574dc551063d9640",
+      "source_sha256": "bf5d5b71300da1f6dbe92c79f79690389779738d7a29241e574dc551063d9640"
+    },
+    "review_bundle_v1/memory_migration_study/answer_evidence.py": {
+      "published_sha256": "d3d151da9318ed5b6e993a27cf215e1165be37d884493de25664d98cd432266a",
+      "source_sha256": "d3d151da9318ed5b6e993a27cf215e1165be37d884493de25664d98cd432266a"
+    },
+    "review_bundle_v1/memory_migration_study/answer_serialization.py": {
+      "published_sha256": "973a6a3387e44289a28765c3ffffc0bc7a2c162e7f37cf5c3b8c19705878a13f",
+      "source_sha256": "973a6a3387e44289a28765c3ffffc0bc7a2c162e7f37cf5c3b8c19705878a13f"
+    },
+    "review_bundle_v1/memory_migration_study/authority_freshness.py": {
+      "published_sha256": "298d5f54510dbe3b716db083aaa4793ca7f6754ce1513e7895e66985c73fe547",
+      "source_sha256": "298d5f54510dbe3b716db083aaa4793ca7f6754ce1513e7895e66985c73fe547"
+    },
+    "review_bundle_v1/memory_migration_study/backend.py": {
+      "published_sha256": "3d9628990206884c5a14a5b050acdbdfea5f35adab8949afa84fa5b05778b450",
+      "source_sha256": "3d9628990206884c5a14a5b050acdbdfea5f35adab8949afa84fa5b05778b450"
+    },
+    "review_bundle_v1/memory_migration_study/boundary_detector.py": {
+      "published_sha256": "6bd9e1527d6eb772a05b89925c3db1cf160088a1fe73ee6b378affc1200cfd4d",
+      "source_sha256": "6bd9e1527d6eb772a05b89925c3db1cf160088a1fe73ee6b378affc1200cfd4d"
+    },
+    "review_bundle_v1/memory_migration_study/boundary_preparation.py": {
+      "published_sha256": "e4e8094bfae1a7b76954f7c576c4f53d0366104379b69e34000d901fe81275c8",
+      "source_sha256": "e4e8094bfae1a7b76954f7c576c4f53d0366104379b69e34000d901fe81275c8"
+    },
+    "review_bundle_v1/memory_migration_study/boundary_reconciliation.py": {
+      "published_sha256": "63ee4781ed1d784710ef64c2ba1e81654e5d5596a7e1d45d597eadd2a3786e57",
+      "source_sha256": "63ee4781ed1d784710ef64c2ba1e81654e5d5596a7e1d45d597eadd2a3786e57"
+    },
+    "review_bundle_v1/memory_migration_study/budget.py": {
+      "published_sha256": "7678cb0d652e5a57505e15a9958916d2564d812ff4dfa02dbd91f771fcf3e7a2",
+      "source_sha256": "7678cb0d652e5a57505e15a9958916d2564d812ff4dfa02dbd91f771fcf3e7a2"
+    },
+    "review_bundle_v1/memory_migration_study/candidate_adjudicator.py": {
+      "published_sha256": "9124421e79051fa0cceea7c3a9dbfa3eceaf9fe5f46d3ca5e9e62913df7e8bf2",
+      "source_sha256": "9124421e79051fa0cceea7c3a9dbfa3eceaf9fe5f46d3ca5e9e62913df7e8bf2"
+    },
+    "review_bundle_v1/memory_migration_study/candidate_context_batch.py": {
+      "published_sha256": "01455583d5c3cf901251fd50f4cd7927b88ad860d8a2d5a8140c0a99d1478581",
+      "source_sha256": "01455583d5c3cf901251fd50f4cd7927b88ad860d8a2d5a8140c0a99d1478581"
+    },
+    "review_bundle_v1/memory_migration_study/candidate_context_batch_v2.py": {
+      "published_sha256": "092193c08079060909e4239ea3608bf667ecbb04e8748d42eab075676a03ac6b",
+      "source_sha256": "092193c08079060909e4239ea3608bf667ecbb04e8748d42eab075676a03ac6b"
+    },
+    "review_bundle_v1/memory_migration_study/candidate_decision.py": {
+      "published_sha256": "28efdb67d05ab40624de331d6a2ad99d4a3a54e7943f42c339348b3ca946cc09",
+      "source_sha256": "28efdb67d05ab40624de331d6a2ad99d4a3a54e7943f42c339348b3ca946cc09"
+    },
+    "review_bundle_v1/memory_migration_study/candidate_decision_detection.py": {
+      "published_sha256": "76946fd02e89596b67c5e8706031a8e11045cd84a3fb00d5f81ad70f49cd3a89",
+      "source_sha256": "76946fd02e89596b67c5e8706031a8e11045cd84a3fb00d5f81ad70f49cd3a89"
+    },
+    "review_bundle_v1/memory_migration_study/candidate_proposals.py": {
+      "published_sha256": "32be4b9a305f43e8f9701c3b50c822f0a98b13411c2d12dd57a2692dc4b9e323",
+      "source_sha256": "32be4b9a305f43e8f9701c3b50c822f0a98b13411c2d12dd57a2692dc4b9e323"
+    },
+    "review_bundle_v1/memory_migration_study/cli.py": {
+      "published_sha256": "38a58c8b00823c729ed0e1b8e8952aeebfe3a4ec39e34762856492beb136daaa",
+      "source_sha256": "38a58c8b00823c729ed0e1b8e8952aeebfe3a4ec39e34762856492beb136daaa"
+    },
+    "review_bundle_v1/memory_migration_study/context_candidate_typing.py": {
+      "published_sha256": "59fa3076f4e507d56fc63e95e860cf0d0bd813bf369c945ed10358c074421044",
+      "source_sha256": "59fa3076f4e507d56fc63e95e860cf0d0bd813bf369c945ed10358c074421044"
+    },
+    "review_bundle_v1/memory_migration_study/context_typed_detection.py": {
+      "published_sha256": "35cecbd57b34cde9c5502e35770ba4576841c539a2ee8135de275ed2ad0a8817",
+      "source_sha256": "35cecbd57b34cde9c5502e35770ba4576841c539a2ee8135de275ed2ad0a8817"
+    },
+    "review_bundle_v1/memory_migration_study/coverage_memory.py": {
+      "published_sha256": "4280d0ffbe381e602f9e6547ee18d3d760cda909216fd0bde14129593e25260b",
+      "source_sha256": "4280d0ffbe381e602f9e6547ee18d3d760cda909216fd0bde14129593e25260b"
+    },
+    "review_bundle_v1/memory_migration_study/current_authority.py": {
+      "published_sha256": "350c22d9ac343f9c2990c20cd7dff11df29f06564fd384d917ac4e9e356b4221",
+      "source_sha256": "350c22d9ac343f9c2990c20cd7dff11df29f06564fd384d917ac4e9e356b4221"
+    },
+    "review_bundle_v1/memory_migration_study/deadline_http.py": {
+      "published_sha256": "5cb744edc59ebd5d09c2910dbd1659dee577681c21d6f1d10649c6f26d6e1b18",
+      "source_sha256": "5cb744edc59ebd5d09c2910dbd1659dee577681c21d6f1d10649c6f26d6e1b18"
+    },
+    "review_bundle_v1/memory_migration_study/deepseek_native.py": {
+      "published_sha256": "f1e058557aa6f91e160499513b70fed861a729a8a2ae61ce8d9e90a9a6ff9d9a",
+      "source_sha256": "f1e058557aa6f91e160499513b70fed861a729a8a2ae61ce8d9e90a9a6ff9d9a"
+    },
+    "review_bundle_v1/memory_migration_study/deepseek_sdk.py": {
+      "published_sha256": "c631f0f07436d2a55445d79ac605740dc0983c07dc4838a3c829d4b4fa7e5ec9",
+      "source_sha256": "c631f0f07436d2a55445d79ac605740dc0983c07dc4838a3c829d4b4fa7e5ec9"
+    },
+    "review_bundle_v1/memory_migration_study/detection_cache.py": {
+      "published_sha256": "b43e32d3d8b34c16d6d5d5f148a331ad62263bde8ab72949f666564ac55af054",
+      "source_sha256": "b43e32d3d8b34c16d6d5d5f148a331ad62263bde8ab72949f666564ac55af054"
+    },
+    "review_bundle_v1/memory_migration_study/evidence.py": {
+      "published_sha256": "ff7af54c2babe30d3270c4b227560ee6c7669e8b1b40aec90e6ead369235faf4",
+      "source_sha256": "ff7af54c2babe30d3270c4b227560ee6c7669e8b1b40aec90e6ead369235faf4"
+    },
+    "review_bundle_v1/memory_migration_study/evidence_answerer.py": {
+      "published_sha256": "354a99f342113e9adab5e6efb8a046918bb7f46d8cac1296ff2a53c175683a64",
+      "source_sha256": "354a99f342113e9adab5e6efb8a046918bb7f46d8cac1296ff2a53c175683a64"
+    },
+    "review_bundle_v1/memory_migration_study/focused_semantic_reader.py": {
+      "published_sha256": "16d45eccfef104a6f5b28066c19764f091bbe26031b9b6b96dac779cf6cd37ff",
+      "source_sha256": "16d45eccfef104a6f5b28066c19764f091bbe26031b9b6b96dac779cf6cd37ff"
+    },
+    "review_bundle_v1/memory_migration_study/focused_semantic_scoring.py": {
+      "published_sha256": "33b332e8690953bec4a959c953e059db2141b3e3745c22ea544900414f2ab50e",
+      "source_sha256": "33b332e8690953bec4a959c953e059db2141b3e3745c22ea544900414f2ab50e"
+    },
+    "review_bundle_v1/memory_migration_study/gliclass_candidate.py": {
+      "published_sha256": "cc9815616f3287d202e7a936d88b90263f75a3f76d0d8e91d4813b0b8e847de8",
+      "source_sha256": "cc9815616f3287d202e7a936d88b90263f75a3f76d0d8e91d4813b0b8e847de8"
+    },
+    "review_bundle_v1/memory_migration_study/legacy.py": {
+      "published_sha256": "67cdfbe38d62cba2e13561c7915f0843dcaf777ba90fb5b9d342cb4bd2686b2a",
+      "source_sha256": "67cdfbe38d62cba2e13561c7915f0843dcaf777ba90fb5b9d342cb4bd2686b2a"
+    },
+    "review_bundle_v1/memory_migration_study/llm_worker.py": {
+      "published_sha256": "9e526660c831692486e1d0fe4382ad42ba664dd1c42d4ba2a7a849a32e24849f",
+      "source_sha256": "9e526660c831692486e1d0fe4382ad42ba664dd1c42d4ba2a7a849a32e24849f"
+    },
+    "review_bundle_v1/memory_migration_study/local_detector.py": {
+      "published_sha256": "ecc36938c038501a613ee2de2dd70a395f4be27c1fdeaaa3f18e80832bcb5fe8",
+      "source_sha256": "ecc36938c038501a613ee2de2dd70a395f4be27c1fdeaaa3f18e80832bcb5fe8"
+    },
+    "review_bundle_v1/memory_migration_study/memory_builder.py": {
+      "published_sha256": "481926a33f8deedfdb36f1a025e3578660894818700048ae78c1bc0e84da6140",
+      "source_sha256": "481926a33f8deedfdb36f1a025e3578660894818700048ae78c1bc0e84da6140"
+    },
+    "review_bundle_v1/memory_migration_study/memory_generation_corpus.py": {
+      "published_sha256": "9aee813f28fef0435a260d296b9b1e0c12f265bc6ecd24597ab531954a51059b",
+      "source_sha256": "9aee813f28fef0435a260d296b9b1e0c12f265bc6ecd24597ab531954a51059b"
+    },
+    "review_bundle_v1/memory_migration_study/memory_generation_experiment.py": {
+      "published_sha256": "283bdced55cf95a7837038d54075d2a065dc3133b0874692e33f095f1b256179",
+      "source_sha256": "283bdced55cf95a7837038d54075d2a065dc3133b0874692e33f095f1b256179"
+    },
+    "review_bundle_v1/memory_migration_study/memory_labels.py": {
+      "published_sha256": "be6df2476c1c0cc215043dafa4fe9051b089e915c65262147aab37ad9e69a387",
+      "source_sha256": "be6df2476c1c0cc215043dafa4fe9051b089e915c65262147aab37ad9e69a387"
+    },
+    "review_bundle_v1/memory_migration_study/native_agent_protocol.py": {
+      "published_sha256": "38fd8e3673ef9eba3df17c643d02f1d8f763c48b826c99e928ea745aecf0f770",
+      "source_sha256": "38fd8e3673ef9eba3df17c643d02f1d8f763c48b826c99e928ea745aecf0f770"
+    },
+    "review_bundle_v1/memory_migration_study/native_privacy_gateway.py": {
+      "published_sha256": "d578da090f60f2f187874d13b06b25ea9552299f15b455550c9067356a7a4f09",
+      "source_sha256": "d578da090f60f2f187874d13b06b25ea9552299f15b455550c9067356a7a4f09"
+    },
+    "review_bundle_v1/memory_migration_study/native_span_attributes.py": {
+      "published_sha256": "45a2ba58533fde59888c1953b74fd5bcea1c5e626e800b1c2204e87d65617ff6",
+      "source_sha256": "45a2ba58533fde59888c1953b74fd5bcea1c5e626e800b1c2204e87d65617ff6"
+    },
+    "review_bundle_v1/memory_migration_study/native_webui.py": {
+      "published_sha256": "2ffab1f2086920bdc2abd2092990a6b569649c1b8c80767d5fb57ba74f15c15a",
+      "source_sha256": "2ffab1f2086920bdc2abd2092990a6b569649c1b8c80767d5fb57ba74f15c15a"
+    },
+    "review_bundle_v1/memory_migration_study/ner_benchmark.py": {
+      "published_sha256": "c45a13d7d1363b4dd4b93dd93ec542f042ad132fdf2860598dfb5d7685059296",
+      "source_sha256": "c45a13d7d1363b4dd4b93dd93ec542f042ad132fdf2860598dfb5d7685059296"
+    },
+    "review_bundle_v1/memory_migration_study/ner_detector.py": {
+      "published_sha256": "64ce93e1fb3254b60f1f4ce048ccc19cf4fdbbe23d3f87e2762ef377cc7d950e",
+      "source_sha256": "64ce93e1fb3254b60f1f4ce048ccc19cf4fdbbe23d3f87e2762ef377cc7d950e"
+    },
+    "review_bundle_v1/memory_migration_study/nli_candidate.py": {
+      "published_sha256": "a8ada55a40534e7bb824a0723c769bb8411b7adcb40e902f0390d0bad0cfddb1",
+      "source_sha256": "a8ada55a40534e7bb824a0723c769bb8411b7adcb40e902f0390d0bad0cfddb1"
+    },
+    "review_bundle_v1/memory_migration_study/occurrence_qwen.py": {
+      "published_sha256": "9f84483eb822147a819d845194827b7f42983497ae7022661e6c2236c90a4d6e",
+      "source_sha256": "9f84483eb822147a819d845194827b7f42983497ae7022661e6c2236c90a4d6e"
+    },
+    "review_bundle_v1/memory_migration_study/occurrence_routing.py": {
+      "published_sha256": "ac292aae19c090f1e30b5605582c92650e7ad5e74c1b7b488edc86934b1d1521",
+      "source_sha256": "ac292aae19c090f1e30b5605582c92650e7ad5e74c1b7b488edc86934b1d1521"
+    },
+    "review_bundle_v1/memory_migration_study/open_container_candidates.py": {
+      "published_sha256": "a4cd5082bb43573a6d1e26770f4786f394b427555e1febc0bce4978253ed30f8",
+      "source_sha256": "a4cd5082bb43573a6d1e26770f4786f394b427555e1febc0bce4978253ed30f8"
+    },
+    "review_bundle_v1/memory_migration_study/paired_task_metrics.py": {
+      "published_sha256": "c847fd3915ff020a52d1e8b4d56f05963349b33c510946eabadaca83f8288ee2",
+      "source_sha256": "c847fd3915ff020a52d1e8b4d56f05963349b33c510946eabadaca83f8288ee2"
+    },
+    "review_bundle_v1/memory_migration_study/pisas_source.py": {
+      "published_sha256": "49034eeb660d9c1ef04c56a19fb9d7b95f20af97820faac114c1ab900e15f9e6",
+      "source_sha256": "49034eeb660d9c1ef04c56a19fb9d7b95f20af97820faac114c1ab900e15f9e6"
+    },
+    "review_bundle_v1/memory_migration_study/plan_verifier.py": {
+      "published_sha256": "25cb3d579bd7df2df32fcb567408077363cd59eb5996925899a01a09faf53fc5",
+      "source_sha256": "25cb3d579bd7df2df32fcb567408077363cd59eb5996925899a01a09faf53fc5"
+    },
+    "review_bundle_v1/memory_migration_study/policy.py": {
+      "published_sha256": "9798a2dc2642e55d9a3335209c5f13c57aae29acedab97b014a48a4fb4b9a75e",
+      "source_sha256": "9798a2dc2642e55d9a3335209c5f13c57aae29acedab97b014a48a4fb4b9a75e"
+    },
+    "review_bundle_v1/memory_migration_study/policy_projection_gateway.py": {
+      "published_sha256": "b5f2fd5762c3e3de1a80a53b81d17820cd68a0cabdb7bfff0f2bc91ca7cd435f",
+      "source_sha256": "b5f2fd5762c3e3de1a80a53b81d17820cd68a0cabdb7bfff0f2bc91ca7cd435f"
+    },
+    "review_bundle_v1/memory_migration_study/policy_projection_reference.py": {
+      "published_sha256": "0bec670bcd8b13dae6e9a4ac157e7c1edf851cb45933b26f3fa1c3d31746dfb3",
+      "source_sha256": "0bec670bcd8b13dae6e9a4ac157e7c1edf851cb45933b26f3fa1c3d31746dfb3"
+    },
+    "review_bundle_v1/memory_migration_study/policy_semantics.py": {
+      "published_sha256": "bbd891394c09f419d3a9eb20467f8a1e9d1f7ccb2d77ec39c8d1805445caffe9",
+      "source_sha256": "bbd891394c09f419d3a9eb20467f8a1e9d1f7ccb2d77ec39c8d1805445caffe9"
+    },
+    "review_bundle_v1/memory_migration_study/prepare.py": {
+      "published_sha256": "4cb732863760206769c4b142ec10207f9a1d422fcf99343ea6b6e96fb5d00fb4",
+      "source_sha256": "4cb732863760206769c4b142ec10207f9a1d422fcf99343ea6b6e96fb5d00fb4"
+    },
+    "review_bundle_v1/memory_migration_study/principal_scope.py": {
+      "published_sha256": "1001a7a7ba2edaf7a782e4e8b1749cd1571abf6f0a23756e2ab63a0c92179d3c",
+      "source_sha256": "1001a7a7ba2edaf7a782e4e8b1749cd1571abf6f0a23756e2ab63a0c92179d3c"
+    },
+    "review_bundle_v1/memory_migration_study/privacy.py": {
+      "published_sha256": "011921e7fae119e5ea1b49c905e5e99e345a18ac8f3f7e643d584c25a87032bc",
+      "source_sha256": "011921e7fae119e5ea1b49c905e5e99e345a18ac8f3f7e643d584c25a87032bc"
+    },
+    "review_bundle_v1/memory_migration_study/privacy_corpus.py": {
+      "published_sha256": "9dd7b74b3fc4a578e9727a695f88e3a4a2477045582fdf7196d8c46c452eabe9",
+      "source_sha256": "9dd7b74b3fc4a578e9727a695f88e3a4a2477045582fdf7196d8c46c452eabe9"
+    },
+    "review_bundle_v1/memory_migration_study/privacy_corpus_v2.py": {
+      "published_sha256": "af43aeb45d7457b145b18f855db23b7faa763fcd7019e9c994ca94bef6ccc7aa",
+      "source_sha256": "af43aeb45d7457b145b18f855db23b7faa763fcd7019e9c994ca94bef6ccc7aa"
+    },
+    "review_bundle_v1/memory_migration_study/privacy_corpus_v3.py": {
+      "published_sha256": "4c2eb5cb89d2811afb95c42acc61ae3ab47a22c516e3159dd33c1d91490d0e5c",
+      "source_sha256": "4c2eb5cb89d2811afb95c42acc61ae3ab47a22c516e3159dd33c1d91490d0e5c"
+    },
+    "review_bundle_v1/memory_migration_study/privacy_corpus_v3_final.py": {
+      "published_sha256": "0f33c77867c07d0bd3280433c95e0f49b35977deada3efe1069359ce92f4b6e9",
+      "source_sha256": "0f33c77867c07d0bd3280433c95e0f49b35977deada3efe1069359ce92f4b6e9"
+    },
+    "review_bundle_v1/memory_migration_study/privacy_egress.py": {
+      "published_sha256": "239a138cbbe5497355462657122a3feca9bdefabbcf25f2b90550e12d5c1fe93",
+      "source_sha256": "239a138cbbe5497355462657122a3feca9bdefabbcf25f2b90550e12d5c1fe93"
+    },
+    "review_bundle_v1/memory_migration_study/privacy_experiment.py": {
+      "published_sha256": "2abc9365247ef4b7eb22970794ad6762a9fc0c91de11b93c1bbfd790d1e3efbd",
+      "source_sha256": "2abc9365247ef4b7eb22970794ad6762a9fc0c91de11b93c1bbfd790d1e3efbd"
+    },
+    "review_bundle_v1/memory_migration_study/privacy_local.py": {
+      "published_sha256": "f1ac6501655cad365ef11568e911d8fe7fcecb573353f0e9aeddf9ba82d4845f",
+      "source_sha256": "f1ac6501655cad365ef11568e911d8fe7fcecb573353f0e9aeddf9ba82d4845f"
+    },
+    "review_bundle_v1/memory_migration_study/privacy_payload_eval.py": {
+      "published_sha256": "c37ca56b47956cae8b5170ea930efd3b164fb775833b47aaa5f7801befc90d16",
+      "source_sha256": "c37ca56b47956cae8b5170ea930efd3b164fb775833b47aaa5f7801befc90d16"
+    },
+    "review_bundle_v1/memory_migration_study/private_request_boundary.py": {
+      "published_sha256": "1bf4e50e8efbd3e745423580067ae68178eb4af5217a80df4ea4d08e1fb72725",
+      "source_sha256": "1bf4e50e8efbd3e745423580067ae68178eb4af5217a80df4ea4d08e1fb72725"
+    },
+    "review_bundle_v1/memory_migration_study/provider_preflight.py": {
+      "published_sha256": "873e2fa554712df4de1c9e662646c16406589c469a766442dac8a8f2a4dc0615",
+      "source_sha256": "873e2fa554712df4de1c9e662646c16406589c469a766442dac8a8f2a4dc0615"
+    },
+    "review_bundle_v1/memory_migration_study/public_fixture.py": {
+      "published_sha256": "7b7a845c0edd580cdf55c7dd66922f23c45b6a924c552b562183042910b47849",
+      "source_sha256": "7b7a845c0edd580cdf55c7dd66922f23c45b6a924c552b562183042910b47849"
+    },
+    "review_bundle_v1/memory_migration_study/public_runner.py": {
+      "published_sha256": "81242e369e1f902c382a1a7640c0fd8800049befffb32f3c3310e74856835eb5",
+      "source_sha256": "81242e369e1f902c382a1a7640c0fd8800049befffb32f3c3310e74856835eb5"
+    },
+    "review_bundle_v1/memory_migration_study/qoder_native.py": {
+      "published_sha256": "b16202cc5f7557263b5807581f89f68da33e2de592d0fa7e152b4d036cf99ce0",
+      "source_sha256": "b16202cc5f7557263b5807581f89f68da33e2de592d0fa7e152b4d036cf99ce0"
+    },
+    "review_bundle_v1/memory_migration_study/query_intent.py": {
+      "published_sha256": "ae65d722125ba7004a5143a7b69fc5efaba300795ffa7446fa2b8ebbb2797d3d",
+      "source_sha256": "ae65d722125ba7004a5143a7b69fc5efaba300795ffa7446fa2b8ebbb2797d3d"
+    },
+    "review_bundle_v1/memory_migration_study/qwen35_occurrence.py": {
+      "published_sha256": "65043cf248b2bfaa186e01d57a145e53600b0b439645b32785e05e0c304a610f",
+      "source_sha256": "65043cf248b2bfaa186e01d57a145e53600b0b439645b32785e05e0c304a610f"
+    },
+    "review_bundle_v1/memory_migration_study/qwen35_sampling.py": {
+      "published_sha256": "6ceb4b9d070ee5f355158608c774924f829f4bb39b1e616b0127627280a87ab8",
+      "source_sha256": "6ceb4b9d070ee5f355158608c774924f829f4bb39b1e616b0127627280a87ab8"
+    },
+    "review_bundle_v1/memory_migration_study/reference_memory.py": {
+      "published_sha256": "ba4f6519a5e31ef62168b4a1e357b4c1f209209c53a14a9924966079c77eb1b9",
+      "source_sha256": "ba4f6519a5e31ef62168b4a1e357b4c1f209209c53a14a9924966079c77eb1b9"
+    },
+    "review_bundle_v1/memory_migration_study/relation_events.py": {
+      "published_sha256": "dc6e7bdd50e774e096437cf2ebfe5a38a983f85f8e23a152eb6a63cfb2d692ac",
+      "source_sha256": "dc6e7bdd50e774e096437cf2ebfe5a38a983f85f8e23a152eb6a63cfb2d692ac"
+    },
+    "review_bundle_v1/memory_migration_study/relation_occurrence.py": {
+      "published_sha256": "9fcfe7bcf063771fe5c60b17f77412d41fe6197066f26a872f5e51ad9f201320",
+      "source_sha256": "9fcfe7bcf063771fe5c60b17f77412d41fe6197066f26a872f5e51ad9f201320"
+    },
+    "review_bundle_v1/memory_migration_study/representation_factor_probe.py": {
+      "published_sha256": "cf0fbe8d67c13a40e3a3e646520801bc0d52e1dceb921258bf386aed0eaa34d7",
+      "source_sha256": "cf0fbe8d67c13a40e3a3e646520801bc0d52e1dceb921258bf386aed0eaa34d7"
+    },
+    "review_bundle_v1/memory_migration_study/request_projection.py": {
+      "published_sha256": "5204578275937526d4f577eb1289db8150371fd678aad20391661687ad83da10",
+      "source_sha256": "5204578275937526d4f577eb1289db8150371fd678aad20391661687ad83da10"
+    },
+    "review_bundle_v1/memory_migration_study/reuse_benchmark.py": {
+      "published_sha256": "fe392ab976fc85cdc03e9e1468484c6d44af9935b302d4d3cb64494f6bdfbc21",
+      "source_sha256": "fe392ab976fc85cdc03e9e1468484c6d44af9935b302d4d3cb64494f6bdfbc21"
+    },
+    "review_bundle_v1/memory_migration_study/review_read_consumer.py": {
+      "published_sha256": "85e9410a440c09f16c376ea1a398d437b7897b9aa40bf990ed6805b4e7329438",
+      "source_sha256": "85e9410a440c09f16c376ea1a398d437b7897b9aa40bf990ed6805b4e7329438"
+    },
+    "review_bundle_v1/memory_migration_study/role_cover.py": {
+      "published_sha256": "7b42c1862835880e8d352325a6f514eb048f5fb16e4c8aca20be62f5d3027cbc",
+      "source_sha256": "7b42c1862835880e8d352325a6f514eb048f5fb16e4c8aca20be62f5d3027cbc"
+    },
+    "review_bundle_v1/memory_migration_study/role_query.py": {
+      "published_sha256": "d4b1c22624892ef899242394e33bbc42fc9c3848cf50e6d520d7c51e0c9a48aa",
+      "source_sha256": "d4b1c22624892ef899242394e33bbc42fc9c3848cf50e6d520d7c51e0c9a48aa"
+    },
+    "review_bundle_v1/memory_migration_study/runner.py": {
+      "published_sha256": "b62bf26aafe8d1c18960f0a4a0c204a4524b949be39285f99d221b0447f13a7f",
+      "source_sha256": "b62bf26aafe8d1c18960f0a4a0c204a4524b949be39285f99d221b0447f13a7f"
+    },
+    "review_bundle_v1/memory_migration_study/selective_memory_isolation.py": {
+      "published_sha256": "a938fc3617dc5721cedb9cb234a9d719982a2cfa742264a349294495e77dbb80",
+      "source_sha256": "a938fc3617dc5721cedb9cb234a9d719982a2cfa742264a349294495e77dbb80"
+    },
+    "review_bundle_v1/memory_migration_study/semantic_memory_benchmark.py": {
+      "published_sha256": "7a8560fb251ee21c8f91280668e8a50c5881dd3f12a18513efe9fc2c5ff6aeca",
+      "source_sha256": "7a8560fb251ee21c8f91280668e8a50c5881dd3f12a18513efe9fc2c5ff6aeca"
+    },
+    "review_bundle_v1/memory_migration_study/semantic_refinement.py": {
+      "published_sha256": "7c5eea539a0577b76f227bf53efb2776efeae3acf1e3feab9c3110360d211e3d",
+      "source_sha256": "7c5eea539a0577b76f227bf53efb2776efeae3acf1e3feab9c3110360d211e3d"
+    },
+    "review_bundle_v1/memory_migration_study/sensitivity_contract.py": {
+      "published_sha256": "c25e3bf9efc78099835beb6a3de1feb5a298c5bfaf9eebc4583337d923ff3a9d",
+      "source_sha256": "c25e3bf9efc78099835beb6a3de1feb5a298c5bfaf9eebc4583337d923ff3a9d"
+    },
+    "review_bundle_v1/memory_migration_study/snapshots.py": {
+      "published_sha256": "2798dffaf2f5db844e1ef2f115042053cb1e87317ba51f3e855e0af4ed195cb4",
+      "source_sha256": "2798dffaf2f5db844e1ef2f115042053cb1e87317ba51f3e855e0af4ed195cb4"
+    },
+    "review_bundle_v1/memory_migration_study/source_annotation.py": {
+      "published_sha256": "fa20aeeea572252d37ff443f7639b1c1cb1791de5bcf569d68e2eaf5dd39e46b",
+      "source_sha256": "fa20aeeea572252d37ff443f7639b1c1cb1791de5bcf569d68e2eaf5dd39e46b"
+    },
+    "review_bundle_v1/memory_migration_study/source_card_reader.py": {
+      "published_sha256": "1455abcf827388063111c42e2d52267a71c713fbe7161603856b4df8c5cc1914",
+      "source_sha256": "1455abcf827388063111c42e2d52267a71c713fbe7161603856b4df8c5cc1914"
+    },
+    "review_bundle_v1/memory_migration_study/source_fact_cards.py": {
+      "published_sha256": "b8f7474c43da170a1bd2a6c8f9397371091113784af7dcb13f8068e0d6731599",
+      "source_sha256": "b8f7474c43da170a1bd2a6c8f9397371091113784af7dcb13f8068e0d6731599"
+    },
+    "review_bundle_v1/memory_migration_study/source_tagging.py": {
+      "published_sha256": "792e51618c1f8cb04f181115ddd6d9d1a3ba7bab7d922a88954e5a2fb39c84ef",
+      "source_sha256": "792e51618c1f8cb04f181115ddd6d9d1a3ba7bab7d922a88954e5a2fb39c84ef"
+    },
+    "review_bundle_v1/memory_migration_study/span_answer_evidence.py": {
+      "published_sha256": "13fb799cc0976b5a3fbc078f0aea977b234207c92899cb7485a2dac2c0b34cf9",
+      "source_sha256": "13fb799cc0976b5a3fbc078f0aea977b234207c92899cb7485a2dac2c0b34cf9"
+    },
+    "review_bundle_v1/memory_migration_study/span_answerer.py": {
+      "published_sha256": "5f433c43a77e78286895d4122f89f32d2c998fcbf8260f5bf123a68d555d0607",
+      "source_sha256": "5f433c43a77e78286895d4122f89f32d2c998fcbf8260f5bf123a68d555d0607"
+    },
+    "review_bundle_v1/memory_migration_study/span_completion.py": {
+      "published_sha256": "24cf30bf3cc6ac77580b8c0dbe789b04bdf101b8f7d60386a15ebb945078940b",
+      "source_sha256": "24cf30bf3cc6ac77580b8c0dbe789b04bdf101b8f7d60386a15ebb945078940b"
+    },
+    "review_bundle_v1/memory_migration_study/structured_candidates.py": {
+      "published_sha256": "f460c12e838d1fc029da71fbe593cc835c4a8c082d6fb4aba0c499e6b1bcc22d",
+      "source_sha256": "f460c12e838d1fc029da71fbe593cc835c4a8c082d6fb4aba0c499e6b1bcc22d"
+    },
+    "review_bundle_v1/memory_migration_study/task_budget_reference.py": {
+      "published_sha256": "1897dd0164cc9a58acdbe07a79598a94d43cfeaccfef65ac67d8e5e0b92fc0da",
+      "source_sha256": "1897dd0164cc9a58acdbe07a79598a94d43cfeaccfef65ac67d8e5e0b92fc0da"
+    },
+    "review_bundle_v1/memory_migration_study/tasks.py": {
+      "published_sha256": "f174194e6ab57558350a1349ce90521d5909813036c3ccf9c50d2d79d047cd2c",
+      "source_sha256": "f174194e6ab57558350a1349ce90521d5909813036c3ccf9c50d2d79d047cd2c"
+    },
+    "review_bundle_v1/memory_migration_study/union_detector.py": {
+      "published_sha256": "5090b1127e883ae39a3286b776f3037b892144697798aa919085b64ff9dfe921",
+      "source_sha256": "5090b1127e883ae39a3286b776f3037b892144697798aa919085b64ff9dfe921"
+    },
+    "review_bundle_v1/memory_migration_study/value_validation.py": {
+      "published_sha256": "70a5ce166ee0b1527779665d626b0bccc523e07fd24864c0e104047b152d6cec",
+      "source_sha256": "70a5ce166ee0b1527779665d626b0bccc523e07fd24864c0e104047b152d6cec"
+    },
+    "review_bundle_v1/requirements-reproduce.txt": {
+      "published_sha256": "bfc199257b8c494e5e6b83e873d00795d9b20c89c63b26cb685e0457361fac67",
+      "source_sha256": "bfc199257b8c494e5e6b83e873d00795d9b20c89c63b26cb685e0457361fac67"
+    },
+    "review_bundle_v1/run.reproduce.py": {
+      "published_sha256": "700f5e762e66adfa67aedea58be9899190c3fe36c8e67099e9ef139de1b519c9",
+      "source_sha256": "700f5e762e66adfa67aedea58be9899190c3fe36c8e67099e9ef139de1b519c9"
+    },
+    "review_bundle_v1/runs/run01/authorization_matrix.json": {
+      "published_sha256": "4335e6defdfd6483ea1a23e6afa43aa2b67367b49994e9362ecb5a6c826c1a7f",
+      "source_sha256": "4335e6defdfd6483ea1a23e6afa43aa2b67367b49994e9362ecb5a6c826c1a7f"
+    },
+    "review_bundle_v1/runs/run01/challenges.json": {
+      "published_sha256": "dad8aa63e5880ad4379bcd325cda3eb034f749292809fa9b31cc5a6329064290",
+      "source_sha256": "dad8aa63e5880ad4379bcd325cda3eb034f749292809fa9b31cc5a6329064290"
+    },
+    "review_bundle_v1/runs/run01/plan.json": {
+      "published_sha256": "d6ec86d639ebebd301b5f4f4569aedffe53627d23806b0e6abbc9968714aeada",
+      "source_sha256": "d6ec86d639ebebd301b5f4f4569aedffe53627d23806b0e6abbc9968714aeada"
+    },
+    "review_bundle_v1/runs/run01/prediction_phase_closed.json": {
+      "published_sha256": "29db03382729797bccffb4c2a05087378141e372108c8daf057d10100e295071",
+      "source_sha256": "29db03382729797bccffb4c2a05087378141e372108c8daf057d10100e295071"
+    },
+    "review_bundle_v1/runs/run01/predictions.json": {
+      "published_sha256": "1935f05c370066005bde920a6aaa3afc9eca92a953e4c38ac3a7a3fc43b586d4",
+      "source_sha256": "1935f05c370066005bde920a6aaa3afc9eca92a953e4c38ac3a7a3fc43b586d4"
+    },
+    "review_bundle_v1/runs/run01/summary.json": {
+      "published_sha256": "3aa2a8dbac16025085c16a9f98f0be5d116fe7c3c6ee0e0ed2542935e0190282",
+      "source_sha256": "3aa2a8dbac16025085c16a9f98f0be5d116fe7c3c6ee0e0ed2542935e0190282"
+    },
+    "review_bundle_v1/runs/run02/accounting.json": {
+      "published_sha256": "9fd615447207f2f9f1daf1a82cf65f1ce51c237ca934a211a9d4a7d62001cc0c",
+      "source_sha256": "9fd615447207f2f9f1daf1a82cf65f1ce51c237ca934a211a9d4a7d62001cc0c"
+    },
+    "review_bundle_v1/runs/run02/authorization_matrix.json": {
+      "published_sha256": "5679ec803f76c6ae896ab8cac5c71f433d280aea80444fc9745818be3327d1bd",
+      "source_sha256": "5679ec803f76c6ae896ab8cac5c71f433d280aea80444fc9745818be3327d1bd"
+    },
+    "review_bundle_v1/runs/run02/challenges.json": {
+      "published_sha256": "dad8aa63e5880ad4379bcd325cda3eb034f749292809fa9b31cc5a6329064290",
+      "source_sha256": "dad8aa63e5880ad4379bcd325cda3eb034f749292809fa9b31cc5a6329064290"
+    },
+    "review_bundle_v1/runs/run02/joint-check-01-t1-whole_block_receipt.json": {
+      "published_sha256": "9544ea81432e0ab0dfb722729817293c44907fbe6187bf3fb87e75db0aec9f8f",
+      "source_sha256": "9544ea81432e0ab0dfb722729817293c44907fbe6187bf3fb87e75db0aec9f8f"
+    },
+    "review_bundle_v1/runs/run02/joint-check-01-t2-whole_block_receipt.json": {
+      "published_sha256": "7b4821da78112b3b4e29726b2073e928f908eec5c12142fcd2074d706c23b471",
+      "source_sha256": "7b4821da78112b3b4e29726b2073e928f908eec5c12142fcd2074d706c23b471"
+    },
+    "review_bundle_v1/runs/run02/joint-check-01-t3-whole_block_receipt.json": {
+      "published_sha256": "02a7775cab082f54fa6dd3edc06892957d9cb29d93bc5a54c7e02c0159bdeea3",
+      "source_sha256": "02a7775cab082f54fa6dd3edc06892957d9cb29d93bc5a54c7e02c0159bdeea3"
+    },
+    "review_bundle_v1/runs/run02/joint-check-01-t4-whole_block_receipt.json": {
+      "published_sha256": "856e7b75229ed01f601f522313c7b37ee5b88050c901dd1d42044db06c145951",
+      "source_sha256": "856e7b75229ed01f601f522313c7b37ee5b88050c901dd1d42044db06c145951"
+    },
+    "review_bundle_v1/runs/run02/joint-check-02-t1-whole_block_receipt.json": {
+      "published_sha256": "c0847a95e65ba9dd11f925de3d26bf0dacd29991666153ae0af3430c4bf9e864",
+      "source_sha256": "c0847a95e65ba9dd11f925de3d26bf0dacd29991666153ae0af3430c4bf9e864"
+    },
+    "review_bundle_v1/runs/run02/joint-check-02-t2-whole_block_receipt.json": {
+      "published_sha256": "ba6e8aff55e63a34eaf9d1859d3663596180e2d48a522ca82cef9c36f6f84660",
+      "source_sha256": "ba6e8aff55e63a34eaf9d1859d3663596180e2d48a522ca82cef9c36f6f84660"
+    },
+    "review_bundle_v1/runs/run02/joint-check-02-t3-whole_block_receipt.json": {
+      "published_sha256": "44e039b8be5ed66bd1be966bab6ff9fa4c2c670f5c0dab748cd6d988797ad3ec",
+      "source_sha256": "44e039b8be5ed66bd1be966bab6ff9fa4c2c670f5c0dab748cd6d988797ad3ec"
+    },
+    "review_bundle_v1/runs/run02/joint-check-02-t4-whole_block_receipt.json": {
+      "published_sha256": "5d35204d337ce84cbfd1e477a965450caee7aead3ae4942bb0f2086e847e49fa",
+      "source_sha256": "5d35204d337ce84cbfd1e477a965450caee7aead3ae4942bb0f2086e847e49fa"
+    },
+    "review_bundle_v1/runs/run02/plan.json": {
+      "published_sha256": "197154fe12bc85ccd71f971f7ca60748ec45d87b9625e9ebfc14d52f9233b9e9",
+      "source_sha256": "197154fe12bc85ccd71f971f7ca60748ec45d87b9625e9ebfc14d52f9233b9e9"
+    },
+    "review_bundle_v1/runs/run02/prediction_phase_closed.json": {
+      "published_sha256": "46093eda9cab86ce86772c3e15e0f47c4bfeadc918aa17a73fcdcc03e79f5691",
+      "source_sha256": "46093eda9cab86ce86772c3e15e0f47c4bfeadc918aa17a73fcdcc03e79f5691"
+    },
+    "review_bundle_v1/runs/run02/predictions.json": {
+      "published_sha256": "125f2a4da1dab7b7d2e6c216d92e472d1af05786c49462c25e34320e5f1dfd4d",
+      "source_sha256": "125f2a4da1dab7b7d2e6c216d92e472d1af05786c49462c25e34320e5f1dfd4d"
+    },
+    "review_bundle_v1/runs/run02/summary.json": {
+      "published_sha256": "74f06d8875b7e5f103a3d805ab77b17db361c5bdb893e3a07c49c3988187a573",
+      "source_sha256": "74f06d8875b7e5f103a3d805ab77b17db361c5bdb893e3a07c49c3988187a573"
+    },
+    "review_bundle_v1/runtime.json": {
+      "published_sha256": "cea09270aff40095d701eb03b29632d7f6cb55128fe5256d413e1f9863b183b0",
+      "source_sha256": "cea09270aff40095d701eb03b29632d7f6cb55128fe5256d413e1f9863b183b0"
+    },
+    "review_bundle_v1/tests/test_submission_pipeline.py": {
+      "published_sha256": "9b234627dadd68cdc23de596224ad5e2cf13e592fd7170943dc08ef4bae1b0c8",
+      "source_sha256": "9b234627dadd68cdc23de596224ad5e2cf13e592fd7170943dc08ef4bae1b0c8"
+    },
+    "review_bundle_v1/tests/test_submission_reference.py": {
+      "published_sha256": "a8a8b45b8709cc9f517062d63ea0e34a2ec89cf2fa642b8a4258b0c02c5b102b",
+      "source_sha256": "a8a8b45b8709cc9f517062d63ea0e34a2ec89cf2fa642b8a4258b0c02c5b102b"
+    },
+    "review_bundle_v1/tests/test_submission_score.py": {
+      "published_sha256": "b3f77b1f3d181c510b615996f5cf3a67023b0076813243b4b1def3ed2f7e41d1",
+      "source_sha256": "b3f77b1f3d181c510b615996f5cf3a67023b0076813243b4b1def3ed2f7e41d1"
+    },
+    "review_bundle_v1_verification.json": {
+      "published_sha256": "9b9fa4cb1961a4097d3c0733f4e0f01cc80aec1a876fae6e542344a51b90e035",
+      "source_sha256": "9b9fa4cb1961a4097d3c0733f4e0f01cc80aec1a876fae6e542344a51b90e035"
+    }
+  },
+  "created_at_utc": "2026-10-30T10:41:55.848879+00:00",
+  "files": {
+    "README.md": "04486ef6613fc8d671cf4582af9b336290480d92eb031df9c22836defeb4d8e0",
+    "delivery.json": "eb39a173ba707cc71016e0b3c2827a5f195f03ed4f913bd5c4b25061d2ef85e4",
+    "failed_native_batches.json": "2f7fb1222d9fb4d87825cac469a46b52313d4126d0978b11b569dbb7af2d1451",
+    "native_receipt_audit.json": "272c6cd09c2a9be2ce26ca6fc45fb6f2a74453f3fa5754e53366575e18dc384b",
+    "review_bundle_v1/README.md": "d1d55828249a4b0e5bd860366befbfbdedabca44b3ac3793050cfda24d23a62f",
+    "review_bundle_v1/experiments/journal_methods_20261030/__init__.py": "9da4dfb206b5fc937e8c555ee3cabaeb7af8cd7402e8f05d29ec333cc16fa241",
+    "review_bundle_v1/experiments/journal_methods_20261030/account_budget_probe.py": "bc1b5a3830fc4f984e25d23311d9ac27e46821e8885f8ecf0b67f022d5b1b33c",
+    "review_bundle_v1/experiments/journal_methods_20261030/client_smoke.py": "5b73f5055254645bdbe924dc44aaaed44acf42b837b50835f2cfd7560f811c43",
+    "review_bundle_v1/experiments/journal_methods_20261030/client_smoke_score.py": "17c0ff3f6d5e6fe26f2066f0adf6822eee55b294a47ae5453d2db25d2492c0a7",
+    "review_bundle_v1/experiments/journal_methods_20261030/controlled_host.py": "76a1f509d4973e457b947c82f35a6e54785ab61e23a697a9dc9fe290030ddb46",
+    "review_bundle_v1/experiments/journal_methods_20261030/policy_semantics_reference.py": "7b6d486824953e077ffa9300138ea7b6478403eb3104649a288a66359bad381b",
+    "review_bundle_v1/experiments/journal_methods_20261030/reference_contract.py": "cd3aff766bcf33d605c1012d30f8fc5049dfa4146c89677e5559fd243232df5b",
+    "review_bundle_v1/experiments/journal_methods_20261030/run_paired_acceptance.py": "b5ec57ecdd9d08b1b92675483bd475c5a17a6a1148bed9d1d2410054761427b2",
+    "review_bundle_v1/experiments/journal_methods_20261030/summarize.py": "72f2c5254511241d189200ae447e6f7471acaf4e3846abee7b8b9a69fdd6efe7",
+    "review_bundle_v1/experiments/journal_methods_20261030/verify_memory_flow.py": "ced3ddcef4d744578c0135b9e3d88af7acf6d24313f11df512811a43ae9e778f",
+    "review_bundle_v1/experiments/submission_acceptance_20261030/CONTRACT.md": "b7f97b5090dbe1b26f71367d5851d1594e3011c62706481ac4b7ace802506252",
+    "review_bundle_v1/experiments/submission_acceptance_20261030/__init__.py": "7fc1dd31e4feaf5c8761a81693021551fea23cb35b20dbbb23488f17b0ec5473",
+    "review_bundle_v1/experiments/submission_acceptance_20261030/data/cases.json": "ed9c713fdae1f0170f26d1ec0f10d5734acc5ffab5aeef50d9e2d0ef47a66739",
+    "review_bundle_v1/experiments/submission_acceptance_20261030/data/manifest.json": "6060a6e1bbacbf4e5565009b927ce79a60fbad9cc684cbcb55cf189af7449ece",
+    "review_bundle_v1/experiments/submission_acceptance_20261030/data/references.json": "75805099bb78fa8ba4cbc1030936363acfbabe3c1fe332df1a441a2e568b7793",
+    "review_bundle_v1/experiments/submission_acceptance_20261030/package.py": "dbd90753462eb68e5a735e81a1cae1927e117ce5654c2403fd0435f3fd6d7f9a",
+    "review_bundle_v1/experiments/submission_acceptance_20261030/pipeline.py": "25a63da360ce008b878aa58c3521e050dc57105bf5054c6fa062e5567d2f7ee9",
+    "review_bundle_v1/experiments/submission_acceptance_20261030/reference.py": "9afff33658ff3d75071508a27f46a5ad06467d519d6a968d1bdcc44e87ce0764",
+    "review_bundle_v1/experiments/submission_acceptance_20261030/run.py": "36965d1926055ef26506b1cb92ea927b231114ce35e4d56ee9d0600ea625480e",
+    "review_bundle_v1/experiments/submission_acceptance_20261030/score.py": "6a37bb25c1d32357b18fdc9a6d93ab9f1980b74e0c3c3c07822f8b22b2cae076",
+    "review_bundle_v1/manifest.json": "10e20b0b7953c532c683a77508ccddf3f194a7a95dc3821e9f17ce7cd1fb01a0",
+    "review_bundle_v1/memory_migration_study/__init__.py": "5db86bb3981ca95dc7f630734f01a45d6beaca68e4b566709a7bf60caa6150e5",
+    "review_bundle_v1/memory_migration_study/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "review_bundle_v1/memory_migration_study/amount_candidates.py": "bf5d5b71300da1f6dbe92c79f79690389779738d7a29241e574dc551063d9640",
+    "review_bundle_v1/memory_migration_study/answer_evidence.py": "d3d151da9318ed5b6e993a27cf215e1165be37d884493de25664d98cd432266a",
+    "review_bundle_v1/memory_migration_study/answer_serialization.py": "973a6a3387e44289a28765c3ffffc0bc7a2c162e7f37cf5c3b8c19705878a13f",
+    "review_bundle_v1/memory_migration_study/authority_freshness.py": "298d5f54510dbe3b716db083aaa4793ca7f6754ce1513e7895e66985c73fe547",
+    "review_bundle_v1/memory_migration_study/backend.py": "3d9628990206884c5a14a5b050acdbdfea5f35adab8949afa84fa5b05778b450",
+    "review_bundle_v1/memory_migration_study/boundary_detector.py": "6bd9e1527d6eb772a05b89925c3db1cf160088a1fe73ee6b378affc1200cfd4d",
+    "review_bundle_v1/memory_migration_study/boundary_preparation.py": "e4e8094bfae1a7b76954f7c576c4f53d0366104379b69e34000d901fe81275c8",
+    "review_bundle_v1/memory_migration_study/boundary_reconciliation.py": "63ee4781ed1d784710ef64c2ba1e81654e5d5596a7e1d45d597eadd2a3786e57",
+    "review_bundle_v1/memory_migration_study/budget.py": "7678cb0d652e5a57505e15a9958916d2564d812ff4dfa02dbd91f771fcf3e7a2",
+    "review_bundle_v1/memory_migration_study/candidate_adjudicator.py": "9124421e79051fa0cceea7c3a9dbfa3eceaf9fe5f46d3ca5e9e62913df7e8bf2",
+    "review_bundle_v1/memory_migration_study/candidate_context_batch.py": "01455583d5c3cf901251fd50f4cd7927b88ad860d8a2d5a8140c0a99d1478581",
+    "review_bundle_v1/memory_migration_study/candidate_context_batch_v2.py": "092193c08079060909e4239ea3608bf667ecbb04e8748d42eab075676a03ac6b",
+    "review_bundle_v1/memory_migration_study/candidate_decision.py": "28efdb67d05ab40624de331d6a2ad99d4a3a54e7943f42c339348b3ca946cc09",
+    "review_bundle_v1/memory_migration_study/candidate_decision_detection.py": "76946fd02e89596b67c5e8706031a8e11045cd84a3fb00d5f81ad70f49cd3a89",
+    "review_bundle_v1/memory_migration_study/candidate_proposals.py": "32be4b9a305f43e8f9701c3b50c822f0a98b13411c2d12dd57a2692dc4b9e323",
+    "review_bundle_v1/memory_migration_study/cli.py": "38a58c8b00823c729ed0e1b8e8952aeebfe3a4ec39e34762856492beb136daaa",
+    "review_bundle_v1/memory_migration_study/context_candidate_typing.py": "59fa3076f4e507d56fc63e95e860cf0d0bd813bf369c945ed10358c074421044",
+    "review_bundle_v1/memory_migration_study/context_typed_detection.py": "35cecbd57b34cde9c5502e35770ba4576841c539a2ee8135de275ed2ad0a8817",
+    "review_bundle_v1/memory_migration_study/coverage_memory.py": "4280d0ffbe381e602f9e6547ee18d3d760cda909216fd0bde14129593e25260b",
+    "review_bundle_v1/memory_migration_study/current_authority.py": "350c22d9ac343f9c2990c20cd7dff11df29f06564fd384d917ac4e9e356b4221",
+    "review_bundle_v1/memory_migration_study/deadline_http.py": "5cb744edc59ebd5d09c2910dbd1659dee577681c21d6f1d10649c6f26d6e1b18",
+    "review_bundle_v1/memory_migration_study/deepseek_native.py": "f1e058557aa6f91e160499513b70fed861a729a8a2ae61ce8d9e90a9a6ff9d9a",
+    "review_bundle_v1/memory_migration_study/deepseek_sdk.py": "c631f0f07436d2a55445d79ac605740dc0983c07dc4838a3c829d4b4fa7e5ec9",
+    "review_bundle_v1/memory_migration_study/detection_cache.py": "b43e32d3d8b34c16d6d5d5f148a331ad62263bde8ab72949f666564ac55af054",
+    "review_bundle_v1/memory_migration_study/evidence.py": "ff7af54c2babe30d3270c4b227560ee6c7669e8b1b40aec90e6ead369235faf4",
+    "review_bundle_v1/memory_migration_study/evidence_answerer.py": "354a99f342113e9adab5e6efb8a046918bb7f46d8cac1296ff2a53c175683a64",
+    "review_bundle_v1/memory_migration_study/focused_semantic_reader.py": "16d45eccfef104a6f5b28066c19764f091bbe26031b9b6b96dac779cf6cd37ff",
+    "review_bundle_v1/memory_migration_study/focused_semantic_scoring.py": "33b332e8690953bec4a959c953e059db2141b3e3745c22ea544900414f2ab50e",
+    "review_bundle_v1/memory_migration_study/gliclass_candidate.py": "cc9815616f3287d202e7a936d88b90263f75a3f76d0d8e91d4813b0b8e847de8",
+    "review_bundle_v1/memory_migration_study/legacy.py": "67cdfbe38d62cba2e13561c7915f0843dcaf777ba90fb5b9d342cb4bd2686b2a",
+    "review_bundle_v1/memory_migration_study/llm_worker.py": "9e526660c831692486e1d0fe4382ad42ba664dd1c42d4ba2a7a849a32e24849f",
+    "review_bundle_v1/memory_migration_study/local_detector.py": "ecc36938c038501a613ee2de2dd70a395f4be27c1fdeaaa3f18e80832bcb5fe8",
+    "review_bundle_v1/memory_migration_study/memory_builder.py": "481926a33f8deedfdb36f1a025e3578660894818700048ae78c1bc0e84da6140",
+    "review_bundle_v1/memory_migration_study/memory_generation_corpus.py": "9aee813f28fef0435a260d296b9b1e0c12f265bc6ecd24597ab531954a51059b",
+    "review_bundle_v1/memory_migration_study/memory_generation_experiment.py": "283bdced55cf95a7837038d54075d2a065dc3133b0874692e33f095f1b256179",
+    "review_bundle_v1/memory_migration_study/memory_labels.py": "be6df2476c1c0cc215043dafa4fe9051b089e915c65262147aab37ad9e69a387",
+    "review_bundle_v1/memory_migration_study/native_agent_protocol.py": "38fd8e3673ef9eba3df17c643d02f1d8f763c48b826c99e928ea745aecf0f770",
+    "review_bundle_v1/memory_migration_study/native_privacy_gateway.py": "d578da090f60f2f187874d13b06b25ea9552299f15b455550c9067356a7a4f09",
+    "review_bundle_v1/memory_migration_study/native_span_attributes.py": "45a2ba58533fde59888c1953b74fd5bcea1c5e626e800b1c2204e87d65617ff6",
+    "review_bundle_v1/memory_migration_study/native_webui.py": "2ffab1f2086920bdc2abd2092990a6b569649c1b8c80767d5fb57ba74f15c15a",
+    "review_bundle_v1/memory_migration_study/ner_benchmark.py": "c45a13d7d1363b4dd4b93dd93ec542f042ad132fdf2860598dfb5d7685059296",
+    "review_bundle_v1/memory_migration_study/ner_detector.py": "64ce93e1fb3254b60f1f4ce048ccc19cf4fdbbe23d3f87e2762ef377cc7d950e",
+    "review_bundle_v1/memory_migration_study/nli_candidate.py": "a8ada55a40534e7bb824a0723c769bb8411b7adcb40e902f0390d0bad0cfddb1",
+    "review_bundle_v1/memory_migration_study/occurrence_qwen.py": "9f84483eb822147a819d845194827b7f42983497ae7022661e6c2236c90a4d6e",
+    "review_bundle_v1/memory_migration_study/occurrence_routing.py": "ac292aae19c090f1e30b5605582c92650e7ad5e74c1b7b488edc86934b1d1521",
+    "review_bundle_v1/memory_migration_study/open_container_candidates.py": "a4cd5082bb43573a6d1e26770f4786f394b427555e1febc0bce4978253ed30f8",
+    "review_bundle_v1/memory_migration_study/paired_task_metrics.py": "c847fd3915ff020a52d1e8b4d56f05963349b33c510946eabadaca83f8288ee2",
+    "review_bundle_v1/memory_migration_study/pisas_source.py": "49034eeb660d9c1ef04c56a19fb9d7b95f20af97820faac114c1ab900e15f9e6",
+    "review_bundle_v1/memory_migration_study/plan_verifier.py": "25cb3d579bd7df2df32fcb567408077363cd59eb5996925899a01a09faf53fc5",
+    "review_bundle_v1/memory_migration_study/policy.py": "9798a2dc2642e55d9a3335209c5f13c57aae29acedab97b014a48a4fb4b9a75e",
+    "review_bundle_v1/memory_migration_study/policy_projection_gateway.py": "b5f2fd5762c3e3de1a80a53b81d17820cd68a0cabdb7bfff0f2bc91ca7cd435f",
+    "review_bundle_v1/memory_migration_study/policy_projection_reference.py": "0bec670bcd8b13dae6e9a4ac157e7c1edf851cb45933b26f3fa1c3d31746dfb3",
+    "review_bundle_v1/memory_migration_study/policy_semantics.py": "bbd891394c09f419d3a9eb20467f8a1e9d1f7ccb2d77ec39c8d1805445caffe9",
+    "review_bundle_v1/memory_migration_study/prepare.py": "4cb732863760206769c4b142ec10207f9a1d422fcf99343ea6b6e96fb5d00fb4",
+    "review_bundle_v1/memory_migration_study/principal_scope.py": "1001a7a7ba2edaf7a782e4e8b1749cd1571abf6f0a23756e2ab63a0c92179d3c",
+    "review_bundle_v1/memory_migration_study/privacy.py": "011921e7fae119e5ea1b49c905e5e99e345a18ac8f3f7e643d584c25a87032bc",
+    "review_bundle_v1/memory_migration_study/privacy_corpus.py": "9dd7b74b3fc4a578e9727a695f88e3a4a2477045582fdf7196d8c46c452eabe9",
+    "review_bundle_v1/memory_migration_study/privacy_corpus_v2.py": "af43aeb45d7457b145b18f855db23b7faa763fcd7019e9c994ca94bef6ccc7aa",
+    "review_bundle_v1/memory_migration_study/privacy_corpus_v3.py": "4c2eb5cb89d2811afb95c42acc61ae3ab47a22c516e3159dd33c1d91490d0e5c",
+    "review_bundle_v1/memory_migration_study/privacy_corpus_v3_final.py": "0f33c77867c07d0bd3280433c95e0f49b35977deada3efe1069359ce92f4b6e9",
+    "review_bundle_v1/memory_migration_study/privacy_egress.py": "239a138cbbe5497355462657122a3feca9bdefabbcf25f2b90550e12d5c1fe93",
+    "review_bundle_v1/memory_migration_study/privacy_experiment.py": "2abc9365247ef4b7eb22970794ad6762a9fc0c91de11b93c1bbfd790d1e3efbd",
+    "review_bundle_v1/memory_migration_study/privacy_local.py": "f1ac6501655cad365ef11568e911d8fe7fcecb573353f0e9aeddf9ba82d4845f",
+    "review_bundle_v1/memory_migration_study/privacy_payload_eval.py": "c37ca56b47956cae8b5170ea930efd3b164fb775833b47aaa5f7801befc90d16",
+    "review_bundle_v1/memory_migration_study/private_request_boundary.py": "1bf4e50e8efbd3e745423580067ae68178eb4af5217a80df4ea4d08e1fb72725",
+    "review_bundle_v1/memory_migration_study/provider_preflight.py": "873e2fa554712df4de1c9e662646c16406589c469a766442dac8a8f2a4dc0615",
+    "review_bundle_v1/memory_migration_study/public_fixture.py": "7b7a845c0edd580cdf55c7dd66922f23c45b6a924c552b562183042910b47849",
+    "review_bundle_v1/memory_migration_study/public_runner.py": "81242e369e1f902c382a1a7640c0fd8800049befffb32f3c3310e74856835eb5",
+    "review_bundle_v1/memory_migration_study/qoder_native.py": "b16202cc5f7557263b5807581f89f68da33e2de592d0fa7e152b4d036cf99ce0",
+    "review_bundle_v1/memory_migration_study/query_intent.py": "ae65d722125ba7004a5143a7b69fc5efaba300795ffa7446fa2b8ebbb2797d3d",
+    "review_bundle_v1/memory_migration_study/qwen35_occurrence.py": "65043cf248b2bfaa186e01d57a145e53600b0b439645b32785e05e0c304a610f",
+    "review_bundle_v1/memory_migration_study/qwen35_sampling.py": "6ceb4b9d070ee5f355158608c774924f829f4bb39b1e616b0127627280a87ab8",
+    "review_bundle_v1/memory_migration_study/reference_memory.py": "ba4f6519a5e31ef62168b4a1e357b4c1f209209c53a14a9924966079c77eb1b9",
+    "review_bundle_v1/memory_migration_study/relation_events.py": "dc6e7bdd50e774e096437cf2ebfe5a38a983f85f8e23a152eb6a63cfb2d692ac",
+    "review_bundle_v1/memory_migration_study/relation_occurrence.py": "9fcfe7bcf063771fe5c60b17f77412d41fe6197066f26a872f5e51ad9f201320",
+    "review_bundle_v1/memory_migration_study/representation_factor_probe.py": "cf0fbe8d67c13a40e3a3e646520801bc0d52e1dceb921258bf386aed0eaa34d7",
+    "review_bundle_v1/memory_migration_study/request_projection.py": "5204578275937526d4f577eb1289db8150371fd678aad20391661687ad83da10",
+    "review_bundle_v1/memory_migration_study/reuse_benchmark.py": "fe392ab976fc85cdc03e9e1468484c6d44af9935b302d4d3cb64494f6bdfbc21",
+    "review_bundle_v1/memory_migration_study/review_read_consumer.py": "85e9410a440c09f16c376ea1a398d437b7897b9aa40bf990ed6805b4e7329438",
+    "review_bundle_v1/memory_migration_study/role_cover.py": "7b42c1862835880e8d352325a6f514eb048f5fb16e4c8aca20be62f5d3027cbc",
+    "review_bundle_v1/memory_migration_study/role_query.py": "d4b1c22624892ef899242394e33bbc42fc9c3848cf50e6d520d7c51e0c9a48aa",
+    "review_bundle_v1/memory_migration_study/runner.py": "b62bf26aafe8d1c18960f0a4a0c204a4524b949be39285f99d221b0447f13a7f",
+    "review_bundle_v1/memory_migration_study/selective_memory_isolation.py": "a938fc3617dc5721cedb9cb234a9d719982a2cfa742264a349294495e77dbb80",
+    "review_bundle_v1/memory_migration_study/semantic_memory_benchmark.py": "7a8560fb251ee21c8f91280668e8a50c5881dd3f12a18513efe9fc2c5ff6aeca",
+    "review_bundle_v1/memory_migration_study/semantic_refinement.py": "7c5eea539a0577b76f227bf53efb2776efeae3acf1e3feab9c3110360d211e3d",
+    "review_bundle_v1/memory_migration_study/sensitivity_contract.py": "c25e3bf9efc78099835beb6a3de1feb5a298c5bfaf9eebc4583337d923ff3a9d",
+    "review_bundle_v1/memory_migration_study/snapshots.py": "2798dffaf2f5db844e1ef2f115042053cb1e87317ba51f3e855e0af4ed195cb4",
+    "review_bundle_v1/memory_migration_study/source_annotation.py": "fa20aeeea572252d37ff443f7639b1c1cb1791de5bcf569d68e2eaf5dd39e46b",
+    "review_bundle_v1/memory_migration_study/source_card_reader.py": "1455abcf827388063111c42e2d52267a71c713fbe7161603856b4df8c5cc1914",
+    "review_bundle_v1/memory_migration_study/source_fact_cards.py": "b8f7474c43da170a1bd2a6c8f9397371091113784af7dcb13f8068e0d6731599",
+    "review_bundle_v1/memory_migration_study/source_tagging.py": "792e51618c1f8cb04f181115ddd6d9d1a3ba7bab7d922a88954e5a2fb39c84ef",
+    "review_bundle_v1/memory_migration_study/span_answer_evidence.py": "13fb799cc0976b5a3fbc078f0aea977b234207c92899cb7485a2dac2c0b34cf9",
+    "review_bundle_v1/memory_migration_study/span_answerer.py": "5f433c43a77e78286895d4122f89f32d2c998fcbf8260f5bf123a68d555d0607",
+    "review_bundle_v1/memory_migration_study/span_completion.py": "24cf30bf3cc6ac77580b8c0dbe789b04bdf101b8f7d60386a15ebb945078940b",
+    "review_bundle_v1/memory_migration_study/structured_candidates.py": "f460c12e838d1fc029da71fbe593cc835c4a8c082d6fb4aba0c499e6b1bcc22d",
+    "review_bundle_v1/memory_migration_study/task_budget_reference.py": "1897dd0164cc9a58acdbe07a79598a94d43cfeaccfef65ac67d8e5e0b92fc0da",
+    "review_bundle_v1/memory_migration_study/tasks.py": "f174194e6ab57558350a1349ce90521d5909813036c3ccf9c50d2d79d047cd2c",
+    "review_bundle_v1/memory_migration_study/union_detector.py": "5090b1127e883ae39a3286b776f3037b892144697798aa919085b64ff9dfe921",
+    "review_bundle_v1/memory_migration_study/value_validation.py": "70a5ce166ee0b1527779665d626b0bccc523e07fd24864c0e104047b152d6cec",
+    "review_bundle_v1/requirements-reproduce.txt": "bfc199257b8c494e5e6b83e873d00795d9b20c89c63b26cb685e0457361fac67",
+    "review_bundle_v1/run.reproduce.py": "700f5e762e66adfa67aedea58be9899190c3fe36c8e67099e9ef139de1b519c9",
+    "review_bundle_v1/runs/run01/authorization_matrix.json": "4335e6defdfd6483ea1a23e6afa43aa2b67367b49994e9362ecb5a6c826c1a7f",
+    "review_bundle_v1/runs/run01/challenges.json": "dad8aa63e5880ad4379bcd325cda3eb034f749292809fa9b31cc5a6329064290",
+    "review_bundle_v1/runs/run01/plan.json": "d6ec86d639ebebd301b5f4f4569aedffe53627d23806b0e6abbc9968714aeada",
+    "review_bundle_v1/runs/run01/prediction_phase_closed.json": "29db03382729797bccffb4c2a05087378141e372108c8daf057d10100e295071",
+    "review_bundle_v1/runs/run01/predictions.json": "1935f05c370066005bde920a6aaa3afc9eca92a953e4c38ac3a7a3fc43b586d4",
+    "review_bundle_v1/runs/run01/summary.json": "3aa2a8dbac16025085c16a9f98f0be5d116fe7c3c6ee0e0ed2542935e0190282",
+    "review_bundle_v1/runs/run02/accounting.json": "9fd615447207f2f9f1daf1a82cf65f1ce51c237ca934a211a9d4a7d62001cc0c",
+    "review_bundle_v1/runs/run02/authorization_matrix.json": "5679ec803f76c6ae896ab8cac5c71f433d280aea80444fc9745818be3327d1bd",
+    "review_bundle_v1/runs/run02/challenges.json": "dad8aa63e5880ad4379bcd325cda3eb034f749292809fa9b31cc5a6329064290",
+    "review_bundle_v1/runs/run02/joint-check-01-t1-whole_block_receipt.json": "9544ea81432e0ab0dfb722729817293c44907fbe6187bf3fb87e75db0aec9f8f",
+    "review_bundle_v1/runs/run02/joint-check-01-t2-whole_block_receipt.json": "7b4821da78112b3b4e29726b2073e928f908eec5c12142fcd2074d706c23b471",
+    "review_bundle_v1/runs/run02/joint-check-01-t3-whole_block_receipt.json": "02a7775cab082f54fa6dd3edc06892957d9cb29d93bc5a54c7e02c0159bdeea3",
+    "review_bundle_v1/runs/run02/joint-check-01-t4-whole_block_receipt.json": "856e7b75229ed01f601f522313c7b37ee5b88050c901dd1d42044db06c145951",
+    "review_bundle_v1/runs/run02/joint-check-02-t1-whole_block_receipt.json": "c0847a95e65ba9dd11f925de3d26bf0dacd29991666153ae0af3430c4bf9e864",
+    "review_bundle_v1/runs/run02/joint-check-02-t2-whole_block_receipt.json": "ba6e8aff55e63a34eaf9d1859d3663596180e2d48a522ca82cef9c36f6f84660",
+    "review_bundle_v1/runs/run02/joint-check-02-t3-whole_block_receipt.json": "44e039b8be5ed66bd1be966bab6ff9fa4c2c670f5c0dab748cd6d988797ad3ec",
+    "review_bundle_v1/runs/run02/joint-check-02-t4-whole_block_receipt.json": "5d35204d337ce84cbfd1e477a965450caee7aead3ae4942bb0f2086e847e49fa",
+    "review_bundle_v1/runs/run02/plan.json": "197154fe12bc85ccd71f971f7ca60748ec45d87b9625e9ebfc14d52f9233b9e9",
+    "review_bundle_v1/runs/run02/prediction_phase_closed.json": "46093eda9cab86ce86772c3e15e0f47c4bfeadc918aa17a73fcdcc03e79f5691",
+    "review_bundle_v1/runs/run02/predictions.json": "125f2a4da1dab7b7d2e6c216d92e472d1af05786c49462c25e34320e5f1dfd4d",
+    "review_bundle_v1/runs/run02/summary.json": "74f06d8875b7e5f103a3d805ab77b17db361c5bdb893e3a07c49c3988187a573",
+    "review_bundle_v1/runtime.json": "cea09270aff40095d701eb03b29632d7f6cb55128fe5256d413e1f9863b183b0",
+    "review_bundle_v1/tests/test_submission_pipeline.py": "9b234627dadd68cdc23de596224ad5e2cf13e592fd7170943dc08ef4bae1b0c8",
+    "review_bundle_v1/tests/test_submission_reference.py": "a8a8b45b8709cc9f517062d63ea0e34a2ec89cf2fa642b8a4258b0c02c5b102b",
+    "review_bundle_v1/tests/test_submission_score.py": "b3f77b1f3d181c510b615996f5cf3a67023b0076813243b4b1def3ed2f7e41d1",
+    "review_bundle_v1_verification.json": "9b9fa4cb1961a4097d3c0733f4e0f01cc80aec1a876fae6e542344a51b90e035"
+  },
+  "formal_external_person_acceptance": false,
+  "model_calls": 0,
+  "network_calls": 0,
+  "original_files_changed": [],
+  "schema": "submission_publication_manifest_v1",
+  "source_account_snapshots_or_runtime_copied": false,
+  "source_bundle_manifest_sha256": "10e20b0b7953c532c683a77508ccddf3f194a7a95dc3821e9f17ce7cd1fb01a0"
+}

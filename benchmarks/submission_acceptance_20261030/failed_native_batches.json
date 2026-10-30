@@ -1,0 +1,71 @@
+{
+  "batches": [
+    {
+      "allowed_model_streams": 0,
+      "client_status_counts": {
+        "error": 3,
+        "not_run": 21
+      },
+      "formal_external_acceptance": false,
+      "observable_raw_answer_rows": 0,
+      "planned_prediction_rows": 24,
+      "processing_status_counts": {
+        "error": 24
+      },
+      "receipts": [
+        {
+          "allowed_model_streams": 0,
+          "error": "patch_guard_invalid",
+          "guard_reject_code": null,
+          "invocation_started": false,
+          "native_instruction_loaded": false,
+          "original_sha256": "589a327dbbde7e2cd36f6697cac8d307b534f1e1a2f60fa60ce0d8aa3198a4e5",
+          "receipt_name": "joint-check-01-t1-whole_block_receipt.json",
+          "status": "error"
+        }
+      ],
+      "run_label": "native_run01",
+      "schema": "submission_public_failure_summary_v1",
+      "scope": "Preflight/guard failure, no allowed model stream. Missing responses are not successful safe answers. Original failed evidence remains local; no account snapshot or runtime was copied.",
+      "source_closure_sha256": "df0b1d14180e9fed294a15b882f5ef3c3ba663521f3c5f7901fd83c9dc5aeb07",
+      "source_predictions_sha256": "4affe245780bbc6114fc6e2e4f22f9c7c2361316fdabb9d2c17b0c619b3d0b41",
+      "supplier_bill_verified": false,
+      "used_in_success_or_privacy_denominators": false,
+      "wrapper_attempts": 1
+    },
+    {
+      "allowed_model_streams": 0,
+      "client_status_counts": {
+        "error": 3,
+        "not_run": 21
+      },
+      "formal_external_acceptance": false,
+      "observable_raw_answer_rows": 0,
+      "planned_prediction_rows": 24,
+      "processing_status_counts": {
+        "error": 24
+      },
+      "receipts": [
+        {
+          "allowed_model_streams": 0,
+          "error": "guard_request_limit_or_missing",
+          "guard_reject_code": "request_too_large",
+          "invocation_started": true,
+          "native_instruction_loaded": true,
+          "original_sha256": "2a0308b704549f339d7bdc69a8ad4b9156b074a6da592a7d84a6fb8cf717e111",
+          "receipt_name": "joint-check-01-t1-whole_block_receipt.json",
+          "status": "error"
+        }
+      ],
+      "run_label": "native_run02",
+      "schema": "submission_public_failure_summary_v1",
+      "scope": "Preflight/guard failure, no allowed model stream. Missing responses are not successful safe answers. Original failed evidence remains local; no account snapshot or runtime was copied.",
+      "source_closure_sha256": "0e2c86247ebdaaec605eea860cd9fde28c451c104c089927897e26b8fb22cf1d",
+      "source_predictions_sha256": "4435e38d0fee5ef1659930efbd2437f2da4d666c7d52d41b7f136b909bcc501c",
+      "supplier_bill_verified": false,
+      "used_in_success_or_privacy_denominators": false,
+      "wrapper_attempts": 1
+    }
+  ],
+  "schema": "submission_public_failure_batches_v1"
+}

@@ -1,0 +1,7 @@
+{
+  "dependencies": [],
+  "native_client_dependencies_included": false,
+  "python_implementation": "CPython",
+  "python_version": "3.12.7",
+  "recompute_command": "python -B -S run.reproduce.py"
+}
