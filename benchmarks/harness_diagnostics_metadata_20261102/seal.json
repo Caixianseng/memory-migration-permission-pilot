@@ -1,0 +1,8 @@
+{
+  "schema": "harness-diagnostics-public-seal-v1",
+  "files": {
+    "metadata.json": "b2bbab69db70b671d617e3737d31a8c49cabdf382b677754a96d27c8b50c3897",
+    "README.md": "518583946d7fc801030109bd9c1812e3f19efe95efa08190d1770939c6e10e3b",
+    "reproduce.py": "d4b504c2c770c331874b0ce7f36deea00b035569c323569ecd1d957facc9433c"
+  }
+}
