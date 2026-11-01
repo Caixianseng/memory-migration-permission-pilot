@@ -1,0 +1,36 @@
+{
+  "schema": "client-execution-status-v1",
+  "harness": {
+    "completed_model_calls": 11,
+    "successful_model_calls": 11,
+    "mode": "bundled native runtime, headless SDK, session persistence disabled",
+    "batches": {
+      "personamem_target_baselines": 10,
+      "workbuddy_forwarded_qualification": 1
+    }
+  },
+  "qoder_last_attempt_before_user_stop": {
+    "client_start_attempts": 1,
+    "qualified_artifacts": 0,
+    "first_exit_code": 1,
+    "first_error": "process_exit_nonzero",
+    "specific_provider_failure_reason_preserved": false,
+    "remaining_positions_not_run": 9,
+    "raw_cli_stdout_sha256": "5e8c5166ba548c07ad5cf94e1646c337bf8505d3ce4d9387c916a6c9ba3a7668",
+    "no_calls_after_user_requested_stop": true
+  },
+  "workbuddy": {
+    "current_user_requested_source": true,
+    "requested_model": "Hy3",
+    "visible_outputs_forwarded_by_user": 2,
+    "automated_model_success_confirmed": false,
+    "desktop_automation_failure": "computer-use JavaScript kernel sandbox setup refresh failed",
+    "automation_work_in_progress": true,
+    "cloud_and_local_memory_disabled_user_reported": true,
+    "automatic_entry_attempts_before_inference": 2,
+    "automatic_entry_blocker": "native GUI credentials are encrypted and require supported host bootstrap; standalone CLI returns Authentication required",
+    "automatic_post_forward_handoff_and_target_completed": true,
+    "target_call_count": 1
+  },
+  "independent_human_reviews": 0
+}

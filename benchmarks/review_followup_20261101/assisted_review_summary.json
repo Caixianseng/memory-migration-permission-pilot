@@ -1,0 +1,161 @@
+{
+  "schema": "review-intake-assisted-summary-v1",
+  "received_submission_packages": 2,
+  "registered_story_count": 10,
+  "paired_answer_observations": 60,
+  "new_independent_stories": 0,
+  "accepted_independent_human_reviews": 0,
+  "human_gold": false,
+  "formal_comparison_status": "pending_or_nonindependent",
+  "diagnostic_axis_exact_agreement_counts": {
+    "legal_context_answerability": 60,
+    "payload_support": 60,
+    "answer_quality": 59,
+    "explicit_refusal": 60
+  },
+  "diagnostic_differing_rows": [
+    {
+      "slot": "ret-09",
+      "question_id": "conv-43-q1",
+      "case_id": "conv-43",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "partial",
+        "answer_quality": "supported_partial",
+        "explicit_refusal": "none",
+        "qualifier_issue": "scope"
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "partial",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": [
+        "answer_quality"
+      ]
+    }
+  ],
+  "per_role_arm_answer_quality": {
+    "A": {
+      "bm25_k5_radius2": {
+        "predeclared_legal": {
+          "supported_complete": 17,
+          "no_substantive_answer": 2,
+          "supported_partial": 1
+        },
+        "predeclared_controls": {
+          "no_substantive_answer": 10
+        }
+      },
+      "bm25_k3_complete_sessions": {
+        "predeclared_legal": {
+          "supported_complete": 18,
+          "supported_partial": 2
+        },
+        "predeclared_controls": {
+          "no_substantive_answer": 10
+        }
+      }
+    },
+    "B": {
+      "bm25_k5_radius2": {
+        "predeclared_legal": {
+          "supported_complete": 18,
+          "no_substantive_answer": 2
+        },
+        "predeclared_controls": {
+          "no_substantive_answer": 10
+        }
+      },
+      "bm25_k3_complete_sessions": {
+        "predeclared_legal": {
+          "supported_complete": 18,
+          "supported_partial": 2
+        },
+        "predeclared_controls": {
+          "no_substantive_answer": 10
+        }
+      }
+    }
+  },
+  "diagnostic_comparison_is_not_human_interrater_reliability": true,
+  "source_statements_not_modified": true,
+  "labels_not_adjudicated": true,
+  "new_model_or_account_calls": 0,
+  "submissions": [
+    {
+      "role": "A",
+      "archive_sha256": "82398b8a622c38f0b860fb8b6eb6720bb5c52c062d2cb948e63f7ac9355ad1e8",
+      "archive_bytes": 12260,
+      "ratings_sha256": "d6a24f7a27b7758c9a151a157928481cec78b4bfc63882c580557684a6fd4e17",
+      "submission_sha256": "ea0e0e57a64db1c05486a88b9851828bbcab4f6d63a4a78dcc408744d0d8d296",
+      "rows": 60,
+      "completed_rows_by_strict_validator": 60,
+      "strict_status": "pending",
+      "pending_submission_fields": [
+        "prior_exposure"
+      ],
+      "used_ai_to_label": true,
+      "independently_reviewed": false,
+      "independence_self_attested": false,
+      "axis_counts": {
+        "legal_context_answerability": {
+          "answerable": 40,
+          "unanswerable": 20
+        },
+        "payload_support": {
+          "full": 35,
+          "partial": 4,
+          "none": 21
+        },
+        "answer_quality": {
+          "supported_complete": 35,
+          "no_substantive_answer": 22,
+          "supported_partial": 3
+        },
+        "explicit_refusal": {
+          "none": 60
+        }
+      }
+    },
+    {
+      "role": "B",
+      "archive_sha256": "59d983c58a6084d50af7cf42fb00a6a05dcc94e6daac9ce75a0d59d72302a973",
+      "archive_bytes": 19781,
+      "ratings_sha256": "6f86b5c3c4a850356c97548365873d502150c9282ef3be2995f28dbc4c6a1314",
+      "submission_sha256": "62390e911191e615f153c191c4d7ef8cb1f91c951ae7f49d5c168375143eee45",
+      "rows": 60,
+      "completed_rows_by_strict_validator": 59,
+      "strict_status": "invalid_rows",
+      "pending_submission_fields": [
+        "prior_exposure"
+      ],
+      "used_ai_to_label": true,
+      "independently_reviewed": false,
+      "independence_self_attested": false,
+      "axis_counts": {
+        "legal_context_answerability": {
+          "unanswerable": 20,
+          "answerable": 40
+        },
+        "payload_support": {
+          "none": 21,
+          "full": 35,
+          "partial": 4
+        },
+        "answer_quality": {
+          "no_substantive_answer": 22,
+          "supported_complete": 36,
+          "supported_partial": 2
+        },
+        "explicit_refusal": {
+          "none": 60
+        }
+      }
+    }
+  ]
+}

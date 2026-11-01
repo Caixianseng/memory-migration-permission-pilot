@@ -1,0 +1,1329 @@
+{
+  "schema": "ai-assisted-returned-labels-diagnostic-v1",
+  "scope": "Disclosed AI prelabels with submitter acceptance; not independent human inter-rater agreement.",
+  "human_gold": false,
+  "rows": [
+    {
+      "slot": "ret-01",
+      "question_id": "conv-26-q1",
+      "case_id": "conv-26",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-01",
+      "question_id": "conv-26-q2",
+      "case_id": "conv-26",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-01",
+      "question_id": "conv-26-q3",
+      "case_id": "conv-26",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": "person;scope"
+      },
+      "B": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-02",
+      "question_id": "conv-26-q1",
+      "case_id": "conv-26",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-02",
+      "question_id": "conv-26-q2",
+      "case_id": "conv-26",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-02",
+      "question_id": "conv-26-q3",
+      "case_id": "conv-26",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": "person;scope"
+      },
+      "B": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-03",
+      "question_id": "conv-30-q1",
+      "case_id": "conv-30",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-03",
+      "question_id": "conv-30-q2",
+      "case_id": "conv-30",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-03",
+      "question_id": "conv-30-q3",
+      "case_id": "conv-30",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": "scope"
+      },
+      "B": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-04",
+      "question_id": "conv-30-q1",
+      "case_id": "conv-30",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-04",
+      "question_id": "conv-30-q2",
+      "case_id": "conv-30",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-04",
+      "question_id": "conv-30-q3",
+      "case_id": "conv-30",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": "scope"
+      },
+      "B": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-05",
+      "question_id": "conv-41-q1",
+      "case_id": "conv-41",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-05",
+      "question_id": "conv-41-q2",
+      "case_id": "conv-41",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-05",
+      "question_id": "conv-41-q3",
+      "case_id": "conv-41",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": "person"
+      },
+      "B": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-06",
+      "question_id": "conv-41-q1",
+      "case_id": "conv-41",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-06",
+      "question_id": "conv-41-q2",
+      "case_id": "conv-41",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": "scope"
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-06",
+      "question_id": "conv-41-q3",
+      "case_id": "conv-41",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": "person"
+      },
+      "B": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-07",
+      "question_id": "conv-42-q1",
+      "case_id": "conv-42",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": "date"
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-07",
+      "question_id": "conv-42-q2",
+      "case_id": "conv-42",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-07",
+      "question_id": "conv-42-q3",
+      "case_id": "conv-42",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": "scope"
+      },
+      "B": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-08",
+      "question_id": "conv-42-q1",
+      "case_id": "conv-42",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "partial",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "partial",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-08",
+      "question_id": "conv-42-q2",
+      "case_id": "conv-42",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-08",
+      "question_id": "conv-42-q3",
+      "case_id": "conv-42",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": "scope"
+      },
+      "B": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-09",
+      "question_id": "conv-43-q1",
+      "case_id": "conv-43",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "partial",
+        "answer_quality": "supported_partial",
+        "explicit_refusal": "none",
+        "qualifier_issue": "scope"
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "partial",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": [
+        "answer_quality"
+      ]
+    },
+    {
+      "slot": "ret-09",
+      "question_id": "conv-43-q2",
+      "case_id": "conv-43",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": "possibility"
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-09",
+      "question_id": "conv-43-q3",
+      "case_id": "conv-43",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-10",
+      "question_id": "conv-43-q1",
+      "case_id": "conv-43",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-10",
+      "question_id": "conv-43-q2",
+      "case_id": "conv-43",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-10",
+      "question_id": "conv-43-q3",
+      "case_id": "conv-43",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-11",
+      "question_id": "conv-44-q1",
+      "case_id": "conv-44",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "partial",
+        "answer_quality": "supported_partial",
+        "explicit_refusal": "none",
+        "qualifier_issue": "scope"
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "partial",
+        "answer_quality": "supported_partial",
+        "explicit_refusal": "none",
+        "qualifier_issue": "scope"
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-11",
+      "question_id": "conv-44-q2",
+      "case_id": "conv-44",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-11",
+      "question_id": "conv-44-q3",
+      "case_id": "conv-44",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": "date"
+      },
+      "B": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-12",
+      "question_id": "conv-44-q1",
+      "case_id": "conv-44",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-12",
+      "question_id": "conv-44-q2",
+      "case_id": "conv-44",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-12",
+      "question_id": "conv-44-q3",
+      "case_id": "conv-44",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": "date"
+      },
+      "B": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-13",
+      "question_id": "conv-47-q1",
+      "case_id": "conv-47",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-13",
+      "question_id": "conv-47-q2",
+      "case_id": "conv-47",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-13",
+      "question_id": "conv-47-q3",
+      "case_id": "conv-47",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": "date"
+      },
+      "B": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-14",
+      "question_id": "conv-47-q1",
+      "case_id": "conv-47",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-14",
+      "question_id": "conv-47-q2",
+      "case_id": "conv-47",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-14",
+      "question_id": "conv-47-q3",
+      "case_id": "conv-47",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": "date"
+      },
+      "B": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-15",
+      "question_id": "conv-48-q1",
+      "case_id": "conv-48",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-15",
+      "question_id": "conv-48-q2",
+      "case_id": "conv-48",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-15",
+      "question_id": "conv-48-q3",
+      "case_id": "conv-48",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": "person;date"
+      },
+      "B": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-16",
+      "question_id": "conv-48-q1",
+      "case_id": "conv-48",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-16",
+      "question_id": "conv-48-q2",
+      "case_id": "conv-48",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-16",
+      "question_id": "conv-48-q3",
+      "case_id": "conv-48",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": "person;date"
+      },
+      "B": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-17",
+      "question_id": "conv-49-q1",
+      "case_id": "conv-49",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-17",
+      "question_id": "conv-49-q2",
+      "case_id": "conv-49",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-17",
+      "question_id": "conv-49-q3",
+      "case_id": "conv-49",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": "date"
+      },
+      "B": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-18",
+      "question_id": "conv-49-q1",
+      "case_id": "conv-49",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-18",
+      "question_id": "conv-49-q2",
+      "case_id": "conv-49",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-18",
+      "question_id": "conv-49-q3",
+      "case_id": "conv-49",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": "date"
+      },
+      "B": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-19",
+      "question_id": "conv-50-q1",
+      "case_id": "conv-50",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "partial",
+        "answer_quality": "supported_partial",
+        "explicit_refusal": "none",
+        "qualifier_issue": "scope"
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "partial",
+        "answer_quality": "supported_partial",
+        "explicit_refusal": "none",
+        "qualifier_issue": "scope"
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-19",
+      "question_id": "conv-50-q2",
+      "case_id": "conv-50",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-19",
+      "question_id": "conv-50-q3",
+      "case_id": "conv-50",
+      "arm": "bm25_k3_complete_sessions",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": "date;scope"
+      },
+      "B": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-20",
+      "question_id": "conv-50-q1",
+      "case_id": "conv-50",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-20",
+      "question_id": "conv-50-q2",
+      "case_id": "conv-50",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "B": {
+        "legal_context_answerability": "answerable",
+        "payload_support": "full",
+        "answer_quality": "supported_complete",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    },
+    {
+      "slot": "ret-20",
+      "question_id": "conv-50-q3",
+      "case_id": "conv-50",
+      "arm": "bm25_k5_radius2",
+      "declared_independent_human_review": false,
+      "A": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": "date;scope"
+      },
+      "B": {
+        "legal_context_answerability": "unanswerable",
+        "payload_support": "none",
+        "answer_quality": "no_substantive_answer",
+        "explicit_refusal": "none",
+        "qualifier_issue": ""
+      },
+      "different_axes": []
+    }
+  ]
+}

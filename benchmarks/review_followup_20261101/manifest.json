@@ -1,0 +1,16 @@
+{
+  "schema": "review-followup-public-v1",
+  "files": {
+    "assisted_review_summary.json": "0ac5b5673dce24ee7c56f94c767d30959b7a2a1d2117947240c937fb090c4673",
+    "client_status.json": "fa7d89db3c4f360e794f2582fbb6f88f6aac86b765cae7c0db91e309d11c7bdf",
+    "DATA_ATTRIBUTION.md": "5e7f9eadff737d7c6d9d57362d59b714c1018aee192802fd99d7b8024a6e6162",
+    "experiment.json": "f93d30eeda601e3bf569b5e5f337db0e2a6945e1f939539be5db960d0d31a132",
+    "paired_assisted_labels.json": "48a5dd99f0e56b197f9ed6e13693eb7c1ac622b2c7c295c65a4eb573fc39fb7d",
+    "README.md": "36029152b2e130d9ea200bb79f86ff24c258e3fd3c38396bcebcbe40327a8291",
+    "reproduce.py": "7e2a2c60a02b9ec6483141e1ae84aa91b4d8ab179b3916a2f1fc026aae79204f",
+    "workbuddy_handoff.json": "8f46353bc7805df37065ecb9c4923378c7fed2336b3be6b78aa1eabc5184d7a4"
+  },
+  "human_gold": false,
+  "native_harness_calls": 11,
+  "new_independent_human_reviews": 0
+}
