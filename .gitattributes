@@ -35,3 +35,7 @@ benchmarks/prospective_context_method_freeze_20261027.json -text whitespace=cr-a
 /experiments/algorithm_ports_20261029/** -text
 /experiments/qoder_source_generation_20261030/** -text
 /benchmarks/qoder_source_generation_20261030/** -text
+
+# Keep the new native-client evidence byte exact across Windows and Unix.
+/benchmarks/pre_delivery_revocation_metadata_20261101/** -text
+

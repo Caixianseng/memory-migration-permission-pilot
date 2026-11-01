@@ -35,3 +35,7 @@ htmlcov/
 .vscode/
 Thumbs.db
 .DS_Store
+
+# Raw derived memory publication requires separate authorization.
+/benchmarks/pre_delivery_revocation_20261101/
+

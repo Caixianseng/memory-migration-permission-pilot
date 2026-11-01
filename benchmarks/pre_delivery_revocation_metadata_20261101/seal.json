@@ -1,0 +1,22 @@
+{
+  "files": {
+    "ATTRIBUTION.md": {
+      "bytes": 548,
+      "sha256": "217109cea722e506d2673919d7be5a8db776f9c9ab7db11863a7140e7f0bae74"
+    },
+    "README.md": {
+      "bytes": 1818,
+      "sha256": "30d69e7355ce9d087bdbd16c2737ad3e9ba9c4861ff4135a563e9766aafdc12e"
+    },
+    "metadata.json": {
+      "bytes": 15856,
+      "sha256": "b389bb2a2d0bac68329c14c909a0dcaaecc0b9c6ab16eef29d712baf23d6612e"
+    },
+    "reproduce.py": {
+      "bytes": 5046,
+      "sha256": "43bfd9a895ab1da5af14c724625f733a19f365e19fa0609275c5426d59027d12"
+    }
+  },
+  "schema": "metadata-only-publication-seal-v1",
+  "scope": "unkeyed consistency, not original/native attestation"
+}
