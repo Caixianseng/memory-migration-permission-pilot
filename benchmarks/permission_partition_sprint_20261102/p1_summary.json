@@ -1,0 +1,153 @@
+{
+  "schema": "permission-partition-sprint-p1-public-summary-v1",
+  "created_at_utc": "2026-11-02T12:31:07.209130+00:00",
+  "stage": "D1_P1_complete",
+  "scope": "Controlled host permission views; WorkBuddy HY3 independent source memory reused by official DeepSeek Harness SDK Flash/Max",
+  "plan": {
+    "path": "docs/权限变化记忆迁移_创新验证与落地执行方案_2026-11-02.md",
+    "sha256": "c4f7d28c1d5bc13c460c5831860665d7412b4876357e5f6d05fbf6d86154c5e1"
+  },
+  "data": {
+    "kind": "public synthetic conversations",
+    "independent_stories": 2,
+    "human_gold": false,
+    "source_model_generation_question_blind": true,
+    "formal_units_are_correlated": true
+  },
+  "calls": {
+    "new_harness_completed_verified": 8,
+    "new_hy3_logical_tasks": 0,
+    "reused_existing_hy3_source_artifacts": 8,
+    "formal_matrix_completed": 12,
+    "formal_matrix_planned": 12,
+    "formal_question_evaluations": 24,
+    "historical_exploratory_target_calls_separate": 1,
+    "formal_plus_exploratory_target_calls": 13,
+    "new_model_retries_observed": 0,
+    "physical_hy3_provider_calls": null,
+    "native_desktop_harness_chats_created": false
+  },
+  "primary_frozen_reference": {
+    "name": "All frozen required atoms present on legally answerable questions; correct UNKNOWN separately",
+    "raw": {
+      "legal_denominator": 10,
+      "complete": 8,
+      "missing_evidence_denominator": 2,
+      "correct_unknown": 2,
+      "policy_misrefusal": 0,
+      "unnecessary_unknown": 0
+    },
+    "source_cache": {
+      "legal_denominator": 10,
+      "complete": 5,
+      "missing_evidence_denominator": 2,
+      "correct_unknown": 2,
+      "policy_misrefusal": 0,
+      "unnecessary_unknown": 0
+    },
+    "reference_modified": false,
+    "known_label_scope_limit": "The frozen quick modifier exceeds the location asked in the question; retain the original completeness label and seek human adjudication."
+  },
+  "auxiliary_question_core_review": {
+    "posthoc_interpretive_not_replacement_primary": true,
+    "raw": {
+      "complete": 10,
+      "legal_denominator": 10
+    },
+    "source_cache": {
+      "complete": 8,
+      "partial_duration_qualifier": 2,
+      "legal_denominator": 10
+    }
+  },
+  "additional_strict_review": {
+    "posthoc_not_retroactive_rewrite": true,
+    "questions_total": 24,
+    "pass_including_correct_unknown": 14,
+    "confirmed_incomplete_duration_qualifier": 2,
+    "needs_human_review": 8,
+    "needs_review_breakdown": {
+      "quick_modifier_omission": 5,
+      "gender_pronoun_attribution": 3
+    },
+    "false_factual_negation_observed": 0
+  },
+  "findings": {
+    "duration_comparator_drift": {
+      "confirmed": true,
+      "description": "A more-than duration in original refined text was approximated in one source memory and propagated to two permitted-state answers.",
+      "affected_independent_stories": 1,
+      "affected_distinct_source_artifacts": 1,
+      "affected_target_question_evaluations": 2,
+      "permission_change_causality_established": false
+    },
+    "source_attribution_drift": {
+      "confirmed_upstream": true,
+      "explicitly_propagated_to_relevant_target_answers": false,
+      "description": "The source cache attributed assistant-provided prose to user-supplied writing; relevant target answers did not explicitly repeat that upgrade."
+    },
+    "new_method_advantage": null,
+    "permission_violation_or_native_acl_claim_added": false
+  },
+  "cost": {
+    "currency": "CNY",
+    "new_gross_reserved": "1.112064",
+    "new_usage_conditional_upper_bound": "0.112416",
+    "window_cumulative_gross_reserved": "4.752384",
+    "authorized_window_cap": "9",
+    "actual_supplier_invoice": null,
+    "hy3_actual_cost": null,
+    "account_balance_included": false,
+    "window_reset": false,
+    "interpretation": "Gross reservations and conditional usage bounds are neither invoices nor account balance. They are not to be added as two disjoint costs."
+  },
+  "next_stage": {
+    "id": "P2a",
+    "status": "two_new_development_stories_preparing",
+    "new_model_calls_so_far": 0,
+    "new_case_ids_publicly_included": false,
+    "pre_generation_necessity": null,
+    "candidate_C_status": "not_qualified_for_advantage_claim",
+    "gate": "Retain full legal raw input, just-in-time generation, independent source cache, and simple permission grouping. Require an observed quality-resource gap and actual need for advance generation."
+  },
+  "local_evidence": {
+    "included_in_this_public_delivery": false,
+    "files": [
+      {
+        "path": "results/permission_partition_sprint_20261102/p1_completion_verification.json",
+        "sha256": "54e3971cb69f1421df373d895a974273d32d4798420beab60d08f873fe9f801b"
+      },
+      {
+        "path": "results/permission_partition_sprint_20261102/p1_completion_verification.md",
+        "sha256": "744473fd9629c314557e1cb3b1c6604865933fcc95e37bccd21ce0151e7cfafb"
+      },
+      {
+        "path": "results/permission_partition_sprint_20261102/p1_semantic_review.json",
+        "sha256": "15b84306b4b5ae4f77f6d554227c97bded9f21580b7854549d5ad1a10355d141"
+      },
+      {
+        "path": "results/permission_partition_sprint_20261102/p1_semantic_review.md",
+        "sha256": "10191b70b0bc4831244c93bade28459142e7db35d25fd44a2fd0ca6d9d0ce345"
+      },
+      {
+        "path": "results/permission_partition_sprint_20261102/runtime_inventory.json",
+        "sha256": "c66cdada429b18808d8254a97e84305ff04c182a054c68751833539530e1fd01"
+      },
+      {
+        "path": "results/permission_partition_sprint_20261102/runtime_notes.md",
+        "sha256": "cb580b2de7d071265cbc43a4d62fc02f3cc373bbb11df9b3b99c2d84cf77c7e0"
+      }
+    ],
+    "raw_payloads_answers_credentials_account_balances_included": false,
+    "summary_alone_reproduces_semantics": false
+  },
+  "limitations": [
+    "Two synthetic development stories, not 24 independent samples.",
+    "Frozen reference and this review are AI-based, not human gold.",
+    "Controlled host views are not a continuous native online ACL revocation experiment.",
+    "New eight receipts were fully reverified; old four formal receipts retain their previous verification evidence.",
+    "A repeated error in one cached source across two states is not evidence of permission-change causation.",
+    "Question-core auxiliary scores and posthoc strict diagnostics must not replace the frozen required-atom metric.",
+    "No new partition method, ablation result, paper readiness or innovation advantage has been established."
+  ]
+}
