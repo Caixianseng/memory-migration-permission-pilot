@@ -1,0 +1,319 @@
+{
+  "schema": "permission-semantic-two-story-qualification-public-v1",
+  "date": "2026-11-02",
+  "dataset": "PersonaMem-v2 public synthetic conversations",
+  "human_gold": false,
+  "source_client": "native desktop WorkBuddy HY3",
+  "source_logical_tasks": 8,
+  "source_outputs_verified": 8,
+  "source_outputs": [
+    {
+      "case_id": "personamem-dev-931",
+      "source_id": "S01",
+      "index": 9,
+      "native_model": "hy3",
+      "runtime_source": "desktop_queue",
+      "output_utf8_bytes": 2751,
+      "output_sha256": "cca505e771e0475bdcb1b91d66dc47a0dcef35586f2080c034902b85da5d6b4f",
+      "late_same_attempt_recovery": false
+    },
+    {
+      "case_id": "personamem-dev-931",
+      "source_id": "S02",
+      "index": 2,
+      "native_model": "hy3",
+      "runtime_source": "desktop_queue",
+      "output_utf8_bytes": 1955,
+      "output_sha256": "2b329ac8ed919af69e87f94cd9eaf1239d79e06d36b462216bb3b3a6a1db6ae8",
+      "late_same_attempt_recovery": false
+    },
+    {
+      "case_id": "personamem-dev-931",
+      "source_id": "S03",
+      "index": 3,
+      "native_model": "hy3",
+      "runtime_source": "desktop_queue",
+      "output_utf8_bytes": 1739,
+      "output_sha256": "a2270d956d0b4ef03dcf333abac44125926f47d6f36e02b52721d0a22fe144c6",
+      "late_same_attempt_recovery": false
+    },
+    {
+      "case_id": "personamem-dev-931",
+      "source_id": "S04",
+      "index": 4,
+      "native_model": "hy3",
+      "runtime_source": "desktop_queue",
+      "output_utf8_bytes": 1731,
+      "output_sha256": "a8d345af12947f4b432cb799f142b719c26bac4d37ff515b3de6d808d8d60bd9",
+      "late_same_attempt_recovery": false
+    },
+    {
+      "case_id": "personamem-dev-605",
+      "source_id": "S01",
+      "index": 5,
+      "native_model": "hy3",
+      "runtime_source": "desktop_queue",
+      "output_utf8_bytes": 2247,
+      "output_sha256": "2fc90e0b3c4650c474fcd07b3e0fe7a18b5bc917c6c3856e0b95e516e1d246a2",
+      "late_same_attempt_recovery": false
+    },
+    {
+      "case_id": "personamem-dev-605",
+      "source_id": "S02",
+      "index": 6,
+      "native_model": "hy3",
+      "runtime_source": "desktop_queue",
+      "output_utf8_bytes": 2068,
+      "output_sha256": "2d8dd2ad4287205b6c127be6d0687c3c0ab9a23d1001a456254e957c383d42fd",
+      "late_same_attempt_recovery": false
+    },
+    {
+      "case_id": "personamem-dev-605",
+      "source_id": "S03",
+      "index": 7,
+      "native_model": "hy3",
+      "runtime_source": "desktop_queue",
+      "output_utf8_bytes": 4087,
+      "output_sha256": "b1aa1d07a50a4bccd8b91f30f49c3e4e8c5ad787fd5b38e3636e27b345fc5f0b",
+      "late_same_attempt_recovery": false
+    },
+    {
+      "case_id": "personamem-dev-605",
+      "source_id": "S04",
+      "index": 8,
+      "native_model": "hy3",
+      "runtime_source": "desktop_queue",
+      "output_utf8_bytes": 2137,
+      "output_sha256": "a0cb421d858d4d70535c10e4c032ac686f8c049b90914931e75ae911b1f59b00",
+      "late_same_attempt_recovery": true
+    }
+  ],
+  "source_first_pass_outputs": 7,
+  "source_late_same_attempt_outputs": 1,
+  "zero_submission_setup_failure_preserved": 1,
+  "source_adapter_admission_attempts": 9,
+  "source_model_resubmissions": 0,
+  "source_provider_calls": null,
+  "source_actual_cost_cny": null,
+  "target_client": "official DeepSeek Harness SDK",
+  "target_model": "deepseek-flash",
+  "reasoningEffort": "max",
+  "output_cap": 4096,
+  "target": {
+    "completed_target_calls": 5,
+    "raw_calls": 4,
+    "exploratory_retrieved_cache_calls": 1,
+    "full_cache_target_calls": 0,
+    "stories": 2,
+    "question_evaluations": 10,
+    "legal_question_evaluations": 7,
+    "legal_required_information_complete": 7,
+    "strict_legal_supported_complete": 7,
+    "unanswerable_question_evaluations": 3,
+    "appropriate_unknown": 3,
+    "policy_refusal_observed": 0,
+    "legal_unknown": 0,
+    "unsupported_negation_observed": 0,
+    "unsupported_genre_or_biography_upgrade_observed": 0,
+    "qualifier_omission_observed": 0,
+    "original_host_verification_metadata_failures": 1,
+    "subsequently_reverified_with_immutable_addendum": 1,
+    "native_completed_response_failures": 0
+  },
+  "target_receipt_sha256": [
+    "045062f73849805cd2d6de503097934905b66de38f30d889849f62e788d97892",
+    "4ed27f73cd67915f469998c1ae7e4f0dd26753a23bb357758e3644bcbc04a12e",
+    "f7fe5896808d7c58c2dae01a57fb9b6c2d306f106be7b5f7bf01af40f21b6b34",
+    "c0832bf9d276797a27ce393e5bdf16b0c9f52038c68472225866b91e5c301dd2",
+    "f3f7a1891c82aafa4b63111e22e3631d137f2824838232a1a1d6e9caedcd79a0"
+  ],
+  "current_round_target_gross_reserved_cny": "0.593920",
+  "current_round_target_conditional_bound_cny": "0.049580",
+  "cumulative_nine_cny_window_gross_cny": "3.640320",
+  "window_cap_cny": "9",
+  "actual_invoice_cny": null,
+  "full_original_comparison_complete": false,
+  "new_method_advantage": null,
+  "new_permission_specific_semantic_failure_observed": false,
+  "native_online_acl_verified": false,
+  "continuous_migration_chain": false,
+  "source_kind": "four ordered conversation exchanges per synthetic persona, not four independent sessions",
+  "independent_stories": 2,
+  "not_completed": [
+    "second story unchanged and irrelevant-source target views",
+    "full-cache 2-story 3-state target comparison",
+    "new-method arm",
+    "human review"
+  ],
+  "public_payload_contains_original_source_or_response": false,
+  "per_question": [
+    {
+      "case_id": "personamem-dev-605",
+      "arm": "raw",
+      "state": "revoke_critical",
+      "question_id": "personamem-dev-605-q1",
+      "reference_answerable": false,
+      "unknown": true,
+      "necessary_information_complete": null,
+      "strict_supported_complete": true,
+      "appropriate_unknown": true,
+      "receipt_sha256": "c0832bf9d276797a27ce393e5bdf16b0c9f52038c68472225866b91e5c301dd2",
+      "actual_memory_source_ids": [
+        "S02",
+        "S03",
+        "S04"
+      ]
+    },
+    {
+      "case_id": "personamem-dev-605",
+      "arm": "raw",
+      "state": "revoke_critical",
+      "question_id": "personamem-dev-605-q2",
+      "reference_answerable": true,
+      "unknown": false,
+      "necessary_information_complete": true,
+      "strict_supported_complete": true,
+      "appropriate_unknown": false,
+      "receipt_sha256": "c0832bf9d276797a27ce393e5bdf16b0c9f52038c68472225866b91e5c301dd2",
+      "actual_memory_source_ids": [
+        "S02",
+        "S03",
+        "S04"
+      ]
+    },
+    {
+      "case_id": "personamem-dev-931",
+      "arm": "raw",
+      "state": "revoke_critical",
+      "question_id": "personamem-dev-931-q1",
+      "reference_answerable": false,
+      "unknown": true,
+      "necessary_information_complete": null,
+      "strict_supported_complete": true,
+      "appropriate_unknown": true,
+      "receipt_sha256": "045062f73849805cd2d6de503097934905b66de38f30d889849f62e788d97892",
+      "actual_memory_source_ids": [
+        "S01",
+        "S03",
+        "S04"
+      ]
+    },
+    {
+      "case_id": "personamem-dev-931",
+      "arm": "raw",
+      "state": "revoke_critical",
+      "question_id": "personamem-dev-931-q2",
+      "reference_answerable": true,
+      "unknown": false,
+      "necessary_information_complete": true,
+      "strict_supported_complete": true,
+      "appropriate_unknown": false,
+      "receipt_sha256": "045062f73849805cd2d6de503097934905b66de38f30d889849f62e788d97892",
+      "actual_memory_source_ids": [
+        "S01",
+        "S03",
+        "S04"
+      ]
+    },
+    {
+      "case_id": "personamem-dev-931",
+      "arm": "raw",
+      "state": "revoke_irrelevant",
+      "question_id": "personamem-dev-931-q1",
+      "reference_answerable": true,
+      "unknown": false,
+      "necessary_information_complete": true,
+      "strict_supported_complete": true,
+      "appropriate_unknown": false,
+      "receipt_sha256": "f7fe5896808d7c58c2dae01a57fb9b6c2d306f106be7b5f7bf01af40f21b6b34",
+      "actual_memory_source_ids": [
+        "S01",
+        "S02",
+        "S04"
+      ]
+    },
+    {
+      "case_id": "personamem-dev-931",
+      "arm": "raw",
+      "state": "revoke_irrelevant",
+      "question_id": "personamem-dev-931-q2",
+      "reference_answerable": true,
+      "unknown": false,
+      "necessary_information_complete": true,
+      "strict_supported_complete": true,
+      "appropriate_unknown": false,
+      "receipt_sha256": "f7fe5896808d7c58c2dae01a57fb9b6c2d306f106be7b5f7bf01af40f21b6b34",
+      "actual_memory_source_ids": [
+        "S01",
+        "S02",
+        "S04"
+      ]
+    },
+    {
+      "case_id": "personamem-dev-931",
+      "arm": "raw",
+      "state": "unchanged",
+      "question_id": "personamem-dev-931-q1",
+      "reference_answerable": true,
+      "unknown": false,
+      "necessary_information_complete": true,
+      "strict_supported_complete": true,
+      "appropriate_unknown": false,
+      "receipt_sha256": "4ed27f73cd67915f469998c1ae7e4f0dd26753a23bb357758e3644bcbc04a12e",
+      "actual_memory_source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04"
+      ]
+    },
+    {
+      "case_id": "personamem-dev-931",
+      "arm": "raw",
+      "state": "unchanged",
+      "question_id": "personamem-dev-931-q2",
+      "reference_answerable": true,
+      "unknown": false,
+      "necessary_information_complete": true,
+      "strict_supported_complete": true,
+      "appropriate_unknown": false,
+      "receipt_sha256": "4ed27f73cd67915f469998c1ae7e4f0dd26753a23bb357758e3644bcbc04a12e",
+      "actual_memory_source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04"
+      ]
+    },
+    {
+      "case_id": "personamem-dev-931",
+      "arm": "retrieved_cache",
+      "state": "revoke_critical",
+      "question_id": "personamem-dev-931-q1",
+      "reference_answerable": false,
+      "unknown": true,
+      "necessary_information_complete": null,
+      "strict_supported_complete": true,
+      "appropriate_unknown": true,
+      "receipt_sha256": "f3f7a1891c82aafa4b63111e22e3631d137f2824838232a1a1d6e9caedcd79a0",
+      "actual_memory_source_ids": [
+        "S01"
+      ]
+    },
+    {
+      "case_id": "personamem-dev-931",
+      "arm": "retrieved_cache",
+      "state": "revoke_critical",
+      "question_id": "personamem-dev-931-q2",
+      "reference_answerable": true,
+      "unknown": false,
+      "necessary_information_complete": true,
+      "strict_supported_complete": true,
+      "appropriate_unknown": false,
+      "receipt_sha256": "f3f7a1891c82aafa4b63111e22e3631d137f2824838232a1a1d6e9caedcd79a0",
+      "actual_memory_source_ids": [
+        "S01"
+      ]
+    }
+  ]
+}
