@@ -1,0 +1,179 @@
+{
+  "budget": {
+    "actual_invoice_cny": null,
+    "conditional_new_usage_bound_cny": "0.120548",
+    "gross_new_reservation_cny": "1.241088",
+    "window_cap_cny": "9",
+    "window_conditional_pending_risk_cny": "8.825864",
+    "window_cumulative_gross_cny": "5.993472"
+  },
+  "calls": {
+    "automatic_retries": 0,
+    "formal_matrix_completed": 12,
+    "formal_matrix_planned": 12,
+    "formal_question_observations": 24,
+    "native_desktop_harness_chats_created": false,
+    "new_formal_hy3_native_tasks": 10,
+    "new_harness_target_requests": 12,
+    "new_synthetic_interface_qualification": 1,
+    "p2a_source_attempts_including_older_failure": 12,
+    "p2a_source_cap": 20,
+    "provider_physical_requests": null,
+    "source_visible_tool_calls": 0,
+    "verified_target_receipts": 12
+  },
+  "case_id": "personamem-dev-990",
+  "created_at_utc": "2026-11-02T15:16:55.939337+00:00",
+  "failure_analysis": {
+    "actual_memory_contains_sentence_but_lacks_explicit_requested_connection": 1,
+    "actual_memory_missing_transition_sentence": 3,
+    "all_four_not_labelled_policy_refusal": true,
+    "all_memory_assertions_exhaustively_scored": false,
+    "partial_supported_answer_withheld_in_one_case": true,
+    "q2_legal_UNKNOWN_observations": 4,
+    "that_upstream_attribution_error_explicitly_propagated_to_two_registered_task_answers": false,
+    "upstream_assistant_prose_upgraded_to_user_self_report_observed": true,
+    "upstream_attribution_error_delivered_observations": 8,
+    "upstream_attribution_error_distinct_generated_artifacts": 6,
+    "connection_inference_in_B2_critical_needs_human_review": true
+  },
+  "human_gold": false,
+  "human_review": {
+    "all_initial_scores_blank": true,
+    "items_per_rater": 24,
+    "ratings_received": false,
+    "strict_double_blind": false,
+    "two_packs_prepared": true
+  },
+  "independent_stories": 1,
+  "limits": [
+    "One new synthetic development story, not 24 independent samples.",
+    "One target run per branch cannot estimate stochastic variation.",
+    "Source question/reference exclusion applies to registered payload; hidden context unverified.",
+    "Control results, source error and question-level task scores are distinct.",
+    "Client tool-free evidence is not OS-level tool prevention.",
+    "Reports and summary are not a complete reproducibility artifact."
+  ],
+  "local_evidence": {
+    "pins": {
+      "results/permission_partition_sprint_20261102/p2_native_direct_v3/personamem-dev-990/budget_contract.approved.json": "40552cee2a6c4fb2b370c2f2f5265d6f129ae158d7263dbe9d25715a5dd2d9ec",
+      "results/permission_partition_sprint_20261102/p2_native_direct_v3/personamem-dev-990/execution_result.json": "04f94dc74e9cbca19a4b481ac5f9cfaad6c0a110dcc3c2dbfc97037843c5e13d",
+      "results/permission_partition_sprint_20261102/p2_native_direct_v3/personamem-dev-990/plan.json": "4e8d5ffbae09b0cbeb2782760c50d23bb155a33a31ea42d191e05d2fbdde87c1",
+      "results/permission_partition_sprint_20261102/p2_v3_execution_metrics_990.json": "5a7c7323d901418f1cdf5cdeb3625735315f244a76351678a564903afe018dcf",
+      "results/permission_partition_sprint_20261102/p2_v3_posthoc_990_01.json": "1e8c886595e051dde97a1ea874cda02c0a8c63903df51db4e2d8f2e54b3ce195",
+      "results/permission_partition_sprint_20261102/p2_v3_resource_attribution_990.json": "4c59a48327a5784f8ce70a1f5d9129b77f06e75258077c0cbb05b72598fe229f",
+      "results/permission_partition_sprint_20261102/qualification_direct_20261102/qualification_result.json": "03c0267f01eb459dd08a929f600950ca68808fca13787a3e2e50eb1755e0538c",
+      "results/permission_partition_sprint_20261102/semantic_review_v3/source_reference_990_preanswers.json": "0313294423c92e406cc4f0a8f59fdce88387c9da67f529da4b18f0446a5da6b7",
+      "results/permission_partition_sprint_20261102/semantic_review_v3/semantic_review_990_actual_answers.json": "460a3a479ef72dab3e617ffba436449f216634e5912993d565d9792f4f501f23"
+    },
+    "published_raw_evidence": false,
+    "summary_alone_reproduces_semantics": false
+  },
+  "primary_utility": {
+    "B1_legal_raw": {
+      "complete": 5,
+      "correct_UNKNOWN": 1,
+      "explicit_policy_misrefusal": 0,
+      "legal_denominator": 5,
+      "legal_task_UNKNOWN": 0,
+      "missing_evidence_denominator": 1
+    },
+    "B2_lazy_generation": {
+      "complete": 3,
+      "correct_UNKNOWN": 1,
+      "explicit_policy_misrefusal": 0,
+      "legal_denominator": 5,
+      "legal_task_UNKNOWN": 2,
+      "missing_evidence_denominator": 1
+    },
+    "B3_mixed_and_full_rebuild": {
+      "complete": 3,
+      "correct_UNKNOWN": 1,
+      "explicit_policy_misrefusal": 0,
+      "legal_denominator": 5,
+      "legal_task_UNKNOWN": 2,
+      "missing_evidence_denominator": 1
+    },
+    "B4_independent_source_cache": {
+      "complete": 5,
+      "correct_UNKNOWN": 1,
+      "explicit_policy_misrefusal": 0,
+      "legal_denominator": 5,
+      "legal_task_UNKNOWN": 0,
+      "missing_evidence_denominator": 1
+    },
+    "complete_legal_total": 16,
+    "correct_missing_controls": 4,
+    "legal_total": 20,
+    "missing_controls": 4,
+    "rule": "all frozen question-required atoms complete and supported; faithful paraphrase allowed"
+  },
+  "reference_kind": "frozen source-grounded AI reference, root and separate AI reviewer; no human ratings",
+  "research_decision": {
+    "advance_generation_necessity_in_source_evidence": "unknown",
+    "native_direct_reply_route_qualified_in_this_run": true,
+    "new_method_advantage": null,
+    "new_partition_method_qualified_for_advantage_experiment": false,
+    "seven_day_plan_complete": false,
+    "source_944_failure_overwritten_or_resumed": false,
+    "strong_baselines_unsolved_problem_established": false
+  },
+  "resource": {
+    "cross_model_tokens_are_not_currency": true,
+    "formal_source_client_usage_steps": 10,
+    "formal_source_input_tokens": 294712,
+    "formal_source_output_tokens": 11783,
+    "hy3_actual_invoice_cny": null,
+    "method_resources": {
+      "B1": {
+        "source_attributed_callback_seconds": 0,
+        "source_standalone_attributed_input_tokens": 0,
+        "source_standalone_attributed_output_tokens": 0,
+        "source_standalone_attributions": 0,
+        "target_calls": 3,
+        "target_memory_bytes_sum": 14700
+      },
+      "B2": {
+        "source_attributed_callback_seconds": 149.484,
+        "source_standalone_attributed_input_tokens": 89256,
+        "source_standalone_attributed_output_tokens": 4498,
+        "source_standalone_attributions": 3,
+        "target_calls": 3,
+        "target_memory_bytes_sum": 6520
+      },
+      "B3": {
+        "source_attributed_callback_seconds": 260.095,
+        "source_standalone_attributed_input_tokens": 149335,
+        "source_standalone_attributed_output_tokens": 6710,
+        "source_standalone_attributions": 5,
+        "target_calls": 3,
+        "target_memory_bytes_sum": 5058
+      },
+      "B4": {
+        "source_attributed_callback_seconds": 373.50000000000006,
+        "source_standalone_attributed_input_tokens": 348525,
+        "source_standalone_attributed_output_tokens": 10647,
+        "source_standalone_attributions": 12,
+        "target_calls": 3,
+        "target_memory_bytes_sum": 12363
+      }
+    },
+    "source_actual_logical_tasks": 10,
+    "standalone_attributions_are_extra_provider_calls": false,
+    "standalone_source_attributions": 20
+  },
+  "schema": "permission-partition-direct-v3-public-summary-v1",
+  "scope": "trusted host first delivery after export permission change; native WorkBuddy HY3 reply saved by host, official Harness SDK Flash/Max/4096",
+  "security": {
+    "actual_payload_matches_target_native_read": true,
+    "checked_branches": 12,
+    "general_safety_proof": false,
+    "hidden_provider_context_verified": false,
+    "independent_policy_reference": "frozen schedule, no production decision/broker call used as oracle",
+    "old_packet_checks_recorded_from_live_run": true,
+    "old_packet_independently_reexecuted": false,
+    "unauthorized_registered_dependency_deliveries_observed": 0,
+    "verified_saved_evidence_branches": 12
+  },
+  "reference_review_blind": false
+}
