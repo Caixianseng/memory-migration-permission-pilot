@@ -1,0 +1,414 @@
+{
+  "aggregate": {
+    "arms_per_case": 2,
+    "cases": 4,
+    "complete_quote_preservation_is_not_model_success": true,
+    "new_method_advantage_established": false,
+    "original_legal_messages": 24,
+    "payloads_identical_cases": 4,
+    "selected_messages_per_arm": 24
+  },
+  "budget": 32768,
+  "budget_unit": "utf8_bytes_full_serialized_memory_payload",
+  "cases": [
+    {
+      "anonymous_case": "C01",
+      "arms": [
+        {
+          "candidate_count": 6,
+          "candidate_pool_sha256": "35fc53b4a36a0d82352767af164bd274dc945ba083e351e95d6aae8b6f4c062d",
+          "dependency_attenuation_performed": false,
+          "exact_quote_rate": 1.0,
+          "exact_whole_quotes": 6,
+          "host_actual_input_dependencies": [
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "model_answer_correctness": null,
+          "new_model_calls": 0,
+          "omitted_count": 0,
+          "original_message_coverage": 1.0,
+          "payload_sha256": "35fc53b4a36a0d82352767af164bd274dc945ba083e351e95d6aae8b6f4c062d",
+          "payload_utf8_bytes": 3598,
+          "selected_by_source": {
+            "S02": 2,
+            "S03": 2,
+            "S04": 2
+          },
+          "selected_by_speaker": {
+            "assistant": 3,
+            "user": 3
+          },
+          "selected_count": 6,
+          "selected_source_ids": [
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "semantic_or_task_success_established": false,
+          "status": "ok",
+          "strategy": "source_first"
+        },
+        {
+          "candidate_count": 6,
+          "candidate_pool_sha256": "35fc53b4a36a0d82352767af164bd274dc945ba083e351e95d6aae8b6f4c062d",
+          "dependency_attenuation_performed": false,
+          "exact_quote_rate": 1.0,
+          "exact_whole_quotes": 6,
+          "host_actual_input_dependencies": [
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "model_answer_correctness": null,
+          "new_model_calls": 0,
+          "omitted_count": 0,
+          "original_message_coverage": 1.0,
+          "payload_sha256": "35fc53b4a36a0d82352767af164bd274dc945ba083e351e95d6aae8b6f4c062d",
+          "payload_utf8_bytes": 3598,
+          "selected_by_source": {
+            "S02": 2,
+            "S03": 2,
+            "S04": 2
+          },
+          "selected_by_speaker": {
+            "assistant": 3,
+            "user": 3
+          },
+          "selected_count": 6,
+          "selected_source_ids": [
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "semantic_or_task_success_established": false,
+          "status": "ok",
+          "strategy": "source_role_round_robin"
+        }
+      ],
+      "candidate_pool_identical": true,
+      "new_method_advantage_established": false,
+      "payload_bytes_identical": true,
+      "selected_order_identical": true
+    },
+    {
+      "anonymous_case": "C02",
+      "arms": [
+        {
+          "candidate_count": 6,
+          "candidate_pool_sha256": "d1831f8a28abae3bb9489ff28765cf4884dbe43c749dfe7bc3fe04d79a929c80",
+          "dependency_attenuation_performed": false,
+          "exact_quote_rate": 1.0,
+          "exact_whole_quotes": 6,
+          "host_actual_input_dependencies": [
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "model_answer_correctness": null,
+          "new_model_calls": 0,
+          "omitted_count": 0,
+          "original_message_coverage": 1.0,
+          "payload_sha256": "d1831f8a28abae3bb9489ff28765cf4884dbe43c749dfe7bc3fe04d79a929c80",
+          "payload_utf8_bytes": 4798,
+          "selected_by_source": {
+            "S02": 2,
+            "S03": 2,
+            "S04": 2
+          },
+          "selected_by_speaker": {
+            "assistant": 3,
+            "user": 3
+          },
+          "selected_count": 6,
+          "selected_source_ids": [
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "semantic_or_task_success_established": false,
+          "status": "ok",
+          "strategy": "source_first"
+        },
+        {
+          "candidate_count": 6,
+          "candidate_pool_sha256": "d1831f8a28abae3bb9489ff28765cf4884dbe43c749dfe7bc3fe04d79a929c80",
+          "dependency_attenuation_performed": false,
+          "exact_quote_rate": 1.0,
+          "exact_whole_quotes": 6,
+          "host_actual_input_dependencies": [
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "model_answer_correctness": null,
+          "new_model_calls": 0,
+          "omitted_count": 0,
+          "original_message_coverage": 1.0,
+          "payload_sha256": "d1831f8a28abae3bb9489ff28765cf4884dbe43c749dfe7bc3fe04d79a929c80",
+          "payload_utf8_bytes": 4798,
+          "selected_by_source": {
+            "S02": 2,
+            "S03": 2,
+            "S04": 2
+          },
+          "selected_by_speaker": {
+            "assistant": 3,
+            "user": 3
+          },
+          "selected_count": 6,
+          "selected_source_ids": [
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "semantic_or_task_success_established": false,
+          "status": "ok",
+          "strategy": "source_role_round_robin"
+        }
+      ],
+      "candidate_pool_identical": true,
+      "new_method_advantage_established": false,
+      "payload_bytes_identical": true,
+      "selected_order_identical": true
+    },
+    {
+      "anonymous_case": "C03",
+      "arms": [
+        {
+          "candidate_count": 6,
+          "candidate_pool_sha256": "6d357b42edcbea519ec2488e498453ffc116768eb05e6777eb098ecfd72d84f8",
+          "dependency_attenuation_performed": false,
+          "exact_quote_rate": 1.0,
+          "exact_whole_quotes": 6,
+          "host_actual_input_dependencies": [
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "model_answer_correctness": null,
+          "new_model_calls": 0,
+          "omitted_count": 0,
+          "original_message_coverage": 1.0,
+          "payload_sha256": "6d357b42edcbea519ec2488e498453ffc116768eb05e6777eb098ecfd72d84f8",
+          "payload_utf8_bytes": 4946,
+          "selected_by_source": {
+            "S02": 2,
+            "S03": 2,
+            "S04": 2
+          },
+          "selected_by_speaker": {
+            "assistant": 3,
+            "user": 3
+          },
+          "selected_count": 6,
+          "selected_source_ids": [
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "semantic_or_task_success_established": false,
+          "status": "ok",
+          "strategy": "source_first"
+        },
+        {
+          "candidate_count": 6,
+          "candidate_pool_sha256": "6d357b42edcbea519ec2488e498453ffc116768eb05e6777eb098ecfd72d84f8",
+          "dependency_attenuation_performed": false,
+          "exact_quote_rate": 1.0,
+          "exact_whole_quotes": 6,
+          "host_actual_input_dependencies": [
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "model_answer_correctness": null,
+          "new_model_calls": 0,
+          "omitted_count": 0,
+          "original_message_coverage": 1.0,
+          "payload_sha256": "6d357b42edcbea519ec2488e498453ffc116768eb05e6777eb098ecfd72d84f8",
+          "payload_utf8_bytes": 4946,
+          "selected_by_source": {
+            "S02": 2,
+            "S03": 2,
+            "S04": 2
+          },
+          "selected_by_speaker": {
+            "assistant": 3,
+            "user": 3
+          },
+          "selected_count": 6,
+          "selected_source_ids": [
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "semantic_or_task_success_established": false,
+          "status": "ok",
+          "strategy": "source_role_round_robin"
+        }
+      ],
+      "candidate_pool_identical": true,
+      "new_method_advantage_established": false,
+      "payload_bytes_identical": true,
+      "selected_order_identical": true
+    },
+    {
+      "anonymous_case": "C04",
+      "arms": [
+        {
+          "candidate_count": 6,
+          "candidate_pool_sha256": "7a482ce30ef8a127e725892dbf470d9d6341a67c349358ca9bb501fd765f052f",
+          "dependency_attenuation_performed": false,
+          "exact_quote_rate": 1.0,
+          "exact_whole_quotes": 6,
+          "host_actual_input_dependencies": [
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "model_answer_correctness": null,
+          "new_model_calls": 0,
+          "omitted_count": 0,
+          "original_message_coverage": 1.0,
+          "payload_sha256": "7a482ce30ef8a127e725892dbf470d9d6341a67c349358ca9bb501fd765f052f",
+          "payload_utf8_bytes": 3460,
+          "selected_by_source": {
+            "S02": 2,
+            "S03": 2,
+            "S04": 2
+          },
+          "selected_by_speaker": {
+            "assistant": 3,
+            "user": 3
+          },
+          "selected_count": 6,
+          "selected_source_ids": [
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "semantic_or_task_success_established": false,
+          "status": "ok",
+          "strategy": "source_first"
+        },
+        {
+          "candidate_count": 6,
+          "candidate_pool_sha256": "7a482ce30ef8a127e725892dbf470d9d6341a67c349358ca9bb501fd765f052f",
+          "dependency_attenuation_performed": false,
+          "exact_quote_rate": 1.0,
+          "exact_whole_quotes": 6,
+          "host_actual_input_dependencies": [
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "model_answer_correctness": null,
+          "new_model_calls": 0,
+          "omitted_count": 0,
+          "original_message_coverage": 1.0,
+          "payload_sha256": "7a482ce30ef8a127e725892dbf470d9d6341a67c349358ca9bb501fd765f052f",
+          "payload_utf8_bytes": 3460,
+          "selected_by_source": {
+            "S02": 2,
+            "S03": 2,
+            "S04": 2
+          },
+          "selected_by_speaker": {
+            "assistant": 3,
+            "user": 3
+          },
+          "selected_count": 6,
+          "selected_source_ids": [
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "semantic_or_task_success_established": false,
+          "status": "ok",
+          "strategy": "source_role_round_robin"
+        }
+      ],
+      "candidate_pool_identical": true,
+      "new_method_advantage_established": false,
+      "payload_bytes_identical": true,
+      "selected_order_identical": true
+    }
+  ],
+  "code_manifest": {
+    "experiments/permission_personamem_source_20261101/materials.py": "ac7101a4de822a4e9c3d230e01894c0ba8d88caa9ea4834351b97e94727cebd4",
+    "experiments/source_role_baseline_20261102/adapt_existing.py": "ba225a50c53adcfe2e5c0cd06c788f17af821e971090b5ba104a4f830de13153",
+    "experiments/source_role_baseline_20261102/selector.py": "62c8154cd11a962fc1bc8c617a4340adba1af487d929967dce93b1d7414bcdad"
+  },
+  "complete_sdk_request_measured": false,
+  "date": "2026-11-02",
+  "host_actual_input_dependency_rule_unchanged": true,
+  "human_gold": false,
+  "independent_test_set": false,
+  "input_bindings": [
+    {
+      "allowed_source_sha256": {
+        "S02": "0eaf65cfb4829fd73566e36318c72294d70fb50aebb23a65c236e5fc967f2f1e",
+        "S03": "6ad469a58886b9c8dc1738d533901f09029f626105cdb2d5a5083e5ebc1750df",
+        "S04": "eabd321423763158562a78c2f19ffd22de62b08e7a419ed1ec7a9c30dfd5372e"
+      },
+      "anonymous_case": "C01",
+      "frozen_sources_sha256": "049f0367419e9a12eda2b419fc051c0d5ab34da455125b58b9a740bc56411f4c"
+    },
+    {
+      "allowed_source_sha256": {
+        "S02": "a8284f31fc5d96b6aab88f2e4dcaf7c36bce43d33529f9bb43b77ffd51f285cd",
+        "S03": "307b7ce3d9566b34b5246fe30c9efc0a08fb615d02d5eca28b12f94809aa6fff",
+        "S04": "e048b5fdba4b0e9c3393152f3e4a239a97f3b03c46d4e67fc7ac214157b3b0ff"
+      },
+      "anonymous_case": "C02",
+      "frozen_sources_sha256": "040efadae18b4c5031e80df04b9ac45fa8035999bb1f1607933fb7bce60d0085"
+    },
+    {
+      "allowed_source_sha256": {
+        "S02": "c5fd2ff5811d0cc1c6011a84d2183b3d0da88dd5099a9d2a730fd7aec5439ccb",
+        "S03": "08f70ebb70f41df4347970a3d9b1c3578cc8cacc8d002d0f995ca740bd6a4ea8",
+        "S04": "3402ec5d130826077db113842a77042e7ebc7650541f990a8a15a31ea4323392"
+      },
+      "anonymous_case": "C03",
+      "frozen_sources_sha256": "71fac214824ad23a4816e1f36f9aba20d8987960588c7f2ed47f937b2cd61b01"
+    },
+    {
+      "allowed_source_sha256": {
+        "S02": "6fdb385f0af1922f884f12140eabbd96ffe0bb4a467fdbfece0cfce10787a0bf",
+        "S03": "868e061a5fa4f5c0defb1ca96855d59e4088313965804406ce03540a63929028",
+        "S04": "3cf0b9a838d6735a2ad608103e768c7b21a51ec0f6b4788a52bbfddcf9628c44"
+      },
+      "anonymous_case": "C04",
+      "frozen_sources_sha256": "cab6f25371637ecda884d8478fbdf229a3ffb9b6e35da4030aa438caf6109a8f"
+    }
+  ],
+  "integrity_checks": {
+    "cross_source_message_relabel_rejected": true,
+    "duplicate_content_located_by_renderer_offsets": true,
+    "forged_role_rejected": true,
+    "in_content_role_markers_cannot_override_structured_role": true,
+    "mixed_source_relabel_rejected": true,
+    "scope": "synthetic_integrity_checks_not_semantic_or_model_trials"
+  },
+  "interpretation": "One user and one assistant message per source; both orderings retain all six at the actual byte cap. No selection or payload difference is observed.",
+  "network_requests": 0,
+  "new_account_queries": 0,
+  "new_model_calls": 0,
+  "online_current_policy_checked": false,
+  "policy_reference": "frozen_S01_export_disallowed_S02_S03_S04_registered_allowed",
+  "pre_delivery_reauthorization_required": true,
+  "projection_sha256": "eb39db59abfa2e52c6bb7cc21d79499a70ed0e27191b715a5663a70d3eb99796",
+  "questions_or_reference_answers_read": false,
+  "raw_text_in_summary": false,
+  "real_limit_binding": {
+    "line": 32,
+    "path": "experiments/permission_task_target_20261101/native_transport.py",
+    "sha256": "9ab6d5ec7707ae4e7005cc11360a77504879a3b772f52091b0b3641193a1756f"
+  },
+  "schema": "source-role-frozen-development-diagnostic-v1",
+  "scope": "four_existing_development_cases_not_online_native_authorization",
+  "subject_and_receiver_authenticated_here": false,
+  "token_budget_qualified": false
+}

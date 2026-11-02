@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-02",
+  "files": {
+    "README.md": "eacfe34363a57ed791c24cb8860bec4a83b77e35a337be8b1dd98f184c0f6d88",
+    "gate0.json": "1fb05366d9ec9f6800b9fd9dc15f8515bfb1e2a1c9847c0a2503abe9f09fe7a9",
+    "reproduce.py": "1cb598c2653c08a1d82edc70c512f475ad659e4879f081a97c1dbb9888e2bafe",
+    "role_baseline.json": "8f8e687d7c6f0adccca3b2d2f795b467794a08ed6ffee06089d5b80a9fdb7893"
+  },
+  "raw_source_or_account_data_included": false,
+  "schema": "innovation-gate0-public-metadata-seal-v1",
+  "semantic_reproducibility_claimed": false
+}

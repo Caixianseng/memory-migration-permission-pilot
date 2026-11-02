@@ -1,0 +1,88 @@
+{
+  "schema": "real-hy3-source-run04-public-metadata-v1",
+  "date": "2026-11-02",
+  "sources": [
+    {
+      "native_model": "hy3",
+      "new_native_session": true,
+      "input_sha256": "6be5fe3d9d362e558ef13b196d2989c7b9057e663c71d458c62300708cbe565d",
+      "output_sha256": "1dc311464522f348fdc16fbf29cf9b771c0f2cbecfd47a3999d35b7289c8a4ea",
+      "native_output_file_sha256": "1dc311464522f348fdc16fbf29cf9b771c0f2cbecfd47a3999d35b7289c8a4ea",
+      "provider_hidden_context_verified": false,
+      "provider_physical_model_calls": null,
+      "status": "local_native_adapter_capture_verified",
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04"
+      ],
+      "business_correctness_evaluated": false,
+      "observer_retries_are_not_model_resubmissions": true,
+      "artifact": "M",
+      "host_verification_sha256": "7b70a2c4bd9493a0b8a0cef37c2e8f11c7d5e2de35f41532cbfe2e161e213b6d"
+    },
+    {
+      "native_model": "hy3",
+      "new_native_session": true,
+      "input_sha256": "325dabcd416214268f3fc6760fe67d98449a01e2e1a0c14eaf336e6557b48690",
+      "output_sha256": "e6571ebac6f22eeeabd300345cb2a894b13b8839e1e89e901d331dc21cfd53b7",
+      "native_output_file_sha256": "e6571ebac6f22eeeabd300345cb2a894b13b8839e1e89e901d331dc21cfd53b7",
+      "provider_hidden_context_verified": false,
+      "provider_physical_model_calls": null,
+      "status": "local_native_adapter_capture_verified",
+      "source_ids": [
+        "S02",
+        "S03",
+        "S04"
+      ],
+      "business_correctness_evaluated": false,
+      "observer_retries_are_not_model_resubmissions": true,
+      "artifact": "R",
+      "host_verification_sha256": "61fcfff4aaaf82b8826750b8fbf935de9b31f584ba4a940d46f506b12248a184"
+    }
+  ],
+  "new_hy3_logical_jobs": 2,
+  "new_harness_model_requests": 0,
+  "old_unexpired_m_denied_after_s01_export_revoked": true,
+  "source_read_retained": true,
+  "copy_permission_retained": true,
+  "target_callbacks_at_old_m_check": 0,
+  "stop_code": "wallet_below_pending_one_slot_margin",
+  "host_resume_supported": false,
+  "continuous_chain_completed": false,
+  "model_answer_quality": null,
+  "independent_new_story": false,
+  "raw_source_output_and_account_not_included": true,
+  "events": [
+    {
+      "stage": "G0_sources_registered",
+      "time_utc": "2026-11-02T05:07:32.911494+00:00"
+    },
+    {
+      "stage": "source_attempt_started",
+      "time_utc": "2026-11-02T05:07:32.927951+00:00"
+    },
+    {
+      "stage": "M_sealed",
+      "time_utc": "2026-11-02T05:10:11.694450+00:00"
+    },
+    {
+      "stage": "G2_unexpired_M_denied_after_only_S01_export_revocation",
+      "time_utc": "2026-11-02T05:10:11.705424+00:00"
+    },
+    {
+      "stage": "source_attempt_started",
+      "time_utc": "2026-11-02T05:10:11.714399+00:00"
+    },
+    {
+      "stage": "R_sealed",
+      "time_utc": "2026-11-02T05:13:40.038672+00:00"
+    },
+    {
+      "stage": "host_stopped",
+      "time_utc": "2026-11-02T05:13:42.164034+00:00"
+    }
+  ],
+  "progress_sha256": "a9cc08020b233fbc9286cd33373636f4104496cb89dac239b796d8031721b13c"
+}

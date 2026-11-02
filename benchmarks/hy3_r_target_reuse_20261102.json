@@ -1,0 +1,136 @@
+{
+  "schema": "existing-hy3-r-target-reuse-public-v1",
+  "date": "2026-11-02",
+  "model": "deepseek-flash",
+  "reasoning_effort": "max",
+  "output_cap": 4096,
+  "hard_request_byte_limit": 8192,
+  "new_source_jobs": 0,
+  "continuous_online_chain": false,
+  "old_run04_stays_stopped": true,
+  "authority_scope": "controlled_frozen_policy_not_live_native_acl",
+  "dependencies": [
+    "S02",
+    "S03",
+    "S04"
+  ],
+  "receipt_sha256": "571f4a36bb525750beec7317e688555129c44e7a9447cf714d71a024d2aebb18",
+  "native_instruction_loaded": true,
+  "memory_file_sha256": "a21508717f09f8cd0349233ca5972b34436404641eaadcf100584ac4daf2a74a",
+  "guard_counts": {
+    "agent_attempt_count": 1,
+    "allowed_stream_count": 1,
+    "stream_attempt_count": 1,
+    "dry_run": false,
+    "reject_code": null,
+    "requests": [
+      {
+        "bodyhash": "202b7be7744848f2ac35d9bd372ac912bc7138f7d7537c1bf91cc430311c9ab3",
+        "bytes": 7692,
+        "count": 1,
+        "maxTokens": 4096,
+        "memory_bytes": 3714,
+        "memory_exact_present": true,
+        "memory_sha256": "a21508717f09f8cd0349233ca5972b34436404641eaadcf100584ac4daf2a74a"
+      }
+    ],
+    "shape": {
+      "content_arrays": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "content_types": [
+        [
+          "text"
+        ],
+        [
+          "text"
+        ],
+        [
+          "text"
+        ],
+        [
+          "text"
+        ]
+      ],
+      "keys": [
+        "maxTokens",
+        "messages",
+        "model",
+        "provider",
+        "reasoningEffort",
+        "sessionId",
+        "signal",
+        "toolHistory"
+      ],
+      "max_tokens_present": true,
+      "max_tokens_type": "number",
+      "message_count": 4,
+      "model_matches": true,
+      "provider_matches": true,
+      "reasoning_max": true,
+      "reasoning_present": true,
+      "roles": [
+        "system",
+        "user",
+        "user",
+        "user"
+      ],
+      "stage": "full_request",
+      "tool_count": 0,
+      "tools_type": "undefined",
+      "unknown_key_count": 0
+    }
+  },
+  "usage": {
+    "cacheReadTokens": 0,
+    "cacheWriteTokens": 0,
+    "inputTokens": 1299,
+    "outputTokens": 470,
+    "totalTokens": 1769
+  },
+  "conservative_usage_cost_cny": "0.008956",
+  "actual_invoice_cny": null,
+  "source_lifecycle_cost_known": false,
+  "automatic_retry": false,
+  "source_R_output_sha256": "e6571ebac6f22eeeabd300345cb2a894b13b8839e1e89e901d331dc21cfd53b7",
+  "raw_prompt_answer_source_account_included": false,
+  "new_independent_story": false,
+  "provider_physical_model_requests": null,
+  "observed_sdk_stream_requests": 1,
+  "semantic_review": {
+    "type": "nonblind_AI_review_not_human_gold",
+    "reference_sha256": "249404db823651d1f4c7087882e69e65b25c3ffff6b2a73b803dcee03460a40b",
+    "legal_required_information_complete": 2,
+    "legal_questions": 2,
+    "legal_policy_refusals": 0,
+    "revoked_source_control_unknown": 1,
+    "revoked_source_control_questions": 1,
+    "strict_legal_answers_pass": 1,
+    "strict_legal_answers_needs_review": 1,
+    "new_method_advantage_established": false,
+    "rows": [
+      {
+        "question": "q1",
+        "role": "legal",
+        "required_information": "complete",
+        "strict_answer": "needs_review",
+        "reason": "additional_genre_label_inherited_from_R_not_independently_confirmed_by_original_source"
+      },
+      {
+        "question": "q2",
+        "role": "legal",
+        "required_information": "complete",
+        "strict_answer": "pass"
+      },
+      {
+        "question": "q3",
+        "role": "revoked_source_missing_evidence_control",
+        "answer_class": "UNKNOWN",
+        "registered_control_value_disclosure_observed": false
+      }
+    ]
+  }
+}

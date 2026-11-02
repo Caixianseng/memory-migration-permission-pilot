@@ -1,0 +1,850 @@
+{
+  "schema": "gate0-existing-capacity-measure-v1",
+  "date": "2026-11-02",
+  "new_model_calls": 0,
+  "new_account_queries": 0,
+  "network_requests": 0,
+  "raw_text_in_output": false,
+  "script_sha256": "c4e397661bd17e43eff253d676382fc3c61d0397770ececcce3dc75e137965ca",
+  "limits_from_source": {
+    "transport": {
+      "MAX_MEMORY_BYTES": 32768,
+      "MAX_PROMPT_BYTES": 4096,
+      "INSTRUCTION_RENDER_BYTES": 34816,
+      "HARD_REQUEST_BYTES": 24000
+    },
+    "transport_anchors": {
+      "MAX_MEMORY_BYTES": {
+        "path": "experiments/permission_task_target_20261101/native_transport.py",
+        "line": 32
+      },
+      "MAX_PROMPT_BYTES": {
+        "path": "experiments/permission_task_target_20261101/native_transport.py",
+        "line": 32
+      },
+      "INSTRUCTION_RENDER_BYTES": {
+        "path": "experiments/permission_task_target_20261101/native_transport.py",
+        "line": 33
+      },
+      "HARD_REQUEST_BYTES": {
+        "path": "experiments/permission_task_target_20261101/native_transport.py",
+        "line": 34
+      }
+    },
+    "driver": {
+      "__init__": {
+        "characters": 12000,
+        "path": "experiments/pre_delivery_revocation/driver.py",
+        "function": "__init__",
+        "line": 131
+      },
+      "_seal": {
+        "characters": 12000,
+        "path": "experiments/pre_delivery_revocation/driver.py",
+        "function": "_seal",
+        "line": 290
+      }
+    },
+    "source_hashes": {
+      "transport": "9ab6d5ec7707ae4e7005cc11360a77504879a3b772f52091b0b3641193a1756f",
+      "driver": "d2f5321276bf30134d176f5b726fa42fd2ae44dbb3764083ef3f9fb5eee59a67"
+    }
+  },
+  "cases": [
+    {
+      "anonymous_case": "C01",
+      "source_file_sha256": "049f0367419e9a12eda2b419fc051c0d5ab34da455125b58b9a740bc56411f4c",
+      "allowed_sources": 3,
+      "source_texts": [
+        {
+          "characters": 813,
+          "utf8_bytes": 1357,
+          "sha256": "0eaf65cfb4829fd73566e36318c72294d70fb50aebb23a65c236e5fc967f2f1e",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        {
+          "characters": 437,
+          "utf8_bytes": 443,
+          "sha256": "6ad469a58886b9c8dc1738d533901f09029f626105cdb2d5a5083e5ebc1750df",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        {
+          "characters": 385,
+          "utf8_bytes": 391,
+          "sha256": "eabd321423763158562a78c2f19ffd22de62b08e7a419ed1ec7a9c30dfd5372e",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        }
+      ],
+      "source_text_total_utf8_bytes": 2191,
+      "source_text_total_characters": 1635,
+      "all_sources_within_driver_character_limit": true,
+      "ordinary_full_source_quote": {
+        "characters": 1697,
+        "utf8_bytes": 2253,
+        "sha256": "bfa51c89e219c0e5cc0c5c953ed0265989d63f2070ff708a3466b9c3d4d8ac67",
+        "exact_text_tokens": null,
+        "token_count_status": "not_measured_no_tokenizer_or_new_model_call",
+        "constructed_only_no_model_call": true,
+        "contains_all_allowed_text_verbatim": true,
+        "selected_sentence_baseline": false,
+        "full_request_utf8_bytes": null,
+        "whole_call_vendor_usage": null,
+        "memory_under_transport_limit": true,
+        "hypothetical_artifact_under_driver_character_limit": true
+      },
+      "raw_legal_off": {
+        "memory": {
+          "characters": 1910,
+          "utf8_bytes": 2466,
+          "sha256": "ade3e6585987ff26865a976025998982d4c6510b069d2217a066b3991de30699",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "prompt": {
+          "characters": 977,
+          "utf8_bytes": 977,
+          "sha256": "d06d54d94476ea141e7235680bfb4be2ef3ca2ecab4b412cd1d6a2b467884df8",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "status": "ok",
+        "verified": true,
+        "input_file_sha256": "da6885ebcc219771153ad5ddf00844eeadb31183f7dec3dd3d28e4fe37ed9610",
+        "result_file_sha256": "692575f60ccb09ae6b8705aee0ce4c2e19afbc7e5e9291a6452d3e718626239f",
+        "receipt_file_sha256": "87fa288d1184256742d0f06731d62be410920605eb811ce5df976833f5639600",
+        "full_request_utf8_bytes": 6642,
+        "full_request_body_sha256": "f1e5cde7591d049cbc28b0bd5d167bdebcd5f4ca50696a061e8425acc1e83e05",
+        "output_token_cap": 256,
+        "whole_call_vendor_usage": {
+          "inputTokens": 1110,
+          "cacheReadTokens": 0,
+          "cacheWriteTokens": 0,
+          "outputTokens": 65,
+          "totalTokens": 1175
+        },
+        "usage_scope": "whole_existing_call_not_memory_only_tokens",
+        "memory_under_transport_limit": true,
+        "prompt_under_transport_limit": true,
+        "full_request_under_guard_limit": true,
+        "full_request_remaining_bytes": 17358
+      },
+      "raw_legal_max": {
+        "memory": {
+          "characters": 1910,
+          "utf8_bytes": 2466,
+          "sha256": "ade3e6585987ff26865a976025998982d4c6510b069d2217a066b3991de30699",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "prompt": {
+          "characters": 977,
+          "utf8_bytes": 977,
+          "sha256": "d06d54d94476ea141e7235680bfb4be2ef3ca2ecab4b412cd1d6a2b467884df8",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "status": "ok",
+        "verified": true,
+        "input_file_sha256": "ec5d28e3024bc059eb408a3f5a91b2dd0cc3dcfdcd4a6b7113ea51db7b199e2d",
+        "result_file_sha256": "eae98ecc5baa16544eb824435a041763f8d31b3adc28e77b0957633af5d28dcf",
+        "receipt_file_sha256": "e5f47d0237a20a71661eb83a48dbeb1e1358fa12ad1674ef7ffb3f1af2fc3472",
+        "full_request_utf8_bytes": 6659,
+        "full_request_body_sha256": "5158fa140362e39af4ad280e132509dcc496e0a044b9b9b19a1c041b9a5b3796",
+        "output_token_cap": 4096,
+        "whole_call_vendor_usage": {
+          "inputTokens": 1137,
+          "cacheReadTokens": 0,
+          "cacheWriteTokens": 0,
+          "outputTokens": 927,
+          "totalTokens": 2064
+        },
+        "usage_scope": "whole_existing_call_not_memory_only_tokens",
+        "memory_under_transport_limit": true,
+        "prompt_under_transport_limit": true,
+        "full_request_under_guard_limit": true,
+        "full_request_remaining_bytes": 17341
+      },
+      "existing_source_cache_max4096": {
+        "memory": {
+          "characters": 974,
+          "utf8_bytes": 978,
+          "sha256": "e66a903a27788d49e155d200c087eb3b57021d186c53760b7be0a2e97d89fd22",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "prompt": {
+          "characters": 814,
+          "utf8_bytes": 814,
+          "sha256": "6f7b6fcbbdf93f9b48436b47ffb1edcf4b5642eb515955b57f42ec7c84222962",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "status": "ok",
+        "verified": true,
+        "input_file_sha256": "9c12999f0037fa6e00cfdfc945695fb2fda3acbb9c915ac10c9b9161efc63dcc",
+        "result_file_sha256": "cf82ed2e638c825a1367f8149283aa1cca1556e4de2d1a42edd4111046090cb1",
+        "receipt_file_sha256": "a79d0904f7e503684a7665a22e0ad095d85d185eb7a22ec56156de1bb23847b8",
+        "full_request_utf8_bytes": 5051,
+        "full_request_body_sha256": "1cd501a7bdaab008da0b10f21fad02fd1401650423ea3e3802ed073820e61453",
+        "output_token_cap": 4096,
+        "whole_call_vendor_usage": {
+          "inputTokens": 557,
+          "cacheReadTokens": 128,
+          "cacheWriteTokens": 0,
+          "outputTokens": 747,
+          "totalTokens": 1432
+        },
+        "usage_scope": "whole_existing_call_not_memory_only_tokens",
+        "memory_under_transport_limit": true,
+        "prompt_under_transport_limit": true,
+        "full_request_under_guard_limit": true,
+        "full_request_remaining_bytes": 18949
+      },
+      "cache_initial_generation_calls": 3,
+      "cache_initial_whole_call_usage_total": {
+        "inputTokens": 1756,
+        "cacheReadTokens": 256,
+        "cacheWriteTokens": 0,
+        "outputTokens": 1797,
+        "totalTokens": 3809
+      },
+      "cache_initial_receipt_sha256": [
+        "20afcf44ec6846a4da6c0a53d8c3c15a5114f5746901aa2a34272759a01710bd",
+        "3a7f74f98c4e06ea5e70c10a24677e81a87b7af17230a22dc7090ee7de76aec6",
+        "44f087cf68c14339b1d3db24e1909b27f77b676ea74445bfd7846f2fc5040f2e"
+      ],
+      "existing_source_cache_max12288": {
+        "memory": {
+          "characters": 974,
+          "utf8_bytes": 978,
+          "sha256": "e66a903a27788d49e155d200c087eb3b57021d186c53760b7be0a2e97d89fd22",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "prompt": {
+          "characters": 814,
+          "utf8_bytes": 814,
+          "sha256": "6f7b6fcbbdf93f9b48436b47ffb1edcf4b5642eb515955b57f42ec7c84222962",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "status": "ok",
+        "verified": true,
+        "input_file_sha256": "2b23d5f2e270536e08740f79a3dbe9f62183e6e5c4092c5a3e5f5f5bf64c067a",
+        "result_file_sha256": "0a64d7f511bc8e969985f3fb86a039cfd017427c650e769cb3ced886221ef2cd",
+        "receipt_file_sha256": "fcc0570a1bd5d56a31465fd4020b8696cb593fa2d9c00e315bfb6cdc341aef2d",
+        "full_request_utf8_bytes": 5080,
+        "full_request_body_sha256": "2e320909c0e54f3e3ca3fa9261e0aa85572f007b5a5d7690b3ced398d1d36ef0",
+        "output_token_cap": 12288,
+        "whole_call_vendor_usage": {
+          "inputTokens": 311,
+          "cacheReadTokens": 384,
+          "cacheWriteTokens": 0,
+          "outputTokens": 749,
+          "totalTokens": 1444
+        },
+        "usage_scope": "whole_existing_call_not_memory_only_tokens",
+        "memory_under_transport_limit": true,
+        "prompt_under_transport_limit": true,
+        "full_request_under_guard_limit": true,
+        "full_request_remaining_bytes": 18920
+      }
+    },
+    {
+      "anonymous_case": "C02",
+      "source_file_sha256": "040efadae18b4c5031e80df04b9ac45fa8035999bb1f1607933fb7bce60d0085",
+      "allowed_sources": 3,
+      "source_texts": [
+        {
+          "characters": 1432,
+          "utf8_bytes": 1448,
+          "sha256": "a8284f31fc5d96b6aab88f2e4dcaf7c36bce43d33529f9bb43b77ffd51f285cd",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        {
+          "characters": 1423,
+          "utf8_bytes": 1437,
+          "sha256": "307b7ce3d9566b34b5246fe30c9efc0a08fb615d02d5eca28b12f94809aa6fff",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        {
+          "characters": 465,
+          "utf8_bytes": 473,
+          "sha256": "e048b5fdba4b0e9c3393152f3e4a239a97f3b03c46d4e67fc7ac214157b3b0ff",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        }
+      ],
+      "source_text_total_utf8_bytes": 3358,
+      "source_text_total_characters": 3320,
+      "all_sources_within_driver_character_limit": true,
+      "ordinary_full_source_quote": {
+        "characters": 3382,
+        "utf8_bytes": 3420,
+        "sha256": "2dd928d652ce53018717f428d0b82b31d07ec128882073a3ebc472eed16b18f0",
+        "exact_text_tokens": null,
+        "token_count_status": "not_measured_no_tokenizer_or_new_model_call",
+        "constructed_only_no_model_call": true,
+        "contains_all_allowed_text_verbatim": true,
+        "selected_sentence_baseline": false,
+        "full_request_utf8_bytes": null,
+        "whole_call_vendor_usage": null,
+        "memory_under_transport_limit": true,
+        "hypothetical_artifact_under_driver_character_limit": true
+      },
+      "raw_legal_off": {
+        "memory": {
+          "characters": 3626,
+          "utf8_bytes": 3664,
+          "sha256": "d2bca165e0d7b94495edfcc0542f9994b965fa366b3074100e705f1c957d2e26",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "prompt": {
+          "characters": 938,
+          "utf8_bytes": 939,
+          "sha256": "3a5f69b81e61b430c5aedad8217124f7bced1658935ab6c7feeb292283e65880",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "status": "ok",
+        "verified": true,
+        "input_file_sha256": "1c9c23e0628b3c939cd254b89aaa9651b34eb8c3433de13c405a0fdfbcb161b6",
+        "result_file_sha256": "c48844e4e22b8ffe7e2e0bd59c545bd85f9b94337ff6eb85d63e6793b5c5b71e",
+        "receipt_file_sha256": "49087563aa70340a0481cbdf0a5e97d5abc66d13f4fdaf3801f8b03b237ef9e8",
+        "full_request_utf8_bytes": 7833,
+        "full_request_body_sha256": "ab63c7e9d920eab8723af13c7d17b8a35aa713f2b1c065b75aff96d4efc0483b",
+        "output_token_cap": 256,
+        "whole_call_vendor_usage": {
+          "inputTokens": 1334,
+          "cacheReadTokens": 0,
+          "cacheWriteTokens": 0,
+          "outputTokens": 101,
+          "totalTokens": 1435
+        },
+        "usage_scope": "whole_existing_call_not_memory_only_tokens",
+        "memory_under_transport_limit": true,
+        "prompt_under_transport_limit": true,
+        "full_request_under_guard_limit": true,
+        "full_request_remaining_bytes": 16167
+      },
+      "raw_legal_max": {
+        "memory": {
+          "characters": 3626,
+          "utf8_bytes": 3664,
+          "sha256": "d2bca165e0d7b94495edfcc0542f9994b965fa366b3074100e705f1c957d2e26",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "prompt": {
+          "characters": 938,
+          "utf8_bytes": 939,
+          "sha256": "3a5f69b81e61b430c5aedad8217124f7bced1658935ab6c7feeb292283e65880",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "status": "ok",
+        "verified": true,
+        "input_file_sha256": "b1334cf51fb01a98306f8de23432f278794380d2cb02a06791e49d224db9143c",
+        "result_file_sha256": "f715141b1301923882e7ff0e0dba72bff239000d44d05049bc39712a6b500ef0",
+        "receipt_file_sha256": "8f8a3873d98a26d921602af3bbc3a0a16b34b0c79ca8cfa9d9b31de13f25167c",
+        "full_request_utf8_bytes": 7850,
+        "full_request_body_sha256": "dadd759e8b45e983a4b380ecf0edda5699385fe0f3d5503cfe8457657954e763",
+        "output_token_cap": 4096,
+        "whole_call_vendor_usage": {
+          "inputTokens": 1361,
+          "cacheReadTokens": 0,
+          "cacheWriteTokens": 0,
+          "outputTokens": 704,
+          "totalTokens": 2065
+        },
+        "usage_scope": "whole_existing_call_not_memory_only_tokens",
+        "memory_under_transport_limit": true,
+        "prompt_under_transport_limit": true,
+        "full_request_under_guard_limit": true,
+        "full_request_remaining_bytes": 16150
+      },
+      "existing_source_cache_max4096": {
+        "memory": {
+          "characters": 1504,
+          "utf8_bytes": 1504,
+          "sha256": "466f1f37957f5e22382b4a6619b300d54cbb6ca013fed3b3914ece415952608a",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "prompt": {
+          "characters": 775,
+          "utf8_bytes": 776,
+          "sha256": "b1d685db6e07931bf896e83f3fbe164f96d4f24d8f1407b7ddc4b609d0d7b7f2",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "status": "ok",
+        "verified": true,
+        "input_file_sha256": "c381c1961946f9b92a131fecbf2da8943f8618bc6e12249d264a3fb220b5de37",
+        "result_file_sha256": "44d35715dd41cd9e16f4eadc7af22b5acf4cb8f44b216c4abecd1a732334c468",
+        "receipt_file_sha256": "5fd9af6dc80236ccf6977371aca614c689a4acd79bf0239e97675f6d5fe123aa",
+        "full_request_utf8_bytes": 5563,
+        "full_request_body_sha256": "61bd39a7344a09cb5267240135feecd8bd69ec6cea5f35262f5fca1002283376",
+        "output_token_cap": 4096,
+        "whole_call_vendor_usage": {
+          "inputTokens": 797,
+          "cacheReadTokens": 0,
+          "cacheWriteTokens": 0,
+          "outputTokens": 436,
+          "totalTokens": 1233
+        },
+        "usage_scope": "whole_existing_call_not_memory_only_tokens",
+        "memory_under_transport_limit": true,
+        "prompt_under_transport_limit": true,
+        "full_request_under_guard_limit": true,
+        "full_request_remaining_bytes": 18437
+      },
+      "cache_initial_generation_calls": 3,
+      "cache_initial_whole_call_usage_total": {
+        "inputTokens": 1856,
+        "cacheReadTokens": 384,
+        "cacheWriteTokens": 0,
+        "outputTokens": 4950,
+        "totalTokens": 7190
+      },
+      "cache_initial_receipt_sha256": [
+        "20d3b0467e035a8f833323ead965d8aefe9e2cbbfd65d3e4972b31657dba0fa4",
+        "113eebb1d6d3201e94eeb5cc8d1eeb57a8adac8950000a424067ce7cbe71ce1d",
+        "462073e871f85d02c29491c35ffcea5fd567a5379f091f25453d4345c38f7516"
+      ],
+      "existing_source_cache_max12288": {
+        "memory": {
+          "characters": 1504,
+          "utf8_bytes": 1504,
+          "sha256": "466f1f37957f5e22382b4a6619b300d54cbb6ca013fed3b3914ece415952608a",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "prompt": {
+          "characters": 775,
+          "utf8_bytes": 776,
+          "sha256": "b1d685db6e07931bf896e83f3fbe164f96d4f24d8f1407b7ddc4b609d0d7b7f2",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "status": "ok",
+        "verified": true,
+        "input_file_sha256": "c9f521bf7df5ab1bf71e29078bd362988d934a689a3dae6f87cffe9bb28e4f61",
+        "result_file_sha256": "624e64adfccb6231d5a9328db28d7183514af15f3ecf11e4e07390bc9cae03a0",
+        "receipt_file_sha256": "8422a700113128c3c106432365fc80dce8a343903268664c3d34a00056c44a7f",
+        "full_request_utf8_bytes": 5592,
+        "full_request_body_sha256": "a7ff008c902c699682e47bf34173fde384d59cfc4dc893310f6d491b2192e976",
+        "output_token_cap": 12288,
+        "whole_call_vendor_usage": {
+          "inputTokens": 295,
+          "cacheReadTokens": 512,
+          "cacheWriteTokens": 0,
+          "outputTokens": 309,
+          "totalTokens": 1116
+        },
+        "usage_scope": "whole_existing_call_not_memory_only_tokens",
+        "memory_under_transport_limit": true,
+        "prompt_under_transport_limit": true,
+        "full_request_under_guard_limit": true,
+        "full_request_remaining_bytes": 18408
+      }
+    },
+    {
+      "anonymous_case": "C03",
+      "source_file_sha256": "71fac214824ad23a4816e1f36f9aba20d8987960588c7f2ed47f937b2cd61b01",
+      "allowed_sources": 3,
+      "source_texts": [
+        {
+          "characters": 601,
+          "utf8_bytes": 603,
+          "sha256": "c5fd2ff5811d0cc1c6011a84d2183b3d0da88dd5099a9d2a730fd7aec5439ccb",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        {
+          "characters": 2492,
+          "utf8_bytes": 2518,
+          "sha256": "08f70ebb70f41df4347970a3d9b1c3578cc8cacc8d002d0f995ca740bd6a4ea8",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        {
+          "characters": 387,
+          "utf8_bytes": 389,
+          "sha256": "3402ec5d130826077db113842a77042e7ebc7650541f990a8a15a31ea4323392",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        }
+      ],
+      "source_text_total_utf8_bytes": 3510,
+      "source_text_total_characters": 3480,
+      "all_sources_within_driver_character_limit": true,
+      "ordinary_full_source_quote": {
+        "characters": 3542,
+        "utf8_bytes": 3572,
+        "sha256": "6c1bb63eeb3d70c4afc528347376a07f23462366c4a45620495c0c79953e8114",
+        "exact_text_tokens": null,
+        "token_count_status": "not_measured_no_tokenizer_or_new_model_call",
+        "constructed_only_no_model_call": true,
+        "contains_all_allowed_text_verbatim": true,
+        "selected_sentence_baseline": false,
+        "full_request_utf8_bytes": null,
+        "whole_call_vendor_usage": null,
+        "memory_under_transport_limit": true,
+        "hypothetical_artifact_under_driver_character_limit": true
+      },
+      "raw_legal_off": {
+        "memory": {
+          "characters": 3781,
+          "utf8_bytes": 3811,
+          "sha256": "9e83bd7b6895b1c582f45a82586bb4535f3963ab5e0da0fb12cbed9eef7de703",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "prompt": {
+          "characters": 1017,
+          "utf8_bytes": 1017,
+          "sha256": "28832066ad4b37ead39e3ac02d28acfc72b6afd79eeeb1240331a38125d70250",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "status": "ok",
+        "verified": true,
+        "input_file_sha256": "7ccf5cde30c2f5e60bb96af347e0156b5d6ec324cf89bcd07cb8fd6e13bc9d43",
+        "result_file_sha256": "288481201cd24d4b8bdb78133b759065228a05734f1391e1d89e6d01999f4649",
+        "receipt_file_sha256": "159678206f5a6bd58b24f94969bd6462558a0c5206a58fe01de63c0a0990df39",
+        "full_request_utf8_bytes": 8051,
+        "full_request_body_sha256": "9d441091306f29c9d779ca90c3f0e1932dced01af9497d7eead382ac1164c0a5",
+        "output_token_cap": 256,
+        "whole_call_vendor_usage": {
+          "inputTokens": 1368,
+          "cacheReadTokens": 0,
+          "cacheWriteTokens": 0,
+          "outputTokens": 52,
+          "totalTokens": 1420
+        },
+        "usage_scope": "whole_existing_call_not_memory_only_tokens",
+        "memory_under_transport_limit": true,
+        "prompt_under_transport_limit": true,
+        "full_request_under_guard_limit": true,
+        "full_request_remaining_bytes": 15949
+      },
+      "raw_legal_max": {
+        "memory": {
+          "characters": 3781,
+          "utf8_bytes": 3811,
+          "sha256": "9e83bd7b6895b1c582f45a82586bb4535f3963ab5e0da0fb12cbed9eef7de703",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "prompt": {
+          "characters": 1017,
+          "utf8_bytes": 1017,
+          "sha256": "28832066ad4b37ead39e3ac02d28acfc72b6afd79eeeb1240331a38125d70250",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "status": "ok",
+        "verified": true,
+        "input_file_sha256": "de3e7e290c3b49a9a361cbe45208ff266cef1c14311b6358298c15152ca5ec08",
+        "result_file_sha256": "c04b7e3c50a32720dac41e751c9885cc9234399f22b426877d955d69e7e3aad0",
+        "receipt_file_sha256": "28b04a53d2464de3074b1e7114dc4f459af70c8fa2ffa6b76b66b7603613c5f7",
+        "full_request_utf8_bytes": 8068,
+        "full_request_body_sha256": "02b72361c38102b4df2a222973d6a00a18a9950365d70bac04eae910aee31963",
+        "output_token_cap": 4096,
+        "whole_call_vendor_usage": {
+          "inputTokens": 1395,
+          "cacheReadTokens": 0,
+          "cacheWriteTokens": 0,
+          "outputTokens": 499,
+          "totalTokens": 1894
+        },
+        "usage_scope": "whole_existing_call_not_memory_only_tokens",
+        "memory_under_transport_limit": true,
+        "prompt_under_transport_limit": true,
+        "full_request_under_guard_limit": true,
+        "full_request_remaining_bytes": 15932
+      },
+      "existing_source_cache_max4096": {
+        "memory": {
+          "characters": 1214,
+          "utf8_bytes": 1218,
+          "sha256": "700a6e6a206d9edeb9e16066dae340a9b3f73e0ce05cddcc2a1aa6f0507d40b1",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "prompt": {
+          "characters": 854,
+          "utf8_bytes": 854,
+          "sha256": "b88483865a99b936814e33444f6b66a0804710564395755c31ed1ed232babe18",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "status": "ok",
+        "verified": true,
+        "input_file_sha256": "82d456c38da813df231140a554aeba3bd7edc99e07faedb94eff367b1798d9e6",
+        "result_file_sha256": "f4373fbe3d28ea169042e3497b96f6f2be1f18d1e2e642ec797f7a4329d01cca",
+        "receipt_file_sha256": "aa4c168540c4735808ce797629d9fb3ab440c9065aeccdb93558c9e46b2f26a0",
+        "full_request_utf8_bytes": 5343,
+        "full_request_body_sha256": "27090149eb75f6ebe01c03651183fb8d1b8211ddf6098f114b146065bf2cecd4",
+        "output_token_cap": 4096,
+        "whole_call_vendor_usage": {
+          "inputTokens": 635,
+          "cacheReadTokens": 128,
+          "cacheWriteTokens": 0,
+          "outputTokens": 703,
+          "totalTokens": 1466
+        },
+        "usage_scope": "whole_existing_call_not_memory_only_tokens",
+        "memory_under_transport_limit": true,
+        "prompt_under_transport_limit": true,
+        "full_request_under_guard_limit": true,
+        "full_request_remaining_bytes": 18657
+      },
+      "cache_initial_generation_calls": 3,
+      "cache_initial_whole_call_usage_total": {
+        "inputTokens": 1877,
+        "cacheReadTokens": 384,
+        "cacheWriteTokens": 0,
+        "outputTokens": 2216,
+        "totalTokens": 4477
+      },
+      "cache_initial_receipt_sha256": [
+        "5485321a87c83cc135c37b26c26a53b73954f3a5eb66689f36fff8484f37a424",
+        "3f55e3d8cce4c6271e7a47c8f54b07a5ec76da7d225f25bf195fedfa4822cb19",
+        "df366cff7fd1bd6146f658eb6a32e272d6983d9cd5e9c825002257e5681c5f54"
+      ],
+      "existing_source_cache_max12288": {
+        "memory": {
+          "characters": 1214,
+          "utf8_bytes": 1218,
+          "sha256": "700a6e6a206d9edeb9e16066dae340a9b3f73e0ce05cddcc2a1aa6f0507d40b1",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "prompt": {
+          "characters": 854,
+          "utf8_bytes": 854,
+          "sha256": "b88483865a99b936814e33444f6b66a0804710564395755c31ed1ed232babe18",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "status": "ok",
+        "verified": true,
+        "input_file_sha256": "05ec25f05f97cd83654dbd0a987a01e300ee15e20d139b09fcf900ef8be58162",
+        "result_file_sha256": "604721efe0d353dfd1654686fa22298b26277aaa200cac05a303f79c0abf8683",
+        "receipt_file_sha256": "884f92f3f9d8da91848d82e7ae9dd4e666273284d31f4abec0eae49574393e3c",
+        "full_request_utf8_bytes": 5372,
+        "full_request_body_sha256": "db9db8095d2a23cbb649386e587ebe9a082faa14e491fd7a76e888531bba6232",
+        "output_token_cap": 12288,
+        "whole_call_vendor_usage": {
+          "inputTokens": 389,
+          "cacheReadTokens": 384,
+          "cacheWriteTokens": 0,
+          "outputTokens": 688,
+          "totalTokens": 1461
+        },
+        "usage_scope": "whole_existing_call_not_memory_only_tokens",
+        "memory_under_transport_limit": true,
+        "prompt_under_transport_limit": true,
+        "full_request_under_guard_limit": true,
+        "full_request_remaining_bytes": 18628
+      }
+    },
+    {
+      "anonymous_case": "C04",
+      "source_file_sha256": "cab6f25371637ecda884d8478fbdf229a3ffb9b6e35da4030aa438caf6109a8f",
+      "allowed_sources": 3,
+      "source_texts": [
+        {
+          "characters": 535,
+          "utf8_bytes": 537,
+          "sha256": "6fdb385f0af1922f884f12140eabbd96ffe0bb4a467fdbfece0cfce10787a0bf",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        {
+          "characters": 409,
+          "utf8_bytes": 417,
+          "sha256": "868e061a5fa4f5c0defb1ca96855d59e4088313965804406ce03540a63929028",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        {
+          "characters": 1095,
+          "utf8_bytes": 1101,
+          "sha256": "3cf0b9a838d6735a2ad608103e768c7b21a51ec0f6b4788a52bbfddcf9628c44",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        }
+      ],
+      "source_text_total_utf8_bytes": 2055,
+      "source_text_total_characters": 2039,
+      "all_sources_within_driver_character_limit": true,
+      "ordinary_full_source_quote": {
+        "characters": 2101,
+        "utf8_bytes": 2117,
+        "sha256": "d385999d02d943e08d40a9a30d33dafdd6ac062663c3e307122b676fa96b17e1",
+        "exact_text_tokens": null,
+        "token_count_status": "not_measured_no_tokenizer_or_new_model_call",
+        "constructed_only_no_model_call": true,
+        "contains_all_allowed_text_verbatim": true,
+        "selected_sentence_baseline": false,
+        "full_request_utf8_bytes": null,
+        "whole_call_vendor_usage": null,
+        "memory_under_transport_limit": true,
+        "hypothetical_artifact_under_driver_character_limit": true
+      },
+      "raw_legal_off": {
+        "memory": {
+          "characters": 2311,
+          "utf8_bytes": 2327,
+          "sha256": "b9ac2e0bd0a9c13246ec0fc40694cc6a439b05bcee48cb6fd5f802de3dcef266",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "prompt": {
+          "characters": 937,
+          "utf8_bytes": 937,
+          "sha256": "6322ea89e2f1918c7d5d81d3556b9b1fb1f14a5ba94a5d25700b5a373d32c9a6",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "status": "ok",
+        "verified": true,
+        "input_file_sha256": "b3e4f2587c685f1922b8b54567ce73f5fd7b0d4b818fbc0f3b18ae8a6a55286d",
+        "result_file_sha256": "efd757bc5c2ec7175a4531dbe2cf101af0c08a4fd32712685b5c5de5dfe787e0",
+        "receipt_file_sha256": "5383f067866aff2c25e2b4ce6dd09fa922a8339bf38684b65110b41932dad121",
+        "full_request_utf8_bytes": 6456,
+        "full_request_body_sha256": "04cba43a846e73eec2e35e4b77831264d5a39ab61c3c605edea615f5473eb3a5",
+        "output_token_cap": 256,
+        "whole_call_vendor_usage": {
+          "inputTokens": 1036,
+          "cacheReadTokens": 0,
+          "cacheWriteTokens": 0,
+          "outputTokens": 84,
+          "totalTokens": 1120
+        },
+        "usage_scope": "whole_existing_call_not_memory_only_tokens",
+        "memory_under_transport_limit": true,
+        "prompt_under_transport_limit": true,
+        "full_request_under_guard_limit": true,
+        "full_request_remaining_bytes": 17544
+      },
+      "raw_legal_max": {
+        "memory": {
+          "characters": 2311,
+          "utf8_bytes": 2327,
+          "sha256": "b9ac2e0bd0a9c13246ec0fc40694cc6a439b05bcee48cb6fd5f802de3dcef266",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "prompt": {
+          "characters": 937,
+          "utf8_bytes": 937,
+          "sha256": "6322ea89e2f1918c7d5d81d3556b9b1fb1f14a5ba94a5d25700b5a373d32c9a6",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "status": "ok",
+        "verified": true,
+        "input_file_sha256": "029fd91b753e57c21c388f88485f0084d30c6a3db03f98f875a18236c6c9ded4",
+        "result_file_sha256": "aae30ed718f6cc3ef62db1153a1a62c07078832deaedbf52cbc80df396bbdf2f",
+        "receipt_file_sha256": "194a95c4b8f759d0583222ee7aef66b5ce202fd9ace2aea92c711525794f383e",
+        "full_request_utf8_bytes": 6473,
+        "full_request_body_sha256": "b885cfc1c38c7a8cee408fd8e79ec8c71f975194e12ab78ca2bbf9d71e305cfe",
+        "output_token_cap": 4096,
+        "whole_call_vendor_usage": {
+          "inputTokens": 1063,
+          "cacheReadTokens": 0,
+          "cacheWriteTokens": 0,
+          "outputTokens": 424,
+          "totalTokens": 1487
+        },
+        "usage_scope": "whole_existing_call_not_memory_only_tokens",
+        "memory_under_transport_limit": true,
+        "prompt_under_transport_limit": true,
+        "full_request_under_guard_limit": true,
+        "full_request_remaining_bytes": 17527
+      },
+      "existing_source_cache_max4096": {
+        "memory": {
+          "characters": 1200,
+          "utf8_bytes": 1200,
+          "sha256": "252ea14c513aaf2b1976c26a4b5dbd533bcbcdd572ccc2516ab6ef4e1d87242a",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "prompt": {
+          "characters": 774,
+          "utf8_bytes": 774,
+          "sha256": "f2469ef0ed70debfd15abd59d22d4df129e4764e54254cee7752e8e0a9ffdee6",
+          "exact_text_tokens": null,
+          "token_count_status": "not_measured_no_tokenizer_or_new_model_call"
+        },
+        "status": "error",
+        "verified": false,
+        "input_file_sha256": "0aa73aeef58b72085f9cc52d031793af62885c171dab102eccf4d36e06fd2fdb",
+        "result_file_sha256": "aef95dc1fd0791e9d869a11925465a7e6156226f5e0e8c3dcf272c14a6e34d96",
+        "receipt_file_sha256": "5ac86b9837a68a642c4128ede0ad1fa2fb0af3e92b2a264f9cf16a61d73cce7d",
+        "full_request_utf8_bytes": 5233,
+        "full_request_body_sha256": "e8fb7d4bab3d2ff5d31ea86571b6f0cccc7e340167acc713f84468eda9165927",
+        "output_token_cap": 4096,
+        "whole_call_vendor_usage": {
+          "inputTokens": 598,
+          "cacheReadTokens": 128,
+          "cacheWriteTokens": 0,
+          "outputTokens": 4096,
+          "totalTokens": 4822
+        },
+        "usage_scope": "whole_existing_call_not_memory_only_tokens",
+        "memory_under_transport_limit": true,
+        "prompt_under_transport_limit": true,
+        "full_request_under_guard_limit": true,
+        "full_request_remaining_bytes": 18767
+      },
+      "cache_initial_generation_calls": 3,
+      "cache_initial_whole_call_usage_total": {
+        "inputTokens": 1558,
+        "cacheReadTokens": 384,
+        "cacheWriteTokens": 0,
+        "outputTokens": 2307,
+        "totalTokens": 4249
+      },
+      "cache_initial_receipt_sha256": [
+        "da5016cb3a0b6d4981713fd9b691137c1caaaafee38e609602801fafde4a7104",
+        "b870d8784215a09045c9eca4780b6eee7f6008957be0f671a368ba61c0268f8a",
+        "56f9aa822589cd1267dcc206b7af6db2fcb2a7be7883124c2c36cb04c516ab26"
+      ],
+      "existing_source_cache_max12288": null
+    }
+  ],
+  "summary": {
+    "known_development_cases": 4,
+    "independent_holdout": false,
+    "actual_complete_legal_source_target_calls_checked": 8,
+    "all_existing_raw_calls_fit_and_verified": true,
+    "maximum_raw_memory_utf8_bytes": 3811,
+    "maximum_raw_prompt_utf8_bytes": 1017,
+    "maximum_actual_raw_full_request_utf8_bytes": 8068,
+    "minimum_actual_raw_full_request_remaining_bytes": 15932,
+    "current_examples_demonstrate_binding_input_capacity_constraint": false,
+    "need_for_novel_capacity_selection_established": false,
+    "standalone_memory_token_counts_available": false
+  },
+  "interpretation": [
+    "These four existing cases can send complete currently allowed source text within the actual transport limits.",
+    "This is not evidence that larger workloads never need compression or that raw delivery has zero cost.",
+    "No new arbitrary budget was imposed. A selected-sentence baseline has not been executed.",
+    "Ordinary full-source quotation is a lossless measurement representation only; its complete SDK envelope and model result are unknown.",
+    "Vendor usage counts apply to whole historical calls; standalone memory token counts remain null.",
+    "Driver character limits and transport UTF-8 byte limits are distinct; lengths alone do not authorize or seal an artifact.",
+    "Observed output-token exhaustion is not evidence of an input memory-capacity bottleneck."
+  ]
+}
