@@ -11,7 +11,9 @@
     "kind": "public synthetic conversations",
     "independent_stories": 2,
     "human_gold": false,
-    "source_model_generation_question_blind": true,
+    "source_model_generation_question_blind": null,
+    "source_generation_questions_excluded_from_registered_payload": true,
+    "all_source_tool_access_and_hidden_context_verified": false,
     "formal_units_are_correlated": true
   },
   "calls": {
