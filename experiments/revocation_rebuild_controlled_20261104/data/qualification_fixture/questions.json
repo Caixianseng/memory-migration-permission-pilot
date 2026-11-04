@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "stories": [
+    {
+      "story_id": "qual_reading_parcels",
+      "questions": [
+        {
+          "question_id": "Q1",
+          "text": "汐桥社区本批纸本阅读礼包接收单位的签收联系人是谁？"
+        },
+        {
+          "question_id": "Q2",
+          "text": "本批纸本阅读礼包封箱前，每包必须核对哪两类交付物品？"
+        },
+        {
+          "question_id": "Q3",
+          "text": "汐桥社区本批纸本阅读礼包寄送费用的含税支出上限是多少元？"
+        }
+      ]
+    }
+  ]
+}

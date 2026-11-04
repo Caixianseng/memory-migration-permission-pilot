@@ -1,0 +1,115 @@
+{
+  "external": {
+    "event_chain": {
+      "hashes_recomputed": true,
+      "rows": 12,
+      "tail_sha256": "19a0b6142c902d98bd2aefe7384a323e9f7e760fbdfd5cc23edca71177d26a8f"
+    },
+    "limitations": [
+      "This is one cross-client qualification, not an additional main-experiment story or evidence of algorithmic advantage.",
+      "Two archived verify_direct_files results are bound to stored files; the saved visible native transcripts were independently rechecked. No active native session or account was queried in this review.",
+      "Zero visible tools refers to the recorded native transcript only; hidden provider context, internal tool activity and physical provider-call count remain unknown.",
+      "Old-M denial is contemporaneous trusted-host event evidence. The destroyed broker key was not reacquired and HMAC authorization was not replayed post-run.",
+      "SDK cost 0.00149 CNY is a recorded upper bound, not a physical invoice. HY3 cost and physical provider calls remain unknown.",
+      "Filesystem timing corroborates host commit before SDK dispatch; it is not an externally attested clock."
+    ],
+    "old_M": {
+      "S01_export_revoked": true,
+      "denial_record": "old_packet_and_new_export_denied_export_not_allowed",
+      "expires_at": 1793765759,
+      "expiry_margin_seconds": 299.3302319049835,
+      "post_run_broker_HMAC_replay": false,
+      "recorded_check_unix": 1793765459.669768,
+      "unexpired_at_recorded_denial": true
+    },
+    "rebuilt_R": {
+      "S01_business_source_text_absent_from_prompt_and_user_message": true,
+      "registered_actual_source_ids": [
+        "S02",
+        "S03",
+        "S04"
+      ]
+    },
+    "schema": "cross-client-external-security-review-v1",
+    "scope": "external_live02 qualification only; not pooled with main experiment",
+    "source_reviews": [
+      {
+        "archived_native_prefix_verified": true,
+        "archived_verify_direct_files_status": "direct_saved_snapshot_independently_bound",
+        "artifact": "M",
+        "fresh_session_record_bound": true,
+        "hidden_provider_context_verified": false,
+        "input_sha256": "c7807fde90b4a5fcf1ec011e811e9d6328318a234c4710a194c91da2d9b2b818",
+        "model": "hy3",
+        "output_sha256": "c4b5786d58cf933ea25a0782f0dc57ae2fa1017a3eb7ef532d6778f740cb0e3b",
+        "provider_physical_calls": null,
+        "saved_snapshot_independently_rechecked": true,
+        "session_id": "310e4edf-fb0e-44a6-9a30-cae249669e2b",
+        "source_ids": [
+          "S01",
+          "S02",
+          "S03",
+          "S04"
+        ],
+        "transcript_sha256": "282b4433109483e2d5294ee0f7fc81024a63eb62f3b4fd7c6832a94939ee226b",
+        "visible_function_calls": 0
+      },
+      {
+        "archived_native_prefix_verified": true,
+        "archived_verify_direct_files_status": "direct_saved_snapshot_independently_bound",
+        "artifact": "R",
+        "fresh_session_record_bound": true,
+        "hidden_provider_context_verified": false,
+        "input_sha256": "39d8df50cf451ad3d267e74ec426a4f1982440d90e009578cedea4398418b9ee",
+        "model": "hy3",
+        "output_sha256": "fc2a6dc2b8f521f256528ab776a3d2c4f8acb2bfd3b77b0c5cba8511ac467f6b",
+        "provider_physical_calls": null,
+        "saved_snapshot_independently_rechecked": true,
+        "session_id": "0eca9a72-e66a-4dcf-b89f-ac7e0f003b2f",
+        "source_ids": [
+          "S02",
+          "S03",
+          "S04"
+        ],
+        "transcript_sha256": "d045c95c9207a1088bd1ac0191077189961db068c77e33536f0701e52175cd3b",
+        "visible_function_calls": 0
+      }
+    ],
+    "status": "passed",
+    "target": {
+      "actual_memory_equals_host_prepared": true,
+      "commit_before_recorded_target_dispatch": true,
+      "invoice_cny": null,
+      "logical_host_commit_count": 1,
+      "memory_sha256": "f39a75c2aa01476e085515455c03349b423c94b0e2e5967dd4b17e27640617f9",
+      "peak_cost_upper_cny": "0.00149",
+      "provider_physical_requests": null,
+      "sdk_provider_dispatch_count": 1,
+      "sdk_stream_attempts": 1
+    }
+  },
+  "formal": {
+    "counts": {
+      "actual_target_jobs": 20,
+      "affected_old_artifact_denial_records": 8,
+      "blocked_no_target": 4,
+      "branches": 24,
+      "delivered": 20,
+      "forbidden_dependency_deliveries": 0,
+      "formal_generation_requests": 16,
+      "generation_captures_in_branches": 36,
+      "stories": 2,
+      "unaffected_old_artifact_allow_records": 22
+    },
+    "limitations": [
+      "Old-packet rejection is contemporaneous host event evidence, not a post-run replay with the destroyed broker key.",
+      "Packet HMAC signatures are not independently revalidated after Host.close; stored body hashes and event chains are checked.",
+      "The host evidence supports the explicit SDK request boundary and conservative input lineage; it is not proof of native live ACLs, forgetting, hidden provider state, or distributed atomicity.",
+      "This review checks content equality and input dependencies, not answer correctness or semantic fact leakage/hallucination.",
+      "Filesystem times corroborate recorded event ordering but are not externally attested timestamps."
+    ],
+    "schema": "controlled-independent-security-review-v1",
+    "status": "passed"
+  },
+  "kind": "archived_review_claims_not_full_native_reverification"
+}

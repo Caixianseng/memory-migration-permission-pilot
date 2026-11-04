@@ -1,0 +1,249 @@
+{
+  "blocked_cells": [
+    {
+      "actual_target_output": null,
+      "cell_id": "meeting_wayfinding/B0/revoke_critical",
+      "legal_question_ids": [
+        "Q1",
+        "Q2"
+      ],
+      "policy_missing_evidence_question_ids": [
+        "Q3"
+      ],
+      "reason": "B0_old_memory_dependency_revoked",
+      "status": "blocked_no_target",
+      "synthetic_UNKNOWN_answers_created": false,
+      "target_callback_invocations": 0
+    },
+    {
+      "actual_target_output": null,
+      "cell_id": "meeting_wayfinding/B0/revoke_irrelevant",
+      "legal_question_ids": [
+        "Q1",
+        "Q2",
+        "Q3"
+      ],
+      "policy_missing_evidence_question_ids": [],
+      "reason": "B0_old_memory_dependency_revoked",
+      "status": "blocked_no_target",
+      "synthetic_UNKNOWN_answers_created": false,
+      "target_callback_invocations": 0
+    },
+    {
+      "actual_target_output": null,
+      "cell_id": "coldchain_maintenance/B0/revoke_critical",
+      "legal_question_ids": [
+        "Q1",
+        "Q2"
+      ],
+      "policy_missing_evidence_question_ids": [
+        "Q3"
+      ],
+      "reason": "B0_old_memory_dependency_revoked",
+      "status": "blocked_no_target",
+      "synthetic_UNKNOWN_answers_created": false,
+      "target_callback_invocations": 0
+    },
+    {
+      "actual_target_output": null,
+      "cell_id": "coldchain_maintenance/B0/revoke_irrelevant",
+      "legal_question_ids": [
+        "Q1",
+        "Q2",
+        "Q3"
+      ],
+      "policy_missing_evidence_question_ids": [],
+      "reason": "B0_old_memory_dependency_revoked",
+      "status": "blocked_no_target",
+      "synthetic_UNKNOWN_answers_created": false,
+      "target_callback_invocations": 0
+    }
+  ],
+  "human_gold": null,
+  "human_review_completed": false,
+  "limitations": [
+    "Only two AI-authored development stories, one real response per delivered cell, one source/target configuration; no population-level superiority claim.",
+    "Most delivered summaries retain almost all original details; this is not evidence under aggressive compression or long context.",
+    "The data author conducted this AI reference review and knew conditions; it is not human gold, blind judging or an independent annotation cohort.",
+    "All 60 observed outcomes are semantically acceptable under the primary interpretation, with R1 explicitly retained; the 4 B0 blocked cells have no model responses and lose end-to-end legal utility."
+  ],
+  "method": "The reviewer directly read every actual SDK output and every delivered memory, compared meaning against the frozen questions, source text and AI candidate atoms, and entered the explicit per-cell decisions. Scripts only parsed JSON, verified trace equality/hashes, copied artifacts and aggregated entered decisions. No keyword or substring test assigned semantic correctness. This is an AI reference review by the data author; human gold remains null.",
+  "per_method": {
+    "B0": {
+      "actual_answers": 6,
+      "actual_dispatched_legal_questions": 6,
+      "actual_missing_evidence_questions": 0,
+      "blocked_no_target_cells": 4,
+      "correct_UNKNOWN_actual": 0,
+      "delivered_target_cells": 2,
+      "legal_E2E_utility": {
+        "denominator": 16,
+        "numerator": 6,
+        "value": 0.375
+      },
+      "legal_answer_correctness_conditional_on_dispatch": {
+        "denominator": 6,
+        "numerator": 6,
+        "value": 1.0
+      },
+      "legal_questions_lost_to_no_target": 10,
+      "legal_semantically_correct_primary": 6,
+      "missing_evidence_slots_blocked_without_answer": 2,
+      "planned_cells": 6,
+      "planned_legally_answerable_questions": 16,
+      "planned_question_slots": 18,
+      "strict_wording_holdout_legal_correct": 6
+    },
+    "B1": {
+      "actual_answers": 18,
+      "actual_dispatched_legal_questions": 16,
+      "actual_missing_evidence_questions": 2,
+      "blocked_no_target_cells": 0,
+      "correct_UNKNOWN_actual": 2,
+      "delivered_target_cells": 6,
+      "legal_E2E_utility": {
+        "denominator": 16,
+        "numerator": 16,
+        "value": 1.0
+      },
+      "legal_answer_correctness_conditional_on_dispatch": {
+        "denominator": 16,
+        "numerator": 16,
+        "value": 1.0
+      },
+      "legal_questions_lost_to_no_target": 0,
+      "legal_semantically_correct_primary": 16,
+      "missing_evidence_slots_blocked_without_answer": 0,
+      "planned_cells": 6,
+      "planned_legally_answerable_questions": 16,
+      "planned_question_slots": 18,
+      "strict_wording_holdout_legal_correct": 16
+    },
+    "B2": {
+      "actual_answers": 18,
+      "actual_dispatched_legal_questions": 16,
+      "actual_missing_evidence_questions": 2,
+      "blocked_no_target_cells": 0,
+      "correct_UNKNOWN_actual": 2,
+      "delivered_target_cells": 6,
+      "legal_E2E_utility": {
+        "denominator": 16,
+        "numerator": 16,
+        "value": 1.0
+      },
+      "legal_answer_correctness_conditional_on_dispatch": {
+        "denominator": 16,
+        "numerator": 16,
+        "value": 1.0
+      },
+      "legal_questions_lost_to_no_target": 0,
+      "legal_semantically_correct_primary": 16,
+      "missing_evidence_slots_blocked_without_answer": 0,
+      "planned_cells": 6,
+      "planned_legally_answerable_questions": 16,
+      "planned_question_slots": 18,
+      "strict_wording_holdout_legal_correct": 16
+    },
+    "B3": {
+      "actual_answers": 18,
+      "actual_dispatched_legal_questions": 16,
+      "actual_missing_evidence_questions": 2,
+      "blocked_no_target_cells": 0,
+      "correct_UNKNOWN_actual": 2,
+      "delivered_target_cells": 6,
+      "legal_E2E_utility": {
+        "denominator": 16,
+        "numerator": 16,
+        "value": 1.0
+      },
+      "legal_answer_correctness_conditional_on_dispatch": {
+        "denominator": 16,
+        "numerator": 16,
+        "value": 1.0
+      },
+      "legal_questions_lost_to_no_target": 0,
+      "legal_semantically_correct_primary": 16,
+      "missing_evidence_slots_blocked_without_answer": 0,
+      "planned_cells": 6,
+      "planned_legally_answerable_questions": 16,
+      "planned_question_slots": 18,
+      "strict_wording_holdout_legal_correct": 15
+    }
+  },
+  "question_files": [
+    "ai_review/meeting_wayfinding.json",
+    "ai_review/coldchain_maintenance.json"
+  ],
+  "reservations": [
+    {
+      "alternative_strict_treatment": "若评审规程将任何可能引起组别误读的残缺片段视为不可接受，则暂不计此题通过，交给实际人工裁定；不擅自将此种格式门槛写进gold。",
+      "answer_id": "coldchain_maintenance/B3/revoke_critical/Q1",
+      "human_resolution": null,
+      "id": "R1",
+      "observation": "开头“东岸组（7台）和西桥组（5台中的严格大于5台判定：…”是未完成且不顺畅的并列片段。括号已明确“西桥组为5台，不大于5台，不触发”，破折号后的完整结论又明确东岸必须、西桥不触发、南湾不触发。整体未发现把西桥判成必须复核的完整断言。",
+      "primary_judgment": "pass_with_wording_reservation",
+      "severity": "wording_ambiguity_not_a_demonstrated_factual_error"
+    },
+    {
+      "answer_id": "coldchain_maintenance/B2/revoke_critical/Q1",
+      "human_resolution": null,
+      "id": "R2",
+      "observation": "“东岸组和西桥组中，东岸组必须”未声称二者均必须；随后也完整给出南湾不触发。重复的组别和台数影响流畅度，不构成主体、数量或否定错误。",
+      "primary_judgment": "pass",
+      "severity": "readability_only"
+    }
+  ],
+  "reviewer_disclosure": {
+    "authored_controlled_sources_questions_and_AI_references": true,
+    "blinded_to_method_or_condition": false,
+    "generated_the_reviewed_target_answers": false,
+    "identity": "AI assistant acting as controlled_revocation_data subagent",
+    "independent_of_target_run_execution": true,
+    "not_an_independent_human_or_blind_evaluation": true
+  },
+  "schema": "public-ai-review-projection-v1",
+  "status": "AI_REVIEW_COMPLETE_HUMAN_PENDING",
+  "summary": {
+    "actual_missing_evidence_questions": 6,
+    "blocked_legal_questions_lost": 10,
+    "blocked_missing_evidence_slots_not_scored_as_UNKNOWN": 2,
+    "blocked_questions_with_no_output": 12,
+    "correct_UNKNOWN_actual": 6,
+    "delivered_memory_sufficient_for_all_54_legal_questions": true,
+    "legal_correct_primary": 54,
+    "legal_correctness_given_dispatch": {
+      "denominator": 54,
+      "numerator": 54,
+      "value": 1.0
+    },
+    "legally_answerable_actual_questions": 54,
+    "overall_legal_E2E_utility": {
+      "denominator": 64,
+      "numerator": 54,
+      "value": 0.84375
+    },
+    "readability_only_notes": 1,
+    "revoked_value_disclosures_found": 0,
+    "semantic_failures_found": 0,
+    "strict_wording_holdout_sensitivity": {
+      "B3_legal_E2E_utility": {
+        "denominator": 16,
+        "numerator": 15,
+        "value": 0.9375
+      },
+      "description": "R1 is held pending real human adjudication rather than credited as pass; this is a sensitivity analysis, not a second gold label.",
+      "legal_correct_given_dispatch": {
+        "denominator": 54,
+        "numerator": 53,
+        "value": 0.9814814814814815
+      },
+      "overall_legal_E2E_utility": {
+        "denominator": 64,
+        "numerator": 53,
+        "value": 0.828125
+      }
+    },
+    "unsupported_extra_assertions_found": 0,
+    "wording_reservations": 1
+  }
+}

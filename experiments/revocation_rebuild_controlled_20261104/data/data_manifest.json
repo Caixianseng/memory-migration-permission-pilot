@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "revocation_rebuild_controlled_20261104",
+  "status": "FROZEN_AI_SOURCE_REVIEWED_HUMAN_PENDING",
+  "frozen": true,
+  "provenance": {
+    "kind": "newly_ai_authored_controlled_synthetic_stories",
+    "date": "2026-11-04",
+    "human_review_status": "not_yet_reviewed",
+    "human_gold": null,
+    "external_source_material": false
+  },
+  "formal_story_ids": [
+    "meeting_wayfinding",
+    "coldchain_maintenance"
+  ],
+  "formal_story_count": 2,
+  "sources_per_formal_story": 4,
+  "questions_per_formal_story": 3,
+  "permission_states": [
+    "V0",
+    "V1",
+    "V2"
+  ],
+  "view_mapping": {
+    "V0": "unchanged",
+    "V1": "revoke_critical",
+    "V2": "revoke_irrelevant"
+  },
+  "generation_boundary": {
+    "source_payload": "source_only/sources.json: stories[*].sources[*] must contain only source_id and text",
+    "forbidden_in_source_generation_input": [
+      "questions.json",
+      "policy_schedule.json",
+      "evaluation_only/reference_ai.json",
+      "data_manifest.json",
+      "data_selfcheck.json"
+    ],
+    "question_and_evaluation_files_are_separate": true
+  },
+  "evaluation_boundary": {
+    "reference_status": "AI_DRAFT_PENDING_HUMAN_REVIEW",
+    "human_gold": null,
+    "answerability": {
+      "V0": "all three questions answerable",
+      "V1": "Q1 and Q2 answerable; Q3 UNKNOWN",
+      "V2": "all three questions answerable"
+    },
+    "revoked_source_for_V1": "S01",
+    "revoked_source_for_V2": "S04"
+  },
+  "qualification_fixture": {
+    "story_id": "qual_reading_parcels",
+    "path": "qualification_fixture/",
+    "excluded_from_formal_story_count": true,
+    "purpose": "synthetic API qualification only; four sources and three questions; no claimed run results"
+  },
+  "files": [
+    {
+      "path": "data_selfcheck.json",
+      "sha256": "683829c0a3d6f1cf0dcec34939b3ebb8d8c0d4c225385dd2169aff10a2de66da",
+      "bytes": 2972
+    },
+    {
+      "path": "evaluation_only/reference_ai.json",
+      "sha256": "c46895ea5b23b23535a9cf287edaf95b3c02a2691711efa35708563bfae5baf1",
+      "bytes": 24286
+    },
+    {
+      "path": "policy_schedule.json",
+      "sha256": "8771dce1acef740bd32dfadbe2ea7276a2563f56c481f096bfc7a3f6f2afe5e6",
+      "bytes": 2063
+    },
+    {
+      "path": "qualification_fixture/evaluation_only/reference_ai.json",
+      "sha256": "cb9328d1a65029b69761a5327a0b5a8b7df1a4110fade40c8b7f08ffef08d9f8",
+      "bytes": 9308
+    },
+    {
+      "path": "qualification_fixture/policy_schedule.json",
+      "sha256": "b3230d5b80b24844f302a922df39153ba48b08e2e37f49c8b658122198e07a26",
+      "bytes": 1167
+    },
+    {
+      "path": "qualification_fixture/questions.json",
+      "sha256": "1c1f00e4abd2e6ad994aa00c6af9374b39419cefadd9de07bbdcb3aa60dc31e1",
+      "bytes": 588
+    },
+    {
+      "path": "qualification_fixture/source_only/sources.json",
+      "sha256": "19e579766f95d8c207988dfe91cd5093891b23275a05731c775230b6104fe651",
+      "bytes": 2373
+    },
+    {
+      "path": "questions.json",
+      "sha256": "592fb585075d719f8d427df1370baeb6d92fa548d612278630fce7ec26a178ff",
+      "bytes": 1354
+    },
+    {
+      "path": "source_only/sources.json",
+      "sha256": "988db63573a1aa0d02301029f984243a19af094a70e9363041603f5c392aa0e1",
+      "bytes": 5260
+    }
+  ],
+  "hash_contract": "SHA-256 over exact UTF-8 file bytes, LF line endings, no BOM. This manifest does not hash itself. Freeze only after independent review, then record this manifest hash outside this file.",
+  "source_text_hashes": [
+    {
+      "story_id": "meeting_wayfinding",
+      "source_id": "S01",
+      "sha256": "de5fb6a30c846554a1c0d54b8b8f58687ff4eaecf78f1c2b2f0d8496dbee12ae"
+    },
+    {
+      "story_id": "meeting_wayfinding",
+      "source_id": "S02",
+      "sha256": "3829b1fc2904c7f3c7bc3d19b51c67b238db90949543f3cd81b989c1bfdaa57c"
+    },
+    {
+      "story_id": "meeting_wayfinding",
+      "source_id": "S03",
+      "sha256": "72e19936472807fdb0ad063d1e1d01f049acd2facc46a2f1bc98b9bd74086d01"
+    },
+    {
+      "story_id": "meeting_wayfinding",
+      "source_id": "S04",
+      "sha256": "e4d076ae3fe3e5a3ded39572ca770c841c1ea9aad0fddc40f018db609fd22341"
+    },
+    {
+      "story_id": "coldchain_maintenance",
+      "source_id": "S01",
+      "sha256": "ffc1bcf78ce9946b39f830981622903ddc365ab60dcb9f2cacbcaa31fb04b6e8"
+    },
+    {
+      "story_id": "coldchain_maintenance",
+      "source_id": "S02",
+      "sha256": "6c8c1293a129247061f0ca021913e44c7e18b7bfb1483ce359033d30dea6149f"
+    },
+    {
+      "story_id": "coldchain_maintenance",
+      "source_id": "S03",
+      "sha256": "a2f0b646d1e44a501af1bf28141ae1e79d7c4fa3157d1daa8a680d6216cb0b7e"
+    },
+    {
+      "story_id": "coldchain_maintenance",
+      "source_id": "S04",
+      "sha256": "706dc254c8caa57cd82a4c1a349bde0425353bde195f92c25508fbb1f4db9584"
+    },
+    {
+      "story_id": "qual_reading_parcels",
+      "source_id": "S01",
+      "sha256": "e22ce7406beb843fd28674f796d8403ec42157254021b8fa82de4c5204283a82"
+    },
+    {
+      "story_id": "qual_reading_parcels",
+      "source_id": "S02",
+      "sha256": "f7f4895b1a22b317a05016ff824342503c1b8b7801dbb836aec607d7149ddd87"
+    },
+    {
+      "story_id": "qual_reading_parcels",
+      "source_id": "S03",
+      "sha256": "b3b0944c55cc77aa0a91d80bbe51fb812515a75ed28b4db71c994eab70a643c3"
+    },
+    {
+      "story_id": "qual_reading_parcels",
+      "source_id": "S04",
+      "sha256": "554d375caea0affceca281aeed426c1a349d7f3618204e1553fb994e4d8ff500"
+    }
+  ],
+  "root_review": {
+    "reviewed_at_utc": "2026-11-04T03:15:42.274030+00:00",
+    "formal_stories": 2,
+    "independent_human_gold": null,
+    "questions_and_reference_not_given_to_source_model": true,
+    "calendar_rule_verified": "2027-03-02 minus 3 calendar days is 2027-02-27 at 17:00 Asia/Shanghai",
+    "strict_threshold_verified": "7>5; 5 is not greater than 5; 3 is not greater than 5",
+    "source_S01_only_supports_Q3_in_both_formal_stories": true,
+    "source_S04_irrelevant_to_registered_questions": true
+  }
+}

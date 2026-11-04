@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0",
+  "checks": {
+    "all_json_roundtrips": true,
+    "four_sources_per_story": true,
+    "three_fixed_questions_per_story": true,
+    "source_objects_have_only_id_and_text": true,
+    "source_texts_150_to_400_unicode_characters": true,
+    "all_evidence_quote_offsets_and_sha256_match": true,
+    "human_gold_fields_are_null": true,
+    "critical_revocation_affects_only_Q3": true,
+    "irrelevant_revocation_affects_no_question": true,
+    "formal_stories_have_cross_source_question": true,
+    "meeting_calendar_subtraction_verified": true,
+    "maintenance_strict_comparison_and_reserve_exclusion_verified": true
+  },
+  "deterministic_arithmetic": {
+    "meeting_deadline": "2027-02-27T17:00:00+08:00",
+    "double_review_required": {
+      "东岸组": true,
+      "西桥组": false,
+      "南湾组": false
+    }
+  },
+  "source_character_counts": [
+    {
+      "dataset": "formal",
+      "story_id": "meeting_wayfinding",
+      "source_id": "S01",
+      "unicode_characters": 193,
+      "han_characters": 175
+    },
+    {
+      "dataset": "formal",
+      "story_id": "meeting_wayfinding",
+      "source_id": "S02",
+      "unicode_characters": 194,
+      "han_characters": 169
+    },
+    {
+      "dataset": "formal",
+      "story_id": "meeting_wayfinding",
+      "source_id": "S03",
+      "unicode_characters": 198,
+      "han_characters": 177
+    },
+    {
+      "dataset": "formal",
+      "story_id": "meeting_wayfinding",
+      "source_id": "S04",
+      "unicode_characters": 172,
+      "han_characters": 161
+    },
+    {
+      "dataset": "formal",
+      "story_id": "coldchain_maintenance",
+      "source_id": "S01",
+      "unicode_characters": 191,
+      "han_characters": 165
+    },
+    {
+      "dataset": "formal",
+      "story_id": "coldchain_maintenance",
+      "source_id": "S02",
+      "unicode_characters": 192,
+      "han_characters": 171
+    },
+    {
+      "dataset": "formal",
+      "story_id": "coldchain_maintenance",
+      "source_id": "S03",
+      "unicode_characters": 195,
+      "han_characters": 180
+    },
+    {
+      "dataset": "formal",
+      "story_id": "coldchain_maintenance",
+      "source_id": "S04",
+      "unicode_characters": 184,
+      "han_characters": 171
+    },
+    {
+      "dataset": "qualification_fixture",
+      "story_id": "qual_reading_parcels",
+      "source_id": "S01",
+      "unicode_characters": 169,
+      "han_characters": 152
+    },
+    {
+      "dataset": "qualification_fixture",
+      "story_id": "qual_reading_parcels",
+      "source_id": "S02",
+      "unicode_characters": 163,
+      "han_characters": 153
+    },
+    {
+      "dataset": "qualification_fixture",
+      "story_id": "qual_reading_parcels",
+      "source_id": "S03",
+      "unicode_characters": 166,
+      "han_characters": 154
+    },
+    {
+      "dataset": "qualification_fixture",
+      "story_id": "qual_reading_parcels",
+      "source_id": "S04",
+      "unicode_characters": 157,
+      "han_characters": 146
+    }
+  ]
+}

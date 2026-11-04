@@ -1,0 +1,30 @@
+# 受控记忆撤权与合法交付核心
+
+本目录公开2026-11-04受控实验的标准库核心：可信宿主、实际输入依赖闭包、B0—B3调度和离线HTTP适配器。data/是新编AI合成材料，含两个正式开发故事和一个独立资格夹具；AI参考仅用于评分，human_gold仍为空。
+
+## 离线检查
+
+在仓库根目录执行：
+
+```powershell
+python -B -X utf8 -S -m unittest experiments.revocation_rebuild_controlled_20261104.test_host experiments.revocation_rebuild_controlled_20261104.test_runner experiments.revocation_rebuild_controlled_20261104.test_model_adapter
+python -I -B -S benchmarks/revocation_rebuild_controlled_20261104/reproduce.py
+```
+
+27项定向测试使用受控capture、假账户与假transport，不调用模型或查询账户。依赖远端已有memory_migration_study.native_agent_protocol与policy；原有NativeAgentBroker仍是唯一根许可权威。模型输出不能自授权限或解除实际输入依赖。
+
+## 实验方法
+
+每故事四来源、三题、三权限视图。B0预生成混合M，依赖撤权后整物阻断；B1交付合法完整原文；B2在各状态仅用当前合法来源生成R；B3预生成单源卡后按许可筛选。每故事八次唯一源生成、十次目标回答、两个B0阻断位置。源制品跨视图共享时仅计一次真实生成。
+
+核心runner接受显式source_callback与target_callback，失败保留状态，不自动重放。host记录输入、输出及权限事件。未知/空依赖、循环、主体混淆、篡改、撤权后旧包等路径均有检查。
+
+## 本轮真实运行的边界
+
+真实主线使用本机Harness官方SDK，Flash/off，源2048与目标4096输出上限，工具为空；HTTP适配器仅完成离线测试，本轮未用于真实请求。HY3原生生成到SDK目标另有一条独立资格。
+
+本机main_v2.py、SDK运行时与事后审计器依赖固定安装路径、历史预算和原始回执，不作为公共一键执行入口。公开核心可独立离线运行；公开证据投影可离线复核，详见[证据包](../../benchmarks/revocation_rebuild_controlled_20261104/README.md)。原生付费记录、本机账户、权限包密钥和环境没有打包。
+
+两故事正式20次实际交付的依赖集合均符合当前许可。AI复核54/54实际合法题正确，6/6缺证题UNKNOWN；一条措辞争议暂不计通过则53/54。完整合法效用B0=6/16，其余各16/16主判。D1尚未实现比较，不能视作新算法优势或一般安全证明。
+
+[阶段成果](../../docs/阶段收尾_记忆撤权安全交付_2026-11-04.md) · [下一阶段计划](../../docs/新算法优势停滞原因与七天验证计划_2026-11-04.md)

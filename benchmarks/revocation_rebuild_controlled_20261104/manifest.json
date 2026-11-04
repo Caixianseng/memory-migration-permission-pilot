@@ -1,0 +1,29 @@
+{
+  "files_sha256": {
+    "README.md": "69face454b8b9233329a10892ed0443fb21a57cdb59fcc65d7bdf86fda50a906",
+    "accounting_reference.json": "daa7dac62a5a8b3a490f1b797ae4d48a40540136fc1a76a28846ad4dfdc7b441",
+    "ai_review.json": "31a629f3c2a62f4a8846687c943b8f9feda65eea5823e8ce15a93e4960eab4e9",
+    "ai_review/coldchain_maintenance.json": "1655ec0654e919ee22b389de92d7b3068efdfa29867ce336ee057d93db51855e",
+    "ai_review/meeting_wayfinding.json": "976cb33f43014584522673770ad0de5ef9159c15ef1bad24dc25c9529be1470d",
+    "export_public.py": "3e5f670ed9887df783af1645793a966a0127a2d5102cb5f99c2a7020b5dec96b",
+    "formal_delivery.json": "e5296f9d7fbf774bbf1ac1a9e3f72ed37b5428e993cbeab086be72a6ef7b2070",
+    "human_rater_only_60.zip": "97fb8f4ed15b8bbb969586271c56da8ecd3d94fac0729247916e781daec5881f",
+    "materials.json": "911bc13c8653a7f29868a6f74775d388f06494f7cfe5bbd6604e094a4ee1baf1",
+    "qualification.json": "d5678b909094137963fe3d08b6424f10776128847aa5fb941b7ff954ce24f22a",
+    "reproduce.py": "b7775a0095d074f2c13c79a9f04fb6688fc38551fd092e966bb3a04bcad0c0f8",
+    "sdk_jobs.json": "d11a98678023bfac72cbc8da6aaf32b2e5550cf198da346c0ace9904c3ac8a69",
+    "sdk_jobs/external_qualification_qualification_fixture_target_01.json": "cbe0d20d07ff83e1919ca7e851b7c74b3d58d30c68162c7e72c47212475ccf62",
+    "sdk_jobs/formal_coldchain_maintenance_source_01.json": "c1cb2355a1c00b781e80f8b0bea788bf6d60dbce8db299b13833a5d493508a37",
+    "sdk_jobs/formal_coldchain_maintenance_source_02.json": "a32c30fa900c502839704c6856811319fa9b8314436f96a866f856243c1ed2ed",
+    "sdk_jobs/formal_coldchain_maintenance_target_01.json": "b18aa0ec7c0bc53868521f82f55cf5830caee48182240d2428c17f4f0e0cfe2b",
+    "sdk_jobs/formal_coldchain_maintenance_target_02.json": "e43331205f9003d2e485d670fd03472ce8a864f22c757e269dc2955029befcd8",
+    "sdk_jobs/formal_meeting_wayfinding_source_01.json": "04956e3188de3314a4aee631b9b24d3d082144b24cc9a33f2d77fa0756e37d6a",
+    "sdk_jobs/formal_meeting_wayfinding_source_02.json": "c234417dcd19c535ef159a1b11603af6e7303f08a4688b21b21c9221e6be46c1",
+    "sdk_jobs/formal_meeting_wayfinding_target_01.json": "5bbd266656d17e48f4e6d8f46e9c1e52a0a6de8b7398293597c8807b1308e809",
+    "sdk_jobs/formal_meeting_wayfinding_target_02.json": "0ccb9f501cef5d954cdfc8088e6cc823a97011280ab2a4e5d207c4c16be04550",
+    "sdk_jobs/qualification_qual_reading_parcels_source_01.json": "93e70f6deb403762278e724765ee9c7b9eab6d11270e10d96b4c7eda3e213ea9",
+    "sdk_jobs/qualification_qual_reading_parcels_target_01.json": "5f7ad16ef6e15745060cd72da8b760a71db422d83d1a3b10495fd34ed9088b37",
+    "security_review_summary.json": "5c3a710934ef7e7576fda1c52487c60cf3231f0887e9baa1ddc8834a2dd27b08"
+  },
+  "schema": "public-bundle-sha256-manifest-v1"
+}

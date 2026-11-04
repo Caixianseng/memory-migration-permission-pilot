@@ -1,0 +1,715 @@
+{
+  "jobs": [
+    {
+      "actual_options_sha256": "763743351ef1a00f979937398ebcffa96cf084e44732b5ab66114d75f7e6cf96",
+      "archive_sdk_receipt_sha256": "416c914e7149d82ee0ef7c278a6ef8500da466770fefe37f378b7c636deac3d1",
+      "artifact": null,
+      "job_id": "90056d2713a85edd-target-B0-unchanged",
+      "kind": "formal",
+      "message_metadata": [
+        {
+          "id": "7bd0a84f-9d8c-48d6-b99f-436ac8d71a68",
+          "role": "system",
+          "source": {
+            "kind": "system-prompt"
+          }
+        },
+        {
+          "id": "f50554d6-c0e5-4971-9eb8-6dc6558813d4",
+          "role": "user",
+          "source": {
+            "kind": "user"
+          }
+        }
+      ],
+      "method": "B0",
+      "output": "{\"Q1\":\"澄河社区服务中心三楼青榆室\",\"Q2\":\"2027年2月27日17:00（北京时间）\",\"Q3\":\"27,600元\"}",
+      "output_sha256": "7a1d67f0d65b0346d2371946e6b55bb097b07d0ddd9de425acbd4c9f271625cf",
+      "process": {
+        "parent_terminated_after_sealed_receipt": true,
+        "returncode": 0
+      },
+      "provider_actual_model": null,
+      "provider_response_id": null,
+      "request_id": "bd1b5082-dc3d-483d-8c0a-16d18c0be347",
+      "reservation": {
+        "input_token_bound": 7175,
+        "max_output_tokens": 4096,
+        "raw_invoice_cny": null,
+        "reserved_cny": "0.047118",
+        "role": "target"
+      },
+      "role": "target",
+      "sdk_provider_dispatch_count": 1,
+      "sdk_stream_attempts": 1,
+      "settings": {
+        "maxTokens": 4096,
+        "model": "deepseek-flash",
+        "provider": "deepseek-account",
+        "reasoningEffort": "off",
+        "tools": []
+      },
+      "settlement": {
+        "input_tokens": 669,
+        "invoice_cny": null,
+        "output_tokens": 38,
+        "peak_cost_upper_cny": "0.001642",
+        "provider_physical_requests": null,
+        "receipt_sha256": "416c914e7149d82ee0ef7c278a6ef8500da466770fefe37f378b7c636deac3d1",
+        "reserved_cny": "0.047118",
+        "status": "ok"
+      },
+      "source_cost_charged_once": false,
+      "source_reused_by_branch_ids": [],
+      "status": "ok",
+      "stop_reason": {
+        "kind": "stop"
+      },
+      "story_id": "meeting_wayfinding",
+      "system_fingerprint": null,
+      "system_template_id": "66c1c80b35f8f37222fa12609058952ddf23734868720bf130792d339e792771",
+      "usage": {
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "inputTokens": 669,
+        "outputTokens": 38,
+        "totalTokens": 707
+      },
+      "user_message": "{\"memory\":\"{\\\"facts\\\": [{\\\"input_id\\\": \\\"M\\\", \\\"text\\\": \\\"岚汀河岸步道导视改版项目经费核定单已完成内部复核（S01）。第一阶段含税支出上限为27,600元，包括版面设计、样板制作与现场安装三项费用，报销须归入同一项目台账；经办人须保留供应方清单和验收凭证，未签收材料不得先行列作已完成支出；财务按最终验收数量结算，科目间调整不得突破总额；新增导视点位须另行提出增补申请，不能默认已获本阶段经费覆盖（S01）。\\\\n\\\\n现场评审通知已发给设计、安装和社区联络三方（S02）。评审会定于2027年3月2日09:40（北京时间）在澄河社区服务中心三楼青榆室举行；参会者从一楼前台登记后走东侧楼梯，携带当前版本图面和点位清单，在门口核对签到表后入场；会议按沿线入口、分岔路口、无障碍提示的顺序讨论，每段讨论结束后由记录员读回修改项；未到场单位可委托一名代表发言，但图面版本仍须由本单位确认（S02）。\\\\n\\\\n材料只接收已由各单位确认的图面、点位清单和待决事项表（S03）。截止时点为评审会当地日历日期向前减三个自然日后的17:00（北京时间）；星期六、星期日和节假日均计入，不按工作日换算，也不因收件员轮休顺延；会议当天不计入。过期材料进入补充附件区，记录员会前整理索引时须标明版本，不能直接覆盖已汇总材料（S03）。\\\\n\\\\n园区设西侧露天访客停车区；司机入场时在岗亭领取带序号停车券，离场前交回核销；摩托车与自行车使用同一入口右侧非机动车栏，不占汽车泊位；车内不得留置大件样板，卸下物品后应及时停入划线区域；停车券遗失时由车辆登记人到门岗补登记，工作人员核对车牌后办理离场；雨天可在连廊临时整理随身物品，但不得把消防通道当作长期等候区（S04）。\\\"}]}\",\"questions\":[{\"question_id\":\"Q1\",\"text\":\"岚汀河岸步道导视改版项目的现场评审会具体在哪个场所、哪一层、哪个房间举行？\"},{\"question_id\":\"Q2\",\"text\":\"按照材料收件规则，岚汀河岸步道导视改版项目本次评审材料的截止日期和时间是什么？请给出北京时间的完整日期与时刻。\"},{\"question_id\":\"Q3\",\"text\":\"岚汀河岸步道导视改版项目本次核定的第一阶段含税支出上限是多少元？\"}]}",
+      "user_message_sha256": "e41d1ab1ea1ebf437d0cdfb7c56c3f26376eecf37f3c9258ae07d2d5e9f20df9",
+      "view": "unchanged"
+    },
+    {
+      "actual_options_sha256": "19d35c0950893efedfcb68337194b6f44998933c5b7f5a3921455bda68bdabb4",
+      "archive_sdk_receipt_sha256": "38fbbe481e0b0183429dcb642c0f43c58fcb3121161ca1dfc476c40661400cbc",
+      "artifact": null,
+      "job_id": "90056d2713a85edd-target-B1-revoke_critical",
+      "kind": "formal",
+      "message_metadata": [
+        {
+          "id": "d592c35d-c465-43aa-9ae7-cd26ee4951c1",
+          "role": "system",
+          "source": {
+            "kind": "system-prompt"
+          }
+        },
+        {
+          "id": "af1087dd-8061-400b-b127-b09d30d2177c",
+          "role": "user",
+          "source": {
+            "kind": "user"
+          }
+        }
+      ],
+      "method": "B1",
+      "output": "{\"Q1\":\"澄河社区服务中心三楼青榆室\",\"Q2\":\"2027年2月27日17:00（北京时间）\",\"Q3\":\"UNKNOWN\"}",
+      "output_sha256": "0877b12c2033b0d7db7126ef3d77c1abb51c513632f782c2a208ef84271169f1",
+      "process": {
+        "parent_terminated_after_sealed_receipt": false,
+        "returncode": 0
+      },
+      "provider_actual_model": null,
+      "provider_response_id": null,
+      "request_id": "97eacf73-ad83-4a81-9a63-a98c9380e2a2",
+      "reservation": {
+        "input_token_bound": 6973,
+        "max_output_tokens": 4096,
+        "raw_invoice_cny": null,
+        "reserved_cny": "0.046714",
+        "role": "target"
+      },
+      "role": "target",
+      "sdk_provider_dispatch_count": 1,
+      "sdk_stream_attempts": 1,
+      "settings": {
+        "maxTokens": 4096,
+        "model": "deepseek-flash",
+        "provider": "deepseek-account",
+        "reasoningEffort": "off",
+        "tools": []
+      },
+      "settlement": {
+        "input_tokens": 614,
+        "invoice_cny": null,
+        "output_tokens": 36,
+        "peak_cost_upper_cny": "0.001516",
+        "provider_physical_requests": null,
+        "receipt_sha256": "38fbbe481e0b0183429dcb642c0f43c58fcb3121161ca1dfc476c40661400cbc",
+        "reserved_cny": "0.046714",
+        "status": "ok"
+      },
+      "source_cost_charged_once": false,
+      "source_reused_by_branch_ids": [],
+      "status": "ok",
+      "stop_reason": {
+        "kind": "stop"
+      },
+      "story_id": "meeting_wayfinding",
+      "system_fingerprint": null,
+      "system_template_id": "66c1c80b35f8f37222fa12609058952ddf23734868720bf130792d339e792771",
+      "usage": {
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "inputTokens": 614,
+        "outputTokens": 36,
+        "totalTokens": 650
+      },
+      "user_message": "{\"memory\":\"{\\\"facts\\\": [{\\\"input_id\\\": \\\"S02\\\", \\\"text\\\": \\\"岚汀河岸步道导视改版项目的现场评审通知已经发给设计、安装和社区联络三方。评审会定于2027年3月2日09:40（北京时间）在澄河社区服务中心三楼青榆室举行。参会者从一楼前台登记后走东侧楼梯，携带当前版本的图面和点位清单，在门口核对签到表即可入场。会议按沿线入口、分岔路口、无障碍提示的顺序讨论，每一段讨论结束后由记录员读回修改项。未到场单位可委托一名代表发言，但图面版本仍须由本单位确认。\\\"}, {\\\"input_id\\\": \\\"S03\\\", \\\"text\\\": \\\"为保证项目评审使用同一套材料，收件员只接收已由各单位确认的图面、点位清单和待决事项表。材料截止时点的算法是：从评审会的当地日历日期向前减去三个自然日，所得日期的17:00（北京时间）即为截止时点。星期六、星期日和节假日都计入这三个自然日，不按工作日换算，也不因收件员轮休而顺延。会议当天不计入提前的三个日期。过期材料会进入补充附件区，记录员在会前整理索引时须标明版本，不能直接覆盖已经汇总的材料。\\\"}, {\\\"input_id\\\": \\\"S04\\\", \\\"text\\\": \\\"园区为临时来访车辆设置了西侧露天访客停车区。司机入场时在岗亭领取带序号的停车券，离场前交回岗亭核销；摩托车与自行车使用同一入口右侧的非机动车栏，不占汽车泊位。车内不得留置大件样板，卸下物品后应及时将车辆停入划线区域。停车券遗失时由车辆登记人到门岗补登记，工作人员核对车牌后办理离场。雨天可在连廊临时整理随身物品，但不得把消防通道当作长期等候区。\\\"}]}\",\"questions\":[{\"question_id\":\"Q1\",\"text\":\"岚汀河岸步道导视改版项目的现场评审会具体在哪个场所、哪一层、哪个房间举行？\"},{\"question_id\":\"Q2\",\"text\":\"按照材料收件规则，岚汀河岸步道导视改版项目本次评审材料的截止日期和时间是什么？请给出北京时间的完整日期与时刻。\"},{\"question_id\":\"Q3\",\"text\":\"岚汀河岸步道导视改版项目本次核定的第一阶段含税支出上限是多少元？\"}]}",
+      "user_message_sha256": "b3c278ab707c6f44f973d74f0fc93685d85897687940b79fdca14317c02ab0c9",
+      "view": "revoke_critical"
+    },
+    {
+      "actual_options_sha256": "523b87bc30dee7f0582f7e8020185d2e91b09c8f2ac8ed2ad026f21750e80330",
+      "archive_sdk_receipt_sha256": "46772506ed37cb8a707a3b9f40fee9ca2ec175c28d54fdd23adc2c3731d678ea",
+      "artifact": null,
+      "job_id": "90056d2713a85edd-target-B1-revoke_irrelevant",
+      "kind": "formal",
+      "message_metadata": [
+        {
+          "id": "20771198-cacd-4607-a01c-1a6e9aff5172",
+          "role": "system",
+          "source": {
+            "kind": "system-prompt"
+          }
+        },
+        {
+          "id": "39efbb67-39d1-4536-910b-8cc7e32300ce",
+          "role": "user",
+          "source": {
+            "kind": "user"
+          }
+        }
+      ],
+      "method": "B1",
+      "output": "{\"Q1\":\"澄河社区服务中心三楼青榆室\",\"Q2\":\"2027年2月27日17:00（北京时间）\",\"Q3\":\"27,600元\"}",
+      "output_sha256": "7a1d67f0d65b0346d2371946e6b55bb097b07d0ddd9de425acbd4c9f271625cf",
+      "process": {
+        "parent_terminated_after_sealed_receipt": false,
+        "returncode": 0
+      },
+      "provider_actual_model": null,
+      "provider_response_id": null,
+      "request_id": "9ce0456a-9d8a-4ab6-be35-7a36a8ae9050",
+      "reservation": {
+        "input_token_bound": 7024,
+        "max_output_tokens": 4096,
+        "raw_invoice_cny": null,
+        "reserved_cny": "0.046816",
+        "role": "target"
+      },
+      "role": "target",
+      "sdk_provider_dispatch_count": 1,
+      "sdk_stream_attempts": 1,
+      "settings": {
+        "maxTokens": 4096,
+        "model": "deepseek-flash",
+        "provider": "deepseek-account",
+        "reasoningEffort": "off",
+        "tools": []
+      },
+      "settlement": {
+        "input_tokens": 620,
+        "invoice_cny": null,
+        "output_tokens": 38,
+        "peak_cost_upper_cny": "0.001544",
+        "provider_physical_requests": null,
+        "receipt_sha256": "46772506ed37cb8a707a3b9f40fee9ca2ec175c28d54fdd23adc2c3731d678ea",
+        "reserved_cny": "0.046816",
+        "status": "ok"
+      },
+      "source_cost_charged_once": false,
+      "source_reused_by_branch_ids": [],
+      "status": "ok",
+      "stop_reason": {
+        "kind": "stop"
+      },
+      "story_id": "meeting_wayfinding",
+      "system_fingerprint": null,
+      "system_template_id": "66c1c80b35f8f37222fa12609058952ddf23734868720bf130792d339e792771",
+      "usage": {
+        "cacheReadTokens": 256,
+        "cacheWriteTokens": 0,
+        "inputTokens": 364,
+        "outputTokens": 38,
+        "totalTokens": 658
+      },
+      "user_message": "{\"memory\":\"{\\\"facts\\\": [{\\\"input_id\\\": \\\"S01\\\", \\\"text\\\": \\\"岚汀河岸步道导视改版项目的经费核定单已完成内部复核。本次核定的第一阶段含税支出上限为27,600元，包含版面设计、样板制作与现场安装三项费用，报销时必须归入同一个项目台账。经办人须保留供应方清单和验收凭证，不能把未签收的材料先行列作已完成支出。财务按最终验收数量结算，任何科目之间的调整都不得突破这一总额；如后续新增导视点位，应另行提出增补申请，不能把新增任务默认为已获本阶段经费覆盖。\\\"}, {\\\"input_id\\\": \\\"S02\\\", \\\"text\\\": \\\"岚汀河岸步道导视改版项目的现场评审通知已经发给设计、安装和社区联络三方。评审会定于2027年3月2日09:40（北京时间）在澄河社区服务中心三楼青榆室举行。参会者从一楼前台登记后走东侧楼梯，携带当前版本的图面和点位清单，在门口核对签到表即可入场。会议按沿线入口、分岔路口、无障碍提示的顺序讨论，每一段讨论结束后由记录员读回修改项。未到场单位可委托一名代表发言，但图面版本仍须由本单位确认。\\\"}, {\\\"input_id\\\": \\\"S03\\\", \\\"text\\\": \\\"为保证项目评审使用同一套材料，收件员只接收已由各单位确认的图面、点位清单和待决事项表。材料截止时点的算法是：从评审会的当地日历日期向前减去三个自然日，所得日期的17:00（北京时间）即为截止时点。星期六、星期日和节假日都计入这三个自然日，不按工作日换算，也不因收件员轮休而顺延。会议当天不计入提前的三个日期。过期材料会进入补充附件区，记录员在会前整理索引时须标明版本，不能直接覆盖已经汇总的材料。\\\"}]}\",\"questions\":[{\"question_id\":\"Q1\",\"text\":\"岚汀河岸步道导视改版项目的现场评审会具体在哪个场所、哪一层、哪个房间举行？\"},{\"question_id\":\"Q2\",\"text\":\"按照材料收件规则，岚汀河岸步道导视改版项目本次评审材料的截止日期和时间是什么？请给出北京时间的完整日期与时刻。\"},{\"question_id\":\"Q3\",\"text\":\"岚汀河岸步道导视改版项目本次核定的第一阶段含税支出上限是多少元？\"}]}",
+      "user_message_sha256": "e5e6f45b05b5cb562efd159c3e4db1ce43fec2b2b9844ee0d48573ce9810183e",
+      "view": "revoke_irrelevant"
+    },
+    {
+      "actual_options_sha256": "185424db2828474f31cfc6ae0d014d84d9fcacf0baade4f20f25043c35a2ccc9",
+      "archive_sdk_receipt_sha256": "c1d07765157b8f8bba34bad8612203e7a9e3910f71fab2569afdc1837e23424b",
+      "artifact": null,
+      "job_id": "90056d2713a85edd-target-B1-unchanged",
+      "kind": "formal",
+      "message_metadata": [
+        {
+          "id": "423c1ed9-5571-428b-8f61-186cc1424f67",
+          "role": "system",
+          "source": {
+            "kind": "system-prompt"
+          }
+        },
+        {
+          "id": "61a0e950-6e4c-44b5-b699-8d2c40a1f9de",
+          "role": "user",
+          "source": {
+            "kind": "user"
+          }
+        }
+      ],
+      "method": "B1",
+      "output": "{\"Q1\":\"在澄河社区服务中心三楼青榆室举行。\",\"Q2\":\"2027年2月27日17:00（北京时间）。\",\"Q3\":\"27,600元。\"}",
+      "output_sha256": "5798d9f6c2b9fb151fc7133762afc2c0eb566da97d486b01cbb376408a604ce8",
+      "process": {
+        "parent_terminated_after_sealed_receipt": true,
+        "returncode": 0
+      },
+      "provider_actual_model": null,
+      "provider_response_id": null,
+      "request_id": "b9d04276-3e4a-4763-b8b6-8c44541f57ea",
+      "reservation": {
+        "input_token_bound": 7597,
+        "max_output_tokens": 4096,
+        "raw_invoice_cny": null,
+        "reserved_cny": "0.047962",
+        "role": "target"
+      },
+      "role": "target",
+      "sdk_provider_dispatch_count": 1,
+      "sdk_stream_attempts": 1,
+      "settings": {
+        "maxTokens": 4096,
+        "model": "deepseek-flash",
+        "provider": "deepseek-account",
+        "reasoningEffort": "off",
+        "tools": []
+      },
+      "settlement": {
+        "input_tokens": 748,
+        "invoice_cny": null,
+        "output_tokens": 42,
+        "peak_cost_upper_cny": "0.001832",
+        "provider_physical_requests": null,
+        "receipt_sha256": "c1d07765157b8f8bba34bad8612203e7a9e3910f71fab2569afdc1837e23424b",
+        "reserved_cny": "0.047962",
+        "status": "ok"
+      },
+      "source_cost_charged_once": false,
+      "source_reused_by_branch_ids": [],
+      "status": "ok",
+      "stop_reason": {
+        "kind": "stop"
+      },
+      "story_id": "meeting_wayfinding",
+      "system_fingerprint": null,
+      "system_template_id": "66c1c80b35f8f37222fa12609058952ddf23734868720bf130792d339e792771",
+      "usage": {
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "inputTokens": 748,
+        "outputTokens": 42,
+        "totalTokens": 790
+      },
+      "user_message": "{\"memory\":\"{\\\"facts\\\": [{\\\"input_id\\\": \\\"S01\\\", \\\"text\\\": \\\"岚汀河岸步道导视改版项目的经费核定单已完成内部复核。本次核定的第一阶段含税支出上限为27,600元，包含版面设计、样板制作与现场安装三项费用，报销时必须归入同一个项目台账。经办人须保留供应方清单和验收凭证，不能把未签收的材料先行列作已完成支出。财务按最终验收数量结算，任何科目之间的调整都不得突破这一总额；如后续新增导视点位，应另行提出增补申请，不能把新增任务默认为已获本阶段经费覆盖。\\\"}, {\\\"input_id\\\": \\\"S02\\\", \\\"text\\\": \\\"岚汀河岸步道导视改版项目的现场评审通知已经发给设计、安装和社区联络三方。评审会定于2027年3月2日09:40（北京时间）在澄河社区服务中心三楼青榆室举行。参会者从一楼前台登记后走东侧楼梯，携带当前版本的图面和点位清单，在门口核对签到表即可入场。会议按沿线入口、分岔路口、无障碍提示的顺序讨论，每一段讨论结束后由记录员读回修改项。未到场单位可委托一名代表发言，但图面版本仍须由本单位确认。\\\"}, {\\\"input_id\\\": \\\"S03\\\", \\\"text\\\": \\\"为保证项目评审使用同一套材料，收件员只接收已由各单位确认的图面、点位清单和待决事项表。材料截止时点的算法是：从评审会的当地日历日期向前减去三个自然日，所得日期的17:00（北京时间）即为截止时点。星期六、星期日和节假日都计入这三个自然日，不按工作日换算，也不因收件员轮休而顺延。会议当天不计入提前的三个日期。过期材料会进入补充附件区，记录员在会前整理索引时须标明版本，不能直接覆盖已经汇总的材料。\\\"}, {\\\"input_id\\\": \\\"S04\\\", \\\"text\\\": \\\"园区为临时来访车辆设置了西侧露天访客停车区。司机入场时在岗亭领取带序号的停车券，离场前交回岗亭核销；摩托车与自行车使用同一入口右侧的非机动车栏，不占汽车泊位。车内不得留置大件样板，卸下物品后应及时将车辆停入划线区域。停车券遗失时由车辆登记人到门岗补登记，工作人员核对车牌后办理离场。雨天可在连廊临时整理随身物品，但不得把消防通道当作长期等候区。\\\"}]}\",\"questions\":[{\"question_id\":\"Q1\",\"text\":\"岚汀河岸步道导视改版项目的现场评审会具体在哪个场所、哪一层、哪个房间举行？\"},{\"question_id\":\"Q2\",\"text\":\"按照材料收件规则，岚汀河岸步道导视改版项目本次评审材料的截止日期和时间是什么？请给出北京时间的完整日期与时刻。\"},{\"question_id\":\"Q3\",\"text\":\"岚汀河岸步道导视改版项目本次核定的第一阶段含税支出上限是多少元？\"}]}",
+      "user_message_sha256": "5b75c79a90057c1a9a45f2a9b338099343f2d9e7e19180278aff81f7e3043338",
+      "view": "unchanged"
+    },
+    {
+      "actual_options_sha256": "9ea51d90830fe0bd4b4524de1eae75e3b27bd8044454d2f3385fbb5a31df8f49",
+      "archive_sdk_receipt_sha256": "1bae02a3cdc6d94fc8f61a0bcc6918ccfeeb07615b85d69e8a2c9c0fe4c16053",
+      "artifact": null,
+      "job_id": "90056d2713a85edd-target-B2-revoke_critical",
+      "kind": "formal",
+      "message_metadata": [
+        {
+          "id": "38b2d2c9-04db-4c0b-8881-a3e761abd0fb",
+          "role": "system",
+          "source": {
+            "kind": "system-prompt"
+          }
+        },
+        {
+          "id": "07eaaf6b-bb59-402e-928d-693d61249cd8",
+          "role": "user",
+          "source": {
+            "kind": "user"
+          }
+        }
+      ],
+      "method": "B2",
+      "output": "{\"Q1\":\"澄河社区服务中心三楼青榆室\",\"Q2\":\"2027年2月27日17:00（北京时间）\",\"Q3\":\"UNKNOWN\"}",
+      "output_sha256": "0877b12c2033b0d7db7126ef3d77c1abb51c513632f782c2a208ef84271169f1",
+      "process": {
+        "parent_terminated_after_sealed_receipt": true,
+        "returncode": 0
+      },
+      "provider_actual_model": null,
+      "provider_response_id": null,
+      "request_id": "0577c73a-439e-44ae-bc7c-52482f27f3a3",
+      "reservation": {
+        "input_token_bound": 6854,
+        "max_output_tokens": 4096,
+        "raw_invoice_cny": null,
+        "reserved_cny": "0.046476",
+        "role": "target"
+      },
+      "role": "target",
+      "sdk_provider_dispatch_count": 1,
+      "sdk_stream_attempts": 1,
+      "settings": {
+        "maxTokens": 4096,
+        "model": "deepseek-flash",
+        "provider": "deepseek-account",
+        "reasoningEffort": "off",
+        "tools": []
+      },
+      "settlement": {
+        "input_tokens": 615,
+        "invoice_cny": null,
+        "output_tokens": 36,
+        "peak_cost_upper_cny": "0.001518",
+        "provider_physical_requests": null,
+        "receipt_sha256": "1bae02a3cdc6d94fc8f61a0bcc6918ccfeeb07615b85d69e8a2c9c0fe4c16053",
+        "reserved_cny": "0.046476",
+        "status": "ok"
+      },
+      "source_cost_charged_once": false,
+      "source_reused_by_branch_ids": [],
+      "status": "ok",
+      "stop_reason": {
+        "kind": "stop"
+      },
+      "story_id": "meeting_wayfinding",
+      "system_fingerprint": null,
+      "system_template_id": "66c1c80b35f8f37222fa12609058952ddf23734868720bf130792d339e792771",
+      "usage": {
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "inputTokens": 615,
+        "outputTokens": 36,
+        "totalTokens": 651
+      },
+      "user_message": "{\"memory\":\"{\\\"facts\\\": [{\\\"input_id\\\": \\\"R\\\", \\\"text\\\": \\\"岚汀河岸步道导视改版项目的评审安排（来源：S02、S03、S04）：\\\\n\\\\n- **现场评审通知（S02）**：评审通知已发给设计、安装和社区联络三方。评审会定于2027年3月2日09:40（北京时间）在澄河社区服务中心三楼青榆室举行。参会者需先在一楼前台登记，然后走东侧楼梯；须携带当前版本的图面和点位清单，在门口核对签到表后入场。会议按沿线入口、分岔路口、无障碍提示的顺序讨论，每段讨论结束后由记录员读回修改项。未到场单位可委托一名代表发言，但图面版本仍须由本单位确认。\\\\n\\\\n- **材料接收与截止规则（S03）**：收件员只接收已由各单位确认的图面、点位清单和待决事项表。截止时点为：评审会当地日历日期向前减三个自然日，所得日期的17:00（北京时间）；周六、周日和节假日均计入，不按工作日换算，不因收件员轮休顺延；会议当天不计入。过期材料进入补充附件区，记录员会前整理索引时须标明版本，不得直接覆盖已汇总材料。\\\\n\\\\n- **访客停车（S04）**：园区西侧设露天访客停车区。司机入场时在岗亭领取带序号停车券，离场前交回岗亭核销；摩托车与自行车使用同一入口右侧非机动车栏，不占汽车泊位。车内不得留置大件样板，卸下物品后应及时停入划线区域。停车券遗失时，由车辆登记人到门岗补登记，工作人员核对车牌后办理离场。雨天可在连廊临时整理随身物品，但不得把消防通道当作长期等候区。\\\"}]}\",\"questions\":[{\"question_id\":\"Q1\",\"text\":\"岚汀河岸步道导视改版项目的现场评审会具体在哪个场所、哪一层、哪个房间举行？\"},{\"question_id\":\"Q2\",\"text\":\"按照材料收件规则，岚汀河岸步道导视改版项目本次评审材料的截止日期和时间是什么？请给出北京时间的完整日期与时刻。\"},{\"question_id\":\"Q3\",\"text\":\"岚汀河岸步道导视改版项目本次核定的第一阶段含税支出上限是多少元？\"}]}",
+      "user_message_sha256": "58e13d9f1613f3b2a6801d0c45464efea25c14cd672573d141ef71dc9c15bad5",
+      "view": "revoke_critical"
+    },
+    {
+      "actual_options_sha256": "63c30293ed556b47e1f181b6f68bc8fd3ab727bb454bbf49cee7c5f0b02883e5",
+      "archive_sdk_receipt_sha256": "9d272af24f029437e52647fb925cf761d8fb5c936e246da914692bd0dfa5c578",
+      "artifact": null,
+      "job_id": "90056d2713a85edd-target-B2-revoke_irrelevant",
+      "kind": "formal",
+      "message_metadata": [
+        {
+          "id": "f2b6b2a4-87f9-4803-b565-bd28f5b1fb35",
+          "role": "system",
+          "source": {
+            "kind": "system-prompt"
+          }
+        },
+        {
+          "id": "ed419ed7-526f-41cb-8e94-c5756a711eaa",
+          "role": "user",
+          "source": {
+            "kind": "user"
+          }
+        }
+      ],
+      "method": "B2",
+      "output": "{\"Q1\":\"澄河社区服务中心三楼青榆室\",\"Q2\":\"2027年2月27日17:00（北京时间）\",\"Q3\":\"27,600元\"}",
+      "output_sha256": "7a1d67f0d65b0346d2371946e6b55bb097b07d0ddd9de425acbd4c9f271625cf",
+      "process": {
+        "parent_terminated_after_sealed_receipt": false,
+        "returncode": 0
+      },
+      "provider_actual_model": null,
+      "provider_response_id": null,
+      "request_id": "f394aa65-a7eb-4a1b-9097-339a42034389",
+      "reservation": {
+        "input_token_bound": 6676,
+        "max_output_tokens": 4096,
+        "raw_invoice_cny": null,
+        "reserved_cny": "0.04612",
+        "role": "target"
+      },
+      "role": "target",
+      "sdk_provider_dispatch_count": 1,
+      "sdk_stream_attempts": 1,
+      "settings": {
+        "maxTokens": 4096,
+        "model": "deepseek-flash",
+        "provider": "deepseek-account",
+        "reasoningEffort": "off",
+        "tools": []
+      },
+      "settlement": {
+        "input_tokens": 560,
+        "invoice_cny": null,
+        "output_tokens": 38,
+        "peak_cost_upper_cny": "0.001424",
+        "provider_physical_requests": null,
+        "receipt_sha256": "9d272af24f029437e52647fb925cf761d8fb5c936e246da914692bd0dfa5c578",
+        "reserved_cny": "0.04612",
+        "status": "ok"
+      },
+      "source_cost_charged_once": false,
+      "source_reused_by_branch_ids": [],
+      "status": "ok",
+      "stop_reason": {
+        "kind": "stop"
+      },
+      "story_id": "meeting_wayfinding",
+      "system_fingerprint": null,
+      "system_template_id": "66c1c80b35f8f37222fa12609058952ddf23734868720bf130792d339e792771",
+      "usage": {
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "inputTokens": 560,
+        "outputTokens": 38,
+        "totalTokens": 598
+      },
+      "user_message": "{\"memory\":\"{\\\"facts\\\": [{\\\"input_id\\\": \\\"R\\\", \\\"text\\\": \\\"岚汀河岸步道导视改版项目：第一阶段含税支出上限27,600元，含版面设计、样板制作、现场安装三项，须归入同一项目台账（S01）。经费核定单已完成内部复核；经办人须保留供应方清单和验收凭证，未签收材料不能先行列作已完成支出；财务按最终验收数量结算，科目间调整不得突破总额；新增导视点位须另行提出增补申请，不能默认已获本阶段经费覆盖（S01）。\\\\n\\\\n现场评审会定于2027年3月2日09:40（北京时间）在澄河社区服务中心三楼青榆室举行；通知已发给设计、安装和社区联络三方（S02）。参会者从一楼前台登记后走东侧楼梯，携带当前版本图面和点位清单，在门口核对签到表入场；会议按沿线入口、分岔路口、无障碍提示顺序讨论，每段结束后由记录员读回修改项；未到场单位可委托一名代表发言，但图面版本仍须由本单位确认（S02）。\\\\n\\\\n收件员只接收已由各单位确认的图面、点位清单和待决事项表（S03）。材料截止时点为评审会当地日历日期向前减三个自然日所得日期的17:00（北京时间）；星期六、星期日和节假日均计入，不按工作日换算，不因收件员轮休顺延，会议当天不计入（S03）。过期材料进入补充附件区，记录员会前整理索引须标明版本，不能直接覆盖已汇总材料（S03）。\\\"}]}\",\"questions\":[{\"question_id\":\"Q1\",\"text\":\"岚汀河岸步道导视改版项目的现场评审会具体在哪个场所、哪一层、哪个房间举行？\"},{\"question_id\":\"Q2\",\"text\":\"按照材料收件规则，岚汀河岸步道导视改版项目本次评审材料的截止日期和时间是什么？请给出北京时间的完整日期与时刻。\"},{\"question_id\":\"Q3\",\"text\":\"岚汀河岸步道导视改版项目本次核定的第一阶段含税支出上限是多少元？\"}]}",
+      "user_message_sha256": "95945d1f48a078b0b0f2da27787202c1c50d1564b5c61921570421fc4cbbb53b",
+      "view": "revoke_irrelevant"
+    },
+    {
+      "actual_options_sha256": "11b9f18931cf21bc5ab846b786b48162bd89ba30353b773aeb496bc4e0ee8c2b",
+      "archive_sdk_receipt_sha256": "a377e57a7d1f5da505228b8a28c530f41288dbe3fd39436ac3a364fdb09cf327",
+      "artifact": null,
+      "job_id": "90056d2713a85edd-target-B2-unchanged",
+      "kind": "formal",
+      "message_metadata": [
+        {
+          "id": "d1e352ee-c18a-4ce9-b0e0-10e66709610e",
+          "role": "system",
+          "source": {
+            "kind": "system-prompt"
+          }
+        },
+        {
+          "id": "16237f3d-b339-4a5b-85a4-64d1cbb15a9d",
+          "role": "user",
+          "source": {
+            "kind": "user"
+          }
+        }
+      ],
+      "method": "B2",
+      "output": "{\"Q1\":\"澄河社区服务中心三楼青榆室\",\"Q2\":\"2027年2月27日17:00（北京时间）\",\"Q3\":\"27,600元\"}",
+      "output_sha256": "7a1d67f0d65b0346d2371946e6b55bb097b07d0ddd9de425acbd4c9f271625cf",
+      "process": {
+        "parent_terminated_after_sealed_receipt": false,
+        "returncode": 0
+      },
+      "provider_actual_model": null,
+      "provider_response_id": null,
+      "request_id": "e2259314-c944-4922-85a8-968fdf429dec",
+      "reservation": {
+        "input_token_bound": 7139,
+        "max_output_tokens": 4096,
+        "raw_invoice_cny": null,
+        "reserved_cny": "0.047046",
+        "role": "target"
+      },
+      "role": "target",
+      "sdk_provider_dispatch_count": 1,
+      "sdk_stream_attempts": 1,
+      "settings": {
+        "maxTokens": 4096,
+        "model": "deepseek-flash",
+        "provider": "deepseek-account",
+        "reasoningEffort": "off",
+        "tools": []
+      },
+      "settlement": {
+        "input_tokens": 660,
+        "invoice_cny": null,
+        "output_tokens": 38,
+        "peak_cost_upper_cny": "0.001624",
+        "provider_physical_requests": null,
+        "receipt_sha256": "a377e57a7d1f5da505228b8a28c530f41288dbe3fd39436ac3a364fdb09cf327",
+        "reserved_cny": "0.047046",
+        "status": "ok"
+      },
+      "source_cost_charged_once": false,
+      "source_reused_by_branch_ids": [],
+      "status": "ok",
+      "stop_reason": {
+        "kind": "stop"
+      },
+      "story_id": "meeting_wayfinding",
+      "system_fingerprint": null,
+      "system_template_id": "66c1c80b35f8f37222fa12609058952ddf23734868720bf130792d339e792771",
+      "usage": {
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "inputTokens": 660,
+        "outputTokens": 38,
+        "totalTokens": 698
+      },
+      "user_message": "{\"memory\":\"{\\\"facts\\\": [{\\\"input_id\\\": \\\"R\\\", \\\"text\\\": \\\"岚汀河岸步道导视改版项目的经费核定单已完成内部复核（S01）。第一阶段含税支出上限为27,600元，涵盖版面设计、样板制作与现场安装三项费用，报销须归入同一项目台账；经办人须保留供应方清单和验收凭证，未签收材料不得先行列作已完成支出；财务按最终验收数量结算，科目间调整不得突破总额，后续新增导视点位须另行提出增补申请，不能默认已获本阶段经费覆盖（S01）。\\\\n\\\\n现场评审通知已发给设计、安装和社区联络三方，评审会定于2027年3月2日09:40（北京时间）在澄河社区服务中心三楼青榆室举行（S02）。参会者从一楼前台登记后走东侧楼梯，携带当前版本图面和点位清单，在门口核对签到表入场；会议按沿线入口、分岔路口、无障碍提示的顺序讨论，每段讨论结束后由记录员读回修改项；未到场单位可委托一名代表发言，但图面版本仍须由本单位确认（S02）。\\\\n\\\\n收件员只接收已由各单位确认的图面、点位清单和待决事项表（S03）。材料截止时点为评审会当地日历日期向前减三个自然日所得日期的17:00（北京时间），周末和节假日计入、不顺延，会议当天不计入；过期材料进入补充附件区，记录员会前整理索引时须标明版本，不能直接覆盖已汇总材料（S03）。\\\\n\\\\n园区设西侧露天访客停车区，司机入场在岗亭领取带序号停车券，离场前交回核销；摩托车与自行车使用同一入口右侧非机动车栏，不占汽车泊位（S04）。车内不得留置大件样板，卸下物品后应及时停入划线区域；停车券遗失由车辆登记人到门岗补登记，工作人员核对车牌后办理离场；雨天可在连廊临时整理随身物品，但不得把消防通道当作长期等候区（S04）。\\\"}]}\",\"questions\":[{\"question_id\":\"Q1\",\"text\":\"岚汀河岸步道导视改版项目的现场评审会具体在哪个场所、哪一层、哪个房间举行？\"},{\"question_id\":\"Q2\",\"text\":\"按照材料收件规则，岚汀河岸步道导视改版项目本次评审材料的截止日期和时间是什么？请给出北京时间的完整日期与时刻。\"},{\"question_id\":\"Q3\",\"text\":\"岚汀河岸步道导视改版项目本次核定的第一阶段含税支出上限是多少元？\"}]}",
+      "user_message_sha256": "31456f1d931a6d20f897c6456211af7a298d83eef890faf95eb382d6d9a84ebd",
+      "view": "unchanged"
+    },
+    {
+      "actual_options_sha256": "ad0a7c6f3212fff1045b4e5f5dc4da249a53c48a4f1ba4e6dea420767d736afa",
+      "archive_sdk_receipt_sha256": "4ec65c57586b9f55800ecd99abcee9f34eeda31e186c1479c954ea77b5f85bbb",
+      "artifact": null,
+      "job_id": "90056d2713a85edd-target-B3-revoke_critical",
+      "kind": "formal",
+      "message_metadata": [
+        {
+          "id": "176d0456-88a4-4238-a456-42f0b1807ecd",
+          "role": "system",
+          "source": {
+            "kind": "system-prompt"
+          }
+        },
+        {
+          "id": "b83064ab-40a2-4750-b758-7d44fd3531d2",
+          "role": "user",
+          "source": {
+            "kind": "user"
+          }
+        }
+      ],
+      "method": "B3",
+      "output": "{\"Q1\":\"澄河社区服务中心三楼青榆室\",\"Q2\":\"2027年2月27日17:00（北京时间）\",\"Q3\":\"UNKNOWN\"}",
+      "output_sha256": "0877b12c2033b0d7db7126ef3d77c1abb51c513632f782c2a208ef84271169f1",
+      "process": {
+        "parent_terminated_after_sealed_receipt": false,
+        "returncode": 0
+      },
+      "provider_actual_model": null,
+      "provider_response_id": null,
+      "request_id": "8d5dd977-5366-4bc8-aa8b-f2b3065e0b47",
+      "reservation": {
+        "input_token_bound": 7055,
+        "max_output_tokens": 4096,
+        "raw_invoice_cny": null,
+        "reserved_cny": "0.046878",
+        "role": "target"
+      },
+      "role": "target",
+      "sdk_provider_dispatch_count": 1,
+      "sdk_stream_attempts": 1,
+      "settings": {
+        "maxTokens": 4096,
+        "model": "deepseek-flash",
+        "provider": "deepseek-account",
+        "reasoningEffort": "off",
+        "tools": []
+      },
+      "settlement": {
+        "input_tokens": 644,
+        "invoice_cny": null,
+        "output_tokens": 36,
+        "peak_cost_upper_cny": "0.001576",
+        "provider_physical_requests": null,
+        "receipt_sha256": "4ec65c57586b9f55800ecd99abcee9f34eeda31e186c1479c954ea77b5f85bbb",
+        "reserved_cny": "0.046878",
+        "status": "ok"
+      },
+      "source_cost_charged_once": false,
+      "source_reused_by_branch_ids": [],
+      "status": "ok",
+      "stop_reason": {
+        "kind": "stop"
+      },
+      "story_id": "meeting_wayfinding",
+      "system_fingerprint": null,
+      "system_template_id": "66c1c80b35f8f37222fa12609058952ddf23734868720bf130792d339e792771",
+      "usage": {
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "inputTokens": 644,
+        "outputTokens": 36,
+        "totalTokens": 680
+      },
+      "user_message": "{\"memory\":\"{\\\"facts\\\": [{\\\"input_id\\\": \\\"C_S02\\\", \\\"text\\\": \\\"岚汀河岸步道导视改版项目的现场评审通知已发给设计、安装和社区联络三方；评审会定于2027年3月2日09:40（北京时间）在澄河社区服务中心三楼青榆室举行。参会者须携带当前版本的图面和点位清单，从一楼前台登记后走东侧楼梯，在门口核对签到表入场。会议按沿线入口、分岔路口、无障碍提示的顺序讨论，每段讨论结束后由记录员读回修改项。未到场单位可委托一名代表发言，但图面版本仍须由本单位确认。（来源：S02）\\\"}, {\\\"input_id\\\": \\\"C_S03\\\", \\\"text\\\": \\\"据 S03：为保证项目评审使用同一套材料，收件员只接收已由各单位确认的图面、点位清单和待决事项表。材料截止时点按以下方法计算：从评审会当地日历日期向前减去三个自然日，所得日期的17:00（北京时间）即为截止时点。星期六、星期日和节假日都计入这三个自然日，不按工作日换算，也不因收件员轮休而顺延；会议当天不计入提前的三个日期。过期材料会进入补充附件区，记录员在会前整理索引时须标明版本，不能直接覆盖已经汇总的材料。\\\"}, {\\\"input_id\\\": \\\"C_S04\\\", \\\"text\\\": \\\"园区为临时来访车辆设置了西侧露天访客停车区（S04）。司机入场时应在岗亭领取带序号的停车券，离场前交回岗亭核销；摩托车与自行车使用同一入口右侧的非机动车栏，不占汽车泊位（S04）。车内不得留置大件样板，卸下物品后应及时将车辆停入划线区域（S04）。停车券遗失时，由车辆登记人到门岗补登记，工作人员核对车牌后办理离场（S04）。雨天可在连廊临时整理随身物品，但不得把消防通道当作长期等候区（S04）。\\\"}]}\",\"questions\":[{\"question_id\":\"Q1\",\"text\":\"岚汀河岸步道导视改版项目的现场评审会具体在哪个场所、哪一层、哪个房间举行？\"},{\"question_id\":\"Q2\",\"text\":\"按照材料收件规则，岚汀河岸步道导视改版项目本次评审材料的截止日期和时间是什么？请给出北京时间的完整日期与时刻。\"},{\"question_id\":\"Q3\",\"text\":\"岚汀河岸步道导视改版项目本次核定的第一阶段含税支出上限是多少元？\"}]}",
+      "user_message_sha256": "e44a34905681e72aab5e9c52d29232e098783ccc0449bd80317d5a1a6063a384",
+      "view": "revoke_critical"
+    },
+    {
+      "actual_options_sha256": "22dd55208765d1d36ee142ff6adee592d2258def86bf6ef781c9f57a4f11f4a1",
+      "archive_sdk_receipt_sha256": "52e63a451e089314eeb9725222893aae7dff011f912048016f4c0d0fb14f6071",
+      "artifact": null,
+      "job_id": "90056d2713a85edd-target-B3-revoke_irrelevant",
+      "kind": "formal",
+      "message_metadata": [
+        {
+          "id": "664113a7-9265-4a6f-aa3a-ae919651f96d",
+          "role": "system",
+          "source": {
+            "kind": "system-prompt"
+          }
+        },
+        {
+          "id": "8787edec-6f9a-4595-85d1-6cf77985d661",
+          "role": "user",
+          "source": {
+            "kind": "user"
+          }
+        }
+      ],
+      "method": "B3",
+      "output": "{\"Q1\":\"澄河社区服务中心三楼青榆室（参会者从一楼前台登记后走东侧楼梯入场）\",\"Q2\":\"2027年2月27日17:00（北京时间）\",\"Q3\":\"27,600元\"}",
+      "output_sha256": "ce9bfc26bf270d27d2b3bf9c047fee136f35bf7ad9ac81002112f331e24af374",
+      "process": {
+        "parent_terminated_after_sealed_receipt": false,
+        "returncode": 0
+      },
+      "provider_actual_model": null,
+      "provider_response_id": null,
+      "request_id": "35467bd2-7bd6-4828-964d-4cf511a53997",
+      "reservation": {
+        "input_token_bound": 7049,
+        "max_output_tokens": 4096,
+        "raw_invoice_cny": null,
+        "reserved_cny": "0.046866",
+        "role": "target"
+      },
+      "role": "target",
+      "sdk_provider_dispatch_count": 1,
+      "sdk_stream_attempts": 1,
+      "settings": {
+        "maxTokens": 4096,
+        "model": "deepseek-flash",
+        "provider": "deepseek-account",
+        "reasoningEffort": "off",
+        "tools": []
+      },
+      "settlement": {
+        "input_tokens": 640,
+        "invoice_cny": null,
+        "output_tokens": 52,
+        "peak_cost_upper_cny": "0.001696",
+        "provider_physical_requests": null,
+        "receipt_sha256": "52e63a451e089314eeb9725222893aae7dff011f912048016f4c0d0fb14f6071",
+        "reserved_cny": "0.046866",
+        "status": "ok"
+      },
+      "source_cost_charged_once": false,
+      "source_reused_by_branch_ids": [],
+      "status": "ok",
+      "stop_reason": {
+        "kind": "stop"
+      },
+      "story_id": "meeting_wayfinding",
+      "system_fingerprint": null,
+      "system_template_id": "66c1c80b35f8f37222fa12609058952ddf23734868720bf130792d339e792771",
+      "usage": {
+        "cacheReadTokens": 384,
+        "cacheWriteTokens": 0,
+        "inputTokens": 256,
+        "outputTokens": 52,
+        "totalTokens": 692
+      },
+      "user_message": "{\"memory\":\"{\\\"facts\\\": [{\\\"input_id\\\": \\\"C_S01\\\", \\\"text\\\": \\\"岚汀河岸步道导视改版项目的经费核定单已完成内部复核（S01）。核定第一阶段含税支出上限为27,600元，涵盖版面设计、样板制作与现场安装三项费用，报销时须归入同一项目台账（S01）。经办人须保留供应方清单和验收凭证，不得将未签收的材料先行列作已完成支出（S01）。财务按最终验收数量结算，科目间调整不得突破总额；后续如新增导视点位，应另行提出增补申请，不能默认新增任务已获本阶段经费覆盖（S01）。\\\"}, {\\\"input_id\\\": \\\"C_S02\\\", \\\"text\\\": \\\"岚汀河岸步道导视改版项目的现场评审通知已发给设计、安装和社区联络三方；评审会定于2027年3月2日09:40（北京时间）在澄河社区服务中心三楼青榆室举行。参会者须携带当前版本的图面和点位清单，从一楼前台登记后走东侧楼梯，在门口核对签到表入场。会议按沿线入口、分岔路口、无障碍提示的顺序讨论，每段讨论结束后由记录员读回修改项。未到场单位可委托一名代表发言，但图面版本仍须由本单位确认。（来源：S02）\\\"}, {\\\"input_id\\\": \\\"C_S03\\\", \\\"text\\\": \\\"据 S03：为保证项目评审使用同一套材料，收件员只接收已由各单位确认的图面、点位清单和待决事项表。材料截止时点按以下方法计算：从评审会当地日历日期向前减去三个自然日，所得日期的17:00（北京时间）即为截止时点。星期六、星期日和节假日都计入这三个自然日，不按工作日换算，也不因收件员轮休而顺延；会议当天不计入提前的三个日期。过期材料会进入补充附件区，记录员在会前整理索引时须标明版本，不能直接覆盖已经汇总的材料。\\\"}]}\",\"questions\":[{\"question_id\":\"Q1\",\"text\":\"岚汀河岸步道导视改版项目的现场评审会具体在哪个场所、哪一层、哪个房间举行？\"},{\"question_id\":\"Q2\",\"text\":\"按照材料收件规则，岚汀河岸步道导视改版项目本次评审材料的截止日期和时间是什么？请给出北京时间的完整日期与时刻。\"},{\"question_id\":\"Q3\",\"text\":\"岚汀河岸步道导视改版项目本次核定的第一阶段含税支出上限是多少元？\"}]}",
+      "user_message_sha256": "12179f8f7641eba68a6a473c9385cd3cff9863343209a865ac73ccd8f36ba929",
+      "view": "revoke_irrelevant"
+    }
+  ]
+}

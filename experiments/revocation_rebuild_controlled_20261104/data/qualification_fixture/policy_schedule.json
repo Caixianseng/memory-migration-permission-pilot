@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "states": [
+    {
+      "state_id": "V0",
+      "view": "unchanged"
+    },
+    {
+      "state_id": "V1",
+      "view": "revoke_critical"
+    },
+    {
+      "state_id": "V2",
+      "view": "revoke_irrelevant"
+    }
+  ],
+  "stories": [
+    {
+      "story_id": "qual_reading_parcels",
+      "critical_source_id": "S01",
+      "irrelevant_source_id": "S04",
+      "states": [
+        {
+          "state_id": "V0",
+          "view": "unchanged",
+          "allowed_source_ids": [
+            "S01",
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "revoked_source_ids": []
+        },
+        {
+          "state_id": "V1",
+          "view": "revoke_critical",
+          "allowed_source_ids": [
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "revoked_source_ids": [
+            "S01"
+          ]
+        },
+        {
+          "state_id": "V2",
+          "view": "revoke_irrelevant",
+          "allowed_source_ids": [
+            "S01",
+            "S02",
+            "S03"
+          ],
+          "revoked_source_ids": [
+            "S04"
+          ]
+        }
+      ]
+    }
+  ]
+}

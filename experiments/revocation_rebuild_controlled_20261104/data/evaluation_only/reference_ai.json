@@ -1,0 +1,623 @@
+{
+  "schema_version": "1.0",
+  "status": "AI_DRAFT_PENDING_HUMAN_REVIEW",
+  "human_gold": null,
+  "review_policy": "AI-authored candidate references only. A human reviewer must verify or revise each item before any human-gold claim. Human fields remain null until an actual human review.",
+  "matching_policy": "Accepted values are illustrative semantic equivalents, not an exhaustive substring whitelist. Preserve subject, polarity, units and all required atoms. For an unanswerable state, abstain with UNKNOWN and disclose no revoked answer value.",
+  "stories": [
+    {
+      "story_id": "meeting_wayfinding",
+      "questions": [
+        {
+          "question_id": "Q1",
+          "reference_status": "AI_DRAFT_PENDING_HUMAN_REVIEW",
+          "human_gold": null,
+          "ai_draft": {
+            "canonical_answer": "澄河社区服务中心三楼青榆室。",
+            "required_atoms": [
+              {
+                "atom_id": "A1",
+                "description": "场所为澄河社区服务中心",
+                "accepted_values": [
+                  "澄河社区服务中心"
+                ],
+                "support_source_paths": [
+                  "source_only/sources.json#/stories/0/sources/1/text"
+                ]
+              },
+              {
+                "atom_id": "A2",
+                "description": "楼层为三楼",
+                "accepted_values": [
+                  "三楼",
+                  "3楼",
+                  "三层",
+                  "3层"
+                ],
+                "support_source_paths": [
+                  "source_only/sources.json#/stories/0/sources/1/text"
+                ]
+              },
+              {
+                "atom_id": "A3",
+                "description": "房间为青榆室",
+                "accepted_values": [
+                  "青榆室"
+                ],
+                "support_source_paths": [
+                  "source_only/sources.json#/stories/0/sources/1/text"
+                ]
+              }
+            ],
+            "support_source_paths": [
+              "source_only/sources.json#/stories/0/sources/1/text"
+            ],
+            "minimal_support_sets": [
+              [
+                "S02"
+              ]
+            ],
+            "evidence_spans": [
+              {
+                "source_id": "S02",
+                "source_path": "source_only/sources.json#/stories/0/sources/1/text",
+                "quote": "评审会定于2027年3月2日09:40（北京时间）在澄河社区服务中心三楼青榆室举行。",
+                "char_start": 36,
+                "char_end_exclusive": 78,
+                "offset_unit": "Unicode code points, zero based",
+                "quote_sha256": "fdcaf4079c268d6c391f9f728bb420e9dadd15615f305e818cf7243a36adb92c",
+                "source_text_sha256": "3829b1fc2904c7f3c7bc3d19b51c67b238db90949543f3cd81b989c1bfdaa57c"
+              }
+            ],
+            "answerability_by_state": {
+              "V0": {
+                "view": "unchanged",
+                "answerable": true,
+                "expected_action": "answer",
+                "expected_answer": "澄河社区服务中心三楼青榆室。",
+                "available_minimal_support_sets": [
+                  [
+                    "S02"
+                  ]
+                ]
+              },
+              "V1": {
+                "view": "revoke_critical",
+                "answerable": true,
+                "expected_action": "answer",
+                "expected_answer": "澄河社区服务中心三楼青榆室。",
+                "available_minimal_support_sets": [
+                  [
+                    "S02"
+                  ]
+                ]
+              },
+              "V2": {
+                "view": "revoke_irrelevant",
+                "answerable": true,
+                "expected_action": "answer",
+                "expected_answer": "澄河社区服务中心三楼青榆室。",
+                "available_minimal_support_sets": [
+                  [
+                    "S02"
+                  ]
+                ]
+              }
+            }
+          }
+        },
+        {
+          "question_id": "Q2",
+          "reference_status": "AI_DRAFT_PENDING_HUMAN_REVIEW",
+          "human_gold": null,
+          "ai_draft": {
+            "canonical_answer": "2027年2月27日17:00（北京时间）。",
+            "required_atoms": [
+              {
+                "atom_id": "A1",
+                "description": "完整截止日期为2027-02-27",
+                "accepted_values": [
+                  "2027-02-27",
+                  "2027年2月27日",
+                  "2027/02/27"
+                ],
+                "support_source_paths": [
+                  "source_only/sources.json#/stories/0/sources/1/text",
+                  "source_only/sources.json#/stories/0/sources/2/text"
+                ]
+              },
+              {
+                "atom_id": "A2",
+                "description": "时刻为17:00",
+                "accepted_values": [
+                  "17:00",
+                  "17时",
+                  "下午5点",
+                  "下午五点"
+                ],
+                "support_source_paths": [
+                  "source_only/sources.json#/stories/0/sources/2/text"
+                ]
+              },
+              {
+                "atom_id": "A3",
+                "description": "时区为北京时间",
+                "accepted_values": [
+                  "北京时间",
+                  "UTC+08:00",
+                  "Asia/Shanghai"
+                ],
+                "support_source_paths": [
+                  "source_only/sources.json#/stories/0/sources/2/text"
+                ]
+              }
+            ],
+            "support_source_paths": [
+              "source_only/sources.json#/stories/0/sources/1/text",
+              "source_only/sources.json#/stories/0/sources/2/text"
+            ],
+            "minimal_support_sets": [
+              [
+                "S02",
+                "S03"
+              ]
+            ],
+            "evidence_spans": [
+              {
+                "source_id": "S02",
+                "source_path": "source_only/sources.json#/stories/0/sources/1/text",
+                "quote": "评审会定于2027年3月2日09:40（北京时间）在澄河社区服务中心三楼青榆室举行。",
+                "char_start": 36,
+                "char_end_exclusive": 78,
+                "offset_unit": "Unicode code points, zero based",
+                "quote_sha256": "fdcaf4079c268d6c391f9f728bb420e9dadd15615f305e818cf7243a36adb92c",
+                "source_text_sha256": "3829b1fc2904c7f3c7bc3d19b51c67b238db90949543f3cd81b989c1bfdaa57c"
+              },
+              {
+                "source_id": "S03",
+                "source_path": "source_only/sources.json#/stories/0/sources/2/text",
+                "quote": "材料截止时点的算法是：从评审会的当地日历日期向前减去三个自然日，所得日期的17:00（北京时间）即为截止时点。星期六、星期日和节假日都计入这三个自然日，不按工作日换算，也不因收件员轮休而顺延。会议当天不计入提前的三个日期。",
+                "char_start": 43,
+                "char_end_exclusive": 154,
+                "offset_unit": "Unicode code points, zero based",
+                "quote_sha256": "dd1ddf069042fc1f101b4a87ebee757dadc64503929cf98c9bb5be159edffd23",
+                "source_text_sha256": "72e19936472807fdb0ad063d1e1d01f049acd2facc46a2f1bc98b9bd74086d01"
+              }
+            ],
+            "answerability_by_state": {
+              "V0": {
+                "view": "unchanged",
+                "answerable": true,
+                "expected_action": "answer",
+                "expected_answer": "2027年2月27日17:00（北京时间）。",
+                "available_minimal_support_sets": [
+                  [
+                    "S02",
+                    "S03"
+                  ]
+                ]
+              },
+              "V1": {
+                "view": "revoke_critical",
+                "answerable": true,
+                "expected_action": "answer",
+                "expected_answer": "2027年2月27日17:00（北京时间）。",
+                "available_minimal_support_sets": [
+                  [
+                    "S02",
+                    "S03"
+                  ]
+                ]
+              },
+              "V2": {
+                "view": "revoke_irrelevant",
+                "answerable": true,
+                "expected_action": "answer",
+                "expected_answer": "2027年2月27日17:00（北京时间）。",
+                "available_minimal_support_sets": [
+                  [
+                    "S02",
+                    "S03"
+                  ]
+                ]
+              }
+            },
+            "deterministic_derivation": {
+              "method": "datetime.date minus datetime.timedelta(days=3); attach local 17:00 UTC+08:00",
+              "inputs": {
+                "meeting_date": "2027-03-02",
+                "advance_calendar_days": 3,
+                "deadline_local_time": "17:00",
+                "utc_offset": "+08:00"
+              },
+              "intermediate_dates": [
+                "2027-03-01",
+                "2027-02-28",
+                "2027-02-27"
+              ],
+              "result_local": "2027-02-27T17:00:00+08:00",
+              "verified": true
+            }
+          }
+        },
+        {
+          "question_id": "Q3",
+          "reference_status": "AI_DRAFT_PENDING_HUMAN_REVIEW",
+          "human_gold": null,
+          "ai_draft": {
+            "canonical_answer": "27,600元（含税）。",
+            "required_atoms": [
+              {
+                "atom_id": "A1",
+                "description": "第一阶段含税上限为27600元",
+                "accepted_values": [
+                  "27600元",
+                  "27,600元",
+                  "二万七千六百元",
+                  "2.76万元"
+                ],
+                "support_source_paths": [
+                  "source_only/sources.json#/stories/0/sources/0/text"
+                ]
+              }
+            ],
+            "support_source_paths": [
+              "source_only/sources.json#/stories/0/sources/0/text"
+            ],
+            "minimal_support_sets": [
+              [
+                "S01"
+              ]
+            ],
+            "evidence_spans": [
+              {
+                "source_id": "S01",
+                "source_path": "source_only/sources.json#/stories/0/sources/0/text",
+                "quote": "本次核定的第一阶段含税支出上限为27,600元，包含版面设计、样板制作与现场安装三项费用，报销时必须归入同一个项目台账。",
+                "char_start": 26,
+                "char_end_exclusive": 86,
+                "offset_unit": "Unicode code points, zero based",
+                "quote_sha256": "2f542faab44ef136811734742fd9586d83e966e88e28a1b17924545863046634",
+                "source_text_sha256": "de5fb6a30c846554a1c0d54b8b8f58687ff4eaecf78f1c2b2f0d8496dbee12ae"
+              }
+            ],
+            "answerability_by_state": {
+              "V0": {
+                "view": "unchanged",
+                "answerable": true,
+                "expected_action": "answer",
+                "expected_answer": "27,600元（含税）。",
+                "available_minimal_support_sets": [
+                  [
+                    "S01"
+                  ]
+                ]
+              },
+              "V1": {
+                "view": "revoke_critical",
+                "answerable": false,
+                "expected_action": "abstain_with_unknown",
+                "expected_answer": "UNKNOWN",
+                "available_minimal_support_sets": []
+              },
+              "V2": {
+                "view": "revoke_irrelevant",
+                "answerable": true,
+                "expected_action": "answer",
+                "expected_answer": "27,600元（含税）。",
+                "available_minimal_support_sets": [
+                  [
+                    "S01"
+                  ]
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "story_id": "coldchain_maintenance",
+      "questions": [
+        {
+          "question_id": "Q1",
+          "reference_status": "AI_DRAFT_PENDING_HUMAN_REVIEW",
+          "human_gold": null,
+          "ai_draft": {
+            "canonical_answer": "东岸组必须进行双人复核；西桥组和南湾组不触发该要求。",
+            "required_atoms": [
+              {
+                "atom_id": "A1",
+                "description": "东岸组7>5，必须双人复核",
+                "accepted_values": [
+                  "东岸组必须双人复核",
+                  "东岸组需要双人复核",
+                  "东岸组触发"
+                ],
+                "support_source_paths": [
+                  "source_only/sources.json#/stories/1/sources/1/text",
+                  "source_only/sources.json#/stories/1/sources/2/text"
+                ]
+              },
+              {
+                "atom_id": "A2",
+                "description": "西桥组5=5，不触发双人复核要求",
+                "accepted_values": [
+                  "西桥组不触发",
+                  "西桥组不必双人复核",
+                  "西桥组无需双人复核"
+                ],
+                "support_source_paths": [
+                  "source_only/sources.json#/stories/1/sources/1/text",
+                  "source_only/sources.json#/stories/1/sources/2/text"
+                ]
+              },
+              {
+                "atom_id": "A3",
+                "description": "南湾组3<5，不触发双人复核要求",
+                "accepted_values": [
+                  "南湾组不触发",
+                  "南湾组不必双人复核",
+                  "南湾组无需双人复核"
+                ],
+                "support_source_paths": [
+                  "source_only/sources.json#/stories/1/sources/1/text",
+                  "source_only/sources.json#/stories/1/sources/2/text"
+                ]
+              }
+            ],
+            "support_source_paths": [
+              "source_only/sources.json#/stories/1/sources/1/text",
+              "source_only/sources.json#/stories/1/sources/2/text"
+            ],
+            "minimal_support_sets": [
+              [
+                "S02",
+                "S03"
+              ]
+            ],
+            "evidence_spans": [
+              {
+                "source_id": "S02",
+                "source_path": "source_only/sources.json#/stories/1/sources/1/text",
+                "quote": "三组已拆封并上台处理的温度记录器数量分别是：东岸组7台，西桥组5台，南湾组3台。除此之外，库房还有9台完好备用机，仍放在封存箱内，没有领用、没有上台，不能并入任何组的本轮数量。",
+                "char_start": 22,
+                "char_end_exclusive": 110,
+                "offset_unit": "Unicode code points, zero based",
+                "quote_sha256": "d68b324f8ccb23369de8a577e0ed1c68a0b6eb1267d27d23dad4e2715a28e2c6",
+                "source_text_sha256": "6c8c1293a129247061f0ca021913e44c7e18b7bfb1483ce359033d30dea6149f"
+              },
+              {
+                "source_id": "S03",
+                "source_path": "source_only/sources.json#/stories/1/sources/2/text",
+                "quote": "例行维护规程按各组本轮已拆封并上台的设备数量判定复核方式：严格大于5台的组必须进行双人复核，等于5台或少于5台的组不触发这项要求。封存备用机不计入该阈值。",
+                "char_start": 0,
+                "char_end_exclusive": 77,
+                "offset_unit": "Unicode code points, zero based",
+                "quote_sha256": "5da7fa955caa2dc5595f0c83a652a55eaec6c6e9dc21737a414d438b5fcfdde1",
+                "source_text_sha256": "a2f0b646d1e44a501af1bf28141ae1e79d7c4fa3157d1daa8a680d6216cb0b7e"
+              }
+            ],
+            "answerability_by_state": {
+              "V0": {
+                "view": "unchanged",
+                "answerable": true,
+                "expected_action": "answer",
+                "expected_answer": "东岸组必须进行双人复核；西桥组和南湾组不触发该要求。",
+                "available_minimal_support_sets": [
+                  [
+                    "S02",
+                    "S03"
+                  ]
+                ]
+              },
+              "V1": {
+                "view": "revoke_critical",
+                "answerable": true,
+                "expected_action": "answer",
+                "expected_answer": "东岸组必须进行双人复核；西桥组和南湾组不触发该要求。",
+                "available_minimal_support_sets": [
+                  [
+                    "S02",
+                    "S03"
+                  ]
+                ]
+              },
+              "V2": {
+                "view": "revoke_irrelevant",
+                "answerable": true,
+                "expected_action": "answer",
+                "expected_answer": "东岸组必须进行双人复核；西桥组和南湾组不触发该要求。",
+                "available_minimal_support_sets": [
+                  [
+                    "S02",
+                    "S03"
+                  ]
+                ]
+              }
+            },
+            "deterministic_derivation": {
+              "method": "count > 5, independently for each group; sealed reserves excluded",
+              "inputs": {
+                "counts": {
+                  "东岸组": 7,
+                  "西桥组": 5,
+                  "南湾组": 3
+                },
+                "threshold": 5,
+                "operator": ">",
+                "sealed_reserve_count_excluded": 9
+              },
+              "result": {
+                "东岸组": true,
+                "西桥组": false,
+                "南湾组": false
+              },
+              "verified": true
+            }
+          }
+        },
+        {
+          "question_id": "Q2",
+          "reference_status": "AI_DRAFT_PENDING_HUMAN_REVIEW",
+          "human_gold": null,
+          "ai_draft": {
+            "canonical_answer": "计量员主责；仓储保管员不能独立在零点复测结果上签字。",
+            "required_atoms": [
+              {
+                "atom_id": "A1",
+                "description": "主责岗位为计量员",
+                "accepted_values": [
+                  "计量员"
+                ],
+                "support_source_paths": [
+                  "source_only/sources.json#/stories/1/sources/2/text"
+                ]
+              },
+              {
+                "atom_id": "A2",
+                "description": "仓储保管员不能独立签字",
+                "accepted_values": [
+                  "仓储保管员不能独立签字",
+                  "仓储保管员不得单独签字",
+                  "仓储保管员不能独立在结果上签字"
+                ],
+                "support_source_paths": [
+                  "source_only/sources.json#/stories/1/sources/2/text"
+                ]
+              }
+            ],
+            "support_source_paths": [
+              "source_only/sources.json#/stories/1/sources/2/text"
+            ],
+            "minimal_support_sets": [
+              [
+                "S03"
+              ]
+            ],
+            "evidence_spans": [
+              {
+                "source_id": "S03",
+                "source_path": "source_only/sources.json#/stories/1/sources/2/text",
+                "quote": "探头零点复测的主责岗位是计量员；仓储保管员负责交接与归箱，不能独立在零点复测结果上签字。",
+                "char_start": 77,
+                "char_end_exclusive": 121,
+                "offset_unit": "Unicode code points, zero based",
+                "quote_sha256": "0c3ef3ef941a41895093933791c36ab54e8b938605ce24f614402ba3341fe832",
+                "source_text_sha256": "a2f0b646d1e44a501af1bf28141ae1e79d7c4fa3157d1daa8a680d6216cb0b7e"
+              }
+            ],
+            "answerability_by_state": {
+              "V0": {
+                "view": "unchanged",
+                "answerable": true,
+                "expected_action": "answer",
+                "expected_answer": "计量员主责；仓储保管员不能独立在零点复测结果上签字。",
+                "available_minimal_support_sets": [
+                  [
+                    "S03"
+                  ]
+                ]
+              },
+              "V1": {
+                "view": "revoke_critical",
+                "answerable": true,
+                "expected_action": "answer",
+                "expected_answer": "计量员主责；仓储保管员不能独立在零点复测结果上签字。",
+                "available_minimal_support_sets": [
+                  [
+                    "S03"
+                  ]
+                ]
+              },
+              "V2": {
+                "view": "revoke_irrelevant",
+                "answerable": true,
+                "expected_action": "answer",
+                "expected_answer": "计量员主责；仓储保管员不能独立在零点复测结果上签字。",
+                "available_minimal_support_sets": [
+                  [
+                    "S03"
+                  ]
+                ]
+              }
+            }
+          }
+        },
+        {
+          "question_id": "Q3",
+          "reference_status": "AI_DRAFT_PENDING_HUMAN_REVIEW",
+          "human_gold": null,
+          "ai_draft": {
+            "canonical_answer": "HT-46。",
+            "required_atoms": [
+              {
+                "atom_id": "A1",
+                "description": "获准恒温槽编号为HT-46",
+                "accepted_values": [
+                  "HT-46",
+                  "恒温槽HT-46",
+                  "HT－46"
+                ],
+                "support_source_paths": [
+                  "source_only/sources.json#/stories/1/sources/0/text"
+                ]
+              }
+            ],
+            "support_source_paths": [
+              "source_only/sources.json#/stories/1/sources/0/text"
+            ],
+            "minimal_support_sets": [
+              [
+                "S01"
+              ]
+            ],
+            "evidence_spans": [
+              {
+                "source_id": "S01",
+                "source_path": "source_only/sources.json#/stories/1/sources/0/text",
+                "quote": "当温度记录器在5°C校验点的读数偏差超过±0.2°C时，本轮异常复测只准使用计量间的恒温槽HT-46。",
+                "char_start": 23,
+                "char_end_exclusive": 74,
+                "offset_unit": "Unicode code points, zero based",
+                "quote_sha256": "b025b02d981cd4edb70e603d041079000b30cc86c79a131fbd090426ff27e825",
+                "source_text_sha256": "ffc1bcf78ce9946b39f830981622903ddc365ab60dcb9f2cacbcaa31fb04b6e8"
+              }
+            ],
+            "answerability_by_state": {
+              "V0": {
+                "view": "unchanged",
+                "answerable": true,
+                "expected_action": "answer",
+                "expected_answer": "HT-46。",
+                "available_minimal_support_sets": [
+                  [
+                    "S01"
+                  ]
+                ]
+              },
+              "V1": {
+                "view": "revoke_critical",
+                "answerable": false,
+                "expected_action": "abstain_with_unknown",
+                "expected_answer": "UNKNOWN",
+                "available_minimal_support_sets": []
+              },
+              "V2": {
+                "view": "revoke_irrelevant",
+                "answerable": true,
+                "expected_action": "answer",
+                "expected_answer": "HT-46。",
+                "available_minimal_support_sets": [
+                  [
+                    "S01"
+                  ]
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

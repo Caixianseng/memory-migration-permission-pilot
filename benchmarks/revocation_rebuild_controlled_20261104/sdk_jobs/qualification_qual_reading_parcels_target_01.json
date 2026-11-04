@@ -1,0 +1,83 @@
+{
+  "jobs": [
+    {
+      "actual_options_sha256": "10c422a0365fa53be26fae2c612125438c4e23857ff210b0d14b8fd1b33c03d5",
+      "archive_sdk_receipt_sha256": "fce930b1ba390a3fdf75fd537f414815576dd92d148183b5003ec01709a25d7e",
+      "artifact": null,
+      "job_id": "qual-target",
+      "kind": "qualification",
+      "message_metadata": [
+        {
+          "id": "46ac970c-228a-4d7a-8b73-f05d3c226f43",
+          "role": "system",
+          "source": {
+            "kind": "system-prompt"
+          }
+        },
+        {
+          "id": "d2d7f835-a122-4e2b-8297-8f931f7cbec8",
+          "role": "user",
+          "source": {
+            "kind": "user"
+          }
+        }
+      ],
+      "method": null,
+      "output": "{\"Q1\":\"戚晴\",\"Q2\":\"书册和阅读记录卡\",\"Q3\":\"UNKNOWN\"}",
+      "output_sha256": "31d4b9637df26bc454226d15f5cb7e8357c298e7d8a539c5de1b3af8eb12cef3",
+      "process": {
+        "parent_terminated_after_sealed_receipt": false,
+        "returncode": 0
+      },
+      "provider_actual_model": null,
+      "provider_response_id": null,
+      "request_id": "57b670b6-c989-4b0a-bdf7-fcbc009954ff",
+      "reservation": {
+        "input_token_bound": 6465,
+        "max_output_tokens": 4096,
+        "raw_invoice_cny": null,
+        "reserved_cny": "0.045698",
+        "role": "target"
+      },
+      "role": "target",
+      "sdk_provider_dispatch_count": 1,
+      "sdk_stream_attempts": 1,
+      "settings": {
+        "maxTokens": 4096,
+        "model": "deepseek-flash",
+        "provider": "deepseek-account",
+        "reasoningEffort": "off",
+        "tools": []
+      },
+      "settlement": {
+        "input_tokens": 538,
+        "invoice_cny": null,
+        "output_tokens": 23,
+        "peak_cost_upper_cny": "0.00126",
+        "provider_physical_requests": null,
+        "receipt_sha256": "fce930b1ba390a3fdf75fd537f414815576dd92d148183b5003ec01709a25d7e",
+        "reserved_cny": "0.045698",
+        "status": "ok"
+      },
+      "source_cost_charged_once": false,
+      "source_reused_by_branch_ids": [],
+      "status": "ok",
+      "stop_reason": {
+        "kind": "stop"
+      },
+      "story_id": "qual_reading_parcels",
+      "system_fingerprint": null,
+      "system_template_id": "66c1c80b35f8f37222fa12609058952ddf23734868720bf130792d339e792771",
+      "usage": {
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "inputTokens": 538,
+        "outputTokens": 23,
+        "totalTokens": 561
+      },
+      "user_message": "{\"memory\":\"{\\\"facts\\\": [{\\\"input_id\\\": \\\"R\\\", \\\"text\\\": \\\"汐桥社区本批纸本阅读礼包的接收清单已完成核对（S02）。接收单位的签收联系人为戚晴，包裹面单联系人栏和交接回执均使用此姓名，不能改填负责录入清单的志愿者。寄出前由两名工作人员核对接收单位名称及邮编；地址缺字时先回查书面登记，不凭口头印象补写。面单存根按袋号整理，与交接回执装入同一档案袋，便于之后核对每袋实际到件情况（S02）。\\\\n\\\\n纸本阅读礼包逐包核对、逐包封箱装配。封箱前每包必须核对书册和阅读记录卡两类物品，齐全后再贴袋号；装箱纸条只是内部操作提示，不属于交付内容。书册页角受潮时，将该册放到待检查区并换入完好书册，不得把问题册封进礼包。阅读记录卡统一放在书册前侧，包好后轻晃纸箱检查松动，确认无遗漏再交给贴面单岗位（S03）。\\\\n\\\\n装配台封箱胶带统一放在右侧抽屉，拆封后的胶带卷先用完再领取新卷。空纸箱应平整叠放，外包装运输箭头保持朝上，台面边缘不堆放剪刀。当天装配结束后把胶带头折出一个小角，便于下一班找到起点；卷芯用尽后放入纸类回收篓。值日人员只登记胶带领用卷数，不把胶带剩余长度换算成礼包数量，也不在胶带外侧书写接收单位名称（S04）。\\\"}]}\",\"questions\":[{\"question_id\":\"Q1\",\"text\":\"汐桥社区本批纸本阅读礼包接收单位的签收联系人是谁？\"},{\"question_id\":\"Q2\",\"text\":\"本批纸本阅读礼包封箱前，每包必须核对哪两类交付物品？\"},{\"question_id\":\"Q3\",\"text\":\"汐桥社区本批纸本阅读礼包寄送费用的含税支出上限是多少元？\"}]}",
+      "user_message_sha256": "3cf242fd7310fd084fbfcaf3dd01d09bb5165665b0b350f162121af1b2b9c457",
+      "view": "revoke_critical"
+    }
+  ]
+}

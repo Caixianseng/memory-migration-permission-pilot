@@ -1,0 +1,1097 @@
+{
+  "schema": "public-host-delivery-projection-v1",
+  "stories": [
+    {
+      "branches": [
+        {
+          "branch_id": "B0/revoke_critical",
+          "method": "B0",
+          "old_artifact_checks": {
+            "M": "old_packet_and_new_export_denied_export_not_allowed"
+          },
+          "reason": "B0_old_memory_dependency_revoked",
+          "status": "blocked_no_target",
+          "target_callback_invocations": 0,
+          "view": "revoke_critical"
+        },
+        {
+          "branch_id": "B0/revoke_irrelevant",
+          "method": "B0",
+          "old_artifact_checks": {
+            "M": "old_packet_and_new_export_denied_export_not_allowed"
+          },
+          "reason": "B0_old_memory_dependency_revoked",
+          "status": "blocked_no_target",
+          "target_callback_invocations": 0,
+          "view": "revoke_irrelevant"
+        },
+        {
+          "artifact_ids": [
+            "M"
+          ],
+          "branch_id": "B0/unchanged",
+          "host_envelope": {
+            "artifact_ids": [
+              "M"
+            ],
+            "memory_hash": "8b60ef509ca6d5a584af8f23dba623969025eada8f6a7f63f5ac41ba639854e0",
+            "memory_sha256": "8b60ef509ca6d5a584af8f23dba623969025eada8f6a7f63f5ac41ba639854e0",
+            "output_hashes": {
+              "M": "5b937523fef322a5adab52e73396720abdd82cd26afc118f48c199acf1383131"
+            },
+            "policy_revision": 0,
+            "recipient": "B",
+            "source_ids": [
+              "S01",
+              "S02",
+              "S03",
+              "S04"
+            ]
+          },
+          "memory_hash": "8b60ef509ca6d5a584af8f23dba623969025eada8f6a7f63f5ac41ba639854e0",
+          "method": "B0",
+          "old_artifact_checks": {
+            "M": "old_packet_still_authorized"
+          },
+          "sdk_job_id": "90056d2713a85edd-target-B0-unchanged",
+          "source_ids": [
+            "S01",
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "status": "delivered",
+          "target_callback_invocations": 1,
+          "target_receipt_hash": "d50b4c6e2f82ecc57834f12d39b6dd4009e5abf0d5a0242c7b29b12a3b80539a",
+          "view": "unchanged"
+        },
+        {
+          "artifact_ids": [
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "branch_id": "B1/revoke_critical",
+          "host_envelope": {
+            "artifact_ids": [
+              "S02",
+              "S03",
+              "S04"
+            ],
+            "memory_hash": "ff444b84f8525b79b47440b7ab81135bc828ffa09f47c7b3c484730cba661591",
+            "memory_sha256": "ff444b84f8525b79b47440b7ab81135bc828ffa09f47c7b3c484730cba661591",
+            "output_hashes": {
+              "S02": "3829b1fc2904c7f3c7bc3d19b51c67b238db90949543f3cd81b989c1bfdaa57c",
+              "S03": "72e19936472807fdb0ad063d1e1d01f049acd2facc46a2f1bc98b9bd74086d01",
+              "S04": "e4d076ae3fe3e5a3ded39572ca770c841c1ea9aad0fddc40f018db609fd22341"
+            },
+            "policy_revision": 1,
+            "recipient": "B",
+            "source_ids": [
+              "S02",
+              "S03",
+              "S04"
+            ]
+          },
+          "memory_hash": "ff444b84f8525b79b47440b7ab81135bc828ffa09f47c7b3c484730cba661591",
+          "method": "B1",
+          "old_artifact_checks": {},
+          "sdk_job_id": "90056d2713a85edd-target-B1-revoke_critical",
+          "source_ids": [
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "status": "delivered",
+          "target_callback_invocations": 1,
+          "target_receipt_hash": "c71932cd6bd92222fece1a3df5d9132f8796cb7e20813d8cec529129d805f11a",
+          "view": "revoke_critical"
+        },
+        {
+          "artifact_ids": [
+            "S01",
+            "S02",
+            "S03"
+          ],
+          "branch_id": "B1/revoke_irrelevant",
+          "host_envelope": {
+            "artifact_ids": [
+              "S01",
+              "S02",
+              "S03"
+            ],
+            "memory_hash": "31e6f998ff55d725424a52a03fe133bf1c2317e95ed53daa95d4adbd2c948300",
+            "memory_sha256": "31e6f998ff55d725424a52a03fe133bf1c2317e95ed53daa95d4adbd2c948300",
+            "output_hashes": {
+              "S01": "de5fb6a30c846554a1c0d54b8b8f58687ff4eaecf78f1c2b2f0d8496dbee12ae",
+              "S02": "3829b1fc2904c7f3c7bc3d19b51c67b238db90949543f3cd81b989c1bfdaa57c",
+              "S03": "72e19936472807fdb0ad063d1e1d01f049acd2facc46a2f1bc98b9bd74086d01"
+            },
+            "policy_revision": 1,
+            "recipient": "B",
+            "source_ids": [
+              "S01",
+              "S02",
+              "S03"
+            ]
+          },
+          "memory_hash": "31e6f998ff55d725424a52a03fe133bf1c2317e95ed53daa95d4adbd2c948300",
+          "method": "B1",
+          "old_artifact_checks": {},
+          "sdk_job_id": "90056d2713a85edd-target-B1-revoke_irrelevant",
+          "source_ids": [
+            "S01",
+            "S02",
+            "S03"
+          ],
+          "status": "delivered",
+          "target_callback_invocations": 1,
+          "target_receipt_hash": "5730cac131afe7fb6c58e784b7a7668376b4833e1586d3aeee87d1a27dbfa11a",
+          "view": "revoke_irrelevant"
+        },
+        {
+          "artifact_ids": [
+            "S01",
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "branch_id": "B1/unchanged",
+          "host_envelope": {
+            "artifact_ids": [
+              "S01",
+              "S02",
+              "S03",
+              "S04"
+            ],
+            "memory_hash": "a51391673744a695d5fa279d1585287378d1feb8432d1c899600a55983d285e2",
+            "memory_sha256": "a51391673744a695d5fa279d1585287378d1feb8432d1c899600a55983d285e2",
+            "output_hashes": {
+              "S01": "de5fb6a30c846554a1c0d54b8b8f58687ff4eaecf78f1c2b2f0d8496dbee12ae",
+              "S02": "3829b1fc2904c7f3c7bc3d19b51c67b238db90949543f3cd81b989c1bfdaa57c",
+              "S03": "72e19936472807fdb0ad063d1e1d01f049acd2facc46a2f1bc98b9bd74086d01",
+              "S04": "e4d076ae3fe3e5a3ded39572ca770c841c1ea9aad0fddc40f018db609fd22341"
+            },
+            "policy_revision": 0,
+            "recipient": "B",
+            "source_ids": [
+              "S01",
+              "S02",
+              "S03",
+              "S04"
+            ]
+          },
+          "memory_hash": "a51391673744a695d5fa279d1585287378d1feb8432d1c899600a55983d285e2",
+          "method": "B1",
+          "old_artifact_checks": {},
+          "sdk_job_id": "90056d2713a85edd-target-B1-unchanged",
+          "source_ids": [
+            "S01",
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "status": "delivered",
+          "target_callback_invocations": 1,
+          "target_receipt_hash": "dd18fcee21c5c0fd23a0595dee3684068214db311b2d06d9cc085c9e3d20c784",
+          "view": "unchanged"
+        },
+        {
+          "artifact_ids": [
+            "R"
+          ],
+          "branch_id": "B2/revoke_critical",
+          "host_envelope": {
+            "artifact_ids": [
+              "R"
+            ],
+            "memory_hash": "7404ee9aca1c370f596cab04af3f3c38910eabc2176ad225bbe8267d5ba544cc",
+            "memory_sha256": "7404ee9aca1c370f596cab04af3f3c38910eabc2176ad225bbe8267d5ba544cc",
+            "output_hashes": {
+              "R": "2b723a1a0a6ffc65f38731a9b63c9039aa04c231ac70582b39bb1ab4d4aa581e"
+            },
+            "policy_revision": 1,
+            "recipient": "B",
+            "source_ids": [
+              "S02",
+              "S03",
+              "S04"
+            ]
+          },
+          "memory_hash": "7404ee9aca1c370f596cab04af3f3c38910eabc2176ad225bbe8267d5ba544cc",
+          "method": "B2",
+          "old_artifact_checks": {},
+          "sdk_job_id": "90056d2713a85edd-target-B2-revoke_critical",
+          "source_ids": [
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "status": "delivered",
+          "target_callback_invocations": 1,
+          "target_receipt_hash": "696412f7a28a48ec2560db57411224acc45183056aa0e5bc9f169afe5c5d54ee",
+          "view": "revoke_critical"
+        },
+        {
+          "artifact_ids": [
+            "R"
+          ],
+          "branch_id": "B2/revoke_irrelevant",
+          "host_envelope": {
+            "artifact_ids": [
+              "R"
+            ],
+            "memory_hash": "7e9ffdcc74b8bb6ec588f3ec8436c25ccea2b3ca860a0a22afcd9fd13953445b",
+            "memory_sha256": "7e9ffdcc74b8bb6ec588f3ec8436c25ccea2b3ca860a0a22afcd9fd13953445b",
+            "output_hashes": {
+              "R": "d690720fd75640f865898d4eeafea8d8be759bed29d7f96e4dc2585a23a248a5"
+            },
+            "policy_revision": 1,
+            "recipient": "B",
+            "source_ids": [
+              "S01",
+              "S02",
+              "S03"
+            ]
+          },
+          "memory_hash": "7e9ffdcc74b8bb6ec588f3ec8436c25ccea2b3ca860a0a22afcd9fd13953445b",
+          "method": "B2",
+          "old_artifact_checks": {},
+          "sdk_job_id": "90056d2713a85edd-target-B2-revoke_irrelevant",
+          "source_ids": [
+            "S01",
+            "S02",
+            "S03"
+          ],
+          "status": "delivered",
+          "target_callback_invocations": 1,
+          "target_receipt_hash": "64074ae79f50c3af1d6d1e41985bb1d281cb7ec7588720ef5743306249944c07",
+          "view": "revoke_irrelevant"
+        },
+        {
+          "artifact_ids": [
+            "R"
+          ],
+          "branch_id": "B2/unchanged",
+          "host_envelope": {
+            "artifact_ids": [
+              "R"
+            ],
+            "memory_hash": "3bab21357bc89080f63de75bd425221440a927e5747acc9c028d4f8286ab9641",
+            "memory_sha256": "3bab21357bc89080f63de75bd425221440a927e5747acc9c028d4f8286ab9641",
+            "output_hashes": {
+              "R": "e91d4184bc1adc9e932d97eaed70b49587ae75b0d6b2ade959dd7de7bc8f8124"
+            },
+            "policy_revision": 0,
+            "recipient": "B",
+            "source_ids": [
+              "S01",
+              "S02",
+              "S03",
+              "S04"
+            ]
+          },
+          "memory_hash": "3bab21357bc89080f63de75bd425221440a927e5747acc9c028d4f8286ab9641",
+          "method": "B2",
+          "old_artifact_checks": {},
+          "sdk_job_id": "90056d2713a85edd-target-B2-unchanged",
+          "source_ids": [
+            "S01",
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "status": "delivered",
+          "target_callback_invocations": 1,
+          "target_receipt_hash": "39cfad808aea9b22d1079b6ac712f3f685f81e6b8895a2db4ea0f9e048f5019c",
+          "view": "unchanged"
+        },
+        {
+          "artifact_ids": [
+            "C_S02",
+            "C_S03",
+            "C_S04"
+          ],
+          "branch_id": "B3/revoke_critical",
+          "host_envelope": {
+            "artifact_ids": [
+              "C_S02",
+              "C_S03",
+              "C_S04"
+            ],
+            "memory_hash": "903c1a6412424c1d4c556b81d05d10c05e8f0d8e97376e70bc94746766b782f1",
+            "memory_sha256": "903c1a6412424c1d4c556b81d05d10c05e8f0d8e97376e70bc94746766b782f1",
+            "output_hashes": {
+              "C_S02": "a644217efe4150d4332c09b7e2ee4b574ccbeef047bda9f040549a557eb6381e",
+              "C_S03": "e9142e650241997cd3d4bd15d19efa5fdd75703822f24d3e30f04ab6f0cc1dcd",
+              "C_S04": "8b3d9a332bc7b821be6a883112c517479ed8ec837700cce19b340d8bd4975c44"
+            },
+            "policy_revision": 1,
+            "recipient": "B",
+            "source_ids": [
+              "S02",
+              "S03",
+              "S04"
+            ]
+          },
+          "memory_hash": "903c1a6412424c1d4c556b81d05d10c05e8f0d8e97376e70bc94746766b782f1",
+          "method": "B3",
+          "old_artifact_checks": {
+            "C_S01": "old_packet_and_new_export_denied_export_not_allowed",
+            "C_S02": "old_packet_still_authorized",
+            "C_S03": "old_packet_still_authorized",
+            "C_S04": "old_packet_still_authorized"
+          },
+          "sdk_job_id": "90056d2713a85edd-target-B3-revoke_critical",
+          "source_ids": [
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "status": "delivered",
+          "target_callback_invocations": 1,
+          "target_receipt_hash": "992a574b647d8c805fcd35005f8ba372ce34e0f9cddc3c17e3c01e4fc65bee0c",
+          "view": "revoke_critical"
+        },
+        {
+          "artifact_ids": [
+            "C_S01",
+            "C_S02",
+            "C_S03"
+          ],
+          "branch_id": "B3/revoke_irrelevant",
+          "host_envelope": {
+            "artifact_ids": [
+              "C_S01",
+              "C_S02",
+              "C_S03"
+            ],
+            "memory_hash": "5cea6c4f19c6bcda778418976f28cf035f55c56d08db33291f613cd93dd07add",
+            "memory_sha256": "5cea6c4f19c6bcda778418976f28cf035f55c56d08db33291f613cd93dd07add",
+            "output_hashes": {
+              "C_S01": "1e40dbae3d72954c4e2a8db7725f0ab03d6aae19c22ef42e9216b2baddf9025b",
+              "C_S02": "a644217efe4150d4332c09b7e2ee4b574ccbeef047bda9f040549a557eb6381e",
+              "C_S03": "e9142e650241997cd3d4bd15d19efa5fdd75703822f24d3e30f04ab6f0cc1dcd"
+            },
+            "policy_revision": 1,
+            "recipient": "B",
+            "source_ids": [
+              "S01",
+              "S02",
+              "S03"
+            ]
+          },
+          "memory_hash": "5cea6c4f19c6bcda778418976f28cf035f55c56d08db33291f613cd93dd07add",
+          "method": "B3",
+          "old_artifact_checks": {
+            "C_S01": "old_packet_still_authorized",
+            "C_S02": "old_packet_still_authorized",
+            "C_S03": "old_packet_still_authorized",
+            "C_S04": "old_packet_and_new_export_denied_export_not_allowed"
+          },
+          "sdk_job_id": "90056d2713a85edd-target-B3-revoke_irrelevant",
+          "source_ids": [
+            "S01",
+            "S02",
+            "S03"
+          ],
+          "status": "delivered",
+          "target_callback_invocations": 1,
+          "target_receipt_hash": "06220bff3f6c25d384d6145e7c7107f44be398e68a8e815605a57e35eb4a4e8b",
+          "view": "revoke_irrelevant"
+        },
+        {
+          "artifact_ids": [
+            "C_S01",
+            "C_S02",
+            "C_S03",
+            "C_S04"
+          ],
+          "branch_id": "B3/unchanged",
+          "host_envelope": {
+            "artifact_ids": [
+              "C_S01",
+              "C_S02",
+              "C_S03",
+              "C_S04"
+            ],
+            "memory_hash": "92909cc72c9938e101ead8616d1c974b6fdd7b6a37ef4af19f0ba59fd750d312",
+            "memory_sha256": "92909cc72c9938e101ead8616d1c974b6fdd7b6a37ef4af19f0ba59fd750d312",
+            "output_hashes": {
+              "C_S01": "1e40dbae3d72954c4e2a8db7725f0ab03d6aae19c22ef42e9216b2baddf9025b",
+              "C_S02": "a644217efe4150d4332c09b7e2ee4b574ccbeef047bda9f040549a557eb6381e",
+              "C_S03": "e9142e650241997cd3d4bd15d19efa5fdd75703822f24d3e30f04ab6f0cc1dcd",
+              "C_S04": "8b3d9a332bc7b821be6a883112c517479ed8ec837700cce19b340d8bd4975c44"
+            },
+            "policy_revision": 0,
+            "recipient": "B",
+            "source_ids": [
+              "S01",
+              "S02",
+              "S03",
+              "S04"
+            ]
+          },
+          "memory_hash": "92909cc72c9938e101ead8616d1c974b6fdd7b6a37ef4af19f0ba59fd750d312",
+          "method": "B3",
+          "old_artifact_checks": {
+            "C_S01": "old_packet_still_authorized",
+            "C_S02": "old_packet_still_authorized",
+            "C_S03": "old_packet_still_authorized",
+            "C_S04": "old_packet_still_authorized"
+          },
+          "sdk_job_id": "90056d2713a85edd-target-B3-unchanged",
+          "source_ids": [
+            "S01",
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "status": "delivered",
+          "target_callback_invocations": 1,
+          "target_receipt_hash": "8e775e55d77adf29f3a8a14cefb0e95f026d34b5227b42ffb05bf5effa0c6839",
+          "view": "unchanged"
+        }
+      ],
+      "source_calls": [
+        {
+          "artifact": "M",
+          "branch_ids": [
+            "B0/unchanged",
+            "B0/revoke_critical",
+            "B0/revoke_irrelevant"
+          ],
+          "input_hash": "35ba5f71ad37bde08d8de1df4fd62f460a24a6742e2aa6b0cb82037f56dbedc6",
+          "output_hash": "5b937523fef322a5adab52e73396720abdd82cd26afc118f48c199acf1383131",
+          "status": "sealed",
+          "view": null
+        },
+        {
+          "artifact": "C_S01",
+          "branch_ids": [
+            "B3/unchanged",
+            "B3/revoke_critical",
+            "B3/revoke_irrelevant"
+          ],
+          "input_hash": "b07edf1a3c7c601ae559c2dafaa7934cf38dbc70547c3686c9a6c88633c3318f",
+          "output_hash": "1e40dbae3d72954c4e2a8db7725f0ab03d6aae19c22ef42e9216b2baddf9025b",
+          "status": "sealed",
+          "view": null
+        },
+        {
+          "artifact": "C_S02",
+          "branch_ids": [
+            "B3/unchanged",
+            "B3/revoke_critical",
+            "B3/revoke_irrelevant"
+          ],
+          "input_hash": "5494982d33fde3f51e18062886d8a6f150b37caef42c6f16b4669c06e60a4dac",
+          "output_hash": "a644217efe4150d4332c09b7e2ee4b574ccbeef047bda9f040549a557eb6381e",
+          "status": "sealed",
+          "view": null
+        },
+        {
+          "artifact": "C_S03",
+          "branch_ids": [
+            "B3/unchanged",
+            "B3/revoke_critical",
+            "B3/revoke_irrelevant"
+          ],
+          "input_hash": "884c4384cb894cc0b3f361d30d16333e0b7bd18a4e1f91e0819ac784ffeaf3a3",
+          "output_hash": "e9142e650241997cd3d4bd15d19efa5fdd75703822f24d3e30f04ab6f0cc1dcd",
+          "status": "sealed",
+          "view": null
+        },
+        {
+          "artifact": "C_S04",
+          "branch_ids": [
+            "B3/unchanged",
+            "B3/revoke_critical",
+            "B3/revoke_irrelevant"
+          ],
+          "input_hash": "51439c71ddaf04457a31778e93bcfe2dff7eb07a3a2c4c9742655107102ab5dd",
+          "output_hash": "8b3d9a332bc7b821be6a883112c517479ed8ec837700cce19b340d8bd4975c44",
+          "status": "sealed",
+          "view": null
+        },
+        {
+          "artifact": "R",
+          "branch_ids": [
+            "B2/unchanged"
+          ],
+          "input_hash": "4f6b65d431bb3ade01841cefb8a111038638ed9a7a75b6552b36188a52123b48",
+          "output_hash": "e91d4184bc1adc9e932d97eaed70b49587ae75b0d6b2ade959dd7de7bc8f8124",
+          "status": "sealed",
+          "view": "unchanged"
+        },
+        {
+          "artifact": "R",
+          "branch_ids": [
+            "B2/revoke_critical"
+          ],
+          "input_hash": "a1b931df383fdc7ce8a537e5ebf1bb612c71cd8a334169230dcfc3b2f1c10e35",
+          "output_hash": "2b723a1a0a6ffc65f38731a9b63c9039aa04c231ac70582b39bb1ab4d4aa581e",
+          "status": "sealed",
+          "view": "revoke_critical"
+        },
+        {
+          "artifact": "R",
+          "branch_ids": [
+            "B2/revoke_irrelevant"
+          ],
+          "input_hash": "cd7e7ea6119ab82ef942b618a57278693c1a54f4150437a01dc45dc677f8248e",
+          "output_hash": "d690720fd75640f865898d4eeafea8d8be759bed29d7f96e4dc2585a23a248a5",
+          "status": "sealed",
+          "view": "revoke_irrelevant"
+        }
+      ],
+      "story_id": "meeting_wayfinding"
+    },
+    {
+      "branches": [
+        {
+          "branch_id": "B0/revoke_critical",
+          "method": "B0",
+          "old_artifact_checks": {
+            "M": "old_packet_and_new_export_denied_export_not_allowed"
+          },
+          "reason": "B0_old_memory_dependency_revoked",
+          "status": "blocked_no_target",
+          "target_callback_invocations": 0,
+          "view": "revoke_critical"
+        },
+        {
+          "branch_id": "B0/revoke_irrelevant",
+          "method": "B0",
+          "old_artifact_checks": {
+            "M": "old_packet_and_new_export_denied_export_not_allowed"
+          },
+          "reason": "B0_old_memory_dependency_revoked",
+          "status": "blocked_no_target",
+          "target_callback_invocations": 0,
+          "view": "revoke_irrelevant"
+        },
+        {
+          "artifact_ids": [
+            "M"
+          ],
+          "branch_id": "B0/unchanged",
+          "host_envelope": {
+            "artifact_ids": [
+              "M"
+            ],
+            "memory_hash": "a3ad5a3cdeeebfb2c6c969df9deefec6554b3232cb0936f0f89a89432a38b071",
+            "memory_sha256": "a3ad5a3cdeeebfb2c6c969df9deefec6554b3232cb0936f0f89a89432a38b071",
+            "output_hashes": {
+              "M": "bcd85fa8ccad69bfb361cda067d7b77e9982d05efd51901ada1564804bbedd05"
+            },
+            "policy_revision": 0,
+            "recipient": "B",
+            "source_ids": [
+              "S01",
+              "S02",
+              "S03",
+              "S04"
+            ]
+          },
+          "memory_hash": "a3ad5a3cdeeebfb2c6c969df9deefec6554b3232cb0936f0f89a89432a38b071",
+          "method": "B0",
+          "old_artifact_checks": {
+            "M": "old_packet_still_authorized"
+          },
+          "sdk_job_id": "7354d9875991fe84-target-B0-unchanged",
+          "source_ids": [
+            "S01",
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "status": "delivered",
+          "target_callback_invocations": 1,
+          "target_receipt_hash": "4099b345c0108caf4646262f8239c2acc71da990d9de5199237fc48b22626620",
+          "view": "unchanged"
+        },
+        {
+          "artifact_ids": [
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "branch_id": "B1/revoke_critical",
+          "host_envelope": {
+            "artifact_ids": [
+              "S02",
+              "S03",
+              "S04"
+            ],
+            "memory_hash": "b2287a93d8345a34cb178801f1659cf9fa9a68d1ddd481f8d242cddac88c50fd",
+            "memory_sha256": "b2287a93d8345a34cb178801f1659cf9fa9a68d1ddd481f8d242cddac88c50fd",
+            "output_hashes": {
+              "S02": "6c8c1293a129247061f0ca021913e44c7e18b7bfb1483ce359033d30dea6149f",
+              "S03": "a2f0b646d1e44a501af1bf28141ae1e79d7c4fa3157d1daa8a680d6216cb0b7e",
+              "S04": "706dc254c8caa57cd82a4c1a349bde0425353bde195f92c25508fbb1f4db9584"
+            },
+            "policy_revision": 1,
+            "recipient": "B",
+            "source_ids": [
+              "S02",
+              "S03",
+              "S04"
+            ]
+          },
+          "memory_hash": "b2287a93d8345a34cb178801f1659cf9fa9a68d1ddd481f8d242cddac88c50fd",
+          "method": "B1",
+          "old_artifact_checks": {},
+          "sdk_job_id": "7354d9875991fe84-target-B1-revoke_critical",
+          "source_ids": [
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "status": "delivered",
+          "target_callback_invocations": 1,
+          "target_receipt_hash": "a4c84d22d3de0a67c1208a557991486b24e7492c87ff940449e88d8e2d3ca2f5",
+          "view": "revoke_critical"
+        },
+        {
+          "artifact_ids": [
+            "S01",
+            "S02",
+            "S03"
+          ],
+          "branch_id": "B1/revoke_irrelevant",
+          "host_envelope": {
+            "artifact_ids": [
+              "S01",
+              "S02",
+              "S03"
+            ],
+            "memory_hash": "c54ebd5b0e31a3281c5ef208cf51e5eb8d438556abbecb56032e657ef1615424",
+            "memory_sha256": "c54ebd5b0e31a3281c5ef208cf51e5eb8d438556abbecb56032e657ef1615424",
+            "output_hashes": {
+              "S01": "ffc1bcf78ce9946b39f830981622903ddc365ab60dcb9f2cacbcaa31fb04b6e8",
+              "S02": "6c8c1293a129247061f0ca021913e44c7e18b7bfb1483ce359033d30dea6149f",
+              "S03": "a2f0b646d1e44a501af1bf28141ae1e79d7c4fa3157d1daa8a680d6216cb0b7e"
+            },
+            "policy_revision": 1,
+            "recipient": "B",
+            "source_ids": [
+              "S01",
+              "S02",
+              "S03"
+            ]
+          },
+          "memory_hash": "c54ebd5b0e31a3281c5ef208cf51e5eb8d438556abbecb56032e657ef1615424",
+          "method": "B1",
+          "old_artifact_checks": {},
+          "sdk_job_id": "7354d9875991fe84-target-B1-revoke_irrelevant",
+          "source_ids": [
+            "S01",
+            "S02",
+            "S03"
+          ],
+          "status": "delivered",
+          "target_callback_invocations": 1,
+          "target_receipt_hash": "7160c9ea53fb520b9f068428f1180bbc0f46184cdfc1b5cec519a59946dd85c9",
+          "view": "revoke_irrelevant"
+        },
+        {
+          "artifact_ids": [
+            "S01",
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "branch_id": "B1/unchanged",
+          "host_envelope": {
+            "artifact_ids": [
+              "S01",
+              "S02",
+              "S03",
+              "S04"
+            ],
+            "memory_hash": "538eb62a8b4c0aaa160fdddb7b23a56c7321131b8c7438480773ad47e7318662",
+            "memory_sha256": "538eb62a8b4c0aaa160fdddb7b23a56c7321131b8c7438480773ad47e7318662",
+            "output_hashes": {
+              "S01": "ffc1bcf78ce9946b39f830981622903ddc365ab60dcb9f2cacbcaa31fb04b6e8",
+              "S02": "6c8c1293a129247061f0ca021913e44c7e18b7bfb1483ce359033d30dea6149f",
+              "S03": "a2f0b646d1e44a501af1bf28141ae1e79d7c4fa3157d1daa8a680d6216cb0b7e",
+              "S04": "706dc254c8caa57cd82a4c1a349bde0425353bde195f92c25508fbb1f4db9584"
+            },
+            "policy_revision": 0,
+            "recipient": "B",
+            "source_ids": [
+              "S01",
+              "S02",
+              "S03",
+              "S04"
+            ]
+          },
+          "memory_hash": "538eb62a8b4c0aaa160fdddb7b23a56c7321131b8c7438480773ad47e7318662",
+          "method": "B1",
+          "old_artifact_checks": {},
+          "sdk_job_id": "7354d9875991fe84-target-B1-unchanged",
+          "source_ids": [
+            "S01",
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "status": "delivered",
+          "target_callback_invocations": 1,
+          "target_receipt_hash": "b0eac4bfd6f10b06634779764e8e153891c0991fa875b478783064442af4b55c",
+          "view": "unchanged"
+        },
+        {
+          "artifact_ids": [
+            "R"
+          ],
+          "branch_id": "B2/revoke_critical",
+          "host_envelope": {
+            "artifact_ids": [
+              "R"
+            ],
+            "memory_hash": "23fa8379f880c04b3654558c8b292fb4c16e9b5180d4830a86d0e8d5650edb69",
+            "memory_sha256": "23fa8379f880c04b3654558c8b292fb4c16e9b5180d4830a86d0e8d5650edb69",
+            "output_hashes": {
+              "R": "de81b08ce7fb05184265c402ba5970b4c35009255b4e512460fffb999b4728f4"
+            },
+            "policy_revision": 1,
+            "recipient": "B",
+            "source_ids": [
+              "S02",
+              "S03",
+              "S04"
+            ]
+          },
+          "memory_hash": "23fa8379f880c04b3654558c8b292fb4c16e9b5180d4830a86d0e8d5650edb69",
+          "method": "B2",
+          "old_artifact_checks": {},
+          "sdk_job_id": "7354d9875991fe84-target-B2-revoke_critical",
+          "source_ids": [
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "status": "delivered",
+          "target_callback_invocations": 1,
+          "target_receipt_hash": "befc61db5da8fbe465757157575a849d8885a79e4a52ad4fc3b4a01eb13b1393",
+          "view": "revoke_critical"
+        },
+        {
+          "artifact_ids": [
+            "R"
+          ],
+          "branch_id": "B2/revoke_irrelevant",
+          "host_envelope": {
+            "artifact_ids": [
+              "R"
+            ],
+            "memory_hash": "91b5b6d189908b2c1609af9c4cfb3699b49b0c58882cac32c4e9786a6e6309bc",
+            "memory_sha256": "91b5b6d189908b2c1609af9c4cfb3699b49b0c58882cac32c4e9786a6e6309bc",
+            "output_hashes": {
+              "R": "00c14fb7b6cec0e741edce9362ee3721cefc9b9b21233e2c1e411a321cab8c86"
+            },
+            "policy_revision": 1,
+            "recipient": "B",
+            "source_ids": [
+              "S01",
+              "S02",
+              "S03"
+            ]
+          },
+          "memory_hash": "91b5b6d189908b2c1609af9c4cfb3699b49b0c58882cac32c4e9786a6e6309bc",
+          "method": "B2",
+          "old_artifact_checks": {},
+          "sdk_job_id": "7354d9875991fe84-target-B2-revoke_irrelevant",
+          "source_ids": [
+            "S01",
+            "S02",
+            "S03"
+          ],
+          "status": "delivered",
+          "target_callback_invocations": 1,
+          "target_receipt_hash": "6ec70642a22506d36b4401e31b023bef821c73fe8d91bccd83b3496d52d9e0cb",
+          "view": "revoke_irrelevant"
+        },
+        {
+          "artifact_ids": [
+            "R"
+          ],
+          "branch_id": "B2/unchanged",
+          "host_envelope": {
+            "artifact_ids": [
+              "R"
+            ],
+            "memory_hash": "e1a26c686d0a4cd9298ee93ad4066ee5e678adc202311f16ac1883dfd076848b",
+            "memory_sha256": "e1a26c686d0a4cd9298ee93ad4066ee5e678adc202311f16ac1883dfd076848b",
+            "output_hashes": {
+              "R": "6c026396f7f0f5484e604837f4faa6a9b516a167c82afd3a3653de896f2ece09"
+            },
+            "policy_revision": 0,
+            "recipient": "B",
+            "source_ids": [
+              "S01",
+              "S02",
+              "S03",
+              "S04"
+            ]
+          },
+          "memory_hash": "e1a26c686d0a4cd9298ee93ad4066ee5e678adc202311f16ac1883dfd076848b",
+          "method": "B2",
+          "old_artifact_checks": {},
+          "sdk_job_id": "7354d9875991fe84-target-B2-unchanged",
+          "source_ids": [
+            "S01",
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "status": "delivered",
+          "target_callback_invocations": 1,
+          "target_receipt_hash": "06872edd6bc7ce20acd9f0c0a13529ffdf0c4be2e08bcb4325ce45cb199c75f3",
+          "view": "unchanged"
+        },
+        {
+          "artifact_ids": [
+            "C_S02",
+            "C_S03",
+            "C_S04"
+          ],
+          "branch_id": "B3/revoke_critical",
+          "host_envelope": {
+            "artifact_ids": [
+              "C_S02",
+              "C_S03",
+              "C_S04"
+            ],
+            "memory_hash": "1a86cfe11bcbf4bd3ca5a3e36c1ee90864c7f88e7ec4c6b8d3f9b26ec050fac9",
+            "memory_sha256": "1a86cfe11bcbf4bd3ca5a3e36c1ee90864c7f88e7ec4c6b8d3f9b26ec050fac9",
+            "output_hashes": {
+              "C_S02": "fa196bcad783291c90c49f7ec4210a6c95823448fdd0dbac1c12e51f5dd9e63e",
+              "C_S03": "6745dcaf73e3d236fe1badf89f8d27b0875922f0cf440da2405ffdc3a732412d",
+              "C_S04": "25cb6bc90c302d43952db51d9223c199d2d454f13e20f7afdd38bdb3939a8e99"
+            },
+            "policy_revision": 1,
+            "recipient": "B",
+            "source_ids": [
+              "S02",
+              "S03",
+              "S04"
+            ]
+          },
+          "memory_hash": "1a86cfe11bcbf4bd3ca5a3e36c1ee90864c7f88e7ec4c6b8d3f9b26ec050fac9",
+          "method": "B3",
+          "old_artifact_checks": {
+            "C_S01": "old_packet_and_new_export_denied_export_not_allowed",
+            "C_S02": "old_packet_still_authorized",
+            "C_S03": "old_packet_still_authorized",
+            "C_S04": "old_packet_still_authorized"
+          },
+          "sdk_job_id": "7354d9875991fe84-target-B3-revoke_critical",
+          "source_ids": [
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "status": "delivered",
+          "target_callback_invocations": 1,
+          "target_receipt_hash": "58ba28d2ec0dff942255f37607ff6c6c1e74d78768177135d6d199c2824dcde1",
+          "view": "revoke_critical"
+        },
+        {
+          "artifact_ids": [
+            "C_S01",
+            "C_S02",
+            "C_S03"
+          ],
+          "branch_id": "B3/revoke_irrelevant",
+          "host_envelope": {
+            "artifact_ids": [
+              "C_S01",
+              "C_S02",
+              "C_S03"
+            ],
+            "memory_hash": "840d6624972ebc5ccb946b1c8fa637d93c51b1eae58bed5024dea960c91c9dee",
+            "memory_sha256": "840d6624972ebc5ccb946b1c8fa637d93c51b1eae58bed5024dea960c91c9dee",
+            "output_hashes": {
+              "C_S01": "1450528e8290753d4497a6ac24cf0d6b5b7c00a3ffe60cf1431b04dedd1f8a32",
+              "C_S02": "fa196bcad783291c90c49f7ec4210a6c95823448fdd0dbac1c12e51f5dd9e63e",
+              "C_S03": "6745dcaf73e3d236fe1badf89f8d27b0875922f0cf440da2405ffdc3a732412d"
+            },
+            "policy_revision": 1,
+            "recipient": "B",
+            "source_ids": [
+              "S01",
+              "S02",
+              "S03"
+            ]
+          },
+          "memory_hash": "840d6624972ebc5ccb946b1c8fa637d93c51b1eae58bed5024dea960c91c9dee",
+          "method": "B3",
+          "old_artifact_checks": {
+            "C_S01": "old_packet_still_authorized",
+            "C_S02": "old_packet_still_authorized",
+            "C_S03": "old_packet_still_authorized",
+            "C_S04": "old_packet_and_new_export_denied_export_not_allowed"
+          },
+          "sdk_job_id": "7354d9875991fe84-target-B3-revoke_irrelevant",
+          "source_ids": [
+            "S01",
+            "S02",
+            "S03"
+          ],
+          "status": "delivered",
+          "target_callback_invocations": 1,
+          "target_receipt_hash": "589e052dcf1f2f59bf7a15aa81a1160d97e43cadf81fe3a6093cf9c6ae754c49",
+          "view": "revoke_irrelevant"
+        },
+        {
+          "artifact_ids": [
+            "C_S01",
+            "C_S02",
+            "C_S03",
+            "C_S04"
+          ],
+          "branch_id": "B3/unchanged",
+          "host_envelope": {
+            "artifact_ids": [
+              "C_S01",
+              "C_S02",
+              "C_S03",
+              "C_S04"
+            ],
+            "memory_hash": "ca360963f8f84ccb5a28d1c452cadc68e4413326a19aa9d8c2f1eb819e88685f",
+            "memory_sha256": "ca360963f8f84ccb5a28d1c452cadc68e4413326a19aa9d8c2f1eb819e88685f",
+            "output_hashes": {
+              "C_S01": "1450528e8290753d4497a6ac24cf0d6b5b7c00a3ffe60cf1431b04dedd1f8a32",
+              "C_S02": "fa196bcad783291c90c49f7ec4210a6c95823448fdd0dbac1c12e51f5dd9e63e",
+              "C_S03": "6745dcaf73e3d236fe1badf89f8d27b0875922f0cf440da2405ffdc3a732412d",
+              "C_S04": "25cb6bc90c302d43952db51d9223c199d2d454f13e20f7afdd38bdb3939a8e99"
+            },
+            "policy_revision": 0,
+            "recipient": "B",
+            "source_ids": [
+              "S01",
+              "S02",
+              "S03",
+              "S04"
+            ]
+          },
+          "memory_hash": "ca360963f8f84ccb5a28d1c452cadc68e4413326a19aa9d8c2f1eb819e88685f",
+          "method": "B3",
+          "old_artifact_checks": {
+            "C_S01": "old_packet_still_authorized",
+            "C_S02": "old_packet_still_authorized",
+            "C_S03": "old_packet_still_authorized",
+            "C_S04": "old_packet_still_authorized"
+          },
+          "sdk_job_id": "7354d9875991fe84-target-B3-unchanged",
+          "source_ids": [
+            "S01",
+            "S02",
+            "S03",
+            "S04"
+          ],
+          "status": "delivered",
+          "target_callback_invocations": 1,
+          "target_receipt_hash": "a57cbdaa442d69025903b2cbd8e3746ce29e2a45fcdac596153f3a3526cbe60b",
+          "view": "unchanged"
+        }
+      ],
+      "source_calls": [
+        {
+          "artifact": "M",
+          "branch_ids": [
+            "B0/unchanged",
+            "B0/revoke_critical",
+            "B0/revoke_irrelevant"
+          ],
+          "input_hash": "794726edb78efe5985d0d23ef593bc93e1a01e254436adfd212f04638f8a3b63",
+          "output_hash": "bcd85fa8ccad69bfb361cda067d7b77e9982d05efd51901ada1564804bbedd05",
+          "status": "sealed",
+          "view": null
+        },
+        {
+          "artifact": "C_S01",
+          "branch_ids": [
+            "B3/unchanged",
+            "B3/revoke_critical",
+            "B3/revoke_irrelevant"
+          ],
+          "input_hash": "da27a30bccad4528eba363f6c42d1802245fd6a445d7be14b3d6738770f6edb9",
+          "output_hash": "1450528e8290753d4497a6ac24cf0d6b5b7c00a3ffe60cf1431b04dedd1f8a32",
+          "status": "sealed",
+          "view": null
+        },
+        {
+          "artifact": "C_S02",
+          "branch_ids": [
+            "B3/unchanged",
+            "B3/revoke_critical",
+            "B3/revoke_irrelevant"
+          ],
+          "input_hash": "8d4f6a05974e170f6e840fc4949c8fe74ee7ea5b8eeac0c6c1c1baf1a6b61897",
+          "output_hash": "fa196bcad783291c90c49f7ec4210a6c95823448fdd0dbac1c12e51f5dd9e63e",
+          "status": "sealed",
+          "view": null
+        },
+        {
+          "artifact": "C_S03",
+          "branch_ids": [
+            "B3/unchanged",
+            "B3/revoke_critical",
+            "B3/revoke_irrelevant"
+          ],
+          "input_hash": "a330f1b6526b0e7e0efd90650c1d0a03706344e5974b051be8b84a4075abbcf0",
+          "output_hash": "6745dcaf73e3d236fe1badf89f8d27b0875922f0cf440da2405ffdc3a732412d",
+          "status": "sealed",
+          "view": null
+        },
+        {
+          "artifact": "C_S04",
+          "branch_ids": [
+            "B3/unchanged",
+            "B3/revoke_critical",
+            "B3/revoke_irrelevant"
+          ],
+          "input_hash": "26d11733466375dab516590c623574889489ecda195e9cfd89139c9e5857892f",
+          "output_hash": "25cb6bc90c302d43952db51d9223c199d2d454f13e20f7afdd38bdb3939a8e99",
+          "status": "sealed",
+          "view": null
+        },
+        {
+          "artifact": "R",
+          "branch_ids": [
+            "B2/unchanged"
+          ],
+          "input_hash": "87b528395627b03ca1745ca08cf15fdc8239272aa103580956323c8cd0b1b5d4",
+          "output_hash": "6c026396f7f0f5484e604837f4faa6a9b516a167c82afd3a3653de896f2ece09",
+          "status": "sealed",
+          "view": "unchanged"
+        },
+        {
+          "artifact": "R",
+          "branch_ids": [
+            "B2/revoke_critical"
+          ],
+          "input_hash": "7427ed9494ce14f5d6e35810a5f38b57e68a71479c6cf3b7aea9aa0cd875f0b9",
+          "output_hash": "de81b08ce7fb05184265c402ba5970b4c35009255b4e512460fffb999b4728f4",
+          "status": "sealed",
+          "view": "revoke_critical"
+        },
+        {
+          "artifact": "R",
+          "branch_ids": [
+            "B2/revoke_irrelevant"
+          ],
+          "input_hash": "2102ee724db3633f1d5b6ab7a46f307930cc17dcef19cad6989150c29bd13139",
+          "output_hash": "00c14fb7b6cec0e741edce9362ee3721cefc9b9b21233e2c1e411a321cab8c86",
+          "status": "sealed",
+          "view": "revoke_irrelevant"
+        }
+      ],
+      "story_id": "coldchain_maintenance"
+    }
+  ]
+}

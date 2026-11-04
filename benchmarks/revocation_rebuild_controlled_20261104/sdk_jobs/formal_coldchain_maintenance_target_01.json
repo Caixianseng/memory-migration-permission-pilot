@@ -1,0 +1,636 @@
+{
+  "jobs": [
+    {
+      "actual_options_sha256": "c94201704f03dd014d4423d975504d6939e28bfcf6ca45f389bc911d46460e92",
+      "archive_sdk_receipt_sha256": "acb7512dbe8113e0edd2fc66a2c204891b7cd0b62fc5a8f559ec96207506789b",
+      "artifact": null,
+      "job_id": "7354d9875991fe84-target-B0-unchanged",
+      "kind": "formal",
+      "message_metadata": [
+        {
+          "id": "d6c698c6-caa1-4c0a-8d36-83d60f4ecd00",
+          "role": "system",
+          "source": {
+            "kind": "system-prompt"
+          }
+        },
+        {
+          "id": "9650cff7-242f-486d-a480-819e5b4a56f5",
+          "role": "user",
+          "source": {
+            "kind": "user"
+          }
+        }
+      ],
+      "method": "B0",
+      "output": "{\"Q1\":\"东岸组必须双人复核；西桥组和南湾组不触发该要求。\",\"Q2\":\"探头零点复测主责岗位为计量员；仓储保管员负责交接与归箱，不能独立在零点复测结果上签字。\",\"Q3\":\"HT-46。\"}",
+      "output_sha256": "e39e9bf25a41dc58bd59a616c8ea84a740dce0ba325c71481971b3d6115bdf3b",
+      "process": {
+        "parent_terminated_after_sealed_receipt": false,
+        "returncode": 0
+      },
+      "provider_actual_model": null,
+      "provider_response_id": null,
+      "request_id": "1fb4d7b8-25cf-4cfc-a47a-f4ed465cff7f",
+      "reservation": {
+        "input_token_bound": 7300,
+        "max_output_tokens": 4096,
+        "raw_invoice_cny": null,
+        "reserved_cny": "0.047368",
+        "role": "target"
+      },
+      "role": "target",
+      "sdk_provider_dispatch_count": 1,
+      "sdk_stream_attempts": 1,
+      "settings": {
+        "maxTokens": 4096,
+        "model": "deepseek-flash",
+        "provider": "deepseek-account",
+        "reasoningEffort": "off",
+        "tools": []
+      },
+      "settlement": {
+        "input_tokens": 740,
+        "invoice_cny": null,
+        "output_tokens": 67,
+        "peak_cost_upper_cny": "0.002016",
+        "provider_physical_requests": null,
+        "receipt_sha256": "acb7512dbe8113e0edd2fc66a2c204891b7cd0b62fc5a8f559ec96207506789b",
+        "reserved_cny": "0.047368",
+        "status": "ok"
+      },
+      "source_cost_charged_once": false,
+      "source_reused_by_branch_ids": [],
+      "status": "ok",
+      "stop_reason": {
+        "kind": "stop"
+      },
+      "story_id": "coldchain_maintenance",
+      "system_fingerprint": null,
+      "system_template_id": "66c1c80b35f8f37222fa12609058952ddf23734868720bf130792d339e792771",
+      "usage": {
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "inputTokens": 740,
+        "outputTokens": 67,
+        "totalTokens": 807
+      },
+      "user_message": "{\"memory\":\"{\\\"facts\\\": [{\\\"input_id\\\": \\\"M\\\", \\\"text\\\": \\\"芦港冷链站本轮温度记录器维护记忆：\\\\n\\\\n- 异常复测工序（S01）：温度记录器在5°C校验点读数偏差超过±0.2°C时，本轮异常复测只准使用计量间的恒温槽HT-46；收货区水浴槽未纳入适用清单，不能临时替代。操作员须先将待测探头固定在支架上，待显示值稳定后保存读数；复测记录应附仪器编号与原始曲线。设备清洗未完成干燥时不得投入复测；台账经核对后随本轮记录归档。\\\\n- 领用台账（S02）：本轮维护开始前已冻结。已拆封并上台处理的温度记录器：东岸组7台、西桥组5台、南湾组3台。库房另有9台完好备用机仍封存于箱内，未领用、未上台，不计入任何组本轮数量。各组按本组领用条码逐台登记；已上台但等待返库的设备仍计入本轮数量，不因处理进度变化而删减。台账冻结后发现条码抄写错误，只能追加更正说明，不回写覆盖原始领用行。\\\\n- 复核与签字要求（S03）：例行维护规程按各组本轮已拆封并上台设备数量判定复核方式——严格大于5台的组必须双人复核；等于5台或少于5台的组不触发该要求；封存备用机不计入阈值。探头零点复测主责岗位为计量员；仓储保管员负责交接与归箱，不能独立在零点复测结果上签字。维护记录须保留操作者、复核者的岗位和操作时间；现场换岗应先写交接说明。双人复核不改变上述岗位主责划分，也不把交接签收当作测量结果签字。\\\\n- 旧标签回收（S04）：回收箱放在库房出口内侧，箱盖用灰色贴纸标明回收月份。拆下的旧标签应撕成两段再投入，不能贴在新包装上；沾有清洁液的标签先在托盘内晾干，避免浸湿纸箱。回收箱装到八成时由值日人员封口，转送普通废纸暂存点，运输途中不得与待发出的包材混放。当天没有旧标签也要在值日表上留一条空箱记录，便于核对保洁交接。回收箱标签褪色时可重新打印同样内容，箱内物品无需倒出。\\\"}]}\",\"questions\":[{\"question_id\":\"Q1\",\"text\":\"按冻结领用台账和例行维护规程，本轮东岸、西桥、南湾三组中，哪些必须进行双人复核，哪些不触发该要求？\"},{\"question_id\":\"Q2\",\"text\":\"本轮探头零点复测由哪个岗位主责，哪个岗位不能独立在结果上签字？\"},{\"question_id\":\"Q3\",\"text\":\"出现规程所述超差时，本轮异常复测获准使用的恒温槽编号是什么？\"}]}",
+      "user_message_sha256": "bec27c6513152138ec52ee473a9f0353ab2457d343928d5d17521a91312ec238",
+      "view": "unchanged"
+    },
+    {
+      "actual_options_sha256": "cecec7530be2b98f3eb229bebd811731b60de82b9e2411cb693797286feaf289",
+      "archive_sdk_receipt_sha256": "ba9dad4f8d167b6dae585b781823c8fea0cd0322fee3fd8d928125f758e6b4ec",
+      "artifact": null,
+      "job_id": "7354d9875991fe84-target-B1-revoke_critical",
+      "kind": "formal",
+      "message_metadata": [
+        {
+          "id": "352da952-94d6-4752-a3d1-05cf2a7fc98b",
+          "role": "system",
+          "source": {
+            "kind": "system-prompt"
+          }
+        },
+        {
+          "id": "60e5027a-6380-4b18-b8cb-b09fbe7e852e",
+          "role": "user",
+          "source": {
+            "kind": "user"
+          }
+        }
+      ],
+      "method": "B1",
+      "output": "{\"Q1\":\"东岸组（7台）必须进行双人复核；西桥组（5台）和南湾组（3台）不触发这项要求。\",\"Q2\":\"探头零点复测的主责岗位是计量员；仓储保管员不能独立在零点复测结果上签字。\",\"Q3\":\"UNKNOWN\"}",
+      "output_sha256": "27cb1fd924200207de31e504060cbc574b8f70eb6d6d492e2bdd0131acfd039e",
+      "process": {
+        "parent_terminated_after_sealed_receipt": true,
+        "returncode": 0
+      },
+      "provider_actual_model": null,
+      "provider_response_id": null,
+      "request_id": "535a0000-a5e6-41ce-ab8f-4f18167398b6",
+      "reservation": {
+        "input_token_bound": 6970,
+        "max_output_tokens": 4096,
+        "raw_invoice_cny": null,
+        "reserved_cny": "0.046708",
+        "role": "target"
+      },
+      "role": "target",
+      "sdk_provider_dispatch_count": 1,
+      "sdk_stream_attempts": 1,
+      "settings": {
+        "maxTokens": 4096,
+        "model": "deepseek-flash",
+        "provider": "deepseek-account",
+        "reasoningEffort": "off",
+        "tools": []
+      },
+      "settlement": {
+        "input_tokens": 641,
+        "invoice_cny": null,
+        "output_tokens": 72,
+        "peak_cost_upper_cny": "0.001858",
+        "provider_physical_requests": null,
+        "receipt_sha256": "ba9dad4f8d167b6dae585b781823c8fea0cd0322fee3fd8d928125f758e6b4ec",
+        "reserved_cny": "0.046708",
+        "status": "ok"
+      },
+      "source_cost_charged_once": false,
+      "source_reused_by_branch_ids": [],
+      "status": "ok",
+      "stop_reason": {
+        "kind": "stop"
+      },
+      "story_id": "coldchain_maintenance",
+      "system_fingerprint": null,
+      "system_template_id": "66c1c80b35f8f37222fa12609058952ddf23734868720bf130792d339e792771",
+      "usage": {
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "inputTokens": 641,
+        "outputTokens": 72,
+        "totalTokens": 713
+      },
+      "user_message": "{\"memory\":\"{\\\"facts\\\": [{\\\"input_id\\\": \\\"S02\\\", \\\"text\\\": \\\"芦港冷链站的领用台账已在本轮维护开始前冻结。三组已拆封并上台处理的温度记录器数量分别是：东岸组7台，西桥组5台，南湾组3台。除此之外，库房还有9台完好备用机，仍放在封存箱内，没有领用、没有上台，不能并入任何组的本轮数量。各组按本组领用条码逐台登记，已经上台但等待返库的设备仍计入本轮数量，不能因处理进度变化而删减。台账冻结后如发现条码抄写错误，只能追加更正说明，不回写覆盖原始领用行。\\\"}, {\\\"input_id\\\": \\\"S03\\\", \\\"text\\\": \\\"例行维护规程按各组本轮已拆封并上台的设备数量判定复核方式：严格大于5台的组必须进行双人复核，等于5台或少于5台的组不触发这项要求。封存备用机不计入该阈值。探头零点复测的主责岗位是计量员；仓储保管员负责交接与归箱，不能独立在零点复测结果上签字。维护记录必须保留操作者、复核者的岗位和操作时间，现场换岗时应先写交接说明。规程所称双人复核不改变上述岗位的主责划分，也不把交接签收当作测量结果签字。\\\"}, {\\\"input_id\\\": \\\"S04\\\", \\\"text\\\": \\\"外壳旧标签回收箱放在库房出口内侧，箱盖用灰色贴纸标明回收月份。拆下的旧标签应撕成两段再投入回收箱，不能贴在新包装上；沾有清洁液的标签先在托盘内晾干，避免把纸箱浸湿。标签回收箱装到八成时由值日人员封口，转送普通废纸暂存点，运输途中不得与待发出的包材混放。当天没有旧标签也要在值日表上留一条空箱记录，便于核对保洁交接。回收箱标签褪色时可重新打印同样内容，箱内物品无需倒出。\\\"}]}\",\"questions\":[{\"question_id\":\"Q1\",\"text\":\"按冻结领用台账和例行维护规程，本轮东岸、西桥、南湾三组中，哪些必须进行双人复核，哪些不触发该要求？\"},{\"question_id\":\"Q2\",\"text\":\"本轮探头零点复测由哪个岗位主责，哪个岗位不能独立在结果上签字？\"},{\"question_id\":\"Q3\",\"text\":\"出现规程所述超差时，本轮异常复测获准使用的恒温槽编号是什么？\"}]}",
+      "user_message_sha256": "78caaa6e27c6355d3e8038bdd7d6e19bfb3af8231be12753efb802d0b69eda52",
+      "view": "revoke_critical"
+    },
+    {
+      "actual_options_sha256": "b26989438f3473b1678263d5e62ed24fddf3a98ac6ed98f80be63c584303ccc9",
+      "archive_sdk_receipt_sha256": "5e8fb265d4368512583b3af05ce8f3e17464dcdb05fd72a9d9cac1365aab1b1d",
+      "artifact": null,
+      "job_id": "7354d9875991fe84-target-B1-revoke_irrelevant",
+      "kind": "formal",
+      "message_metadata": [
+        {
+          "id": "4ec6bd7e-e256-4fdd-8afd-743593ea1e2c",
+          "role": "system",
+          "source": {
+            "kind": "system-prompt"
+          }
+        },
+        {
+          "id": "a140dfb1-592f-4fed-9830-6a3280b2f08d",
+          "role": "user",
+          "source": {
+            "kind": "user"
+          }
+        }
+      ],
+      "method": "B1",
+      "output": "{\"Q1\":\"东岸组（7台）必须进行双人复核；西桥组（5台）和南湾组（3台）不触发双人复核要求。封存备用机不计入阈值。\",\"Q2\":\"探头零点复测由计量员主责；仓储保管员不能独立在零点复测结果上签字（其负责交接与归箱）。\",\"Q3\":\"HT-46\"}",
+      "output_sha256": "c17e55dcde3a244bf0a68676ec3492cfb0baf67087c6bb1021868bacd4702fac",
+      "process": {
+        "parent_terminated_after_sealed_receipt": false,
+        "returncode": 0
+      },
+      "provider_actual_model": null,
+      "provider_response_id": null,
+      "request_id": "26d8fe59-6499-4e25-a4eb-22f432489901",
+      "reservation": {
+        "input_token_bound": 6966,
+        "max_output_tokens": 4096,
+        "raw_invoice_cny": null,
+        "reserved_cny": "0.0467",
+        "role": "target"
+      },
+      "role": "target",
+      "sdk_provider_dispatch_count": 1,
+      "sdk_stream_attempts": 1,
+      "settings": {
+        "maxTokens": 4096,
+        "model": "deepseek-flash",
+        "provider": "deepseek-account",
+        "reasoningEffort": "off",
+        "tools": []
+      },
+      "settlement": {
+        "input_tokens": 636,
+        "invoice_cny": null,
+        "output_tokens": 89,
+        "peak_cost_upper_cny": "0.001984",
+        "provider_physical_requests": null,
+        "receipt_sha256": "5e8fb265d4368512583b3af05ce8f3e17464dcdb05fd72a9d9cac1365aab1b1d",
+        "reserved_cny": "0.0467",
+        "status": "ok"
+      },
+      "source_cost_charged_once": false,
+      "source_reused_by_branch_ids": [],
+      "status": "ok",
+      "stop_reason": {
+        "kind": "stop"
+      },
+      "story_id": "coldchain_maintenance",
+      "system_fingerprint": null,
+      "system_template_id": "66c1c80b35f8f37222fa12609058952ddf23734868720bf130792d339e792771",
+      "usage": {
+        "cacheReadTokens": 384,
+        "cacheWriteTokens": 0,
+        "inputTokens": 252,
+        "outputTokens": 89,
+        "totalTokens": 725
+      },
+      "user_message": "{\"memory\":\"{\\\"facts\\\": [{\\\"input_id\\\": \\\"S01\\\", \\\"text\\\": \\\"芦港冷链站本轮温度记录器维护另设异常复测工序。当温度记录器在5°C校验点的读数偏差超过±0.2°C时，本轮异常复测只准使用计量间的恒温槽HT-46。收货区水浴槽虽然外观相似，但没有纳入这次工序的适用清单，不能临时替代。操作员需先把待测探头固定在支架上，待显示值稳定后再保存读数；复测记录应附上仪器编号与原始曲线。设备仍在清洗、尚未完成干燥时不得投入复测，台账经核对后随本轮记录归档。\\\"}, {\\\"input_id\\\": \\\"S02\\\", \\\"text\\\": \\\"芦港冷链站的领用台账已在本轮维护开始前冻结。三组已拆封并上台处理的温度记录器数量分别是：东岸组7台，西桥组5台，南湾组3台。除此之外，库房还有9台完好备用机，仍放在封存箱内，没有领用、没有上台，不能并入任何组的本轮数量。各组按本组领用条码逐台登记，已经上台但等待返库的设备仍计入本轮数量，不能因处理进度变化而删减。台账冻结后如发现条码抄写错误，只能追加更正说明，不回写覆盖原始领用行。\\\"}, {\\\"input_id\\\": \\\"S03\\\", \\\"text\\\": \\\"例行维护规程按各组本轮已拆封并上台的设备数量判定复核方式：严格大于5台的组必须进行双人复核，等于5台或少于5台的组不触发这项要求。封存备用机不计入该阈值。探头零点复测的主责岗位是计量员；仓储保管员负责交接与归箱，不能独立在零点复测结果上签字。维护记录必须保留操作者、复核者的岗位和操作时间，现场换岗时应先写交接说明。规程所称双人复核不改变上述岗位的主责划分，也不把交接签收当作测量结果签字。\\\"}]}\",\"questions\":[{\"question_id\":\"Q1\",\"text\":\"按冻结领用台账和例行维护规程，本轮东岸、西桥、南湾三组中，哪些必须进行双人复核，哪些不触发该要求？\"},{\"question_id\":\"Q2\",\"text\":\"本轮探头零点复测由哪个岗位主责，哪个岗位不能独立在结果上签字？\"},{\"question_id\":\"Q3\",\"text\":\"出现规程所述超差时，本轮异常复测获准使用的恒温槽编号是什么？\"}]}",
+      "user_message_sha256": "4088897d0946308a04799d1afc7b81a6258bd61e5abeb7d82d8c9114e1960fee",
+      "view": "revoke_irrelevant"
+    },
+    {
+      "actual_options_sha256": "52c4396da822821cf56f1f57845183d8fc4327d1c902b9b17c52e0bd2a99e870",
+      "archive_sdk_receipt_sha256": "a34857d305e4efdc7828bde3097ef15113fb0427bdb0c76ffc92eaab21708b30",
+      "artifact": null,
+      "job_id": "7354d9875991fe84-target-B1-unchanged",
+      "kind": "formal",
+      "message_metadata": [
+        {
+          "id": "d826fb29-a55e-4794-b6c8-7f3b104e5dc1",
+          "role": "system",
+          "source": {
+            "kind": "system-prompt"
+          }
+        },
+        {
+          "id": "18b8851f-fd1e-4cfe-ad9e-bf55a0108e0e",
+          "role": "user",
+          "source": {
+            "kind": "user"
+          }
+        }
+      ],
+      "method": "B1",
+      "output": "{\"Q1\":\"东岸组7台必须进行双人复核；西桥组5台、南湾组3台均不触发双人复核要求。\",\"Q2\":\"探头零点复测由计量员主责；仓储保管员不能独立在零点复测结果上签字。\",\"Q3\":\"HT-46\"}",
+      "output_sha256": "ed85b35e477e60cc207646c3e1b5eeedb3da83299dcb48eacdf0d86b14bd30bc",
+      "process": {
+        "parent_terminated_after_sealed_receipt": true,
+        "returncode": 1
+      },
+      "provider_actual_model": null,
+      "provider_response_id": null,
+      "request_id": "55b2443b-cc5c-4269-9059-eca008c2955b",
+      "reservation": {
+        "input_token_bound": 7575,
+        "max_output_tokens": 4096,
+        "raw_invoice_cny": null,
+        "reserved_cny": "0.047918",
+        "role": "target"
+      },
+      "role": "target",
+      "sdk_provider_dispatch_count": 1,
+      "sdk_stream_attempts": 1,
+      "settings": {
+        "maxTokens": 4096,
+        "model": "deepseek-flash",
+        "provider": "deepseek-account",
+        "reasoningEffort": "off",
+        "tools": []
+      },
+      "settlement": {
+        "input_tokens": 783,
+        "invoice_cny": null,
+        "output_tokens": 69,
+        "peak_cost_upper_cny": "0.002118",
+        "provider_physical_requests": null,
+        "receipt_sha256": "a34857d305e4efdc7828bde3097ef15113fb0427bdb0c76ffc92eaab21708b30",
+        "reserved_cny": "0.047918",
+        "status": "ok"
+      },
+      "source_cost_charged_once": false,
+      "source_reused_by_branch_ids": [],
+      "status": "ok",
+      "stop_reason": {
+        "kind": "stop"
+      },
+      "story_id": "coldchain_maintenance",
+      "system_fingerprint": null,
+      "system_template_id": "66c1c80b35f8f37222fa12609058952ddf23734868720bf130792d339e792771",
+      "usage": {
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "inputTokens": 783,
+        "outputTokens": 69,
+        "totalTokens": 852
+      },
+      "user_message": "{\"memory\":\"{\\\"facts\\\": [{\\\"input_id\\\": \\\"S01\\\", \\\"text\\\": \\\"芦港冷链站本轮温度记录器维护另设异常复测工序。当温度记录器在5°C校验点的读数偏差超过±0.2°C时，本轮异常复测只准使用计量间的恒温槽HT-46。收货区水浴槽虽然外观相似，但没有纳入这次工序的适用清单，不能临时替代。操作员需先把待测探头固定在支架上，待显示值稳定后再保存读数；复测记录应附上仪器编号与原始曲线。设备仍在清洗、尚未完成干燥时不得投入复测，台账经核对后随本轮记录归档。\\\"}, {\\\"input_id\\\": \\\"S02\\\", \\\"text\\\": \\\"芦港冷链站的领用台账已在本轮维护开始前冻结。三组已拆封并上台处理的温度记录器数量分别是：东岸组7台，西桥组5台，南湾组3台。除此之外，库房还有9台完好备用机，仍放在封存箱内，没有领用、没有上台，不能并入任何组的本轮数量。各组按本组领用条码逐台登记，已经上台但等待返库的设备仍计入本轮数量，不能因处理进度变化而删减。台账冻结后如发现条码抄写错误，只能追加更正说明，不回写覆盖原始领用行。\\\"}, {\\\"input_id\\\": \\\"S03\\\", \\\"text\\\": \\\"例行维护规程按各组本轮已拆封并上台的设备数量判定复核方式：严格大于5台的组必须进行双人复核，等于5台或少于5台的组不触发这项要求。封存备用机不计入该阈值。探头零点复测的主责岗位是计量员；仓储保管员负责交接与归箱，不能独立在零点复测结果上签字。维护记录必须保留操作者、复核者的岗位和操作时间，现场换岗时应先写交接说明。规程所称双人复核不改变上述岗位的主责划分，也不把交接签收当作测量结果签字。\\\"}, {\\\"input_id\\\": \\\"S04\\\", \\\"text\\\": \\\"外壳旧标签回收箱放在库房出口内侧，箱盖用灰色贴纸标明回收月份。拆下的旧标签应撕成两段再投入回收箱，不能贴在新包装上；沾有清洁液的标签先在托盘内晾干，避免把纸箱浸湿。标签回收箱装到八成时由值日人员封口，转送普通废纸暂存点，运输途中不得与待发出的包材混放。当天没有旧标签也要在值日表上留一条空箱记录，便于核对保洁交接。回收箱标签褪色时可重新打印同样内容，箱内物品无需倒出。\\\"}]}\",\"questions\":[{\"question_id\":\"Q1\",\"text\":\"按冻结领用台账和例行维护规程，本轮东岸、西桥、南湾三组中，哪些必须进行双人复核，哪些不触发该要求？\"},{\"question_id\":\"Q2\",\"text\":\"本轮探头零点复测由哪个岗位主责，哪个岗位不能独立在结果上签字？\"},{\"question_id\":\"Q3\",\"text\":\"出现规程所述超差时，本轮异常复测获准使用的恒温槽编号是什么？\"}]}",
+      "user_message_sha256": "b6528d2869cb15e845b86915ea3b22e09e51a881dabe35f0a2cf1900406116dc",
+      "view": "unchanged"
+    },
+    {
+      "actual_options_sha256": "2925438ae271864dd7a468c367d4247a1e723edd51cf24b69b500177a75beb82",
+      "archive_sdk_receipt_sha256": "fe4df355045ead659c227ec8a56d17c6be758efdff8800b63f3b76ff32a4ecfb",
+      "artifact": null,
+      "job_id": "7354d9875991fe84-target-B2-revoke_critical",
+      "kind": "formal",
+      "message_metadata": [
+        {
+          "id": "17fe9511-791b-42a9-a4a8-74ab394ceb5c",
+          "role": "system",
+          "source": {
+            "kind": "system-prompt"
+          }
+        },
+        {
+          "id": "af323bdf-27b8-400a-b7fc-d20a90d7f553",
+          "role": "user",
+          "source": {
+            "kind": "user"
+          }
+        }
+      ],
+      "method": "B2",
+      "output": "{\"Q1\":\"东岸组（7台）和西桥组（5台）中，东岸组必须双人复核；西桥组5台、南湾组3台均等于或少于5台，不触发该要求（南湾组3台）；封存备用机9台不计入阈值。\",\"Q2\":\"探头零点复测主责岗位为计量员；仓储保管员不能独立在零点复测结果上签字。\",\"Q3\":\"UNKNOWN\"}",
+      "output_sha256": "333c2fcf9ab176ecd5f0914b4a4ec3a1d029dba9e16cf1ebdfa7fb76d290cf79",
+      "process": {
+        "parent_terminated_after_sealed_receipt": false,
+        "returncode": 0
+      },
+      "provider_actual_model": null,
+      "provider_response_id": null,
+      "request_id": "4f302db6-6769-4387-9a02-f20c91b1a822",
+      "reservation": {
+        "input_token_bound": 6819,
+        "max_output_tokens": 4096,
+        "raw_invoice_cny": null,
+        "reserved_cny": "0.046406",
+        "role": "target"
+      },
+      "role": "target",
+      "sdk_provider_dispatch_count": 1,
+      "sdk_stream_attempts": 1,
+      "settings": {
+        "maxTokens": 4096,
+        "model": "deepseek-flash",
+        "provider": "deepseek-account",
+        "reasoningEffort": "off",
+        "tools": []
+      },
+      "settlement": {
+        "input_tokens": 618,
+        "invoice_cny": null,
+        "output_tokens": 103,
+        "peak_cost_upper_cny": "0.00206",
+        "provider_physical_requests": null,
+        "receipt_sha256": "fe4df355045ead659c227ec8a56d17c6be758efdff8800b63f3b76ff32a4ecfb",
+        "reserved_cny": "0.046406",
+        "status": "ok"
+      },
+      "source_cost_charged_once": false,
+      "source_reused_by_branch_ids": [],
+      "status": "ok",
+      "stop_reason": {
+        "kind": "stop"
+      },
+      "story_id": "coldchain_maintenance",
+      "system_fingerprint": null,
+      "system_template_id": "66c1c80b35f8f37222fa12609058952ddf23734868720bf130792d339e792771",
+      "usage": {
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "inputTokens": 618,
+        "outputTokens": 103,
+        "totalTokens": 721
+      },
+      "user_message": "{\"memory\":\"{\\\"facts\\\": [{\\\"input_id\\\": \\\"R\\\", \\\"text\\\": \\\"芦港冷链站的领用台账已在本轮维护开始前冻结（S02）。已拆封并上台处理的温度记录器数量：东岸组7台、西桥组5台、南湾组3台；另有9台完好备用机仍封存于库房，未领用、未上台，不能并入各组本轮数量（S02）。已上台但等待返库的设备仍计入本轮数量，不因处理进度变化而删减；台账冻结后发现条码抄写错误，只能追加更正说明，不回写覆盖原始领用行（S02）。\\\\n\\\\n例行维护规程按各组本轮已拆封并上台的设备数量判定复核方式：严格大于5台的组须双人复核，等于或少于5台的组不触发该要求；封存备用机不计入阈值（S03）。探头零点复测主责岗位为计量员；仓储保管员负责交接与归箱，不能独立在零点复测结果上签字；维护记录须保留操作者、复核者的岗位和操作时间，现场换岗应先写交接说明（S03）。规程所称双人复核不改变上述岗位主责划分，也不把交接签收当作测量结果签字（S03）。\\\\n\\\\n外壳旧标签回收箱放在库房出口内侧，箱盖用灰色贴纸标明回收月份（S04）。拆下的旧标签应撕成两段再投入回收箱，不能贴在新包装上；沾有清洁液的标签先在托盘内晾干，避免浸湿纸箱（S04）。回收箱装到八成时由值日人员封口，转送普通废纸暂存点，运输途中不得与待发出的包材混放（S04）。当天没有旧标签也要在值日表上留一条空箱记录，便于核对保洁交接；回收箱标签褪色时可重新打印同样内容，箱内物品无需倒出（S04）。\\\"}]}\",\"questions\":[{\"question_id\":\"Q1\",\"text\":\"按冻结领用台账和例行维护规程，本轮东岸、西桥、南湾三组中，哪些必须进行双人复核，哪些不触发该要求？\"},{\"question_id\":\"Q2\",\"text\":\"本轮探头零点复测由哪个岗位主责，哪个岗位不能独立在结果上签字？\"},{\"question_id\":\"Q3\",\"text\":\"出现规程所述超差时，本轮异常复测获准使用的恒温槽编号是什么？\"}]}",
+      "user_message_sha256": "40a44ea8dc76dd419a01c4b19358b9264f2a8dafc48247c564f59184543a02af",
+      "view": "revoke_critical"
+    },
+    {
+      "actual_options_sha256": "0ac8d8ca2df3a9ed8b72f529daf6af78f2d22f584145fc84881b20b4680c1881",
+      "archive_sdk_receipt_sha256": "4098ee7635dce68d17452d2c76554f3f75d8ccfd8e8083454ea918ecf5958b92",
+      "artifact": null,
+      "job_id": "7354d9875991fe84-target-B2-revoke_irrelevant",
+      "kind": "formal",
+      "message_metadata": [
+        {
+          "id": "4c8d93d1-f530-4393-bdf0-2e5784b6053a",
+          "role": "system",
+          "source": {
+            "kind": "system-prompt"
+          }
+        },
+        {
+          "id": "6e8df31b-3f12-4971-bb5b-05d7cab134ac",
+          "role": "user",
+          "source": {
+            "kind": "user"
+          }
+        }
+      ],
+      "method": "B2",
+      "output": "{\"Q1\":\"东岸组7台，严格大于5台，必须进行双人复核；西桥组5台，等于5台，不触发双人复核要求；南湾组3台，少于5台，不触发双人复核要求。库房9台完好备用机未领用、未上台，不计入任何组的本轮数量。\",\"Q2\":\"探头零点复测的主责岗位是计量员；仓储保管员不能独立在零点复测结果上签字。\",\"Q3\":\"计量间的恒温槽HT-46。\"}",
+      "output_sha256": "db9a1eafca0668aee9beb3addd275d388eb0e9cf7eef04d131b2fd71ed8325e3",
+      "process": {
+        "parent_terminated_after_sealed_receipt": false,
+        "returncode": 0
+      },
+      "provider_actual_model": null,
+      "provider_response_id": null,
+      "request_id": "f809bde2-05a9-4ba2-bee7-60845897a0d6",
+      "reservation": {
+        "input_token_bound": 6867,
+        "max_output_tokens": 4096,
+        "raw_invoice_cny": null,
+        "reserved_cny": "0.046502",
+        "role": "target"
+      },
+      "role": "target",
+      "sdk_provider_dispatch_count": 1,
+      "sdk_stream_attempts": 1,
+      "settings": {
+        "maxTokens": 4096,
+        "model": "deepseek-flash",
+        "provider": "deepseek-account",
+        "reasoningEffort": "off",
+        "tools": []
+      },
+      "settlement": {
+        "input_tokens": 618,
+        "invoice_cny": null,
+        "output_tokens": 118,
+        "peak_cost_upper_cny": "0.00218",
+        "provider_physical_requests": null,
+        "receipt_sha256": "4098ee7635dce68d17452d2c76554f3f75d8ccfd8e8083454ea918ecf5958b92",
+        "reserved_cny": "0.046502",
+        "status": "ok"
+      },
+      "source_cost_charged_once": false,
+      "source_reused_by_branch_ids": [],
+      "status": "ok",
+      "stop_reason": {
+        "kind": "stop"
+      },
+      "story_id": "coldchain_maintenance",
+      "system_fingerprint": null,
+      "system_template_id": "66c1c80b35f8f37222fa12609058952ddf23734868720bf130792d339e792771",
+      "usage": {
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "inputTokens": 618,
+        "outputTokens": 118,
+        "totalTokens": 736
+      },
+      "user_message": "{\"memory\":\"{\\\"facts\\\": [{\\\"input_id\\\": \\\"R\\\", \\\"text\\\": \\\"芦港冷链站本轮温度记录器维护另设异常复测工序。若温度记录器在5°C校验点的读数偏差超过±0.2°C，本轮异常复测只准使用计量间的恒温槽HT-46；收货区水浴槽外观相似，但未纳入这次工序的适用清单，不能临时替代。操作员需先把待测探头固定在支架上，待显示值稳定后再保存读数；复测记录应附仪器编号与原始曲线。设备仍在清洗、尚未完成干燥时不得投入复测；台账经核对后随本轮记录归档。（S01）\\\\n\\\\n芦港冷链站的领用台账已在本轮维护开始前冻结。三组已拆封并上台处理的温度记录器数量分别是：东岸组7台，西桥组5台，南湾组3台。库房另有9台完好备用机，仍放在封存箱内，没有领用、没有上台，不能并入任何组的本轮数量。各组按本组领用条码逐台登记；已经上台但等待返库的设备仍计入本轮数量，不能因处理进度变化而删减。台账冻结后如发现条码抄写错误，只能追加更正说明，不回写覆盖原始领用行。（S02）\\\\n\\\\n例行维护规程按各组本轮已拆封并上台的设备数量判定复核方式：严格大于5台的组必须进行双人复核；等于5台或少于5台的组不触发这项要求。封存备用机不计入该阈值。探头零点复测的主责岗位是计量员；仓储保管员负责交接与归箱，不能独立在零点复测结果上签字。维护记录必须保留操作者、复核者的岗位和操作时间，现场换岗时应先写交接说明。规程所称双人复核不改变上述岗位的主责划分，也不把交接签收当作测量结果签字。（S03）\\\"}]}\",\"questions\":[{\"question_id\":\"Q1\",\"text\":\"按冻结领用台账和例行维护规程，本轮东岸、西桥、南湾三组中，哪些必须进行双人复核，哪些不触发该要求？\"},{\"question_id\":\"Q2\",\"text\":\"本轮探头零点复测由哪个岗位主责，哪个岗位不能独立在结果上签字？\"},{\"question_id\":\"Q3\",\"text\":\"出现规程所述超差时，本轮异常复测获准使用的恒温槽编号是什么？\"}]}",
+      "user_message_sha256": "b41d1d4178d05bb5896ee60167639bd814e009dbb9d0ebcf3982ee524809369b",
+      "view": "revoke_irrelevant"
+    },
+    {
+      "actual_options_sha256": "01b80d5f01fd3252d233c9ae98f542b36e01081f75a148d5420a252995500022",
+      "archive_sdk_receipt_sha256": "9b9b1f2713b4f75aa5c5340760e174fa4496d7c8d8aeef90481bd7fe99838ee6",
+      "artifact": null,
+      "job_id": "7354d9875991fe84-target-B2-unchanged",
+      "kind": "formal",
+      "message_metadata": [
+        {
+          "id": "fc6d641c-1eb8-42dd-9e36-fc1401595307",
+          "role": "system",
+          "source": {
+            "kind": "system-prompt"
+          }
+        },
+        {
+          "id": "ab5accba-a565-42fb-8364-ada45c091b54",
+          "role": "user",
+          "source": {
+            "kind": "user"
+          }
+        }
+      ],
+      "method": "B2",
+      "output": "{\"Q1\":\"东岸组7台必须进行双人复核；西桥组5台和南湾组3台不触发该要求（西桥组等于5台、南湾组少于5台）。\",\"Q2\":\"探头零点复测主责岗位是计量员；仓储保管员负责交接与归箱，不能独立在零点复测结果上签字。\",\"Q3\":\"HT-46\"}",
+      "output_sha256": "332071951cedd05b330324c07fcd61a030fd4c65751639aa9f5e013304fddb76",
+      "process": {
+        "parent_terminated_after_sealed_receipt": true,
+        "returncode": 0
+      },
+      "provider_actual_model": null,
+      "provider_response_id": null,
+      "request_id": "dc307fba-3bbf-4d9e-8160-ea7d440c2ecb",
+      "reservation": {
+        "input_token_bound": 7453,
+        "max_output_tokens": 4096,
+        "raw_invoice_cny": null,
+        "reserved_cny": "0.047674",
+        "role": "target"
+      },
+      "role": "target",
+      "sdk_provider_dispatch_count": 1,
+      "sdk_stream_attempts": 1,
+      "settings": {
+        "maxTokens": 4096,
+        "model": "deepseek-flash",
+        "provider": "deepseek-account",
+        "reasoningEffort": "off",
+        "tools": []
+      },
+      "settlement": {
+        "input_tokens": 767,
+        "invoice_cny": null,
+        "output_tokens": 87,
+        "peak_cost_upper_cny": "0.00223",
+        "provider_physical_requests": null,
+        "receipt_sha256": "9b9b1f2713b4f75aa5c5340760e174fa4496d7c8d8aeef90481bd7fe99838ee6",
+        "reserved_cny": "0.047674",
+        "status": "ok"
+      },
+      "source_cost_charged_once": false,
+      "source_reused_by_branch_ids": [],
+      "status": "ok",
+      "stop_reason": {
+        "kind": "stop"
+      },
+      "story_id": "coldchain_maintenance",
+      "system_fingerprint": null,
+      "system_template_id": "66c1c80b35f8f37222fa12609058952ddf23734868720bf130792d339e792771",
+      "usage": {
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "inputTokens": 767,
+        "outputTokens": 87,
+        "totalTokens": 854
+      },
+      "user_message": "{\"memory\":\"{\\\"facts\\\": [{\\\"input_id\\\": \\\"R\\\", \\\"text\\\": \\\"芦港冷链站本轮温度记录器维护设异常复测工序（S01）：温度记录器在5°C校验点读数偏差超过±0.2°C时，异常复测只准使用计量间的恒温槽HT-46；收货区水浴槽外观相似但未纳入本轮工序适用清单，不能临时替代。操作员须先把待测探头固定在支架上，待显示值稳定后再保存读数；复测记录应附仪器编号与原始曲线。设备仍在清洗、尚未完成干燥时不得投入复测；台账经核对后随本轮记录归档（S01）。\\\\n\\\\n芦港冷链站领用台账已在本轮维护开始前冻结（S02）。三组已拆封并上台处理的温度记录器数量为：东岸组7台、西桥组5台、南湾组3台；库房另有9台完好备用机，仍在封存箱内，没有领用、没有上台，不能并入任何组的本轮数量。各组按本组领用条码逐台登记；已经上台但等待返库的设备仍计入本轮数量，不能因处理进度变化而删减。台账冻结后如发现条码抄写错误，只能追加更正说明，不回写覆盖原始领用行（S02）。\\\\n\\\\n例行维护规程按各组本轮已拆封并上台的设备数量判定复核方式（S03）：严格大于5台的组必须进行双人复核；等于5台或少于5台的组不触发这项要求；封存备用机不计入该阈值。探头零点复测的主责岗位是计量员；仓储保管员负责交接与归箱，不能独立在零点复测结果上签字。维护记录必须保留操作者、复核者的岗位和操作时间；现场换岗时应先写交接说明。规程所称双人复核不改变上述岗位的主责划分，也不把交接签收当作测量结果签字（S03）。\\\\n\\\\n芦港冷链站外壳旧标签回收箱放在库房出口内侧，箱盖用灰色贴纸标明回收月份（S04）。拆下的旧标签应撕成两段再投入回收箱，不能贴在新包装上；沾有清洁液的标签先在托盘内晾干，避免把纸箱浸湿。回收箱装到八成时由值日人员封口，转送普通废纸暂存点，运输途中不得与待发出的包材混放。当天没有旧标签也要在值日表上留一条空箱记录，便于核对保洁交接；回收箱标签褪色时可重新打印同样内容，箱内物品无需倒出（S04）。\\\"}]}\",\"questions\":[{\"question_id\":\"Q1\",\"text\":\"按冻结领用台账和例行维护规程，本轮东岸、西桥、南湾三组中，哪些必须进行双人复核，哪些不触发该要求？\"},{\"question_id\":\"Q2\",\"text\":\"本轮探头零点复测由哪个岗位主责，哪个岗位不能独立在结果上签字？\"},{\"question_id\":\"Q3\",\"text\":\"出现规程所述超差时，本轮异常复测获准使用的恒温槽编号是什么？\"}]}",
+      "user_message_sha256": "dcd83a0914873638d6b79faf026a92055a56cdf6ea1ce5485b01331b6ca0cd2f",
+      "view": "unchanged"
+    },
+    {
+      "actual_options_sha256": "6ecba6013e14401a41272f4ebc294c1750e42b26976a11533d0bf922ba932597",
+      "archive_sdk_receipt_sha256": "86aaa546478a630a5de7bba3be21b44ecae8172b230f57a6fecb85b694b7b61c",
+      "artifact": null,
+      "job_id": "7354d9875991fe84-target-B3-revoke_critical",
+      "kind": "formal",
+      "message_metadata": [
+        {
+          "id": "da9d4cd9-c85f-4d6b-be43-998e5d11c61e",
+          "role": "system",
+          "source": {
+            "kind": "system-prompt"
+          }
+        },
+        {
+          "id": "b1ac7c90-a60f-429e-b881-8c29f548b7f2",
+          "role": "user",
+          "source": {
+            "kind": "user"
+          }
+        }
+      ],
+      "method": "B3",
+      "output": "{\"Q1\":\"东岸组（7台）和西桥组（5台中的严格大于5台判定：西桥组为5台，不大于5台，不触发）——按规程：东岸组7台必须双人复核，西桥组5台不触发，南湾组3台不触发。\",\"Q2\":\"探头零点复测由计量员主责；仓储保管员不能独立在零点复测结果上签字。\",\"Q3\":\"UNKNOWN\"}",
+      "output_sha256": "1728946ce0474ffe34f8fa3d531af9a4f33262cd461e988e9e03b5960552dad6",
+      "process": {
+        "parent_terminated_after_sealed_receipt": false,
+        "returncode": 0
+      },
+      "provider_actual_model": null,
+      "provider_response_id": null,
+      "request_id": "3e21c690-eda9-4059-aa74-6544440f74d6",
+      "reservation": {
+        "input_token_bound": 7126,
+        "max_output_tokens": 4096,
+        "raw_invoice_cny": null,
+        "reserved_cny": "0.04702",
+        "role": "target"
+      },
+      "role": "target",
+      "sdk_provider_dispatch_count": 1,
+      "sdk_stream_attempts": 1,
+      "settings": {
+        "maxTokens": 4096,
+        "model": "deepseek-flash",
+        "provider": "deepseek-account",
+        "reasoningEffort": "off",
+        "tools": []
+      },
+      "settlement": {
+        "input_tokens": 709,
+        "invoice_cny": null,
+        "output_tokens": 103,
+        "peak_cost_upper_cny": "0.002242",
+        "provider_physical_requests": null,
+        "receipt_sha256": "86aaa546478a630a5de7bba3be21b44ecae8172b230f57a6fecb85b694b7b61c",
+        "reserved_cny": "0.04702",
+        "status": "ok"
+      },
+      "source_cost_charged_once": false,
+      "source_reused_by_branch_ids": [],
+      "status": "ok",
+      "stop_reason": {
+        "kind": "stop"
+      },
+      "story_id": "coldchain_maintenance",
+      "system_fingerprint": null,
+      "system_template_id": "66c1c80b35f8f37222fa12609058952ddf23734868720bf130792d339e792771",
+      "usage": {
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "inputTokens": 709,
+        "outputTokens": 103,
+        "totalTokens": 812
+      },
+      "user_message": "{\"memory\":\"{\\\"facts\\\": [{\\\"input_id\\\": \\\"C_S02\\\", \\\"text\\\": \\\"根据 S02：芦港冷链站领用台账在本轮维护开始前已冻结（已完成）。已拆封并上台处理的温度记录器数量为：东岸组 7 台、西桥组 5 台、南湾组 3 台。库房另有 9 台完好备用机，仍封存在箱内；这些机器没有领用，也没有上台，不能计入任何组的本轮数量。各组按本组领用条码逐台登记；已上台但等待返库的设备仍计入本轮数量，不得因处理进度变化而删减。若台账冻结后发现条码抄写错误，只能追加更正说明，不得回写覆盖原始领用行。\\\"}, {\\\"input_id\\\": \\\"C_S03\\\", \\\"text\\\": \\\"例行维护规程（来源：S03）规定：双人复核按各组本轮已拆封并上台的设备数量判定——严格大于5台的组必须双人复核；等于或少于5台不触发该要求；封存备用机不计入阈值。探头零点复测由计量员主责；仓储保管员负责交接与归箱，不能独立在零点复测结果上签字。维护记录须保留操作者、复核者的岗位和操作时间，现场换岗应先写交接说明。双人复核不改变上述岗位主责划分，也不把交接签收当作测量结果签字。\\\"}, {\\\"input_id\\\": \\\"C_S04\\\", \\\"text\\\": \\\"根据 S04，旧标签回收规则如下：\\\\n\\\\n- 外壳旧标签回收箱放在库房出口内侧。箱盖上用灰色贴纸标明回收月份。\\\\n- 拆下的旧标签应撕成两段后再投入回收箱，不能贴在新包装上。\\\\n- 沾有清洁液的标签应先在托盘内晾干，以免把纸箱浸湿。\\\\n- 当标签回收箱装到八成满时，由值日人员封口，再转送到普通废纸暂存点；运输途中不得与待发出的包材混放。\\\\n- 当天即使没有旧标签，也要在值日表上留一条空箱记录，以便核对保洁交接。\\\\n- 若回收箱标签褪色，可以重新打印同样内容；箱内物品无需倒出。\\\\n\\\\n来源：S04。\\\"}]}\",\"questions\":[{\"question_id\":\"Q1\",\"text\":\"按冻结领用台账和例行维护规程，本轮东岸、西桥、南湾三组中，哪些必须进行双人复核，哪些不触发该要求？\"},{\"question_id\":\"Q2\",\"text\":\"本轮探头零点复测由哪个岗位主责，哪个岗位不能独立在结果上签字？\"},{\"question_id\":\"Q3\",\"text\":\"出现规程所述超差时，本轮异常复测获准使用的恒温槽编号是什么？\"}]}",
+      "user_message_sha256": "4f1a148f3c95e5c8d418e606f39134c7b806cca8a98d8c206d83a43ac8d8fb71",
+      "view": "revoke_critical"
+    }
+  ]
+}

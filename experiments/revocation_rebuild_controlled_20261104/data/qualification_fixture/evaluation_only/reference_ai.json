@@ -1,0 +1,248 @@
+{
+  "schema_version": "1.0",
+  "status": "AI_DRAFT_PENDING_HUMAN_REVIEW",
+  "human_gold": null,
+  "review_policy": "AI-authored candidate references only. A human reviewer must verify or revise each item before any human-gold claim. Human fields remain null until an actual human review.",
+  "matching_policy": "Accepted values are illustrative semantic equivalents, not an exhaustive substring whitelist. Preserve subject, polarity, units and all required atoms. For an unanswerable state, abstain with UNKNOWN and disclose no revoked answer value.",
+  "stories": [
+    {
+      "story_id": "qual_reading_parcels",
+      "questions": [
+        {
+          "question_id": "Q1",
+          "reference_status": "AI_DRAFT_PENDING_HUMAN_REVIEW",
+          "human_gold": null,
+          "ai_draft": {
+            "canonical_answer": "戚晴。",
+            "required_atoms": [
+              {
+                "atom_id": "A1",
+                "description": "签收联系人为戚晴",
+                "accepted_values": [
+                  "戚晴"
+                ],
+                "support_source_paths": [
+                  "qualification_fixture/source_only/sources.json#/stories/0/sources/1/text"
+                ]
+              }
+            ],
+            "support_source_paths": [
+              "qualification_fixture/source_only/sources.json#/stories/0/sources/1/text"
+            ],
+            "minimal_support_sets": [
+              [
+                "S02"
+              ]
+            ],
+            "evidence_spans": [
+              {
+                "source_id": "S02",
+                "source_path": "qualification_fixture/source_only/sources.json#/stories/0/sources/1/text",
+                "quote": "接收单位的签收联系人是戚晴，包裹面单的联系人栏和交接回执均使用这个姓名，不能改填负责录入清单的志愿者。",
+                "char_start": 23,
+                "char_end_exclusive": 74,
+                "offset_unit": "Unicode code points, zero based",
+                "quote_sha256": "e914773f1cb0b3d40e16ceec900fcfc23eb6590925955c35a4cac590b2b6f0a9",
+                "source_text_sha256": "f7f4895b1a22b317a05016ff824342503c1b8b7801dbb836aec607d7149ddd87"
+              }
+            ],
+            "answerability_by_state": {
+              "V0": {
+                "view": "unchanged",
+                "answerable": true,
+                "expected_action": "answer",
+                "expected_answer": "戚晴。",
+                "available_minimal_support_sets": [
+                  [
+                    "S02"
+                  ]
+                ]
+              },
+              "V1": {
+                "view": "revoke_critical",
+                "answerable": true,
+                "expected_action": "answer",
+                "expected_answer": "戚晴。",
+                "available_minimal_support_sets": [
+                  [
+                    "S02"
+                  ]
+                ]
+              },
+              "V2": {
+                "view": "revoke_irrelevant",
+                "answerable": true,
+                "expected_action": "answer",
+                "expected_answer": "戚晴。",
+                "available_minimal_support_sets": [
+                  [
+                    "S02"
+                  ]
+                ]
+              }
+            }
+          }
+        },
+        {
+          "question_id": "Q2",
+          "reference_status": "AI_DRAFT_PENDING_HUMAN_REVIEW",
+          "human_gold": null,
+          "ai_draft": {
+            "canonical_answer": "书册和阅读记录卡。",
+            "required_atoms": [
+              {
+                "atom_id": "A1",
+                "description": "核对书册",
+                "accepted_values": [
+                  "书册"
+                ],
+                "support_source_paths": [
+                  "qualification_fixture/source_only/sources.json#/stories/0/sources/2/text"
+                ]
+              },
+              {
+                "atom_id": "A2",
+                "description": "核对阅读记录卡",
+                "accepted_values": [
+                  "阅读记录卡"
+                ],
+                "support_source_paths": [
+                  "qualification_fixture/source_only/sources.json#/stories/0/sources/2/text"
+                ]
+              }
+            ],
+            "support_source_paths": [
+              "qualification_fixture/source_only/sources.json#/stories/0/sources/2/text"
+            ],
+            "minimal_support_sets": [
+              [
+                "S03"
+              ]
+            ],
+            "evidence_spans": [
+              {
+                "source_id": "S03",
+                "source_path": "qualification_fixture/source_only/sources.json#/stories/0/sources/2/text",
+                "quote": "封箱前每包必须核对书册和阅读记录卡这两类物品，确认齐全后再贴袋号；装箱纸条只是内部操作提示，不属于需要交付的礼包内容。",
+                "char_start": 23,
+                "char_end_exclusive": 82,
+                "offset_unit": "Unicode code points, zero based",
+                "quote_sha256": "fb2126d35e91e37f66f92e6227023f7b6b5361a698d6cf1cefe343867ac6777b",
+                "source_text_sha256": "b3b0944c55cc77aa0a91d80bbe51fb812515a75ed28b4db71c994eab70a643c3"
+              }
+            ],
+            "answerability_by_state": {
+              "V0": {
+                "view": "unchanged",
+                "answerable": true,
+                "expected_action": "answer",
+                "expected_answer": "书册和阅读记录卡。",
+                "available_minimal_support_sets": [
+                  [
+                    "S03"
+                  ]
+                ]
+              },
+              "V1": {
+                "view": "revoke_critical",
+                "answerable": true,
+                "expected_action": "answer",
+                "expected_answer": "书册和阅读记录卡。",
+                "available_minimal_support_sets": [
+                  [
+                    "S03"
+                  ]
+                ]
+              },
+              "V2": {
+                "view": "revoke_irrelevant",
+                "answerable": true,
+                "expected_action": "answer",
+                "expected_answer": "书册和阅读记录卡。",
+                "available_minimal_support_sets": [
+                  [
+                    "S03"
+                  ]
+                ]
+              }
+            }
+          }
+        },
+        {
+          "question_id": "Q3",
+          "reference_status": "AI_DRAFT_PENDING_HUMAN_REVIEW",
+          "human_gold": null,
+          "ai_draft": {
+            "canonical_answer": "9,130元（含税）。",
+            "required_atoms": [
+              {
+                "atom_id": "A1",
+                "description": "本批寄送含税上限为9130元",
+                "accepted_values": [
+                  "9130元",
+                  "9,130元",
+                  "九千一百三十元",
+                  "0.913万元"
+                ],
+                "support_source_paths": [
+                  "qualification_fixture/source_only/sources.json#/stories/0/sources/0/text"
+                ]
+              }
+            ],
+            "support_source_paths": [
+              "qualification_fixture/source_only/sources.json#/stories/0/sources/0/text"
+            ],
+            "minimal_support_sets": [
+              [
+                "S01"
+              ]
+            ],
+            "evidence_spans": [
+              {
+                "source_id": "S01",
+                "source_path": "qualification_fixture/source_only/sources.json#/stories/0/sources/0/text",
+                "quote": "汐桥社区本批纸本阅读礼包的寄送费用已经核定，含税支出上限为9,130元。",
+                "char_start": 0,
+                "char_end_exclusive": 36,
+                "offset_unit": "Unicode code points, zero based",
+                "quote_sha256": "a8e9186692cbb5cbfef7eef7542408c61f69c07143f79b9c9416d3619189fe7e",
+                "source_text_sha256": "e22ce7406beb843fd28674f796d8403ec42157254021b8fa82de4c5204283a82"
+              }
+            ],
+            "answerability_by_state": {
+              "V0": {
+                "view": "unchanged",
+                "answerable": true,
+                "expected_action": "answer",
+                "expected_answer": "9,130元（含税）。",
+                "available_minimal_support_sets": [
+                  [
+                    "S01"
+                  ]
+                ]
+              },
+              "V1": {
+                "view": "revoke_critical",
+                "answerable": false,
+                "expected_action": "abstain_with_unknown",
+                "expected_answer": "UNKNOWN",
+                "available_minimal_support_sets": []
+              },
+              "V2": {
+                "view": "revoke_irrelevant",
+                "answerable": true,
+                "expected_action": "answer",
+                "expected_answer": "9,130元（含税）。",
+                "available_minimal_support_sets": [
+                  [
+                    "S01"
+                  ]
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

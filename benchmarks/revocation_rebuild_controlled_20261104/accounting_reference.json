@@ -1,0 +1,230 @@
+{
+  "allocation": {
+    "B0": {
+      "basis": "Unique actual jobs assigned to their method; a generated source artifact is charged once even when reused in multiple policy views.",
+      "optional_equal_allocation_over_three_planned_views": {
+        "denominator": 3,
+        "meaning": "An accounting split only; totals in the report remain exact unique-job costs. B0 blocked views retain their share of already incurred generation cost.",
+        "source_cost_numerator_cny": "0.011734"
+      },
+      "source_generation_reuse": "M/C cards reused across three counterfactual views; R generated once per view; B1 has no source generation."
+    },
+    "B1": {
+      "basis": "Unique actual jobs assigned to their method; a generated source artifact is charged once even when reused in multiple policy views.",
+      "optional_equal_allocation_over_three_planned_views": {
+        "denominator": 3,
+        "meaning": "An accounting split only; totals in the report remain exact unique-job costs. B0 blocked views retain their share of already incurred generation cost.",
+        "source_cost_numerator_cny": "0"
+      },
+      "source_generation_reuse": "M/C cards reused across three counterfactual views; R generated once per view; B1 has no source generation."
+    },
+    "B2": {
+      "basis": "Unique actual jobs assigned to their method; a generated source artifact is charged once even when reused in multiple policy views.",
+      "optional_equal_allocation_over_three_planned_views": {
+        "denominator": 3,
+        "meaning": "An accounting split only; totals in the report remain exact unique-job costs. B0 blocked views retain their share of already incurred generation cost.",
+        "source_cost_numerator_cny": "0.030716"
+      },
+      "source_generation_reuse": "M/C cards reused across three counterfactual views; R generated once per view; B1 has no source generation."
+    },
+    "B3": {
+      "basis": "Unique actual jobs assigned to their method; a generated source artifact is charged once even when reused in multiple policy views.",
+      "optional_equal_allocation_over_three_planned_views": {
+        "denominator": 3,
+        "meaning": "An accounting split only; totals in the report remain exact unique-job costs. B0 blocked views retain their share of already incurred generation cost.",
+        "source_cost_numerator_cny": "0.016548"
+      },
+      "source_generation_reuse": "M/C cards reused across three counterfactual views; R generated once per view; B1 has no source generation."
+    }
+  },
+  "by_method": {
+    "B0": {
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "gross_reserved_cny": "0.160730",
+      "output_tokens": 1055,
+      "pending_reserved_cny": "0",
+      "raw_input_tokens": 3476,
+      "requests": 4,
+      "source_cost_upper_cny": "0.011734",
+      "source_input_tokens": 2067,
+      "source_output_tokens": 950,
+      "source_plus_target_cost_upper_cny": "0.015392",
+      "source_requests": 2,
+      "target_cost_upper_cny": "0.003658",
+      "target_input_tokens": 1409,
+      "target_output_tokens": 105,
+      "target_requests": 2,
+      "total_input_tokens": 3476
+    },
+    "B1": {
+      "cache_read_tokens": 640,
+      "cache_write_tokens": 0,
+      "gross_reserved_cny": "0.282818",
+      "output_tokens": 346,
+      "pending_reserved_cny": "0",
+      "raw_input_tokens": 3402,
+      "requests": 6,
+      "source_cost_upper_cny": "0",
+      "source_input_tokens": 0,
+      "source_output_tokens": 0,
+      "source_plus_target_cost_upper_cny": "0.010852",
+      "source_requests": 0,
+      "target_cost_upper_cny": "0.010852",
+      "target_input_tokens": 4042,
+      "target_output_tokens": 346,
+      "target_requests": 6,
+      "total_input_tokens": 4042
+    },
+    "B2": {
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "gross_reserved_cny": "0.473558",
+      "output_tokens": 2887,
+      "pending_reserved_cny": "0",
+      "raw_input_tokens": 9328,
+      "requests": 12,
+      "source_cost_upper_cny": "0.030716",
+      "source_input_tokens": 5490,
+      "source_output_tokens": 2467,
+      "source_plus_target_cost_upper_cny": "0.041752",
+      "source_requests": 6,
+      "target_cost_upper_cny": "0.011036",
+      "target_input_tokens": 3838,
+      "target_output_tokens": 420,
+      "target_requests": 6,
+      "total_input_tokens": 9328
+    },
+    "B3": {
+      "cache_read_tokens": 768,
+      "cache_write_tokens": 0,
+      "gross_reserved_cny": "0.515700",
+      "output_tokens": 1472,
+      "pending_reserved_cny": "0",
+      "raw_input_tokens": 7462,
+      "requests": 14,
+      "source_cost_upper_cny": "0.016548",
+      "source_input_tokens": 3954,
+      "source_output_tokens": 1080,
+      "source_plus_target_cost_upper_cny": "0.028236",
+      "source_requests": 8,
+      "target_cost_upper_cny": "0.011688",
+      "target_input_tokens": 4276,
+      "target_output_tokens": 392,
+      "target_requests": 6,
+      "total_input_tokens": 8230
+    }
+  },
+  "by_story": {
+    "coldchain_maintenance": {
+      "cache_read_tokens": 768,
+      "cache_write_tokens": 0,
+      "gross_reserved_cny": "0.717016",
+      "output_tokens": 3278,
+      "pending_reserved_cny": "0",
+      "raw_input_tokens": 12066,
+      "requests": 18,
+      "source_cost_upper_cny": "0.030904",
+      "source_input_tokens": 5824,
+      "source_output_tokens": 2407,
+      "source_plus_target_cost_upper_cny": "0.051892",
+      "source_requests": 8,
+      "target_cost_upper_cny": "0.020988",
+      "target_input_tokens": 7010,
+      "target_output_tokens": 871,
+      "target_requests": 10,
+      "total_input_tokens": 12834
+    },
+    "meeting_wayfinding": {
+      "cache_read_tokens": 640,
+      "cache_write_tokens": 0,
+      "gross_reserved_cny": "0.715790",
+      "output_tokens": 2482,
+      "pending_reserved_cny": "0",
+      "raw_input_tokens": 11602,
+      "requests": 18,
+      "source_cost_upper_cny": "0.028094",
+      "source_input_tokens": 5687,
+      "source_output_tokens": 2090,
+      "source_plus_target_cost_upper_cny": "0.044340",
+      "source_requests": 8,
+      "target_cost_upper_cny": "0.016246",
+      "target_input_tokens": 6555,
+      "target_output_tokens": 392,
+      "target_requests": 10,
+      "total_input_tokens": 12242
+    }
+  },
+  "cost_basis": {
+    "all_cache_write_tokens": 0,
+    "formula": "(total_input_tokens*2 + output_tokens*8)/1000000",
+    "gross_reserved_is_not_fee": true,
+    "input_including_cache_rate_cny_per_million": "2",
+    "logical_request_evidence": "one SDK stream attempt and one SDK provider dispatch per unique job; no HTTP-level request count claimed",
+    "output_rate_cny_per_million": "8",
+    "pending_live_run02_cny": "0",
+    "physical_provider_request_count_unknown": true,
+    "raw_invoice_fields": null,
+    "total_input_tokens": "SDK inputTokens + cacheReadTokens + cacheWriteTokens; verified totalTokens == total_input_tokens + outputTokens",
+    "type": "usage_based_peak_rate_upper_bound_not_invoice"
+  },
+  "formal_total": {
+    "cache_read_tokens": 1408,
+    "cache_write_tokens": 0,
+    "gross_reserved_cny": "1.432806",
+    "output_tokens": 5760,
+    "pending_reserved_cny": "0",
+    "raw_input_tokens": 23668,
+    "requests": 36,
+    "source_cost_upper_cny": "0.058998",
+    "source_input_tokens": 11511,
+    "source_output_tokens": 4497,
+    "source_plus_target_cost_upper_cny": "0.096232",
+    "source_requests": 16,
+    "target_cost_upper_cny": "0.037234",
+    "target_input_tokens": 13565,
+    "target_output_tokens": 1263,
+    "target_requests": 20,
+    "total_input_tokens": 25076
+  },
+  "human_gold": null,
+  "live_run02_combined_total": {
+    "cache_read_tokens": 1408,
+    "cache_write_tokens": 0,
+    "gross_reserved_cny": "1.542368",
+    "output_tokens": 6599,
+    "pending_reserved_cny": "0",
+    "raw_input_tokens": 25996,
+    "requests": 39,
+    "source_cost_upper_cny": "0.069106",
+    "source_input_tokens": 13301,
+    "source_output_tokens": 5313,
+    "source_plus_target_cost_upper_cny": "0.107600",
+    "source_requests": 18,
+    "target_cost_upper_cny": "0.038494",
+    "target_input_tokens": 14103,
+    "target_output_tokens": 1286,
+    "target_requests": 21,
+    "total_input_tokens": 27404
+  },
+  "qualification_total": {
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "gross_reserved_cny": "0.109562",
+    "output_tokens": 839,
+    "pending_reserved_cny": "0",
+    "raw_input_tokens": 2328,
+    "requests": 3,
+    "source_cost_upper_cny": "0.010108",
+    "source_input_tokens": 1790,
+    "source_output_tokens": 816,
+    "source_plus_target_cost_upper_cny": "0.011368",
+    "source_requests": 2,
+    "target_cost_upper_cny": "0.00126",
+    "target_input_tokens": 538,
+    "target_output_tokens": 23,
+    "target_requests": 1,
+    "total_input_tokens": 2328
+  },
+  "scope": "live_run02 only; excludes live_run01 and external-client qualification"
+}
