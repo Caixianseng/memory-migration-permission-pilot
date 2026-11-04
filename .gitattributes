@@ -39,3 +39,7 @@ benchmarks/prospective_context_method_freeze_20261027.json -text whitespace=cr-a
 # Keep the new native-client evidence byte exact across Windows and Unix.
 /benchmarks/pre_delivery_revocation_metadata_20261101/** -text
 
+
+# Preserve the controlled revocation corpus and public evidence hashes.
+/benchmarks/revocation_rebuild_controlled_20261104/** -text
+/experiments/revocation_rebuild_controlled_20261104/data/** -text
