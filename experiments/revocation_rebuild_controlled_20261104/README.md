@@ -7,11 +7,11 @@
 在仓库根目录执行：
 
 ```powershell
-python -B -X utf8 -S -m unittest experiments.revocation_rebuild_controlled_20261104.test_host experiments.revocation_rebuild_controlled_20261104.test_runner experiments.revocation_rebuild_controlled_20261104.test_model_adapter
+python -B -X utf8 -S -m unittest tests.test_controlled_revocation_release
 python -I -B -S benchmarks/revocation_rebuild_controlled_20261104/reproduce.py
 ```
 
-27项定向测试使用受控capture、假账户与假transport，不调用模型或查询账户。依赖远端已有memory_migration_study.native_agent_protocol与policy；原有NativeAgentBroker仍是唯一根许可权威。模型输出不能自授权限或解除实际输入依赖。
+此入口规范化临时夹具根目录，并在结束时恢复原设置，适配Windows的8.3名称或目录连接；不放宽生产路径别名拒绝。入口包含27项核心检查、公开复算与3项临时目录回归，共31项。27项核心测试使用受控capture、假账户与假transport，不调用模型或查询账户。依赖远端已有memory_migration_study.native_agent_protocol与policy；原有NativeAgentBroker仍是唯一根许可权威。模型输出不能自授权限或解除实际输入依赖。
 
 ## 实验方法
 

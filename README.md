@@ -39,7 +39,7 @@ WorkBuddy HY3→Harness SDK已完成一例独立真实资格：旧M在撤销S01�
 标准库核心检查和本轮公开证据复算不调用模型，不需要API密钥：
 
 ```powershell
-python -B -X utf8 -S -m unittest experiments.revocation_rebuild_controlled_20261104.test_host experiments.revocation_rebuild_controlled_20261104.test_runner experiments.revocation_rebuild_controlled_20261104.test_model_adapter
+python -B -X utf8 -S -m unittest tests.test_controlled_revocation_release
 python -I -B -S benchmarks/revocation_rebuild_controlled_20261104/reproduce.py
 ```
 
