@@ -2,15 +2,18 @@
   "schema": "research-publication-manifest-v1",
   "release_date": "2026-11-05",
   "repository": "Caixianseng/memory-migration-permission-pilot",
-  "base_commit": "3a5dd487a67d847d34b83cfbcc11199910880761",
+  "base_commit": "6edf649ac112c28a05a477cc569b741632e7b57c",
   "scope": "research code, synthetic frozen fixtures, public answer projections, aggregate results and explanatory documentation",
   "files": [
     {
       "path": ".gitattributes",
-      "bytes": 3248,
-      "sha256": "5317337758e81fe70bab346a6ed00c1f225de669054f403e12dde84593323c18",
-      "original_local_sha256": "5317337758e81fe70bab346a6ed00c1f225de669054f403e12dde84593323c18",
-      "adaptations": []
+      "bytes": 3368,
+      "sha256": "2d693f359b6a356f6ad5f2b50348ca54ae6aa91a40e4886be30badec01c72e7b",
+      "original_local_sha256": "2d693f359b6a356f6ad5f2b50348ca54ae6aa91a40e4886be30badec01c72e7b",
+      "adaptations": [
+        "Preserve byte hashes of the public portability fixtures"
+      ],
+      "previous_publication_sha256": "5317337758e81fe70bab346a6ed00c1f225de669054f403e12dde84593323c18"
     },
     {
       "path": ".github/workflows/tests.yml",
@@ -1353,10 +1356,22 @@
     },
     {
       "path": "scripts/run_persistent_exchange_offline_tests.py",
-      "bytes": 4745,
-      "sha256": "00f5c174cf673fea49f87e390784bf619e31913895d6c6165a08125db80d67d0",
-      "original_local_sha256": "00f5c174cf673fea49f87e390784bf619e31913895d6c6165a08125db80d67d0",
-      "adaptations": []
+      "bytes": 5828,
+      "sha256": "b21ea7fb96426e0658783a54a0890782d898c4b1882daaefd19b7897ee2ce432",
+      "original_local_sha256": "b21ea7fb96426e0658783a54a0890782d898c4b1882daaefd19b7897ee2ce432",
+      "adaptations": [
+        "Public offline fixture portability only; sealed research modules, data and scores unchanged"
+      ],
+      "previous_publication_sha256": "00f5c174cf673fea49f87e390784bf619e31913895d6c6165a08125db80d67d0"
+    },
+    {
+      "path": "scripts/test_persistent_exchange_public_portability.py",
+      "bytes": 4300,
+      "sha256": "a7fd11126907e17d8082b4ebd82c456eebb490ffe328561e1c12dce66c0dc2c9",
+      "original_local_sha256": "a7fd11126907e17d8082b4ebd82c456eebb490ffe328561e1c12dce66c0dc2c9",
+      "adaptations": [
+        "Public offline fixture portability only; sealed research modules, data and scores unchanged"
+      ]
     }
   ],
   "manifest_self_hashed": false,
@@ -1372,5 +1387,7 @@
   "offline_main_scoring_reproducible": true,
   "core_original_evaluator_unchanged": true,
   "new_model_calls_for_publication": 0,
-  "license_note": "No new licence grant is inferred. Included third-party method snapshots retain their original MIT notices; native gateway dependencies must be obtained separately."
+  "license_note": "No new licence grant is inferred. Included third-party method snapshots retain their original MIT notices; native gateway dependencies must be obtained separately.",
+  "previous_publication_commit": "6edf649ac112c28a05a477cc569b741632e7b57c",
+  "revision_note": "Public fixture portability: preserve production path checks; explicitly skip the Windows drive-namespace mixed fixture on POSIX and cover its generic unknown-cost checks in a portable companion. Three Windows targeted checks passed; cloud POSIX verification remains pending."
 }

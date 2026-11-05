@@ -55,3 +55,5 @@ benchmarks/prospective_context_method_freeze_20261027.json -text whitespace=cr-a
 /benchmarks/persistent_exchange_v1_public_20261105/** -text
 /benchmarks/prior_experiments_public_20261105/** -text
 /scripts/export_persistent_exchange_public.py -text
+/scripts/run_persistent_exchange_offline_tests.py -text
+/scripts/test_persistent_exchange_public_portability.py -text
