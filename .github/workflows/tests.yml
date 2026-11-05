@@ -24,6 +24,12 @@ jobs:
         run: python -B -X utf8 -m unittest discover -s tests -v
       - name: Staged first-delivery revocation checks
         run: python -B -X utf8 -S -m unittest experiments.pre_delivery_revocation.test_driver -v
+      - name: Persistent exchange offline tests with live inference disabled
+        run: python -I -B -X utf8 -S scripts/run_persistent_exchange_offline_tests.py
+      - name: Recompute published bidirectional exchange scores
+        run: python -I -B -X utf8 -S scripts/export_persistent_exchange_public.py --verify
+      - name: Verify the seven preceding aggregate result projections
+        run: python -I -B -X utf8 -S benchmarks/prior_experiments_public_20261105/verify.py
       - name: Recompute published native-client evidence without API access
         run: python -I -B -S benchmarks/pre_delivery_revocation_metadata_20261101/reproduce.py
 

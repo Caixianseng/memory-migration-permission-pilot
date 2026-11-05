@@ -1,0 +1,49 @@
+{
+  "additional_licence_inferred": false,
+  "availability": {
+    "not_public": "native client histories, provider-private traces, queue credentials, execution identifiers and databases",
+    "original_evidence_location": "local experiment archive; hashes below do not constitute public access",
+    "public": "whitelist synthetic fixtures, answer/payload text, source-output projections, scores and summary counters"
+  },
+  "exporter_repository_path": "scripts/export_persistent_exchange_public.py",
+  "exporter_sha256": "b5a4b2cede4d6bb5e0ecd452b2a1336653ba243e785c7e9a2606168736b71468",
+  "fixture_sha256": {
+    "cases.public.jsonl": "ff13b8a0caa508eebfb3fe9d1c56321b07dfc56de01dd88b2a47a11dbb01355d",
+    "contract.json": "0a4be06a3232eaeaad8518c05ce34508235fa2c3319c46a20545ca0e12a4a061",
+    "evaluation_only.json": "f4c26b8412f4be68c3368b5f2916922a19b77a24082c9aabd4dc8bab1e1f71ef",
+    "mechanism_spec.json": "4c699b8b1d3a02e86303a5dc20209419637b5a707182b202fe97fba591c644f5"
+  },
+  "frozen_evaluator_repository_path": "experiments/persistent_exchange_v1/evaluate.py",
+  "frozen_evaluator_sha256": "947e112f323e739fb4b3c705e0d7470816ff00ce6a22ea8e56e24e6aa5999715",
+  "materials": "project-generated synthetic tasks and model outputs",
+  "original_archive_sha256": {
+    "audit_and_ledger.json": "112178a47512e4c6f6c929a412555a7011565bab7557c295d6e8eae52629a84c",
+    "completion_receipt.json": "6ce4e653569befeb34eb516194f7a44230732f5baffe971ccaa83fe7ce9063d7",
+    "evaluation_with_payload.json": "dceb0a35305cb67c6d190487d2feb93eac8bfbe2c152e3d7f264467066f88773",
+    "fixed_chunk_impact_description.json": "c4d2c865096ac722184a7ff39a73c0a17e29833a36f1dc624ea89ce09eabf23c",
+    "main_records.json": "9db9810fd4c0eba5cb6f7699767e98d1c6deb86263649a909e6cc5f114eafb0d",
+    "manifest.json": "4bf863af74106c03c46f34a235276cf96c1fb0ea32d925176abf605c16f9af3a",
+    "mechanisms/records.json": "f3395bcbe8b26a86c1eb2c7f1e718218780343b95f8c9a43b565f7bca0b65653",
+    "security_probes.json": "e50f87a7613e583af38aa409fe3bfa2b3ac502ef0b24e9d548e67bb9eaad6486"
+  },
+  "public_artifact_sha256": {
+    "README.md": "f430467ee6d6f860ccca87f8b06be9cfb2b5d61d5b9a9bb347bed4c81951234d",
+    "audit_summary.public.json": "91a6dbbfe09c277895e813eb08f6ba5ebb82c2f1ed363035f18727ed87482add",
+    "cases.public.jsonl": "ff13b8a0caa508eebfb3fe9d1c56321b07dfc56de01dd88b2a47a11dbb01355d",
+    "contract.json": "0a4be06a3232eaeaad8518c05ce34508235fa2c3319c46a20545ca0e12a4a061",
+    "evaluation_only.json": "f4c26b8412f4be68c3368b5f2916922a19b77a24082c9aabd4dc8bab1e1f71ef",
+    "evaluation_report.public.json": "a6d78885b2925ecc2ef85d9376ec0de019147bdf251b7eb3f44119c4667d41a9",
+    "fixed_chunk_impact.public.json": "696dbc50e7f19581073908dfdf85ab6dd2865fc61b46f25df2541fbd049d99cd",
+    "mechanism_probes.public.json": "59e05786a28aa8b78a1fe49245d946a41e8f6be316f0ef7b5000508fb0c2a128",
+    "mechanism_spec.json": "4c699b8b1d3a02e86303a5dc20209419637b5a707182b202fe97fba591c644f5",
+    "records.public.json": "ad027f51e3b2c1cd94ffb90d2f2edfe4491fe63bd9911b23d263d718005863ae",
+    "security_probes.public.json": "4702f7bf5b53a53ce6497fd37b01407af99345b576635d78a30c6eae580a27ea",
+    "source_attempts.public.json": "e6725d0375e95fcc830fe778b79250fa79bd1f1e5ffcd614ffe20e023c4e0394",
+    "verification.json": "ffdeea8724b3582ecaf8ce9ed58495efb1f15a0052d59674680a3141aa636fdb"
+  },
+  "release_date": "2026-11-05",
+  "repository": "https://github.com/Caixianseng/memory-migration-permission-pilot",
+  "schema": "persistent-exchange-public-provenance-v1",
+  "scope": "offline scoring reproducibility; original native execution audit is reported, not independently reproduced here",
+  "unknown_costs_are_zero": false
+}

@@ -1,0 +1,155 @@
+{
+  "actual_supplier_bill_cny": null,
+  "batch": "prefix-quotient-scale64",
+  "evidence_kind": "native_scale_bridge_development",
+  "independent_unit": "one combined scale-bridge case derived from two existing content clusters; requests are repeated measures",
+  "measurements": {
+    "aggregate_analysis": {
+      "aggregate_arms": {
+        "greedy": {
+          "case_run_count": 1,
+          "comparison_eligible": true,
+          "completed_model_calls": 6,
+          "full_lifecycle_cached_peak_cost_cny": "0.05785504",
+          "full_lifecycle_no_cache_peak_cost_cny": "0.187560",
+          "initial_read_review_required": false,
+          "planning_ms": 24.677299999893876,
+          "qa_counts": {
+            "control_exact_unknown_count": 3,
+            "legal_nonunknown_string_count": 21,
+            "legal_phrase_checkable_count": 21,
+            "legal_required_phrase_hit_count": 20,
+            "legally_answerable_count": 21,
+            "question_count": 24,
+            "unanswerable_control_count": 3,
+            "unknown_answer_count": 3
+          },
+          "source_text_utf8_bytes": 366744,
+          "tokens": {
+            "cache_read_tokens": 66176,
+            "cache_write_tokens": 0,
+            "input_total_tokens": 92456,
+            "input_uncached_tokens": 26280,
+            "output_tokens": 331,
+            "total_tokens": 92787
+          }
+        },
+        "quotient": {
+          "case_run_count": 1,
+          "comparison_eligible": true,
+          "completed_model_calls": 6,
+          "full_lifecycle_cached_peak_cost_cny": "0.05789104",
+          "full_lifecycle_no_cache_peak_cost_cny": "0.187596",
+          "initial_read_review_required": false,
+          "planning_ms": 34.04959999897983,
+          "qa_counts": {
+            "control_exact_unknown_count": 3,
+            "legal_nonunknown_string_count": 21,
+            "legal_phrase_checkable_count": 21,
+            "legal_required_phrase_hit_count": 21,
+            "legally_answerable_count": 21,
+            "question_count": 24,
+            "unanswerable_control_count": 3,
+            "unknown_answer_count": 3
+          },
+          "source_text_utf8_bytes": 366744,
+          "tokens": {
+            "cache_read_tokens": 66176,
+            "cache_write_tokens": 0,
+            "input_total_tokens": 92462,
+            "input_uncached_tokens": 26286,
+            "output_tokens": 334,
+            "total_tokens": 92796
+          }
+        }
+      },
+      "all_runs_comparison_eligible": true,
+      "cost_is_supplier_bill": false,
+      "human_gold": null,
+      "independent_content_cluster_count": 1,
+      "qa_is_semantic_or_human_score": false,
+      "run_count": 1,
+      "unique_case_count": 1
+    },
+    "arm_totals": {
+      "greedy": {
+        "cost_is_supplier_bill": false,
+        "full_lifecycle_cache_aware_peak_cost_cny": "0.05785504",
+        "full_lifecycle_cost_complete": true,
+        "full_lifecycle_peak_cost_cny": "0.187560",
+        "includes_initial_call_and_all_warmup": true,
+        "successful_calls": 6,
+        "successful_receipted_cache_aware_peak_cost_cny": "0.05785504",
+        "successful_receipted_peak_cost_cny": "0.187560",
+        "tokens": {
+          "cache_read_tokens": 66176,
+          "cache_write_tokens": 0,
+          "input_total_tokens": 92456,
+          "input_uncached_tokens": 26280,
+          "output_tokens": 331,
+          "total_tokens": 92787
+        }
+      },
+      "quotient": {
+        "cost_is_supplier_bill": false,
+        "full_lifecycle_cache_aware_peak_cost_cny": "0.05789104",
+        "full_lifecycle_cost_complete": true,
+        "full_lifecycle_peak_cost_cny": "0.187596",
+        "includes_initial_call_and_all_warmup": true,
+        "successful_calls": 6,
+        "successful_receipted_cache_aware_peak_cost_cny": "0.05789104",
+        "successful_receipted_peak_cost_cny": "0.187596",
+        "tokens": {
+          "cache_read_tokens": 66176,
+          "cache_write_tokens": 0,
+          "input_total_tokens": 92462,
+          "input_uncached_tokens": 26286,
+          "output_tokens": 334,
+          "total_tokens": 92796
+        }
+      }
+    },
+    "automatic_retry": false,
+    "checkpoint": 26,
+    "cost_is_supplier_bill": false,
+    "full_lifecycle_cost_complete": true,
+    "human_gold": null,
+    "instrument_only": false,
+    "isolation_review_required": false,
+    "model_calls_attempted": 12,
+    "physical_totals": {
+      "cost_is_supplier_bill": false,
+      "full_lifecycle_cache_aware_peak_cost_cny": "0.11574608",
+      "full_lifecycle_cost_complete": true,
+      "full_lifecycle_peak_cost_cny": "0.375156",
+      "includes_initial_call_and_all_warmup": true,
+      "successful_calls": 12,
+      "successful_receipted_cache_aware_peak_cost_cny": "0.11574608",
+      "successful_receipted_peak_cost_cny": "0.375156",
+      "tokens": {
+        "cache_read_tokens": 132352,
+        "cache_write_tokens": 0,
+        "input_total_tokens": 184918,
+        "input_uncached_tokens": 52566,
+        "output_tokens": 665,
+        "total_tokens": 185583
+      }
+    },
+    "status": "completed"
+  },
+  "model_calls_by_exporter": 0,
+  "planned_request_count_is_actual_success_count": false,
+  "raw_answers_original_data_native_logs_and_local_paths_included": false,
+  "schema": "prior-experiment-aggregate-public-v1",
+  "source_files": [
+    {
+      "repository_relative_source": "results/revocation_prefix_v1/quotient-native64-20261105-v1/summary.json",
+      "source_file_sha256": "f6c6f87763e1e62a1412c4bf07717aab3f499231615930319fdd22c2544e19d6"
+    },
+    {
+      "repository_relative_source": "results/revocation_prefix_v1/quotient-native64-20261105-v1/analysis.json",
+      "source_file_sha256": "ced6bb742b600cfb8f2299f58a7b41ffc75f5fdf72fafbda9e93d26598fa68fb"
+    }
+  ],
+  "source_scope": "whitelist projection of aggregate local reports; not an independent native-execution re-audit"
+}

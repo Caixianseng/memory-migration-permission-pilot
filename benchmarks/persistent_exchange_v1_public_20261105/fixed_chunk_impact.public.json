@@ -1,0 +1,229 @@
+{
+  "affected_nonempty_rebuild_chunks": 35,
+  "chunks_in_nonzero_views": 36,
+  "entirely_withdrawn_chunks": 0,
+  "fully_unaffected_reusable_chunks": 1,
+  "new_model_prompts": 0,
+  "nonzero_revocation_views": 18,
+  "per_view": [
+    {
+      "affected_nonempty_chunks": 0,
+      "case_id": "exchange-n020-r00",
+      "chunks": 2,
+      "direction": "A_to_B",
+      "entirely_withdrawn_chunks": 0,
+      "revoked": 0,
+      "unaffected_chunks": 2
+    },
+    {
+      "affected_nonempty_chunks": 0,
+      "case_id": "exchange-n020-r00",
+      "chunks": 2,
+      "direction": "B_to_A",
+      "entirely_withdrawn_chunks": 0,
+      "revoked": 0,
+      "unaffected_chunks": 2
+    },
+    {
+      "affected_nonempty_chunks": 2,
+      "case_id": "exchange-n020-r10",
+      "chunks": 2,
+      "direction": "A_to_B",
+      "entirely_withdrawn_chunks": 0,
+      "revoked": 2,
+      "unaffected_chunks": 0
+    },
+    {
+      "affected_nonempty_chunks": 1,
+      "case_id": "exchange-n020-r10",
+      "chunks": 2,
+      "direction": "B_to_A",
+      "entirely_withdrawn_chunks": 0,
+      "revoked": 2,
+      "unaffected_chunks": 1
+    },
+    {
+      "affected_nonempty_chunks": 2,
+      "case_id": "exchange-n020-r30",
+      "chunks": 2,
+      "direction": "A_to_B",
+      "entirely_withdrawn_chunks": 0,
+      "revoked": 6,
+      "unaffected_chunks": 0
+    },
+    {
+      "affected_nonempty_chunks": 2,
+      "case_id": "exchange-n020-r30",
+      "chunks": 2,
+      "direction": "B_to_A",
+      "entirely_withdrawn_chunks": 0,
+      "revoked": 6,
+      "unaffected_chunks": 0
+    },
+    {
+      "affected_nonempty_chunks": 2,
+      "case_id": "exchange-n020-r50",
+      "chunks": 2,
+      "direction": "A_to_B",
+      "entirely_withdrawn_chunks": 0,
+      "revoked": 10,
+      "unaffected_chunks": 0
+    },
+    {
+      "affected_nonempty_chunks": 2,
+      "case_id": "exchange-n020-r50",
+      "chunks": 2,
+      "direction": "B_to_A",
+      "entirely_withdrawn_chunks": 0,
+      "revoked": 10,
+      "unaffected_chunks": 0
+    },
+    {
+      "affected_nonempty_chunks": 0,
+      "case_id": "exchange-n050-r00",
+      "chunks": 2,
+      "direction": "A_to_B",
+      "entirely_withdrawn_chunks": 0,
+      "revoked": 0,
+      "unaffected_chunks": 2
+    },
+    {
+      "affected_nonempty_chunks": 0,
+      "case_id": "exchange-n050-r00",
+      "chunks": 2,
+      "direction": "B_to_A",
+      "entirely_withdrawn_chunks": 0,
+      "revoked": 0,
+      "unaffected_chunks": 2
+    },
+    {
+      "affected_nonempty_chunks": 2,
+      "case_id": "exchange-n050-r10",
+      "chunks": 2,
+      "direction": "A_to_B",
+      "entirely_withdrawn_chunks": 0,
+      "revoked": 5,
+      "unaffected_chunks": 0
+    },
+    {
+      "affected_nonempty_chunks": 2,
+      "case_id": "exchange-n050-r10",
+      "chunks": 2,
+      "direction": "B_to_A",
+      "entirely_withdrawn_chunks": 0,
+      "revoked": 5,
+      "unaffected_chunks": 0
+    },
+    {
+      "affected_nonempty_chunks": 2,
+      "case_id": "exchange-n050-r30",
+      "chunks": 2,
+      "direction": "A_to_B",
+      "entirely_withdrawn_chunks": 0,
+      "revoked": 15,
+      "unaffected_chunks": 0
+    },
+    {
+      "affected_nonempty_chunks": 2,
+      "case_id": "exchange-n050-r30",
+      "chunks": 2,
+      "direction": "B_to_A",
+      "entirely_withdrawn_chunks": 0,
+      "revoked": 15,
+      "unaffected_chunks": 0
+    },
+    {
+      "affected_nonempty_chunks": 2,
+      "case_id": "exchange-n050-r50",
+      "chunks": 2,
+      "direction": "A_to_B",
+      "entirely_withdrawn_chunks": 0,
+      "revoked": 25,
+      "unaffected_chunks": 0
+    },
+    {
+      "affected_nonempty_chunks": 2,
+      "case_id": "exchange-n050-r50",
+      "chunks": 2,
+      "direction": "B_to_A",
+      "entirely_withdrawn_chunks": 0,
+      "revoked": 25,
+      "unaffected_chunks": 0
+    },
+    {
+      "affected_nonempty_chunks": 0,
+      "case_id": "exchange-n100-r00",
+      "chunks": 2,
+      "direction": "A_to_B",
+      "entirely_withdrawn_chunks": 0,
+      "revoked": 0,
+      "unaffected_chunks": 2
+    },
+    {
+      "affected_nonempty_chunks": 0,
+      "case_id": "exchange-n100-r00",
+      "chunks": 2,
+      "direction": "B_to_A",
+      "entirely_withdrawn_chunks": 0,
+      "revoked": 0,
+      "unaffected_chunks": 2
+    },
+    {
+      "affected_nonempty_chunks": 2,
+      "case_id": "exchange-n100-r10",
+      "chunks": 2,
+      "direction": "A_to_B",
+      "entirely_withdrawn_chunks": 0,
+      "revoked": 10,
+      "unaffected_chunks": 0
+    },
+    {
+      "affected_nonempty_chunks": 2,
+      "case_id": "exchange-n100-r10",
+      "chunks": 2,
+      "direction": "B_to_A",
+      "entirely_withdrawn_chunks": 0,
+      "revoked": 10,
+      "unaffected_chunks": 0
+    },
+    {
+      "affected_nonempty_chunks": 2,
+      "case_id": "exchange-n100-r30",
+      "chunks": 2,
+      "direction": "A_to_B",
+      "entirely_withdrawn_chunks": 0,
+      "revoked": 30,
+      "unaffected_chunks": 0
+    },
+    {
+      "affected_nonempty_chunks": 2,
+      "case_id": "exchange-n100-r30",
+      "chunks": 2,
+      "direction": "B_to_A",
+      "entirely_withdrawn_chunks": 0,
+      "revoked": 30,
+      "unaffected_chunks": 0
+    },
+    {
+      "affected_nonempty_chunks": 2,
+      "case_id": "exchange-n100-r50",
+      "chunks": 2,
+      "direction": "A_to_B",
+      "entirely_withdrawn_chunks": 0,
+      "revoked": 50,
+      "unaffected_chunks": 0
+    },
+    {
+      "affected_nonempty_chunks": 2,
+      "case_id": "exchange-n100-r50",
+      "chunks": 2,
+      "direction": "B_to_A",
+      "entirely_withdrawn_chunks": 0,
+      "revoked": 50,
+      "unaffected_chunks": 0
+    }
+  ],
+  "purpose": "descriptive explanation after frozen main scoring; not a new evaluation outcome or evidence of a replacement algorithm",
+  "schema": "posthoc-fixed-chunk-impact-description-v1",
+  "views_with_both_chunks_affected": 17
+}

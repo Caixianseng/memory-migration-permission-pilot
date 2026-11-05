@@ -1,0 +1,37 @@
+{
+  "export_type": "aggregate_projection_only",
+  "files": {
+    "evidence_repair_fresh40.json": {
+      "bytes": 8921,
+      "sha256": "0da282134e2dca11b59f3d4ca23e1f356a77ecb71d09ee3227fd7a20346defac"
+    },
+    "grouping_development-20261104-v1.json": {
+      "bytes": 30597,
+      "sha256": "0786fb610d8703c4ad016beb399b87bdd0ff76cbaa87f3088565a8dddb59210d"
+    },
+    "grouping_long-workload-20261104-v2.json": {
+      "bytes": 21298,
+      "sha256": "a9955c0c054e58075446e6a30893e397b7b8c4724e0c4709da0738690b69e60c"
+    },
+    "grouping_reserved-20261104-v2.json": {
+      "bytes": 58861,
+      "sha256": "e0e3ac5c35226189b414d268ecc97e0e0a81349c0e09bd163902d6190ae942c8"
+    },
+    "memory_module_fusion.json": {
+      "bytes": 23895,
+      "sha256": "8139a7d1130128cc30ae3a5d1026a65b4738d620bf9e50884b29c0d2420690b3"
+    },
+    "permission_context.json": {
+      "bytes": 56990,
+      "sha256": "b3749ce60b8b442bf1f413bcb90219a1539571d437179ab389403b9b0a6544ec"
+    },
+    "prefix_quotient64.json": {
+      "bytes": 5893,
+      "sha256": "e82766ab3d370ad7ce9ea1215a3149e54e4f651e0f3eb1c9b089e39660d674da"
+    }
+  },
+  "independent_native_reaudit_possible_from_this_bundle_alone": false,
+  "model_calls_by_exporter": 0,
+  "schema": "prior-experiment-public-manifest-v1",
+  "source_reports_are_not_distributed": true
+}

@@ -1,0 +1,13 @@
+{
+  "complete_core_evaluation_equal_to_archived_final": true,
+  "evaluator_changed": false,
+  "new_model_prompts": 0,
+  "new_real_deliveries": 0,
+  "original_answer_hashes_verified": 96,
+  "original_receiver_payload_hashes_verified": 96,
+  "original_source_result_hashes_verified": 132,
+  "public_native_execution_audit_claimed": false,
+  "schema": "persistent-exchange-public-export-check-v1",
+  "sensitive_pattern_scan": "passed; bounded scan plus field whitelist, not a universal detector",
+  "source_attempt_reference_count_preserved": true
+}

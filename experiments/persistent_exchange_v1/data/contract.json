@@ -1,0 +1,109 @@
+{
+  "arms": [
+    "raw",
+    "whole_drop",
+    "full_rebuild",
+    "selective"
+  ],
+  "artifact_sha256": {
+    "cases.public.jsonl": "ff13b8a0caa508eebfb3fe9d1c56321b07dfc56de01dd88b2a47a11dbb01355d",
+    "evaluation_only.json": "f4c26b8412f4be68c3368b5f2916922a19b77a24082c9aabd4dc8bab1e1f71ef",
+    "mechanism_spec.json": "4c699b8b1d3a02e86303a5dc20209419637b5a707182b202fe97fba591c644f5"
+  },
+  "chunk_rule": "source-ID hash order split into two equal halves; fixed before questions and permissions",
+  "chunks_per_agent": 2,
+  "cost_protocol": {
+    "cache_rule": "all arms may reuse identical source/content/permission-safe views; source initial outputs at regrant may be reused only after current complete original binding checks",
+    "generation_budget": "same total initial output budget for whole and sum of chunks; document unenforced native limits and observed overruns without post-outcome deletion",
+    "no_supplier_total_money_superiority_claim_when_workbuddy_billing_unknown": true,
+    "per_method_logical_ledger": "each arm is charged its required initial generation; a physically shared whole artifact may be charged to both whole_drop and full_rebuild counterfactual ledgers, explicitly distinct from physical totals",
+    "physical_ledger": "every real request/task exactly once, including source setup, rebuild, target and failures",
+    "unknown_costs_must_not_be_zero_or_converted_using_harness_prices": true,
+    "unknown_workbuddy_supplier_fee_and_physical_requests": null
+  },
+  "directions": [
+    "A_to_B",
+    "B_to_A"
+  ],
+  "frozen_date": "2026-11-05",
+  "generation_model_responses_are_stochastic_and_never_expected_byte_equal": true,
+  "generator_sha256": "3792a3d98d3306c2a7b3bbc62e2f2fa02be69dd5ba6be40740b48594181240e6",
+  "independent_project_clusters": 12,
+  "main_scoring_point": "post-withdrawal first delivery/import; no earlier target disclosure of this packet",
+  "main_timeline": [
+    "each real source model independently builds whole and two fixed-chunk artifacts at full initial permission",
+    "source outputs are stored immutably in sender SQLite with complete actual input origins",
+    "trusted controller withdraws destination permissions",
+    "raw exports lawful originals; whole_drop blocks invalid whole artifact; full_rebuild regenerates whole from current originals; selective retains only legal chunks and independently rebuilds affected lawful subsets",
+    "gateway exports provenance/version-bound packet, receiver SQLite imports after atomic policy recheck",
+    "close and reopen receiver store; retrieve from receiver database only; real other model answers eight public questions",
+    "repeat opposite direction using independent owner originals and fresh receiver view"
+  ],
+  "materials": "fully controlled synthetic projects; not private or real user records",
+  "metrics": [
+    "source/payload authorization and lineage/version safety",
+    "persistent import and reopened retrieval equality",
+    "legal task completion with frozen required values",
+    "strong-canary sensitive-value delivery and answer leakage",
+    "UNKNOWN abstention on proven withheld independent values",
+    "source generation, repair and receiver calls",
+    "serialized bytes, source/receiver token usage when observable, initial plus repair plus transfer/import/retrieval timings"
+  ],
+  "minimum_logical_main_invocations": {
+    "combined_model_calls_or_native_tasks_upper_bound": 222,
+    "initial_independent_chunk_artifacts": 48,
+    "initial_whole_artifacts": 24,
+    "max_affected_chunk_rebuild_artifacts": 36,
+    "max_full_rebuild_artifacts_after_new_grants": 18,
+    "per_platform_upper_bound": 111,
+    "receiver_model_calls_or_native_tasks": 96,
+    "source_generation_upper_bound_before_empty_subset_or_nochange_reuse": 126,
+    "workbuddy_task_is_not_supplier_physical_request_count": true
+  },
+  "other_withdrawn_reference_views_are_not_declared_impossible": true,
+  "permission_probe_is_declared_mask_dependent_secondary_measure": true,
+  "permission_probe_questions": 1,
+  "permission_rule": "uniform floor(N*p/100) sources withdrawn, own agent remains authorized; separate deterministic seed per case/direction",
+  "permission_scheduler_api": "permission_event(case, direction)",
+  "primary_utility_eligibility": "all frozen required source IDs remain authorized; no outcome exclusions",
+  "public_receiver_question_api": "receiver_questions(evaluation, case_id, direction)",
+  "receiver_questions_per_direction": 8,
+  "receiver_store_is_experiment_owned_not_product_private_builtin_memory": true,
+  "research_question": "Under source permission withdrawal before first import, can independently generated source-bound memories be safely persisted and used by another real model agent while retaining legal utility?",
+  "revocation_percent_values": [
+    0,
+    10,
+    30,
+    50
+  ],
+  "schema": "persistent-bidirectional-memory-exchange-v1",
+  "seed": 2026110507,
+  "separate_mechanisms": "mechanism_spec.json; two real multilayer generation-and-return checks, excluded from main comparisons",
+  "single_source_questions": 5,
+  "source_count_is_per_agent_not_total_project": true,
+  "source_model_artifacts_must_be_generated_by_actual_hy3_or_flash": true,
+  "source_projection_api": "source_projection(case, agent_id, source_ids=None)",
+  "source_visibility": [
+    "only the supplied original source projection, public transformation instructions and fixed length budget",
+    "no future questions, expected answers, support annotations or future permission schedule"
+  ],
+  "sources_per_agent_values": [
+    20,
+    50,
+    100
+  ],
+  "statistics_protocol": {
+    "engineering_screen": "quality drop <=0.05 against raw plus resource reduction >=20% against strongest comparable safe baseline; not statistical noninferiority proof",
+    "independent_unit": "project cluster (12); direction, policy question and method are repeated measures",
+    "legal_quality": "average eligible question score within direction, then average directions within project, then projects equally",
+    "no_posthoc_winner_switch_or_reference_relabeling": true,
+    "no_power_or_publication_sufficiency_claim": true,
+    "primary_candidate": "selective",
+    "quality_reference": "raw",
+    "strong_safe_rebuild_reference": "full_rebuild",
+    "uncertainty": "paired project-cluster bootstrap preserving all directions/questions/methods; exploratory pointwise intervals",
+    "zero_observed_violations_not_universal_safety_proof": true
+  },
+  "strong_UNKNOWN_reference_requires_independent_unique_value_absent_from_every_other_source_and_no_fact_rule_derives_it": true,
+  "two_source_join_questions": 2
+}

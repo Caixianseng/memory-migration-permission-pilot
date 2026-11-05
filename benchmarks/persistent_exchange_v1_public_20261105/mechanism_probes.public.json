@@ -1,0 +1,118 @@
+{
+  "answers": [
+    {
+      "actual_models": [
+        "hy3-x"
+      ],
+      "answers": {
+        "layered-01-legal": "2028-10-11",
+        "layered-01-withdrawn": "UNKNOWN"
+      },
+      "arm": "layered_rebuild",
+      "case_id": "exchange-n020-r00",
+      "direction": "B_to_A",
+      "mechanism_id": "layered-01",
+      "receiver_status": "ok"
+    },
+    {
+      "actual_models": [
+        "hy3-x"
+      ],
+      "answers": {
+        "layered-02-legal": "2029年8月7日",
+        "layered-02-withdrawn": "UNKNOWN"
+      },
+      "arm": "layered_rebuild",
+      "case_id": "exchange-n020-r10",
+      "direction": "B_to_A",
+      "mechanism_id": "layered-02",
+      "receiver_status": "ok"
+    }
+  ],
+  "excluded_from_main": true,
+  "local_audit_status_reported": "audited",
+  "physical_ledger": {
+    "all_platform_physical_supplier_calls": null,
+    "all_platform_supplier_fee_cny": null,
+    "artifact_count": 6,
+    "flash_estimated_cache_aware_peak_cny": "0.027454",
+    "flash_estimated_cold_peak_cny": "0.027454",
+    "flash_estimates_are_supplier_bill": false,
+    "flash_known_physical_supplier_calls": 4,
+    "flash_native_tokens": {
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "input_total_tokens": 4771,
+      "input_uncached_tokens": 4771,
+      "output_tokens": 2239,
+      "total_tokens": 7010
+    },
+    "flash_native_tokens_scope": "sum over qualified usage only; see unknown-usage count",
+    "flash_physical_request_count_unknown_attempts": 0,
+    "flash_physical_supplier_calls": 4,
+    "flash_usage_unknown_attempts": 0,
+    "hy3_native_direct_session_submissions": 2,
+    "hy3_native_queue_submissions": 0,
+    "hy3_native_tasks": 2,
+    "hy3_native_tasks_scope": "qualified native HY3 executions only; excludes zero-prompt creation failures and blocked queue submissions without provider identity",
+    "hy3_physical_supplier_calls": null,
+    "hy3_pre_model_zero_submission_source_attempts": 0,
+    "hy3_queue_submission_without_verified_model_execution": 0,
+    "logical_source_attempts": 4,
+    "model_submission_count_unknown_attempts": 0,
+    "native_source_shell_scope_failed_jobs": 0,
+    "original_input_characters": 218,
+    "original_input_source_count": 6,
+    "parent_input_characters": 2920,
+    "platform_jobs": {
+      "flash": 4,
+      "hy3": 2
+    },
+    "receiver_jobs": 2,
+    "receiver_presented_memory_bytes": 1978,
+    "receiver_wall_ms": null,
+    "serialized_source_business_input_bytes": 7528,
+    "source_attempt_outcomes": {
+      "success": 4
+    },
+    "source_jobs": 4,
+    "source_observed_partial_output_bytes_not_usable_memory": 0,
+    "source_output_memory_bytes": 5840,
+    "source_phase_jobs": {
+      "mechanism_source": 4
+    },
+    "source_protocol_failed_jobs": 0,
+    "source_wall_sum_is_parallel_elapsed_time": false,
+    "successful_source_memory_jobs": 4,
+    "sum_source_job_wall_ms": 22528.045099999872,
+    "supplemental_continuation_input_volume_unknown_turns": 0,
+    "supplemental_existing_session_continuation_turns": 0,
+    "workbuddy_supplier_fee_cny": null
+  },
+  "probe_results": [
+    {
+      "legal_value_coverage": [
+        true
+      ],
+      "mechanism_id": "layered-01",
+      "old_child_export_and_import_blocked": true,
+      "payload_surface_leaked_values": 0,
+      "unique_withheld_unknown": [
+        true
+      ]
+    },
+    {
+      "legal_value_coverage": [
+        true
+      ],
+      "mechanism_id": "layered-02",
+      "old_child_export_and_import_blocked": true,
+      "payload_surface_leaked_values": 0,
+      "unique_withheld_unknown": [
+        true
+      ]
+    }
+  ],
+  "raw_database_and_native_receipts_included": false,
+  "schema": "persistent-exchange-public-mechanism-projection-v1"
+}

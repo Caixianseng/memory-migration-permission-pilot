@@ -1,0 +1,1362 @@
+{
+  "interpretation": {
+    "content_binding_probe_setup": "only a disposable policy copy has its already-consumed nonce rearmed to avoid replay rejection masking the independent trusted content-binding guard",
+    "copy_attack_scope": "local trusted-host import guards on copies of actual approved packets; no distributed transaction, remote model attestation or prior-plaintext erasure claim",
+    "offline_potential_exposure": "a frozen unique withdrawn value occurs in an old generated whole artifact inspected offline; this probe never exports or delivers it",
+    "permission_and_tool_compliance": "a permission-allowed zero-revocation artifact may independently fail the source tool audit; the two results are kept separate"
+  },
+  "model_invocations": 0,
+  "new_real_deliveries": 0,
+  "packet_copy_attacks": [
+    {
+      "all_attacks_use_disposable_policy_and_receiver_copies": true,
+      "approved_arm": "raw",
+      "approved_packet_file_sha256": "a4dcb9a714b2809df3a42496b0aa71f0e0329d684c2b795ae6fbaac92578910e",
+      "approved_packet_sha256": "2517d7b73227e1b5d4e546fbd3323fe896a7c55a0f8dcb41b13c7779d3bda0c4",
+      "available": true,
+      "case_id": "exchange-n020-r00",
+      "direction": "A_to_B",
+      "probes": [
+        {
+          "expected_reason": "transfer_replay_rejected",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "consumed_nonce_replay",
+          "reason": "transfer_replay_rejected",
+          "rejected": true
+        },
+        {
+          "expected_reason": "trusted_packet_seal_mismatch",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "content_tamper_with_recomputed_internal_hashes",
+          "reason": "trusted_packet_seal_mismatch",
+          "rejected": true
+        },
+        {
+          "expected_reason": "packet_recipient_or_schema_invalid",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "wrong_recipient",
+          "reason": "packet_recipient_or_schema_invalid",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "all_attacks_use_disposable_policy_and_receiver_copies": true,
+      "approved_arm": "raw",
+      "approved_packet_file_sha256": "eb7778358a189b989e193dfb65e4bf170e3f333aec4efa45b1dbebea8f439477",
+      "approved_packet_sha256": "aef9f54e9ef1355428f755d8079cb567e79855444f4c765d61202fedabe7af63",
+      "available": true,
+      "case_id": "exchange-n020-r00",
+      "direction": "B_to_A",
+      "probes": [
+        {
+          "expected_reason": "transfer_replay_rejected",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "consumed_nonce_replay",
+          "reason": "transfer_replay_rejected",
+          "rejected": true
+        },
+        {
+          "expected_reason": "trusted_packet_seal_mismatch",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "content_tamper_with_recomputed_internal_hashes",
+          "reason": "trusted_packet_seal_mismatch",
+          "rejected": true
+        },
+        {
+          "expected_reason": "packet_recipient_or_schema_invalid",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "wrong_recipient",
+          "reason": "packet_recipient_or_schema_invalid",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "all_attacks_use_disposable_policy_and_receiver_copies": true,
+      "approved_arm": "raw",
+      "approved_packet_file_sha256": "e3fc86144e8472bb5a5d487fda23deaed85bf710bc1333707f30d9de524b9228",
+      "approved_packet_sha256": "ec88c95b2905f5880c5d82f1d8a1885b8f221af38cb9fe906cff831bdcdae878",
+      "available": true,
+      "case_id": "exchange-n020-r10",
+      "direction": "A_to_B",
+      "probes": [
+        {
+          "expected_reason": "transfer_replay_rejected",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "consumed_nonce_replay",
+          "reason": "transfer_replay_rejected",
+          "rejected": true
+        },
+        {
+          "expected_reason": "trusted_packet_seal_mismatch",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "content_tamper_with_recomputed_internal_hashes",
+          "reason": "trusted_packet_seal_mismatch",
+          "rejected": true
+        },
+        {
+          "expected_reason": "packet_recipient_or_schema_invalid",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "wrong_recipient",
+          "reason": "packet_recipient_or_schema_invalid",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "all_attacks_use_disposable_policy_and_receiver_copies": true,
+      "approved_arm": "raw",
+      "approved_packet_file_sha256": "2a10adc504ebf84673dc167295733ea2457ffc3329680cabacc06e60f7bdc5e6",
+      "approved_packet_sha256": "b73ea1a460a3206e6e284064fde0209218b38eba4ae4c6488297bbe21d4e614a",
+      "available": true,
+      "case_id": "exchange-n020-r10",
+      "direction": "B_to_A",
+      "probes": [
+        {
+          "expected_reason": "transfer_replay_rejected",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "consumed_nonce_replay",
+          "reason": "transfer_replay_rejected",
+          "rejected": true
+        },
+        {
+          "expected_reason": "trusted_packet_seal_mismatch",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "content_tamper_with_recomputed_internal_hashes",
+          "reason": "trusted_packet_seal_mismatch",
+          "rejected": true
+        },
+        {
+          "expected_reason": "packet_recipient_or_schema_invalid",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "wrong_recipient",
+          "reason": "packet_recipient_or_schema_invalid",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "all_attacks_use_disposable_policy_and_receiver_copies": true,
+      "approved_arm": "raw",
+      "approved_packet_file_sha256": "b2fb96baa671b6e660a95d8476b6b7848cc25a70ebc24477da4008deaf93e17c",
+      "approved_packet_sha256": "db6053306f9fe8c0b578ebdc6f34a1412ba6527b4da61704bb4a2c8c380d3a46",
+      "available": true,
+      "case_id": "exchange-n020-r30",
+      "direction": "A_to_B",
+      "probes": [
+        {
+          "expected_reason": "transfer_replay_rejected",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "consumed_nonce_replay",
+          "reason": "transfer_replay_rejected",
+          "rejected": true
+        },
+        {
+          "expected_reason": "trusted_packet_seal_mismatch",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "content_tamper_with_recomputed_internal_hashes",
+          "reason": "trusted_packet_seal_mismatch",
+          "rejected": true
+        },
+        {
+          "expected_reason": "packet_recipient_or_schema_invalid",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "wrong_recipient",
+          "reason": "packet_recipient_or_schema_invalid",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "all_attacks_use_disposable_policy_and_receiver_copies": true,
+      "approved_arm": "raw",
+      "approved_packet_file_sha256": "0855496175f566326769fe872a5ace511941d389b8c4360a759cf9b295b2ef69",
+      "approved_packet_sha256": "3596159a4c792672f91908802d9c43dc3093509b74c48f548a362c31975c63d5",
+      "available": true,
+      "case_id": "exchange-n020-r30",
+      "direction": "B_to_A",
+      "probes": [
+        {
+          "expected_reason": "transfer_replay_rejected",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "consumed_nonce_replay",
+          "reason": "transfer_replay_rejected",
+          "rejected": true
+        },
+        {
+          "expected_reason": "trusted_packet_seal_mismatch",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "content_tamper_with_recomputed_internal_hashes",
+          "reason": "trusted_packet_seal_mismatch",
+          "rejected": true
+        },
+        {
+          "expected_reason": "packet_recipient_or_schema_invalid",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "wrong_recipient",
+          "reason": "packet_recipient_or_schema_invalid",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "all_attacks_use_disposable_policy_and_receiver_copies": true,
+      "approved_arm": "raw",
+      "approved_packet_file_sha256": "3febc768d16f7d848ab492e7a2447e6f16023fbcd44172d0e2717a71bde7a828",
+      "approved_packet_sha256": "3fde0e6a2106db14b92ef1b18d002120638389ed4ade56b28cd96df4ff5656c9",
+      "available": true,
+      "case_id": "exchange-n020-r50",
+      "direction": "A_to_B",
+      "probes": [
+        {
+          "expected_reason": "transfer_replay_rejected",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "consumed_nonce_replay",
+          "reason": "transfer_replay_rejected",
+          "rejected": true
+        },
+        {
+          "expected_reason": "trusted_packet_seal_mismatch",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "content_tamper_with_recomputed_internal_hashes",
+          "reason": "trusted_packet_seal_mismatch",
+          "rejected": true
+        },
+        {
+          "expected_reason": "packet_recipient_or_schema_invalid",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "wrong_recipient",
+          "reason": "packet_recipient_or_schema_invalid",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "all_attacks_use_disposable_policy_and_receiver_copies": true,
+      "approved_arm": "raw",
+      "approved_packet_file_sha256": "14bc41cc96a94587518b52091967d15cec2e9ef260051cfe12205f6fefa17c9d",
+      "approved_packet_sha256": "4d6b5147e9af8a100db641a4da6e016764b50259d2715e676a4f3cbb85278b3e",
+      "available": true,
+      "case_id": "exchange-n020-r50",
+      "direction": "B_to_A",
+      "probes": [
+        {
+          "expected_reason": "transfer_replay_rejected",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "consumed_nonce_replay",
+          "reason": "transfer_replay_rejected",
+          "rejected": true
+        },
+        {
+          "expected_reason": "trusted_packet_seal_mismatch",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "content_tamper_with_recomputed_internal_hashes",
+          "reason": "trusted_packet_seal_mismatch",
+          "rejected": true
+        },
+        {
+          "expected_reason": "packet_recipient_or_schema_invalid",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "wrong_recipient",
+          "reason": "packet_recipient_or_schema_invalid",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "all_attacks_use_disposable_policy_and_receiver_copies": true,
+      "approved_arm": "raw",
+      "approved_packet_file_sha256": "34ee314238b12154f4a9563d5dfac894e0764b0d7b8980e2151585f35ff5a346",
+      "approved_packet_sha256": "d2324771f3ce3cba5149f2c624d6ab07396fdc3f0018263d58c1d2d17dec792a",
+      "available": true,
+      "case_id": "exchange-n050-r00",
+      "direction": "A_to_B",
+      "probes": [
+        {
+          "expected_reason": "transfer_replay_rejected",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "consumed_nonce_replay",
+          "reason": "transfer_replay_rejected",
+          "rejected": true
+        },
+        {
+          "expected_reason": "trusted_packet_seal_mismatch",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "content_tamper_with_recomputed_internal_hashes",
+          "reason": "trusted_packet_seal_mismatch",
+          "rejected": true
+        },
+        {
+          "expected_reason": "packet_recipient_or_schema_invalid",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "wrong_recipient",
+          "reason": "packet_recipient_or_schema_invalid",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "all_attacks_use_disposable_policy_and_receiver_copies": true,
+      "approved_arm": "raw",
+      "approved_packet_file_sha256": "061905c1c6f6a2498c7de8584b898d6f26cd647b476a283c654a0e6e6b0f36a2",
+      "approved_packet_sha256": "27657a62aaffe6fe7cc1391f4db32619bae539a3d50c10689e19e00d57371771",
+      "available": true,
+      "case_id": "exchange-n050-r00",
+      "direction": "B_to_A",
+      "probes": [
+        {
+          "expected_reason": "transfer_replay_rejected",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "consumed_nonce_replay",
+          "reason": "transfer_replay_rejected",
+          "rejected": true
+        },
+        {
+          "expected_reason": "trusted_packet_seal_mismatch",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "content_tamper_with_recomputed_internal_hashes",
+          "reason": "trusted_packet_seal_mismatch",
+          "rejected": true
+        },
+        {
+          "expected_reason": "packet_recipient_or_schema_invalid",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "wrong_recipient",
+          "reason": "packet_recipient_or_schema_invalid",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "all_attacks_use_disposable_policy_and_receiver_copies": true,
+      "approved_arm": "raw",
+      "approved_packet_file_sha256": "8ff2e906c93fe65e52b4121ef50356209db37533abb511c7f0e18b98777ccc82",
+      "approved_packet_sha256": "6b44ce912254f1c9b57e7754fbac036e379952a5727583d121dfe6d67939fac9",
+      "available": true,
+      "case_id": "exchange-n050-r10",
+      "direction": "A_to_B",
+      "probes": [
+        {
+          "expected_reason": "transfer_replay_rejected",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "consumed_nonce_replay",
+          "reason": "transfer_replay_rejected",
+          "rejected": true
+        },
+        {
+          "expected_reason": "trusted_packet_seal_mismatch",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "content_tamper_with_recomputed_internal_hashes",
+          "reason": "trusted_packet_seal_mismatch",
+          "rejected": true
+        },
+        {
+          "expected_reason": "packet_recipient_or_schema_invalid",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "wrong_recipient",
+          "reason": "packet_recipient_or_schema_invalid",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "all_attacks_use_disposable_policy_and_receiver_copies": true,
+      "approved_arm": "raw",
+      "approved_packet_file_sha256": "c331d1f96babc49fb011cd16cf5fad3f8d6c9de058bbff126f69d8e3b1b1b586",
+      "approved_packet_sha256": "32201525f46b0b51df78bda5975e9ef24223aba6091fe652680fe88a01945b27",
+      "available": true,
+      "case_id": "exchange-n050-r10",
+      "direction": "B_to_A",
+      "probes": [
+        {
+          "expected_reason": "transfer_replay_rejected",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "consumed_nonce_replay",
+          "reason": "transfer_replay_rejected",
+          "rejected": true
+        },
+        {
+          "expected_reason": "trusted_packet_seal_mismatch",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "content_tamper_with_recomputed_internal_hashes",
+          "reason": "trusted_packet_seal_mismatch",
+          "rejected": true
+        },
+        {
+          "expected_reason": "packet_recipient_or_schema_invalid",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "wrong_recipient",
+          "reason": "packet_recipient_or_schema_invalid",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "all_attacks_use_disposable_policy_and_receiver_copies": true,
+      "approved_arm": "raw",
+      "approved_packet_file_sha256": "c8cd39dcc6d1456076f47b5266cd05565ce7f236ec32bf3ecf3f8df2f555e4df",
+      "approved_packet_sha256": "dc6a6c92c0eeb5e74fc6b1b0aeae02391852688493b1a674c2cfaa02ec321487",
+      "available": true,
+      "case_id": "exchange-n050-r30",
+      "direction": "A_to_B",
+      "probes": [
+        {
+          "expected_reason": "transfer_replay_rejected",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "consumed_nonce_replay",
+          "reason": "transfer_replay_rejected",
+          "rejected": true
+        },
+        {
+          "expected_reason": "trusted_packet_seal_mismatch",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "content_tamper_with_recomputed_internal_hashes",
+          "reason": "trusted_packet_seal_mismatch",
+          "rejected": true
+        },
+        {
+          "expected_reason": "packet_recipient_or_schema_invalid",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "wrong_recipient",
+          "reason": "packet_recipient_or_schema_invalid",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "all_attacks_use_disposable_policy_and_receiver_copies": true,
+      "approved_arm": "raw",
+      "approved_packet_file_sha256": "043eef7b5c4b7281eb69c541d8cf97aef9f2f91160143c4586e370870e1bf092",
+      "approved_packet_sha256": "31dab975cb614e9e909c42267889c44721deedf1539c2307a9e1a1fec6f3f227",
+      "available": true,
+      "case_id": "exchange-n050-r30",
+      "direction": "B_to_A",
+      "probes": [
+        {
+          "expected_reason": "transfer_replay_rejected",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "consumed_nonce_replay",
+          "reason": "transfer_replay_rejected",
+          "rejected": true
+        },
+        {
+          "expected_reason": "trusted_packet_seal_mismatch",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "content_tamper_with_recomputed_internal_hashes",
+          "reason": "trusted_packet_seal_mismatch",
+          "rejected": true
+        },
+        {
+          "expected_reason": "packet_recipient_or_schema_invalid",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "wrong_recipient",
+          "reason": "packet_recipient_or_schema_invalid",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "all_attacks_use_disposable_policy_and_receiver_copies": true,
+      "approved_arm": "raw",
+      "approved_packet_file_sha256": "f1b88d0780b49d4f92ea9c2c847b66c062d479ca76e35b9719b1c90126c863a8",
+      "approved_packet_sha256": "5c964e026c7193bdc1accfc5fd248b8caf151844e9f12556ac1dbb4f1015c0d8",
+      "available": true,
+      "case_id": "exchange-n050-r50",
+      "direction": "A_to_B",
+      "probes": [
+        {
+          "expected_reason": "transfer_replay_rejected",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "consumed_nonce_replay",
+          "reason": "transfer_replay_rejected",
+          "rejected": true
+        },
+        {
+          "expected_reason": "trusted_packet_seal_mismatch",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "content_tamper_with_recomputed_internal_hashes",
+          "reason": "trusted_packet_seal_mismatch",
+          "rejected": true
+        },
+        {
+          "expected_reason": "packet_recipient_or_schema_invalid",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "wrong_recipient",
+          "reason": "packet_recipient_or_schema_invalid",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "all_attacks_use_disposable_policy_and_receiver_copies": true,
+      "approved_arm": "raw",
+      "approved_packet_file_sha256": "edb4d549313ccc3b3a9e31a1fab071ed556060d83b5f3c3817181a89526a2804",
+      "approved_packet_sha256": "33591dc97a6e705e0acaf6ab368137b4524155f6a12c9e7f8998bd86ca632eec",
+      "available": true,
+      "case_id": "exchange-n050-r50",
+      "direction": "B_to_A",
+      "probes": [
+        {
+          "expected_reason": "transfer_replay_rejected",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "consumed_nonce_replay",
+          "reason": "transfer_replay_rejected",
+          "rejected": true
+        },
+        {
+          "expected_reason": "trusted_packet_seal_mismatch",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "content_tamper_with_recomputed_internal_hashes",
+          "reason": "trusted_packet_seal_mismatch",
+          "rejected": true
+        },
+        {
+          "expected_reason": "packet_recipient_or_schema_invalid",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "wrong_recipient",
+          "reason": "packet_recipient_or_schema_invalid",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "all_attacks_use_disposable_policy_and_receiver_copies": true,
+      "approved_arm": "raw",
+      "approved_packet_file_sha256": "8e37414405b044d8d2d6d93087a81efb751fca7a1589de87a6ae8117e39388ea",
+      "approved_packet_sha256": "f6aabbcb6972ce4faec9f9dce6d6c68498c4164f3b94b75f33023055675a15e9",
+      "available": true,
+      "case_id": "exchange-n100-r00",
+      "direction": "A_to_B",
+      "probes": [
+        {
+          "expected_reason": "transfer_replay_rejected",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "consumed_nonce_replay",
+          "reason": "transfer_replay_rejected",
+          "rejected": true
+        },
+        {
+          "expected_reason": "trusted_packet_seal_mismatch",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "content_tamper_with_recomputed_internal_hashes",
+          "reason": "trusted_packet_seal_mismatch",
+          "rejected": true
+        },
+        {
+          "expected_reason": "packet_recipient_or_schema_invalid",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "wrong_recipient",
+          "reason": "packet_recipient_or_schema_invalid",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "all_attacks_use_disposable_policy_and_receiver_copies": true,
+      "approved_arm": "raw",
+      "approved_packet_file_sha256": "dd3e28d06a0662a28a8ab3fd4bd48dd31046c76aaa23f556e9353250cd181871",
+      "approved_packet_sha256": "7653a3868f971b1c3a57550289071fa13ead2e4140c58626602239e4f4903824",
+      "available": true,
+      "case_id": "exchange-n100-r00",
+      "direction": "B_to_A",
+      "probes": [
+        {
+          "expected_reason": "transfer_replay_rejected",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "consumed_nonce_replay",
+          "reason": "transfer_replay_rejected",
+          "rejected": true
+        },
+        {
+          "expected_reason": "trusted_packet_seal_mismatch",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "content_tamper_with_recomputed_internal_hashes",
+          "reason": "trusted_packet_seal_mismatch",
+          "rejected": true
+        },
+        {
+          "expected_reason": "packet_recipient_or_schema_invalid",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "wrong_recipient",
+          "reason": "packet_recipient_or_schema_invalid",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "all_attacks_use_disposable_policy_and_receiver_copies": true,
+      "approved_arm": "raw",
+      "approved_packet_file_sha256": "b2b542750302bbe042f9d159a3116bc7ee700b66c2a0db94528fd5a4f19b4558",
+      "approved_packet_sha256": "ba5101c6c294db11d1a8a210be1e3b526eeb3d86c27d25e4b4b51ed8b1a4c552",
+      "available": true,
+      "case_id": "exchange-n100-r10",
+      "direction": "A_to_B",
+      "probes": [
+        {
+          "expected_reason": "transfer_replay_rejected",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "consumed_nonce_replay",
+          "reason": "transfer_replay_rejected",
+          "rejected": true
+        },
+        {
+          "expected_reason": "trusted_packet_seal_mismatch",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "content_tamper_with_recomputed_internal_hashes",
+          "reason": "trusted_packet_seal_mismatch",
+          "rejected": true
+        },
+        {
+          "expected_reason": "packet_recipient_or_schema_invalid",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "wrong_recipient",
+          "reason": "packet_recipient_or_schema_invalid",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "all_attacks_use_disposable_policy_and_receiver_copies": true,
+      "approved_arm": "raw",
+      "approved_packet_file_sha256": "f651701feb016d0b37735b68536989861d8c3eb428a1681bc0543f8df83623ed",
+      "approved_packet_sha256": "c858b933bf2747364f324de4899fd1081f115b1361c078ead7473db35998dcb7",
+      "available": true,
+      "case_id": "exchange-n100-r10",
+      "direction": "B_to_A",
+      "probes": [
+        {
+          "expected_reason": "transfer_replay_rejected",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "consumed_nonce_replay",
+          "reason": "transfer_replay_rejected",
+          "rejected": true
+        },
+        {
+          "expected_reason": "trusted_packet_seal_mismatch",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "content_tamper_with_recomputed_internal_hashes",
+          "reason": "trusted_packet_seal_mismatch",
+          "rejected": true
+        },
+        {
+          "expected_reason": "packet_recipient_or_schema_invalid",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "wrong_recipient",
+          "reason": "packet_recipient_or_schema_invalid",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "all_attacks_use_disposable_policy_and_receiver_copies": true,
+      "approved_arm": "raw",
+      "approved_packet_file_sha256": "001324d07006714a870313566a75525917514a8e9819c19c5c793765c4d61a29",
+      "approved_packet_sha256": "43d18954fdc7121570525e5d624857b6d23b15241e1e168567d4daa6ce4b33d4",
+      "available": true,
+      "case_id": "exchange-n100-r30",
+      "direction": "A_to_B",
+      "probes": [
+        {
+          "expected_reason": "transfer_replay_rejected",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "consumed_nonce_replay",
+          "reason": "transfer_replay_rejected",
+          "rejected": true
+        },
+        {
+          "expected_reason": "trusted_packet_seal_mismatch",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "content_tamper_with_recomputed_internal_hashes",
+          "reason": "trusted_packet_seal_mismatch",
+          "rejected": true
+        },
+        {
+          "expected_reason": "packet_recipient_or_schema_invalid",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "wrong_recipient",
+          "reason": "packet_recipient_or_schema_invalid",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "all_attacks_use_disposable_policy_and_receiver_copies": true,
+      "approved_arm": "raw",
+      "approved_packet_file_sha256": "579553b01038c6fb55c8c0445512084ae7203b64b7736bd653eed4b225497915",
+      "approved_packet_sha256": "fa038614da3b6fd52a789381cc2ee71716db669689bac7d58714ae895245553f",
+      "available": true,
+      "case_id": "exchange-n100-r30",
+      "direction": "B_to_A",
+      "probes": [
+        {
+          "expected_reason": "transfer_replay_rejected",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "consumed_nonce_replay",
+          "reason": "transfer_replay_rejected",
+          "rejected": true
+        },
+        {
+          "expected_reason": "trusted_packet_seal_mismatch",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "content_tamper_with_recomputed_internal_hashes",
+          "reason": "trusted_packet_seal_mismatch",
+          "rejected": true
+        },
+        {
+          "expected_reason": "packet_recipient_or_schema_invalid",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "wrong_recipient",
+          "reason": "packet_recipient_or_schema_invalid",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "all_attacks_use_disposable_policy_and_receiver_copies": true,
+      "approved_arm": "raw",
+      "approved_packet_file_sha256": "c9169e6c48c160e4ee51e1cec680c02c6399f3097c0a6b5b56ea74840052a78b",
+      "approved_packet_sha256": "cbf81a8648a1f23b9490a206931e9be8a7c6786ca591d83c564690df90d3af1f",
+      "available": true,
+      "case_id": "exchange-n100-r50",
+      "direction": "A_to_B",
+      "probes": [
+        {
+          "expected_reason": "transfer_replay_rejected",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "consumed_nonce_replay",
+          "reason": "transfer_replay_rejected",
+          "rejected": true
+        },
+        {
+          "expected_reason": "trusted_packet_seal_mismatch",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "content_tamper_with_recomputed_internal_hashes",
+          "reason": "trusted_packet_seal_mismatch",
+          "rejected": true
+        },
+        {
+          "expected_reason": "packet_recipient_or_schema_invalid",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "wrong_recipient",
+          "reason": "packet_recipient_or_schema_invalid",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "all_attacks_use_disposable_policy_and_receiver_copies": true,
+      "approved_arm": "raw",
+      "approved_packet_file_sha256": "914c3e1cd7c2e25dee9d4faefe005f778f442437f1ace3bb49efe011cd10ba83",
+      "approved_packet_sha256": "dda86f7460f55358cce6f097ea76427174d337cabbdc01d0ec3efb7b668fbbe6",
+      "available": true,
+      "case_id": "exchange-n100-r50",
+      "direction": "B_to_A",
+      "probes": [
+        {
+          "expected_reason": "transfer_replay_rejected",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "consumed_nonce_replay",
+          "reason": "transfer_replay_rejected",
+          "rejected": true
+        },
+        {
+          "expected_reason": "trusted_packet_seal_mismatch",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "content_tamper_with_recomputed_internal_hashes",
+          "reason": "trusted_packet_seal_mismatch",
+          "rejected": true
+        },
+        {
+          "expected_reason": "packet_recipient_or_schema_invalid",
+          "isolated_copy_only": true,
+          "model_invocations": 0,
+          "no_partial_receiver_writes": true,
+          "passed": true,
+          "probe": "wrong_recipient",
+          "reason": "packet_recipient_or_schema_invalid",
+          "rejected": true
+        }
+      ]
+    }
+  ],
+  "permission_checks": [
+    {
+      "actual_generated_memory_available": true,
+      "artifact_sha256": "0bf72d49cc0b1f104ac58e6d8faf66b925bd775b467c33689103ced803737b4a",
+      "case_id": "exchange-n020-r00",
+      "direction": "A_to_B",
+      "expected_permission_result": "allowed",
+      "matches_expected_permission_result": true,
+      "permission_result": "allowed",
+      "recipient": "B",
+      "revoked_source_count": 0,
+      "sender": "A",
+      "source_protocol_conformance": true,
+      "source_result_sha256": "dd6f4f8211c21ed094d18b59c3e2e0228b76174cf399f20387670912d5c6d018"
+    },
+    {
+      "actual_generated_memory_available": true,
+      "artifact_sha256": "a23108e9d247a39831e971e74bfcc49879570c0100d3cdf1eab70215d77c5b87",
+      "case_id": "exchange-n020-r00",
+      "direction": "B_to_A",
+      "expected_permission_result": "allowed",
+      "matches_expected_permission_result": true,
+      "permission_result": "allowed",
+      "recipient": "A",
+      "revoked_source_count": 0,
+      "sender": "B",
+      "source_protocol_conformance": true,
+      "source_result_sha256": "890367e2a48446074103c25dae5d3d25e44f17c93fa6822c0f3e6a4e384a68c0"
+    },
+    {
+      "actual_generated_memory_available": true,
+      "artifact_sha256": "eb19d039a5abbefd13d65a9647319660dd028ff177b39eb46cd02edb2518a746",
+      "case_id": "exchange-n020-r10",
+      "direction": "A_to_B",
+      "expected_permission_result": "rejected",
+      "matches_expected_permission_result": true,
+      "permission_result": "rejected",
+      "recipient": "B",
+      "revoked_source_count": 2,
+      "sender": "A",
+      "source_protocol_conformance": true,
+      "source_result_sha256": "65b8fa10cde0aff95bb7abbef8bd6c3f683bed054094a322dc25bca834b881b3"
+    },
+    {
+      "actual_generated_memory_available": true,
+      "artifact_sha256": "dc6847ef631a0bb8c201f280cf031500000fda840196b9c817b7d89f8aa735c5",
+      "case_id": "exchange-n020-r10",
+      "direction": "B_to_A",
+      "expected_permission_result": "rejected",
+      "matches_expected_permission_result": true,
+      "permission_result": "rejected",
+      "recipient": "A",
+      "revoked_source_count": 2,
+      "sender": "B",
+      "source_protocol_conformance": true,
+      "source_result_sha256": "ce8471c1666e75b318de6c90fb6457bb7b47c241ecda6e927bb200e84f82e26f"
+    },
+    {
+      "actual_generated_memory_available": true,
+      "artifact_sha256": "0ae7990bfff7c3060f8c87fc24ff8a49a7cf21db2dc05e077e565ce7cf3c84da",
+      "case_id": "exchange-n020-r30",
+      "direction": "A_to_B",
+      "expected_permission_result": "rejected",
+      "matches_expected_permission_result": true,
+      "permission_result": "rejected",
+      "recipient": "B",
+      "revoked_source_count": 6,
+      "sender": "A",
+      "source_protocol_conformance": true,
+      "source_result_sha256": "ec915a11f3cd4cf28a47b31b501927deea3346d27179541e541b6c74e122a412"
+    },
+    {
+      "actual_generated_memory_available": true,
+      "artifact_sha256": "d6cb2d1fa4f253ac8aa9956514b1d2db321ae5a2a9ed97b95a18e0f9527c821c",
+      "case_id": "exchange-n020-r30",
+      "direction": "B_to_A",
+      "expected_permission_result": "rejected",
+      "matches_expected_permission_result": true,
+      "permission_result": "rejected",
+      "recipient": "A",
+      "revoked_source_count": 6,
+      "sender": "B",
+      "source_protocol_conformance": true,
+      "source_result_sha256": "f435725ed86253fdc15ae01ec1391cc79b6dba4e8fd678bfdf60935f333ae2fa"
+    },
+    {
+      "actual_generated_memory_available": true,
+      "artifact_sha256": "d3844dd6a48876019689cdae7f40f30dd0bfb742f8017f90c7cb994c49a84266",
+      "case_id": "exchange-n020-r50",
+      "direction": "A_to_B",
+      "expected_permission_result": "rejected",
+      "matches_expected_permission_result": true,
+      "permission_result": "rejected",
+      "recipient": "B",
+      "revoked_source_count": 10,
+      "sender": "A",
+      "source_protocol_conformance": true,
+      "source_result_sha256": "b5fa94177e7d8880f084e66ea2180d8296361b81f55f37e83e84986305d8f444"
+    },
+    {
+      "actual_generated_memory_available": true,
+      "artifact_sha256": "f925edffb680d05d93f39ac53f9f6db7cb8cedfd555353ee82e51779c18da8bd",
+      "case_id": "exchange-n020-r50",
+      "direction": "B_to_A",
+      "expected_permission_result": "rejected",
+      "matches_expected_permission_result": true,
+      "permission_result": "rejected",
+      "recipient": "A",
+      "revoked_source_count": 10,
+      "sender": "B",
+      "source_protocol_conformance": true,
+      "source_result_sha256": "f5da94708a7bc2f39b1fbf2d1aa42dbed7268ec93a398d41f883a5e0d35baacc"
+    },
+    {
+      "actual_generated_memory_available": true,
+      "artifact_sha256": "f26b11e439e4ac912d2ae8e0ebee3d9c1fc86defed8b6a5692d6b24c036f21ab",
+      "case_id": "exchange-n050-r00",
+      "direction": "A_to_B",
+      "expected_permission_result": "allowed",
+      "matches_expected_permission_result": true,
+      "permission_result": "allowed",
+      "recipient": "B",
+      "revoked_source_count": 0,
+      "sender": "A",
+      "source_protocol_conformance": false,
+      "source_result_sha256": "2bd1a8d22252bc0b00c8f1dc1609c82cd39b7b9e8e47f8a3ba07b4eb2adbfe5e"
+    },
+    {
+      "actual_generated_memory_available": true,
+      "artifact_sha256": "bdbdb03bb2771138de31f3c1d2ffcae14882be6257f85f132081e7ab134d05af",
+      "case_id": "exchange-n050-r00",
+      "direction": "B_to_A",
+      "expected_permission_result": "allowed",
+      "matches_expected_permission_result": true,
+      "permission_result": "allowed",
+      "recipient": "A",
+      "revoked_source_count": 0,
+      "sender": "B",
+      "source_protocol_conformance": true,
+      "source_result_sha256": "d4cae365053c011b4e8504c92b739b7219c8abbd53f26368765b493dd5229d41"
+    },
+    {
+      "actual_generated_memory_available": true,
+      "artifact_sha256": "7b521de3efc22271cbceda206eda7336d01a542967dd27c8d47b79a92167fb60",
+      "case_id": "exchange-n050-r10",
+      "direction": "A_to_B",
+      "expected_permission_result": "rejected",
+      "matches_expected_permission_result": true,
+      "permission_result": "rejected",
+      "recipient": "B",
+      "revoked_source_count": 5,
+      "sender": "A",
+      "source_protocol_conformance": true,
+      "source_result_sha256": "bcf9cc9cbb6076bc0258c8918eed9aae60bee739582c3814e66f25d9f3878c8a"
+    },
+    {
+      "actual_generated_memory_available": true,
+      "artifact_sha256": "72b4133cc249c830edee9bfe7f5c5591f62b0c9d820d21ebb7ad47fa991906ae",
+      "case_id": "exchange-n050-r10",
+      "direction": "B_to_A",
+      "expected_permission_result": "rejected",
+      "matches_expected_permission_result": true,
+      "permission_result": "rejected",
+      "recipient": "A",
+      "revoked_source_count": 5,
+      "sender": "B",
+      "source_protocol_conformance": true,
+      "source_result_sha256": "4765103d3803fe46e4c5bdea0af5db8541d5ef2943586037758e07b2540089d1"
+    },
+    {
+      "actual_generated_memory_available": true,
+      "artifact_sha256": "2bdc460c9153251d88a546d4a7c6c74f4bcd7daefccadcb1d89f88de1541c414",
+      "case_id": "exchange-n050-r30",
+      "direction": "A_to_B",
+      "expected_permission_result": "rejected",
+      "matches_expected_permission_result": true,
+      "permission_result": "rejected",
+      "recipient": "B",
+      "revoked_source_count": 15,
+      "sender": "A",
+      "source_protocol_conformance": true,
+      "source_result_sha256": "06f9e21a5e6ed50d9ca7c4e09ac6b1c22c819eb142e6c4098539b6abdb3d66b9"
+    },
+    {
+      "actual_generated_memory_available": true,
+      "artifact_sha256": "3eb34b7af663ca7258f73946cfc8ec21419b4c00bf69bbfff37553aaac6381b5",
+      "case_id": "exchange-n050-r30",
+      "direction": "B_to_A",
+      "expected_permission_result": "rejected",
+      "matches_expected_permission_result": true,
+      "permission_result": "rejected",
+      "recipient": "A",
+      "revoked_source_count": 15,
+      "sender": "B",
+      "source_protocol_conformance": true,
+      "source_result_sha256": "9c4dc7796f4b8139b6a3047136c96cdabb8ccfd4df6928a13f07375446c9330c"
+    },
+    {
+      "actual_generated_memory_available": true,
+      "artifact_sha256": "49ba95d14c3829f99430f5f23736250754661a2c3eb255370faa730526662e9d",
+      "case_id": "exchange-n050-r50",
+      "direction": "A_to_B",
+      "expected_permission_result": "rejected",
+      "matches_expected_permission_result": true,
+      "permission_result": "rejected",
+      "recipient": "B",
+      "revoked_source_count": 25,
+      "sender": "A",
+      "source_protocol_conformance": true,
+      "source_result_sha256": "269b4071c98d22d8616c20562eddb00a47311f7d0d54d05ccca29c7ec484c6e8"
+    },
+    {
+      "actual_generated_memory_available": true,
+      "artifact_sha256": "5a3d8dedd3d57bb77a6be801d8df0997b48028db6584e844068d46655cb9e510",
+      "case_id": "exchange-n050-r50",
+      "direction": "B_to_A",
+      "expected_permission_result": "rejected",
+      "matches_expected_permission_result": true,
+      "permission_result": "rejected",
+      "recipient": "A",
+      "revoked_source_count": 25,
+      "sender": "B",
+      "source_protocol_conformance": true,
+      "source_result_sha256": "3bf15b3c143cb01aea98b46010d734b152d06941889a65ec2b400d7caf75d836"
+    },
+    {
+      "actual_generated_memory_available": true,
+      "artifact_sha256": "b845b95e5cc9d5fa0173b56733f917a02e9763f444ae66158a00871b3aa1e826",
+      "case_id": "exchange-n100-r00",
+      "direction": "A_to_B",
+      "expected_permission_result": "allowed",
+      "matches_expected_permission_result": true,
+      "permission_result": "allowed",
+      "recipient": "B",
+      "revoked_source_count": 0,
+      "sender": "A",
+      "source_protocol_conformance": true,
+      "source_result_sha256": "42f403ad6936c913efca38d877af76accf33ad604f4dc1cbfdcf986661c10a63"
+    },
+    {
+      "actual_generated_memory_available": true,
+      "artifact_sha256": "574b306b219166594080d7d977c59115c3488bcf920536011e2b48a0bedaf7ba",
+      "case_id": "exchange-n100-r00",
+      "direction": "B_to_A",
+      "expected_permission_result": "allowed",
+      "matches_expected_permission_result": true,
+      "permission_result": "allowed",
+      "recipient": "A",
+      "revoked_source_count": 0,
+      "sender": "B",
+      "source_protocol_conformance": true,
+      "source_result_sha256": "f8833145912688d0c5aa089f5507daf6e678c22c0db052eeeb6dc0358961b845"
+    },
+    {
+      "actual_generated_memory_available": true,
+      "artifact_sha256": "e5bc0a468c341fe4fedc4e70602c827b1d9c04ee1a2b702ca234ad14831dadd6",
+      "case_id": "exchange-n100-r10",
+      "direction": "A_to_B",
+      "expected_permission_result": "rejected",
+      "matches_expected_permission_result": true,
+      "permission_result": "rejected",
+      "recipient": "B",
+      "revoked_source_count": 10,
+      "sender": "A",
+      "source_protocol_conformance": true,
+      "source_result_sha256": "7975e46a48758ee30c89492f0c688b3b4fe6cad2e68c41346428b8d0b1c87104"
+    },
+    {
+      "actual_generated_memory_available": true,
+      "artifact_sha256": "af42b76b9932d65c99ad590c8d4e634e74632e875e83ed5da60cc35f0e3ae092",
+      "case_id": "exchange-n100-r10",
+      "direction": "B_to_A",
+      "expected_permission_result": "rejected",
+      "matches_expected_permission_result": true,
+      "permission_result": "rejected",
+      "recipient": "A",
+      "revoked_source_count": 10,
+      "sender": "B",
+      "source_protocol_conformance": true,
+      "source_result_sha256": "df03382b34b3bbb32690b96db5731237dc77010ce2c9d0b325bfd7cd8bb639b9"
+    },
+    {
+      "actual_generated_memory_available": true,
+      "artifact_sha256": "c42d3c7c358f2eaa37870c3031e6532d6f148fc4351de8e36583a485810c3828",
+      "case_id": "exchange-n100-r30",
+      "direction": "A_to_B",
+      "expected_permission_result": "rejected",
+      "matches_expected_permission_result": true,
+      "permission_result": "rejected",
+      "recipient": "B",
+      "revoked_source_count": 30,
+      "sender": "A",
+      "source_protocol_conformance": true,
+      "source_result_sha256": "7d1bd2f4d493dfa9fdcc9562f3b769d4946d614323e8942f08f695892c9af079"
+    },
+    {
+      "actual_generated_memory_available": true,
+      "artifact_sha256": "4b9663bf47214ad8b93396ad316635d8633b41bc838e649150c68f2640f6fe54",
+      "case_id": "exchange-n100-r30",
+      "direction": "B_to_A",
+      "expected_permission_result": "rejected",
+      "matches_expected_permission_result": true,
+      "permission_result": "rejected",
+      "recipient": "A",
+      "revoked_source_count": 30,
+      "sender": "B",
+      "source_protocol_conformance": true,
+      "source_result_sha256": "f2520bb0425520eb4f8ce9dc9a8c0e503882571099e808615b064a4cc21957b5"
+    },
+    {
+      "actual_generated_memory_available": true,
+      "artifact_sha256": "324a9eeebe8f1d2770fda4247a35ccb88961590069dc5bbfcb2969d518e80296",
+      "case_id": "exchange-n100-r50",
+      "direction": "A_to_B",
+      "expected_permission_result": "rejected",
+      "matches_expected_permission_result": true,
+      "permission_result": "rejected",
+      "recipient": "B",
+      "revoked_source_count": 50,
+      "sender": "A",
+      "source_protocol_conformance": true,
+      "source_result_sha256": "d9e95877f68e1848b3607627edb5aefd060b2fee3e0bd98332b7d342ebb49560"
+    },
+    {
+      "actual_generated_memory_available": true,
+      "artifact_sha256": "72ed81e80e7cfd89252bb4a9478790798e1fbd7ce5cc16175e96d5559c3a1bd5",
+      "case_id": "exchange-n100-r50",
+      "direction": "B_to_A",
+      "expected_permission_result": "rejected",
+      "matches_expected_permission_result": true,
+      "permission_result": "rejected",
+      "recipient": "A",
+      "revoked_source_count": 50,
+      "sender": "B",
+      "source_protocol_conformance": true,
+      "source_result_sha256": "d027c5311f6cd44e53d98c5aa40f8d91c07f8b5f5c86292e179b794310ca8d15"
+    }
+  ],
+  "raw_database_and_native_receipts_included": false,
+  "schema": "persistent-exchange-public-security-projection-v1",
+  "scope": "offline mechanism evidence; excluded from twelve-project main quality/cost statistics",
+  "summary": {
+    "all_available_copy_attacks_passed": true,
+    "all_available_whole_permission_results_as_expected": true,
+    "all_main_inputs_byte_unchanged": true,
+    "all_registered_views_present": true,
+    "approved_packets_available": 24,
+    "copy_attack_attempts": 72,
+    "copy_attacks_rejected_as_expected": 72,
+    "generated_whole_checks_available": 24,
+    "mock_only_source_fixture_views": 0,
+    "nonzero_old_whole_rejected": 18,
+    "nonzero_revocation_views": 18,
+    "offline_potential_exposure_is_actual_delivery_leakage": false,
+    "offline_potential_exposure_questions": 38,
+    "permission_views": 24,
+    "project_clusters": 12,
+    "registered_expected_permission_views": 24,
+    "registered_expected_project_clusters": 12,
+    "source_protocol_nonconformant_views": 1,
+    "unavailable_generated_whole_views": 0,
+    "unique_withdrawn_value_questions": 42,
+    "unique_withdrawn_value_scans_available": 42,
+    "zero_old_whole_allowed_by_permission_check": 6,
+    "zero_revocation_views": 6
+  }
+}

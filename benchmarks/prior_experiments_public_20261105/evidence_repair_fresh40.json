@@ -1,0 +1,233 @@
+{
+  "actual_supplier_bill_cny": null,
+  "batch": "evidence-repair-fresh40-combined",
+  "evidence_kind": "native_answer_aggregate_with_lexical_metrics",
+  "independent_unit": "question cluster; the source report combines both blocks before its bootstrap",
+  "measurements": {
+    "actual_native_success_count_not_separately_asserted_by_exporter": null,
+    "all_planned_requests": 600,
+    "analysis_model_calls": 0,
+    "arms": {
+      "parent_bm25_4": {
+        "all_cost_requests": 120,
+        "fallback_views": 0,
+        "generation_model_calls_for_query_or_initial_build": 0,
+        "independent_questions": 40,
+        "initial_local_query_builds": 0,
+        "input_MISS": 100722,
+        "input_READ": 41344,
+        "input_TOTAL": 142066,
+        "input_WRITE": 0,
+        "lifecycle_estimated_cold_peak_cny": "0.306660",
+        "lifecycle_estimated_native_cache_aware_peak_cny": "0.22562576",
+        "local_initial_build_ms": 1052.6201000029687,
+        "local_initial_build_plus_prepare_ms": 6384.896100018523,
+        "local_prepare_ms": 5332.276000015554,
+        "output_tokens": 2816,
+        "primary_views": 98,
+        "question_macro_em": 0.4041666666666666,
+        "question_macro_f1": 0.5684090909090909,
+        "reuse_by_view_type": {
+          "changed_authorized_view": {
+            "fallback_views": 0,
+            "prepare_ms": 1371.6464000099222,
+            "query_build_performed_views": 0,
+            "query_reused_views": 0,
+            "ranking_recomputed_views": 40,
+            "views": 40
+          },
+          "exact_authorized_view": {
+            "fallback_views": 0,
+            "prepare_ms": 3960.629600005632,
+            "query_build_performed_views": 0,
+            "query_reused_views": 0,
+            "ranking_recomputed_views": 0,
+            "views": 80
+          }
+        },
+        "target_wall_ms": 381443.394499991
+      },
+      "raw": {
+        "all_cost_requests": 120,
+        "fallback_views": 0,
+        "generation_model_calls_for_query_or_initial_build": 0,
+        "independent_questions": 40,
+        "initial_local_query_builds": 0,
+        "input_MISS": 177321,
+        "input_READ": 94336,
+        "input_TOTAL": 271657,
+        "input_WRITE": 0,
+        "lifecycle_estimated_cold_peak_cny": "0.566218",
+        "lifecycle_estimated_native_cache_aware_peak_cny": "0.38131944",
+        "local_initial_build_ms": 1154.134599993995,
+        "local_initial_build_plus_prepare_ms": 6046.028899952944,
+        "local_prepare_ms": 4891.894299958949,
+        "output_tokens": 2863,
+        "primary_views": 98,
+        "question_macro_em": 0.5750000000000001,
+        "question_macro_f1": 0.756926406926407,
+        "reuse_by_view_type": {
+          "changed_authorized_view": {
+            "fallback_views": 0,
+            "prepare_ms": 1327.9212999696028,
+            "query_build_performed_views": 0,
+            "query_reused_views": 0,
+            "ranking_recomputed_views": 0,
+            "views": 40
+          },
+          "exact_authorized_view": {
+            "fallback_views": 0,
+            "prepare_ms": 3563.972999989346,
+            "query_build_performed_views": 0,
+            "query_reused_views": 0,
+            "ranking_recomputed_views": 0,
+            "views": 80
+          }
+        },
+        "target_wall_ms": 394747.00219996885
+      },
+      "repair_no_fallback": {
+        "all_cost_requests": 120,
+        "fallback_views": 0,
+        "generation_model_calls_for_query_or_initial_build": 0,
+        "independent_questions": 40,
+        "initial_local_query_builds": 40,
+        "input_MISS": 95502,
+        "input_READ": 38528,
+        "input_TOTAL": 134030,
+        "input_WRITE": 0,
+        "lifecycle_estimated_cold_peak_cny": "0.290876",
+        "lifecycle_estimated_native_cache_aware_peak_cny": "0.21536112",
+        "local_initial_build_ms": 1195.0002999801654,
+        "local_initial_build_plus_prepare_ms": 6385.93149992812,
+        "local_prepare_ms": 5190.931199947954,
+        "output_tokens": 2852,
+        "primary_views": 98,
+        "question_macro_em": 0.4166666666666667,
+        "question_macro_f1": 0.5907683982683982,
+        "reuse_by_view_type": {
+          "changed_authorized_view": {
+            "fallback_views": 0,
+            "prepare_ms": 1444.6808999564382,
+            "query_build_performed_views": 38,
+            "query_reused_views": 2,
+            "ranking_recomputed_views": 40,
+            "views": 40
+          },
+          "exact_authorized_view": {
+            "fallback_views": 0,
+            "prepare_ms": 3746.250299991516,
+            "query_build_performed_views": 0,
+            "query_reused_views": 80,
+            "ranking_recomputed_views": 0,
+            "views": 80
+          }
+        },
+        "target_wall_ms": 380469.38739993493
+      },
+      "repair_rebuild": {
+        "all_cost_requests": 120,
+        "fallback_views": 44,
+        "generation_model_calls_for_query_or_initial_build": 0,
+        "independent_questions": 40,
+        "initial_local_query_builds": 40,
+        "input_MISS": 131706,
+        "input_READ": 58880,
+        "input_TOTAL": 190586,
+        "input_WRITE": 0,
+        "lifecycle_estimated_cold_peak_cny": "0.403972",
+        "lifecycle_estimated_native_cache_aware_peak_cny": "0.28856720",
+        "local_initial_build_ms": 1321.3917999819387,
+        "local_initial_build_plus_prepare_ms": 6308.8131000549765,
+        "local_prepare_ms": 4987.421300073038,
+        "output_tokens": 2850,
+        "primary_views": 98,
+        "question_macro_em": 0.5083333333333333,
+        "question_macro_f1": 0.6822402597402599,
+        "reuse_by_view_type": {
+          "changed_authorized_view": {
+            "fallback_views": 18,
+            "prepare_ms": 1409.2926000448642,
+            "query_build_performed_views": 40,
+            "query_reused_views": 0,
+            "ranking_recomputed_views": 40,
+            "views": 40
+          },
+          "exact_authorized_view": {
+            "fallback_views": 26,
+            "prepare_ms": 3578.1287000281736,
+            "query_build_performed_views": 0,
+            "query_reused_views": 80,
+            "ranking_recomputed_views": 0,
+            "views": 80
+          }
+        },
+        "target_wall_ms": 381174.1059999622
+      },
+      "repair_selective": {
+        "all_cost_requests": 120,
+        "fallback_views": 44,
+        "generation_model_calls_for_query_or_initial_build": 0,
+        "independent_questions": 40,
+        "initial_local_query_builds": 40,
+        "input_MISS": 131882,
+        "input_READ": 58752,
+        "input_TOTAL": 190634,
+        "input_WRITE": 0,
+        "lifecycle_estimated_cold_peak_cny": "0.404012",
+        "lifecycle_estimated_native_cache_aware_peak_cny": "0.28885808",
+        "local_initial_build_ms": 1241.805400015437,
+        "local_initial_build_plus_prepare_ms": 6153.879000026791,
+        "local_prepare_ms": 4912.073600011354,
+        "output_tokens": 2843,
+        "primary_views": 98,
+        "question_macro_em": 0.4625,
+        "question_macro_f1": 0.6603354978354978,
+        "reuse_by_view_type": {
+          "changed_authorized_view": {
+            "fallback_views": 18,
+            "prepare_ms": 1403.8117000018246,
+            "query_build_performed_views": 38,
+            "query_reused_views": 2,
+            "ranking_recomputed_views": 40,
+            "views": 40
+          },
+          "exact_authorized_view": {
+            "fallback_views": 26,
+            "prepare_ms": 3508.261900009529,
+            "query_build_performed_views": 0,
+            "query_reused_views": 80,
+            "ranking_recomputed_views": 0,
+            "views": 80
+          }
+        },
+        "target_wall_ms": 391382.4413000111
+      }
+    },
+    "block_intervals_averaged": false,
+    "blocks_combined_before_bootstrap": 2,
+    "bootstrap": {
+      "draws": 5000,
+      "seed": 2026110593
+    },
+    "cost_is_supplier_bill": false,
+    "costs_include_every_initial_delivery_revocation_and_regrant_request": true,
+    "independent_question_clusters": 40,
+    "local_query_construction_is_CPU_only_no_supplier_generation": true,
+    "local_timers_are_wall_time_not_process_CPU_utilization": true,
+    "official_gold_or_aliases_changed": false,
+    "quality_uses_all_questions_and_eligible_views_within_question": true,
+    "status": "completed"
+  },
+  "model_calls_by_exporter": 0,
+  "planned_request_count_is_actual_success_count": false,
+  "raw_answers_original_data_native_logs_and_local_paths_included": false,
+  "schema": "prior-experiment-aggregate-public-v1",
+  "source_files": [
+    {
+      "repository_relative_source": "results/revocation_evidence_repair_v1/fresh40-native-combined-20261105-v1-analysis/summary.json",
+      "source_file_sha256": "8c0b0f8ab60151527106dbfcdfd63c1d9d3e2d7d2ac8f6f19bf352f297f6f2a5"
+    }
+  ],
+  "source_scope": "whitelist projection of aggregate local reports; not an independent native-execution re-audit"
+}

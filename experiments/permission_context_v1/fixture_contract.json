@@ -1,0 +1,33 @@
+{
+  "schema": "authorized-expansion-eight-child-two-parent-fixture-v1",
+  "scope": "local dataflow and permission-gate fixture, not a real QA benchmark or algorithm-effect result",
+  "sources": [
+    {"source_id": "C1", "text": "Project Marigold has been approved.", "version": 1},
+    {"source_id": "C2", "text": "REVOKED_PARENT_CANARY_8CHILD: the private budget is 91837.", "version": 1},
+    {"source_id": "C3", "text": "Project Marigold's review deadline is Friday.", "version": 1},
+    {"source_id": "C4", "text": "This separate contract clause is not currently authorized.", "version": 1},
+    {"source_id": "C5", "text": "Project Cedar has a separate owner.", "version": 1},
+    {"source_id": "C6", "text": "Project Cedar's meeting is on Tuesday.", "version": 1},
+    {"source_id": "C7", "text": "Project Willow has an archive entry.", "version": 1},
+    {"source_id": "C8", "text": "Project Willow's draft remains tentative.", "version": 1}
+  ],
+  "hierarchy": {
+    "C1": {"parent_id": "P1", "position": 0, "prev_id": null, "next_id": "C2"},
+    "C2": {"parent_id": "P1", "position": 1, "prev_id": "C1", "next_id": "C3"},
+    "C3": {"parent_id": "P1", "position": 2, "prev_id": "C2", "next_id": "C4"},
+    "C4": {"parent_id": "P1", "position": 3, "prev_id": "C3", "next_id": "C5"},
+    "C5": {"parent_id": "P2", "position": 0, "prev_id": "C4", "next_id": "C6"},
+    "C6": {"parent_id": "P2", "position": 1, "prev_id": "C5", "next_id": "C7"},
+    "C7": {"parent_id": "P2", "position": 2, "prev_id": "C6", "next_id": "C8"},
+    "C8": {"parent_id": "P2", "position": 3, "prev_id": "C7", "next_id": null}
+  },
+  "allowed": ["C1", "C3", "C5", "C6", "C7", "C8"],
+  "seed_ids": ["C1"],
+  "max_source_bytes": 4096,
+  "neighbor_window": 2,
+  "needed_complete_support_set": ["C1", "C3"],
+  "canary": "REVOKED_PARENT_CANARY_8CHILD",
+  "expected_safe_parent_bundle_ids": ["C1", "C3"],
+  "human_gold": null,
+  "model_calls": 0
+}

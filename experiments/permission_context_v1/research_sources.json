@@ -1,0 +1,121 @@
+{
+  "search_date": "2026-11-05",
+  "scope": "Module adaptation and combinations for safe memory delivery after recipient-specific permission revocation; wholly new base algorithms are not required.",
+  "selection_policy": "Read primary papers or actual repository functions; preserve attribution; require comparison with lawful full raw context and strong simple retrieval, not only unsafe or delete-all baselines.",
+  "candidates": [
+    {
+      "priority": 1,
+      "module": "Authorization-aware hierarchical context reconstruction",
+      "mechanisms_reused": ["child-to-parent retrieval", "neighbor expansion", "current-source rendering", "existing gateway authorization and commit revision check"],
+      "concrete_gap": "Child retrieval filters do not automatically authorize text loaded later by parent/neighbor expansion.",
+      "integration": "Retain only authorized current child bodies; reconstruct a fresh bundle rather than edit an old mixed parent; bind actual source versions/hashes and recheck before dispatch.",
+      "source_repositories": [
+        {
+          "repository": "run-llama/llama_index",
+          "commit": "444fdf0684707de62ebb447d658dba137dd9cb99",
+          "license": "MIT",
+          "path": "llama-index-core/llama_index/core/retrievers/auto_merging_retriever.py",
+          "functions_read": ["_get_parents_and_merge", "_fill_in_nodes", "_retrieve"],
+          "url": "https://github.com/run-llama/llama_index/blob/444fdf0684707de62ebb447d658dba137dd9cb99/llama-index-core/llama_index/core/retrievers/auto_merging_retriever.py"
+        },
+        {
+          "repository": "langchain-ai/langchain",
+          "commit": "bbcdd568cd02b81e5ede5aa525744e79e67c2278",
+          "license": "MIT",
+          "path": "libs/langchain/langchain_classic/retrievers/multi_vector.py",
+          "functions_read": ["_get_relevant_documents", "docstore.mget parent promotion"],
+          "url": "https://github.com/langchain-ai/langchain/blob/bbcdd568cd02b81e5ede5aa525744e79e67c2278/libs/langchain/langchain_classic/retrievers/multi_vector.py"
+        }
+      ],
+      "falsification": "A legal seed inside a mixed parent must not cause a forbidden sibling to enter context. Compare child-only, local unsafe parent expansion, authorized neighbor window, authorized parent bundle, flat authorized BM25, and full lawful raw context. Track legal-support coverage and bytes, not only canary blocking."
+    },
+    {
+      "priority": 2,
+      "module": "Verified alternative-support index and incremental repair",
+      "mechanisms_reused": ["AND/OR provenance", "DRed overdeletion and rederivation", "backward/forward support search"],
+      "integration": "Independently verifiable extractive spans or deterministic derivations become support witnesses. Current authorization toggles leaf availability. Re-render from a surviving complete proof; preserve the original influence set of every old black-box LLM artifact.",
+      "source_repositories": [
+        {
+          "repository": "ML-KULeuven/problog",
+          "commit": "a294fa24c3cfb4bae3a2acea3a128386113889f4",
+          "license": "Apache-2.0",
+          "paths": ["problog/formula.py", "problog/evaluator.py"],
+          "functions_read": ["LogicFormula.add_and", "LogicFormula.add_or", "FormulaEvaluator.compute_weight", "FormulaEvaluator.set_weights"],
+          "url": "https://github.com/ML-KULeuven/problog/blob/a294fa24c3cfb4bae3a2acea3a128386113889f4/problog/formula.py",
+          "limitation": "Changing weights clears all evaluator memoization; local dirty maintenance is an adaptation to implement, not a claimed existing feature."
+        },
+        {
+          "repository": "M-Illich/dred-mark-eval",
+          "commit": "509a5d7ccfd3d20b710f2a35be9cad8dc6f66369",
+          "license": "Apache-2.0",
+          "paths": ["src/main/prolog/dred/dred_no_mark_trans.pl", "src/main/prolog/bf/bf_no_mark_trans.pl"],
+          "url": "https://github.com/M-Illich/dred-mark-eval/blob/509a5d7ccfd3d20b710f2a35be9cad8dc6f66369/src/main/prolog/dred/dred_no_mark_trans.pl",
+          "limitation": "Only no_mark is causal for this study. Marking variants use information about the next update. Original implementation uses Java/SWI-Prolog and transitive-closure rules."
+        }
+      ],
+      "primary_papers": ["https://www.cs.ucdavis.edu/~green/papers/pods07.pdf", "https://sigmodrecord.org/?download_id=9412&smd_process_download=1"],
+      "falsification": "For (A AND B) OR C, revoke A then C and compare every state with full lawful proof recomputation. Include cycles that cannot self-support after all grounded proofs disappear. Flat acyclic supports must also compare with simple support counters."
+    },
+    {
+      "priority": 3,
+      "module": "Adaptive retrieval assurance with a local reranker",
+      "mechanisms_reused": ["CRAG-style corrective control", "FlashRank cross-encoder ordering", "progressive legal retrieval and full-lawful fallback"],
+      "source_repositories": [
+        {
+          "repository": "PrithivirajDamodaran/FlashRank",
+          "commit": "11f7a40d625f2de047c371c81c6f477386c18bb1",
+          "license": "Apache-2.0 code; model weights require separate pinned metadata and license",
+          "path": "flashrank/Ranker.py",
+          "function": "Ranker.rerank",
+          "url": "https://github.com/PrithivirajDamodaran/FlashRank/blob/11f7a40d625f2de047c371c81c6f477386c18bb1/flashrank/Ranker.py#L178"
+        },
+        {
+          "repository": "HuskyInSalt/CRAG",
+          "commit": "de7c2961ae624a1483a138c5798e1f6d0c4fb0e0",
+          "license": "No repository LICENSE located; control-flow reference, not direct code reuse",
+          "paths": ["scripts/CRAG_Inference.py", "scripts/internal_knowledge_preparation.py"],
+          "functions_read": ["process_flag", "knowledge_refinement"],
+          "url": "https://github.com/HuskyInSalt/CRAG/blob/de7c2961ae624a1483a138c5798e1f6d0c4fb0e0/scripts/CRAG_Inference.py#L174"
+        }
+      ],
+      "falsification": "Compare fixed BM25, fixed reranking, adaptive BM25 without reranking, and the combination at matched quality and complete lifecycle cost. Relevance is not complete multi-hop support or authorization. Do not transplant raw T5 logit thresholds to 0..1 reranker scores."
+    }
+  ],
+  "additional_references_not_original_contributions": [
+    {"name": "MemoRepair", "url": "https://arxiv.org/html/2605.07242v1", "mechanism": "withdrawal barrier and predecessor-closed validated republication; scalarized maximum-weight closure via min-cut", "limitation": "A hard currency/token budget is not solved exactly by the same scalarized min-cut."},
+    {"name": "Selective Revocation and Replay", "repository": "aliuyar1234/selective-revocation-replay", "commit": "d7bcb32740156cb985fae0ee93caba35ee45e67e", "path": "src/recover.py", "functions_read": ["compute_persisted_descendant_closure", "build_replay_plan", "replay_dirty_writers"], "url": "https://github.com/aliuyar1234/selective-revocation-replay/blob/d7bcb32740156cb985fae0ee93caba35ee45e67e/src/recover.py", "license_status": "No root license identified; mechanism reference only", "limitation": "Its post-compromise recovery results do not establish recipient-specific permission-revocation results in this project."},
+    {"name": "ReRAG", "repository": "ory/rerag-rebac", "commit": "b733b98262bfb9fbe5e71ef722583fcd8f1166cf", "path": "internal/storage/sqlite_vector_store.go", "function": "searchWithFilterRecursive", "url": "https://github.com/ory/rerag-rebac/blob/b733b98262bfb9fbe5e71ef722583fcd8f1166cf/internal/storage/sqlite_vector_store.go", "mechanism": "adaptive top-k candidate expansion after authorization filtering", "license_status": "README Apache badge; no root LICENSE in inspected tree; reference only"}
+  ],
+  "benchmark_routes": [
+    {"name": "HotpotQA", "url": "https://hotpotqa.github.io/", "repository_commit": "3635853403a8735609ee997664e1528f4480762a", "suggested_split": "dev_distractor_v1", "scope": "ten paragraphs per question; sample fixed IDs before outcomes; answer/support annotations remain evaluation-only; annotated supports are not exhaustive alternative proofs"},
+    {"name": "MuSiQue", "url": "https://github.com/StonyBrookNLP/musique", "scope": "official multi-hop data route verified; no dataset downloaded or new advantage claimed in this search"}
+  ],
+  "source_level_validation": {
+    "results": "results/permission_context_v1/upstream-method-replay-20261105-v1/summary.json",
+    "counterexamples_reproduced": 2,
+    "method": "Pinned unchanged upstream method bodies, isolated by AST, executed with mock document stores and a child-level ACL fixture",
+    "llama_index_default_parent_merge_threshold": 0.5,
+    "full_framework_integration_test": false,
+    "production_vulnerability_claim": false,
+    "upstream_source_snapshots_and_MIT_notices": "experiments/permission_context_v1/source_snapshots"
+  },
+  "prototype_validation": {
+    "implementation": "experiments/permission_context_v1/authorized_expansion.py",
+    "meaningful_tests_passed": 7,
+    "fixed_granular_permission_states": 40,
+    "mixed_permission_parent_states": 24,
+    "local_unchecked_parent_render_forbidden_payload_states_at_16384_source_bytes": 21,
+    "unsafe_local_diagnostics_dispatched_to_model": 0,
+    "safe_strategies_forbidden_source_bytes": 0,
+    "authorized_support_coverage_at_16384_source_bytes": {"authorized_bundle": "137/137", "child_BM25": "137/137", "authorized_neighbor_window": "137/137", "whole_parent_gate": "61/137"},
+    "authorized_bundle_source_bytes": 632882,
+    "child_BM25_source_bytes": 370606,
+    "independent_content_clusters": 2,
+    "question_observations_are_repeated_not_independent_new_questions": true,
+    "model_answer_quality_measured": false,
+    "independent_business_utility_or_model_fee_advantage_established": false,
+    "evidence_directory": "results/permission_context_v1/granular-20261105-v1"
+  },
+  "model_calls_in_this_search": 0,
+  "publication_or_global_novelty_guaranteed": false
+}

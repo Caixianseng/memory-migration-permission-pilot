@@ -43,3 +43,15 @@ benchmarks/prospective_context_method_freeze_20261027.json -text whitespace=cr-a
 # Preserve the controlled revocation corpus and public evidence hashes.
 /benchmarks/revocation_rebuild_controlled_20261104/** -text
 /experiments/revocation_rebuild_controlled_20261104/data/** -text
+
+# Preserve the original byte hashes of the 2026-11-05 research snapshots.
+/experiments/persistent_exchange_v1/** -text
+/experiments/revocation_grouping_v1/** -text
+/experiments/revocation_evidence_repair_v1/** -text
+/experiments/memory_module_fusion_v1/** -text
+/experiments/permission_context_v1/** -text
+/experiments/revocation_prefix_v1/** -text
+/experiments/two_platform_qualification_v1/** -text
+/benchmarks/persistent_exchange_v1_public_20261105/** -text
+/benchmarks/prior_experiments_public_20261105/** -text
+/scripts/export_persistent_exchange_public.py -text
