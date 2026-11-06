@@ -17,7 +17,7 @@ from .model_runtime import (run_workbuddy, write_json, digest, FlashSDKClient,
                             REPO, PYTHON)
 from .read_receiver import read_batch, canonical, QUERIES
 
-NATIVE_PROJECTS = Path('[USER_HOME]/.workbuddy/projects')
+NATIVE_PROJECTS = Path('C:/Users/21129/.workbuddy/projects')
 READER = REPO/'experiments/persistent_exchange_v1/read_receiver.py'
 _HEX = re.compile(r'^[0-9a-f]{64}$')
 ANSWER_INSTRUCTIONS = (

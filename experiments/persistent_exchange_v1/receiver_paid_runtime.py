@@ -23,7 +23,7 @@ from .receiver_runtime import (ANSWER_INSTRUCTIONS, _answers, _json,
 NODE = Path('D:/node/node.exe')
 DRIVER = REPO.parent/'codex-workbuddy-gateway-windows/scripts/hy3-native-paid-one-shot.mjs'
 NATIVE_EXECUTABLE = Path('D:/workbuddy/WorkBuddy.exe')
-NATIVE_CONFIG = Path('[USER_HOME]/.workbuddy')
+NATIVE_CONFIG = Path('C:/Users/21129/.workbuddy')
 CDP_PORT = 18491
 ROUTES = {'hy3', 'hy3-x'}
 _HEX = re.compile(r'^[0-9a-f]{64}$')
