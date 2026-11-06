@@ -1,0 +1,106 @@
+"""Write a completion report from audited results; no experiments or inference."""
+import hashlib,json,statistics,time
+from datetime import datetime,timezone
+from pathlib import Path
+from .live_runtime import ROOT,OUT
+def load(p):return json.loads(p.read_text(encoding='utf-8'))
+def percentile(values,p):
+    values=sorted(values);x=(len(values)-1)*p;i=int(x);j=min(i+1,len(values)-1)
+    return values[i]+(values[j]-values[i])*(x-i)
+def runtime_performance():
+    data=load(OUT/'raw_experiment_data/live_summary.json');groups={};host={};storage=[]
+    for job in data['jobs']:
+        if job['effective_status']=='ok' and job['latency_seconds'] is not None:
+            groups.setdefault(job['platform']+'.'+job['role'],[]).append(job['latency_seconds'])
+    base=OUT/'raw_experiment_data/qualification_isolated_v1'
+    for case in base.iterdir():
+        if not (case/'complete.json').exists():continue
+        for row in load(case/'delivery_records.json'):
+            if row['phase']=='legal_successor':host.setdefault(row['method'],[]).append(row['host_processing_ms'])
+        payload=sum((case/'persistent/B_static_hash'/f'legal_successor.{s}.txt').stat().st_size for s in ('raw','summary','multi_source'))
+        storage.append({'case':case.name,'legal_payload_bytes':payload,
+            'D_receiver_sqlite_bytes':(case/'persistent/D_transaction.sqlite').stat().st_size,
+            'E_receiver_sqlite_bytes':(case/'persistent/E_host.sqlite').stat().st_size,
+            'shared_sender_authority_bytes':sum((case/'persistent'/n).stat().st_size for n in ('sender.sqlite','authority.sqlite'))})
+    result={'model_job_wall_seconds':{g:{'n':len(v),'median':statistics.median(v),'p95':percentile(v,.95),'min':min(v),'max':max(v)} for g,v in groups.items()},
+        'live_legal_host_adapter_ms':{g:{'n':len(v),'median':statistics.median(v),'p95':percentile(v,.95),'min':min(v),'max':max(v)} for g,v in host.items()},
+        'storage_rows':storage,'unit':'Repeated tasks within 10 synthetic projects, descriptive timings only',
+        'model_wall_scope':'Native/SDK adapter including startup and request supervision, semaphore wait stored separately; not isolated remote inference time',
+        'host_scope':'Live legal branch from export/precheck through import and evidence-file recording; CPU prepared-packet benchmark separately defined',
+        'api_cost_actual_cny':None,'workbuddy_fee_observable':False}
+    (OUT/'raw_experiment_data/model_runtime_performance.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+    lines=['# 实际模型与持久化开销补充','', '主资格480个真实推理任务，10个合成项目；任务/技术重复不当独立项目。以下为描述统计，不进行平台或权重的因果优劣检验。','',
+        '| 平台/角色 | 调用输出数 | adapter中位数秒 | p95秒 |','|---|---:|---:|---:|']
+    for g,v in result['model_job_wall_seconds'].items():lines.append(f'| {g} | {v["n"]} | {v["median"]:.3f} | {v["p95"]:.3f} |')
+    lines += ['', '计时包括原生或SDK启动、模型往返及任务监督，不是供应商内部计算耗时。队列等待另存，每个case的跨轮排障/恢复还有研究过程等待，不能把后者当部署系统的正常尾延迟。原始时间戳足以追溯这些阶段，未删除失败/长尾。',
+        '', '| 合法分支 | 分支数 | Host adapter中位数ms | p95 ms |','|---|---:|---:|---:|']
+    for g,v in result['live_legal_host_adapter_ms'].items():lines.append(f'| {g} | {v["n"]} | {v["median"]:.3f} | {v["p95"]:.3f} |')
+    lines += ['', 'Host adapter计时包含导出/检查、持久化及实验包/回执文件记录；不要与performance_benchmark.md中预打开连接/预生成包的CPU测量混为同一口径。方法顺序未随机化，不据此声称小差异为算法加速。',
+        '', f'60个接收E库的文件字节中位数为{statistics.median(r["E_receiver_sqlite_bytes"] for r in storage):.0f}；同批三条合法正文的UTF-8字节中位数为{statistics.median(r["legal_payload_bytes"] for r in storage):.0f}。E库包含schema/来源索引/提交事件，公共sender/authority及SDK/原生客户端日志另外保存，没有把它们隐含为0。逐case全部值见原始JSON。',
+        '', '恢复时间的可比CPU测量见performance_benchmark.md，1/8/32项metadata确认中位数1.297/1.686/2.930ms；实际商业零派发后恢复为新原生或SDK任务，原始失败、账户检查和重试时间分别保存，不能冒称全部恢复都只需毫秒。',
+        '', 'API账单不可观测。主SDK真实用量有240个物理请求回执，峰时公式估值0.778320CNY；WorkBuddy逐次积分为未知。总流水线实付费用不能填0，也不能用该公式估值当账单。']
+    (OUT/'model_runtime_performance.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+def main():
+    runtime_performance()
+    a=load(OUT/'raw_experiment_data/completion_audit.json');q=load(OUT/'raw_experiment_data/evaluation/quality_summary.json')
+    lines=['# 新增真实实验完成报告','',f'审计时间UTC：{datetime.now(timezone.utc).isoformat()}。',
+        '', '## 实际执行范围','',
+        '| 实验 | 已完成 | 统计单位与边界 |','|---|---:|---|',
+        '| 主资格真实推理 | 480 | 10独立合成项目×双向×3次执行；每管线2次源生成、6次单表示接收 |',
+        '| 真正逐字原始事实迁移 | 60次真实接收 | 源事实为受控基线，不能称源模型生成；两端各30次 |',
+        '| DeepSeek同族跨平台QA | 20 | 10对完全相同业务输入；后端build未证明相同 |',
+        '| 联合上下文预检 | 8 | 仅联通预检，排除主质量比较 |',
+        '| 算术通道预检 | 3 | HY3、WB Flash、Harness Flash各1次 |',
+        '| 协议/消融 | 264条 | 24定向轨迹×11配置，独立新目录实际磁盘操作 |',
+        '| 性能 | 120组首操作和120组重试 | 5方法×3大小×8技术重复，不是独立业务项目 |',
+        '', '**合计571个已完成推理任务**：其中商业原生用户轮次不能等同供应商物理请求数。主资格可验证为240个HY3原生轮次及240个Harness SDK物理请求。',
+        '', 'WorkBuddy实际HY3配置为hy3-x积分通道，应用5.9.3；Harness官方SDK实际deepseek-flash，安装0.2.1-rc.3。另实际运行WorkBuddy deepseek-v4.1-flash做同族对照。模型输出真实生成；持久化属于Trusted Host，模型没有直接操作SQLite，未宣称迁移商业产品内部不可见的全部记忆。',
+        '', '## 主要结果','',
+        '| 方法 | 撤权后旧初始记忆接纳/180 | 实际携带受限审计码正文/180 | 合法后继接纳/180 |',
+        '|---|---:|---:|---:|']
+    for m,values in a['live_persistence_safety'].items():lines.append(f'| {m} | {values["initial_accepts"]} | {values["initial_exact_controlled_token_payloads"]} | {values["legal_accepts"]} |')
+    lines += ['', 'A/B旧正文的164个审计码也在隔离接收问答中被实际回答。其余16段虽然输入scope受撤权影响，但正文没有该值；不能把source taint直接算成内容已经泄漏。保护组合法后继0/180命中受控值，这不等于证明一般语义非干扰。',
+        '', 'CPU攻击/故障测试中，C在真实check/use撤权窗口接纳1个过期授权效果，并在另一崩溃窗口留下接收效果与seal消费不一致。D/E均无不合规首次接纳或新增重复效果，6/6已有提交metadata确认＋1/1提交前fresh恢复；各保留2项全局epoch保守拒绝。',
+        '', '**D与E使用同一成熟事务及确认核心，结果相同。本轮没有证明E具有超过D的新算法优势。** 已测的来源闭包/显式nonce单点消融被其他保护遮蔽，没有额外失败；这些负结果保留。',
+        '', '合法问答按冻结真值：raw 180/180、summary 178/180、multi_source 180/180，总538/540。1项为可明确归因的日期运算错误，1项为接收摘要计费措辞的真正歧义。源端完整结构字段operation=add明确支持250元，不回改原始gold；接收端只有含“另”的压缩规则，错误归因待判断。',
+        '', 'summary−raw项目级配对差−1.111个百分点，95%bootstrap区间[−2.778,0]；multi−raw为0、区间[0,0]。10项目先平均项目内重复，5000次bootstrap；未作新的确认性显著性主张。退化区间不是总体零风险或统计等效性证据。',
+        '', '原文逐字控制合法答案180/180、受限探针60/60 UNKNOWN；同族跨平台QA两端各30/30合法答案、10/10受限探针UNKNOWN。',
+        '', '## 格式失败、恢复与真实性','',
+        '主控制器首次23/60完整，37个首次阻塞记录仍保留。最终60/60经可追溯恢复完成；不能把这写成首次全部自动成功。原始严格JSON为HY3 229/240、Harness 140/240。结构围栏、多余闭括号、内嵌引号与1条经过逐字AI复核的前言对象投影分别记录，事实内容没有改写；事后恢复不能包装成预注册的算法提升。',
+        '', '7个原生建会话/Windows长路径/账户元数据故障均先用实际trace、guard或原始进程启动顺序证实零模型派发，再用独立新请求补该槽位。没有对未知供应商请求盲目重发。原记录不改。',
+        '', '源端120次调用生成360段文本。字面值检查与全文语义检查分开：team/site/operand逐字存在不能证明单位、角色和规则条件都正确。全部360段已实际AI全文审查：355段已断言事实可支持、2段有明确问题、3段具体歧义保留unknown。两处问题分别是否认实际给过其他输入，以及把每箱容量写成“8箱”。这些错误没有被数值出现检查或下游QA完全捕获。',
+        '', '至少61段检出输入事实或规则条件省略，不能将审查侧重点不完全相同的分区机械合成统一完整率。追加要求的明确派生结果140段给出、220段未明确，其中multi_source全部120段给出正确明确结果。附加推导未写不与输入事实遗漏混为一项。原文、具体理由及三份分区/合并记录都保留；判断主体均为AI，不伪造真人或双人一致性，不把文本级一致性包装成逐原子断言准确率。',
+        '', '## 费用与数据完整性','',
+        f'主资格Harness的实际可见用量按峰时公式估值{a["main_sdk_usage_peak_estimate_cny"]:.6f}元，非实付账单；另同族QA估值0.018700元。WorkBuddy逐次扣分和全流程实付费用不可观测，保留未知。未遇到可据以认定需要充值的余额不足错误。',
+        '', f'复核240个主资格SQLite库，关闭重开后quick_check正常且读取前后hash一致；B的360个实际文件hash做了后验复核。CPU B在接纳门执行hash验证，真实模型这批输入没有正文篡改，不能把后验hash检查冒充早先每次接纳的独立攻击门测试。',
+        '', f'此前paper_final的{a["original_paper_final_files_hash_checked"]}个记录文件hash全部未变，冻结Store未改。未写GitHub主分支，未重跑历史1296集合实验或旧正式模型数据。原manifest自引用哈希缺陷作为已知元数据错误保留；其余冻结输入和gold分别核验。',
+        '', '## 本阶段验收及未完成项','',
+        '本轮10项目资格实验的实际执行、对照、消融、故障、性能和图表交付完成。尚未把它称为20—30项目的独立确认性正式试验。原因是本轮产生了事后格式适配和语义判定修订；需要冻结这些规则并在新的独立项目上检验，不能把同批开发/资格结果改名成正式测试集。',
+        '', '真人语义确认当前为0。HC05仅1个真正接收问答疑难已给研究者；其余卡为可选小样本校准。尚未满足最终投稿版本的全部人工评价/确认性验证条件；不生成伪造的人工kappa，不覆盖旧英文草稿为“最终稿”。',
+        '', '## 成果入口','',
+        '- [模型与平台](llm_model_comparison.md)',
+        '- [真实记忆生成](agent_memory_generation_experiments.md)',
+        '- [协议对照](protocol_baseline_comparison.md)',
+        '- [六项消融](ablation_experiments.md)',
+        '- [攻击与故障注入](attack_and_failure_injection.md)',
+        '- [模型质量与统计](model_quality_evaluation.md)',
+        '- [CPU性能](performance_benchmark.md)；[真实模型往返及存储](model_runtime_performance.md)',
+        '- [原文控制](raw_experiment_data/exact_original_live/quality/exact_original_quality.md)',
+        '- [同族控制](same_family_control.md)',
+        '- [原始数据与完成审计](raw_experiment_data/completion_audit.json)',
+        '- [语义疑难简卡](human_semantic_validation_cards_concise.md)',
+        '- [离线重分析入口](analysis_scripts/README.md)',
+        '', '六幅图均有PNG/PDF/SVG与源数据，位于paper_figures。所有任务在本地新目录保存，没有模拟模型输出。']
+    semantic=OUT/'raw_experiment_data/source_evaluation/semantic_review_summary.json'
+    if semantic.exists():lines+=['','源端360文本完整AI语义复核统计与具体错误见 [源端语义审查](source_quality_evaluation.md) 和 [机器可读摘要](raw_experiment_data/source_evaluation/semantic_review_summary.json)。']
+    (OUT/'EXPERIMENT_COMPLETION_REPORT.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+    status=['# 新增真实实验状态','',f'UTC {datetime.now(timezone.utc).isoformat()}','',
+        '当前：10项目资格执行及全部原始证据完成；确认性正式试验和最终投稿稿未完成。',
+        '已完成：480主推理＋60原文接收＋20同族接收；264新协议记录；120首操作/120重试；6幅三格式图；360源文本及720合法阶段问答字段的AI评价。',
+        '待人：HC05接收摘要计费措辞归因（已发单问题）；真人确认数0。',
+        '当前结论：成熟事务核心优于非原子预检查的窗口控制；E与强D相同，不宣称新算法优势。',
+        '正式试验门：冻结源输出适配和评价规则，新增20—30独立验证项目，补少量真人语义校准。不能重复既有项目伪造n。',
+        '入口：[实际完成报告](EXPERIMENT_COMPLETION_REPORT.md)。']
+    (OUT/'PROJECT_STATUS.md').write_text('\n'.join(status)+'\n',encoding='utf-8')
+    print(json.dumps({'reports':['EXPERIMENT_COMPLETION_REPORT.md','PROJECT_STATUS.md'],'paid_calls_by_reporter':0}))
+if __name__=='__main__':main()

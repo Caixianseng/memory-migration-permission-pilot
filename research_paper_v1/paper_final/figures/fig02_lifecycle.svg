@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="720pt" height="288pt" viewBox="0 0 720 288" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-06T01:05:32.413423</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 288 
+L 720 288 
+L 720 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 101.16 129.9168 
+L 168.12 129.9168 
+Q 173.7 129.9168 173.7 127.6992 
+L 173.7 92.2176 
+Q 173.7 90 168.12 90 
+L 101.16 90 
+Q 95.58 90 95.58 92.2176 
+L 95.58 127.6992 
+Q 95.58 129.9168 101.16 129.9168 
+z
+" clip-path="url(#p92ea8df041)" style="fill: #e7f1f8; stroke: #303030; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 179.28 129.9168 
+L 246.24 129.9168 
+Q 251.82 129.9168 251.82 127.6992 
+L 251.82 92.2176 
+Q 251.82 90 246.24 90 
+L 179.28 90 
+Q 173.7 90 173.7 92.2176 
+L 173.7 127.6992 
+Q 173.7 129.9168 179.28 129.9168 
+z
+" clip-path="url(#p92ea8df041)" style="fill: #e7f1f8; stroke: #303030; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 257.4 129.9168 
+L 324.36 129.9168 
+Q 329.94 129.9168 329.94 127.6992 
+L 329.94 92.2176 
+Q 329.94 90 324.36 90 
+L 257.4 90 
+Q 251.82 90 251.82 92.2176 
+L 251.82 127.6992 
+Q 251.82 129.9168 257.4 129.9168 
+z
+" clip-path="url(#p92ea8df041)" style="fill: #e7f1f8; stroke: #303030; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 335.52 129.9168 
+L 402.48 129.9168 
+Q 408.06 129.9168 408.06 127.6992 
+L 408.06 92.2176 
+Q 408.06 90 402.48 90 
+L 335.52 90 
+Q 329.94 90 329.94 92.2176 
+L 329.94 127.6992 
+Q 329.94 129.9168 335.52 129.9168 
+z
+" clip-path="url(#p92ea8df041)" style="fill: #e7f1f8; stroke: #303030; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 413.64 129.9168 
+L 480.6 129.9168 
+Q 486.18 129.9168 486.18 127.6992 
+L 486.18 92.2176 
+Q 486.18 90 480.6 90 
+L 413.64 90 
+Q 408.06 90 408.06 92.2176 
+L 408.06 127.6992 
+Q 408.06 129.9168 413.64 129.9168 
+z
+" clip-path="url(#p92ea8df041)" style="fill: #e7f1f8; stroke: #303030; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 491.76 129.9168 
+L 558.72 129.9168 
+Q 564.3 129.9168 564.3 127.6992 
+L 564.3 92.2176 
+Q 564.3 90 558.72 90 
+L 491.76 90 
+Q 486.18 90 486.18 92.2176 
+L 486.18 127.6992 
+Q 486.18 129.9168 491.76 129.9168 
+z
+" clip-path="url(#p92ea8df041)" style="fill: #e6f4ef; stroke: #303030; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 569.88 129.9168 
+L 636.84 129.9168 
+Q 642.42 129.9168 642.42 127.6992 
+L 642.42 92.2176 
+Q 642.42 90 636.84 90 
+L 569.88 90 
+Q 564.3 90 564.3 92.2176 
+L 564.3 127.6992 
+Q 564.3 129.9168 569.88 129.9168 
+z
+" clip-path="url(#p92ea8df041)" style="fill: #e7f1f8; stroke: #303030; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 413.64 225.2736 
+L 620.1 225.2736 
+Q 625.68 225.2736 625.68 223.056 
+L 625.68 180.9216 
+Q 625.68 178.704 620.1 178.704 
+L 413.64 178.704 
+Q 408.06 178.704 408.06 180.9216 
+L 408.06 223.056 
+Q 408.06 225.2736 413.64 225.2736 
+z
+" clip-path="url(#p92ea8df041)" style="fill: #fff1da; stroke: #303030; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="134.64" y="112.441838" transform="rotate(-0 134.64 112.441838)">Generate</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="212.76" y="112.441838" transform="rotate(-0 212.76 112.441838)">Stage</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="290.88" y="112.441838" transform="rotate(-0 290.88 112.441838)">Verify lineage</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="369" y="112.441838" transform="rotate(-0 369 112.441838)">Prepare seal</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="447.12" y="112.441838" transform="rotate(-0 447.12 112.441838)">Final validate</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="525.24" y="112.441838" transform="rotate(-0 525.24 112.441838)">COMMIT</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="603.36" y="112.441838" transform="rotate(-0 603.36 112.441838)">ACK</text>
+   </g>
+   <g id="patch_10">
+    <path d="M 170.122588 109.9584 
+Q 173.701938 109.9584 175.939647 109.9584 
+" style="fill: none; stroke: #303030; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 171.939647 107.9584 
+L 175.939647 109.9584 
+L 171.939647 111.9584 
+" style="fill: none; stroke: #303030; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 248.242588 109.9584 
+Q 251.821938 109.9584 254.059647 109.9584 
+" style="fill: none; stroke: #303030; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 250.059647 107.9584 
+L 254.059647 109.9584 
+L 250.059647 111.9584 
+" style="fill: none; stroke: #303030; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 326.362588 109.9584 
+Q 329.941938 109.9584 332.179647 109.9584 
+" style="fill: none; stroke: #303030; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 328.179647 107.9584 
+L 332.179647 109.9584 
+L 328.179647 111.9584 
+" style="fill: none; stroke: #303030; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 404.482588 109.9584 
+Q 408.061938 109.9584 410.299647 109.9584 
+" style="fill: none; stroke: #303030; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 406.299647 107.9584 
+L 410.299647 109.9584 
+L 406.299647 111.9584 
+" style="fill: none; stroke: #303030; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 482.602588 109.9584 
+Q 486.181938 109.9584 488.419647 109.9584 
+" style="fill: none; stroke: #303030; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 484.419647 107.9584 
+L 488.419647 109.9584 
+L 484.419647 111.9584 
+" style="fill: none; stroke: #303030; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 560.722588 109.9584 
+Q 564.301938 109.9584 566.539647 109.9584 
+" style="fill: none; stroke: #303030; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 562.539647 107.9584 
+L 566.539647 109.9584 
+L 562.539647 111.9584 
+" style="fill: none; stroke: #303030; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'" transform="translate(412.5375 199.433222)">ACK unknown: verify identical durable commit</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'" transform="translate(435.639375 209.511253)">return metadata only (new adapter)</text>
+   </g>
+   <g id="patch_16">
+    <path d="M 524.829265 129.658008 
+Q 519.659659 154.312028 514.765388 177.652965 
+" style="fill: none; stroke: #303030; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 517.54371 174.14855 
+L 514.765388 177.652965 
+L 513.628849 173.327658 
+" style="fill: none; stroke: #303030; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 614.52 178.923811 
+Q 614.52 154.310423 614.52 131.038676 
+" style="fill: none; stroke: #303030; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 612.52 135.038676 
+L 614.52 131.038676 
+L 616.52 135.038676 
+" style="fill: none; stroke: #303030; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(101.16 165.288588)">First delivery linearizes at COMMIT.</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(101.16 176.4864)">Receiving a packet and receiving an ACK are different events.</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start" x="90" y="28.56" transform="rotate(-0 90 28.56)">2. Delivery lifecycle and confirmation recovery</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p92ea8df041">
+   <rect x="90" y="34.56" width="558" height="221.76"/>
+  </clipPath>
+ </defs>
+</svg>
