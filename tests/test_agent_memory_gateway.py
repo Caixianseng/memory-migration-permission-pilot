@@ -93,7 +93,7 @@ class GatewayApiTests(unittest.TestCase):
         spool.write_bytes(raw.replace(b"277 yuan", b"999 yuan"))
         denied = self.post(f"/v1/transfers/{transfer_id}/commit", {})
         self.assertEqual(denied.status_code, 409)
-        self.assertEqual(denied.json()["detail"]["code"], "transfer_spool_canonical_encoding_invalid")
+        self.assertEqual(denied.json()["detail"]["code"], "packet_content_hash_invalid")
 
 if __name__ == "__main__":
     unittest.main()
