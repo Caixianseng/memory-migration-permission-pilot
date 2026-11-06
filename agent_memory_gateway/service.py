@@ -322,6 +322,11 @@ class GatewayService:
     def retrieve_batch(self, agent_id: str, batch_id: str) -> dict[str, Any]:
         receiver = self._open_agent(agent_id)
         try:
+            exists = receiver.db.execute(
+                "SELECT 1 FROM batches WHERE batch_id=?", (batch_id,)
+            ).fetchone()
+            if exists is None:
+                raise FileNotFoundError("batch_not_found")
             result = receiver.retrieve(batch_id)
             return {
                 "agent_id": agent_id,
