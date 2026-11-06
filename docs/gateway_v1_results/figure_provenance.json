@@ -1,0 +1,18 @@
+{
+  "aggregation": "Arithmetic mean of six repeated commits per fixture and method; all ten fixture values shown. Storage is final actual file size.",
+  "alt_text": "Three panels compare ACL, the mature transaction reference and the Gateway wrapper. Each method shows ten controlled-fixture observations for latency, logical SQL statements and final receiver storage; both strong methods share their security core.",
+  "data": "project_measurements.csv",
+  "data_sha256": "737af4f92a0debac3f58410380e27899339824adf3f29dc3154eca3c9b78814c",
+  "destination": "engineering acceptance report, not a journal submission",
+  "exclusions": 0,
+  "figures": {
+    "engineering_overhead.png": "583bc8cf97c1b3796839687cc4f1ba37f32e3c6bb9724c3a8125790243435952",
+    "engineering_overhead.svg": "a55a274170226d0f5e61a66219d514ebbb0043dd02ed845f6eb037c2d417d9a6"
+  },
+  "matplotlib": "3.10.0",
+  "python": "3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]",
+  "transformations": [
+    "nanoseconds / 1e6 for milliseconds",
+    "bytes / 1024 for KiB"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "files": [
+    {
+      "path": "agent_memory_gateway/service.py",
+      "sha256": "6be25ca66e83e729a32fd8083c7211d7647bcac57686aa4deeb17a81c4923192"
+    },
+    {
+      "path": "agent_memory_gateway/delivery.py",
+      "sha256": "e0de621257b6e3677bf2d1e32a0bf431366a0a77588978b94ae4c27e7428f36c"
+    },
+    {
+      "path": "experiments/persistent_exchange_v1/store.py",
+      "sha256": "36e8c5cb016c2d1bd2ffbded384633279e33d9eb5354b0267ea6f04604b34c40"
+    }
+  ],
+  "same_B_C_core": true
+}

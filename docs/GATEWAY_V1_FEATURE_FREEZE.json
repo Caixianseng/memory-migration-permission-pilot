@@ -1,0 +1,35 @@
+{
+  "acceptance": {
+    "bidirectional_archived_platform_replays": 2,
+    "duplicate_gateway_effects": 0,
+    "fixed_fault_schedules": 8,
+    "gateway_passes": 8,
+    "infrastructure_checks_passed": "2977/2977",
+    "normal_gateway_deliveries": "60/60",
+    "readonly_verifier": "PASS",
+    "receiver_policy_databases_checked": 136,
+    "transaction_passes": 8,
+    "unauthorized_gateway_first_persistence": 0
+  },
+  "core_repair_rounds": 0,
+  "date_local": "2026-11-06",
+  "fresh_legacy_C_reproductions": 1,
+  "full_comparison_campaigns": 1,
+  "implementation_base": "16cbdc644f0bfaf6b35003a3bb0047b6cc1c812f",
+  "local_pre_execution_commit": "aead2156a910d5167016f250ad9c00271f0c3483",
+  "noncore_existing_test_status": "13/14 interface and adapter tests PASS; one legacy exact-error assertion mismatch retained",
+  "paid_model_calls": 0,
+  "protected_history": "No old raw data, GT, frozen scoring or main ref changed; no ambiguity audit rerun",
+  "remote_mirror_of_frozen_code_commit": "aa0619b27bc8adef346dbb54c78ee39b42bde539",
+  "reopen_only": "A blocking safety issue or explicit supervisor/user requirement. Do not automatically add features or optimize.",
+  "schema": "agent-memory-gateway-feature-freeze-v1",
+  "scope": "Single-host SQLite persistent Host delivery; explicit platform file adapters; not hidden commercial memory or new live inference",
+  "source_sha256": {
+    "agent_memory_gateway/adapters.py": "9fbf4856780e7d46e7238c43a06e6a4457f6a990f36925e3e8dceadbe9b4a558",
+    "agent_memory_gateway/delivery.py": "e0de621257b6e3677bf2d1e32a0bf431366a0a77588978b94ae4c27e7428f36c",
+    "agent_memory_gateway/service.py": "6be25ca66e83e729a32fd8083c7211d7647bcac57686aa4deeb17a81c4923192",
+    "experiments/gateway_v1_acceptance/freeze_manifest.json": "f3cd0c2b6d0696a1768b373b92ef90bf8c549615be95c4e16f32a891c72be899",
+    "experiments/persistent_exchange_v1/store.py": "36e8c5cb016c2d1bd2ffbded384633279e33d9eb5354b0267ea6f04604b34c40"
+  },
+  "status": "Agent Memory Gateway V1.0 — Feature Frozen"
+}

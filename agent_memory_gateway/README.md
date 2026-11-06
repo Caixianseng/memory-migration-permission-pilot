@@ -3,6 +3,14 @@
 A local, model-agnostic gateway for permission-checked persistent memory
 delivery between separate Agent stores.
 
+**Engineering V1.0 — Feature Frozen (2026-11-06).** The fixed eight-scenario
+strong-core regression and one bounded comparison are complete. See the
+[acceptance report](../docs/gateway_v1_acceptance_report.md),
+[measured results](../docs/gateway_v1_results/README.md) and
+[explicit platform adapters / reproduction guide](ADAPTERS.md).
+Use `requirements-gateway-v1-tested.txt` for the recorded acceptance environment.
+No further feature work is scheduled by the older roadmap.
+
 ## Capabilities
 
 - Immutable original sources and derived memories with source dependencies.

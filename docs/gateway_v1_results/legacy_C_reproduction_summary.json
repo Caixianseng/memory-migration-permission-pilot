@@ -1,0 +1,16 @@
+{
+  "fresh_reproduction_number": 1,
+  "started_at": "2026-11-06T08:45:15.199303+00:00",
+  "finished_at": "2026-11-06T08:45:15.456029+00:00",
+  "unchanged_source_sha256": "7d38f3018d43152f1c942076e372a0e003847495face43090a232eaf860db827",
+  "source_unchanged": true,
+  "child_exit": 91,
+  "reproduced": true,
+  "interpretation": "A committed legacy effect has no matching consumed seal and cannot be metadata-confirmed after epoch changes. This is not evidence of a new unauthorized first delivery.",
+  "effects_before": 0,
+  "effects_after_crash": 1,
+  "orphan_effects_after_crash": 1,
+  "retry_accepted": false,
+  "retry_reason": "stale_policy_epoch",
+  "effects_after_retry": 1
+}

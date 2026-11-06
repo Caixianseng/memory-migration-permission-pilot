@@ -7,7 +7,13 @@ The receiving persistent store in this version is the Host SQLite Agent store.
 
 ## Run a local file workflow
 
-Run Python from the repository root after installing the gateway requirements.
+Run Python 3.11+ from the repository root. The versions actually used for this
+acceptance are preserved separately from the repository's older requirements:
+
+```powershell
+python -m pip install -r requirements-gateway-v1-tested.txt
+```
+
 Use a **new** gateway data directory. Do not point it at an old experimental C
 database directory. Source IDs are globally unique within one Host; prefix new
 original facts with their owner or project. Imported original bindings retain

@@ -1,0 +1,69 @@
+{
+  "new_model_calls": 0,
+  "not_new_commercial_execution": true,
+  "passed": true,
+  "raw_material_stays_local": true,
+  "rows": [
+    {
+      "context_sha256": "fcda04ed40ea4a4672d53e0d7e1484f8608b3f5d6584a5fbc5e449434822877b",
+      "dataset_sha256": "034658029f51be2d60a42476e43c7c27e584a152f5a32e2ff3bbe3d365bc6544",
+      "direction": "A_to_B",
+      "execution_mode": "archived_real_model_output_adapter_replay",
+      "input_record_hashes": [
+        {
+          "record": "source_initial_generation/result.json",
+          "sha256": "a080ad4aa5913a4eeec4306288c2d0fe6fd06919cf65f8c3db2e942c5e2c2b75"
+        },
+        {
+          "record": "source_legal_rebuild/result.json",
+          "sha256": "c64888855a787d285f284a1e7b43d860b2c612e01cd3d228f62b9ae595986979"
+        }
+      ],
+      "legal_first_committed": true,
+      "native_memory_imported": false,
+      "new_model_calls": 0,
+      "old_block_reason": "stale_policy_epoch",
+      "old_first_delivery_blocked": true,
+      "passed": true,
+      "recorded_models": [
+        "hy3-x",
+        "hy3-x"
+      ],
+      "restart_exact_readback": true,
+      "retry_metadata_only": true,
+      "source_platform": "workbuddy",
+      "target_platform": "deepseek_harness"
+    },
+    {
+      "context_sha256": "092a162406d00e7ffe14a92405d74e1b9c0ae0e9ca9c76323caf50fb6ec6fbc3",
+      "dataset_sha256": "034658029f51be2d60a42476e43c7c27e584a152f5a32e2ff3bbe3d365bc6544",
+      "direction": "B_to_A",
+      "execution_mode": "archived_real_model_output_adapter_replay",
+      "input_record_hashes": [
+        {
+          "record": "source_initial_generation/result.json",
+          "sha256": "182ec9633830a68dacbc419fe4c83b0ea880d427980b434a1064dc5853d6c9e7"
+        },
+        {
+          "record": "source_legal_rebuild/result.json",
+          "sha256": "4c330a8ce64340b8a6c15bb70ed8b44fbcb7b508de3e2727e45d92b81b56ac09"
+        }
+      ],
+      "legal_first_committed": true,
+      "native_memory_imported": false,
+      "new_model_calls": 0,
+      "old_block_reason": "stale_policy_epoch",
+      "old_first_delivery_blocked": true,
+      "passed": true,
+      "recorded_models": [
+        "deepseek-flash",
+        "deepseek-flash"
+      ],
+      "restart_exact_readback": true,
+      "retry_metadata_only": true,
+      "source_platform": "deepseek_harness",
+      "target_platform": "workbuddy"
+    }
+  ],
+  "schema": "archived-adapter-replay-v1"
+}
