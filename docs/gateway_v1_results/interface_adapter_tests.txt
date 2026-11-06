@@ -1,0 +1,31 @@
+test_auth_and_health (test_agent_memory_gateway.GatewayApiTests.test_auth_and_health) ... ok
+test_delivery_restart_readback_and_idempotent_retry (test_agent_memory_gateway.GatewayApiTests.test_delivery_restart_readback_and_idempotent_retry) ... ok
+test_revoke_after_prepare_blocks_first_commit (test_agent_memory_gateway.GatewayApiTests.test_revoke_after_prepare_blocks_first_commit) ... ok
+test_spool_tampering_rejected (test_agent_memory_gateway.GatewayApiTests.test_spool_tampering_rejected) ... FAIL
+test_unknown_source_grant_rejected (test_agent_memory_gateway.GatewayApiTests.test_unknown_source_grant_rejected) ... ok
+test_both_platform_directions_use_existing_service (test_gateway_adapters.GatewayAdapterTests.test_both_platform_directions_use_existing_service) ... ok
+test_context_export_never_overwrites_existing_output (test_gateway_adapters.GatewayAdapterTests.test_context_export_never_overwrites_existing_output) ... ok
+test_credential_or_verification_metadata_is_not_an_import_contract (test_gateway_adapters.GatewayAdapterTests.test_credential_or_verification_metadata_is_not_an_import_contract) ... ok
+test_duplicate_json_key_rejected_without_side_effect (test_gateway_adapters.GatewayAdapterTests.test_duplicate_json_key_rejected_without_side_effect) ... ok
+test_expected_platform_is_not_inferred_or_silently_changed (test_gateway_adapters.GatewayAdapterTests.test_expected_platform_is_not_inferred_or_silently_changed) ... ok
+test_invalid_later_memory_has_no_earlier_registration_effect (test_gateway_adapters.GatewayAdapterTests.test_invalid_later_memory_has_no_earlier_registration_effect) ... ok
+test_new_derived_export_reuses_unchanged_original (test_gateway_adapters.GatewayAdapterTests.test_new_derived_export_reuses_unchanged_original)
+Normal initial/rebuild exports, not an additional fault scenario. ... ok
+test_private_client_directory_is_not_a_source (test_gateway_adapters.GatewayAdapterTests.test_private_client_directory_is_not_a_source) ... ok
+test_source_metadata_is_stable_and_file_evidence_is_memory_scoped (test_gateway_adapters.GatewayAdapterTests.test_source_metadata_is_stable_and_file_evidence_is_memory_scoped) ... ok
+
+======================================================================
+FAIL: test_spool_tampering_rejected (test_agent_memory_gateway.GatewayApiTests.test_spool_tampering_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\agent安全论文\amg-v1\tests\test_agent_memory_gateway.py", line 96, in test_spool_tampering_rejected
+    self.assertEqual(denied.json()["detail"]["code"], "packet_content_hash_invalid")
+AssertionError: 'confirmation_packet_digest_invalid' != 'packet_content_hash_invalid'
+- confirmation_packet_digest_invalid
++ packet_content_hash_invalid
+
+
+----------------------------------------------------------------------
+Ran 14 tests in 5.472s
+
+FAILED (failures=1)

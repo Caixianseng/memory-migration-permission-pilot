@@ -1,0 +1,50 @@
+{
+  "schema": "gateway-v1-independent-readonly-verification-v1",
+  "verified_utc": "2026-11-06T09:16:33.355758+00:00",
+  "verification_passed": true,
+  "artifact_integrity_and_record_consistency_pass": true,
+  "strong_transaction_and_gateway_gate_pass": true,
+  "ACL_result_is_descriptive_no_forced_failure": true,
+  "B_C_equivalent_results_are_acceptable": true,
+  "method_summaries": {
+    "acl": {
+      "performance_passes": 10,
+      "performance_projects": 10,
+      "regression_rows": 8,
+      "required_for_behavioral_gate": false,
+      "shared_oracle_failures": [
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R7"
+      ],
+      "shared_oracle_passes": 3
+    },
+    "gateway": {
+      "performance_passes": 10,
+      "performance_projects": 10,
+      "regression_rows": 8,
+      "required_for_behavioral_gate": true,
+      "shared_oracle_failures": [],
+      "shared_oracle_passes": 8
+    },
+    "transaction": {
+      "performance_passes": 10,
+      "performance_projects": 10,
+      "regression_rows": 8,
+      "required_for_behavioral_gate": true,
+      "shared_oracle_failures": [],
+      "shared_oracle_passes": 8
+    }
+  },
+  "database_count": 136,
+  "scenario_reexecutions": 0,
+  "model_calls": 0,
+  "database_writes": 0,
+  "independence": "stdlib JSON/hashlib/sqlite3 implementation; no imports of the tested runner, Gateway or Store",
+  "evidence_scope": "Final databases are independently observed. Earlier fault ordering uses saved process, marker and snapshot records; this verifier does not recreate past SQL execution.",
+  "full_local_verification_sha256": "8a5c40cf5c02e5af96b80d413eb0057cf362eecc4155d8a274024d2b6304d6f0",
+  "infrastructure_checks": 2977,
+  "failed_infrastructure_checks": 0
+}

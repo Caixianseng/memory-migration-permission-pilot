@@ -1,0 +1,39 @@
+{
+  "schema": "gateway-v1-fixed-acceptance-contract-v1",
+  "date_local": "2026-11-06",
+  "methods": ["acl", "transaction", "gateway"],
+  "method_labels": {"acl": "A_current_acl_equal_precheck_nonatomic", "transaction": "B_same_core_direct_delivery", "gateway": "C_service_commit_wrapper"},
+  "same_B_C_security_core": true,
+  "regression_scenario_count": 8,
+  "regression_rows": 24,
+  "performance_projects": 10,
+  "performance_repeats_per_project_method": 6,
+  "performance_rows": 180,
+  "scenario_oracle": {
+    "R1": {"name": "crash_before_first_receiver_DML", "final_effect_count": 1, "effects_at_fault": 0, "metadata_recovery_required": false, "fault_exit_code": 71},
+    "R2": {"name": "crash_after_receiver_DML_before_COMMIT", "final_effect_count": 1, "effects_at_fault": 0, "metadata_recovery_required": false, "fault_exit_code": 72},
+    "R3": {"name": "crash_after_commit_before_ACK", "final_effect_count": 1, "effects_at_fault": 1, "metadata_recovery_required": true, "fault_exit_code": 73},
+    "R4": {"name": "duplicate_after_actual_ACK_sink_write", "final_effect_count": 1, "metadata_recovery_required": true},
+    "R5": {"name": "revocation_commits_after_precheck_before_first_import", "final_effect_count": 0, "metadata_recovery_required": false},
+    "R6": {"name": "two_fresh_process_recovery_sweeps_after_version_and_permission_change", "final_effect_count": 1, "metadata_recovery_required": true},
+    "R7": {"name": "two_processes_same_transfer_id_after_equal_precheck_barrier", "final_effect_count": 1, "metadata_recovery_required": true},
+    "R8": {"name": "pre_first_delivery_body_tamper_and_self_consistent_rehash", "final_effect_count": 0, "metadata_recovery_required": false, "probes": ["probe_body", "probe_rehashed"]}
+  },
+  "method_expected_full_contract": {
+    "acl": {"R1": null, "R2": null, "R3": null, "R4": null, "R5": null, "R6": null, "R7": null, "R8": null},
+    "transaction": {"R1": true, "R2": true, "R3": true, "R4": true, "R5": true, "R6": true, "R7": true, "R8": true},
+    "gateway": {"R1": true, "R2": true, "R3": true, "R4": true, "R5": true, "R6": true, "R7": true, "R8": true}
+  },
+  "ordinary_acl_definition": "Same canonical packet, recipient/digest/lineage/seal and current dependency/epoch predicate before writing. Receiver-local transaction; seal consumption in a separate policy operation; no mature committed-receipt adapter. Existing constraints are retained. This is a deliberately explicit non-atomic ACL control, not all ACL implementations.",
+  "strong_reference": "agent_memory_gateway.delivery.deliver directly; GatewayService.commit_transfer uses that same unmodified delivery/store core. No privileged recovery adapter for Gateway only.",
+  "input_pairing": "One closed database/spool template copied per method. Packets, source truth, authorization events, fault schedule and ACK sink are shared. No historical experiment database is writable input.",
+  "recovery_scope": "Fresh worker processes and a Harness-persisted fixed recovery manifest. Does not claim an autonomous product recovery scheduler exists.",
+  "timing_scope": "Saved-packet decoding, opening/checking, durable receiver acceptance and close until metadata return. Excludes process startup, source registration/memory generation/prepare and ACK sink fsync. SQL counts are logical statements, not physical I/O.",
+  "new_model_calls": 0,
+  "old_264_protocol_120_performance_reexecution": 0,
+  "old_768_720_evaluation_reexecution": 0,
+  "automatic_retries": 0,
+  "ACL_outcome_is_not_a_required_negative_control": true,
+  "engineering_acceptance_gate": "The common safety oracle is unchanged for all methods. Record ACL PASS or FAIL as observed; no requirement for ACL to fail. Strong transaction and Gateway must satisfy every fixed scenario. Baseline limitation is not artifact invalidity.",
+  "scope": "Controlled single-host SQLite process-fault engineering checks; no commercial Agent or distributed exactly-once claim. B=C security outcomes are an acceptable expected result. No E-over-strong-baseline advantage is assumed."
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "gateway-v1-bounded-acceptance-1",
+  "scope_locked_before_new_fault_execution": true,
+  "base_commit": "16cbdc644f0bfaf6b35003a3bb0047b6cc1c812f",
+  "main_read_only_sha": "23031a667396c43a1e7b89124136edc19184bd86",
+  "research_branch_sha": "d3a0c2f92533e070bfcca5e087b5c832eea7a331",
+  "existing_draft_pr": 2,
+  "legacy_C": "source_dynamic_version_no_tx: retained as historical failing comparator, never a production path",
+  "repair_strategy": "Adopt existing gateway delivery.py plus byte-identical mature D/E Store; no rewrite, no migration of orphan legacy effects",
+  "budgets": {"fresh_legacy_C_reproductions_max": 3, "core_repair_rounds_max": 2, "paid_calls": 0, "full_comparison_campaigns": 1},
+  "current_counters": {"fresh_legacy_C_reproductions": 0, "core_repair_rounds": 0, "comparison_campaigns": 0},
+  "fixed_faults": ["before_receiver_write", "after_write_before_commit", "after_commit_before_ack", "duplicate_after_ack", "revoke_after_precheck_before_first_commit", "restart_repeat_recovery", "concurrent_same_transfer", "packet_tamper"],
+  "methods": {"A": "ordinary ACL reference", "B": "same mature atomic authority, receipt and idempotency kernel invoked directly", "C": "GatewayService wrapper over the SAME B kernel"},
+  "fixed_size": {"fault_rows": 24, "synthetic_performance_projects": 10, "deliveries_per_method_per_project": 6, "performance_rows": 180},
+  "acceptance": ["B/C zero unauthorized first persistence", "B/C zero duplicate batch effects", "B/C post-commit receipt recovery without plaintext", "B/C reject modified packet", "B/C legal success after rollback retry", "both platform export directions persist and read back"],
+  "measurement": {"sql_counts": "observed logical statements, not physical I/O", "latency": "observed wall clock, no universal performance claim", "storage": "measured database and spool bytes", "independent_units": "targeted fault schedules; ten controlled synthetic project-size fixtures, not independent natural projects"},
+  "unchanged": ["historical raw data", "frozen 768/720 evaluation", "ground truth", "main branch"],
+  "platform_adapter": "Explicit exported JSON / archived real-model output replay; no claim of new commercial inference or hidden platform memory access",
+  "stop": "Stop at passed finite gates; if two core repair rounds fail, STOP; do not extend tests or tune thresholds after observing results"
+}

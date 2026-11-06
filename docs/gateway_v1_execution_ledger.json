@@ -1,0 +1,44 @@
+{
+  "adapter_pre_execution_changes": "Stable original metadata; export-specific evidence binds to each derived memory instead.",
+  "additional_optimization_authorized": false,
+  "comparison_campaigns": 1,
+  "comparison_result": {
+    "acl_passes": 3,
+    "gateway_passes": 8,
+    "independent_database_checks": 136,
+    "independent_verification": "PASS",
+    "legacy_core_and_acceptance_bytes_unchanged": true,
+    "performance_rows": 180,
+    "regression_rows": 24,
+    "timing_outliers_retained": true,
+    "transaction_passes": 8
+  },
+  "core_repair_rounds": 0,
+  "core_strategy": "Reuse the already implemented, unchanged mature D/E transaction and metadata-confirmation path. No speculative core patch needed.",
+  "engineering_status": "FEATURE_FROZEN",
+  "fresh_legacy_C_reproductions": 1,
+  "historical_evaluation_runs": 0,
+  "interface_and_adapter_tests": {
+    "executed": 14,
+    "noncore_existing_test_failure": "Tamper is correctly rejected with HTTP409. Historical test expects packet_content_hash_invalid, while the earlier recovery adapter returns confirmation_packet_digest_invalid. Neither production code nor expected safety criterion is changed to force PASS.",
+    "passed": 13,
+    "pre_execution_attempts": [
+      "Dotted unittest import shadowed by an installed tests package; no tests executed.",
+      "Restricted Windows event-loop socketpair blocked; stopped and preserved diagnostic, then ran with local communication available."
+    ]
+  },
+  "legacy_C_reproduction_result": "REPRODUCED: receiver commit without seal consumption; stale epoch retry cannot confirm",
+  "max_core_repair_rounds": 2,
+  "max_fresh_legacy_C_reproductions": 3,
+  "noncore_findings": [
+    "discard_transfer on an already committed transfer reports a stale seal_remains_unconsumed flag. It is outside the fixed commit/recovery workflow; do not discard committed spools needed for transfer-ID confirmation."
+  ],
+  "old_legacy_orphan_handling": "Never reuse old C database roots; no automatic reconstruction or invented receipts for already orphaned historical effects.",
+  "paid_model_calls": 0,
+  "platform_archive_adapter_checks": {
+    "directions": 2,
+    "fresh_commercial_runs": 0,
+    "passed": 2
+  },
+  "source_review_completed": true
+}

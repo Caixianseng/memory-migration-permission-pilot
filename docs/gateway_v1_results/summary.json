@@ -1,0 +1,75 @@
+{
+  "inference_or_semantic_evaluation": false,
+  "inputs": {
+    "completion.json": "2d2e52a401cbdda441e76155ecfc89402b672a67cde6292efd90f50f0fd0b228",
+    "config.json": "8aa09264a1c864ebe6a75f778abd4d9ec258e9a35983ea07ac6975709f267561",
+    "raw_performance.jsonl": "c8e9220d994a78026087319051f07856de78a40e89cdde91ec52e66950fc2ebe",
+    "raw_regression.jsonl": "e2249e8c9909259bf4bf328599ddd0e6a172ab7fe0b356268843a5c3e2f6e0be"
+  },
+  "latency_scope": "Saved-packet decoding, opening/checking, durable receiver acceptance and close until metadata return. Excludes process startup, source registration/memory generation/prepare and ACK sink fsync. SQL counts are logical statements, not physical I/O.",
+  "method_relation": "B and C use the same mature security core. C adds the service/spool wrapper, not a new atomicity algorithm.",
+  "methods": {
+    "acl": {
+      "duplicate_effects": 1,
+      "mean_delivery_ms": 80.07594833333333,
+      "mean_final_policy_db_bytes": 57344,
+      "mean_final_receiver_db_bytes": 135168,
+      "mean_final_spool_bytes": 17256.6,
+      "mean_logical_select_statements": 9,
+      "mean_logical_sql_statements": 53,
+      "mean_logical_write_statements": 5,
+      "normal_attempts": 60,
+      "normal_commits": 60,
+      "p95_delivery_ms": 30.4074,
+      "physical_io_operations": null,
+      "regression_full_contract_passes": 3,
+      "regression_scenarios": 8,
+      "unauthorized_first_effects": 1
+    },
+    "gateway": {
+      "duplicate_effects": 0,
+      "mean_delivery_ms": 334.08537666666666,
+      "mean_final_policy_db_bytes": 57344,
+      "mean_final_receiver_db_bytes": 127795.2,
+      "mean_final_spool_bytes": 17256.6,
+      "mean_logical_select_statements": 19,
+      "mean_logical_sql_statements": 62.416666666666664,
+      "mean_logical_write_statements": 13.416666666666666,
+      "normal_attempts": 60,
+      "normal_commits": 60,
+      "p95_delivery_ms": 3316.5428,
+      "physical_io_operations": null,
+      "regression_full_contract_passes": 8,
+      "regression_scenarios": 8,
+      "unauthorized_first_effects": 0
+    },
+    "transaction": {
+      "duplicate_effects": 0,
+      "mean_delivery_ms": 168.01588,
+      "mean_final_policy_db_bytes": 57344,
+      "mean_final_receiver_db_bytes": 127795.2,
+      "mean_final_spool_bytes": 17256.6,
+      "mean_logical_select_statements": 19,
+      "mean_logical_sql_statements": 62.416666666666664,
+      "mean_logical_write_statements": 13.416666666666666,
+      "normal_attempts": 60,
+      "normal_commits": 60,
+      "p95_delivery_ms": 35.0652,
+      "physical_io_operations": null,
+      "regression_full_contract_passes": 8,
+      "regression_scenarios": 8,
+      "unauthorized_first_effects": 0
+    }
+  },
+  "metric_scope": "Unauthorized and duplicate counts are events in the eight fixed schedules, not population rates. Successful metadata confirmations exclude retry failures and are separately counted.",
+  "n": {
+    "fault_method_rows": 24,
+    "fault_schedules": 8,
+    "performance_rows": 180,
+    "repeats_per_fixture_method": 6,
+    "synthetic_size_fixtures": 10
+  },
+  "new_model_calls": 0,
+  "p95_definition": "nearest-rank ceil(0.95*n), all observations retained",
+  "uncertainty": "Descriptive observations; no CI or significance claim. Repeats within a controlled fixture are not independent projects."
+}
