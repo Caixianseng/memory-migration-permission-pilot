@@ -1,0 +1,6 @@
+method,revoked_admissions,stale_source_admissions,wrong_recipient_admissions,forged_body_admissions,extra_duplicate_effects,confirmed_existing_commits,confirmation_denominator,fresh_recovery,fresh_recovery_denominator,safe_recovery_total,safe_recovery_denominator
+plain_file,5,1,1,1,9,0,6,1,1,1,7
+basic_integrity_acl,5,1,0,1,9,0,6,1,1,1,7
+source_dynamic_version_no_tx,1,0,0,0,0,0,6,1,1,1,7
+transaction_reference,0,0,0,0,0,6,6,1,1,7,7
+complete_host,0,0,0,0,0,6,6,1,1,7,7

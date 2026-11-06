@@ -1,0 +1,54 @@
+{
+  "schema": "reviewable-research-results-v1",
+  "date_local": "2026-11-06",
+  "main_qualification": {
+    "seeded_synthetic_projects": 10,
+    "directions": 2,
+    "repeats": 3,
+    "main_inference_jobs": 480,
+    "workbuddy_native_user_turns": 240,
+    "harness_sdk_physical_requests": 240,
+    "total_mixed_inference_jobs_with_controls": 571,
+    "legal_answer_fields": 540,
+    "legal_reference_matches": 538
+  },
+  "protocol": {
+    "qualification_rows": 264,
+    "performance_pairs": 120,
+    "A_B_old_memory_accepts_each": 180,
+    "initial_old_conditions": 180,
+    "restricted_canary_text_hits_each_A_B": 164,
+    "C_D_E_old_accepts_each": 0,
+    "legal_successor_accepts_each": 180,
+    "E_better_than_D_demonstrated": false
+  },
+  "historical_evaluation": {
+    "answer_fields": 768,
+    "synthetic_projects": 12,
+    "numeric_computation_questions": 0,
+    "legal_reference_value_matches": 355,
+    "legal_fields": 484,
+    "human_confirmed": 0,
+    "attribution_unknown_retained": 2
+  },
+  "new_evaluation": {
+    "answer_fields": 720,
+    "ambiguity_labeled_fields": 9,
+    "AI_only_ambiguity_fields": 8,
+    "human_confirmed": 1,
+    "new_human_ambiguity_questions": 0,
+    "integer_matches": 161,
+    "integer_fields": 162,
+    "matched_question_exclusion_legal_matches": 521,
+    "matched_question_exclusion_legal_fields": 522,
+    "integer_matches_after_matched_question_exclusion": 144,
+    "integer_fields_after_exclusion": 144,
+    "integer_project_count_original": 9,
+    "integer_project_count_after_exclusion": 8,
+    "frozen_250_agent_277_score": 0,
+    "primary_scores_changed": false
+  },
+  "scope": "Saved real platform qualification + separately controlled CPU protocol experiments. No claim of hidden commercial-agent memory visibility; D/E share mature transaction mechanisms.",
+  "publication_scope": "Reports, authored code, aggregate statistics and figures; new raw model bundles and compressed research data withheld pending specific approval.",
+  "publication_model_calls": 0
+}

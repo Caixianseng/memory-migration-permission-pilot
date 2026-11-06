@@ -18,7 +18,7 @@ import re
 from . import source_registry as registry
 
 EVENT_NAME = 'late_original_artifact_event.json'
-_NATIVE_PROJECTS = Path('C:/Users/21129/.workbuddy/projects').resolve()
+_NATIVE_PROJECTS = Path('[USER_HOME]/.workbuddy/projects').resolve()
 _CONTINUE_QUERY_SHA = 'bb760742029a76fa050cf9aefa30e70d923f65b1684696a8498640df7071e4d3'
 
 

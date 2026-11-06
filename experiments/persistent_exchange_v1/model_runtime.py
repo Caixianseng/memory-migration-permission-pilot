@@ -21,7 +21,7 @@ REPO = Path(__file__).resolve().parents[2]
 GATEWAY = REPO.parent/'codex-workbuddy-gateway-windows'
 NODE = 'D:/node/node.exe'
 PYTHON = 'D:/python3.11/python.exe'
-PROJECTS = Path('C:/Users/21129/.workbuddy/projects')
+PROJECTS = Path('[USER_HOME]/.workbuddy/projects')
 NATIVE_CREATION_LOCK = threading.Lock()
 
 
@@ -121,7 +121,7 @@ def run_workbuddy(workspace, objective, allowed_read_paths, output_name, *, time
     if not create.exists():
         write_json(create,{'sessionId':plan['sessionId'],'workspace':str(workspace),'model':'hy3-x',
             'cdpPort':18491,'cliElectronPath':'D:/workbuddy/WorkBuddy.exe',
-            'workbuddyConfigDir':'C:/Users/21129/.workbuddy','title':'记忆交换实验 '+workspace.name})
+            'workbuddyConfigDir':'[USER_HOME]/.workbuddy','title':'记忆交换实验 '+workspace.name})
     creation=workspace/'created.json'
     with NATIVE_CREATION_LOCK:
         if not creation.exists():

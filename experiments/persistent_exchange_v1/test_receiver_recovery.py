@@ -138,7 +138,7 @@ class ReceiverRecoveryTests(unittest.TestCase):
             'instruction': ANSWER_INSTRUCTIONS, 'businessInput': business,
             'quotaRestorationConfirmed': True, 'qualificationEnvelope': str(self.qualification),
             'timeoutSeconds': 300, 'softOutputCharacters': 4096, 'cdpPort': 18491,
-            'cliElectronPath': 'D:/workbuddy/WorkBuddy.exe', 'workbuddyConfigDir': 'C:/Users/21129/.workbuddy'}
+            'cliElectronPath': 'D:/workbuddy/WorkBuddy.exe', 'workbuddyConfigDir': '[USER_HOME]/.workbuddy'}
 
     def envelope(self, job, job_raw, output, *, success=True):
         native = {'status': 'native_prompt_returned', 'stopReason': 'end_turn' if success else 'refusal',

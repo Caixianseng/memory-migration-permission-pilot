@@ -57,3 +57,18 @@ benchmarks/prospective_context_method_freeze_20261027.json -text whitespace=cr-a
 /scripts/export_persistent_exchange_public.py -text
 /scripts/run_persistent_exchange_offline_tests.py -text
 /scripts/test_persistent_exchange_public_portability.py -text
+
+# Preserve the byte hashes of the 2026-11-06 public research snapshot.
+/research_paper_v1/** -text
+/benchmarks/live_research_public_20261106/** -text
+/benchmarks/research_publication_20261106_manifest.json -text
+/scripts/export_live_research_public_20261106.py -text
+/scripts/verify_research_publication_20261106.py -text
+/experiments/evaluation_ambiguity_v1/** -text
+/experiments/paper_final_human/** -text
+/experiments/paper_final_support/** -text
+/experiments/paper_final_v1/** -text
+/experiments/paper_live_v2/** -text
+/experiments/paper_v1/** -text
+
+/benchmarks/research_publication_20261106_manifest.json.gz -text

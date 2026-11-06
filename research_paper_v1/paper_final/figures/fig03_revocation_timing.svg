@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="720pt" height="316.8pt" viewBox="0 0 720 316.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-06T01:05:32.652657</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 316.8 
+L 720 316.8 
+L 720 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="line2d_1">
+    <defs>
+     <path id="m238e8f08e6" d="M 0 3 
+C 0.795609 3 1.55874 2.683901 2.12132 2.12132 
+C 2.683901 1.55874 3 0.795609 3 0 
+C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132 
+C 1.55874 -2.683901 0.795609 -3 0 -3 
+C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132 
+C -2.683901 -1.55874 -3 -0.795609 -3 0 
+C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132 
+C -1.55874 2.683901 -0.795609 3 0 3 
+z
+" style="stroke: #0072b2"/>
+    </defs>
+    <g clip-path="url(#p77693de213)">
+     <use xlink:href="#m238e8f08e6" x="74.400192" y="92.410672" style="fill: #0072b2; stroke: #0072b2"/>
+    </g>
+   </g>
+   <g id="line2d_2">
+    <g clip-path="url(#p77693de213)">
+     <use xlink:href="#m238e8f08e6" x="217.200096" y="92.410672" style="fill: #0072b2; stroke: #0072b2"/>
+    </g>
+   </g>
+   <g id="line2d_3">
+    <g clip-path="url(#p77693de213)">
+     <use xlink:href="#m238e8f08e6" x="360" y="92.410672" style="fill: #0072b2; stroke: #0072b2"/>
+    </g>
+   </g>
+   <g id="line2d_4">
+    <g clip-path="url(#p77693de213)">
+     <use xlink:href="#m238e8f08e6" x="574.199856" y="92.410672" style="fill: #0072b2; stroke: #0072b2"/>
+    </g>
+   </g>
+   <g id="patch_2">
+    <path d="M 26.419797 92.410672 
+Q 360.000426 92.410672 692.463021 92.410672 
+" style="fill: none; stroke: #000000; stroke-linecap: round"/>
+    <path d="M 688.463021 90.410672 
+L 692.463021 92.410672 
+L 688.463021 94.410672 
+" style="fill: none; stroke: #000000; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="74.400192" y="66.56404" transform="rotate(-0 74.400192 66.56404)">Generate</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="217.200096" y="66.56404" transform="rotate(-0 217.200096 66.56404)">Seal e</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="360" y="66.56404" transform="rotate(-0 360 66.56404)">Revoke commits</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="574.199856" y="66.56404" transform="rotate(-0 574.199856 66.56404)">Import rejects</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start" x="24.420226" y="146.975786" transform="rotate(-0 24.420226 146.975786)">Revocation before first COMMIT: no acceptance.</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="line2d_5">
+    <g clip-path="url(#p894376af11)">
+     <use xlink:href="#m238e8f08e6" x="74.400192" y="242.003557" style="fill: #0072b2; stroke: #0072b2"/>
+    </g>
+   </g>
+   <g id="line2d_6">
+    <g clip-path="url(#p894376af11)">
+     <use xlink:href="#m238e8f08e6" x="217.200096" y="242.003557" style="fill: #0072b2; stroke: #0072b2"/>
+    </g>
+   </g>
+   <g id="line2d_7">
+    <g clip-path="url(#p894376af11)">
+     <use xlink:href="#m238e8f08e6" x="360" y="242.003557" style="fill: #0072b2; stroke: #0072b2"/>
+    </g>
+   </g>
+   <g id="line2d_8">
+    <g clip-path="url(#p894376af11)">
+     <use xlink:href="#m238e8f08e6" x="574.199856" y="242.003557" style="fill: #0072b2; stroke: #0072b2"/>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 26.419797 242.003557 
+Q 360.000426 242.003557 692.463021 242.003557 
+" style="fill: none; stroke: #000000; stroke-linecap: round"/>
+    <path d="M 688.463021 240.003557 
+L 692.463021 242.003557 
+L 688.463021 244.003557 
+" style="fill: none; stroke: #000000; stroke-linecap: round"/>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="74.400192" y="216.156925" transform="rotate(-0 74.400192 216.156925)">Generate</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="217.200096" y="216.156925" transform="rotate(-0 217.200096 216.156925)">Seal e</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="360" y="216.156925" transform="rotate(-0 360 216.156925)">Import commits</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="574.199856" y="216.156925" transform="rotate(-0 574.199856 216.156925)">Revoke commits</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start" x="24.420226" y="296.568671" transform="rotate(-0 24.420226 296.568671)">First COMMIT before revocation: valid past delivery; retry confirms metadata only.</text>
+   </g>
+  </g>
+  <g id="text_11">
+   <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start" x="14.4" y="12.118365" transform="rotate(-0 14.4 12.118365)">3. Authorization follows commit order, not RPC start order</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p77693de213">
+   <rect x="3.00024" y="20.61447" width="713.99952" height="143.592405"/>
+  </clipPath>
+  <clipPath id="p894376af11">
+   <rect x="3.00024" y="170.207355" width="713.99952" height="143.592405"/>
+  </clipPath>
+ </defs>
+</svg>
